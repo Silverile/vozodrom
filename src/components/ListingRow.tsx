@@ -40,7 +40,7 @@ export function ListingRow({ listing }: { listing: Listing }) {
           {listing.battery && (
             <span className="chip bg-[var(--color-info-soft)] text-[var(--color-info)]">🔋 {listing.battery.capacityKwh} kWh</span>
           )}
-          {listing.sellerType === "soukromý" && <span className="chip bg-[var(--color-field)] text-[#d5dbe1]">Soukromý prodejce</span>}
+          {listing.sellerType === "soukromý" && <span className="chip bg-[var(--color-field)] text-[var(--color-ink-soft)]">Soukromý prodejce</span>}
         </div>
       </div>
       <div className="col-start-2 sm:col-start-3 flex sm:flex-col items-baseline sm:items-end justify-between gap-1 sm:text-right">

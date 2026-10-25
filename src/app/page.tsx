@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-[var(--color-line)]">
-        <div className="absolute inset-0 bg-[radial-gradient(1100px_420px_at_15%_0%,#17322b_0%,transparent_65%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(1100px_420px_at_15%_0%,var(--color-hero)_0%,transparent_65%)]" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-12 pb-10 sm:pt-16">
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
             Najděte auto, kterému můžete věřit

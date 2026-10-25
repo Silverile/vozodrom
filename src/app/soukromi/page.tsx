@@ -13,8 +13,8 @@ export default function PrivacyPage() {
       <section className="space-y-2">
         <h2 className="text-xl font-bold">Co ukládáme bez souhlasu</h2>
         <p className="text-[var(--color-muted)]">
-          Váš výběr aut, uložená hledání, rozpracovaný inzerát, zvolené město a vaši volbu ohledně analytiky ukládáme jen ve vašem
-          prohlížeči (localStorage). Nikam se neodesílají a smažete je vymazáním dat webu v prohlížeči. Tlačítko „Použít mou polohu“ si od prohlížeče vyžádá polohu jen se svolením prohlížeče, převede ji v zařízení na nejbližší město a souřadnice neukládá ani neodesílá.
+          Váš výběr aut, uložená hledání, rozpracovaný inzerát, zvolené město, motiv vzhledu a vaši volbu ohledně analytiky ukládáme jen ve vašem
+          prohlížeči (localStorage). Nikam se neodesílají a smažete je vymazáním dat webu v prohlížeči. Tlačítko „Použít mou polohu“ si od prohlížeče vyžádá polohu jen se svolením prohlížeče, převede ji v zařízení na nejbližší město a souřadnice neukládá ani neodesílá. Údaje vyplněné do kupní smlouvy se neukládají vůbec a po zavření stránky zmizí.
         </p>
       </section>
       <section className="space-y-2">

@@ -21,10 +21,40 @@
   --color-warn-soft: #3a2614;
   --color-bad: #ff8a80;
   --color-bad-soft: #3a1a17;
+  /* secondary text on fields and chips, photo backdrop, hero glow */
+  --color-ink-soft: #d5dbe1;
+  --color-photo: #20252c;
+  --color-hero: #17322b;
 }
 
 :root {
   color-scheme: dark;
+}
+
+/* Light theme, chosen in the "Další" menu; data-theme is set before first paint. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-field: #eceff3;
+  --color-ink: #14181d;
+  --color-muted: #5a6370;
+  --color-line: #d9dee4;
+  --color-brand: #0b8466;
+  --color-brand-ink: #ffffff;
+  --color-brand-soft: #d9f3ea;
+  --color-accent: #d94e0f;
+  --color-good: #17803f;
+  --color-good-soft: #dff4e6;
+  --color-info: #1c64a8;
+  --color-info-soft: #e1edf9;
+  --color-warn: #995400;
+  --color-warn-soft: #fff0da;
+  --color-bad: #b42318;
+  --color-bad-soft: #fde6e4;
+  --color-ink-soft: #39414b;
+  --color-photo: #e3e7ec;
+  --color-hero: #cdeee2;
 }
 
 body {
@@ -82,7 +112,7 @@ body {
   .pill {
     border: 1px solid var(--color-line);
     background: var(--color-field);
-    color: #d5dbe1;
+    color: var(--color-ink-soft);
     border-radius: 999px;
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
@@ -93,5 +123,16 @@ body {
     color: var(--color-brand-ink);
     border-color: transparent;
     font-weight: 600;
+  }
+}
+
+/* Printing (sale contract): plain black on white, no page chrome. */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  @page {
+    margin: 18mm;
   }
 }

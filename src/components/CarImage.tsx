@@ -24,7 +24,7 @@ export function CarImage({ body, color, className = "" }: { body: Body; color: s
   const paint = PAINT[color] ?? "#8a919c";
   return (
     <svg viewBox="0 0 220 130" className={className} role="img" aria-label={`Ilustrace vozu (${color})`}>
-      <rect width="220" height="130" fill="#20252c" />
+      <rect width="220" height="130" style={{ fill: "var(--color-photo)" }} />
       <ellipse cx="112" cy="112" rx="96" ry="9" fill="#00000055" />
       <path d={SILHOUETTE[body]} fill={paint} />
       <path d="M70 58 L114 56 Q126 56 134 64 L144 76 L64 76 Z" fill="#cfe3ff" opacity="0.55" />

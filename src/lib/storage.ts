@@ -102,3 +102,11 @@ export const savedLocation = createStore<SavedLocation | null>(
     v === null ||
     (!!v && typeof v === "object" && typeof (v as SavedLocation).city === "string" && typeof (v as SavedLocation).radius === "number"),
 );
+
+export type ThemeChoice = "dark" | "light" | "system";
+
+export const themeChoice = createStore<ThemeChoice>(
+  "vozodrom.theme",
+  "dark",
+  (v): v is ThemeChoice => v === "dark" || v === "light" || v === "system",
+);

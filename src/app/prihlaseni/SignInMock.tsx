@@ -36,7 +36,7 @@ export function SignInMock() {
       <button
         type="button"
         onClick={unavailable}
-        className="w-full flex items-center justify-center gap-3 rounded-[10px] bg-white text-[#1f1f1f] font-semibold py-2.5 hover:bg-[#f2f2f2]"
+        className="w-full flex items-center justify-center gap-3 rounded-[10px] border border-[#dadce0] bg-white text-[#1f1f1f] font-semibold py-2.5 hover:bg-[#f2f2f2]"
       >
         <GoogleIcon /> Pokračovat přes Google
       </button>
@@ -74,6 +74,10 @@ export function SignInMock() {
       </form>
 
       {notice && <p role="status" className="text-sm text-[var(--color-warn)]">{notice}</p>}
+
+      <p className="text-sm text-center text-[var(--color-muted)]">
+        <Link href="/ucet/" className="text-[var(--color-brand)] hover:underline">Prohlédnout náhled účtu</Link>
+      </p>
 
       <p className="text-sm text-center text-[var(--color-muted)]">
         {register ? "Už účet máte? " : "Nemáte účet? "}

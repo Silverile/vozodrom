@@ -66,7 +66,7 @@ export function Analytics() {
 
   if (!GA_ID || consent !== null) return null;
   return (
-    <div role="dialog" aria-label="Souhlas s analytikou" className="fixed inset-x-0 bottom-0 z-30 p-3 sm:p-4">
+    <div role="dialog" aria-label="Souhlas s analytikou" className="fixed inset-x-0 bottom-0 z-30 p-3 sm:p-4 print:hidden">
       <div className="card mx-auto max-w-3xl p-4 shadow-2xl sm:flex sm:items-center sm:gap-4">
         <p className="text-sm text-[var(--color-muted)]">
           Chceme měřit návštěvnost přes Google Analytics, abychom věděli, co na webu funguje. Bez vašeho souhlasu se nic

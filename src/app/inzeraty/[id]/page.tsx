@@ -92,7 +92,7 @@ export default async function ListingPage({ params }: { params: Params }) {
           <section className="card p-4">
             <h2 className="font-bold">Výbava</h2>
             <ul className="mt-2 flex flex-wrap gap-1.5">
-              {listing.features.map((f) => <li key={f} className="chip bg-[var(--color-field)] text-[#d5dbe1]">{f}</li>)}
+              {listing.features.map((f) => <li key={f} className="chip bg-[var(--color-field)] text-[var(--color-ink-soft)]">{f}</li>)}
             </ul>
             <h2 className="font-bold mt-4">Popis prodejce</h2>
             <p className="mt-1 text-[var(--color-muted)] whitespace-pre-line">{listing.description}</p>

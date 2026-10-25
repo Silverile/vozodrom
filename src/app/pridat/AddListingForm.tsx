@@ -7,7 +7,7 @@ import { type FeedVehicle, validateVehicle } from "@/lib/feed";
 import { createStore } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 
-type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string };
+export type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string };
 
 const EMPTY: Draft = {
   brand: "", model: "", year: 2020, mileageKm: 0, price: 0, engine: "", fuel: "benzin", transmission: "manuál",
@@ -19,7 +19,7 @@ const isDraft = (v: unknown): v is Draft =>
   typeof v === "object" &&
   (Object.keys(EMPTY) as (keyof Draft)[]).every((k) => typeof (v as Record<string, unknown>)[k] === typeof EMPTY[k]);
 
-const draftStore = createStore<Draft>("vozodrom.listingDraft", EMPTY, isDraft);
+export const draftStore = createStore<Draft>("vozodrom.listingDraft", EMPTY, isDraft);
 
 function vinProblem(vin: string): string | null {
   if (!vin) return null;

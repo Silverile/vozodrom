@@ -33,7 +33,7 @@ export function Gallery({ body, color, title }: { body: Body; color: string; tit
         {index === 0 ? (
           <CarImage body={body} color={color} className="w-full aspect-[16/10]" />
         ) : (
-          <div className="w-full aspect-[16/10] grid place-items-center bg-[#20252c] text-center">
+          <div className="w-full aspect-[16/10] grid place-items-center bg-[var(--color-photo)] text-center">
             <div>
               <div className="text-5xl" aria-hidden="true">{view.icon}</div>
               <p className="mt-2 text-sm text-[var(--color-muted)]">{view.label}<br />(v prototypu bez fotografií)</p>
