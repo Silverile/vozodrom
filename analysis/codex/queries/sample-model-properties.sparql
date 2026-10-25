@@ -1,1 +1,0 @@
-SELECT ?item ?itemLabel ?p ?v ?vLabel WHERE { VALUES ?make { wd:Q29637 } ?item wdt:P176 ?make. ?item ?p ?v. FILTER(STRSTARTS(STR(?p),STR(wdt:))) SERVICE wikibase:label { bd:serviceParam wikibase:language "cs,en". } } ORDER BY ?item LIMIT 300

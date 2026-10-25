@@ -1,0 +1,43 @@
+{
+  "retrievedDate": "2026-10-25",
+  "scope": "Selected manufacturer facts only; no prose, images, prices or production-volume tables reproduced.",
+  "sources": [
+    {
+      "id": "skoda-octavia-2026",
+      "url": "https://www.skoda-auto.cz/novinky/novinky-detail/2026-08-27-skoda-octavia-slavi-30-let-tri-dekady-ikonickeho-modelu",
+      "publisher": "Škoda Auto",
+      "publishedDate": "2026-08-27",
+      "facts": [{"line": "Octavia", "generationOrdinal": 3, "from": 2012, "to": 2020}, {"line": "Octavia", "generationOrdinal": 1, "from": 1996, "to": 2010}]
+    },
+    {
+      "id": "skoda-production-2024",
+      "url": "https://reporting.skoda-auto.com/archive/2024/production",
+      "publisher": "Škoda Auto",
+      "facts": [{"line": "Kodiaq", "generationOrdinal": 2, "productionStart": 2024}, {"line": "Superb", "generationOrdinal": 4, "productionStart": 2023}]
+    },
+    {
+      "id": "skoda-epiq-2026",
+      "url": "https://www.skoda-auto.cz/novinky/novinky-detail/2026-10-06-skoda-epiq-prichazi-na-cesky-trh-za-doporucene-prodejni-ceny-od-619-000-kc",
+      "publisher": "Škoda Auto",
+      "publishedDate": "2026-10-06",
+      "facts": [{"line": "Epiq", "market": "Czech Republic", "ordersAvailableIn": 2026, "bodyType": "suv"}]
+    },
+    {
+      "id": "bmw-3-production-2025",
+      "url": "https://www.press.bmwgroup.com/global/article/detail/T0454448EN/50-years-of-bmw-3-series-production-%20-an-international-success-story",
+      "publisher": "BMW Group",
+      "publishedDate": "2025-12-11",
+      "facts": [{"line": "3 Series", "generationOrdinal": 2, "from": 1982, "to": 1994}, {"line": "3 Series", "generationOrdinal": 3, "from": 1990, "to": 2000}, {"line": "3 Series", "generationOrdinal": 4, "from": 1997, "to": 2006}, {"line": "3 Series", "generationOrdinal": 5, "from": 2004, "to": 2013}, {"line": "3 Series", "generationOrdinal": 6, "from": 2011, "to": 2021, "scope": "Full-plant/global family including derivatives; not used as the European end year."}]
+    }
+  ],
+  "augment": [
+    {"key": "skoda/octavia", "sourceIds": ["skoda-octavia-2026"]},
+    {"key": "skoda/kodiaq", "sourceIds": ["skoda-production-2024"]},
+    {"key": "skoda/superb", "sourceIds": ["skoda-production-2024"]},
+    {"key": "skoda/epiq", "sourceIds": ["skoda-epiq-2026"]},
+    {"key": "bmw/rada-3", "sourceIds": ["bmw-3-production-2025"]}
+  ],
+  "generationOverrides": [
+    {"key": "skoda/octavia", "code": "III (5E)", "from": 2012, "to": 2020, "sourceId": "skoda-octavia-2026"}
+  ]
+}

@@ -1,7 +1,16 @@
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {archive} from './raw-data.mjs';
 export const root='analysis/codex';
 export async function query(name,sparql) {
+ const cached=archive().queries[name];
+ if(cached?.sparql.trim()===sparql.trim()&&cached.result)return cached.result;
+ if(cached)name+='-'+createHash('sha256').update(sparql).digest('hex').slice(0,8);
+ const renamed=archive().queries[name];
+ if(renamed?.sparql.trim()===sparql.trim()&&renamed.result)return renamed.result;
  fs.mkdirSync(`${root}/queries`,{recursive:true}); fs.mkdirSync(`${root}/raw`,{recursive:true});
+ const previous=`${root}/queries/${name}.sparql`;
+ if(fs.existsSync(previous)&&fs.readFileSync(previous,'utf8')!==sparql+'\n') name+='-'+createHash('sha256').update(sparql).digest('hex').slice(0,8);
  fs.writeFileSync(`${root}/queries/${name}.sparql`,sparql+'\n');
  const path=`${root}/raw/${name}.json`; if(fs.existsSync(path)) return JSON.parse(fs.readFileSync(path));
  const url='https://query.wikidata.org/sparql?format=json&query='+encodeURIComponent(sparql);
