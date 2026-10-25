@@ -1,4 +1,6 @@
+import deltaFeed from "@/data/feeds/testovaci-autobazar-delta.json";
 import { REGIONS, generationFor, models } from "./catalog";
+import { type Feed, type ImportReport, importFeed } from "./feed";
 import type { Listing, StkRecord, Transmission } from "./types";
 
 // Deterministic generator for fictional test listings: the same build always
@@ -94,8 +96,10 @@ function buildListings(): Listing[] {
       const featureCount = 3 + Math.floor(rand() * 5);
       const features = shuffled(FEATURES).slice(0, featureCount);
       const posted = new Date(Date.UTC(CURRENT_YEAR, 9, 25) - Math.floor(rand() * 40) * 86400000);
+      const tested = engine.fuel === "elektro" && rand() < 0.6;
       out.push({
         id: `vz-${String(index).padStart(4, "0")}`,
+        source: { kind: "test" },
         brandSlug: model.brandSlug,
         modelSlug: model.slug,
         generation: generationFor(model, year).code,
@@ -116,6 +120,16 @@ function buildListings(): Listing[] {
         postedAt: posted.toISOString().slice(0, 10),
         features,
         description: `Testovací inzerát. ${model.name} ${engine.code}, ${features.slice(0, 2).join(", ").toLowerCase()}. Vůz je smyšlený a slouží jen k ukázce prototypu.`,
+        battery:
+          engine.fuel === "elektro"
+            ? {
+                capacityKwh: Number(engine.code.match(/(\d+) kWh/)?.[1] ?? 75),
+                sohPercent: tested ? Math.round(between(86, 98)) : null,
+                testedAt: tested ? `${CURRENT_YEAR}-0${1 + Math.floor(rand() * 9)}-15` : null,
+                testMethod: tested ? "diagnostika v autorizovaném servisu" : null,
+                warrantyUntil: `${year + 8}-12-31`,
+              }
+            : undefined,
       });
       index++;
     }
@@ -123,7 +137,11 @@ function buildListings(): Listing[] {
   return out.sort((a, b) => b.postedAt.localeCompare(a.postedAt));
 }
 
-export const listings: Listing[] = buildListings();
+export const feedReports: ImportReport[] = [importFeed(deltaFeed as Feed)];
+
+export const listings: Listing[] = [...feedReports.flatMap((r) => r.imported), ...buildListings()].sort((a, b) =>
+  b.postedAt.localeCompare(a.postedAt),
+);
 
 export function getListing(id: string): Listing | undefined {
   return listings.find((l) => l.id === id);

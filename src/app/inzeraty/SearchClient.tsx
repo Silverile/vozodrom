@@ -2,12 +2,13 @@
 
 import MiniSearch from "minisearch";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, getBrand, getModel, models } from "@/lib/catalog";
 import { listings } from "@/lib/listings";
 import { marketEstimate } from "@/lib/market";
+import { savedSearches } from "@/lib/storage";
 import type { Body, Fuel, Listing } from "@/lib/types";
 
 const SORTS = {
@@ -22,6 +23,8 @@ const SORTS = {
   rok: { label: "Nejmladší", fn: (a: Listing, b: Listing) => b.year - a.year },
 } as const;
 type SortKey = keyof typeof SORTS;
+
+const nf = new Intl.NumberFormat("cs-CZ");
 
 function buildIndex() {
   const index = new MiniSearch<Listing & { text: string }>({
@@ -51,7 +54,7 @@ function buildIndex() {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label className="block text-xs text-[var(--color-muted)]">
+    <label className="block">
       <span className="sr-only">{label}</span>
       {children}
     </label>
@@ -63,10 +66,13 @@ export function SearchClient() {
   const router = useRouter();
   const pathname = usePathname();
   const index = useMemo(buildIndex, []);
+  const saved = savedSearches.useValue();
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const q = params.get("q") ?? "";
   const brand = params.get("znacka") ?? "";
   const model = params.get("model") ?? "";
+  const generation = params.get("generace") ?? "";
   const fuel = (params.get("palivo") ?? "") as Fuel | "";
   const body = (params.get("karoserie") ?? "") as Body | "";
   const gearbox = params.get("prevodovka") ?? "";
@@ -80,8 +86,10 @@ export function SearchClient() {
     const next = new URLSearchParams(params.toString());
     if (value) next.set(key, value);
     else next.delete(key);
-    if (key === "znacka") next.delete("model");
-    router.replace(`${pathname}?${next.toString()}`, { scroll: false });
+    if (key === "znacka") { next.delete("model"); next.delete("generace"); }
+    if (key === "model") next.delete("generace");
+    const query = next.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
   }
 
   const results = useMemo(() => {
@@ -90,6 +98,7 @@ export function SearchClient() {
       .filter((l) => (textIds ? textIds.has(l.id) : true))
       .filter((l) => !brand || l.brandSlug === brand)
       .filter((l) => !model || l.modelSlug === model)
+      .filter((l) => !generation || l.generation === generation)
       .filter((l) => !fuel || l.fuel === fuel)
       .filter((l) => !body || l.body === body)
       .filter((l) => !gearbox || l.transmission === gearbox)
@@ -98,18 +107,47 @@ export function SearchClient() {
       .filter((l) => !yearFrom || l.year >= yearFrom)
       .filter((l) => !kmMax || l.mileageKm <= kmMax)
       .sort((SORTS[sort] ?? SORTS.nejnovejsi).fn);
-  }, [index, q, brand, model, fuel, body, gearbox, region, priceMax, yearFrom, kmMax, sort]);
+  }, [index, q, brand, model, generation, fuel, body, gearbox, region, priceMax, yearFrom, kmMax, sort]);
 
-  const activeFilters = [...params.keys()].filter((k) => k !== "razeni").length;
   const selectedModel = brand && model ? getModel(brand, model) : undefined;
   const brandName = getBrand(brand)?.name;
-  const heading = selectedModel ? `${brandName} ${selectedModel.name}` : brandName ?? "Všechna auta";
+  const heading = selectedModel ? `${brandName} ${selectedModel.name}${generation ? ` ${generation}` : ""}` : brandName ?? "Všechna auta";
+
+  // Removable chips for every active filter, so state stays visible when the panel is collapsed on mobile.
+  const chips: [string, string][] = [
+    ["q", q && `„${q}“`],
+    ["znacka", brandName ?? ""],
+    ["model", selectedModel?.name ?? ""],
+    ["generace", generation],
+    ["palivo", fuel && FUEL_LABEL[fuel]],
+    ["karoserie", body && BODY_LABEL[body]],
+    ["prevodovka", gearbox],
+    ["kraj", region],
+    ["cenaDo", priceMax ? `do ${nf.format(priceMax)} Kč` : ""],
+    ["rokOd", yearFrom ? `od roku ${yearFrom}` : ""],
+    ["najezdDo", kmMax ? `do ${nf.format(kmMax)} km` : ""],
+  ].filter(([, label]) => label) as [string, string][];
+
+  const filterQuery = new URLSearchParams([...params.entries()].filter(([k]) => k !== "razeni")).toString();
+  const isSaved = saved.some((s) => s.query === filterQuery);
+
+  function toggleSaved() {
+    if (isSaved) savedSearches.write(saved.filter((s) => s.query !== filterQuery));
+    else savedSearches.write([{ query: filterQuery, label: heading + (chips.length ? ` · ${chips.length} ${chips.length === 1 ? "filtr" : chips.length < 5 ? "filtry" : "filtrů"}` : ""), savedAt: new Date().toISOString().slice(0, 10) }, ...saved]);
+  }
 
   return (
     <>
-      <h1 className="text-3xl font-extrabold tracking-tight">Prodej: {heading}</h1>
+      <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Prodej: {heading}</h1>
 
-      <div className="card p-3 mt-4 grid gap-2 grid-cols-2 md:grid-cols-4">
+      <div className="mt-4 flex flex-wrap items-center gap-2 md:hidden">
+        <button className="pill" data-on={filtersOpen} aria-expanded={filtersOpen} aria-controls="filters" onClick={() => setFiltersOpen((o) => !o)}>
+          ⚙ Filtry{chips.length > 0 && ` (${chips.length})`}
+        </button>
+        <span className="text-sm text-[var(--color-muted)] ml-auto"><b className="text-[var(--color-ink)]">{results.length}</b> aut</span>
+      </div>
+
+      <div id="filters" className={`card p-3 mt-3 md:mt-4 gap-2 grid-cols-2 md:grid-cols-4 ${filtersOpen ? "grid" : "hidden md:grid"}`}>
         <Field label="Značka">
           <select className="input" value={brand} onChange={(e) => update("znacka", e.target.value)}>
             <option value="">Všechny značky</option>
@@ -120,6 +158,14 @@ export function SearchClient() {
           <select className="input" value={model} disabled={!brand} onChange={(e) => update("model", e.target.value)}>
             <option value="">Všechny modely</option>
             {models.filter((m) => m.brandSlug === brand).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
+          </select>
+        </Field>
+        <Field label="Generace">
+          <select className="input" value={generation} disabled={!selectedModel} onChange={(e) => update("generace", e.target.value)}>
+            <option value="">Generace</option>
+            {selectedModel?.generations.map((g) => (
+              <option key={g.code} value={g.code}>{g.code} ({g.from}–{g.to ?? "dosud"})</option>
+            ))}
           </select>
         </Field>
         <Field label="Palivo">
@@ -137,9 +183,7 @@ export function SearchClient() {
         <Field label="Cena do">
           <select className="input" value={priceMax || ""} onChange={(e) => update("cenaDo", e.target.value)}>
             <option value="">Cena do</option>
-            {[150000, 200000, 300000, 450000, 600000, 900000].map((p) => (
-              <option key={p} value={p}>{new Intl.NumberFormat("cs-CZ").format(p)} Kč</option>
-            ))}
+            {[150000, 200000, 300000, 450000, 600000, 900000].map((p) => <option key={p} value={p}>{nf.format(p)} Kč</option>)}
           </select>
         </Field>
         <Field label="Rok od">
@@ -161,32 +205,46 @@ export function SearchClient() {
             <option value="automat">Automat</option>
           </select>
         </Field>
-        <Field label="Hledat">
-          <input className="input" placeholder="Hledat: výbava, motor, barva…" defaultValue={q} onChange={(e) => update("q", e.target.value)} />
-        </Field>
         <Field label="Kraj">
           <select className="input" value={region} onChange={(e) => update("kraj", e.target.value)}>
             <option value="">Celá ČR</option>
             {REGIONS.map((r) => <option key={r} value={r}>{r}</option>)}
           </select>
         </Field>
-        <div className="col-span-2 flex items-center justify-between gap-3">
-          {activeFilters > 0 ? (
-            <button className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => router.replace(pathname, { scroll: false })}>
-              ✕ Zrušit filtry ({activeFilters})
-            </button>
-          ) : <span />}
-          <span className="text-sm text-[var(--color-muted)]"><strong className="text-[var(--color-ink)] text-base">{results.length}</strong> aut</span>
+        <div className="col-span-2">
+          <Field label="Hledat">
+            <input className="input" placeholder="Hledat: výbava, motor, barva…" value={q} onChange={(e) => update("q", e.target.value)} />
+          </Field>
         </div>
       </div>
 
+      {chips.length > 0 && (
+        <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="Aktivní filtry">
+          {chips.map(([key, label]) => (
+            <button key={key} className="pill" data-on="true" onClick={() => update(key, "")} aria-label={`Zrušit filtr ${label}`}>
+              {label} ✕
+            </button>
+          ))}
+          <button className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] px-2" onClick={() => router.replace(pathname, { scroll: false })}>
+            Zrušit vše
+          </button>
+        </div>
+      )}
+
       <div className="grid gap-6 lg:grid-cols-[1fr_320px] mt-5">
         <div>
-          <div className="flex items-center justify-between gap-3 mb-3">
-            <p className="font-semibold">{results.length} inzerátů</p>
-            <select className="input w-auto" value={sort} onChange={(e) => update("razeni", e.target.value)} aria-label="Řazení">
-              {Object.entries(SORTS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}
-            </select>
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+            <p className="font-semibold" aria-live="polite">{results.length} inzerátů</p>
+            <div className="flex items-center gap-2">
+              {chips.length > 0 && (
+                <button className="pill" data-on={isSaved} aria-pressed={isSaved} onClick={toggleSaved}>
+                  {isSaved ? "★ Uloženo" : "☆ Uložit hledání"}
+                </button>
+              )}
+              <select className="input w-auto" value={sort} onChange={(e) => update("razeni", e.target.value)} aria-label="Řazení">
+                {Object.entries(SORTS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}
+              </select>
+            </div>
           </div>
           {results.length === 0 ? (
             <div className="card p-10 text-center text-[var(--color-muted)]">Žádný inzerát neodpovídá filtrům.</div>
@@ -202,6 +260,9 @@ export function SearchClient() {
           ) : (
             <section className="card p-4 text-sm space-y-3">
               <h3 className="font-bold">Jak číst inzeráty</h3>
+              <p className="text-[var(--color-muted)]">
+                Cena je vždy <b className="text-[var(--color-ink)]">cena při platbě najednou</b>, bez podmínky financování.
+              </p>
               <p className="text-[var(--color-muted)]">
                 <b className="text-[var(--color-good)]">Dobrá cena</b> a pruh pod cenou porovnávají vůz s podobnými inzeráty (±2 roky,
                 přepočteno na nájezd).

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Bar } from "@/components/Bar";
 import { CarImage } from "@/components/CarImage";
 import { ListingRow } from "@/components/ListingRow";
+import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
 import { listingsOf } from "@/lib/listings";
@@ -104,7 +105,15 @@ export default async function ModelPage({ params }: { params: Params }) {
               <li key={g.code} className="pl-4">
                 <span className="absolute -left-[7px] mt-1.5 w-3 h-3 rounded-full bg-[var(--color-brand)]" />
                 <div className="font-semibold">{g.code}</div>
-                <div className="text-sm text-[var(--color-muted)]">{g.from} – {g.to ?? "dosud"}</div>
+                <div className="text-sm text-[var(--color-muted)]">
+                  {g.from} – {g.to ?? "dosud"} ·{" "}
+                  <Link
+                    href={`/inzeraty/?znacka=${brandSlug}&model=${modelSlug}&generace=${encodeURIComponent(g.code)}`}
+                    className="text-[var(--color-brand)] hover:underline"
+                  >
+                    {offers.filter((o) => o.generation === g.code).length} v prodeji
+                  </Link>
+                </div>
               </li>
             ))}
           </ol>
@@ -156,6 +165,10 @@ export default async function ModelPage({ params }: { params: Params }) {
             </div>
           </Section>
         )}
+      </div>
+
+      <div className="mt-4">
+        <OwnerQuestions model={model} />
       </div>
 
       <div className="flex items-end justify-between mt-10 mb-4">

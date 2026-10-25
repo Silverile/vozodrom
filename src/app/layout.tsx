@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ShortlistLink } from "@/components/ShortlistLink";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,25 +35,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Prototyp — všechny inzeráty, ceny a statistiky jsou smyšlená testovací data.
         </div>
         <header className="sticky top-0 z-20 border-b border-[var(--color-line)] bg-[var(--color-bg)]/90 backdrop-blur">
-          <div className="mx-auto max-w-6xl px-4 h-16 flex items-center gap-6">
+          <div className="mx-auto max-w-6xl px-4 h-16 flex items-center gap-3 sm:gap-6">
             <Logo />
-            <nav className="flex items-center gap-1 text-sm">
+            <nav className="flex items-center gap-0.5 sm:gap-1 text-sm overflow-x-auto">
               {NAV.map((n) => (
                 <Link key={n.href} href={n.href} className="px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)]">
                   {n.label}
                 </Link>
               ))}
+              <ShortlistLink />
             </nav>
-            <span className="btn-cta ml-auto hidden sm:inline-flex text-sm opacity-60 cursor-not-allowed" title="V prototypu zatím není k dispozici">
+            <Link href="/pridat/" className="btn-cta ml-auto hidden sm:inline-flex text-sm">
               + Přidat inzerát zdarma
-            </span>
+            </Link>
           </div>
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-[var(--color-line)] mt-16">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] grid gap-2 sm:grid-cols-3">
             <span>© 2026 vozodrom.cz — prototyp</span>
-            <span>Bez reklamních trackerů, bez cookie lišty.</span>
+            <span>
+              Bez reklamních trackerů, bez cookie lišty. ·{" "}
+              <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
+            </span>
             <span className="sm:text-right">Data v prototypu jsou smyšlená.</span>
           </div>
         </footer>

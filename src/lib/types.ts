@@ -63,8 +63,20 @@ export interface StkRecord {
   result: "způsobilé" | "částečně způsobilé" | "nezpůsobilé";
 }
 
+export interface Battery {
+  /** declared by the seller */
+  capacityKwh: number;
+  /** state of health from a dated test, or null when no test was provided */
+  sohPercent: number | null;
+  testedAt: string | null;
+  testMethod: string | null;
+  warrantyUntil: string | null;
+}
+
 export interface Listing {
   id: string;
+  /** where the listing came from: generated test data or a dealer feed */
+  source: { kind: "test" } | { kind: "feed"; feed: string; externalId: string; updatedAt: string };
   brandSlug: string;
   modelSlug: string;
   generation: string;
@@ -85,4 +97,5 @@ export interface Listing {
   postedAt: string;
   features: string[];
   description: string;
+  battery?: Battery;
 }

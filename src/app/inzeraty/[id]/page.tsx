@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CarImage } from "@/components/CarImage";
+import { BatteryPanel } from "@/components/BatteryPanel";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { Gallery } from "@/components/Gallery";
 import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { PriceMeter, VerdictBadge } from "@/components/VerdictBadge";
@@ -53,7 +55,19 @@ export default async function ListingPage({ params }: { params: Params }) {
     ["Převodovka", listing.transmission],
     ["Karoserie", BODY_LABEL[listing.body]],
     ["Barva", listing.color],
-    ["Generace", <Link key="g" href={catalogHref} className="text-[var(--color-brand)] hover:underline">{listing.generation}</Link>],
+    [
+      "Generace",
+      <span key="g">
+        <Link href={catalogHref} className="text-[var(--color-brand)] hover:underline">{listing.generation}</Link>
+        {" · "}
+        <Link
+          href={`/inzeraty/?znacka=${brand.slug}&model=${model.slug}&generace=${encodeURIComponent(listing.generation)}`}
+          className="text-[var(--color-brand)] hover:underline"
+        >
+          další v prodeji
+        </Link>
+      </span>,
+    ],
     ["Kraj", listing.region],
   ];
 
@@ -71,26 +85,23 @@ export default async function ListingPage({ params }: { params: Params }) {
       <div className="grid gap-5 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_340px_300px] mt-5 items-start">
         {/* photos + details */}
         <div className="space-y-4 min-w-0">
-          <div className="card overflow-hidden">
-            <CarImage body={listing.body} color={listing.color} className="w-full aspect-[16/10]" />
-            <div className="grid grid-cols-5 gap-1 p-1">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <div key={i} className="aspect-[4/3] rounded-md bg-[var(--color-field)]" aria-hidden="true" />
-              ))}
-            </div>
-          </div>
+          <Gallery body={listing.body} color={listing.color} title={`${brand.name} ${model.name}, ${listing.year}`} />
+          {listing.battery && <BatteryPanel battery={listing.battery} />}
           <section className="card p-4">
             <h2 className="font-bold">Výbava</h2>
             <ul className="mt-2 flex flex-wrap gap-1.5">
               {listing.features.map((f) => <li key={f} className="chip bg-[var(--color-field)] text-[#d5dbe1]">{f}</li>)}
             </ul>
             <h2 className="font-bold mt-4">Popis prodejce</h2>
-            <p className="mt-1 text-[var(--color-muted)]">{listing.description}</p>
+            <p className="mt-1 text-[var(--color-muted)] whitespace-pre-line">{listing.description}</p>
           </section>
           <section className="card p-4">
             <h2 className="font-bold">Historie technických kontrol</h2>
+            <p className="text-xs text-[var(--color-muted)]">Zdroj: data o technických prohlídkách (v ostrém provozu MD ČR), nikoli prodejce.</p>
             {listing.stkHistory.length === 0 ? (
-              <p className="mt-2 text-sm text-[var(--color-muted)]">Vůz je mladší než 4 roky, první STK ho teprve čeká.</p>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                {2026 - listing.year < 4 ? "Vůz je mladší než 4 roky, první STK ho teprve čeká." : "Záznamy STK nejsou k dispozici (prodejce neuvedl VIN)."}
+              </p>
             ) : (
               <table className="w-full text-sm mt-2">
                 <thead className="text-left text-[var(--color-muted)]">
@@ -128,7 +139,9 @@ export default async function ListingPage({ params }: { params: Params }) {
                 </p>
               </div>
             )}
-            <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
+            <p className="mt-1 text-xs text-[var(--color-muted)]">Cena při platbě najednou, bez podmínky financování.</p>
+            <h2 className="mt-4 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">Údaje od prodejce</h2>
+            <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
               {specs.map(([k, v]) => (
                 <div key={k} className="contents">
                   <dt className="text-[var(--color-muted)]">{k}</dt>
@@ -152,12 +165,13 @@ export default async function ListingPage({ params }: { params: Params }) {
                 <div className="text-xs text-[var(--color-muted)]">Vloženo {formatAgo(listing.postedAt)} · {formatDate(listing.postedAt)}</div>
               </div>
             </div>
-            <button disabled className="btn-cta mt-4 w-full opacity-60 cursor-not-allowed" title="V prototypu není kontakt aktivní">
-              Zobrazit kontakt
-            </button>
-            <button disabled className="mt-2 w-full rounded-[10px] border border-[var(--color-line)] py-2.5 text-sm font-semibold opacity-60 cursor-not-allowed">
-              Napsat zprávu
-            </button>
+            <p className="mt-4 rounded-[10px] bg-[var(--color-field)] p-3 text-sm text-[var(--color-muted)]">
+              Toto je smyšlený testovací inzerát, prodejce neexistuje. V ostrém provozu zde bude telefon a zpráva prodejci.
+            </p>
+            <div className="mt-3 flex items-center justify-between gap-3">
+              <span className="text-sm">Přidat do výběru a porovnání</span>
+              <FavoriteButton id={listing.id} label={`${brand.name} ${model.name}, ${listing.year}`} />
+            </div>
           </section>
         </div>
 
