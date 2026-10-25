@@ -24,11 +24,11 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      # Served at https://<user>.github.io/vozodrom/ until vozodrom.cz is connected;
-      # then set this to an empty string and add public/CNAME.
+      # Served from the root of the custom domain vozodrom.cz, which is set in
+      # Settings → Pages (Actions deployments ignore a CNAME file).
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /vozodrom
+          NEXT_PUBLIC_BASE_PATH: ""
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

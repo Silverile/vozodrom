@@ -24,7 +24,8 @@ npm run build    # statický web do ./out
 
 ## Nasazení
 GitHub Actions (`.github/workflows/deploy.yml`) staví web a publikuje ho na GitHub Pages
-(`/vozodrom/`). V nastavení repozitáře: **Settings → Pages → Source: GitHub Actions**.
+na doméně **vozodrom.cz**. V nastavení repozitáře: **Settings → Pages → Source: GitHub Actions**,
+Custom domain `vozodrom.cz`.
 
 GitHub Pages je jen pro prototyp: jeho podmínky nepovolují komerční provoz. Před spuštěním pro veřejnost
 přejdeme na hosting s backendem.
