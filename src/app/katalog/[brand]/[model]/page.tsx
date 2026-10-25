@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Bar } from "@/components/Bar";
 import { CarImage } from "@/components/CarImage";
-import { ListingCard } from "@/components/ListingCard";
+import { ListingRow } from "@/components/ListingRow";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
 import { listingsOf } from "@/lib/listings";
@@ -24,9 +24,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
-function Section({ title, children, note }: { title: string; children: React.ReactNode; note?: string }) {
+function Section({ title, children, note, id }: { title: string; children: React.ReactNode; note?: string; id?: string }) {
   return (
-    <section className="card p-5">
+    <section id={id} className="card p-5 scroll-mt-24">
       <h2 className="font-bold text-lg">{title}</h2>
       <div className="mt-4">{children}</div>
       {note && <p className="text-xs text-[var(--color-muted)] mt-4">{note}</p>}
@@ -67,6 +67,19 @@ export default async function ModelPage({ params }: { params: Params }) {
           <p className="text-[var(--color-muted)] mt-1">{model.segment} · {BODY_LABEL[model.body]}</p>
           <p className="mt-4 max-w-xl">{model.description}</p>
           <div className="mt-5 grid grid-cols-3 gap-3 max-w-md">
+            <div className="card p-3 col-span-3 flex items-center justify-between gap-3">
+              <div>
+                <div className="text-xs text-[var(--color-muted)]">Hodnocení majitelů*</div>
+                <div className="flex flex-wrap gap-1.5 mt-1">
+                  {model.pros.slice(0, 3).map((p) => (
+                    <span key={p.label} className="chip bg-[var(--color-good-soft)] text-[var(--color-good)]">{p.label} <b className="opacity-70">{formatNumber(p.count)}</b></span>
+                  ))}
+                </div>
+              </div>
+              <span className="rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2.5 py-1 text-2xl font-extrabold">
+                {model.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}
+              </span>
+            </div>
             <div className="card p-3">
               <div className="text-xs text-[var(--color-muted)]">V provozu*</div>
               <div className="font-bold">{formatNumber(model.registered)}</div>
@@ -126,7 +139,7 @@ export default async function ModelPage({ params }: { params: Params }) {
           </div>
         </Section>
 
-        <Section title="Typický nájezd podle stáří" note="* Medián stavu tachometru při STK, testovací data.">
+        <Section id="najezd" title="Typický nájezd podle stáří" note="* Medián stavu tachometru při STK, testovací data.">
           <div className="space-y-2.5">
             {model.mileageByAge.map((m) => (
               <Bar key={m.age} label={`${m.age} ${m.age === 1 ? "rok" : m.age < 5 ? "roky" : "let"}`} value={m.km} max={maxKm} display={formatKm(m.km)} />
@@ -135,7 +148,7 @@ export default async function ModelPage({ params }: { params: Params }) {
         </Section>
 
         {byYear.length > 0 && (
-          <Section title="Ceny v inzerátech podle ročníku" note={`Rozpětí: ${formatPrice(Math.min(...prices))} – ${formatPrice(Math.max(...prices))}.`}>
+          <Section id="ceny" title="Ceny v inzerátech podle ročníku" note={`Rozpětí: ${formatPrice(Math.min(...prices))} – ${formatPrice(Math.max(...prices))}.`}>
             <div className="space-y-2.5">
               {byYear.map((y) => (
                 <Bar key={y.year} label={String(y.year)} value={y.avg} max={maxAvg} display={formatPrice(Math.round(y.avg / 1000) * 1000)} />
@@ -151,9 +164,9 @@ export default async function ModelPage({ params }: { params: Params }) {
           Hledat s filtry →
         </Link>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col gap-3">
         {offers.map((l) => (
-          <ListingCard key={l.id} listing={l} />
+          <ListingRow key={l.id} listing={l} />
         ))}
       </div>
     </div>

@@ -4,12 +4,12 @@ import type { Body } from "@/lib/types";
 
 const PAINT: Record<string, string> = {
   bílá: "#e9ecef",
-  černá: "#2b2f36",
+  černá: "#3a3f47",
   stříbrná: "#b8bec7",
   šedá: "#7d848f",
-  modrá: "#2f5fa7",
-  červená: "#b8312f",
-  "zelená metalíza": "#2f6f5a",
+  modrá: "#3d6fbf",
+  červená: "#c8403c",
+  "zelená metalíza": "#3a8a70",
 };
 
 const SILHOUETTE: Record<Body, string> = {
@@ -24,14 +24,14 @@ export function CarImage({ body, color, className = "" }: { body: Body; color: s
   const paint = PAINT[color] ?? "#8a919c";
   return (
     <svg viewBox="0 0 220 130" className={className} role="img" aria-label={`Ilustrace vozu (${color})`}>
-      <rect width="220" height="130" fill="var(--color-brand-soft)" />
-      <rect y="108" width="220" height="22" fill="var(--color-line)" />
-      <path d={SILHOUETTE[body]} fill={paint} stroke="#00000033" strokeWidth="1.5" />
-      <path d="M70 58 L114 56 Q126 56 134 64 L144 76 L64 76 Z" fill="#cfe3ff" opacity="0.7" />
-      <circle cx="64" cy="104" r="13" fill="#1d2026" />
-      <circle cx="64" cy="104" r="5" fill="#9aa1ab" />
-      <circle cx="160" cy="104" r="13" fill="#1d2026" />
-      <circle cx="160" cy="104" r="5" fill="#9aa1ab" />
+      <rect width="220" height="130" fill="#20252c" />
+      <ellipse cx="112" cy="112" rx="96" ry="9" fill="#00000055" />
+      <path d={SILHOUETTE[body]} fill={paint} />
+      <path d="M70 58 L114 56 Q126 56 134 64 L144 76 L64 76 Z" fill="#cfe3ff" opacity="0.55" />
+      <circle cx="64" cy="104" r="13" fill="#0b0c0e" />
+      <circle cx="64" cy="104" r="5" fill="#8e96a1" />
+      <circle cx="160" cy="104" r="13" fill="#0b0c0e" />
+      <circle cx="160" cy="104" r="5" fill="#8e96a1" />
     </svg>
   );
 }

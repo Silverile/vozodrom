@@ -1,4 +1,4 @@
-import type { Body, Brand, Defect, Engine, Fuel, Generation, Model } from "./types";
+import type { Body, Brand, Defect, Engine, Fuel, Generation, Model, Opinion } from "./types";
 
 // Prototype catalogue. Model names and generations are real; every number
 // (prices, STK statistics, mileage, registrations) is invented test data.
@@ -32,6 +32,16 @@ function defects(seed: number): Defect[] {
   return shares.map((share, i) => ({ label: DEFECTS[(i + seed) % DEFECTS.length], share }));
 }
 
+const PROS = ["prostorné", "úsporné", "spolehlivé", "pohodlné", "dobře se řídí", "tiché", "praktický kufr"];
+const CONS = ["infotainment", "cena dílů", "tvrdý podvozek", "hluk v kabině", "spotřeba ve městě", "slabé světlomety"];
+
+function opinions(labels: string[], seed: number, take: number, reviews: number, weight: number): Opinion[] {
+  return Array.from({ length: take }, (_, i) => ({
+    label: labels[(seed * 3 + i * 2) % labels.length],
+    count: Math.round(reviews * weight * (1 - i * 0.18)),
+  }));
+}
+
 function mileage(annualKm: number): { age: number; km: number }[] {
   return [1, 3, 5, 8, 10, 15].map((age) => ({ age, km: Math.round((annualKm * age) / 1000) * 1000 }));
 }
@@ -57,6 +67,7 @@ interface ModelInput {
 }
 
 function model(m: ModelInput): Model {
+  const reviews = Math.round(m.registered / 330);
   return {
     slug: m.slug,
     brandSlug: m.brandSlug,
@@ -70,6 +81,10 @@ function model(m: ModelInput): Model {
     stk: { inspections: Math.round(m.registered * 0.45), failRate: m.failRate, defects: defects(m.seed) },
     mileageByAge: mileage(m.annualKm),
     registered: m.registered,
+    ownerScore: Math.round((9.5 - m.failRate * 10) * 10) / 10,
+    reviews,
+    pros: opinions(PROS, m.seed, 4, reviews, 0.42),
+    cons: opinions(CONS, m.seed, 2, reviews, 0.14),
   };
 }
 

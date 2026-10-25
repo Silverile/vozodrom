@@ -29,6 +29,12 @@ export interface Defect {
   share: number;
 }
 
+export interface Opinion {
+  label: string;
+  /** how many owner reviews mention it */
+  count: number;
+}
+
 export interface Model {
   slug: string;
   brandSlug: string;
@@ -44,6 +50,11 @@ export interface Model {
   /** median odometer reading by vehicle age in years */
   mileageByAge: { age: number; km: number }[];
   registered: number;
+  /** owner rating 1–10 */
+  ownerScore: number;
+  reviews: number;
+  pros: Opinion[];
+  cons: Opinion[];
 }
 
 export interface StkRecord {
@@ -60,6 +71,7 @@ export interface Listing {
   year: number;
   mileageKm: number;
   price: number;
+  engine: string;
   fuel: Fuel;
   transmission: Transmission;
   powerKw: number;

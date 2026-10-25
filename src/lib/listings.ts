@@ -65,6 +65,12 @@ function stkHistory(year: number, mileageKm: number, firstStkYear: number): StkR
       result: roll < 0.85 ? "způsobilé" : roll < 0.97 ? "částečně způsobilé" : "nezpůsobilé",
     });
   }
+  // About one in ten test cars gets a suspicious drop between inspections, so the
+  // warning state of the UI has something to show.
+  if (records.length >= 2 && rand() < 0.1) {
+    const last = records[records.length - 1];
+    last.odometerKm = Math.round((records[records.length - 2].odometerKm * 0.7) / 100) * 100;
+  }
   return records.reverse();
 }
 
@@ -96,6 +102,7 @@ function buildListings(): Listing[] {
         year,
         mileageKm,
         price,
+        engine: engine.code,
         fuel: engine.fuel,
         transmission,
         powerKw: engine.powerKw,

@@ -21,6 +21,11 @@ function Logo() {
   );
 }
 
+const NAV = [
+  { href: "/inzeraty/", label: "Inzeráty" },
+  { href: "/katalog/", label: "Katalog" },
+];
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="cs">
@@ -28,26 +33,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="bg-[var(--color-warn-soft)] text-[var(--color-warn)] text-xs text-center py-1.5 px-4">
           Prototyp — všechny inzeráty, ceny a statistiky jsou smyšlená testovací data.
         </div>
-        <header className="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+        <header className="sticky top-0 z-20 border-b border-[var(--color-line)] bg-[var(--color-bg)]/90 backdrop-blur">
           <div className="mx-auto max-w-6xl px-4 h-16 flex items-center gap-6">
             <Logo />
-            <nav className="flex items-center gap-1 text-sm font-medium">
-              <Link href="/inzeraty/" className="px-3 py-2 rounded-lg hover:bg-[var(--color-brand-soft)]">Inzeráty</Link>
-              <Link href="/katalog/" className="px-3 py-2 rounded-lg hover:bg-[var(--color-brand-soft)]">Katalog</Link>
+            <nav className="flex items-center gap-1 text-sm">
+              {NAV.map((n) => (
+                <Link key={n.href} href={n.href} className="px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)]">
+                  {n.label}
+                </Link>
+              ))}
             </nav>
-            <span
-              className="ml-auto hidden sm:inline-flex items-center rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-4 py-2 text-sm font-semibold opacity-60 cursor-not-allowed"
-              title="V prototypu zatím není k dispozici"
-            >
-              + Přidat inzerát
+            <span className="btn-cta ml-auto hidden sm:inline-flex text-sm opacity-60 cursor-not-allowed" title="V prototypu zatím není k dispozici">
+              + Přidat inzerát zdarma
             </span>
           </div>
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-[var(--color-line)] mt-16">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] flex flex-col sm:flex-row gap-2 sm:justify-between">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] grid gap-2 sm:grid-cols-3">
             <span>© 2026 vozodrom.cz — prototyp</span>
-            <span>Data v prototypu jsou smyšlená a neslouží k rozhodování o koupi.</span>
+            <span>Bez reklamních trackerů, bez cookie lišty.</span>
+            <span className="sm:text-right">Data v prototypu jsou smyšlená.</span>
           </div>
         </footer>
       </body>
