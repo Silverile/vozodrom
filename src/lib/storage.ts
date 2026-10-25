@@ -79,3 +79,12 @@ const isSavedSearchArray = (v: unknown): v is SavedSearch[] =>
   v.every((s) => s && typeof s === "object" && ["query", "label", "savedAt"].every((k) => typeof (s as Record<string, unknown>)[k] === "string"));
 
 export const savedSearches = createStore<SavedSearch[]>("vozodrom.savedSearches", [], isSavedSearchArray);
+
+/** Analytics consent: null until the visitor chooses. */
+export type Consent = "granted" | "denied";
+
+export const analyticsConsent = createStore<Consent | null>(
+  "vozodrom.analyticsConsent",
+  null,
+  (v): v is Consent | null => v === null || v === "granted" || v === "denied",
+);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Analytics, ConsentSettings } from "@/components/Analytics";
 import { ShortlistLink } from "@/components/ShortlistLink";
 import "./globals.css";
 
@@ -45,7 +46,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ))}
               <ShortlistLink />
             </nav>
-            <Link href="/pridat/" className="btn-cta ml-auto hidden sm:inline-flex text-sm">
+            <Link href="/prihlaseni/" className="ml-auto px-3 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap">
+              Přihlásit
+            </Link>
+            <Link href="/pridat/" className="btn-cta hidden sm:inline-flex text-sm">
               + Přidat inzerát zdarma
             </Link>
           </div>
@@ -54,13 +58,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-[var(--color-line)] mt-16">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] grid gap-2 sm:grid-cols-3">
             <span>© 2026 vozodrom.cz — prototyp</span>
-            <span>
-              Bez reklamních trackerů, bez cookie lišty. ·{" "}
-              <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
+            <span className="space-y-1">
+              <ConsentSettings />
+              <span className="block">
+                <Link href="/soukromi/" className="hover:text-[var(--color-ink)] underline">Soukromí a cookies</Link> ·{" "}
+                <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
+              </span>
             </span>
             <span className="sm:text-right">Data v prototypu jsou smyšlená.</span>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );

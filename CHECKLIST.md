@@ -23,3 +23,8 @@
 - [ ] Проверка документов юристом (1–2 часа)
 - [ ] Выписка работодателя из торгового реестра (§304) — убедиться, что предмет деятельности не пересекается
 - [ ] Источники объявлений: фиды дилеров (Soft4cars и др.), стартовый сегмент (стратегия B)
+
+## Analytika a účty
+- [ ] Vytvořit GA4 property (analytics.google.com) a vložit Measurement ID `G-…` do GitHub → Settings → Secrets and variables → Actions → Variables jako `GA_MEASUREMENT_ID`, pak znovu spustit deploy
+- [ ] Před ostrým spuštěním: doplnit provozovatele do /soukromi/ a nechat zkontrolovat
+- [ ] Vybrat poskytovatele účtů (Firebase / Supabase / vlastní backend); /prihlaseni/ je zatím jen náhled
