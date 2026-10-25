@@ -7,10 +7,14 @@ const lines=read('src/data/catalog/model-lines-auto.json'),evidence=read('analys
 const sources=new Map(Object.values(evidence.pages).filter(p=>p.revisionId).map(p=>['https://en.wikipedia.org/w/index.php?oldid='+p.revisionId,p]));
 for(const p of read('analysis/codex/model-line-primary-facts.json').sources)sources.set(p.url,{title:p.publisher,infoboxes:[{production:JSON.stringify(p.facts)}]});
 const rawModels=read('src/data/catalog/models-auto.json');
+const additions=fs.existsSync('src/data/catalog/model-line-additions.json')?read('src/data/catalog/model-line-additions.json'):[];
+const addedKey=l=>additions.some(a=>a.makeSlug===l.makeSlug&&a.slug===l.slug);
+if(fs.existsSync('analysis/codex/skoda-card-evidence.json'))for(const p of Object.values(read('analysis/codex/skoda-card-evidence.json').pages))if(p.source){sources.set(p.source,p);if(p.wikidataQid)sources.set('https://www.wikidata.org/wiki/'+p.wikidataQid,{title:p.wikidataQid,infoboxes:[]});}
 for(const qid of new Set([...rawModels.map(m=>m.qid),...Object.values(evidence.pages).map(p=>p.wikidataQid).filter(Boolean)]))sources.set('https://www.wikidata.org/wiki/'+qid,{title:qid,infoboxes:[]});
 const bodies=new Set(['hatchback','kombi','sedan','suv','mpv','kupe','kabriolet','pickup','dodavka']);
 const keys=new Set();assert.equal(new Set(lines.map(l=>l.makeSlug)).size,40);assert.deepEqual([...new Set(lines.map(l=>l.makeSlug))].sort(),[...order].sort());
-for(const [make,b]of Object.entries(read('analysis/codex/model-lines-batch-4-baseline.json').byMake))assert.equal(createHash('sha256').update(JSON.stringify(lines.filter(l=>l.makeSlug===make))).digest('hex'),b.sha256,'existing make changed '+make);
+for(const [make,b]of Object.entries(read('analysis/codex/model-lines-batch-4-baseline.json').byMake))assert.equal(createHash('sha256').update(JSON.stringify(lines.filter(l=>l.makeSlug===make&&!addedKey(l)))).digest('hex'),b.sha256,'existing make changed '+make);
+if(fs.existsSync('analysis/codex/model-cards-pilot-baseline.json'))for(const[make,b]of Object.entries(read('analysis/codex/model-cards-pilot-baseline.json').byMake))assert.equal(createHash('sha256').update(JSON.stringify(lines.filter(l=>l.makeSlug===make&&!addedKey(l)))).digest('hex'),b.sha256,'pilot changed original '+make);
 for(let i=0;i<lines.length;i++){
  const l=lines[i],key=l.makeSlug+'/'+l.slug;assert(!keys.has(key),key);keys.add(key);assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(l.slug),key);assert(makes.some(m=>m.slug===l.makeSlug));
  if(i)assert(lines[i-1].makeSlug.localeCompare(l.makeSlug,'en')<0||lines[i-1].makeSlug===l.makeSlug&&lines[i-1].name.localeCompare(l.name,'cs')<=0,'sort '+key);
@@ -34,6 +38,7 @@ for(let i=0;i<lines.length;i++){
  for(const f of ['stk','registered','ownerScore','reviews','price','newPrice'])assert(!(f in l));
 }
 const demo=fs.readFileSync('src/lib/catalog.ts','utf8');const expected=[...demo.matchAll(/slug: "([^"]+)", brandSlug: "([^"]+)", name:/g)].map(m=>m[2]+'/'+m[1]);assert.equal(expected.length,25);for(const key of expected)assert(keys.has(key),'missing demo compatibility '+key);
-const expectedCount=Object.values(selection).reduce((n,s)=>n+s.split('\n').length,0);assert.equal(lines.length,expectedCount);
+const expectedCount=Object.values(selection).reduce((n,s)=>n+s.split('\n').length,0)+additions.length;assert.equal(lines.length,expectedCount);
 console.log(`${lines.length} lines across ${order.length} makes validated; all 801 existing entries unchanged; all 25 demo slugs preserved (including volkswagen/id4).`);
+if(fs.existsSync('analysis/codex/model-cards-pilot-baseline.json'))console.log('Model-card pilot: all 883 original line objects unchanged; approved Peaq addition validated.');
 console.log('UTF-8, ordering, scoped uniqueness, retrieved source URLs, dated facts, explicit unknowns, body enum, generation references and absence of fabricated statistics passed.');

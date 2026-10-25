@@ -77,3 +77,61 @@ export interface CatalogModelLine {
   sources: string[];
   needsReview: CatalogModelLineReview[];
 }
+
+export type CatalogFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-mhev" | "petrol-phev" | "electric";
+export interface CatalogModelCardPhoto {
+  source: "commons" | "press";
+  file: string;
+  url: string;
+  filePageUrl: string;
+  author: string;
+  licence: string;
+  licenceUrl: string | null;
+  credit: string;
+  depicts: "generation";
+  visualReview: "pending" | "reviewed";
+  sources: string[];
+}
+export interface CatalogModelCardEngine {
+  fuel: CatalogFuel | null;
+  /** Exact cylinder capacity only; never calculated from a rounded marketing litre value. Electric: null = not applicable. */
+  displacementCc: number | null;
+  displacementLitresNominal: number | null;
+  powerKwMin: number | null;
+  powerKwMax: number | null;
+  variant: string | null;
+}
+export interface CatalogModelCardGeneration {
+  code: string | null;
+  name: string;
+  from: number | null;
+  /** Current only when productionStatus=current; null can otherwise mean unknown. */
+  to: number | null;
+  productionStatus: "current" | "ended" | "unknown";
+  /** Null = unreviewed, not "no facelift". Presentation and production years can differ. */
+  facelift: { year: number; productionYear: number | null; note: string; sources: string[] }[] | null;
+  bodyTypes: CatalogBody[] | null;
+  engines: CatalogModelCardEngine[] | null;
+  engineCoverage: "partial" | "unknown";
+  drivetrains: ("fwd" | "rwd" | "awd")[] | null;
+  transmissions: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed"; gears: number }[] | null;
+  dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null };
+  specificationScope: { market: string; modelYear: number | null; variant: string | null; bodyType: CatalogBody | null; noteCs: string };
+  trunkL: number | null;
+  markets: string[];
+  marketNotesCs: string;
+  photo: CatalogModelCardPhoto | null;
+  sources: string[];
+}
+export interface CatalogModelCard {
+  makeSlug: string;
+  lineSlug: string;
+  name: string;
+  isAddition: boolean;
+  segment: string | null;
+  summaryCs: string | null;
+  coverage: "pilot-partial";
+  generations: CatalogModelCardGeneration[];
+  sources: string[];
+  needsReview: CatalogModelLineReview[];
+}

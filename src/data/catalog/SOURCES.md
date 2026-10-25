@@ -38,7 +38,7 @@ Run node analysis/codex/resolve.mjs, then node analysis/codex/build-catalog.mjs,
 <!-- model-lines-curation:start -->
 ## Curated European model-line layer (40 makes)
 
-model-lines-auto.json is a separate manually selected layer containing 883 lines and 547 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet, Daewoo, Daihatsu, SsangYong/KGM, Land Rover, Jaguar, Porsche, Jeep, Alfa Romeo, Lancia, smart and MG. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
+model-lines-auto.json is a separate manually selected layer containing 884 lines and 548 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet, Daewoo, Daihatsu, SsangYong/KGM, Land Rover, Jaguar, Porsche, Jeep, Alfa Romeo, Lancia, smart and MG. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
 
 Additional factual sources are individual **English Wikipedia model articles**, retrieved through https://en.wikipedia.org/w/api.php with exact revision IDs. Each model and generation lists permanent oldid source URLs. Full source URLs, request titles/timestamps and selected factual fields are in [model-line-evidence.json](../../../analysis/codex/model-line-evidence.json); manual grouping and all unresolved fields are in [model-lines-review.md](../../../analysis/codex/model-lines-review.md). No marketplace data, article prose, images or entire tables were reproduced. Wikipedia facts were not all independently confirmed with manufacturers. The earlier CC0 designation refers to Wikidata structured identities; it is not a blanket licence assertion for Wikipedia pages.
 
@@ -77,7 +77,29 @@ Targeted manufacturer checks and factual corrections are recorded in [model-line
 - [MG Motor France: mg-saic-history-2024](https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf)
 - [Alfa Romeo / Stellantis: alfa-junior-name-2024](https://www.media.stellantis.com/uk-en/alfa-romeo/press/alfa-romeo-milano-name-is-not-okay-junior-then)
 - [Alfa Romeo: alfa-mito-end-series](https://www.alfaromeo.com/end-of-series/mito)
+- [Skoda Auto: skoda-peaq-production-2026](https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-the-new-peaq-in-mlada-boleslav/)
 
 In particular, the manufacturer’s 2012–2020 Octavia III interval supersedes the retrieved Wikipedia end year; Epiq’s Czech-market presence was checked in an October 2026 Škoda announcement. Manufacturer source URLs supplement the permanent Wikipedia revisions; not every field has manufacturer corroboration.
 
 <!-- model-lines-curation:end -->
+
+<!-- skoda-cards:start -->
+## Skoda structured model-card pilot
+
+The pilot covers 17 modern model lines and 27 generation records. One Drom make-level checklist page was manually viewed: https://www.drom.ru/catalog/skoda/. No Drom images, prose or bulk page downloads were used; specification facts were checked through Wikipedia/Wikidata/manufacturer sources. Historical and regional omissions are explicit in analysis/codex/skoda-card-scope-review.json.
+
+Factual Wikipedia infobox fields and fixed revisions are in analysis/codex/skoda-card-evidence.json. Selected OEM facts and dated PDF scopes are in analysis/codex/skoda-card-manufacturer-facts.json. Commons author/licence/file metadata and retrieval requests are in analysis/codex/skoda-card-photo-evidence.json. Every generation carries source URLs; every photo carries its file-page URL, author, licence and credit. File-specific Commons licences apply to photos; neither their images nor their licence obligations become CC0 through this dataset. No image binary was copied into the repository. Visual/facelift correspondence is pending.
+
+Exact displacement in cc is not calculated from nominal marketing litres. A null electric displacement means not applicable; other unknown values are listed in needsReview. Specification scope distinguishes selected model year, market and variant from the entire generation. Engine/facelift lists remain partial. Peaq is isolated in model-line-additions.json with its manufacturer source; the original 883 lines remain unchanged.
+
+Manufacturer specification/facelift URLs used by the cards:
+- https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf
+- https://cdn.skoda-storyboard.com/2025/06/TD-Octavia-en_3066a520.pdf
+- https://www.skoda-storyboard.com/en/press-kits/skoda-octavia-media-launch-press-kit/skoda-octavia-refreshing-the-brands-best-seller/
+- https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-press-kit/skoda-scala-and-kamiq-comprehensive-update-for-the-successful-compact-models/
+- https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-upgraded-scala-and-kamiq/
+- https://cdn.skoda-storyboard.com/2017/09/170915-%C5%A0KODA-FAVORIT-Entering-an-era-of-success-30-years-ago.pdf
+- https://cdn.skoda-storyboard.com/2019/10/191015-Anniversary-25-years-of-the-%C5%A0KODA-FELICIA.pdf
+
+Photo metadata endpoint: https://commons.wikimedia.org/w/api.php. Reuse guidance: https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia.
+<!-- skoda-cards:end -->

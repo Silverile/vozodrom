@@ -1,12 +1,12 @@
 # Curated car model lines — 40 makes
 
-Delivered **883 manually selected model-line entries across 40 makes**, with **547 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **MG**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
+Delivered **884 manually selected model-line entries across 40 makes**, with **548 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **MG**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
 
-**This is not complete factual enrichment of all 40 makes.** 227 lines retain unresolved production intervals, 49 have bodyTypes=null, 697 have generations=null, and 73 have no unique line-level Wikidata match. There are 2542 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. All 40 makes in the agreed selection queue are now represented. Metadata reconciliation remains incomplete. Batch 1 added Saab, Honda, Mazda, Nissan and Mitsubishi. Batch 2 added Subaru, Suzuki, Lexus, Chevrolet and Daewoo. Batch 3 added Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. Batch 4 adds Jeep, Alfa Romeo, Lancia, smart and MG; all 801 prior entries are preserved exactly against SHA-256 baselines.
+**This is not complete factual enrichment of all 40 makes.** 227 lines retain unresolved production intervals, 49 have bodyTypes=null, 697 have generations=null, and 73 have no unique line-level Wikidata match. There are 2544 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. All 40 makes in the agreed selection queue are now represented. Metadata reconciliation remains incomplete. Batch 1 added Saab, Honda, Mazda, Nissan and Mitsubishi. Batch 2 added Subaru, Suzuki, Lexus, Chevrolet and Daewoo. Batch 3 added Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. Batch 4 adds Jeep, Alfa Romeo, Lancia, smart and MG; all 801 prior entries are preserved exactly against SHA-256 baselines.
 
 | Make | Slug | Lines | Known start | Known body set | Generation entries | Lines needing review |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Škoda | skoda | 16 | 16 | 16 | 15 | 12 |
+| Škoda | skoda | 17 | 17 | 17 | 16 | 13 |
 | Volkswagen | volkswagen | 31 | 26 | 27 | 23 | 29 |
 | Hyundai | hyundai | 28 | 26 | 27 | 18 | 27 |
 | Kia | kia | 27 | 22 | 27 | 17 | 26 |
@@ -94,6 +94,7 @@ Trims, powertrain labels, facelifts and body/length derivatives are merged into 
 - [MG Motor France: mg-saic-history-2024](https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [Alfa Romeo / Stellantis: alfa-junior-name-2024](https://www.media.stellantis.com/uk-en/alfa-romeo/press/alfa-romeo-milano-name-is-not-okay-junior-then) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [Alfa Romeo: alfa-mito-end-series](https://www.alfaromeo.com/end-of-series/mito) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Skoda Auto: skoda-peaq-production-2026](https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-the-new-peaq-in-mlada-boleslav/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 
 Octavia III uses **2012–2020** from Škoda’s 2026 history instead of the retrieved Wikipedia field ending in 2019. BMW’s manufacturing history corroborates production starts earlier than familiar launch years (for example E46 in 1997 versus its 1998 market introduction). Its global sixth-generation range is not substituted for an unresolved European body/market end date. Epiq is included after checking Škoda’s October 2026 Czech-market announcement. These targeted checks do not independently certify all remaining Wikipedia facts.
 
@@ -166,16 +167,15 @@ All outstanding needsReview fields remain listed per make below. Global factory 
 
 The agreed 40-make selection queue is complete. There is no next make in this queue. Metadata reconciliation for the delivered 40, especially shared vans, Citroën/DS phases, reused BMW i3/iX3/Volvo names and region-specific generation boundaries, remains explicitly outstanding. Late-2026 programmes without checked production evidence were not silently added. Batch 3 brand rename facts and source conflict are recorded in model-line-brand-notes.json.
 
-## Škoda (skoda) — 16 lines
+## Škoda (skoda) — 17 lines
 
-Citigo, Elroq, Enyaq, Epiq, Fabia, Favorit, Felicia, Kamiq, Karoq, Kodiaq, Octavia, Rapid, Roomster, Scala, Superb, Yeti.
+Citigo, Elroq, Enyaq, Epiq, Fabia, Favorit, Felicia, Kamiq, Karoq, Kodiaq, Octavia, Peaq, Rapid, Roomster, Scala, Superb, Yeti.
 
 ### Excluded, merged or deferred
 
 - **Octavia RS / Scout** — merged: trim or performance/body derivative; merged into Octavia.
 - **Octavia (1959)** — excluded: pre-1990 historical line, distinct from modern Octavia.
 - **Vision concepts** — excluded: concept vehicles.
-- **Peaq** — deferred: not admitted without confirmed production/delivery evidence in this pass.
 
 ### Every outstanding needsReview item
 
@@ -191,6 +191,8 @@ Citigo, Elroq, Enyaq, Epiq, Fabia, Favorit, Felicia, Kamiq, Karoq, Kodiaq, Octav
 | Kodiaq (kodiaq) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
 | Kodiaq (kodiaq) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
 | Kodiaq (kodiaq) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Peaq (peaq) | generations[0].code | Manufacturer confirms series production in August 2026; no generation/type code established. |
+| Peaq (peaq) | scope | Pilot addition; August production and June market launch are distinct. |
 | Rapid (rapid) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Roomster (roomster) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Scala (scala) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
@@ -3471,3 +3473,13 @@ Cyberster, F, GS, HS, IM5, IM6, Maestro, Marvel R, Metro, MG3, MG4, MG4 Urban, M
 | ZT (zt) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
 
 Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Skoda model-card pilot
+
+Delivered 17 cards and 27 generation records in src/data/catalog/model-cards/skoda.json, with 27 Commons file references. Peaq is an explicitly flagged addition, corroborated by the manufacturer production announcement dated 6 August 2026. All original 883 line objects remain unchanged.
+
+The card format adds productionStatus, specificationScope, engineCoverage, nominal litre values, per-generation sources, isAddition and needsReview so uncertain dates, rounded capacities and mixed body/market specifications are not presented as exact universal values. Original Czech summaries contain two sentences each. Octavia IV and Elroq have selected dated OEM specification examples; other engines are partial fuel/nominal-volume lists with unknown power/exact cc. Only verified facelift events are populated; null does not mean no facelift.
+
+No image binaries were downloaded. Commons filename, file page, author and licence metadata were checked, but visual angle/trim/facelift matching remains pending (no browser available for visual review). The scope-review JSON lists the remaining historic and non-European models, body derivatives and technical gaps. This pilot covers the 16 existing modern lines plus Peaq; it is not a complete historic Skoda inventory.
+
+Offline reproduction: node analysis/codex/build-skoda-cards.mjs. Validation: node analysis/codex/validate-model-cards.mjs.

@@ -139,12 +139,19 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  lines.push(model);audit.push({key,requestedTitles:requested,resolvedTitles:ps.map(p=>p.title),sourceProduction,selectedDateChoice:choice,generationEvidence:gs.map(g=>({code:g.code,label:g._label,sources:g.sources})),reviewedAsOf:'2026-10-25'});
 }}
 lines.sort(sort);
-for(const file of ['analysis/codex/model-lines-batch-1-baseline.json','analysis/codex/model-lines-batch-2-baseline.json','analysis/codex/model-lines-batch-3-baseline.json','analysis/codex/model-lines-batch-4-baseline.json']){
+for(const file of ['analysis/codex/model-lines-batch-1-baseline.json','analysis/codex/model-lines-batch-2-baseline.json','analysis/codex/model-lines-batch-3-baseline.json','analysis/codex/model-lines-batch-4-baseline.json',...(fs.existsSync('analysis/codex/model-cards-pilot-baseline.json')?['analysis/codex/model-cards-pilot-baseline.json']:[])]){
 const baseline=JSON.parse(fs.readFileSync(file));
 for(const [m,b]of Object.entries(baseline.byMake)){
  const selected=lines.filter(l=>l.makeSlug===m);
  if(selected.length!==b.count||createHash('sha256').update(JSON.stringify(selected)).digest('hex')!==b.sha256)throw Error('Existing make changed: '+m);
 }
+}
+if(fs.existsSync('src/data/catalog/model-line-additions.json')){
+ for(const {additionReason,...line}of JSON.parse(fs.readFileSync('src/data/catalog/model-line-additions.json'))){
+  if(lines.some(l=>l.makeSlug===line.makeSlug&&l.slug===line.slug))throw Error('Duplicate approved addition '+line.slug);
+  lines.push(line);
+ }
+ lines.sort(sort);
 }
 fs.writeFileSync('src/data/catalog/model-lines-auto.json',JSON.stringify(lines,null,2)+'\n');
 fs.writeFileSync('analysis/codex/model-line-decisions.json',JSON.stringify(audit,null,2)+'\n');
