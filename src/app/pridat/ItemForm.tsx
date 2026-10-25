@@ -4,6 +4,7 @@ import { ItemRow } from "@/components/ItemRow";
 import { REGIONS, getBrand, models } from "@/lib/catalog";
 import { CATEGORIES, type Item, type ItemSection, type Season } from "@/lib/classifieds";
 import { citiesIn, getCity } from "@/lib/geo";
+import { makesIn } from "@/lib/makes";
 import { createStore } from "@/lib/storage";
 
 // Add-listing form for motorcycles, machinery, parts and tyres. Like the car form it only
@@ -131,7 +132,13 @@ export function ItemForm({ section }: { section: ItemSection }) {
           </select>
         </label>
         <label className="text-sm">{labels.make}
-          <input className={input} value={draft.make} onChange={(e) => set("make", e.target.value)} />
+          {/* Makes of this section are suggested; any other make can still be typed. */}
+          <input className={input} list={section === "dily" ? undefined : "item-makes"} value={draft.make} onChange={(e) => set("make", e.target.value)} />
+          {section !== "dily" && (
+            <datalist id="item-makes">
+              {makesIn(section).map((m) => <option key={m.slug} value={m.name} />)}
+            </datalist>
+          )}
         </label>
         <label className="text-sm">{labels.name}
           <input className={input} placeholder={labels.namePlaceholder} value={draft.name} onChange={(e) => set("name", e.target.value)} />

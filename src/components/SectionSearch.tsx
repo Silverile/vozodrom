@@ -4,6 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { CATEGORIES, type ItemSection, TYRE_OPTIONS, categoryOf, itemsOf } from "@/lib/classifieds";
 import { nearestDistance, withinAny } from "@/lib/geo";
+import { getMake, makesIn, resolveMake } from "@/lib/makes";
 import { CategoryIcon } from "./CategoryIcon";
 import { ItemRow } from "./ItemRow";
 import { LocationPills, useSearchLocation } from "./LocationPills";
@@ -30,6 +31,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const q = params.get("q") ?? "";
+  const make = params.get("znacka") ?? "";
   const category = params.get("kategorie") ?? "";
   const condition = params.get("stav") ?? "";
   const priceMax = Number(params.get("cenaDo") ?? 0);
@@ -53,6 +55,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
   const needle = fold(q.trim());
   const base = all
     .filter((i) => !needle || fold([i.title, i.make, ...(i.fits ?? []), ...i.specs.map((s) => s[1])].join(" ")).includes(needle))
+    .filter((i) => !make || (section === "dily" ? (i.fits ?? []).some((f) => fold(f).startsWith(fold(getMake(make)?.name ?? make))) : resolveMake(i.make)?.slug === make))
     .filter((i) => !condition || (condition === "nove" ? i.condition === "nové" : i.condition === "použité"))
     .filter((i) => !priceMax || i.price <= priceMax)
     .filter((i) => !width || i.tyre?.width === width)
@@ -72,7 +75,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
     );
 
   const activeCategory = categoryOf(section, category);
-  const hasFilters = [q, category, condition, priceMax, width, profile, rim, count].some(Boolean);
+  const hasFilters = [q, make, category, condition, priceMax, width, profile, rim, count].some(Boolean);
 
   return (
     <>
@@ -107,7 +110,14 @@ export function SectionSearch({ section }: { section: ItemSection }) {
         </button>
       </div>
       <div id="section-filters" className={`card p-3 mt-3 gap-2 grid-cols-2 md:grid-cols-4 ${filtersOpen ? "grid" : "hidden md:grid"}`}>
-        <label className="col-span-2">
+        <label>
+          <span className="sr-only">{section === "dily" ? "Pro značku auta" : "Značka"}</span>
+          <select className="input" value={make} onChange={(e) => update({ znacka: e.target.value })}>
+            <option value="">{section === "dily" ? "Pro všechny značky" : "Všechny značky"}</option>
+            {makesIn(section === "dily" ? "auto" : section).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
+          </select>
+        </label>
+        <label>
           <span className="sr-only">Hledat</span>
           <input
             className="input"
@@ -157,7 +167,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 mb-3">
         <p className="font-semibold" aria-live="polite">
-          {activeCategory ? `${activeCategory.label}: ` : ""}{results.length} inzerátů
+          {activeCategory ? `${activeCategory.label}: ` : ""}{results.length} {results.length === 1 ? "inzerát" : results.length >= 2 && results.length <= 4 ? "inzeráty" : "inzerátů"}
           {hasFilters && (
             <button className="ml-3 text-sm font-normal text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => router.replace(pathname, { scroll: false })}>
               Zrušit filtry

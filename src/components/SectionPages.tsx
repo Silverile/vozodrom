@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BrandLogo, makeSlug } from "./BrandLogo";
+import { BrandLogo } from "./BrandLogo";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { type ItemSection, categoryOf, getItem, itemsOf } from "@/lib/classifieds";
 import { formatAgo, formatDate, formatNumber, formatPrice } from "@/lib/format";
 import { regionLabel } from "@/lib/geo";
+import { resolveMake } from "@/lib/makes";
 import { SECTIONS } from "@/lib/sections";
 import { ItemImage, ItemRow } from "./ItemRow";
 import { Place } from "./Place";
@@ -68,7 +69,7 @@ export async function ItemDetail({ section, params }: { section: ItemSection; pa
         <Link href={`${sec.href}?kategorie=${item.category}`} className="hover:text-[var(--color-ink)]">{category?.label}</Link>
       </nav>
       <h1 className="flex items-center gap-3 text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">
-        {item.make && <BrandLogo slug={makeSlug(item.make)} name={item.make} className="h-8 w-8" />}
+        {resolveMake(item.make) && <BrandLogo slug={resolveMake(item.make)!.slug} name={item.make} className="h-8 w-8" />}
         {item.title}
       </h1>
 

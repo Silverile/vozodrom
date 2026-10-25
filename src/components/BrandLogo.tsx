@@ -6,9 +6,6 @@ import logos from "@/data/brand-logos.json";
 
 const LOGOS = logos as Record<string, { title: string; path: string }>;
 
-export const makeSlug = (name: string) =>
-  name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-
 export function BrandLogo({ slug, name, className = "h-8 w-8" }: { slug: string; name: string; className?: string }) {
   const logo = LOGOS[slug];
   if (logo) {

@@ -6,6 +6,7 @@ import { ListingRow } from "@/components/ListingRow";
 import { getBrand, getModel } from "@/lib/catalog";
 import { formatDate, formatPrice } from "@/lib/format";
 import { getListing } from "@/lib/listings";
+import { getMake } from "@/lib/makes";
 import { savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 import { draftStore } from "../pridat/AddListingForm";
@@ -37,14 +38,14 @@ function Empty({ title, text, action }: { title: string; text: string; action?: 
 function MyListings() {
   const draft = draftStore.useValue();
   const model = getModel(draft.brand, draft.model);
-  if (!model) {
+  if (!draft.brand || !draft.model.trim()) {
     return <Empty title="Zatím žádné inzeráty" text="Inzerát můžete připravit už teď; zveřejnit půjde po spuštění účtů." action={{ href: "/pridat/", label: "+ Přidat inzerát zdarma" }} />;
   }
   return (
     <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
       <div>
         <span className="chip bg-[var(--color-warn-soft)] text-[var(--color-warn)]">rozpracováno</span>
-        <p className="font-bold mt-2">{getBrand(draft.brand)?.name} {model.name}, {draft.year}</p>
+        <p className="font-bold mt-2">{getBrand(draft.brand)?.name ?? getMake(draft.brand)?.name} {model?.name ?? draft.model}, {draft.year}</p>
         <p className="text-sm text-[var(--color-muted)]">{draft.price ? formatPrice(draft.price) : "cena zatím nevyplněna"} · uloženo jen v tomto prohlížeči</p>
       </div>
       <Link href="/pridat/" className="pill">Pokračovat v úpravách</Link>

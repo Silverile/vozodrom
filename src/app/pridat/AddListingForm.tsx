@@ -1,17 +1,21 @@
 "use client";
 
 import { ListingRow } from "@/components/ListingRow";
-import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, generationMatch, getModel, models } from "@/lib/catalog";
+import { BODY_LABEL, FUEL_LABEL, REGIONS, generationMatch, getModel, models } from "@/lib/catalog";
+import { makesIn } from "@/lib/makes";
 import { citiesIn, getCity } from "@/lib/geo";
 import { type FeedVehicle, validateVehicle } from "@/lib/feed";
 import { createStore } from "@/lib/storage";
-import type { Listing } from "@/lib/types";
+import type { Body, Listing } from "@/lib/types";
 
-export type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string };
+/** For makes without catalogue models, `model` holds the typed model name and `body` is chosen by hand. */
+export type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string; body: string };
+
+const CAR_MAKES = makesIn("auto");
 
 const EMPTY: Draft = {
   brand: "", model: "", year: 2020, mileageKm: 0, price: 0, engine: "", fuel: "benzin", transmission: "manuál",
-  powerKw: 0, color: "", region: "", city: "", description: "", vin: "",
+  powerKw: 0, color: "", region: "", city: "", description: "", vin: "", body: "",
 };
 
 const isDraft = (v: unknown): v is Draft =>
@@ -32,18 +36,29 @@ export function AddListingForm() {
   const set = <K extends keyof Draft>(key: K, value: Draft[K]) =>
     draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "" } : {}) });
 
+  const catalogModels = models.filter((m) => m.brandSlug === draft.brand);
+  const inCatalog = catalogModels.length > 0;
+  // Catalogue makes are checked exactly like dealer feeds; other makes cannot be checked
+  // against model data yet, so model and generation checks are replaced by plain presence checks.
+  const vehicleProblems = validateVehicle({ ...draft, city: draft.city || undefined, features: [] });
   const problems = [
-    ...validateVehicle({ ...draft, city: draft.city || undefined, features: [] }),
+    ...(inCatalog || !draft.brand
+      ? vehicleProblems
+      : [
+          ...vehicleProblems.filter((p) => p !== "neznámá značka nebo model" && !p.includes("generace")),
+          ...(draft.model.trim() ? [] : ["chybí model"]),
+          ...(draft.body ? [] : ["vyberte karoserii"]),
+        ]),
     ...(vinProblem(draft.vin) ? [vinProblem(draft.vin)!] : []),
   ];
   const model = getModel(draft.brand, draft.model);
-  const preview: Listing | null = model
+  const preview: Listing | null = model || (draft.brand && draft.model.trim())
     ? {
         id: "nahled",
         source: { kind: "test" },
         brandSlug: draft.brand,
         modelSlug: draft.model,
-        generation: generationMatch(model, draft.year)?.code ?? "generace neurčena",
+        generation: (model && generationMatch(model, draft.year)?.code) ?? "generace neurčena",
         year: draft.year,
         mileageKm: Math.max(draft.mileageKm, 0),
         price: Math.max(draft.price, 0),
@@ -51,7 +66,7 @@ export function AddListingForm() {
         fuel: (draft.fuel in FUEL_LABEL ? draft.fuel : "benzin") as Listing["fuel"],
         transmission: draft.transmission === "automat" ? "automat" : "manuál",
         powerKw: draft.powerKw,
-        body: model.body,
+        body: model?.body ?? ((draft.body in BODY_LABEL ? draft.body : "hatchback") as Body),
         color: draft.color || "stříbrná",
         region: draft.region || "kraj neuveden",
         city: draft.city,
@@ -72,15 +87,29 @@ export function AddListingForm() {
         <label className="text-sm">Značka
           <select className={input} value={draft.brand} onChange={(e) => set("brand", e.target.value)} required>
             <option value="">Vyberte</option>
-            {brands.map((b) => <option key={b.slug} value={b.slug}>{b.name}</option>)}
+            {CAR_MAKES.map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
           </select>
         </label>
-        <label className="text-sm">Model
-          <select className={input} value={draft.model} disabled={!draft.brand} onChange={(e) => set("model", e.target.value)} required>
-            <option value="">Vyberte</option>
-            {models.filter((m) => m.brandSlug === draft.brand).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
-          </select>
-        </label>
+        {inCatalog || !draft.brand ? (
+          <label className="text-sm">Model
+            <select className={input} value={draft.model} disabled={!draft.brand} onChange={(e) => set("model", e.target.value)} required>
+              <option value="">Vyberte</option>
+              {catalogModels.map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
+            </select>
+          </label>
+        ) : (
+          <>
+            <label className="text-sm">Model
+              <input className={input} placeholder="např. Astra Sports Tourer" value={draft.model} onChange={(e) => set("model", e.target.value)} required />
+            </label>
+            <label className="text-sm">Karoserie
+              <select className={input} value={draft.body} onChange={(e) => set("body", e.target.value)}>
+                <option value="">Vyberte</option>
+                {Object.entries(BODY_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+              </select>
+            </label>
+          </>
+        )}
         <label className="text-sm">Rok výroby
           <input className={input} type="number" inputMode="numeric" value={draft.year} onChange={(e) => set("year", Number(e.target.value))} />
         </label>

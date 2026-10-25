@@ -5,10 +5,11 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
-import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, getBrand, getModel, models } from "@/lib/catalog";
+import { BODY_LABEL, FUEL_LABEL, REGIONS, getBrand, getModel, models } from "@/lib/catalog";
 import { LocationPills, useSearchLocation } from "@/components/LocationPills";
 import { getCity, nearestDistance, withinAny } from "@/lib/geo";
 import { listings } from "@/lib/listings";
+import { getMake, makesIn } from "@/lib/makes";
 import { marketEstimate } from "@/lib/market";
 import { savedSearches } from "@/lib/storage";
 import { stkSignal } from "@/lib/stk";
@@ -28,6 +29,10 @@ const SORTS = {
 type SortKey = keyof typeof SORTS | "nejblize";
 
 const nf = new Intl.NumberFormat("cs-CZ");
+
+// All car makes for the brand filter; models exist only for the demo makes in lib/catalog.
+const CAR_MAKES = makesIn("auto");
+const BRAND_COUNTS = listings.reduce((m, l) => m.set(l.brandSlug, (m.get(l.brandSlug) ?? 0) + 1), new Map<string, number>());
 
 // "Rozšířené vyhledávání": extra filters over data every listing already has. Drive, engine
 // size and number of owners are not in the listing data yet, so they are not offered.
@@ -154,7 +159,7 @@ export function SearchClient() {
   }, [index, params.toString(), centers.map((c) => c.slug).join(","), radius]);
 
   const selectedModel = brand && model ? getModel(brand, model) : undefined;
-  const brandName = getBrand(brand)?.name;
+  const brandName = getMake(brand)?.name ?? getBrand(brand)?.name;
   const heading = selectedModel ? `${brandName} ${selectedModel.name}${generation ? ` ${generation}` : ""}` : brandName ?? "Všechna auta";
 
   // Removable chips for every active filter, so state stays visible when the panel is collapsed on mobile.
@@ -204,12 +209,19 @@ export function SearchClient() {
         <Field label="Značka">
           <select className="input" value={brand} onChange={(e) => update("znacka", e.target.value)}>
             <option value="">Všechny značky</option>
-            {brands.map((b) => <option key={b.slug} value={b.slug}>{b.name}</option>)}
+            <optgroup label="V nabídce">
+              {CAR_MAKES.filter((m) => BRAND_COUNTS.has(m.slug)).map((m) => (
+                <option key={m.slug} value={m.slug}>{m.name} ({BRAND_COUNTS.get(m.slug)})</option>
+              ))}
+            </optgroup>
+            <optgroup label="Další značky">
+              {CAR_MAKES.filter((m) => !BRAND_COUNTS.has(m.slug)).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
+            </optgroup>
           </select>
         </Field>
         <Field label="Model">
           <select className="input" value={model} disabled={!brand} onChange={(e) => update("model", e.target.value)}>
-            <option value="">Všechny modely</option>
+            <option value="">{brand && !models.some((m) => m.brandSlug === brand) ? "Modely doplňujeme" : "Všechny modely"}</option>
             {models.filter((m) => m.brandSlug === brand).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
           </select>
         </Field>

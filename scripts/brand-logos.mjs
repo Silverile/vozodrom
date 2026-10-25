@@ -12,7 +12,7 @@
 import { writeFileSync } from "node:fs";
 import * as icons from "simple-icons";
 
-/** our make slug → Simple Icons title */
+/** make slug (as in src/data/catalog/makes.json) → Simple Icons title */
 const MAP = {
   // cars
   "acura": "Acura",
@@ -20,13 +20,13 @@ const MAP = {
   "audi": "Audi",
   "bentley": "Bentley",
   "bmw": "BMW",
-  "bugatti": "Bugatti",
+  "bugatti-automobiles": "Bugatti",
   "cadillac": "Cadillac",
   "chevrolet": "Chevrolet",
   "chrysler": "Chrysler",
   "citroen": "Citroën",
   "dacia": "Dacia",
-  "ds": "DS Automobiles",
+  "ds-automobiles": "DS Automobiles",
   "ferrari": "Ferrari",
   "fiat": "Fiat",
   "ford": "Ford",
@@ -58,7 +58,7 @@ const MAP = {
   "smart": "smart",
   "subaru": "Subaru",
   "suzuki": "Suzuki",
-  "tata": "Tata",
+  "tata-motors": "Tata",
   "tesla": "Tesla",
   "toyota": "Toyota",
   "volkswagen": "Volkswagen",
@@ -66,11 +66,11 @@ const MAP = {
   // utility vehicles and machinery
   "caterpillar": "Caterpillar",
   "daf": "DAF",
-  "hitachi": "Hitachi",
+  "hitachi-construction-machinery": "Hitachi",
   "iveco": "IVECO",
   "jcb": "JCB",
   "john-deere": "John Deere",
-  "man": "MAN",
+  "man-truck-bus": "MAN",
   "scania": "Scania",
   // motorcycles and scooters
   "ducati": "Ducati",
