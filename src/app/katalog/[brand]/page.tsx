@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { notFound } from "next/navigation";
 import { CarImage } from "@/components/CarImage";
 import { BODY_LABEL, brands, getBrand, modelsOf } from "@/lib/catalog";
@@ -26,7 +27,10 @@ export default async function BrandPage({ params }: { params: Params }) {
       <nav className="text-sm text-[var(--color-muted)]">
         <Link href="/katalog/" className="hover:underline">Katalog</Link> / {brand.name}
       </nav>
-      <h1 className="text-3xl font-extrabold tracking-tight mt-2">{brand.name}</h1>
+      <h1 className="flex items-center gap-3 text-3xl font-extrabold tracking-tight mt-2">
+        <BrandLogo slug={brand.slug} name={brand.name} className="h-9 w-9" />
+        {brand.name}
+      </h1>
       <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((m) => (
           <Link key={m.slug} href={`/katalog/${slug}/${m.slug}/`} className="card overflow-hidden hover:shadow-lg transition">

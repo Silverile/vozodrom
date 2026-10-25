@@ -1,0 +1,1 @@
+SELECT ?item ?itemLabel WHERE { VALUES ?term { "tractor manufacturer"@en "agricultural machinery manufacturer"@en "construction equipment manufacturer"@en "trailer manufacturer"@en "automotive brand"@en "car brand"@en "body style"@en "production date"@en "production period"@en } ?item rdfs:label ?term. SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { brands, modelsOf } from "@/lib/catalog";
 
 export const metadata: Metadata = { title: "Katalog značek a modelů" };
@@ -14,7 +15,8 @@ export default function CatalogPage() {
           const list = modelsOf(brand.slug);
           return (
             <div key={brand.slug} className="card p-5">
-              <Link href={`/katalog/${brand.slug}/`} className="text-lg font-bold hover:text-[var(--color-brand)]">
+              <Link href={`/katalog/${brand.slug}/`} className="flex items-center gap-3 text-lg font-bold hover:text-[var(--color-brand)]">
+                <BrandLogo slug={brand.slug} name={brand.name} className="h-7 w-7" />
                 {brand.name}
               </Link>
               <div className="text-xs text-[var(--color-muted)]">{brand.country}</div>
@@ -34,6 +36,7 @@ export default function CatalogPage() {
           );
         })}
       </div>
+      <p className="mt-6 text-xs text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0).</p>
     </div>
   );
 }

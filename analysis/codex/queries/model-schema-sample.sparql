@@ -1,0 +1,1 @@
+SELECT ?item ?itemLabel ?p ?v ?vLabel WHERE { VALUES ?item {wd:Q223696 wd:Q9008} ?item ?p ?v. FILTER(STRSTARTS(STR(?p),STR(wdt:))) SERVICE wikibase:label {bd:serviceParam wikibase:language "en".} }

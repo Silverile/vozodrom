@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandLogo, makeSlug } from "./BrandLogo";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { type ItemSection, categoryOf, getItem, itemsOf } from "@/lib/classifieds";
@@ -66,7 +67,10 @@ export async function ItemDetail({ section, params }: { section: ItemSection; pa
         <Link href={sec.href} className="hover:text-[var(--color-ink)]">{sec.label}</Link> /{" "}
         <Link href={`${sec.href}?kategorie=${item.category}`} className="hover:text-[var(--color-ink)]">{category?.label}</Link>
       </nav>
-      <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">{item.title}</h1>
+      <h1 className="flex items-center gap-3 text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">
+        {item.make && <BrandLogo slug={makeSlug(item.make)} name={item.make} className="h-8 w-8" />}
+        {item.title}
+      </h1>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px] mt-5 items-start">
         <div className="space-y-4 min-w-0">

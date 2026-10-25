@@ -1,0 +1,5 @@
+SELECT DISTINCT ?item ?itemLabel ?class ?country ?countryLabel ?founded ?dissolved WHERE {
+ VALUES ?class { wd:Q786820 wd:Q15081030 wd:Q108460239 wd:Q4380190 wd:Q20032039 wd:Q10429667 }
+ ?item wdt:P31 ?class. OPTIONAL { ?item wdt:P17 ?country. } OPTIONAL { ?item wdt:P571 ?founded. } OPTIONAL { ?item wdt:P576 ?dissolved. }
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "cs,en". }
+} ORDER BY ?item

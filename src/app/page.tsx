@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { ArticleCard } from "@/components/ArticleCard";
 import { CategoryIcon } from "@/components/CategoryIcon";
 import { ListingCard } from "@/components/ListingCard";
@@ -100,8 +101,8 @@ export default function HomePage() {
           {brandStats.map(({ brand, count, top }) => (
             <li key={brand.slug} className="card p-3 hover:border-[var(--color-brand)] transition-colors">
               <Link href={`/inzeraty/?znacka=${brand.slug}`} className="flex items-center gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)] text-sm font-extrabold" aria-hidden="true">
-                  {brand.name.slice(0, 2).toUpperCase()}
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--color-field)] text-[var(--color-ink)]">
+                  <BrandLogo slug={brand.slug} name={brand.name} className="h-6 w-6" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold leading-tight truncate">{brand.name}</span>
@@ -118,6 +119,7 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+        <p className="mt-2 text-xs text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0).</p>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 mt-12">

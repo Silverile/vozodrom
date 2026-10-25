@@ -1,0 +1,6 @@
+SELECT DISTINCT ?item ?itemLabel ?class ?make ?brand ?series ?body ?bodyLabel ?start ?end ?code WHERE {
+ VALUES ?class {wd:Q3231690 wd:Q59773381} ?item wdt:P31 ?class.
+ OPTIONAL { ?item wdt:P176 ?make. } OPTIONAL { ?item wdt:P1716 ?brand. } OPTIONAL { ?item wdt:P179 ?series. }
+ OPTIONAL { ?item wdt:P279 ?body. } OPTIONAL { ?item wdt:P2754 ?start. } OPTIONAL { ?item wdt:P2669 ?end. } OPTIONAL { ?item wdt:P528 ?code. }
+ SERVICE wikibase:label {bd:serviceParam wikibase:language "cs,en".}
+} ORDER BY ?item

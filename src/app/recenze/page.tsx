@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { brands, models } from "@/lib/catalog";
 import { formatNumber } from "@/lib/format";
 
@@ -48,7 +49,10 @@ export default function ReviewsPage() {
         <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           {brands.map((b) => (
             <div key={b.slug}>
-              <h3 className="text-sm uppercase tracking-wide text-[var(--color-muted)] mb-1">{b.name}</h3>
+              <h3 className="flex items-center gap-2 text-sm uppercase tracking-wide text-[var(--color-muted)] mb-1">
+                <BrandLogo slug={b.slug} name={b.name} className="h-5 w-5" />
+                {b.name}
+              </h3>
               <ul>
                 {models.filter((m) => m.brandSlug === b.slug).map((m) => (
                   <li key={m.slug}>
