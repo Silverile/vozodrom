@@ -41,7 +41,7 @@ function AzList({ section, makes }: { section: MakeSection; makes: Make[] }) {
               return (
                 <li key={m.slug}>
                   <Link href={`/katalog/${m.slug}/`} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-[var(--color-field)]">
-                    <BrandLogo slug={m.slug} name={m.name} className="h-6 w-6 text-[var(--color-ink)]" />
+                    <BrandLogo slug={m.slug} name={m.name} size={26} />
                     <span className={`min-w-0 truncate ${n ? "font-semibold" : ""} ${m.defunct ? "text-[var(--color-muted)]" : ""}`}>{m.name}</span>
                     {n > 0 && <span className="text-xs text-[var(--color-muted)]">{n}</span>}
                   </Link>
@@ -77,7 +77,7 @@ export default function CatalogPage() {
           {brands.map((brand) => (
             <div key={brand.slug} className="card p-4">
               <Link href={`/katalog/${brand.slug}/`} className="flex items-center gap-3 font-bold hover:text-[var(--color-brand)]">
-                <BrandLogo slug={brand.slug} name={brand.name} className="h-7 w-7" />
+                <BrandLogo slug={brand.slug} name={brand.name} size={30} />
                 {brand.name}
               </Link>
               <ul className="mt-3 flex flex-wrap gap-2">
@@ -107,7 +107,7 @@ export default function CatalogPage() {
 
       <p className="mt-8 text-xs text-[var(--color-muted)]">
         Seznam značek: Wikidata (CC0), stav k 25. 10. 2026; šedě značky, které už nevyrábějí. Loga značek jsou ochranné známky jejich
-        vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0).
+        vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0) a volná díla z Wikimedia Commons.
       </p>
     </div>
   );

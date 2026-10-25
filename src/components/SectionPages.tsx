@@ -69,7 +69,7 @@ export async function ItemDetail({ section, params }: { section: ItemSection; pa
         <Link href={`${sec.href}?kategorie=${item.category}`} className="hover:text-[var(--color-ink)]">{category?.label}</Link>
       </nav>
       <h1 className="flex items-center gap-3 text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">
-        {resolveMake(item.make) && <BrandLogo slug={resolveMake(item.make)!.slug} name={item.make} className="h-8 w-8" />}
+        {resolveMake(item.make) && <BrandLogo slug={resolveMake(item.make)!.slug} name={item.make} size={40} />}
         {item.title}
       </h1>
 

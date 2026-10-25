@@ -45,7 +45,7 @@ export default async function BrandPage({ params }: { params: Params }) {
         <Link href="/katalog/" className="hover:underline">Katalog</Link> / {make.name}
       </nav>
       <h1 className="flex items-center gap-3 text-3xl font-extrabold tracking-tight mt-2">
-        <BrandLogo slug={make.slug} name={make.name} className="h-9 w-9" />
+        <BrandLogo slug={make.slug} name={make.name} size={44} />
         {make.name}
       </h1>
       <p className="mt-1 text-[var(--color-muted)]">

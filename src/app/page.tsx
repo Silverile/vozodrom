@@ -101,9 +101,7 @@ export default function HomePage() {
           {brandStats.map(({ brand, count, top }) => (
             <li key={brand.slug} className="card p-3 hover:border-[var(--color-brand)] transition-colors">
               <Link href={`/inzeraty/?znacka=${brand.slug}`} className="flex items-center gap-3">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--color-field)] text-[var(--color-ink)]">
-                  <BrandLogo slug={brand.slug} name={brand.name} className="h-6 w-6" />
-                </span>
+                <BrandLogo slug={brand.slug} name={brand.name} size={40} />
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold leading-tight truncate">{brand.name}</span>
                   <span className="block text-xs text-[var(--color-muted)]">{count} {count === 1 ? "inzerát" : count < 5 ? "inzeráty" : "inzerátů"}</span>
@@ -119,7 +117,7 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-xs text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0).</p>
+        <p className="mt-2 text-xs text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0) a volná díla z Wikimedia Commons.</p>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 mt-12">

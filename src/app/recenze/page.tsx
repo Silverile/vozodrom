@@ -50,7 +50,7 @@ export default function ReviewsPage() {
           {brands.map((b) => (
             <div key={b.slug}>
               <h3 className="flex items-center gap-2 text-sm uppercase tracking-wide text-[var(--color-muted)] mb-1">
-                <BrandLogo slug={b.slug} name={b.name} className="h-5 w-5" />
+                <BrandLogo slug={b.slug} name={b.name} size={22} />
                 {b.name}
               </h3>
               <ul>

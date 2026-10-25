@@ -9,7 +9,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
 const makes = read("../src/data/catalog/makes.json");
-const logos = read("../src/data/brand-logos.json");
+const logos = { ...read("../src/data/brand-logos.json"), ...read("../src/data/brand-logo-files.json") };
 
 // Company names in Wikidata carry legal or corporate suffixes; listings show the brand.
 const DISPLAY = {
