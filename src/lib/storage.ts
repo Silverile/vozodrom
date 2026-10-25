@@ -89,18 +89,23 @@ export const analyticsConsent = createStore<Consent | null>(
   (v): v is Consent | null => v === null || v === "granted" || v === "denied",
 );
 
-/** The visitor's chosen town and radius for "near me" search; null means the whole country. */
+/** The visitor's chosen towns and radius for "near me" search; null means the whole country. */
 export interface SavedLocation {
-  city: string;
+  cities: string[];
   radius: number;
 }
 
+// New key: the earlier single-town value ("vozodrom.location") is simply no longer read.
 export const savedLocation = createStore<SavedLocation | null>(
-  "vozodrom.location",
+  "vozodrom.places",
   null,
   (v): v is SavedLocation | null =>
     v === null ||
-    (!!v && typeof v === "object" && typeof (v as SavedLocation).city === "string" && typeof (v as SavedLocation).radius === "number"),
+    (!!v &&
+      typeof v === "object" &&
+      isStringArray((v as SavedLocation).cities) &&
+      (v as SavedLocation).cities.length > 0 &&
+      typeof (v as SavedLocation).radius === "number"),
 );
 
 export type ThemeChoice = "dark" | "light" | "system";

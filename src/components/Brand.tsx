@@ -19,19 +19,27 @@ export function LogoMark({ size = 30 }: { size?: number }) {
   );
 }
 
-/** Logo with the current section's sub-brand, e.g. "vozodrom AUTO". */
+/**
+ * Logo with the current section's sub-brand, e.g. "vozodrom AUTO". The logo always leads to
+ * the home page; the sub-brand is a separate link to the section's own front page.
+ */
 export function BrandLink() {
   const section = sectionOf(usePathname());
   return (
-    <Link href={section?.href ?? "/"} aria-label={`vozodrom${section ? ` ${section.label}` : ""} — úvod`} className="flex items-center gap-2 shrink-0">
-      <LogoMark />
-      <span className="flex items-baseline gap-1.5 leading-none">
-        <span className="hidden sm:inline text-[1.3rem] font-extrabold tracking-[-0.045em]">vozodrom</span>
-        {section && (
-          <span className="text-[0.72rem] sm:text-[0.78rem] font-semibold tracking-[0.16em] text-[var(--color-brand)]">{section.brand}</span>
-        )}
-      </span>
-    </Link>
+    <span className="flex items-center gap-1.5 shrink-0 leading-none">
+      <Link href="/" aria-label="vozodrom — úvodní stránka" className="flex items-center gap-2">
+        <LogoMark />
+        <span className="text-[1.05rem] sm:text-[1.3rem] font-extrabold tracking-[-0.045em]">vozodrom</span>
+      </Link>
+      {section && (
+        <Link
+          href={section.href}
+          className="hidden min-[360px]:inline pt-[0.2em] text-[0.62rem] sm:text-[0.78rem] font-semibold tracking-[0.14em] text-[var(--color-brand)] hover:underline"
+        >
+          {section.brand}
+        </Link>
+      )}
+    </span>
   );
 }
 
@@ -41,10 +49,16 @@ export function SectionTabs() {
   const active = sectionOf(pathname);
   const onCatalog = pathname.startsWith("/katalog");
   const nav = useRef<HTMLElement>(null);
-  // On phones the tabs scroll sideways; keep the active one in view.
+  // On phones the tabs scroll sideways. Scroll only when the active tab is not fully visible,
+  // and then just enough to show it, so the strip does not jump on every navigation.
   useEffect(() => {
-    const current = nav.current?.querySelector<HTMLElement>('[aria-current="page"]');
-    if (current && nav.current) nav.current.scrollLeft = current.offsetLeft - 12;
+    const strip = nav.current;
+    const current = strip?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!strip || !current) return;
+    const left = current.offsetLeft;
+    const right = left + current.offsetWidth;
+    if (left < strip.scrollLeft) strip.scrollLeft = left - 12;
+    else if (right > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = right - strip.clientWidth + 12;
   }, [pathname]);
   const tab = "relative whitespace-nowrap px-3 py-2.5 text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] data-[on=true]:text-[var(--color-ink)] data-[on=true]:font-semibold data-[on=true]:after:absolute data-[on=true]:after:inset-x-3 data-[on=true]:after:bottom-0 data-[on=true]:after:h-0.5 data-[on=true]:after:rounded-full data-[on=true]:after:bg-[var(--color-brand)]";
   return (

@@ -1,44 +1,50 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { REGIONS } from "@/lib/catalog";
 import { CITIES, OPEN_LOCATION_PICKER, citiesIn, getCity, nearestCity } from "@/lib/geo";
-import { savedLocation } from "@/lib/storage";
+import { sectionOf } from "@/lib/sections";
+import { useSearchLocation } from "./LocationPills";
 
-// Header control for the visitor's town, like Drom's city switch. "Use my location"
-// asks the browser for a position and maps it to the nearest town on the device;
-// coordinates are never stored or sent anywhere, only the chosen town is kept.
+// Header control for the visitor's towns, like Drom's city switch, but several towns can be
+// chosen at once. "Use my location" asks the browser for a position and adds the nearest
+// town on the device; coordinates are never stored or sent anywhere, only town names.
+
+const TITLE: Record<string, string> = {
+  auto: "Kde hledáte auto?",
+  technika: "Kde hledáte techniku?",
+  moto: "Kde hledáte motorku?",
+  dily: "Kde hledáte díly?",
+  pneu: "Kde hledáte pneumatiky?",
+};
 
 export function LocationPicker() {
-  const location = savedLocation.useValue();
-  const city = getCity(location?.city);
+  const { centers, radius, setLocation } = useSearchLocation();
+  const section = sectionOf(usePathname());
   const dialog = useRef<HTMLDialogElement>(null);
-  const router = useRouter();
-  const pathname = usePathname();
-  const params = useSearchParams();
+  const [selected, setSelected] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<string | null>(null);
 
-  useEffect(() => {
-    const open = () => dialog.current?.showModal();
-    window.addEventListener(OPEN_LOCATION_PICKER, open);
-    return () => window.removeEventListener(OPEN_LOCATION_PICKER, open);
-  }, []);
-
-  function choose(slug: string | null) {
-    const radius = location?.radius ?? 0;
-    savedLocation.write(slug ? { city: slug, radius } : null);
-    // On the search page the location lives in the URL, so update it there too.
-    if (/^\/inzeraty\/?$/.test(pathname)) {
-      const next = new URLSearchParams(params.toString());
-      next.set("mesto", slug ?? "cr");
-      if (slug && radius) next.set("okruh", String(radius));
-      else next.delete("okruh");
-      router.replace(`${pathname}?${next.toString()}`, { scroll: false });
-    }
+  function open() {
+    setSelected(centers.map((c) => c.slug));
     setQuery("");
     setStatus(null);
+    dialog.current?.showModal();
+    // Focus the dialog itself: focusing the first button made WebKit draw a square ring on ✕.
+    dialog.current?.focus();
+  }
+
+  useEffect(() => {
+    window.addEventListener(OPEN_LOCATION_PICKER, open);
+    return () => window.removeEventListener(OPEN_LOCATION_PICKER, open);
+  });
+
+  const toggle = (slug: string) => setSelected((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : [...s, slug]));
+
+  function apply(cities: string[]) {
+    setLocation(cities, cities.length ? radius : 0);
     dialog.current?.close();
   }
 
@@ -49,7 +55,11 @@ export function LocationPicker() {
     }
     setStatus("Zjišťuji polohu…");
     navigator.geolocation.getCurrentPosition(
-      (pos) => choose(nearestCity({ lat: pos.coords.latitude, lon: pos.coords.longitude }).slug),
+      (pos) => {
+        const town = nearestCity({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+        setSelected((s) => (s.includes(town.slug) ? s : [...s, town.slug]));
+        setStatus(`Přidáno: ${town.name}`);
+      },
       () => setStatus("Polohu se nepodařilo zjistit nebo jste ji nepovolili. Vyberte místo ze seznamu."),
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
     );
@@ -57,33 +67,48 @@ export function LocationPicker() {
 
   const needle = query.trim().toLocaleLowerCase("cs");
   const matches = needle ? CITIES.filter((c) => c.name.toLocaleLowerCase("cs").includes(needle)) : null;
+  const first = centers[0];
+  const townButton = "text-sm px-2.5 py-1 rounded-md hover:bg-[var(--color-field)] data-[on=true]:bg-[var(--color-brand-soft)] data-[on=true]:text-[var(--color-brand)] data-[on=true]:font-semibold";
 
   return (
     <>
       <button
-        onClick={() => dialog.current?.showModal()}
+        onClick={open}
         className="flex items-center gap-1 px-2 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap"
-        aria-label={`Místo: ${city?.name ?? "celá ČR"}. Změnit`}
+        aria-label={`Místo: ${centers.length ? centers.map((c) => c.name).join(", ") : "celá ČR"}. Změnit`}
       >
         <span aria-hidden="true">📍</span>
-        <span className="max-w-20 sm:max-w-28 truncate">{city ? city.name : "Celá ČR"}</span>
-        {city && location!.radius > 0 && <span className="hidden sm:inline">+{location!.radius} km</span>}
+        <span className="hidden min-[400px]:inline max-w-24 sm:max-w-32 truncate">{first ? first.name : "Celá ČR"}</span>
+        {centers.length > 1 && <span>+{centers.length - 1}</span>}
+        {first && radius > 0 && <span className="hidden sm:inline">· {radius} km</span>}
       </button>
 
       <dialog
         ref={dialog}
+        tabIndex={-1}
         aria-labelledby="location-title"
-        className="card m-auto w-[min(640px,calc(100vw-32px))] max-h-[85vh] p-0 text-[var(--color-ink)] backdrop:bg-black/60"
+        className="card m-auto w-[min(640px,calc(100vw-32px))] max-h-[85vh] p-0 text-[var(--color-ink)] backdrop:bg-black/60 focus:outline-none"
         onClick={(e) => e.target === dialog.current && dialog.current?.close()}
       >
         <div className="p-5 space-y-4">
           <div className="flex items-center justify-between gap-3">
-            <h2 id="location-title" className="text-xl font-bold">Kde hledáte auto?</h2>
-            <button className="text-[var(--color-muted)] hover:text-[var(--color-ink)] text-lg" aria-label="Zavřít" onClick={() => dialog.current?.close()}>✕</button>
+            <h2 id="location-title" className="text-xl font-bold">{TITLE[section?.key ?? ""] ?? "Vyberte místo"}</h2>
+            <button
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand)]"
+              aria-label="Zavřít"
+              onClick={() => dialog.current?.close()}
+            >
+              ✕
+            </button>
           </div>
+          <p className="text-sm text-[var(--color-muted)]">Vyberte jedno nebo více měst. Okruh nastavíte ve výsledcích hledání.</p>
           <div className="flex flex-wrap gap-2">
             <button className="pill" onClick={useMyPosition}>📍 Použít mou polohu</button>
-            <button className="pill" data-on={!city} onClick={() => choose(null)}>Celá ČR</button>
+            {selected.map((slug) => (
+              <button key={slug} className="pill" data-on="true" aria-label={`Odebrat ${getCity(slug)?.name}`} onClick={() => toggle(slug)}>
+                {getCity(slug)?.name} ✕
+              </button>
+            ))}
           </div>
           {status && <p role="status" className="text-sm text-[var(--color-warn)]">{status}</p>}
           <input
@@ -93,12 +118,14 @@ export function LocationPicker() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className="max-h-[45vh] overflow-y-auto pr-1">
+          <div className="max-h-[38vh] overflow-y-auto pr-1">
             {matches ? (
               matches.length ? (
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-1">
                   {matches.map((c) => (
-                    <li key={c.slug}><button className="pill" data-on={c.slug === city?.slug} onClick={() => choose(c.slug)}>{c.name}</button></li>
+                    <li key={c.slug}>
+                      <button className={townButton} data-on={selected.includes(c.slug)} aria-pressed={selected.includes(c.slug)} onClick={() => toggle(c.slug)}>{c.name}</button>
+                    </li>
                   ))}
                 </ul>
               ) : (
@@ -112,11 +139,7 @@ export function LocationPicker() {
                     <ul className="flex flex-wrap gap-1">
                       {citiesIn(r).map((c) => (
                         <li key={c.slug}>
-                          <button
-                            className="text-sm px-2 py-1 rounded-md hover:bg-[var(--color-field)] data-[on=true]:text-[var(--color-brand)]"
-                            data-on={c.slug === city?.slug}
-                            onClick={() => choose(c.slug)}
-                          >
+                          <button className={townButton} data-on={selected.includes(c.slug)} aria-pressed={selected.includes(c.slug)} onClick={() => toggle(c.slug)}>
                             {c.name}
                           </button>
                         </li>
@@ -127,8 +150,14 @@ export function LocationPicker() {
               </div>
             )}
           </div>
+          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[var(--color-line)] pt-4">
+            <button className="pill" onClick={() => apply([])}>Celá ČR</button>
+            <button className="btn-cta text-sm" onClick={() => apply(selected)}>
+              {selected.length ? `Použít (${selected.length})` : "Hledat v celé ČR"}
+            </button>
+          </div>
           <p className="text-xs text-[var(--color-muted)]">
-            Poloha se zjišťuje jen ve vašem prohlížeči a slouží k výběru nejbližšího města. Ukládáme jen zvolené město, nikoli souřadnice.
+            Poloha se zjišťuje jen ve vašem prohlížeči a slouží k výběru nejbližšího města. Ukládáme jen zvolená města, nikoli souřadnice.
           </p>
         </div>
       </dialog>

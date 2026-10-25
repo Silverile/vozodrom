@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
 function Section({ title, children, note, id }: { title: string; children: React.ReactNode; note?: string; id?: string }) {
   return (
-    <section id={id} className="card p-5 scroll-mt-24">
+    <section id={id} className="card min-w-0 p-5 scroll-mt-24">
       <h2 className="font-bold text-lg">{title}</h2>
       <div className="mt-4">{children}</div>
       {note && <p className="text-xs text-[var(--color-muted)] mt-4">{note}</p>}
@@ -63,21 +63,21 @@ export default async function ModelPage({ params }: { params: Params }) {
       </nav>
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] mt-3 items-center">
-        <div>
+        <div className="min-w-0">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{brand.name} {model.name}</h1>
           <p className="text-[var(--color-muted)] mt-1">{model.segment} · {BODY_LABEL[model.body]}</p>
           <p className="mt-4 max-w-xl">{model.description}</p>
           <div className="mt-5 grid grid-cols-3 gap-3 max-w-md">
             <div className="card p-3 col-span-3 flex items-center justify-between gap-3">
-              <div>
+              <div className="min-w-0">
                 <Link href={`/recenze/${brandSlug}/${modelSlug}/`} className="text-xs text-[var(--color-brand)] hover:underline">Hodnocení majitelů* · recenze →</Link>
-                <div className="flex flex-wrap gap-1.5 mt-1">
+                <div className="flex flex-wrap gap-1.5 mt-1 [&>.chip]:max-w-full [&>.chip]:whitespace-normal">
                   {model.pros.slice(0, 3).map((p) => (
                     <span key={p.label} className="chip bg-[var(--color-good-soft)] text-[var(--color-good)]">{p.label} <b className="opacity-70">{formatNumber(p.count)}</b></span>
                   ))}
                 </div>
               </div>
-              <span className="rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2.5 py-1 text-2xl font-extrabold">
+              <span className="shrink-0 rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2.5 py-1 text-2xl font-extrabold">
                 {model.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}
               </span>
             </div>
@@ -120,7 +120,7 @@ export default async function ModelPage({ params }: { params: Params }) {
         </Section>
 
         <Section title="Motorizace">
-          <table className="w-full text-sm">
+          <table className="w-full table-fixed sm:table-auto text-sm break-words">
             <thead className="text-left text-[var(--color-muted)]">
               <tr><th className="pb-2 font-medium">Motor</th><th className="pb-2 font-medium">Palivo</th><th className="pb-2 font-medium">Výkon</th><th className="pb-2 font-medium">Spotřeba*</th></tr>
             </thead>
@@ -171,7 +171,7 @@ export default async function ModelPage({ params }: { params: Params }) {
         <OwnerQuestions model={model} />
       </div>
 
-      <div className="flex items-end justify-between mt-10 mb-4">
+      <div className="flex flex-wrap items-end justify-between gap-2 mt-10 mb-4">
         <h2 className="text-xl font-bold">Inzeráty {brand.name} {model.name}</h2>
         <Link href={`/inzeraty/?znacka=${brandSlug}&model=${modelSlug}`} className="text-sm font-semibold text-[var(--color-brand)]">
           Hledat s filtry →

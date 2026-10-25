@@ -6,10 +6,12 @@ import { useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, getBrand, getModel, models } from "@/lib/catalog";
-import { OPEN_LOCATION_PICKER, RADII, distanceKm, getCity, withinRadius } from "@/lib/geo";
+import { LocationPills, useSearchLocation } from "@/components/LocationPills";
+import { getCity, nearestDistance, withinAny } from "@/lib/geo";
 import { listings } from "@/lib/listings";
 import { marketEstimate } from "@/lib/market";
-import { savedLocation, savedSearches } from "@/lib/storage";
+import { savedSearches } from "@/lib/storage";
+import { stkSignal } from "@/lib/stk";
 import type { Body, Fuel, Listing } from "@/lib/types";
 
 const SORTS = {
@@ -26,6 +28,20 @@ const SORTS = {
 type SortKey = keyof typeof SORTS | "nejblize";
 
 const nf = new Intl.NumberFormat("cs-CZ");
+
+// "Rozšířené vyhledávání": extra filters over data every listing already has. Drive, engine
+// size and number of owners are not in the listing data yet, so they are not offered.
+const FLAGS: { key: string; label: string; test: (l: Listing) => boolean }[] = [
+  { key: "sVin", label: "Jen s VIN", test: (l) => l.vin !== "neuvedeno" },
+  { key: "sStk", label: "Jen s historií STK", test: (l) => l.stkHistory.length > 0 },
+  { key: "bezPoklesu", label: "Bez poklesu nájezdu", test: (l) => stkSignal(l).kind !== "drop" },
+  { key: "sBaterii", label: "Elektromobil s testem baterie", test: (l) => l.battery?.sohPercent != null },
+  { key: "dobraCena", label: "Jen dobrá a výborná cena", test: (l) => (marketEstimate(l)?.ratio ?? 1) < 0.95 },
+];
+const COLORS = [...new Set(listings.map((l) => l.color))].sort((a, b) => a.localeCompare(b, "cs"));
+const FEATURES = [...new Set(listings.flatMap((l) => l.features))].sort((a, b) => a.localeCompare(b, "cs"));
+const ADVANCED_KEYS = ["cenaOd", "rokDo", "najezdOd", "vykonOd", "vykonDo", "barva", "prodejce", "vybava", ...FLAGS.map((f) => f.key)];
+const list = (value: string | null) => (value ?? "").split(",").filter(Boolean);
 
 function buildIndex() {
   const index = new MiniSearch<Listing & { text: string }>({
@@ -54,11 +70,6 @@ function buildIndex() {
   return index;
 }
 
-function distanceTo(l: Listing, center: { lat: number; lon: number }): number {
-  const city = getCity(l.city);
-  return city ? distanceKm(city, center) : Infinity;
-}
-
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
@@ -74,8 +85,9 @@ export function SearchClient() {
   const pathname = usePathname();
   const index = useMemo(buildIndex, []);
   const saved = savedSearches.useValue();
-  const stored = savedLocation.useValue();
+  const { centers, radius } = useSearchLocation();
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [advancedOpen, setAdvancedOpen] = useState(() => ADVANCED_KEYS.some((k) => params.has(k)));
 
   const q = params.get("q") ?? "";
   const brand = params.get("znacka") ?? "";
@@ -84,18 +96,20 @@ export function SearchClient() {
   const fuel = (params.get("palivo") ?? "") as Fuel | "";
   const body = (params.get("karoserie") ?? "") as Body | "";
   const gearbox = params.get("prevodovka") ?? "";
-  const region = params.get("kraj") ?? "";
+  const regions = list(params.get("kraj"));
   const priceMax = Number(params.get("cenaDo") ?? 0);
   const yearFrom = Number(params.get("rokOd") ?? 0);
   const kmMax = Number(params.get("najezdDo") ?? 0);
   const sort = (params.get("razeni") ?? "nejnovejsi") as SortKey;
-
-  // Location comes from the URL (shareable, saved searches) and falls back to the
-  // town chosen in the header. "mesto=cr" means the whole country.
-  const cityParam = params.get("mesto");
-  const center = cityParam ? (cityParam === "cr" ? undefined : getCity(cityParam)) : getCity(stored?.city);
-  const rawRadius = Number(cityParam ? params.get("okruh") ?? 0 : stored?.radius ?? 0);
-  const radius = (RADII as readonly number[]).includes(rawRadius) ? rawRadius : 0;
+  const priceMin = Number(params.get("cenaOd") ?? 0);
+  const yearTo = Number(params.get("rokDo") ?? 0);
+  const kmMin = Number(params.get("najezdOd") ?? 0);
+  const powerMin = Number(params.get("vykonOd") ?? 0);
+  const powerMax = Number(params.get("vykonDo") ?? 0);
+  const color = params.get("barva") ?? "";
+  const seller = params.get("prodejce") ?? "";
+  const features = list(params.get("vybava"));
+  const flags = FLAGS.filter((f) => params.get(f.key) === "1");
 
   function update(key: string, value: string) {
     const next = new URLSearchParams(params.toString());
@@ -105,16 +119,6 @@ export function SearchClient() {
     if (key === "model") next.delete("generace");
     const query = next.toString();
     router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
-  }
-
-  function setLocation(slug: string | null, km: number) {
-    savedLocation.write(slug ? { city: slug, radius: km } : null);
-    const next = new URLSearchParams(params.toString());
-    next.set("mesto", slug ?? "cr");
-    if (slug && km) next.set("okruh", String(km));
-    else next.delete("okruh");
-    if (!slug && next.get("razeni") === "nejblize") next.delete("razeni");
-    router.replace(`${pathname}?${next.toString()}`, { scroll: false });
   }
 
   const results = useMemo(() => {
@@ -127,17 +131,27 @@ export function SearchClient() {
       .filter((l) => !fuel || l.fuel === fuel)
       .filter((l) => !body || l.body === body)
       .filter((l) => !gearbox || l.transmission === gearbox)
-      .filter((l) => !region || l.region === region)
+      .filter((l) => regions.length === 0 || regions.includes(l.region))
       .filter((l) => !priceMax || l.price <= priceMax)
       .filter((l) => !yearFrom || l.year >= yearFrom)
       .filter((l) => !kmMax || l.mileageKm <= kmMax)
-      .filter((l) => !center || withinRadius(l.city, center, radius))
+      .filter((l) => !priceMin || l.price >= priceMin)
+      .filter((l) => !yearTo || l.year <= yearTo)
+      .filter((l) => !kmMin || l.mileageKm >= kmMin)
+      .filter((l) => !powerMin || l.powerKw >= powerMin)
+      .filter((l) => !powerMax || l.powerKw <= powerMax)
+      .filter((l) => !color || l.color === color)
+      .filter((l) => !seller || (seller === "soukromy" ? l.sellerType === "soukromý" : l.sellerType === "autobazar"))
+      .filter((l) => features.every((f) => l.features.includes(f)))
+      .filter((l) => flags.every((f) => f.test(l)))
+      .filter((l) => centers.length === 0 || withinAny(l.city, centers, radius))
       .sort(
-        sort === "nejblize" && center
-          ? (a, b) => distanceTo(a, center) - distanceTo(b, center) || a.price - b.price
+        sort === "nejblize" && centers.length
+          ? (a, b) => nearestDistance(a.city, centers) - nearestDistance(b.city, centers) || a.price - b.price
           : (SORTS[sort as keyof typeof SORTS] ?? SORTS.nejnovejsi).fn,
       );
-  }, [index, q, brand, model, generation, fuel, body, gearbox, region, priceMax, yearFrom, kmMax, sort, center, radius]);
+    // The parsed params are rebuilt every render; the query string is the real dependency.
+  }, [index, params.toString(), centers.map((c) => c.slug).join(","), radius]);
 
   const selectedModel = brand && model ? getModel(brand, model) : undefined;
   const brandName = getBrand(brand)?.name;
@@ -152,10 +166,19 @@ export function SearchClient() {
     ["palivo", fuel && FUEL_LABEL[fuel]],
     ["karoserie", body && BODY_LABEL[body]],
     ["prevodovka", gearbox],
-    ["kraj", region],
+    ["kraj", regions.join(", ")],
     ["cenaDo", priceMax ? `do ${nf.format(priceMax)} Kč` : ""],
     ["rokOd", yearFrom ? `od roku ${yearFrom}` : ""],
     ["najezdDo", kmMax ? `do ${nf.format(kmMax)} km` : ""],
+    ["cenaOd", priceMin ? `od ${nf.format(priceMin)} Kč` : ""],
+    ["rokDo", yearTo ? `do roku ${yearTo}` : ""],
+    ["najezdOd", kmMin ? `od ${nf.format(kmMin)} km` : ""],
+    ["vykonOd", powerMin ? `od ${powerMin} kW` : ""],
+    ["vykonDo", powerMax ? `do ${powerMax} kW` : ""],
+    ["barva", color],
+    ["prodejce", seller === "soukromy" ? "soukromý prodejce" : seller === "autobazar" ? "autobazar" : ""],
+    ["vybava", features.join(", ")],
+    ...flags.map((f) => [f.key, f.label.charAt(0).toLowerCase() + f.label.slice(1)]),
   ].filter(([, label]) => label) as [string, string][];
 
   const filterQuery = new URLSearchParams([...params.entries()].filter(([k]) => k !== "razeni")).toString();
@@ -235,32 +258,115 @@ export function SearchClient() {
             <option value="automat">Automat</option>
           </select>
         </Field>
-        <Field label="Kraj">
-          <select className="input" value={region} onChange={(e) => update("kraj", e.target.value)}>
-            <option value="">Celá ČR</option>
-            {REGIONS.map((r) => <option key={r} value={r}>{r}</option>)}
-          </select>
-        </Field>
+        <details className="relative">
+          <summary className="input cursor-pointer list-none truncate [&::-webkit-details-marker]:hidden">
+            {regions.length ? `Kraje: ${regions.join(", ")}` : "Kraje: celá ČR"}
+          </summary>
+          <fieldset className="card absolute z-20 mt-1 p-2 w-64 max-h-72 overflow-y-auto shadow-2xl">
+            <legend className="sr-only">Kraje</legend>
+            {REGIONS.map((r) => (
+              <label key={r} className="flex gap-2 items-center px-2 py-1 text-sm rounded-md hover:bg-[var(--color-field)]">
+                <input
+                  type="checkbox"
+                  checked={regions.includes(r)}
+                  onChange={(e) => update("kraj", (e.target.checked ? [...regions, r] : regions.filter((x) => x !== r)).join(","))}
+                />
+                {r}
+              </label>
+            ))}
+          </fieldset>
+        </details>
         <div className="col-span-2">
           <Field label="Hledat">
             <input className="input" placeholder="Hledat: výbava, motor, barva…" value={q} onChange={(e) => update("q", e.target.value)} />
           </Field>
         </div>
+        <div className="col-span-2 md:col-span-4">
+          <button
+            className="text-sm font-semibold text-[var(--color-brand)] hover:underline"
+            aria-expanded={advancedOpen}
+            aria-controls="advanced-filters"
+            onClick={() => setAdvancedOpen((o) => !o)}
+          >
+            Rozšířené vyhledávání {advancedOpen ? "▴" : "▾"}
+          </button>
+        </div>
+        {advancedOpen && (
+          <div id="advanced-filters" className="col-span-2 md:col-span-4 grid gap-2 grid-cols-2 md:grid-cols-4 border-t border-[var(--color-line)] pt-3">
+            <Field label="Cena od">
+              <select className="input" value={priceMin || ""} onChange={(e) => update("cenaOd", e.target.value)}>
+                <option value="">Cena od</option>
+                {[100000, 150000, 200000, 300000, 450000, 600000].map((p) => <option key={p} value={p}>{nf.format(p)} Kč</option>)}
+              </select>
+            </Field>
+            <Field label="Rok do">
+              <select className="input" value={yearTo || ""} onChange={(e) => update("rokDo", e.target.value)}>
+                <option value="">Rok do</option>
+                {[2015, 2018, 2020, 2022, 2024, 2026].map((y) => <option key={y} value={y}>{y}</option>)}
+              </select>
+            </Field>
+            <Field label="Nájezd od">
+              <select className="input" value={kmMin || ""} onChange={(e) => update("najezdOd", e.target.value)}>
+                <option value="">Nájezd od</option>
+                {[10000, 30000, 60000, 100000, 150000].map((k) => <option key={k} value={k}>{k / 1000} tis. km</option>)}
+              </select>
+            </Field>
+            <Field label="Prodejce">
+              <select className="input" value={seller} onChange={(e) => update("prodejce", e.target.value)}>
+                <option value="">Prodejce: všichni</option>
+                <option value="soukromy">Soukromý prodejce</option>
+                <option value="autobazar">Autobazar</option>
+              </select>
+            </Field>
+            <Field label="Výkon od">
+              <select className="input" value={powerMin || ""} onChange={(e) => update("vykonOd", e.target.value)}>
+                <option value="">Výkon od</option>
+                {[50, 75, 100, 125, 150, 200].map((k) => <option key={k} value={k}>{k} kW</option>)}
+              </select>
+            </Field>
+            <Field label="Výkon do">
+              <select className="input" value={powerMax || ""} onChange={(e) => update("vykonDo", e.target.value)}>
+                <option value="">Výkon do</option>
+                {[75, 100, 125, 150, 200, 300].map((k) => <option key={k} value={k}>{k} kW</option>)}
+              </select>
+            </Field>
+            <Field label="Barva">
+              <select className="input" value={color} onChange={(e) => update("barva", e.target.value)}>
+                <option value="">Barva</option>
+                {COLORS.map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </Field>
+            <details className="relative">
+              <summary className="input cursor-pointer list-none truncate [&::-webkit-details-marker]:hidden">
+                {features.length ? `Výbava: ${features.length}` : "Výbava"}
+              </summary>
+              <fieldset className="card absolute z-20 mt-1 p-2 w-72 max-h-72 overflow-y-auto shadow-2xl right-0 md:left-0 md:right-auto">
+                <legend className="sr-only">Výbava</legend>
+                {FEATURES.map((f) => (
+                  <label key={f} className="flex gap-2 items-center px-2 py-1 text-sm rounded-md hover:bg-[var(--color-field)]">
+                    <input
+                      type="checkbox"
+                      checked={features.includes(f)}
+                      onChange={(e) => update("vybava", (e.target.checked ? [...features, f] : features.filter((x) => x !== f)).join(","))}
+                    />
+                    {f}
+                  </label>
+                ))}
+              </fieldset>
+            </details>
+            <div className="col-span-2 md:col-span-4 flex flex-wrap gap-x-5 gap-y-2 pt-1">
+              {FLAGS.map((f) => (
+                <label key={f.key} className="flex gap-2 items-center text-sm">
+                  <input type="checkbox" checked={params.get(f.key) === "1"} onChange={(e) => update(f.key, e.target.checked ? "1" : "")} />
+                  {f.label}
+                </label>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label="Místo">
-        <button className="pill" data-on={!center} aria-pressed={!center} onClick={() => setLocation(null, 0)}>Celá ČR</button>
-        {center ? (
-          RADII.map((km) => (
-            <button key={km} className="pill" data-on={radius === km} aria-pressed={radius === km} onClick={() => setLocation(center.slug, km)}>
-              {km === 0 ? `📍 ${center.name}` : `+${km} km`}
-            </button>
-          ))
-        ) : null}
-        <button className="pill" onClick={() => window.dispatchEvent(new Event(OPEN_LOCATION_PICKER))}>
-          {center ? "Jiné město" : "📍 Vybrat město"}
-        </button>
-      </div>
+      <LocationPills />
 
       {chips.length > 0 && (
         <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="Aktivní filtry">
@@ -287,7 +393,7 @@ export function SearchClient() {
               )}
               <select className="input w-auto" value={sort} onChange={(e) => update("razeni", e.target.value)} aria-label="Řazení">
                 {Object.entries(SORTS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}
-                {center && <option value="nejblize">Nejblíže</option>}
+                {centers.length > 0 && <option value="nejblize">Nejblíže</option>}
               </select>
             </div>
           </div>

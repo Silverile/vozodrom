@@ -20,8 +20,8 @@ export function ListingRow({ listing }: { listing: Listing }) {
   const estimate = marketEstimate(listing);
   const name = `${brand?.name} ${model?.name}, ${listing.year}`;
   return (
-    <article className="card relative grid grid-cols-[112px_1fr] sm:grid-cols-[200px_1fr_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
-      <div className="row-span-2 sm:row-span-1 self-start overflow-hidden rounded-[10px]">
+    <article className="card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[200px_minmax(0,1fr)_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
+      <div className="self-start overflow-hidden rounded-[10px]">
         <CarImage body={listing.body} color={listing.color} className="w-full aspect-[4/3]" />
       </div>
       <div className="min-w-0">
@@ -34,7 +34,7 @@ export function ListingRow({ listing }: { listing: Listing }) {
         <p className="text-sm mt-1.5">
           {listing.powerKw} kW · {FUEL_LABEL[listing.fuel].toLowerCase()} · {listing.transmission} · {formatKm(listing.mileageKm)}
         </p>
-        <div className="flex flex-wrap gap-1.5 mt-2">
+        <div className="flex flex-wrap gap-1.5 mt-2 [&>.chip]:max-w-full [&>.chip]:whitespace-normal">
           {estimate && <VerdictBadge verdict={estimate.verdict} />}
           <StkBadge listing={listing} />
           {listing.battery && (
@@ -43,15 +43,17 @@ export function ListingRow({ listing }: { listing: Listing }) {
           {listing.sellerType === "soukromý" && <span className="chip bg-[var(--color-field)] text-[var(--color-ink-soft)]">Soukromý prodejce</span>}
         </div>
       </div>
-      <div className="col-start-2 sm:col-start-3 flex sm:flex-col items-baseline sm:items-end justify-between gap-1 sm:text-right">
-        <span className="text-xl font-extrabold tracking-tight whitespace-nowrap">
-          {formatPrice(listing.price)}
-          <span className="sr-only"> (cena při platbě v hotovosti)</span>
-        </span>
-        {estimate && <PriceMeter score={estimate.score} className="hidden sm:inline-flex" />}
-        <span className="text-xs text-[var(--color-muted)] sm:mt-auto whitespace-nowrap"><Place city={listing.city} fallback={listing.region} /> · {formatAgo(listing.postedAt)}</span>
+      <div className="col-span-2 sm:col-span-1 sm:col-start-3 min-w-0 flex flex-col items-start sm:items-end gap-1 sm:text-right">
+        <div className="flex w-full items-center justify-between gap-3 sm:w-auto">
+          <span className="text-xl font-extrabold tracking-tight whitespace-nowrap">
+            {formatPrice(listing.price)}
+            <span className="sr-only"> (cena při platbě v hotovosti)</span>
+          </span>
+          <FavoriteButton id={listing.id} label={name} className="relative z-10 shrink-0 !h-8 !w-8 text-base" />
+        </div>
+        {estimate && <span className="hidden sm:inline-flex"><PriceMeter score={estimate.score} /></span>}
+        <span className="text-xs text-[var(--color-muted)] sm:mt-auto"><Place city={listing.city} fallback={listing.region} /> · {formatAgo(listing.postedAt)}</span>
       </div>
-      <FavoriteButton id={listing.id} label={name} className="absolute left-5 top-5 z-10 !h-8 !w-8 text-base" />
     </article>
   );
 }

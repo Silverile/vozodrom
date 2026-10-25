@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleCard } from "@/components/ArticleCard";
 import { CategoryIcon } from "@/components/CategoryIcon";
 import { ListingCard } from "@/components/ListingCard";
 import { REGIONS, brands, models } from "@/lib/catalog";
@@ -24,6 +25,18 @@ const OTHER_SECTIONS = SECTIONS.filter((s) => s.group === "market" && s.key !== 
   const key = s.key as keyof typeof SECTION_ICON;
   return { href: s.href, label: s.label, icon: SECTION_ICON[key], count: itemsOf(key).length };
 });
+
+const brandStats = brands
+  .map((brand) => {
+    const own = listings.filter((l) => l.brandSlug === brand.slug);
+    const top = models
+      .filter((m) => m.brandSlug === brand.slug)
+      .map((model) => ({ model, n: own.filter((l) => l.modelSlug === model.slug).length }))
+      .sort((a, b) => b.n - a.n)
+      .slice(0, 3);
+    return { brand, count: own.length, top };
+  })
+  .sort((a, b) => b.count - a.count || a.brand.name.localeCompare(b.brand.name, "cs"));
 
 export default function HomePage() {
   const latest = listings.slice(0, 8);
@@ -78,15 +91,33 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 mt-12">
-        <h2 className="text-xl font-bold mb-4">Hledat podle značky</h2>
-        <div className="card p-4 grid gap-x-6 gap-y-1 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-          {brands.map((b) => (
-            <Link key={b.slug} href={`/inzeraty/?znacka=${b.slug}`} className="flex justify-between rounded-lg px-2 py-2 hover:bg-[var(--color-field)]">
-              <span className="font-medium">{b.name}</span>
-              <span className="text-[var(--color-muted)] text-sm">{listings.filter((l) => l.brandSlug === b.slug).length}</span>
-            </Link>
-          ))}
+        <div className="flex items-end justify-between mb-4">
+          <h2 className="text-xl font-bold">Hledat podle značky</h2>
+          <Link href="/katalog/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny značky a modely →</Link>
         </div>
+        {/* Brands by number of listings; each tile also offers its most offered models. */}
+        <ul className="grid gap-3 grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-5">
+          {brandStats.map(({ brand, count, top }) => (
+            <li key={brand.slug} className="card p-3 hover:border-[var(--color-brand)] transition-colors">
+              <Link href={`/inzeraty/?znacka=${brand.slug}`} className="flex items-center gap-3">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--color-brand-soft)] text-[var(--color-brand)] text-sm font-extrabold" aria-hidden="true">
+                  {brand.name.slice(0, 2).toUpperCase()}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold leading-tight truncate">{brand.name}</span>
+                  <span className="block text-xs text-[var(--color-muted)]">{count} {count === 1 ? "inzerát" : count < 5 ? "inzeráty" : "inzerátů"}</span>
+                </span>
+              </Link>
+              <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-xs">
+                {top.map(({ model, n }) => (
+                  <Link key={model.slug} href={`/inzeraty/?znacka=${brand.slug}&model=${model.slug}`} className="text-[var(--color-muted)] hover:text-[var(--color-brand)]">
+                    {model.name} <span className="opacity-70">{n}</span>
+                  </Link>
+                ))}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 mt-12">
@@ -117,15 +148,9 @@ export default function HomePage() {
             <h2 className="text-xl font-bold">Novinky a rady</h2>
             <Link href="/novinky/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny články →</Link>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-3">
+          <ul className="grid gap-3">
             {articles.slice(0, 3).map((a) => (
-              <li key={a.slug}>
-                <Link href={`/novinky/${a.slug}/`} className="card h-full block p-4 hover:border-[var(--color-brand)]">
-                  <span className="text-3xl" aria-hidden="true">{a.icon}</span>
-                  <span className="block text-xs uppercase tracking-wide text-[var(--color-brand)] mt-2">{a.category}</span>
-                  <span className="block font-semibold leading-snug mt-0.5">{a.title}</span>
-                </Link>
-              </li>
+              <li key={a.slug}><ArticleCard article={a} /></li>
             ))}
           </ul>
         </div>

@@ -3,10 +3,10 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { CATEGORIES, type ItemSection, TYRE_OPTIONS, categoryOf, itemsOf } from "@/lib/classifieds";
-import { OPEN_LOCATION_PICKER, RADII, distanceKm, getCity, withinRadius } from "@/lib/geo";
-import { savedLocation } from "@/lib/storage";
+import { nearestDistance, withinAny } from "@/lib/geo";
 import { CategoryIcon } from "./CategoryIcon";
 import { ItemRow } from "./ItemRow";
+import { LocationPills, useSearchLocation } from "./LocationPills";
 
 // Search for the non-car sections: category tiles with counts, the same town + radius
 // pills as car search, a compact filter bar and, for tyres, the size and count filters
@@ -26,7 +26,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
   const params = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const stored = savedLocation.useValue();
+  const { centers, radius } = useSearchLocation();
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const q = params.get("q") ?? "";
@@ -39,11 +39,6 @@ export function SectionSearch({ section }: { section: ItemSection }) {
   const rim = Number(params.get("prumer") ?? 0);
   const count = Number(params.get("kusy") ?? 0);
 
-  const cityParam = params.get("mesto");
-  const center = cityParam ? (cityParam === "cr" ? undefined : getCity(cityParam)) : getCity(stored?.city);
-  const rawRadius = Number(cityParam ? params.get("okruh") ?? 0 : stored?.radius ?? 0);
-  const radius = (RADII as readonly number[]).includes(rawRadius) ? rawRadius : 0;
-
   function update(changes: Record<string, string>) {
     const next = new URLSearchParams(params.toString());
     for (const [key, value] of Object.entries(changes)) {
@@ -52,11 +47,6 @@ export function SectionSearch({ section }: { section: ItemSection }) {
     }
     const query = next.toString();
     router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
-  }
-
-  function setLocation(slug: string | null, km: number) {
-    savedLocation.write(slug ? { city: slug, radius: km } : null);
-    update({ mesto: slug ?? "cr", okruh: slug && km ? String(km) : "", ...(slug ? {} : sort === "nejblize" ? { razeni: "" } : {}) });
   }
 
   const all = useMemo(() => itemsOf(section), [section]);
@@ -69,19 +59,15 @@ export function SectionSearch({ section }: { section: ItemSection }) {
     .filter((i) => !profile || i.tyre?.profile === profile)
     .filter((i) => !rim || i.tyre?.rim === rim)
     .filter((i) => !count || i.tyre?.count === count)
-    .filter((i) => !center || withinRadius(i.city, center, radius));
+    .filter((i) => centers.length === 0 || withinAny(i.city, centers, radius));
   // Category counts reflect every other filter, so the tiles say how many results a click gives.
   const counts = new Map(CATEGORIES[section].map((c) => [c.slug, base.filter((i) => i.category === c.slug).length]));
-  const distance = (city: string) => {
-    const c = getCity(city);
-    return c && center ? distanceKm(c, center) : Infinity;
-  };
   const results = base
     .filter((i) => !category || i.category === category)
     .sort((a, b) =>
       sort === "nejlevnejsi" ? a.price - b.price
         : sort === "nejdrazsi" ? b.price - a.price
-          : sort === "nejblize" && center ? distance(a.city) - distance(b.city)
+          : sort === "nejblize" && centers.length ? nearestDistance(a.city, centers) - nearestDistance(b.city, centers)
             : b.postedAt.localeCompare(a.postedAt),
     );
 
@@ -111,17 +97,8 @@ export function SectionSearch({ section }: { section: ItemSection }) {
         })}
       </ul>
 
-      <div className="mt-5 flex flex-wrap items-center gap-2" role="group" aria-label="Místo">
-        <button className="pill" data-on={!center} aria-pressed={!center} onClick={() => setLocation(null, 0)}>Celá ČR</button>
-        {center &&
-          RADII.map((km) => (
-            <button key={km} className="pill" data-on={radius === km} aria-pressed={radius === km} onClick={() => setLocation(center.slug, km)}>
-              {km === 0 ? `📍 ${center.name}` : `+${km} km`}
-            </button>
-          ))}
-        <button className="pill" onClick={() => window.dispatchEvent(new Event(OPEN_LOCATION_PICKER))}>
-          {center ? "Jiné město" : "📍 Vybrat město"}
-        </button>
+      <div className="mt-2">
+        <LocationPills />
       </div>
 
       <div className="mt-3 flex items-center gap-2 md:hidden">
@@ -191,7 +168,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
           <option value="nejnovejsi">Nejnovější</option>
           <option value="nejlevnejsi">Nejlevnější</option>
           <option value="nejdrazsi">Nejdražší</option>
-          {center && <option value="nejblize">Nejblíže</option>}
+          {centers.length > 0 && <option value="nejblize">Nejblíže</option>}
         </select>
       </div>
       {results.length === 0 ? (

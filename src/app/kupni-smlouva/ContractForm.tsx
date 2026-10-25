@@ -136,7 +136,7 @@ export function ContractForm() {
 
   // Prefill the place with the town chosen in the header (after mount, to match server HTML).
   useEffect(() => {
-    const town = getCity(savedLocation.read()?.city)?.name;
+    const town = getCity(savedLocation.read()?.cities[0])?.name;
     if (town) setPlace((current) => current || town);
   }, []);
 
@@ -167,8 +167,8 @@ export function ContractForm() {
   ];
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] mt-6 items-start">
-      <form className="card p-4 space-y-6 print:hidden" onSubmit={(e) => e.preventDefault()} autoComplete="off">
+    <div className="grid gap-6 grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] mt-6 items-start">
+      <form className="card p-4 space-y-6 min-w-0 print:hidden" onSubmit={(e) => e.preventDefault()} autoComplete="off">
         <PartyFields title="Prodávající" value={seller} onChange={setSeller} />
         <PartyFields title="Kupující" value={buyer} onChange={setBuyer} />
 
@@ -317,7 +317,7 @@ export function ContractForm() {
         </fieldset>
       </form>
 
-      <section className="lg:sticky lg:top-20 space-y-3 print:static">
+      <section className="min-w-0 lg:sticky lg:top-20 space-y-3 print:static">
         <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
           <h2 className="font-bold">Náhled smlouvy</h2>
           <button type="button" className="btn-cta text-sm" onClick={() => window.print()}>Vytisknout / uložit PDF</button>

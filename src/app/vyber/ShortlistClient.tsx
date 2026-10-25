@@ -132,7 +132,7 @@ export function ShortlistClient() {
               );
             })}
           </div>
-          <div className="card overflow-x-auto">
+          <div className="card relative overflow-x-auto">
             <table className="w-full text-sm min-w-[560px]">
               <thead>
                 <tr className="text-left align-top">

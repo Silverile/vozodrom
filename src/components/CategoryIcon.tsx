@@ -120,6 +120,32 @@ const ICONS: Record<string, React.ReactNode> = {
   interier: (
     <path d="M18 35 L23 6 Q24 4 27 4 H32 Q35 4 34 7 L30 26 H46 Q50 26 50 30 V35 Z" style={BODY} />
   ),
+  // article covers
+  urad: (
+    <>
+      <path d="M8 16 L32 5 L56 16 Z" style={BODY} />
+      <path d="M12 18 V32 M22 18 V32 M32 18 V32 M42 18 V32 M52 18 V32 M7 35 H57" />
+    </>
+  ),
+  dokument: (
+    <>
+      <path d="M18 3 H38 L48 13 V39 H18 Z" style={BODY} />
+      <path d="M38 3 V13 H48 M24 20 H42 M24 26 H42 M24 32 H34" />
+    </>
+  ),
+  lupa: (
+    <>
+      <circle cx="28" cy="18" r="12" style={BODY} />
+      <path d="M37 27 L48 38 M22 18 H34 M28 12 V24" />
+    </>
+  ),
+  baterie: (
+    <>
+      <path d="M10 10 H50 V34 H10 Z" style={BODY} />
+      <path d="M50 17 H55 V27 H50 M16 16 V28 M23 16 V28 M30 16 V28" />
+      <path d="M41 14 L35 23 H41 L36 31" style={{ stroke: "var(--color-accent)" }} />
+    </>
+  ),
   kola: (
     <>
       <circle cx="32" cy="21" r="16" style={BODY} />

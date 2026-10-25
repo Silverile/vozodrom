@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, getArticle } from "@/lib/articles";
+import { ArticleCard } from "@/components/ArticleCard";
+import { articles, getArticle, readingMinutes } from "@/lib/articles";
 import { formatDate } from "@/lib/format";
 
 type Params = Promise<{ slug: string }>;
@@ -26,7 +27,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <Link href="/novinky/" className="hover:text-[var(--color-ink)]">Novinky a rady</Link> / {article.category}
       </nav>
       <article className="mt-3">
-        <p className="text-xs uppercase tracking-wide text-[var(--color-brand)]">{article.category} · {formatDate(article.date)}</p>
+        <p className="text-xs uppercase tracking-wide text-[var(--color-brand)]">{article.category} · {formatDate(article.date)} · {readingMinutes(article)} min čtení</p>
         <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 leading-tight">{article.title}</h1>
         <p className="mt-3 text-lg text-[var(--color-muted)]">{article.perex}</p>
         <div className="mt-6 space-y-4 leading-relaxed">
@@ -45,14 +46,9 @@ export default async function ArticlePage({ params }: { params: Params }) {
       </article>
       <section className="mt-10">
         <h2 className="font-bold mb-3">Další články</h2>
-        <ul className="grid gap-3 sm:grid-cols-3">
+        <ul className="grid gap-3">
           {more.map((a) => (
-            <li key={a.slug}>
-              <Link href={`/novinky/${a.slug}/`} className="card p-3 block h-full hover:border-[var(--color-brand)]">
-                <span className="text-2xl" aria-hidden="true">{a.icon}</span>
-                <span className="block font-semibold text-sm mt-1 leading-snug">{a.title}</span>
-              </Link>
-            </li>
+            <li key={a.slug}><ArticleCard article={a} /></li>
           ))}
         </ul>
       </section>

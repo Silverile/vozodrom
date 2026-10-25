@@ -1,15 +1,16 @@
 "use client";
 
-import { distanceKm, getCity } from "@/lib/geo";
+import { getCity, nearestDistance, parseCityList } from "@/lib/geo";
 import { savedLocation } from "@/lib/storage";
 
-/** Town of a listing, plus the distance from the visitor's chosen town when there is one. */
+/** Town of a listing, plus the distance to the nearest of the visitor's chosen towns. */
 export function Place({ city, fallback, region }: { city: string; fallback: string; region?: string }) {
   const location = savedLocation.useValue();
   const here = getCity(city);
-  const center = getCity(location?.city);
+  const centers = parseCityList(location?.cities.join(","));
   if (!here) return <>{fallback}</>;
-  const km = center && center.slug !== here.slug ? Math.round(distanceKm(here, center)) : null;
+  const nearest = nearestDistance(here.slug, centers);
+  const km = Number.isFinite(nearest) && nearest > 0 ? Math.round(nearest) : null;
   return (
     <>
       {here.name}

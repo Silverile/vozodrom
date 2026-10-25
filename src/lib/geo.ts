@@ -108,12 +108,27 @@ export function nearestCity(point: { lat: number; lon: number }): City {
   return CITIES.reduce((best, c) => (distanceKm(point, c) < distanceKm(point, best) ? c : best));
 }
 
-/** Whether a listing in `citySlug` lies within `radius` km of `center`. */
-export function withinRadius(citySlug: string, center: City, radius: number): boolean {
-  if (radius === 0) return citySlug === center.slug;
-  const city = getCity(citySlug);
-  return !!city && distanceKm(city, center) <= radius;
+/** Towns from a comma-separated list of slugs ("brno,olomouc"); unknown slugs are dropped. */
+export function parseCityList(value: string | null | undefined): City[] {
+  const slugs = [...new Set((value ?? "").split(",").map((s) => s.trim()).filter(Boolean))];
+  return slugs.map(getCity).filter((c): c is City => Boolean(c));
 }
+
+/** Distance in km from a town to the nearest of the chosen towns (Infinity if none). */
+export function nearestDistance(citySlug: string, centers: City[]): number {
+  const city = getCity(citySlug);
+  if (!city || centers.length === 0) return Infinity;
+  return Math.min(...centers.map((c) => distanceKm(city, c)));
+}
+
+/** Whether a listing in `citySlug` lies within `radius` km of any chosen town; 0 means the towns themselves. */
+export function withinAny(citySlug: string, centers: City[], radius: number): boolean {
+  if (radius === 0) return centers.some((c) => c.slug === citySlug);
+  return nearestDistance(citySlug, centers) <= radius;
+}
+
+/** Pages that keep the location in their URL (?mesto=…&okruh=…). */
+export const SEARCH_PAGE = /^\/(inzeraty|technika|moto|dily|pneumatiky)\/?$/;
 
 /** Locative with its preposition, for phrases like "V Praze dne …" in documents. */
 const LOCATIVE: Record<string, string> = {

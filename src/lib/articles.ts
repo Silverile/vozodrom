@@ -17,6 +17,7 @@ export interface Article {
   title: string;
   perex: string;
   date: string;
+  /** CategoryIcon slug used as the cover picture */
   icon: string;
   body: Block[];
   sources?: string[];
@@ -29,7 +30,7 @@ export const articles: Article[] = [
     title: "Zimní pneumatiky: kdy jsou povinné a jaký musí mít dezén",
     perex: "Od listopadu do března rozhoduje stav silnice, ne kalendář. A na hloubce dezénu záleží víc, než se zdá.",
     date: "2026-10-24",
-    icon: "❄️",
+    icon: "zimni",
     body: [
       { text: "Povinnost zimních pneumatik v Česku platí od 1. listopadu do 31. března, ale jen za určitých podmínek. Nestačí tedy, že je listopad; nestačí ani, že je teplo." },
       { heading: "Kdy musíte mít zimní pneumatiky", list: [
@@ -51,7 +52,7 @@ export const articles: Article[] = [
     title: "Přepis auta krok za krokem: lhůta, doklady a poplatky",
     perex: "Na přepis máte 10 pracovních dnů. Online přes Portál dopravy ušetříte 160 Kč, návštěvě úřadu se ale nevyhnete.",
     date: "2026-10-23",
-    icon: "🏛️",
+    icon: "urad",
     body: [
       { text: "Žádost o zápis změny vlastníka se podává do 10 pracovních dnů ode dne převodu vlastnického práva. Správní poplatek za osobní auto je 800 Kč, při podání přes Portál dopravy 640 Kč." },
       { heading: "Co si připravit", list: [
@@ -71,7 +72,7 @@ export const articles: Article[] = [
     title: "Kupní smlouva na auto: na co nezapomenout",
     perex: "VIN, stav tachometru, známé vady a způsob platby. A pozor na limit pro platbu v hotovosti.",
     date: "2026-10-21",
-    icon: "📝",
+    icon: "dokument",
     body: [
       { heading: "Co ve smlouvě nesmí chybět", list: [
         "údaje obou stran a jednoznačná identifikace auta: VIN, registrační značka, číslo ORV,",
@@ -91,7 +92,7 @@ export const articles: Article[] = [
     title: "Jak poznat stočený tachometr",
     perex: "Historie z technických kontrol, servisní záznamy a opotřebení interiéru řeknou víc než slib prodejce.",
     date: "2026-10-19",
-    icon: "🔎",
+    icon: "lupa",
     body: [
       { text: "Stav tachometru se zapisuje při každé technické kontrole. Když nájezd mezi dvěma kontrolami klesne, je to varovný signál." },
       { heading: "Co porovnat", list: [
@@ -110,7 +111,7 @@ export const articles: Article[] = [
     title: "Ojetý elektromobil: jak ověřit stav baterie",
     perex: "Kapacita baterie rozhoduje o dojezdu i ceně. Chtějte datovaný protokol, ne odhad z palubního počítače.",
     date: "2026-10-16",
-    icon: "🔋",
+    icon: "baterie",
     body: [
       { text: "Stav baterie se vyjadřuje jako SoH (state of health): kolik procent původní kapacity baterie ještě má." },
       { heading: "Na co se ptát", list: [
@@ -128,7 +129,7 @@ export const articles: Article[] = [
     title: "Evidenční kontrola: co se změnilo od července 2025",
     perex: "Platnost evidenční kontroly se řídí lhůtami technických prohlídek, takže u většiny ojetin ji při přepisu nepotřebujete.",
     date: "2026-10-12",
-    icon: "📋",
+    icon: "dokument",
     body: [
       { text: "Od 1. 7. 2025 platí evidenční kontrola ve lhůtách stanovených pro technickou prohlídku. Pravidelná technická prohlídka ji v sobě zahrnuje." },
       { text: "Pokud tedy auto prošlo technickou prohlídkou a ta je platná, samostatnou evidenční kontrolu k přepisu obvykle nepotřebujete. Pokud platná není, zajistěte ji na stanici technické kontroly." },
@@ -137,6 +138,12 @@ export const articles: Article[] = [
     sources: ["Ministerstvo dopravy — prodloužená platnost evidenční kontroly", "zákon č. 56/2001 Sb., § 10"],
   },
 ];
+
+/** Reading time in minutes at about 180 words a minute (Czech prose). */
+export function readingMinutes(article: Article): number {
+  const text = [article.perex, ...article.body.flatMap((b) => [b.heading, b.text, ...(b.list ?? [])])].filter(Boolean).join(" ");
+  return Math.max(1, Math.round(text.split(/\s+/).length / 180));
+}
 
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
