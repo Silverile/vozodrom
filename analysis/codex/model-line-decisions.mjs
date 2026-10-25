@@ -117,3 +117,12 @@ for(const key of batch2UnknownDates)forceUnknownDates.add(key);
 for(const key of batch2GenerationFamilies)generationFamilies.add(key);
 Object.assign(generationDateChoices,batch2GenerationDateChoices);
 Object.assign(exactGenerationCodes,batch2ExactGenerationCodes);
+
+import {batch3Exclusions,batch3DateChoices,batch3UnknownDates,batch3GenerationFamilies,batch3GenerationDateChoices,batch3ExactGenerationCodes} from './model-line-batch-3.mjs';
+Object.assign(manualExclusions,batch3Exclusions);
+Object.assign(dateChoices,batch3DateChoices);
+for(const key of batch3UnknownDates)forceUnknownDates.add(key);
+for(const key of batch3GenerationFamilies)generationFamilies.add(key);
+Object.assign(generationDateChoices,batch3GenerationDateChoices);
+Object.assign(exactGenerationCodes,batch3ExactGenerationCodes);
+combinedNames.add('jaguar/xf');

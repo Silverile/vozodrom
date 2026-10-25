@@ -608,3 +608,9 @@ order.push(...batch2Order);
 Object.assign(selection,batch2Selection);
 Object.assign(additionalPages,batch2AdditionalPages);
 Object.assign(aliases,batch2Aliases);
+
+import {batch3Order,batch3Selection,batch3AdditionalPages,batch3Aliases} from './model-line-batch-3.mjs';
+order.push(...batch3Order);
+Object.assign(selection,batch3Selection);
+Object.assign(additionalPages,batch3AdditionalPages);
+Object.assign(aliases,batch3Aliases);

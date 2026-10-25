@@ -36,15 +36,17 @@ When a source model label explicitly starts with another selected make, a confli
 Run node analysis/codex/resolve.mjs, then node analysis/codex/build-catalog.mjs, then node analysis/codex/validate-catalog.mjs from the repository root. All read the saved snapshot; network is not required.
 
 <!-- model-lines-curation:start -->
-## Curated European model-line layer (30 makes)
+## Curated European model-line layer (35 makes)
 
-model-lines-auto.json is a separate manually selected layer containing 746 lines and 433 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet and Daewoo. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
+model-lines-auto.json is a separate manually selected layer containing 801 lines and 500 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet, Daewoo, Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
 
 Additional factual sources are individual **English Wikipedia model articles**, retrieved through https://en.wikipedia.org/w/api.php with exact revision IDs. Each model and generation lists permanent oldid source URLs. Full source URLs, request titles/timestamps and selected factual fields are in [model-line-evidence.json](../../../analysis/codex/model-line-evidence.json); manual grouping and all unresolved fields are in [model-lines-review.md](../../../analysis/codex/model-lines-review.md). No marketplace data, article prose, images or entire tables were reproduced. Wikipedia facts were not all independently confirmed with manufacturers. The earlier CC0 designation refers to Wikidata structured identities; it is not a blanket licence assertion for Wikipedia pages.
 
 Dates retain source production bounds, not inferred Czech on-sale years. **to=null indicates continuing production only if productionStatus=current**; unknown ends also remain null with needsReview. dateScope distinguishes explicit Europe intervals from general source production. Shared-platform and renamed-badge dates are not inherited automatically. productionPeriods can describe separated runs or body variants and do not imply continuity. All 25 demo model slugs are preserved, notably volkswagen/id4. Missing generations/codes/body sets are null and require review; a nonzero generation array is not proof of a complete European sequence.
 
-Offline validation: node analysis/codex/validate-model-lines.mjs. The 30 makes' selection is delivered; the remaining 10 and unresolved factual enrichment are not complete. Batch 1 added 124 lines. Batch 2 adds 102 lines for Subaru, Suzuki, Lexus, Chevrolet and Daewoo. All 644 prior entries are checked unchanged by per-make SHA-256 baselines in model-lines-batch-2-baseline.json.
+Offline validation: node analysis/codex/validate-model-lines.mjs. The 35 makes' selection is delivered; the remaining 5 and unresolved factual enrichment are not complete. Batch 1 added 124 lines. Batch 2 added 102 lines. Batch 3 adds 55 lines for Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. All 746 prior entries are checked unchanged by per-make SHA-256 baselines in model-lines-batch-3-baseline.json.
+Batch 3 corporate/consumer rename distinctions and a source-date conflict are recorded in [model-line-brand-notes.json](../../../analysis/codex/model-line-brand-notes.json).
+
 Targeted manufacturer checks and factual corrections are recorded in [model-line-primary-facts.json](../../../analysis/codex/model-line-primary-facts.json):
 
 - [Nissan Europe: nissan-cube-europe-2008](https://europe.nissannews.com/en-GB/releases/nissan-cube-comes-to-europe)
@@ -63,6 +65,11 @@ Targeted manufacturer checks and factual corrections are recorded in [model-line
 - [Lexus UK: lexus-lbx-europe-2023](https://media.lexus.co.uk/world-premiere-of-the-all-new-lexus-lbx/)
 - [Lexus UK: lexus-lm-europe](https://media.lexus.co.uk/vehicles/lm-2023-current/)
 - [Lexus Europe: lexus-europe-million-2020](https://newsroom.lexus.eu/lexus-records-one-million-sales-in-europe/)
+- [Daihatsu Motor Co.: daihatsu-europe-end-2013](https://www.daihatsu.com/news/2011/11011401.html)
+- [KGM Motors UK: kgm-uk-lineup-2026](https://www.kgm-motors.co.uk/)
+- [KGM Motors UK: kgm-uk-history](https://www.kgm-motors.co.uk/blog/kgm-heritage-70-years-one-story/)
+- [JLR: jlr-brand-identity-2023](https://www.jlr.com/news/2023/06/jaguar-land-rover-unveils-new-jlr-corporate-identity-it-accelerates-modern-luxury)
+- [Porsche AG: porsche-production-end-2025](https://newsroom.porsche.com/en/annual-sustainability-report/combined-management-report/business-development/)
 
 In particular, the manufacturer’s 2012–2020 Octavia III interval supersedes the retrieved Wikipedia end year; Epiq’s Czech-market presence was checked in an October 2026 Škoda announcement. Manufacturer source URLs supplement the permanent Wikipedia revisions; not every field has manufacturer corroboration.
 
