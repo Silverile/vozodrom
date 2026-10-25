@@ -11,9 +11,11 @@
 ## Прототип (GitHub Pages)
 - [x] Репозиторий github.com/Silverile/vozodrom, Next.js + Tailwind, статический экспорт
 - [x] Каталог, страницы моделей, поиск, карточка объявления, на тестовых данных
-- [ ] Включить GitHub Pages: Settings → Pages → Source: GitHub Actions
+- [x] GitHub Pages через GitHub Actions
+- [x] DNS в WEDOS: 4 A, 4 AAAA, CNAME www → silverile.github.io, TXT подтверждения GitHub (не удалять)
+- [x] Домен подтверждён в GitHub, Custom domain vozodrom.cz, сборка на корне домена
+- [ ] Enforce HTTPS — включить, когда GitHub выпустит сертификат
 - [ ] Дизайн: заменить заглушки машин, доработать главную
-- [ ] DNS: A-записи и CNAME www → GitHub Pages (в DNS WEDOS)
 
 ## Перед открытием для людей
 - [ ] Хостинг с бэкендом (Vercel/Cloudflare + Postgres в ЕС) — GitHub Pages запрещает коммерческое использование
