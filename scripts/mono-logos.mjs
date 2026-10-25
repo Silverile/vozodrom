@@ -20,6 +20,8 @@ const luminance = (hex) => {
 const recolour = (colour) => {
   const c = colour.trim().toLowerCase();
   if (c === "none" || c.startsWith("url(")) return colour;
+  // currentColor is the logo's ink, but inside a mask it would resolve to black and hide it.
+  if (c === "currentcolor") return "#ffffff";
   const hex = c === "white" ? "#ffffff" : c === "black" ? "#000000" : c;
   if (!/^#[0-9a-f]{3,8}$/.test(hex)) return colour;
   return luminance(hex) > 0.8 ? "#000000" : "#ffffff";
