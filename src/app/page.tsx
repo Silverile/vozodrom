@@ -27,7 +27,7 @@ export default function HomePage() {
             Najděte auto, kterému můžete věřit
           </h1>
           <p className="mt-3 max-w-xl text-[var(--color-muted)]">
-            Inzeráty, data z technických kontrol a zkušenosti majitelů na jednom místě. Bez reklam přes obsah a bez cookie lišty.
+            Inzeráty, data z technických kontrol a zkušenosti majitelů na jednom místě. Bez reklam přes obsah, analytika jen s vaším souhlasem.
           </p>
           <HomeSearch total={listings.length} />
           <div className="mt-4 flex flex-wrap gap-2">

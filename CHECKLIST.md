@@ -14,7 +14,7 @@
 - [x] GitHub Pages через GitHub Actions
 - [x] DNS в WEDOS: 4 A, 4 AAAA, CNAME www → silverile.github.io, TXT подтверждения GitHub (не удалять)
 - [x] Домен подтверждён в GitHub, Custom domain vozodrom.cz, сборка на корне домена
-- [ ] Enforce HTTPS — включить, когда GitHub выпустит сертификат
+- [x] Enforce HTTPS — включено
 - [ ] Дизайн: заменить заглушки машин, доработать главную
 
 ## Перед открытием для людей
