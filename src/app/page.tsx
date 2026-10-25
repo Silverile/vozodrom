@@ -2,7 +2,9 @@ import Link from "next/link";
 import { ListingCard } from "@/components/ListingCard";
 import { REGIONS, brands, models } from "@/lib/catalog";
 import { formatNumber } from "@/lib/format";
+import { articles } from "@/lib/articles";
 import { itemsOf } from "@/lib/classifieds";
+import { lastActivity, threads } from "@/lib/forum";
 import { listings } from "@/lib/listings";
 import { SECTIONS } from "@/lib/sections";
 import { HomeSearch } from "./HomeSearch";
@@ -17,7 +19,7 @@ const QUICK = [
 ];
 
 const SECTION_ICON = { technika: "🚛", moto: "🏍️", dily: "⚙️", pneu: "🛞" } as const;
-const OTHER_SECTIONS = SECTIONS.filter((s) => s.key !== "auto").map((s) => {
+const OTHER_SECTIONS = SECTIONS.filter((s) => s.group === "market" && s.key !== "auto").map((s) => {
   const key = s.key as keyof typeof SECTION_ICON;
   return { href: s.href, label: s.label, icon: SECTION_ICON[key], count: itemsOf(key).length };
 });
@@ -89,11 +91,11 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 mt-12">
         <div className="flex items-end justify-between mb-4">
           <h2 className="text-xl font-bold">Nejlépe hodnocené modely</h2>
-          <Link href="/katalog/" className="text-sm font-semibold text-[var(--color-brand)]">Celý katalog →</Link>
+          <Link href="/recenze/" className="text-sm font-semibold text-[var(--color-brand)]">Recenze majitelů →</Link>
         </div>
         <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
           {[...models].sort((a, b) => b.ownerScore - a.ownerScore).slice(0, 8).map((m) => (
-            <Link key={`${m.brandSlug}-${m.slug}`} href={`/katalog/${m.brandSlug}/${m.slug}/`} className="card p-4 flex items-center justify-between gap-3 hover:border-[var(--color-brand)] transition-colors">
+            <Link key={`${m.brandSlug}-${m.slug}`} href={`/recenze/${m.brandSlug}/${m.slug}/`} className="card p-4 flex items-center justify-between gap-3 hover:border-[var(--color-brand)] transition-colors">
               <span>
                 <span className="block text-xs text-[var(--color-muted)]">{brands.find((b) => b.slug === m.brandSlug)?.name}</span>
                 <span className="font-semibold">{m.name}</span>
@@ -106,6 +108,40 @@ export default function HomePage() {
           ))}
         </div>
         <p className="text-xs text-[var(--color-muted)] mt-2">* testovací data</p>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 mt-12 grid gap-8 lg:grid-cols-[2fr_1fr]">
+        <div>
+          <div className="flex items-end justify-between mb-4">
+            <h2 className="text-xl font-bold">Novinky a rady</h2>
+            <Link href="/novinky/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny články →</Link>
+          </div>
+          <ul className="grid gap-3 sm:grid-cols-3">
+            {articles.slice(0, 3).map((a) => (
+              <li key={a.slug}>
+                <Link href={`/novinky/${a.slug}/`} className="card h-full block p-4 hover:border-[var(--color-brand)]">
+                  <span className="text-3xl" aria-hidden="true">{a.icon}</span>
+                  <span className="block text-xs uppercase tracking-wide text-[var(--color-brand)] mt-2">{a.category}</span>
+                  <span className="block font-semibold leading-snug mt-0.5">{a.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className="flex items-end justify-between mb-4">
+            <h2 className="text-xl font-bold">Z fóra</h2>
+            <Link href="/forum/" className="text-sm font-semibold text-[var(--color-brand)]">Fórum →</Link>
+          </div>
+          <ul className="card divide-y divide-[var(--color-line)]">
+            {[...threads].sort((a, b) => lastActivity(b).localeCompare(lastActivity(a))).slice(0, 4).map((t) => (
+              <li key={t.slug} className="p-3">
+                <Link href={`/forum/${t.slug}/`} className="font-semibold text-sm hover:text-[var(--color-brand)]">{t.title}</Link>
+                <p className="text-xs text-[var(--color-muted)]">{t.posts.length - 1} odpovědí</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </>
   );

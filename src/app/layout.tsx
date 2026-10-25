@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Analytics, ConsentSettings } from "@/components/Analytics";
-import { BrandLink, SectionTabs } from "@/components/Brand";
+import { AddListingButton, BrandLink, SectionTabs } from "@/components/Brand";
 import { LocationPicker } from "@/components/LocationPicker";
 import { MoreMenu } from "@/components/MoreMenu";
 import { ShortlistLink } from "@/components/ShortlistLink";
@@ -41,9 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="hidden sm:inline">Přihlásit</span>
               </Link>
             </div>
-            <Link href="/pridat/" className="btn-cta hidden md:inline-flex text-sm">
-              + Přidat inzerát
-            </Link>
+            <Suspense>
+              <AddListingButton />
+            </Suspense>
           </div>
           <div className="mx-auto max-w-6xl px-4 border-t border-[var(--color-line)]">
             <Suspense>

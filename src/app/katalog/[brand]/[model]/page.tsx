@@ -70,7 +70,7 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-5 grid grid-cols-3 gap-3 max-w-md">
             <div className="card p-3 col-span-3 flex items-center justify-between gap-3">
               <div>
-                <div className="text-xs text-[var(--color-muted)]">Hodnocení majitelů*</div>
+                <Link href={`/recenze/${brandSlug}/${modelSlug}/`} className="text-xs text-[var(--color-brand)] hover:underline">Hodnocení majitelů* · recenze →</Link>
                 <div className="flex flex-wrap gap-1.5 mt-1">
                   {model.pros.slice(0, 3).map((p) => (
                     <span key={p.label} className="chip bg-[var(--color-good-soft)] text-[var(--color-good)]">{p.label} <b className="opacity-70">{formatNumber(p.count)}</b></span>

@@ -16,7 +16,7 @@ export function ModelSidebar({ model, showLinks = true }: { model: Model; showLi
         <div className="flex items-start justify-between gap-3">
           <div>
             <Link href={href} className="font-bold hover:text-[var(--color-brand)]">{brand?.name} {model.name}</Link>
-            <p className="text-xs text-[var(--color-muted)]">Hodnocení majitelů · {formatNumber(model.reviews)} recenzí*</p>
+            <Link href={`/recenze/${model.brandSlug}/${model.slug}/`} className="block text-xs text-[var(--color-muted)] hover:text-[var(--color-brand)]">Hodnocení majitelů · {formatNumber(model.reviews)} recenzí* →</Link>
           </div>
           <span className="rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2 py-0.5 text-xl font-extrabold">
             {model.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}

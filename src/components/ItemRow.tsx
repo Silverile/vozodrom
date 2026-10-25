@@ -13,8 +13,12 @@ export function itemHref(item: Item) {
 export function ItemImage({ item, className = "" }: { item: Item; className?: string }) {
   const icon = categoryOf(item.section, item.category)?.icon ?? "📦";
   return (
-    <div className={`grid place-items-center bg-[var(--color-photo)] ${className}`} role="img" aria-label={`Ilustrace: ${categoryOf(item.section, item.category)?.label}`}>
-      <span className="text-5xl" aria-hidden="true">{icon}</span>
+    <div
+      className={`grid place-items-center bg-[var(--color-photo)] bg-[radial-gradient(circle_at_50%_45%,var(--color-brand-soft)_0%,transparent_62%)] ${className}`}
+      role="img"
+      aria-label={`Ilustrace: ${categoryOf(item.section, item.category)?.label}`}
+    >
+      <span className="text-5xl drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]" aria-hidden="true">{icon}</span>
     </div>
   );
 }

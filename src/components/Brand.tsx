@@ -49,7 +49,7 @@ export function SectionTabs() {
   const tab = "relative whitespace-nowrap px-3 py-2.5 text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] data-[on=true]:text-[var(--color-ink)] data-[on=true]:font-semibold data-[on=true]:after:absolute data-[on=true]:after:inset-x-3 data-[on=true]:after:bottom-0 data-[on=true]:after:h-0.5 data-[on=true]:after:rounded-full data-[on=true]:after:bg-[var(--color-brand)]";
   return (
     <nav ref={nav} aria-label="Sekce" className="relative flex overflow-x-auto -mx-3 [scrollbar-width:none]">
-      {SECTIONS.map((s) => {
+      {SECTIONS.filter((s) => s.group === "market").map((s) => {
         const on = active?.key === s.key && !onCatalog;
         return (
           <Link key={s.key} href={s.href} className={tab} data-on={on} aria-current={on ? "page" : undefined}>
@@ -60,6 +60,26 @@ export function SectionTabs() {
       <Link href="/katalog/" className={tab} data-on={onCatalog} aria-current={onCatalog ? "page" : undefined}>
         Katalog modelů
       </Link>
+      <span className="my-2.5 mx-1 w-px shrink-0 bg-[var(--color-line)]" aria-hidden="true" />
+      {SECTIONS.filter((s) => s.group === "community").map((s) => {
+        const on = active?.key === s.key;
+        return (
+          <Link key={s.key} href={s.href} className={tab} data-on={on} aria-current={on ? "page" : undefined}>
+            {s.label}
+          </Link>
+        );
+      })}
     </nav>
+  );
+}
+
+/** Header call to action that opens the add-listing form for the current marketplace section. */
+export function AddListingButton() {
+  const section = sectionOf(usePathname());
+  const key = section?.group === "market" && section.key !== "auto" ? section.key : null;
+  return (
+    <Link href={key ? `/pridat/?sekce=${key}` : "/pridat/"} className="btn-cta hidden md:inline-flex text-sm">
+      + Přidat inzerát
+    </Link>
   );
 }

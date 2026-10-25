@@ -1,14 +1,13 @@
 import { getBrand, models } from "./catalog";
 import { CITIES } from "./geo";
 import { mulberry32 } from "./listings";
-import type { SectionKey } from "./sections";
 import type { SellerType } from "./types";
 
 // Fictional test listings for the sections beyond cars: utility vehicles and machinery,
 // motorcycles, parts and tyres. Deterministic like the car data; names of real makes and
 // models are used only as labels, every price, seller and vehicle is invented.
 
-export type ItemSection = Exclude<SectionKey, "auto">;
+export type ItemSection = "technika" | "moto" | "dily" | "pneu";
 export type Condition = "nové" | "použité";
 export type Season = "letní" | "zimní" | "celoroční";
 
