@@ -33,7 +33,10 @@ for (const name of readdirSync(dir).filter((f) => f.endsWith(".svg"))) {
   const root = svg.match(/<svg[^>]*>/)?.[0] ?? "";
   const size = (attr) => parseFloat(root.match(new RegExp(`\\s${attr}="([\\d.]+)`))?.[1] ?? "");
   const box = root.match(/viewBox="([^"]+)"/)?.[1] ?? (size("width") && size("height") ? `0 0 ${size("width")} ${size("height")}` : null);
-  if (!box) throw new Error(`${name}: needs a viewBox or width and height`);
+  if (!box) {
+    console.warn(`skipped ${name}: needs a viewBox or width and height`);
+    continue;
+  }
   const [x, y, w, h] = box.trim().split(/[\s,]+/).map(Number);
   const body = svg
     .replace(/^[\s\S]*?<svg[^>]*>/, "")
