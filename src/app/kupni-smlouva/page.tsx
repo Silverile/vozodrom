@@ -21,12 +21,13 @@ export default function ContractPage() {
             🔒 Údaje zůstávají jen v této stránce: neukládáme je ani neodesíláme a po zavření zmizí.
           </p>
           <p className="card p-3">
-            ⚖️ Vzor nenahrazuje právní radu. Při prodeji od firmy nebo na splátky platí jiná pravidla.
+            ⚖️ Vzor je určen pro jednorázový prodej mezi dvěma fyzickými osobami, které při prodeji a koupi nejednají v rámci
+            podnikání. Nenahrazuje individuální právní radu; pro prodej podnikatelem nebo na splátky použijte odpovídající smlouvu.
           </p>
         </div>
         <p className="mt-3 text-sm">
-          Po podpisu následuje <Link href="/prepis-vozidla/" className="text-[var(--color-brand)] hover:underline">přepis vozidla na úřadě</Link>{" "}
-          do 10 pracovních dnů.
+          Žádost o <Link href="/prepis-vozidla/" className="text-[var(--color-brand)] hover:underline">zápis změny vlastníka vozidla</Link>{" "}
+          podejte do 10 pracovních dnů ode dne převodu vlastnického práva. U tohoto vzoru je převod vázán na úplné zaplacení kupní ceny.
         </p>
       </div>
       <ContractForm />
