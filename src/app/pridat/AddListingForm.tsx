@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, generationMatch, getModel, models } from "@/lib/catalog";
-import { makesIn } from "@/lib/makes";
+import { makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { citiesIn, getCity } from "@/lib/geo";
 import { type FeedVehicle, validateVehicle } from "@/lib/feed";
 import { createStore } from "@/lib/storage";
@@ -12,6 +13,7 @@ import type { Body, Listing } from "@/lib/types";
 export type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string; body: string };
 
 const CAR_MAKES = makesIn("auto");
+const CUSTOM = "__jiny";
 
 const EMPTY: Draft = {
   brand: "", model: "", year: 2020, mileageKm: 0, price: 0, engine: "", fuel: "benzin", transmission: "manuál",
@@ -33,11 +35,17 @@ function vinProblem(vin: string): string | null {
 
 export function AddListingForm() {
   const draft = draftStore.useValue();
-  const set = <K extends keyof Draft>(key: K, value: Draft[K]) =>
-    draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "" } : {}) });
+  const set = <K extends keyof Draft>(key: K, value: Draft[K]) => {
+    if (key === "brand") setCustomModel(false);
+    draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "", body: "" } : {}) });
+  };
 
   const catalogModels = models.filter((m) => m.brandSlug === draft.brand);
   const inCatalog = catalogModels.length > 0;
+  const lines = modelLinesOf(draft.brand);
+  // A typed model name that is not one of the make's lines keeps the free-text field open.
+  const [customModel, setCustomModel] = useState(false);
+  const showCustom = customModel || (draft.model !== "" && lines.length > 0 && !lines.some((l) => l.name === draft.model));
   // Catalogue makes are checked exactly like dealer feeds; other makes cannot be checked
   // against model data yet, so model and generation checks are replaced by plain presence checks.
   const vehicleProblems = validateVehicle({ ...draft, city: draft.city || undefined, features: [] });
@@ -99,9 +107,30 @@ export function AddListingForm() {
           </label>
         ) : (
           <>
-            <label className="text-sm">Model
-              <input className={input} placeholder="např. Astra Sports Tourer" value={draft.model} onChange={(e) => set("model", e.target.value)} required />
-            </label>
+            {lines.length > 0 && !showCustom ? (
+              <label className="text-sm">Model
+                <select
+                  className={input}
+                  value={draft.model}
+                  onChange={(e) => {
+                    if (e.target.value === CUSTOM) return setCustomModel(true);
+                    // A line with a single known body type fills the body in.
+                    const line = lines.find((l) => l.name === e.target.value);
+                    const bodies = (line?.bodyTypes ?? []).filter((b) => b in BODY_LABEL);
+                    draftStore.write({ ...draft, model: e.target.value, ...(bodies.length === 1 ? { body: bodies[0] } : {}) });
+                  }}
+                  required
+                >
+                  <option value="">Vyberte</option>
+                  {lines.map((l) => <option key={l.slug} value={l.name}>{l.name}{yearsOf(l) ? ` (${yearsOf(l)})` : ""}</option>)}
+                  <option value={CUSTOM}>Jiný model…</option>
+                </select>
+              </label>
+            ) : (
+              <label className="text-sm">Model
+                <input className={input} placeholder="např. Astra Sports Tourer" value={draft.model} onChange={(e) => set("model", e.target.value)} required />
+              </label>
+            )}
             <label className="text-sm">Karoserie
               <select className={input} value={draft.body} onChange={(e) => set("body", e.target.value)}>
                 <option value="">Vyberte</option>

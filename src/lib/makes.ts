@@ -1,4 +1,5 @@
 import index from "@/data/makes-index.json";
+import lineIndex from "@/data/model-lines-index.json";
 
 // All vehicle makes known to the site (432, from Wikidata, CC0), small enough for the browser.
 // Built by scripts/makes-index.mjs from src/data/catalog/makes.json. Model lines exist only for
@@ -41,4 +42,31 @@ export function resolveMake(name: string): Make | undefined {
 export function initialOf(name: string): string {
   const c = fold(name).charAt(0).toUpperCase();
   return /[A-Z]/.test(c) ? c : "0–9";
+}
+
+// Curated car model lines (src/data/catalog/model-lines-auto.json via scripts/model-lines-index.mjs).
+// Years can be unknown (null); `to: null` means "still made" only when `current` is true.
+
+export interface ModelLine {
+  slug: string;
+  name: string;
+  from: number | null;
+  to: number | null;
+  current: boolean;
+  bodyTypes: string[];
+  generations: { code: string | null; from: number | null; to: number | null }[];
+}
+
+const LINES = lineIndex as Record<string, ModelLine[]>;
+
+export function modelLinesOf(makeSlug: string): ModelLine[] {
+  return LINES[makeSlug] ?? [];
+}
+
+/** "1996–dosud", "2011–2020", "od 2025", or "" when the years are unknown. */
+export function yearsOf(line: { from: number | null; to: number | null; current: boolean }): string {
+  if (line.from && line.to) return `${line.from}–${line.to}`;
+  if (line.from && line.current) return `${line.from}–dosud`;
+  if (line.from) return `od ${line.from}`;
+  return "";
 }

@@ -9,7 +9,7 @@ import { BODY_LABEL, FUEL_LABEL, REGIONS, getBrand, getModel, models } from "@/l
 import { LocationPills, useSearchLocation } from "@/components/LocationPills";
 import { getCity, nearestDistance, withinAny } from "@/lib/geo";
 import { listings } from "@/lib/listings";
-import { getMake, makesIn } from "@/lib/makes";
+import { getMake, makesIn, modelLinesOf } from "@/lib/makes";
 import { marketEstimate } from "@/lib/market";
 import { savedSearches } from "@/lib/storage";
 import { stkSignal } from "@/lib/stk";
@@ -159,6 +159,9 @@ export function SearchClient() {
   }, [index, params.toString(), centers.map((c) => c.slug).join(","), radius]);
 
   const selectedModel = brand && model ? getModel(brand, model) : undefined;
+  // Demo makes have catalogue models with data; other makes offer their curated model lines.
+  const demoModels = models.filter((m) => m.brandSlug === brand);
+  const brandModels = demoModels.length ? demoModels : modelLinesOf(brand);
   const brandName = getMake(brand)?.name ?? getBrand(brand)?.name;
   const heading = selectedModel ? `${brandName} ${selectedModel.name}${generation ? ` ${generation}` : ""}` : brandName ?? "Všechna auta";
 
@@ -221,8 +224,8 @@ export function SearchClient() {
         </Field>
         <Field label="Model">
           <select className="input" value={model} disabled={!brand} onChange={(e) => update("model", e.target.value)}>
-            <option value="">{brand && !models.some((m) => m.brandSlug === brand) ? "Modely doplňujeme" : "Všechny modely"}</option>
-            {models.filter((m) => m.brandSlug === brand).map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
+            <option value="">{brand && brandModels.length === 0 ? "Modely doplňujeme" : "Všechny modely"}</option>
+            {brandModels.map((m) => <option key={m.slug} value={m.slug}>{m.name}</option>)}
           </select>
         </Field>
         <Field label="Generace">
