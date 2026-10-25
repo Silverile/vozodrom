@@ -1,7 +1,9 @@
 import type { Body } from "@/lib/types";
 
 // Placeholder artwork instead of photos: the prototype has no real vehicle images.
-// Side view facing right; shading uses translucent overlays so no SVG ids are needed.
+// Side views facing right. Each body has its own length, wheelbase and greenhouse
+// (a hatchback is shorter than an estate, an SUV sits higher), so the shapes read as
+// real car types. Shading uses translucent overlays, so no SVG ids are needed.
 
 const PAINT: Record<string, string> = {
   bílá: "#e9ecef",
@@ -16,55 +18,69 @@ const PAINT: Record<string, string> = {
 interface Shape {
   body: string;
   glass: string;
-  /** B-pillar x position and the top of the glass it starts from */
+  /** x of the B-pillar (and the door seam below it); other pillars are solid body */
   pillar: number;
-  pillarTop: number;
-  /** shoulder line from rear to front */
-  shoulder: string;
-  door: number;
-  lights: { front: [number, number]; rear: [number, number] };
+  /** y of the window line and of the sill */
+  belt: number;
+  sill: number;
+  wheels: [number, number];
+  wheelR: number;
+  /** front and rear lamp anchors */
+  head: [number, number];
+  tail: [number, number, number];
+  /** SUV-style dark cladding along the sill */
+  cladding?: boolean;
 }
 
+// Ground at y=100. Wheel arches are cut 3 units wider than the tyres.
+const arch = (x: number, r: number, sill: number) => `L${x - r - 3} ${sill} A${r + 3} ${r + 3} 0 0 1 ${x + r + 3} ${sill}`;
+
 const SHAPES: Record<Body, Shape> = {
+  // compact hatch, ~4.2 m: short tail, thick C-pillar
   hatchback: {
-    body: "M30 92 L44 64 Q50 54 64 52 L118 50 Q132 50 142 60 L160 76 L182 80 Q194 82 194 94 L194 104 L30 104 Z",
-    glass: "M54 72 L62 58 Q66 56 74 56 L116 55 Q126 55 134 63 L146 74 Z",
-    pillar: 104, pillarTop: 56, shoulder: "M34 82 L150 78 L190 86", door: 106, lights: { front: [186, 85], rear: [31, 82] },
+    body: `M34 95 ${arch(64, 15, 95)} ${arch(176, 15, 95)} L203 95 Q210 94 210 87 L209 72 Q206 62 196 60 L160 55 L140 41 Q134 37 124 37 L58 38 Q50 38 44 44 L34 56 Q30 62 30 72 L32 92 Q32 95 34 95 Z`,
+    glass: "M52 55 L58 46 Q62 42 70 42 L122 41 Q130 41 135 45 L148 55 Z",
+    pillar: 100, belt: 55, sill: 95, wheels: [64, 176], wheelR: 15, head: [197, 62], tail: [31, 58, 10],
   },
+  // estate, ~4.7 m: long roof, D-pillar at the very back
   kombi: {
-    body: "M26 92 L40 64 Q46 54 60 52 L160 50 Q170 50 174 58 L180 78 L188 80 Q196 82 196 94 L196 104 L26 104 Z",
-    glass: "M50 72 L58 58 Q62 56 70 56 L156 55 Q164 55 166 62 L170 74 Z",
-    pillar: 112, pillarTop: 56, shoulder: "M30 82 L176 78 L192 86", door: 112, lights: { front: [188, 85], rear: [27, 82] },
+    body: `M16 95 ${arch(62, 15, 95)} ${arch(186, 15, 95)} L222 95 Q229 94 229 86 L228 72 Q225 63 210 61 L172 56 L152 42 Q146 38 136 38 L36 40 Q26 40 22 46 L16 56 Q12 62 12 72 L14 92 Q15 95 16 95 Z`,
+    glass: "M31 56 L35 48 Q38 44 45 44 L134 42 Q143 42 148 46 L160 56 Z",
+    pillar: 106, belt: 56, sill: 95, wheels: [62, 186], wheelR: 15, head: [216, 63], tail: [13, 60, 9],
   },
+  // saloon, ~4.7 m: separate boot deck
   sedan: {
-    body: "M24 94 L40 74 L66 56 Q74 52 86 52 L122 52 Q134 52 144 60 L162 76 L186 80 Q198 82 198 94 L198 104 L24 104 Z",
-    glass: "M66 74 L80 60 Q86 57 94 57 L120 57 Q130 57 138 64 L150 75 Z",
-    pillar: 112, pillarTop: 58, shoulder: "M28 84 L156 79 L194 87", door: 112, lights: { front: [190, 86], rear: [25, 86] },
+    body: `M17 95 ${arch(62, 15, 95)} ${arch(184, 15, 95)} L220 95 Q227 94 227 86 L226 74 Q223 65 208 62 L170 57 L148 42 Q142 38 132 38 L86 38 Q76 38 68 43 L46 58 L22 62 Q13 64 13 74 L15 92 Q16 95 17 95 Z`,
+    glass: "M56 57 L70 46 Q77 42 86 42 L130 42 Q139 42 144 46 L158 57 Z",
+    pillar: 104, belt: 57, sill: 95, wheels: [62, 184], wheelR: 15, head: [214, 64], tail: [14, 66, 6],
   },
+  // SUV, ~4.7 m: tall body, high ground clearance, bigger wheels, cladding
   suv: {
-    body: "M26 90 L36 60 Q40 48 56 46 L150 44 Q164 44 170 54 L180 74 L188 76 Q198 78 198 92 L198 106 L26 106 Z",
-    glass: "M46 70 L52 54 Q56 50 64 50 L146 49 Q156 49 162 58 L170 70 Z",
-    pillar: 108, pillarTop: 50, shoulder: "M30 78 L172 74 L194 82", door: 108, lights: { front: [190, 81], rear: [27, 78] },
+    body: `M19 90 ${arch(62, 17, 90)} ${arch(182, 17, 90)} L218 90 Q225 89 225 80 L224 64 Q221 55 207 53 L174 49 L154 32 Q148 27 138 27 L38 28 Q29 28 25 34 L19 46 Q15 53 15 64 L17 87 Q18 90 19 90 Z`,
+    glass: "M33 48 L37 37 Q40 32 47 32 L136 31 Q145 31 150 35 L164 48 Z",
+    pillar: 106, belt: 48, sill: 90, wheels: [62, 182], wheelR: 17, head: [212, 55], tail: [16, 52, 10], cladding: true,
   },
+  // MPV, ~4.5 m: tall roof, long steep windscreen, short bonnet
   mpv: {
-    body: "M28 92 L38 56 Q42 46 58 44 L164 44 Q176 44 180 56 L186 78 Q196 80 196 94 L196 104 L28 104 Z",
-    glass: "M46 72 L52 52 Q56 49 64 49 L160 48 Q170 48 174 58 L178 72 Z",
-    pillar: 114, pillarTop: 49, shoulder: "M32 80 L182 76 L192 84", door: 114, lights: { front: [189, 84], rear: [29, 80] },
+    body: `M26 95 ${arch(60, 15, 95)} ${arch(178, 15, 95)} L211 95 Q218 94 218 86 L217 70 Q214 62 202 60 L180 56 L156 32 Q150 28 140 28 L42 29 Q33 29 29 35 L24 46 Q21 54 21 66 L23 92 Q24 95 26 95 Z`,
+    glass: "M35 52 L39 38 Q42 33 49 33 L138 32 Q147 32 152 36 L170 54 Z",
+    pillar: 104, belt: 53, sill: 95, wheels: [60, 178], wheelR: 15, head: [205, 61], tail: [22, 54, 10],
   },
 };
 
-function Wheel({ cx }: { cx: number }) {
-  const spokes = [0, 72, 144, 216, 288];
+function Wheel({ cx, r }: { cx: number; r: number }) {
+  const cy = 100 - r;
+  const rim = r * 0.62;
   return (
     <g>
-      <circle cx={cx} cy="104" r="14" fill="#101215" />
-      <circle cx={cx} cy="104" r="8.5" fill="#c9ced6" />
-      <circle cx={cx} cy="104" r="8.5" fill="#000" opacity="0.15" />
-      {spokes.map((deg) => {
-        const a = (deg * Math.PI) / 180;
-        return <line key={deg} x1={cx} y1="104" x2={cx + Math.cos(a) * 7.5} y2={104 + Math.sin(a) * 7.5} stroke="#7d848f" strokeWidth="2.2" strokeLinecap="round" />;
+      <circle cx={cx} cy={cy} r={r} fill="#101215" />
+      <circle cx={cx} cy={cy} r={rim} fill="#c9ced6" />
+      <circle cx={cx} cy={cy} r={rim} fill="#000" opacity="0.12" />
+      {[0, 72, 144, 216, 288].map((deg) => {
+        const a = ((deg - 90) * Math.PI) / 180;
+        return <line key={deg} x1={cx} y1={cy} x2={cx + Math.cos(a) * rim * 0.9} y2={cy + Math.sin(a) * rim * 0.9} stroke="#8e96a1" strokeWidth="2.4" strokeLinecap="round" />;
       })}
-      <circle cx={cx} cy="104" r="2.6" fill="#3a3f47" />
+      <circle cx={cx} cy={cy} r={r * 0.17} fill="#3a3f47" />
     </g>
   );
 }
@@ -72,25 +88,32 @@ function Wheel({ cx }: { cx: number }) {
 export function CarImage({ body, color, className = "" }: { body: Body; color: string; className?: string }) {
   const paint = PAINT[color] ?? "#8a919c";
   const s = SHAPES[body];
+  const [hx, hy] = s.head;
+  const [tx, ty, th] = s.tail;
+  const [rear, front] = s.wheels;
   return (
-    <svg viewBox="0 0 220 130" className={className} role="img" aria-label={`Ilustrace vozu (${color})`}>
-      <rect width="220" height="130" style={{ fill: "var(--color-photo)" }} />
-      <rect y="104" width="220" height="26" fill="#000" opacity="0.1" />
-      <ellipse cx="112" cy="116" rx="98" ry="7" fill="#000" opacity="0.35" />
-      <path d={s.body} fill={paint} />
-      {/* lower half in shade, roof in light */}
-      <path d={s.body} fill="#000" opacity="0.16" style={{ clipPath: "inset(62% 0 0 0) fill-box" }} />
-      <path d={s.body} fill="#fff" opacity="0.1" style={{ clipPath: "inset(0 0 72% 0) fill-box" }} />
-      <path d={s.glass} fill="#1d2733" />
-      <path d={s.glass} fill="#cfe3ff" opacity="0.28" style={{ clipPath: "inset(0 40% 50% 0) fill-box" }} />
-      <line x1={s.pillar} y1={s.pillarTop} x2={s.pillar} y2="76" stroke={paint} strokeWidth="3" />
-      <path d={s.shoulder} stroke="#fff" strokeOpacity="0.35" strokeWidth="1.2" fill="none" />
-      <line x1={s.door} y1="78" x2={s.door + 2} y2="100" stroke="#000" strokeOpacity="0.25" strokeWidth="1" />
-      <rect x={s.door - 14} y="84" width="7" height="1.8" rx="0.9" fill="#000" opacity="0.3" />
-      <rect x={s.lights.front[0]} y={s.lights.front[1]} width="8" height="4" rx="2" fill="#fff5cf" />
-      <rect x={s.lights.rear[0]} y={s.lights.rear[1]} width="5" height="5" rx="1.5" fill="#d8322b" />
-      <Wheel cx={64} />
-      <Wheel cx={160} />
+    <svg viewBox="0 0 240 150" className={className} role="img" aria-label={`Ilustrace vozu (${color})`}>
+      <rect width="240" height="150" style={{ fill: "var(--color-photo)" }} />
+      <rect y="118" width="240" height="32" fill="#000" opacity="0.1" />
+      <g transform="translate(0 18)">
+        <ellipse cx={(rear + front) / 2} cy="100" rx={(front - rear) / 2 + 50} ry="5" fill="#000" opacity="0.4" />
+        <path d={s.body} fill={paint} />
+        {/* lower body in shade, a soft highlight on the shoulder */}
+        <path d={s.body} fill="#000" opacity="0.18" style={{ clipPath: "inset(68% 0 0 0) fill-box" }} />
+        <path d={s.body} fill="#fff" opacity="0.12" style={{ clipPath: "inset(0 0 66% 0) fill-box" }} />
+        {s.cladding && <path d={s.body} fill="#16191d" opacity="0.85" style={{ clipPath: "inset(88% 0 0 0) fill-box" }} />}
+        <path d={s.glass} fill="#1b2430" />
+        <path d={s.glass} fill="#cfe3ff" opacity="0.22" style={{ clipPath: "inset(0 45% 55% 0) fill-box" }} />
+        <line x1={s.pillar} y1={s.belt - 18} x2={s.pillar} y2={s.belt} stroke={paint} strokeWidth="4" />
+        <line x1={s.pillar} y1={s.belt + 1} x2={s.pillar + 1.5} y2={s.sill - 5} stroke="#000" strokeOpacity="0.22" strokeWidth="1" />
+        <line x1={tx + 4} y1={s.belt + 4} x2={hx - 4} y2={s.belt + 6} stroke="#fff" strokeOpacity="0.3" strokeWidth="1" />
+        <rect x={s.pillar - 18} y={s.belt + 8} width="9" height="2" rx="1" fill="#000" opacity="0.3" />
+        <rect x={s.pillar + 30} y={s.belt + 8} width="9" height="2" rx="1" fill="#000" opacity="0.3" />
+        <path d={`M${hx} ${hy} L${hx + 11} ${hy + 3} L${hx + 10} ${hy + 7} L${hx - 2} ${hy + 5} Z`} fill="#fff5cf" />
+        <rect x={tx} y={ty} width="4.5" height={th} rx="1.5" fill="#d8322b" />
+        <Wheel cx={rear} r={s.wheelR} />
+        <Wheel cx={front} r={s.wheelR} />
+      </g>
     </svg>
   );
 }
