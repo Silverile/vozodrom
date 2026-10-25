@@ -115,6 +115,32 @@ export function withinRadius(citySlug: string, center: City, radius: number): bo
   return !!city && distanceKm(city, center) <= radius;
 }
 
+/** Locative with its preposition, for phrases like "V Praze dne …" in documents. */
+const LOCATIVE: Record<string, string> = {
+  Praha: "v Praze", Kladno: "v Kladně", "Mladá Boleslav": "v Mladé Boleslavi", Kolín: "v Kolíně", Příbram: "v Příbrami",
+  Benešov: "v Benešově", Beroun: "v Berouně", "Kutná Hora": "v Kutné Hoře", Mělník: "v Mělníku",
+  "České Budějovice": "v Českých Budějovicích", Tábor: "v Táboře", Písek: "v Písku", Strakonice: "ve Strakonicích",
+  "Jindřichův Hradec": "v Jindřichově Hradci", "Český Krumlov": "v Českém Krumlově", Plzeň: "v Plzni", Klatovy: "v Klatovech",
+  Domažlice: "v Domažlicích", Rokycany: "v Rokycanech", "Karlovy Vary": "v Karlových Varech", Cheb: "v Chebu",
+  Sokolov: "v Sokolově", "Ústí nad Labem": "v Ústí nad Labem", Teplice: "v Teplicích", Děčín: "v Děčíně", Most: "v Mostě",
+  Chomutov: "v Chomutově", Litoměřice: "v Litoměřicích", Liberec: "v Liberci", "Jablonec nad Nisou": "v Jablonci nad Nisou",
+  "Česká Lípa": "v České Lípě", "Hradec Králové": "v Hradci Králové", Trutnov: "v Trutnově", Náchod: "v Náchodě",
+  Jičín: "v Jičíně", Pardubice: "v Pardubicích", Chrudim: "v Chrudimi", Svitavy: "ve Svitavách",
+  "Ústí nad Orlicí": "v Ústí nad Orlicí", Jihlava: "v Jihlavě", Třebíč: "v Třebíči", "Havlíčkův Brod": "v Havlíčkově Brodě",
+  "Žďár nad Sázavou": "ve Žďáru nad Sázavou", Brno: "v Brně", Znojmo: "ve Znojmě", Břeclav: "v Břeclavi",
+  Hodonín: "v Hodoníně", Blansko: "v Blansku", Vyškov: "ve Vyškově", Olomouc: "v Olomouci", Prostějov: "v Prostějově",
+  Přerov: "v Přerově", Šumperk: "v Šumperku", Zlín: "ve Zlíně", "Uherské Hradiště": "v Uherském Hradišti",
+  Kroměříž: "v Kroměříži", Vsetín: "ve Vsetíně", Ostrava: "v Ostravě", Opava: "v Opavě", "Frýdek-Místek": "ve Frýdku-Místku",
+  Karviná: "v Karviné", Havířov: "v Havířově", "Nový Jičín": "v Novém Jičíně",
+};
+
+/** "v Praze" for a known town name (any case, with or without diacritics), otherwise undefined. */
+export function locativeOf(name: string): string | undefined {
+  const key = slugify(name.trim());
+  const city = CITIES.find((c) => c.slug === key);
+  return city ? LOCATIVE[city.name] : undefined;
+}
+
 /** "Jihomoravský kraj", "Kraj Vysočina", "hl. m. Praha". */
 export function regionLabel(region: string): string {
   if (region === "Praha") return "hl. m. Praha";

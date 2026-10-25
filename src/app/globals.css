@@ -128,8 +128,9 @@ body {
 
 /* Printing (sale contract): plain black on white, no page chrome. */
 @media print {
+  html,
   body {
-    background: #fff;
+    background: #fff !important;
     color: #000;
   }
   @page {

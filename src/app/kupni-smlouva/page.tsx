@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContractPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 print:p-0">
+    <div className="mx-auto max-w-7xl px-4 py-8 print:p-0">
       <div className="print:hidden">
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Kupní smlouva na auto</h1>
         <p className="mt-2 text-[var(--color-muted)] max-w-3xl">
