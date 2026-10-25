@@ -44,15 +44,17 @@ for (const name of readdirSync(dir).filter((f) => f.endsWith(".svg"))) {
       part.startsWith("<mask")
         ? part
         : part
-            .replace(/(fill|stroke)="([^"]+)"/g, (_, k, v) => `${k}="${recolour(v)}"`)
-            .replace(/(fill|stroke):\s*([^;"]+)/g, (_, k, v) => `${k}:${recolour(v)}`),
+            .replace(/(fill|stroke|stop-color)="([^"]+)"/g, (_, k, v) => `${k}="${recolour(v)}"`)
+            // inline styles and <style> blocks (class-based fills)
+            .replace(/(fill|stroke|stop-color):\s*([^;"}\s]+)/g, (_, k, v) => `${k}:${recolour(v)}`),
     )
     .join("");
   // Keep the original namespace declarations (xlink:, inkscape: …) or the file stops being valid XML.
   const namespaces = [...new Set(root.match(/\sxmlns(:[\w-]+)?="[^"]*"/g) ?? [])].filter((n) => !/^\s*xmlns="/.test(n)).join("");
   const mono =
     `<svg xmlns="http://www.w3.org/2000/svg"${namespaces} viewBox="${box}">` +
-    `<defs><mask id="m" maskUnits="userSpaceOnUse" x="${x}" y="${y}" width="${w}" height="${h}">${inner}</mask></defs>` +
+    // Shapes without a fill default to black, i.e. the mark itself: the group makes that white.
+    `<defs><mask id="m" maskUnits="userSpaceOnUse" x="${x}" y="${y}" width="${w}" height="${h}"><g fill="#fff">${inner}</g></mask></defs>` +
     `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#000" mask="url(#m)"/></svg>\n`;
   writeFileSync(new URL(name, out), mono);
   console.log(`mono/${name}`);
