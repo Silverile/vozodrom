@@ -25,6 +25,7 @@
 - [ ] Источники объявлений: фиды дилеров (Soft4cars и др.), стартовый сегмент (стратегия B)
 
 ## Analytika a účty
-- [ ] Vytvořit GA4 property (analytics.google.com) a vložit Measurement ID `G-…` do GitHub → Settings → Secrets and variables → Actions → Variables jako `GA_MEASUREMENT_ID`, pak znovu spustit deploy
+- [x] GA4 property „vozodrom web“ (G-2D6CJ8T7NY), načítá se jen se souhlasem
+- [ ] GA: Google Signals nechat vypnuté, uchovávání dat 2–14 měsíců
 - [ ] Před ostrým spuštěním: doplnit provozovatele do /soukromi/ a nechat zkontrolovat
 - [ ] Vybrat poskytovatele účtů (Firebase / Supabase / vlastní backend); /prihlaseni/ je zatím jen náhled

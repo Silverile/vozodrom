@@ -29,9 +29,9 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ""
-          # GA4 Measurement ID (G-…), set in Settings → Secrets and variables → Actions → Variables.
-          # Empty means no analytics and no consent banner.
-          NEXT_PUBLIC_GA_ID: ${{ vars.GA_MEASUREMENT_ID }}
+          # GA4 Measurement ID of the "vozodrom web" stream. It is public (visible in the page);
+          # an empty value means no analytics and no consent banner.
+          NEXT_PUBLIC_GA_ID: G-2D6CJ8T7NY
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
