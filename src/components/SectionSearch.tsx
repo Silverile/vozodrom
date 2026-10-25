@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { CATEGORIES, type ItemSection, TYRE_OPTIONS, categoryOf, itemsOf } from "@/lib/classifieds";
 import { OPEN_LOCATION_PICKER, RADII, distanceKm, getCity, withinRadius } from "@/lib/geo";
 import { savedLocation } from "@/lib/storage";
+import { CategoryIcon } from "./CategoryIcon";
 import { ItemRow } from "./ItemRow";
 
 // Search for the non-car sections: category tiles with counts, the same town + radius
@@ -103,7 +104,7 @@ export function SectionSearch({ section }: { section: ItemSection }) {
                   <span className="block font-semibold leading-tight">{c.label}</span>
                   <span className="block text-sm text-[var(--color-muted)] mt-0.5">{counts.get(c.slug)}</span>
                 </span>
-                <span className="text-3xl" aria-hidden="true">{c.icon}</span>
+                <CategoryIcon slug={c.slug} className="w-14 shrink-0 text-[var(--color-ink)]" />
               </button>
             </li>
           );

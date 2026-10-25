@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { type Item, categoryOf } from "@/lib/classifieds";
 import { formatAgo, formatPrice } from "@/lib/format";
+import { CategoryIcon } from "./CategoryIcon";
 import { Place } from "./Place";
 
 const SECTION_PATH = { technika: "/technika/", moto: "/moto/", dily: "/dily/", pneu: "/pneumatiky/" } as const;
@@ -9,16 +10,15 @@ export function itemHref(item: Item) {
   return `${SECTION_PATH[item.section]}${item.id}/`;
 }
 
-/** Placeholder picture: the category icon on a tinted tile (the prototype has no photos). */
+/** Placeholder picture: the category pictogram on a tinted tile (the prototype has no photos). */
 export function ItemImage({ item, className = "" }: { item: Item; className?: string }) {
-  const icon = categoryOf(item.section, item.category)?.icon ?? "📦";
   return (
     <div
       className={`grid place-items-center bg-[var(--color-photo)] bg-[radial-gradient(circle_at_50%_45%,var(--color-brand-soft)_0%,transparent_62%)] ${className}`}
       role="img"
       aria-label={`Ilustrace: ${categoryOf(item.section, item.category)?.label}`}
     >
-      <span className="text-5xl drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]" aria-hidden="true">{icon}</span>
+      <CategoryIcon slug={item.category} className="w-[62%] max-w-56 text-[var(--color-ink)]" />
     </div>
   );
 }

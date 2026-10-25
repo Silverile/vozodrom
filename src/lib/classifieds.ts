@@ -14,7 +14,6 @@ export type Season = "letní" | "zimní" | "celoroční";
 export interface Category {
   slug: string;
   label: string;
-  icon: string;
 }
 
 export interface Tyre {
@@ -51,32 +50,32 @@ export interface Item {
 
 export const CATEGORIES: Record<ItemSection, Category[]> = {
   technika: [
-    { slug: "dodavky", label: "Dodávky", icon: "🚐" },
-    { slug: "nakladni", label: "Nákladní auta", icon: "🚚" },
-    { slug: "tahace", label: "Tahače", icon: "🚛" },
-    { slug: "autobusy", label: "Autobusy", icon: "🚌" },
-    { slug: "zemedelska", label: "Traktory a zemědělská", icon: "🚜" },
-    { slug: "stavebni", label: "Stavební stroje", icon: "🏗️" },
-    { slug: "privesy", label: "Přívěsy a návěsy", icon: "🛻" },
+    { slug: "dodavky", label: "Dodávky" },
+    { slug: "nakladni", label: "Nákladní auta" },
+    { slug: "tahace", label: "Tahače" },
+    { slug: "autobusy", label: "Autobusy" },
+    { slug: "zemedelska", label: "Traktory a zemědělská" },
+    { slug: "stavebni", label: "Stavební stroje" },
+    { slug: "privesy", label: "Přívěsy a návěsy" },
   ],
   moto: [
-    { slug: "motocykly", label: "Motocykly", icon: "🏍️" },
-    { slug: "skutry", label: "Skútry a mopedy", icon: "🛵" },
-    { slug: "ctyrkolky", label: "Čtyřkolky", icon: "🏁" },
-    { slug: "vybava", label: "Výbava a oblečení", icon: "🪖" },
+    { slug: "motocykly", label: "Motocykly" },
+    { slug: "skutry", label: "Skútry a mopedy" },
+    { slug: "ctyrkolky", label: "Čtyřkolky" },
+    { slug: "vybava", label: "Výbava a oblečení" },
   ],
   dily: [
-    { slug: "motor", label: "Motor a převodovka", icon: "⚙️" },
-    { slug: "podvozek", label: "Podvozek a brzdy", icon: "🛠️" },
-    { slug: "karoserie", label: "Karoserie", icon: "🚪" },
-    { slug: "elektro", label: "Elektro a osvětlení", icon: "💡" },
-    { slug: "interier", label: "Interiér", icon: "💺" },
-    { slug: "kola", label: "Disky a kola", icon: "🛞" },
+    { slug: "motor", label: "Motor a převodovka" },
+    { slug: "podvozek", label: "Podvozek a brzdy" },
+    { slug: "karoserie", label: "Karoserie" },
+    { slug: "elektro", label: "Elektro a osvětlení" },
+    { slug: "interier", label: "Interiér" },
+    { slug: "kola", label: "Disky a kola" },
   ],
   pneu: [
-    { slug: "letni", label: "Letní", icon: "☀️" },
-    { slug: "zimni", label: "Zimní", icon: "❄️" },
-    { slug: "celorocni", label: "Celoroční", icon: "🌦️" },
+    { slug: "letni", label: "Letní" },
+    { slug: "zimni", label: "Zimní" },
+    { slug: "celorocni", label: "Celoroční" },
   ],
 };
 

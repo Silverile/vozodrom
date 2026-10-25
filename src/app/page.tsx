@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { ListingCard } from "@/components/ListingCard";
 import { REGIONS, brands, models } from "@/lib/catalog";
 import { formatNumber } from "@/lib/format";
@@ -18,7 +19,7 @@ const QUICK = [
   { label: "Do 200 000 Kč", query: "cenaDo=200000" },
 ];
 
-const SECTION_ICON = { technika: "🚛", moto: "🏍️", dily: "⚙️", pneu: "🛞" } as const;
+const SECTION_ICON = { technika: "tahace", moto: "motocykly", dily: "motor", pneu: "letni" } as const;
 const OTHER_SECTIONS = SECTIONS.filter((s) => s.group === "market" && s.key !== "auto").map((s) => {
   const key = s.key as keyof typeof SECTION_ICON;
   return { href: s.href, label: s.label, icon: SECTION_ICON[key], count: itemsOf(key).length };
@@ -55,7 +56,7 @@ export default function HomePage() {
           <nav aria-label="Další sekce" className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 max-w-3xl">
             {OTHER_SECTIONS.map((s) => (
               <Link key={s.href} href={s.href} className="card px-3 py-2.5 flex items-center gap-2.5 text-sm hover:border-[var(--color-brand)]">
-                <span className="text-2xl" aria-hidden="true">{s.icon}</span>
+                <CategoryIcon slug={s.icon} className="w-10 shrink-0 text-[var(--color-ink)]" />
                 <span>
                   <span className="block font-semibold leading-tight">{s.label}</span>
                   <span className="block text-xs text-[var(--color-muted)]">{s.count} inzerátů</span>
