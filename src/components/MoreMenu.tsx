@@ -7,8 +7,7 @@ import { ThemeSwitch } from "./Theme";
 
 // "Další" dropdown, like Drom's "Ещё": tools and pages that do not fit the main nav.
 
-const ITEMS: { href: string; label: string; note?: string; mobileOnly?: boolean }[] = [
-  { href: "/katalog/", label: "Katalog modelů", mobileOnly: true },
+const ITEMS: { href: string; label: string; note?: string }[] = [
   { href: "/kupni-smlouva/", label: "Kupní smlouva na auto", note: "vyplnit a vytisknout" },
   { href: "/prepis-vozidla/", label: "Přepis vozidla", note: "postup, doklady, poplatky" },
   { href: "/ucet/", label: "Můj účet", note: "náhled" },
@@ -51,7 +50,7 @@ export function MoreMenu() {
         <div id="more-menu" className="card absolute left-4 right-4 top-full mt-1 sm:left-auto sm:right-0 sm:mt-2 sm:w-72 p-2 shadow-2xl z-30">
           <ul>
             {ITEMS.map((item) => (
-              <li key={item.href} className={item.mobileOnly ? "sm:hidden" : undefined}>
+              <li key={item.href}>
                 <Link href={item.href} className="block rounded-lg px-3 py-2 hover:bg-[var(--color-field)]">
                   <span className="block text-sm font-medium">{item.label}</span>
                   {item.note && <span className="block text-xs text-[var(--color-muted)]">{item.note}</span>}

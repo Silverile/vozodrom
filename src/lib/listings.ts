@@ -10,7 +10,7 @@ import type { Listing, StkRecord, Transmission } from "./types";
 const LISTINGS_PER_MODEL = 7;
 const CURRENT_YEAR = 2026;
 
-function mulberry32(seed: number) {
+export function mulberry32(seed: number) {
   let a = seed;
   return () => {
     a |= 0;
