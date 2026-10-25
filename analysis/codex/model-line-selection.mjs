@@ -1,5 +1,6 @@
 // Manually selected European-market lines. h hatchback, k estate, s saloon,
 import {batchOrder,batchSelection,batchAdditionalPages,batchAliases} from './model-line-batch-1.mjs';
+import {batch2Order,batch2Selection,batch2AdditionalPages,batch2Aliases} from './model-line-batch-2.mjs';
 // u SUV/crossover, m MPV, c coupe, r convertible, p pickup, v van.
 // Each row: Czech display name | Wikipedia article | body codes | optional fixed slug.
 export const order=['skoda','volkswagen','hyundai','kia','toyota','ford','dacia','bmw','tesla','renault','audi','mercedes-benz','peugeot','citroen','opel','fiat','seat','cupra','mini','volvo'];
@@ -601,3 +602,9 @@ order.push(...batchOrder);
 Object.assign(selection,batchSelection);
 Object.assign(additionalPages,batchAdditionalPages);
 Object.assign(aliases,batchAliases);
+// Consolidate one European family before extending this batch.
+batch2Selection.chevrolet=batch2Selection.chevrolet.split('\n').filter(r=>!r.startsWith('Tacuma|')).join('\n');
+order.push(...batch2Order);
+Object.assign(selection,batch2Selection);
+Object.assign(additionalPages,batch2AdditionalPages);
+Object.assign(aliases,batch2Aliases);

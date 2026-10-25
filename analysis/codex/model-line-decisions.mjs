@@ -1,5 +1,6 @@
 // These choices were made after inspecting the retrieved factual infobox values.
 import {batchExclusions,batchDateChoices,batchUnknownDates,batchGenerationFamilies,batchGenerationDateChoices} from './model-line-batch-1.mjs';
+import {batch2Exclusions,batch2DateChoices,batch2UnknownDates,batch2GenerationFamilies,batch2GenerationDateChoices,batch2ExactGenerationCodes} from './model-line-batch-2.mjs';
 // A shared-platform article never supplies the whole range of a rebadged line by default.
 export const dateChoices={
  'skoda/favorit':{combine:true},'skoda/felicia':{combine:true},'skoda/rapid':{ranges:[0],scope:'europe'},
@@ -110,3 +111,9 @@ Object.assign(dateChoices,batchDateChoices);
 for(const key of batchUnknownDates)forceUnknownDates.add(key);
 for(const key of batchGenerationFamilies)generationFamilies.add(key);
 Object.assign(generationDateChoices,batchGenerationDateChoices);
+Object.assign(manualExclusions,batch2Exclusions);
+Object.assign(dateChoices,batch2DateChoices);
+for(const key of batch2UnknownDates)forceUnknownDates.add(key);
+for(const key of batch2GenerationFamilies)generationFamilies.add(key);
+Object.assign(generationDateChoices,batch2GenerationDateChoices);
+Object.assign(exactGenerationCodes,batch2ExactGenerationCodes);

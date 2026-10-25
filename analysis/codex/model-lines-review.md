@@ -1,8 +1,8 @@
-# Curated car model lines — 25 makes
+# Curated car model lines — 30 makes
 
-Delivered **644 manually selected model-line entries across 25 makes**, with **354 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **Mitsubishi**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
+Delivered **746 manually selected model-line entries across 30 makes**, with **433 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **Daewoo**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
 
-**This is not complete factual enrichment of all 25 makes.** 143 lines retain unresolved production intervals, 44 have bodyTypes=null, 537 have generations=null, and 44 have no unique line-level Wikidata match. There are 1615 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. The remaining 15 makes were not processed. Batch 1 adds Saab, Honda, Mazda, Nissan and Mitsubishi; the original 520 entries are preserved exactly against SHA-256 baselines.
+**This is not complete factual enrichment of all 30 makes.** 199 lines retain unresolved production intervals, 47 have bodyTypes=null, 612 have generations=null, and 54 have no unique line-level Wikidata match. There are 2081 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. The remaining 10 makes were not processed. Batch 1 added Saab, Honda, Mazda, Nissan and Mitsubishi. Batch 2 adds Subaru, Suzuki, Lexus, Chevrolet and Daewoo; all 644 prior entries are preserved exactly against SHA-256 baselines.
 
 | Make | Slug | Lines | Known start | Known body set | Generation entries | Lines needing review |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -31,6 +31,11 @@ Delivered **644 manually selected model-line entries across 25 makes**, with **3
 | Mazda | mazda | 31 | 24 | 31 | 18 | 31 |
 | Nissan | nissan | 43 | 16 | 38 | 18 | 43 |
 | Mitsubishi | mitsubishi | 22 | 15 | 22 | 12 | 22 |
+| Subaru | subaru | 19 | 9 | 18 | 26 | 19 |
+| Suzuki | suzuki | 21 | 8 | 19 | 8 | 21 |
+| Lexus | lexus | 17 | 12 | 17 | 29 | 17 |
+| Chevrolet | chevrolet | 31 | 14 | 31 | 16 | 31 |
+| Daewoo | daewoo | 14 | 3 | 14 | 0 | 14 |
 
 ## Scope and grouping rules
 
@@ -59,6 +64,14 @@ Trims, powertrain labels, facelifts and body/length derivatives are merged into 
 - [Škoda Auto: skoda-production-2024](https://reporting.skoda-auto.com/archive/2024/production) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [Škoda Auto: skoda-epiq-2026](https://www.skoda-auto.cz/novinky/novinky-detail/2026-10-06-skoda-epiq-prichazi-na-cesky-trh-za-doporucene-prodejni-ceny-od-619-000-kc) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [BMW Group: bmw-3-production-2025](https://www.press.bmwgroup.com/global/article/detail/T0454448EN/50-years-of-bmw-3-series-production-%20-an-international-success-story) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Subaru Europe: subaru-crosstrek-europe-2023](https://www.subaru.eu/media/subaru-launches-all-new-crosstrek-in-europe) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Subaru Europe: subaru-bev-europe-2025](https://www.subaru.eu/media/subaru-confirms-new-electric-range-for-europe) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Suzuki Motor Corporation: suzuki-toyota-supply-2021](https://www.globalsuzuki.com/ir/library/annualreport/pdf/2021/2021.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Suzuki Motor Corporation: suzuki-e-vitara-report-2025](https://www.globalsuzuki.com/ir/library/annualreport/pdf/2025/2025.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Suzuki Motor Corporation: suzuki-europe-results-2026](https://www.globalsuzuki.com/ir/library/financialresults/pdf/2025/financial_presentation_s.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Lexus UK: lexus-lbx-europe-2023](https://media.lexus.co.uk/world-premiere-of-the-all-new-lexus-lbx/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Lexus UK: lexus-lm-europe](https://media.lexus.co.uk/vehicles/lm-2023-current/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Lexus Europe: lexus-europe-million-2020](https://newsroom.lexus.eu/lexus-records-one-million-sales-in-europe/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 
 Octavia III uses **2012–2020** from Škoda’s 2026 history instead of the retrieved Wikipedia field ending in 2019. BMW’s manufacturing history corroborates production starts earlier than familiar launch years (for example E46 in 1997 versus its 1998 market introduction). Its global sixth-generation range is not substituted for an unresolved European body/market end date. Epiq is included after checking Škoda’s October 2026 Czech-market announcement. These targeted checks do not independently certify all remaining Wikipedia facts.
 
@@ -87,9 +100,22 @@ The five added makes contain Saab 5, Honda 23, Mazda 31, Nissan 43 and Mitsubish
 
 The generation arrays are sorted by known production start within the added batch; null dates do not imply a complete chronological sequence. Every outstanding field-level review item is listed by make below.
 
+## Batch 2 review
+
+Added Subaru 19, Suzuki 21, Lexus 17, Chevrolet 31 and Daewoo 14 lines. All 644 prior line objects remain unchanged. Chevrolet is a lean European/global-import selection, not a complete North-American truck catalogue.
+
+- Chevrolet Kalos/Sonic, Matiz and Nubira are merged as aliases of Aveo, Spark and Lacetti respectively; Tacuma is merged into Rezzo. Daewoo-badge lines remain separate by make. SS/Z06/ZR1/engine grades and special truck derivatives are not separate lines.
+- Subaru XV is retained as a Crosstrek alias, with the manufacturer-confirmed rename. The 2011 European XV launch differs from retained global production fields starting in 2012; exact line chronology stays unresolved. Uncharted and E-Outback are acknowledged European programmes with planned 2026 launches; production dates are not inferred from announcements.
+- Suzuki Across and Swace identities are manufacturer-confirmed Toyota supply programmes. Donor RAV4/Corolla production dates do not establish Suzuki badge dates. The e Vitara is separately included following checked manufacturer production/European launch evidence. Suzuki confirms European Jimny/Ignis sales discontinuation; a global current flag is not local availability.
+- Lexus GX/LX are retained as global/import lines, corroborated in Lexus eastern-European reporting; current Czech official sale is not asserted. LM and LBX European identities have manufacturer sources. ES generation review omits early non-European generations. RX starts in 1998 from explicit Lexus-badge production, not the parent Toyota Harrier start in 1997.
+- Lexus GS chronology remains null because the extracted source fields contain unexpanded snd separators. Its sourced generation codes are retained without guessing date ranges.
+- Daewoo badge phases are not assigned extended Chevrolet/Uzbek/licence-built successor dates. Lanos and Leganza retain explicitly selected Daewoo/European source windows; Musso/Korando/Lublin exact Daewoo phases remain unresolved. Polonez is deferred because Daewoo corporate ownership alone does not establish a unique Daewoo model identity.
+
+All null fields and scope/generation limitations are listed in the per-make tables below. Selected manufacturer checks corroborate particular facts; they do not certify the entire dataset.
+
 ## Where this turn stops
 
-Next: **Subaru**. Remaining queue: subaru, suzuki, lexus, chevrolet, daewoo, daihatsu, ssangyong-kgm, land-rover, jaguar, porsche, jeep, alfa-romeo, lancia, smart, mg. Metadata reconciliation for the delivered 25, especially shared vans, Citroën/DS phases, reused BMW i3/iX3/Volvo names and region-specific generation boundaries, remains explicitly outstanding. Late-2026 programmes without checked production evidence were not silently added.
+Next: **Daihatsu**. Remaining queue: daihatsu, ssangyong-kgm, land-rover, jaguar, porsche, jeep, alfa-romeo, lancia, smart, mg. Metadata reconciliation for the delivered 30, especially shared vans, Citroën/DS phases, reused BMW i3/iX3/Volvo names and region-specific generation boundaries, remains explicitly outstanding. Late-2026 programmes without checked production evidence were not silently added.
 
 ## Škoda (skoda) — 16 lines
 
@@ -2160,5 +2186,575 @@ Coverage: this is an editorial European-market selection, not a certified comple
 | Space Wagon (space-wagon) | generations[1].from | Production dates are absent or contain unresolved region/body-specific ranges. |
 | Space Wagon (space-wagon) | generations[1].to | End/current status unresolved; null does not assert current production. |
 | Space Wagon (space-wagon) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+
+Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Subaru (subaru) — 19 lines
+
+BRZ, Crosstrek, E-Outback, Forester, Impreza, Justy, Legacy, Leone, Levorg, Libero, Outback, Rex, Solterra, SVX, Trezia, Tribeca, Uncharted, Vivio, WRX.
+
+### Excluded, merged or deferred
+
+- **STI / Spec B / turbo / special editions** — merged: performance/equipment derivatives merged into base lines; standalone WRX retained.
+- **XV** — merged: rename retained as Crosstrek alias.
+- **Baja / Ascent / Exiga / Sambar / Pleo / R1 / R2 / Stella** — excluded: regional-market programmes outside this European/common-import selection.
+- **Rex modern SUV** — excluded: regional name reuse not conflated with the historic European hatchback.
+- **Performance-B STI concepts** — excluded: concept vehicles.
+- **Uncharted / E-Outback production chronology** — deferred: European programmes included following manufacturer announcement; exact badge production dates remain deferred.
+
+### Every outstanding needsReview item
+
+| Line | Field | Reason |
+| --- | --- | --- |
+| BRZ (brz) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| BRZ (brz) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| BRZ (brz) | from | No single defensible production interval for the selected line in the retained facts. |
+| BRZ (brz) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| BRZ (brz) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| BRZ (brz) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Crosstrek (crosstrek) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Crosstrek (crosstrek) | from | No single defensible production interval for the selected line in the retained facts. |
+| Crosstrek (crosstrek) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Crosstrek (crosstrek) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Crosstrek (crosstrek) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Crosstrek (crosstrek) | from,to | Subaru Europe dates the original XV launch to 2011, while retained global production fields begin in 2012. Production, launch and rename phases require reconciliation. |
+| Crosstrek (crosstrek) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| Crosstrek (crosstrek) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| Crosstrek (crosstrek) | generations[2].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Crosstrek (crosstrek) | generations[2].to | End/current status unresolved; null does not assert current production. |
+| Crosstrek (crosstrek) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| E-Outback (e-outback) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| E-Outback (e-outback) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| E-Outback (e-outback) | from | No single defensible production interval for the selected line in the retained facts. |
+| E-Outback (e-outback) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| E-Outback (e-outback) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| E-Outback (e-outback) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| E-Outback (e-outback) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| E-Outback (e-outback) | scope | European E-Outback and global Trailseeker names share a programme. Planned Q1 2026 European launch is not used as a production date. |
+| Forester (forester) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Forester (forester) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Forester (forester) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| Forester (forester) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| Forester (forester) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| Forester (forester) | generations[3].bodyTypes | No explicit generation-specific body mapping. |
+| Forester (forester) | generations[4].bodyTypes | No explicit generation-specific body mapping. |
+| Forester (forester) | generations[5].bodyTypes | No explicit generation-specific body mapping. |
+| Impreza (impreza) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Impreza (impreza) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Justy (justy) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Justy (justy) | from | No single defensible production interval for the selected line in the retained facts. |
+| Justy (justy) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Justy (justy) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Justy (justy) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Legacy (legacy) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Legacy (legacy) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Leone (leone) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Leone (leone) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Levorg (levorg) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Levorg (levorg) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Libero (libero) | bodyTypes | European editorial body selection needs model-specific corroboration; generic/shared source body facts do not confirm every selected style. |
+| Libero (libero) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Libero (libero) | from | No single defensible production interval for the selected line in the retained facts. |
+| Libero (libero) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Libero (libero) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Libero (libero) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Outback (outback) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Outback (outback) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Outback (outback) | generations | The source-current model line has no reviewed current generation; the sequence is incomplete. |
+| Rex (rex) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Rex (rex) | from | No single defensible production interval for the selected line in the retained facts. |
+| Rex (rex) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Rex (rex) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Rex (rex) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Solterra (solterra) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Solterra (solterra) | from | No single defensible production interval for the selected line in the retained facts. |
+| Solterra (solterra) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Solterra (solterra) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Solterra (solterra) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| SVX (svx) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| SVX (svx) | from | No single defensible production interval for the selected line in the retained facts. |
+| SVX (svx) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| SVX (svx) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| SVX (svx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Trezia (trezia) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Trezia (trezia) | from | No single defensible production interval for the selected line in the retained facts. |
+| Trezia (trezia) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Trezia (trezia) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Trezia (trezia) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Tribeca (tribeca) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Tribeca (tribeca) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Uncharted (uncharted) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Uncharted (uncharted) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Uncharted (uncharted) | from | No single defensible production interval for the selected line in the retained facts. |
+| Uncharted (uncharted) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Uncharted (uncharted) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Uncharted (uncharted) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Uncharted (uncharted) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Uncharted (uncharted) | scope | Manufacturer announcement establishes a European programme with planned Q1 2026 sales; exact Subaru-badge production/current local availability is unresolved. |
+| Vivio (vivio) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Vivio (vivio) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| WRX (wrx) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| WRX (wrx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+
+Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Suzuki (suzuki) — 21 lines
+
+Across, Alto, Baleno, Cappuccino, Carry, Celerio, e Vitara, Grand Vitara, Ignis, Jimny, Kizashi, Liana, S-Cross, Samurai, Splash, Swace, Swift, SX4, Vitara, Wagon R+, X-90.
+
+### Excluded, merged or deferred
+
+- **Sport / GTi / Boosterjet / AllGrip** — excluded: performance, engine or drive variants.
+- **SJ410 / SJ413 / Santana** — excluded: Samurai-related codes/manufacturing variants retained under Samurai, not extra lines.
+- **Maruti / Indian Dzire / Ertiga / XL6 / Fronx / Invicto / Jimny 5-door** — excluded: regional badges/body programmes not silently promoted into the European line list.
+- **Vitara Brezza / Grand Vitara 2022 India** — excluded: regional programmes outside this European-name selection; e Vitara is independently included as a distinct BEV.
+- **Twin / Lapin / Hustler / Spacia / Every** — excluded: regional kei programmes.
+- **Cervo / Cara** — excluded: regional low-volume programmes outside this pass.
+
+### Every outstanding needsReview item
+
+| Line | Field | Reason |
+| --- | --- | --- |
+| Across (across) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Across (across) | from | No single defensible production interval for the selected line in the retained facts. |
+| Across (across) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Across (across) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Across (across) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Alto (alto) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Alto (alto) | from | No single defensible production interval for the selected line in the retained facts. |
+| Alto (alto) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Alto (alto) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Alto (alto) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Baleno (baleno) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Baleno (baleno) | from | No single defensible production interval for the selected line in the retained facts. |
+| Baleno (baleno) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Baleno (baleno) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Baleno (baleno) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Cappuccino (cappuccino) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Cappuccino (cappuccino) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Carry (carry) | bodyTypes | European editorial body selection needs model-specific corroboration; generic/shared source body facts do not confirm every selected style. |
+| Carry (carry) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Carry (carry) | from | No single defensible production interval for the selected line in the retained facts. |
+| Carry (carry) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Carry (carry) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Carry (carry) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Celerio (celerio) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Celerio (celerio) | from | No single defensible production interval for the selected line in the retained facts. |
+| Celerio (celerio) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Celerio (celerio) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Celerio (celerio) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| e Vitara (e-vitara) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| e Vitara (e-vitara) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Grand Vitara (grand-vitara) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Grand Vitara (grand-vitara) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Grand Vitara (grand-vitara) | from | No single defensible production interval for the selected line in the retained facts. |
+| Grand Vitara (grand-vitara) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Grand Vitara (grand-vitara) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Grand Vitara (grand-vitara) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Grand Vitara (grand-vitara) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Ignis (ignis) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Ignis (ignis) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Ignis (ignis) | scope | Suzuki 2026 European results report discontinued European sales; retained global production bounds are separate. |
+| Jimny (jimny) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Jimny (jimny) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Jimny (jimny) | scope | Suzuki 2026 European results report discontinued European sales. Global continuing production does not indicate current Czech official availability. |
+| Jimny (jimny) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Jimny (jimny) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Kizashi (kizashi) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Kizashi (kizashi) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Liana (liana) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Liana (liana) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| S-Cross (s-cross) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| S-Cross (s-cross) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| S-Cross (s-cross) | from | No single defensible production interval for the selected line in the retained facts. |
+| S-Cross (s-cross) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| S-Cross (s-cross) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| S-Cross (s-cross) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Samurai (samurai) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Samurai (samurai) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Samurai (samurai) | from | No single defensible production interval for the selected line in the retained facts. |
+| Samurai (samurai) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Samurai (samurai) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Samurai (samurai) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Splash (splash) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Splash (splash) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Swace (swace) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Swace (swace) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Swace (swace) | from | No single defensible production interval for the selected line in the retained facts. |
+| Swace (swace) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Swace (swace) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Swace (swace) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Swift (swift) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Swift (swift) | from | No single defensible production interval for the selected line in the retained facts. |
+| Swift (swift) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Swift (swift) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Swift (swift) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Swift (swift) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| Swift (swift) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| Swift (swift) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| Swift (swift) | generations[3].bodyTypes | No explicit generation-specific body mapping. |
+| SX4 (sx4) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| SX4 (sx4) | from | No single defensible production interval for the selected line in the retained facts. |
+| SX4 (sx4) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| SX4 (sx4) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| SX4 (sx4) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Vitara (vitara) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Vitara (vitara) | from | No single defensible production interval for the selected line in the retained facts. |
+| Vitara (vitara) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Vitara (vitara) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Vitara (vitara) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Wagon R+ (wagon-r) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Wagon R+ (wagon-r) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Wagon R+ (wagon-r) | from | No single defensible production interval for the selected line in the retained facts. |
+| Wagon R+ (wagon-r) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Wagon R+ (wagon-r) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Wagon R+ (wagon-r) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Wagon R+ (wagon-r) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| X-90 (x-90) | bodyTypes | European editorial body selection needs model-specific corroboration; generic/shared source body facts do not confirm every selected style. |
+| X-90 (x-90) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| X-90 (x-90) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+
+Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Lexus (lexus) — 17 lines
+
+CT, ES, GS, GX, IS, LBX, LC, LFA, LM, LS, LX, NX, RC, RX, RZ, SC, UX.
+
+### Excluded, merged or deferred
+
+- **F / F Sport / hybrid powertrain suffixes** — merged: performance, equipment or engine derivatives merged into their parent lines.
+- **HS / TX** — excluded: regional programmes outside this European/common-import selection.
+- **GX / LX** — excluded: retained as common import/global SUV lines; current Czech official availability not asserted.
+- **LF / UX concept / Electrified Sport concepts** — excluded: concept vehicles.
+- **IS SportCross / RX L** — merged: body/length derivatives under IS/RX.
+
+### Every outstanding needsReview item
+
+| Line | Field | Reason |
+| --- | --- | --- |
+| CT (ct) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| CT (ct) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| ES (es) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| ES (es) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| GS (gs) | from | No single defensible production interval for the selected line in the retained facts. |
+| GS (gs) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| GS (gs) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| GS (gs) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| GS (gs) | from,to | Retained production fields contain an unexpanded snd separator from source-template extraction; chronology stays null pending source/parser reconciliation. |
+| GS (gs) | generations[0].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| GS (gs) | generations[0].to | End/current status unresolved; null does not assert current production. |
+| GS (gs) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| GS (gs) | generations[1].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| GS (gs) | generations[1].to | End/current status unresolved; null does not assert current production. |
+| GS (gs) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| GS (gs) | generations[2].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| GS (gs) | generations[2].to | End/current status unresolved; null does not assert current production. |
+| GS (gs) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| GS (gs) | generations[3].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| GS (gs) | generations[3].to | End/current status unresolved; null does not assert current production. |
+| GS (gs) | generations[3].bodyTypes | No explicit generation-specific body mapping. |
+| GX (gx) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| GX (gx) | from | No single defensible production interval for the selected line in the retained facts. |
+| GX (gx) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| GX (gx) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| GX (gx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| IS (is) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| IS (is) | from | No single defensible production interval for the selected line in the retained facts. |
+| IS (is) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| IS (is) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| IS (is) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| LBX (lbx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| LBX (lbx) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| LC (lc) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| LC (lc) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| LFA (lfa) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| LFA (lfa) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| LM (lm) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| LM (lm) | from | No single defensible production interval for the selected line in the retained facts. |
+| LM (lm) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| LM (lm) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| LM (lm) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| LS (ls) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| LS (ls) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| LS (ls) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| LS (ls) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| LS (ls) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| LS (ls) | generations[3].bodyTypes | No explicit generation-specific body mapping. |
+| LS (ls) | generations[4].bodyTypes | No explicit generation-specific body mapping. |
+| LX (lx) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| LX (lx) | from | No single defensible production interval for the selected line in the retained facts. |
+| LX (lx) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| LX (lx) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| LX (lx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| NX (nx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| NX (nx) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| NX (nx) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| NX (nx) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| RC (rc) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| RC (rc) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| RX (rx) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| RX (rx) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| RX (rx) | from | 1998 is the explicit Lexus RX first-generation production start; the parent 1997 start includes Toyota Harrier and is not substituted. |
+| RX (rx) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
+| RX (rx) | generations[1].bodyTypes | No explicit generation-specific body mapping. |
+| RX (rx) | generations[2].bodyTypes | No explicit generation-specific body mapping. |
+| RX (rx) | generations[4].bodyTypes | No explicit generation-specific body mapping. |
+| RZ (rz) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| RZ (rz) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| SC (sc) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| SC (sc) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| UX (ux) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| UX (ux) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+
+Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Chevrolet (chevrolet) — 31 lines
+
+Alero, Astro, Avalanche, Aveo, Blazer, Bolt, Camaro, Captiva, Colorado, Corvette, Cruze, Epica, Equinox, Evanda, Express, HHR, Lacetti, Lumina, Malibu, Orlando, Rezzo, S-10, Silverado, Spark, Suburban, Tahoe, Tracker, TrailBlazer, Trans Sport, Trax, Volt.
+
+### Excluded, merged or deferred
+
+- **SS / ZL1 / Z06 / ZR1 / LT / RS / engine suffixes** — merged: performance/equipment derivatives merged into parent lines.
+- **GMC / Cadillac / Buick / Opel / Holden badges** — excluded: separate makes, not extra Chevrolet lines.
+- **Sonic / Kalos** — merged: alternate names merged into Aveo.
+- **Matiz / Nubira** — merged: Chevrolet badge phases merged as Spark/Lacetti aliases; Daewoo lines remain separate by make.
+- **Rezzo / Tacuma** — excluded: same European model family; consolidated under Rezzo with Tacuma alias.
+- **Bolt EUV** — merged: body derivative under Bolt; exact body/generation chronology remains reviewable.
+- **Silverado HD / Silverado EV / Suburban special lengths** — merged: truck derivatives; kept lean under parent family.
+- **Traverse / Impala / Monte Carlo / Cavalier / Cobalt / Caprice / City Express / N-series** — excluded: regional/import or historical ranges omitted from this lean European/common-import pass; not a complete global inventory.
+- **Onix / Sail / Spin / Montana / Agile / Celta / Corsa / Niva** — excluded: regional programmes outside this pass.
+- **Chevrolet concept cars** — excluded: concepts.
+
+### Every outstanding needsReview item
+
+| Line | Field | Reason |
+| --- | --- | --- |
+| Alero (alero) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Alero (alero) | from | No single defensible production interval for the selected line in the retained facts. |
+| Alero (alero) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Alero (alero) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Alero (alero) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Astro (astro) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Astro (astro) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Avalanche (avalanche) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Avalanche (avalanche) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Aveo (aveo) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Aveo (aveo) | from | No single defensible production interval for the selected line in the retained facts. |
+| Aveo (aveo) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Aveo (aveo) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Aveo (aveo) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Blazer (blazer) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Blazer (blazer) | from | No single defensible production interval for the selected line in the retained facts. |
+| Blazer (blazer) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Blazer (blazer) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Blazer (blazer) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Blazer (blazer) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Bolt (bolt) | from | No single defensible production interval for the selected line in the retained facts. |
+| Bolt (bolt) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Bolt (bolt) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Bolt (bolt) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Camaro (camaro) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Camaro (camaro) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Camaro (camaro) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Camaro (camaro) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Camaro (camaro) | generations[2].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Camaro (camaro) | generations[2].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Camaro (camaro) | generations[2].to | End/current status unresolved; null does not assert current production. |
+| Captiva (captiva) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Captiva (captiva) | from | No single defensible production interval for the selected line in the retained facts. |
+| Captiva (captiva) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Captiva (captiva) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Captiva (captiva) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Colorado (colorado) | from | No single defensible production interval for the selected line in the retained facts. |
+| Colorado (colorado) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Colorado (colorado) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Colorado (colorado) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Corvette (corvette) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Corvette (corvette) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Corvette (corvette) | generations[1].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Corvette (corvette) | generations[1].to | End/current status unresolved; null does not assert current production. |
+| Corvette (corvette) | generations[2].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Corvette (corvette) | generations[2].to | End/current status unresolved; null does not assert current production. |
+| Corvette (corvette) | generations[3].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Corvette (corvette) | generations[3].to | End/current status unresolved; null does not assert current production. |
+| Corvette (corvette) | generations[4].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Corvette (corvette) | generations[4].to | End/current status unresolved; null does not assert current production. |
+| Cruze (cruze) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Cruze (cruze) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Cruze (cruze) | generations | Only the first Europe-relevant generation is reviewed; later global/Chinese successors are not asserted European. |
+| Epica (epica) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Epica (epica) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Equinox (equinox) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Equinox (equinox) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Evanda (evanda) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Evanda (evanda) | from | No single defensible production interval for the selected line in the retained facts. |
+| Evanda (evanda) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Evanda (evanda) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Evanda (evanda) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Express (express) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Express (express) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| HHR (hhr) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| HHR (hhr) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Lacetti (lacetti) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Lacetti (lacetti) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Lacetti (lacetti) | from | No single defensible production interval for the selected line in the retained facts. |
+| Lacetti (lacetti) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Lacetti (lacetti) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Lacetti (lacetti) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Lacetti (lacetti) | aliases | Chevrolet Nubira naming is consolidated into Lacetti; the older Daewoo Nubira line remains separate. |
+| Lumina (lumina) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Lumina (lumina) | from | No single defensible production interval for the selected line in the retained facts. |
+| Lumina (lumina) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Lumina (lumina) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Lumina (lumina) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Malibu (malibu) | from | No single defensible production interval for the selected line in the retained facts. |
+| Malibu (malibu) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Malibu (malibu) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Malibu (malibu) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Orlando (orlando) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Orlando (orlando) | from | No single defensible production interval for the selected line in the retained facts. |
+| Orlando (orlando) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Orlando (orlando) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Orlando (orlando) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Rezzo (rezzo) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Rezzo (rezzo) | from | No single defensible production interval for the selected line in the retained facts. |
+| Rezzo (rezzo) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Rezzo (rezzo) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Rezzo (rezzo) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| S-10 (s-10) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| S-10 (s-10) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Silverado (silverado) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Silverado (silverado) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Spark (spark) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Spark (spark) | from | No single defensible production interval for the selected line in the retained facts. |
+| Spark (spark) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Spark (spark) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Spark (spark) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Spark (spark) | aliases | Matiz is consolidated as a Chevrolet badge-phase alias; Daewoo Matiz remains a separate make entry. |
+| Suburban (suburban) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Suburban (suburban) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Tahoe (tahoe) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Tahoe (tahoe) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Tahoe (tahoe) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Tahoe (tahoe) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Tahoe (tahoe) | generations[2].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Tahoe (tahoe) | generations[3].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Tahoe (tahoe) | generations[4].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Tahoe (tahoe) | generations[4].from | Production dates are absent or contain unresolved region/body-specific ranges. |
+| Tahoe (tahoe) | generations[4].to | End/current status unresolved; null does not assert current production. |
+| Tracker (tracker) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Tracker (tracker) | from | No single defensible production interval for the selected line in the retained facts. |
+| Tracker (tracker) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Tracker (tracker) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Tracker (tracker) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Tracker (tracker) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| TrailBlazer (trailblazer) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| TrailBlazer (trailblazer) | from | No single defensible production interval for the selected line in the retained facts. |
+| TrailBlazer (trailblazer) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| TrailBlazer (trailblazer) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| TrailBlazer (trailblazer) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Trans Sport (trans-sport) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Trans Sport (trans-sport) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Trans Sport (trans-sport) | from | No single defensible production interval for the selected line in the retained facts. |
+| Trans Sport (trans-sport) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Trans Sport (trans-sport) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Trans Sport (trans-sport) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Trans Sport (trans-sport) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Trax (trax) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Trax (trax) | from | No single defensible production interval for the selected line in the retained facts. |
+| Trax (trax) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Trax (trax) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Trax (trax) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Volt (volt) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Volt (volt) | generations | Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation. |
+| Volt (volt) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Volt (volt) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+
+Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
+
+## Daewoo (daewoo) — 14 lines
+
+Espero, Evanda, Kalos, Korando, Lacetti, Lanos, Leganza, Lublin, Matiz, Musso, Nexia, Nubira, Tacuma, Tico.
+
+### Excluded, merged or deferred
+
+- **SX / CDX / SE / engine suffixes** — merged: equipment/engine derivatives.
+- **Chevrolet successor badge phases** — excluded: separate make; not treated as continuing Daewoo production.
+- **LeMans / Cielo / Magnus / Rezzo** — merged: regional names retained as Nexia/Evanda/Tacuma aliases.
+- **Musso / Korando** — excluded: short Daewoo badge phases retained with unresolved dates; SsangYong donor production is not inherited.
+- **Polonez** — deferred: deferred: Daewoo corporate ownership alone does not establish a unique Daewoo make/model identity; FSO badge needs review.
+- **Lublin** — excluded: Daewoo badge phase retained with unresolved chronology; later FSC/Intrall/DZT production not inherited.
+- **Damas / Labo / Prince / Super Salon / Chairman / Winstorm / Tosca / Gentra** — excluded: regional badge/production programmes outside this European selection.
+
+### Every outstanding needsReview item
+
+| Line | Field | Reason |
+| --- | --- | --- |
+| Espero (espero) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Espero (espero) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Evanda (evanda) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Evanda (evanda) | from | No single defensible production interval for the selected line in the retained facts. |
+| Evanda (evanda) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Evanda (evanda) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Evanda (evanda) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Kalos (kalos) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Kalos (kalos) | from | No single defensible production interval for the selected line in the retained facts. |
+| Kalos (kalos) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Kalos (kalos) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Kalos (kalos) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Korando (korando) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Korando (korando) | from | No single defensible production interval for the selected line in the retained facts. |
+| Korando (korando) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Korando (korando) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Korando (korando) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Lacetti (lacetti) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Lacetti (lacetti) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Lacetti (lacetti) | from | No single defensible production interval for the selected line in the retained facts. |
+| Lacetti (lacetti) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Lacetti (lacetti) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Lacetti (lacetti) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Lacetti (lacetti) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Lanos (lanos) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Lanos (lanos) | from | No single defensible production interval for the selected line in the retained facts. |
+| Lanos (lanos) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Lanos (lanos) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Lanos (lanos) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Leganza (leganza) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Leganza (leganza) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Lublin (lublin) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Lublin (lublin) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Lublin (lublin) | from | No single defensible production interval for the selected line in the retained facts. |
+| Lublin (lublin) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Lublin (lublin) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Lublin (lublin) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Lublin (lublin) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Matiz (matiz) | from,to | Source redirects to a parent/shared platform or another badge; production interval for this exact European name is not established. |
+| Matiz (matiz) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Matiz (matiz) | from | No single defensible production interval for the selected line in the retained facts. |
+| Matiz (matiz) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Matiz (matiz) | wikidataQid | No unique line-level match; a family/shared-platform QID is not substituted. |
+| Matiz (matiz) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Matiz (matiz) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Musso (musso) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Musso (musso) | from | No single defensible production interval for the selected line in the retained facts. |
+| Musso (musso) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Musso (musso) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Musso (musso) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Nexia (nexia) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Nexia (nexia) | from | No single defensible production interval for the selected line in the retained facts. |
+| Nexia (nexia) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Nexia (nexia) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Nexia (nexia) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Nubira (nubira) | from,to | Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates. |
+| Nubira (nubira) | from | No single defensible production interval for the selected line in the retained facts. |
+| Nubira (nubira) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Nubira (nubira) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Nubira (nubira) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Tacuma (tacuma) | from | No single defensible production interval for the selected line in the retained facts. |
+| Tacuma (tacuma) | to | End year/current production not established. Null here does not confirm ongoing production. |
+| Tacuma (tacuma) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Tacuma (tacuma) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
+| Tico (tico) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Tico (tico) | scope | European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability. |
 
 Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
