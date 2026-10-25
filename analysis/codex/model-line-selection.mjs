@@ -1,4 +1,5 @@
 // Manually selected European-market lines. h hatchback, k estate, s saloon,
+import {batchOrder,batchSelection,batchAdditionalPages,batchAliases} from './model-line-batch-1.mjs';
 // u SUV/crossover, m MPV, c coupe, r convertible, p pickup, v van.
 // Each row: Czech display name | Wikipedia article | body codes | optional fixed slug.
 export const order=['skoda','volkswagen','hyundai','kia','toyota','ford','dacia','bmw','tesla','renault','audi','mercedes-benz','peugeot','citroen','opel','fiat','seat','cupra','mini','volvo'];
@@ -596,3 +597,7 @@ export const aliases={
 };
 selection.renault=selection.renault.split('\n').filter(r=>!r.startsWith('18|')).join('\n');
 selection.skoda+='\nEpiq|Škoda Epiq|u';
+order.push(...batchOrder);
+Object.assign(selection,batchSelection);
+Object.assign(additionalPages,batchAdditionalPages);
+Object.assign(aliases,batchAliases);

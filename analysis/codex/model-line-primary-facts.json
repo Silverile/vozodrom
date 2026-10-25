@@ -3,6 +3,34 @@
   "scope": "Selected manufacturer facts only; no prose, images, prices or production-volume tables reproduced.",
   "sources": [
     {
+      "id": "nissan-cube-europe-2008",
+      "url": "https://europe.nissannews.com/en-GB/releases/nissan-cube-comes-to-europe",
+      "publisher": "Nissan Europe",
+      "publishedDate": "2008-11-19",
+      "facts": [{"line":"Cube","generationOrdinal":3,"market":"Europe","announcedOnSaleYear":2009,"note":"Launch timing does not establish production bounds."}]
+    },
+    {
+      "id": "mazda-6e-europe-2025",
+      "url": "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/",
+      "publisher": "Mazda UK",
+      "publishedDate": "2025-01-10",
+      "facts": [{"line":"6e","market":"Europe","bodyType":"hatchback","announcedOnSaleYear":2025,"note":"UK launch announced for 2026; on-sale dates are not production dates."}]
+    },
+    {
+      "id": "honda-prelude-europe-2025",
+      "url": "https://hondanews.eu/gb/en/cars/media/pressreleases/553584/honda-welcomes-back-iconic-prelude-nameplate-as-hybrid-sports-coupe-returns-to-europe-after-25-years",
+      "publisher": "Honda Europe",
+      "publishedDate": "2025-10-27",
+      "facts": [{"line":"Prelude","generationOrdinal":6,"market":"Europe","bodyType":"kupe","europeanArrivalYear":2025}]
+    },
+    {
+      "id": "mitsubishi-grandis-europe-2025",
+      "url": "https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2025/20250702_1.html?intcid3=FBen_20250702_b",
+      "publisher": "Mitsubishi Motors",
+      "publishedDate": "2025-07-02",
+      "facts": [{"line":"Grandis","market":"Europe","bodyType":"suv","announcedLaunchYear":2025,"productionPlant":"Renault Valladolid","note":"New SUV uses a historic MPV name; donor production dates are not inherited."},{"line":"Colt","market":"Europe","launchYear":2023},{"line":"ASX","market":"Europe","launchYear":2023}]
+    },
+    {
       "id": "skoda-octavia-2026",
       "url": "https://www.skoda-auto.cz/novinky/novinky-detail/2026-08-27-skoda-octavia-slavi-30-let-tri-dekady-ikonickeho-modelu",
       "publisher": "Škoda Auto",
@@ -31,6 +59,12 @@
     }
   ],
   "augment": [
+    {"key":"nissan/cube","sourceIds":["nissan-cube-europe-2008"]},
+    {"key":"mazda/6e","sourceIds":["mazda-6e-europe-2025"]},
+    {"key":"honda/prelude","sourceIds":["honda-prelude-europe-2025"]},
+    {"key":"mitsubishi/grandis","sourceIds":["mitsubishi-grandis-europe-2025"]},
+    {"key":"mitsubishi/colt","sourceIds":["mitsubishi-grandis-europe-2025"]},
+    {"key":"mitsubishi/asx","sourceIds":["mitsubishi-grandis-europe-2025"]},
     {"key": "skoda/octavia", "sourceIds": ["skoda-octavia-2026"]},
     {"key": "skoda/kodiaq", "sourceIds": ["skoda-production-2024"]},
     {"key": "skoda/superb", "sourceIds": ["skoda-production-2024"]},

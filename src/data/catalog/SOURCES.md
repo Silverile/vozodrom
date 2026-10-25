@@ -36,17 +36,21 @@ When a source model label explicitly starts with another selected make, a confli
 Run node analysis/codex/resolve.mjs, then node analysis/codex/build-catalog.mjs, then node analysis/codex/validate-catalog.mjs from the repository root. All read the saved snapshot; network is not required.
 
 <!-- model-lines-curation:start -->
-## Curated European model-line layer (first 20 makes)
+## Curated European model-line layer (25 makes)
 
-model-lines-auto.json is a separate manually selected layer containing 520 lines and 283 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI and Volvo. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
+model-lines-auto.json is a separate manually selected layer containing 644 lines and 354 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan and Mitsubishi. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
 
 Additional factual sources are individual **English Wikipedia model articles**, retrieved through https://en.wikipedia.org/w/api.php with exact revision IDs. Each model and generation lists permanent oldid source URLs. Full source URLs, request titles/timestamps and selected factual fields are in [model-line-evidence.json](../../../analysis/codex/model-line-evidence.json); manual grouping and all unresolved fields are in [model-lines-review.md](../../../analysis/codex/model-lines-review.md). No marketplace data, article prose, images or entire tables were reproduced. Wikipedia facts were not all independently confirmed with manufacturers. The earlier CC0 designation refers to Wikidata structured identities; it is not a blanket licence assertion for Wikipedia pages.
 
 Dates retain source production bounds, not inferred Czech on-sale years. **to=null indicates continuing production only if productionStatus=current**; unknown ends also remain null with needsReview. dateScope distinguishes explicit Europe intervals from general source production. Shared-platform and renamed-badge dates are not inherited automatically. productionPeriods can describe separated runs or body variants and do not imply continuity. All 25 demo model slugs are preserved, notably volkswagen/id4. Missing generations/codes/body sets are null and require review; a nonzero generation array is not proof of a complete European sequence.
 
-Offline validation: node analysis/codex/validate-model-lines.mjs. The first 20 makes' selection is delivered; the remaining 20 and unresolved factual enrichment are not complete.
+Offline validation: node analysis/codex/validate-model-lines.mjs. The 25 makes' selection is delivered; the remaining 15 and unresolved factual enrichment are not complete. Batch 1 adds 124 lines for Saab, Honda, Mazda, Nissan and Mitsubishi. The original 520 entries are checked unchanged by per-make SHA-256 baselines in model-lines-batch-1-baseline.json.
 Targeted manufacturer checks and factual corrections are recorded in [model-line-primary-facts.json](../../../analysis/codex/model-line-primary-facts.json):
 
+- [Nissan Europe: nissan-cube-europe-2008](https://europe.nissannews.com/en-GB/releases/nissan-cube-comes-to-europe)
+- [Mazda UK: mazda-6e-europe-2025](https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/)
+- [Honda Europe: honda-prelude-europe-2025](https://hondanews.eu/gb/en/cars/media/pressreleases/553584/honda-welcomes-back-iconic-prelude-nameplate-as-hybrid-sports-coupe-returns-to-europe-after-25-years)
+- [Mitsubishi Motors: mitsubishi-grandis-europe-2025](https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2025/20250702_1.html?intcid3=FBen_20250702_b)
 - [Škoda Auto: skoda-octavia-2026](https://www.skoda-auto.cz/novinky/novinky-detail/2026-08-27-skoda-octavia-slavi-30-let-tri-dekady-ikonickeho-modelu)
 - [Škoda Auto: skoda-production-2024](https://reporting.skoda-auto.com/archive/2024/production)
 - [Škoda Auto: skoda-epiq-2026](https://www.skoda-auto.cz/novinky/novinky-detail/2026-10-06-skoda-epiq-prichazi-na-cesky-trh-za-doporucene-prodejni-ceny-od-619-000-kc)

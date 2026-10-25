@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {batchOrder,batchGenerationSkip} from './model-line-batch-1.mjs';
 import {selection,order,additionalPages,aliases} from './model-line-selection.mjs';
 import {dateChoices,forceUnknownDates,generationFamilies,exactGenerationCodes,combinedNames,badgeSpecificSources,manualExclusions,generationDateChoices} from './model-line-decisions.mjs';
 const evidence=JSON.parse(fs.readFileSync('analysis/codex/model-line-evidence.json'));
@@ -61,9 +63,12 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  if(generationFamilies.has(key)){
   for(const p of ps){for(let index=0;index<p.infoboxes.length;index++){
    const b=p.infoboxes[index],label=[b.name,b.heading].filter(Boolean).join(' — ');
+   if(batchGenerationSkip[key]?.test(label))continue;
    const dedicated=/\bMk\d|\((?:E\d{2,3}|F\d{2,3}|G\d{2,3}|B\d|XP\d{2,3}|E\d{2,3})\)|\((?:first|second|third|fourth|fifth|sixth).*generation/i.test(p.title);
    const passat=key==='volkswagen/passat'&&/\bB[3-9]\b/.test(label);
-   if(!/generation|\bMk\s*[1-8IVX]+\b/i.test(label)&&!passat&&!(dedicated&&index===0))continue;
+   const batchDedicated=batchOrder.includes(makeSlug)&&/\((?:NA|NB|NC|ND|first generation|second generation|third generation|fourth generation|fifth generation|sixth generation)\)/i.test(p.title)&&index===0;
+   const saabClassic=key==='saab/900'&&index>0;
+   if(!/generation|\bMk\s*[1-8IVX]+\b/i.test(label)&&!passat&&!(dedicated&&index===0)&&!batchDedicated&&!saabClassic)continue;
    if(/North America|Latin America|China.only|India.only|fifth generation.*2022|eighth generation.*2027/i.test(label)&&['ford/focus','bmw/rada-3','ford/mondeo'].includes(key))continue;
    const articleCode=p.title.match(/\b(Mk[1-8])\b|\((E\d{2,3}|F\d{2,3}|G\d{2,3}|B\d|XP\d{2,3})\)/i);
    const headingCode=b.heading?.match(/\((?:Typ\s+)?([^;()]+);\s*(?:19|20)\d{2}/i)?.[1];
@@ -73,6 +78,8 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
    const ordinal=label.match(/\b(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth) generation\b/i)?.[1]?.toLowerCase();
    const roman={first:'I',second:'II',third:'III',fourth:'IV',fifth:'V',sixth:'VI',seventh:'VII',eighth:'VIII'}[ordinal];
    const dateCode=code;
+   if(batchOrder.includes(makeSlug)&&code&&/;|\(|China|Australia|\bBY\b|\bGZ\b|^;/.test(code))code=null;
+   if(batchDedicated&&/^Mazda MX-5/.test(p.title))code=p.title.match(/\((NA|NB|NC|ND)\)/)?.[1]||null;
    if(code&&roman&&makeSlug==='skoda')code=roman+' ('+code+')';
    if(code&&/China|Russia|LWB|India|Subaru|Scion|long.?wheelbase|Grand i10/i.test(code)){code=null;}
    if(key==='toyota/corolla'&&/E140|E170/.test(code||''))code=null; // European E150/E180 boundary needs explicit reconciliation.
@@ -94,6 +101,13 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  }
  if(exactGenerationCodes[key])gs.push({code:exactGenerationCodes[key],from:chronology.from,to:chronology.to,productionStatus:chronology.productionStatus,bodyTypes:expected,sources,_label:'Source model code',_signature:'single-code'});
  if(!gs.length)review('generations','Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations.');
+ if(batchOrder.includes(makeSlug))gs.sort((a,b)=>(a.from??Infinity)-(b.from??Infinity));
+ if(batchOrder.includes(makeSlug)){
+  review('scope','European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability.');
+  if(gs.length)review('generations','Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation.');
+  if(key==='saab/9-5')review('to','Parent source ends in 2012 but retained generation facts end in 2011; source-production bound requires reconciliation.');
+  if(['mitsubishi/grandis','mitsubishi/asx','mitsubishi/eclipse-cross','honda/insight'].includes(key))review('scope','Name reuse/new European programme requires badge-specific chronology; donor-platform dates or a global current flag must not imply one continuous European generation.');
+ }
  if(gs.length&&chronology.productionStatus==='current'&&!gs.some(g=>g.productionStatus==='current'))review('generations','The source-current model line has no reviewed current generation; the sequence is incomplete.');
  if(key==='bmw/i3')review('scope','This entry is the I01 city hatchback; newer/regional i3 name reuse is not asserted to be its next generation.');
  for(let i=0;i<gs.length;i++){const g=gs[i];if(g.code===null)review('generations['+i+'].code','Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed.');if(g.from===null)review('generations['+i+'].from','Production dates are absent or contain unresolved region/body-specific ranges.');if(g.productionStatus==='unknown')review('generations['+i+'].to','End/current status unresolved; null does not assert current production.');if(g.bodyTypes===null)review('generations['+i+'].bodyTypes','No explicit generation-specific body mapping.');}
@@ -102,6 +116,11 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  lines.push(model);audit.push({key,requestedTitles:requested,resolvedTitles:ps.map(p=>p.title),sourceProduction,selectedDateChoice:choice,generationEvidence:gs.map(g=>({code:g.code,label:g._label,sources:g.sources})),reviewedAsOf:'2026-10-25'});
 }}
 lines.sort(sort);
+const baseline=JSON.parse(fs.readFileSync('analysis/codex/model-lines-batch-1-baseline.json'));
+for(const [m,b]of Object.entries(baseline.byMake)){
+ const selected=lines.filter(l=>l.makeSlug===m);
+ if(selected.length!==b.count||createHash('sha256').update(JSON.stringify(selected)).digest('hex')!==b.sha256)throw Error('Existing make changed: '+m);
+}
 fs.writeFileSync('src/data/catalog/model-lines-auto.json',JSON.stringify(lines,null,2)+'\n');
 fs.writeFileSync('analysis/codex/model-line-decisions.json',JSON.stringify(audit,null,2)+'\n');
 const exclusions={scope:'Editorial decisions; not a claim that grey imports never occur.',byMake:Object.fromEntries(order.map(m=>[m,manualExclusions[m].map(([name,reason])=>({name,decision:/merged|under .*famil|derivative|facelift|retained as.*alias/i.test(reason)?'merged':/deferred|not admitted|verification|needsReview|not.*corroborat|not.*confirmed|without.*evidence/i.test(reason)?'deferred':'excluded',reason}))]))};

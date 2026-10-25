@@ -1,4 +1,5 @@
 // These choices were made after inspecting the retrieved factual infobox values.
+import {batchExclusions,batchDateChoices,batchUnknownDates,batchGenerationFamilies,batchGenerationDateChoices} from './model-line-batch-1.mjs';
 // A shared-platform article never supplies the whole range of a rebadged line by default.
 export const dateChoices={
  'skoda/favorit':{combine:true},'skoda/felicia':{combine:true},'skoda/rapid':{ranges:[0],scope:'europe'},
@@ -103,3 +104,9 @@ export const manualExclusions={
  mini:[['John Cooper Works / Cooper S / SE / One','equipment/performance/powertrain derivatives'],['Convertible','body derivative merged into Cooper'],['Vision concepts','concepts']],
  volvo:[['Cross Country variants of V40/V60/V90','body/equipment derivatives; XC70 historic name retained'],['EX40','electric XC40 rename retained as alias'],['XC70 (2025) / EM90 / S80L / S90L','regional-only or regional long-wheelbase variants not admitted to this Europe-focused pass'],['Polestar 1/2/3/4','separate make'],['EX60','not admitted without a separately checked current production source in this pass']]
 };
+
+Object.assign(manualExclusions,batchExclusions);
+Object.assign(dateChoices,batchDateChoices);
+for(const key of batchUnknownDates)forceUnknownDates.add(key);
+for(const key of batchGenerationFamilies)generationFamilies.add(key);
+Object.assign(generationDateChoices,batchGenerationDateChoices);
