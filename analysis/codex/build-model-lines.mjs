@@ -3,7 +3,8 @@ import {createHash} from 'node:crypto';
 import {batchOrder,batchGenerationSkip} from './model-line-batch-1.mjs';
 import {batch2Order,batch2GenerationSkip,batch2ReviewNotes} from './model-line-batch-2.mjs';
 import {batch3Order,batch3GenerationSkip,batch3ReviewNotes} from './model-line-batch-3.mjs';
-const curatedBatchOrder=[...batchOrder,...batch2Order,...batch3Order];
+import {batch4Order,batch4GenerationSkip,batch4ReviewNotes} from './model-line-batch-4.mjs';
+const curatedBatchOrder=[...batchOrder,...batch2Order,...batch3Order,...batch4Order];
 import {selection,order,additionalPages,aliases} from './model-line-selection.mjs';
 import {dateChoices,forceUnknownDates,generationFamilies,exactGenerationCodes,combinedNames,badgeSpecificSources,manualExclusions,generationDateChoices} from './model-line-decisions.mjs';
 const evidence=JSON.parse(fs.readFileSync('analysis/codex/model-line-evidence.json'));
@@ -43,7 +44,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  if(expected&&expected.some(b=>!supported.includes(b))){bodyTypes=null;review('bodyTypes','European editorial body selection needs model-specific corroboration; generic/shared source body facts do not confirm every selected style.');}
  if(!expected)review('bodyTypes','Quadricycle/body style does not fit the passenger-car enum; do not label it a hatchback.');
  const choice={...(dateChoices[key]||{}),...(badgeSpecificSources[key]||{})};
- const box=choice.box?ps[0].infoboxes.find(b=>((b.name||'')+' '+(b.heading||'')).includes(choice.box)):ps[0].infoboxes[0];
+ const box=choice.boxIndex!==undefined?ps[0].infoboxes[choice.boxIndex]:choice.box?ps[0].infoboxes.find(b=>((b.name||'')+' '+(b.heading||'')).includes(choice.box)):ps[0].infoboxes[0];
  let chronology=dates(box?.production,choice);
  const requestedNorm=norm(title.replace(/\([^)]*\)/g,'')),actualNorm=norm(ps[0].title.replace(/\([^)]*\)/g,''));
  const shared=actualNorm!==requestedNorm;
@@ -53,6 +54,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
   if(candidatePeriods.length>1){chronology={from:Math.min(...candidatePeriods.map(p=>p.from)),to:candidatePeriods.some(p=>p.to===null)?null:Math.max(...candidatePeriods.map(p=>p.to)),productionStatus:candidatePeriods.some(p=>p.to===null)?'current':'ended',productionPeriods:candidatePeriods.map(({from,to})=>({from,to}))};review('productionPeriods','Reused/renamed badge or multiple production runs; periods are not a claim of continuous production or generation equivalence.');}
  }
  if(forceUnknownDates.has(key)){chronology=dates();review('from,to','Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates.');}
+ if(key==='alfa-romeo/mito'){chronology.to=null;chronology.productionStatus='unknown';chronology.productionPeriods=null;}
  if(chronology.from===null)review('from','No single defensible production interval for the selected line in the retained facts.');
  if(chronology.productionStatus==='unknown')review('to','End year/current production not established. Null here does not confirm ongoing production.');
  let wikidataQid=null;
@@ -62,6 +64,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  if(combinedNames.has(key)&&new Set(ps.map(p=>p.wikidataQid).filter(Boolean)).size>1&&!matching.some(m=>m.kind==='series'))wikidataQid=null;
  if(['audi/90','audi/200','citroen/ds3','citroen/ds4','citroen/ds5','volvo/440','volvo/460','volvo/740','volvo/760','volvo/780','volvo/940','volvo/960'].includes(key))wikidataQid=matching.length===1?matching[0].qid:null;
  if(!wikidataQid)review('wikidataQid','No unique line-level match; a family/shared-platform QID is not substituted.');
+ if(['mg/im5','mg/im6','mg/mgs9-phev','mg/mg4-urban','alfa-romeo/spider'].includes(key)){wikidataQid=null;review('wikidataQid','No unique whole-line identity established for the combined or rebadged selection; a donor or single-era QID is not substituted.');}
  if(key==='ssangyong-kgm/actyon'){wikidataQid=null;review('wikidataQid','Old SsangYong Actyon and revived KGM Actyon have distinct source identities; a single-era QID is not assigned to the merged sales name.');}
  if(wikidataQid)sources.push('https://www.wikidata.org/wiki/'+wikidataQid);
  const gs=[];
@@ -71,6 +74,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
    if(batchGenerationSkip[key]?.test(label))continue;
    if(batch2GenerationSkip[key]?.test(label))continue;
    if(batch3GenerationSkip[key]?.test(label))continue;
+   if(batch4GenerationSkip[key]?.test(label))continue;
    const dedicated=/\bMk\d|\((?:E\d{2,3}|F\d{2,3}|G\d{2,3}|B\d|XP\d{2,3}|E\d{2,3})\)|\((?:first|second|third|fourth|fifth|sixth).*generation/i.test(p.title);
    const passat=key==='volkswagen/passat'&&/\bB[3-9]\b/.test(label);
    const batchDedicated=curatedBatchOrder.includes(makeSlug)&&/\((?:NA|NB|NC|ND|first generation|second generation|third generation|fourth generation|fifth generation|sixth generation)\)/i.test(p.title)&&index===0;
@@ -78,7 +82,8 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
    const saabClassic=key==='saab/900'&&index>0;
    const batch3Code=batch3Order.includes(makeSlug)&&index===0?p.title.match(/\((964|993|996|997|991|992|986|987|981|982|XJ40|X300|X308|X350|X351|X100|X150|X250|X260|L663)\)/)?.[1]:null;
    const batch3Heading=(key==='land-rover/discovery'&&/Discovery Series I|Discovery Series II|Discovery 3|Discovery 4/.test(b.heading||''))||(key==='land-rover/freelander'&&/Freelander 2/.test(b.heading||''))||(key==='land-rover/defender'&&b.heading==='Defender')||(key==='jaguar/xj'&&/Series 3/.test(b.heading||''));
-   if(!/generation|\bMk\s*[1-8IVX]+\b/i.test(label)&&!passat&&!(dedicated&&index===0)&&!batchDedicated&&!saabClassic&&!corvetteDedicated&&!batch3Code&&!batch3Heading)continue;
+   const batch4Code=batch4Order.includes(makeSlug)&&index===0?p.title.match(/\((XJ|KJ|KK|KL|ZJ|WJ|WK|WK2|WL|YJ|TJ|JK|JL)\)/)?.[1]:null;
+   if(!/generation|\bMk\s*[1-8IVX]+\b/i.test(label)&&!passat&&!(dedicated&&index===0)&&!batchDedicated&&!saabClassic&&!corvetteDedicated&&!batch3Code&&!batch3Heading&&!batch4Code)continue;
    if(/North America|Latin America|China.only|India.only|fifth generation.*2022|eighth generation.*2027/i.test(label)&&['ford/focus','bmw/rada-3','ford/mondeo'].includes(key))continue;
    const articleCode=p.title.match(/\b(Mk[1-8])\b|\((E\d{2,3}|F\d{2,3}|G\d{2,3}|B\d|XP\d{2,3})\)/i);
    const headingCode=b.heading?.match(/\((?:Typ\s+)?([^;()]+);\s*(?:19|20)\d{2}/i)?.[1];
@@ -88,6 +93,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
    const ordinal=label.match(/\b(First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth) generation\b/i)?.[1]?.toLowerCase();
    const roman={first:'I',second:'II',third:'III',fourth:'IV',fifth:'V',sixth:'VI',seventh:'VII',eighth:'VIII'}[ordinal];
    if(batch3Code)code=batch3Code;
+   if(batch4Code)code=batch4Code;
    const dateCode=code;
    if(curatedBatchOrder.includes(makeSlug)&&code&&/;|\(|China|Australia|\bBY\b|\bGZ\b|^;/.test(code))code=null;
    if(batchDedicated&&/^Mazda MX-5/.test(p.title))code=p.title.match(/\((NA|NB|NC|ND)\)/)?.[1]||null;
@@ -113,6 +119,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
   }}
  }
  if(exactGenerationCodes[key])gs.push({code:exactGenerationCodes[key],from:chronology.from,to:chronology.to,productionStatus:chronology.productionStatus,bodyTypes:expected,sources,_label:'Source model code',_signature:'single-code'});
+ if(batch4Order.includes(makeSlug))for(let i=gs.length-1;i>=0;i--){const g=gs[i];const prior=gs.slice(0,i).find(p=>g.code!==null&&p.code===g.code&&p.from===g.from&&p.to===g.to&&p.productionStatus===g.productionStatus);if(prior){prior.sources=[...new Set([...prior.sources,...g.sources])];if(prior.bodyTypes&&g.bodyTypes)prior.bodyTypes=[...new Set([...prior.bodyTypes,...g.bodyTypes])];gs.splice(i,1);}}
  if(!gs.length)review('generations','Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations.');
  if(curatedBatchOrder.includes(makeSlug))gs.sort((a,b)=>(a.from??Infinity)-(b.from??Infinity));
  if(curatedBatchOrder.includes(makeSlug)){
@@ -124,6 +131,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  if(gs.length&&chronology.productionStatus==='current'&&!gs.some(g=>g.productionStatus==='current'))review('generations','The source-current model line has no reviewed current generation; the sequence is incomplete.');
  for(const [field,reason]of batch2ReviewNotes[key]||[])review(field,reason);
  for(const [field,reason]of batch3ReviewNotes[key]||[])review(field,reason);
+ for(const [field,reason]of batch4ReviewNotes[key]||[])review(field,reason);
  if(key==='bmw/i3')review('scope','This entry is the I01 city hatchback; newer/regional i3 name reuse is not asserted to be its next generation.');
  for(let i=0;i<gs.length;i++){const g=gs[i];if(g.code===null)review('generations['+i+'].code','Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed.');if(g.from===null)review('generations['+i+'].from','Production dates are absent or contain unresolved region/body-specific ranges.');if(g.productionStatus==='unknown')review('generations['+i+'].to','End/current status unresolved; null does not assert current production.');if(g.bodyTypes===null)review('generations['+i+'].bodyTypes','No explicit generation-specific body mapping.');}
  const sourceProduction=box?.production??null;
@@ -131,7 +139,7 @@ for(const makeSlug of order){for(const row of selection[makeSlug].split('\n')){
  lines.push(model);audit.push({key,requestedTitles:requested,resolvedTitles:ps.map(p=>p.title),sourceProduction,selectedDateChoice:choice,generationEvidence:gs.map(g=>({code:g.code,label:g._label,sources:g.sources})),reviewedAsOf:'2026-10-25'});
 }}
 lines.sort(sort);
-for(const file of ['analysis/codex/model-lines-batch-1-baseline.json','analysis/codex/model-lines-batch-2-baseline.json','analysis/codex/model-lines-batch-3-baseline.json']){
+for(const file of ['analysis/codex/model-lines-batch-1-baseline.json','analysis/codex/model-lines-batch-2-baseline.json','analysis/codex/model-lines-batch-3-baseline.json','analysis/codex/model-lines-batch-4-baseline.json']){
 const baseline=JSON.parse(fs.readFileSync(file));
 for(const [m,b]of Object.entries(baseline.byMake)){
  const selected=lines.filter(l=>l.makeSlug===m);

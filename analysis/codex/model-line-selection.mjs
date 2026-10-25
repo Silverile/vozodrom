@@ -614,3 +614,9 @@ order.push(...batch3Order);
 Object.assign(selection,batch3Selection);
 Object.assign(additionalPages,batch3AdditionalPages);
 Object.assign(aliases,batch3Aliases);
+
+import {batch4Order,batch4Selection,batch4AdditionalPages,batch4Aliases} from './model-line-batch-4.mjs';
+order.push(...batch4Order);
+Object.assign(selection,batch4Selection);
+Object.assign(additionalPages,batch4AdditionalPages);
+Object.assign(aliases,batch4Aliases);
