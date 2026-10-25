@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           Pokud ji povolíte, používáme Google Analytics 4 od společnosti Google Ireland Ltd. ke statistice návštěvnosti:
           které stránky se zobrazují, z jakého typu zařízení a odkud návštěva přišla. Google k tomu ukládá cookies
           <code className="mx-1">_ga</code> a <code className="mx-1">_ga_*</code>. Údaje mohou být předány do USA v rámci
-          EU-US Data Privacy Framework. Nepoužíváme je k reklamě ani k profilování.
+          EU-US Data Privacy Framework. Údaje vázané na cookies Google uchovává 14 měsíců od poslední návštěvy, IP adresy GA4 neukládá. Nepoužíváme je k reklamě ani k profilování a funkci Google Signals nemáme zapnutou.
         </p>
         <p className="text-[var(--color-muted)]">Souhlas můžete kdykoli odvolat a cookies se tím smažou.</p>
         <p className="text-sm"><ConsentSettings /></p>

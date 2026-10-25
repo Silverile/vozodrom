@@ -26,6 +26,6 @@
 
 ## Analytika a účty
 - [x] GA4 property „vozodrom web“ (G-2D6CJ8T7NY), načítá se jen se souhlasem
-- [ ] GA: Google Signals nechat vypnuté, uchovávání dat 2–14 měsíců
+- [x] GA: Google Signals vypnuté, uchovávání dat 14 měsíců (uvedeno na /soukromi/)
 - [ ] Před ostrým spuštěním: doplnit provozovatele do /soukromi/ a nechat zkontrolovat
 - [ ] Vybrat poskytovatele účtů (Firebase / Supabase / vlastní backend); /prihlaseni/ je zatím jen náhled
