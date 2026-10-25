@@ -1,18 +1,20 @@
+import { getBrand } from "@/lib/catalog";
 import type { Model } from "@/lib/types";
 
 // Seeded test posts that show the planned Q&A format: one concrete question per model,
 // with provenance and a visible "test" label. Real posting needs accounts and moderation.
 
 function questionsFor(model: Model) {
+  const name = `${getBrand(model.brandSlug)?.name} ${model.name}`;
   const engine = model.engines[0];
   return [
     {
-      q: `Jak se ${model.name} ${engine.code} osvědčil po 150 000 km?`,
+      q: `Jak se osvědčil ${name} ${engine.code} po 150 000 km?`,
       a: `Testovací odpověď majitele: běžná údržba, výměna brzd a ${model.cons[0]?.label ?? "drobnosti"}. Jinak bez větších potíží.`,
       meta: "majitel od 2019",
     },
     {
-      q: `Na co se zaměřit při koupi ojetého ${model.name}?`,
+      q: `Na co se zaměřit při koupi ojetého vozu ${name}?`,
       a: `Testovací odpověď: zkontrolovat ${model.stk.defects[0].label.toLowerCase()} a historii STK, u automatu servis převodovky.`,
       meta: "majitel od 2021",
     },

@@ -1,7 +1,7 @@
 "use client";
 
 import { ListingRow } from "@/components/ListingRow";
-import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, generationFor, getModel, models } from "@/lib/catalog";
+import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, generationMatch, getModel, models } from "@/lib/catalog";
 import { type FeedVehicle, validateVehicle } from "@/lib/feed";
 import { createStore } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
@@ -13,7 +13,12 @@ const EMPTY: Draft = {
   powerKw: 0, color: "", region: "", description: "", vin: "",
 };
 
-const draftStore = createStore<Draft>("vozodrom.listingDraft", EMPTY);
+const isDraft = (v: unknown): v is Draft =>
+  !!v &&
+  typeof v === "object" &&
+  (Object.keys(EMPTY) as (keyof Draft)[]).every((k) => typeof (v as Record<string, unknown>)[k] === typeof EMPTY[k]);
+
+const draftStore = createStore<Draft>("vozodrom.listingDraft", EMPTY, isDraft);
 
 function vinProblem(vin: string): string | null {
   if (!vin) return null;
@@ -27,7 +32,7 @@ export function AddListingForm() {
     draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "" } : {}) });
 
   const problems = [
-    ...validateVehicle({ ...draft, externalId: "draft", status: "active", updatedAt: "2026-10-25", features: [] }),
+    ...validateVehicle({ ...draft, features: [] }),
     ...(vinProblem(draft.vin) ? [vinProblem(draft.vin)!] : []),
   ];
   const model = getModel(draft.brand, draft.model);
@@ -37,7 +42,7 @@ export function AddListingForm() {
         source: { kind: "test" },
         brandSlug: draft.brand,
         modelSlug: draft.model,
-        generation: generationFor(model, draft.year).code,
+        generation: generationMatch(model, draft.year)?.code ?? "generace neurčena",
         year: draft.year,
         mileageKm: Math.max(draft.mileageKm, 0),
         price: Math.max(draft.price, 0),
@@ -138,7 +143,8 @@ export function AddListingForm() {
         <section>
           <h2 className="font-bold mb-2">Náhled ve výsledcích</h2>
           {preview ? (
-            <div className="pointer-events-none" aria-hidden="true"><ListingRow listing={preview} /></div>
+            // inert: the preview's link and ☆ button must not be focusable or clickable.
+            <div inert><ListingRow listing={preview} /></div>
           ) : (
             <p className="card p-4 text-sm text-[var(--color-muted)]">Vyberte značku a model.</p>
           )}

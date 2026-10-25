@@ -8,7 +8,7 @@ import { useSyncExternalStore } from "react";
 
 type Listener = () => void;
 
-export function createStore<T>(key: string, fallback: T) {
+export function createStore<T>(key: string, fallback: T, isValid: (value: unknown) => value is T) {
   const listeners = new Set<Listener>();
   let cache: T | undefined;
 
@@ -16,7 +16,9 @@ export function createStore<T>(key: string, fallback: T) {
     if (cache !== undefined) return cache;
     try {
       const raw = window.localStorage.getItem(key);
-      cache = raw ? (JSON.parse(raw) as T) : fallback;
+      const parsed: unknown = raw ? JSON.parse(raw) : fallback;
+      // Anything with the wrong shape (old versions, manual edits) is discarded.
+      cache = isValid(parsed) ? parsed : fallback;
     } catch {
       cache = fallback;
     }
@@ -57,7 +59,9 @@ export function createStore<T>(key: string, fallback: T) {
 
 export const MAX_COMPARE = 4;
 
-export const shortlist = createStore<string[]>("vozodrom.shortlist", []);
+const isStringArray = (v: unknown): v is string[] => Array.isArray(v) && v.every((x) => typeof x === "string");
+
+export const shortlist = createStore<string[]>("vozodrom.shortlist", [], isStringArray);
 
 export function toggleShortlist(id: string) {
   const current = shortlist.read();
@@ -70,4 +74,8 @@ export interface SavedSearch {
   savedAt: string;
 }
 
-export const savedSearches = createStore<SavedSearch[]>("vozodrom.savedSearches", []);
+const isSavedSearchArray = (v: unknown): v is SavedSearch[] =>
+  Array.isArray(v) &&
+  v.every((s) => s && typeof s === "object" && ["query", "label", "savedAt"].every((k) => typeof (s as Record<string, unknown>)[k] === "string"));
+
+export const savedSearches = createStore<SavedSearch[]>("vozodrom.savedSearches", [], isSavedSearchArray);

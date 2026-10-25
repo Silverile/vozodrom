@@ -278,6 +278,12 @@ export function modelsOf(brandSlug: string): Model[] {
   return models.filter((m) => m.brandSlug === brandSlug);
 }
 
+/** The generation that covers this model year, or undefined when the catalogue has none. */
+export function generationMatch(model: Model, year: number): Generation | undefined {
+  return model.generations.find((g) => year >= g.from && (g.to === null || year <= g.to));
+}
+
+/** Like generationMatch but falls back to the latest generation; only for generated test data. */
 export function generationFor(model: Model, year: number): Generation {
   return (
     model.generations.find((g) => year >= g.from && (g.to === null || year <= g.to)) ??

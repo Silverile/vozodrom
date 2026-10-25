@@ -40,7 +40,7 @@ const ROWS: Row[] = [
     label: "STK (datované záznamy)",
     value: (l) => {
       const s = stkSignal(l);
-      if (s.kind === "none") return "zatím bez STK";
+      if (s.kind === "none") return 2026 - l.year < 4 ? "zatím bez STK (mladší 4 let)" : "záznamy nejsou k dispozici";
       if (s.kind === "drop") return <span className="text-[var(--color-bad)]">⚠ pokles nájezdu</span>;
       return `${s.count}× bez poklesu`;
     },
@@ -72,7 +72,12 @@ export function ShortlistClient() {
   const sharedIds = params.get("ids")?.split(",").filter(Boolean) ?? null;
   const ids = sharedIds ?? stored;
   const cars = ids.map(getListing).filter((l): l is Listing => Boolean(l));
-  const [selected, setSelected] = useState<string[] | null>(null);
+  // The manual selection belongs to one context (a shared link or my own shortlist);
+  // switching context falls back to the first cars of the new list.
+  const context = sharedIds ? `shared:${sharedIds.join(",")}` : "mine";
+  const [selection, setSelection] = useState<{ context: string; ids: string[] } | null>(null);
+  const selected = selection?.context === context ? selection.ids : null;
+  const setSelected = (ids: string[]) => setSelection({ context, ids });
   const compared = (selected ?? cars.slice(0, MAX_COMPARE).map((c) => c.id))
     .map((id) => cars.find((c) => c.id === id))
     .filter((c): c is Listing => Boolean(c));
