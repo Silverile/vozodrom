@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Analytics, ConsentSettings } from "@/components/Analytics";
+import { LocationPicker } from "@/components/LocationPicker";
 import { ShortlistLink } from "@/components/ShortlistLink";
 import "./globals.css";
 
@@ -11,14 +13,14 @@ export const metadata: Metadata = {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2 font-extrabold tracking-tight text-lg">
+    <Link href="/" aria-label="vozodrom — úvod" className="flex items-center gap-2 font-extrabold tracking-tight text-lg">
       <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
         <rect width="32" height="32" rx="9" fill="var(--color-brand)" />
         <path d="M7 19c1.5-4 4-6 9-6s7.5 2 9 6" stroke="var(--color-brand-ink)" strokeWidth="2.4" fill="none" strokeLinecap="round" />
         <circle cx="11" cy="21" r="2.4" fill="var(--color-brand-ink)" />
         <circle cx="21" cy="21" r="2.4" fill="var(--color-brand-ink)" />
       </svg>
-      vozodrom
+      <span className="hidden sm:inline">vozodrom</span>
     </Link>
   );
 }
@@ -36,18 +38,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Prototyp — všechny inzeráty, ceny a statistiky jsou smyšlená testovací data.
         </div>
         <header className="sticky top-0 z-20 border-b border-[var(--color-line)] bg-[var(--color-bg)]/90 backdrop-blur">
-          <div className="mx-auto max-w-6xl px-4 h-16 flex items-center gap-3 sm:gap-6">
+          <div className="mx-auto max-w-6xl px-4 h-16 flex items-center gap-1 sm:gap-6">
             <Logo />
+            <Suspense>
+              <LocationPicker />
+            </Suspense>
             <nav className="flex items-center gap-0.5 sm:gap-1 text-sm overflow-x-auto">
               {NAV.map((n) => (
-                <Link key={n.href} href={n.href} className="px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)]">
+                <Link key={n.href} href={n.href} className="px-2 sm:px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)]">
                   {n.label}
                 </Link>
               ))}
               <ShortlistLink />
             </nav>
-            <Link href="/prihlaseni/" className="ml-auto px-3 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap">
-              Přihlásit
+            <Link href="/prihlaseni/" aria-label="Přihlásit" className="ml-auto px-2 sm:px-3 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap">
+              <span aria-hidden="true" className="sm:hidden">👤</span>
+              <span className="hidden sm:inline">Přihlásit</span>
             </Link>
             <Link href="/pridat/" className="btn-cta hidden sm:inline-flex text-sm">
               + Přidat inzerát zdarma

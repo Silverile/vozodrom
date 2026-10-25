@@ -5,6 +5,7 @@ import { marketEstimate } from "@/lib/market";
 import type { Listing } from "@/lib/types";
 import { CarImage } from "./CarImage";
 import { FavoriteButton } from "./FavoriteButton";
+import { Place } from "./Place";
 import { PriceMeter } from "./VerdictBadge";
 
 /** Compact tile for carousels and "similar cars". */
@@ -20,7 +21,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
         <h3 className="font-semibold leading-tight">
           <Link href={`/inzeraty/${listing.id}/`} className="after:absolute after:inset-0 focus:outline-none">{name}</Link>
         </h3>
-        <p className="text-xs text-[var(--color-muted)]">{formatKm(listing.mileageKm)} · {listing.region}</p>
+        <p className="text-xs text-[var(--color-muted)]">{formatKm(listing.mileageKm)} · <Place city={listing.city} fallback={listing.region} /></p>
         <div className="mt-auto pt-2 flex items-center justify-between">
           <span className="font-extrabold">{formatPrice(listing.price)}</span>
           {estimate && <PriceMeter score={estimate.score} />}

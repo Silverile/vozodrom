@@ -6,10 +6,12 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { Gallery } from "@/components/Gallery";
 import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
+import { Place } from "@/components/Place";
 import { PriceMeter, VerdictBadge } from "@/components/VerdictBadge";
 import { VehicleCheck } from "@/components/VehicleCheck";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel } from "@/lib/catalog";
 import { formatAgo, formatDate, formatKm, formatPercent, formatPrice } from "@/lib/format";
+import { getCity, regionLabel } from "@/lib/geo";
 import { getListing, listings, listingsOf } from "@/lib/listings";
 import { marketEstimate } from "@/lib/market";
 
@@ -68,7 +70,7 @@ export default async function ListingPage({ params }: { params: Params }) {
         </Link>
       </span>,
     ],
-    ["Kraj", listing.region],
+    ["Místo", <Place key="m" city={listing.city} fallback={listing.region} region={listing.region === "Praha" ? undefined : regionLabel(listing.region)} />],
   ];
 
   return (
@@ -79,7 +81,7 @@ export default async function ListingPage({ params }: { params: Params }) {
         <Link href={`/inzeraty/?znacka=${brand.slug}&model=${model.slug}`} className="hover:text-[var(--color-ink)]">{model.name}</Link>
       </nav>
       <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">
-        {brand.name} {model.name}, {listing.year} <span className="text-[var(--color-muted)] font-semibold">· {listing.region}</span>
+        {brand.name} {model.name}, {listing.year} <span className="text-[var(--color-muted)] font-semibold">· {getCity(listing.city)?.name ?? listing.region}</span>
       </h1>
 
       <div className="grid gap-5 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_340px_300px] mt-5 items-start">

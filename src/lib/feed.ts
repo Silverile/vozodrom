@@ -1,4 +1,5 @@
 import { FUEL_LABEL, REGIONS, generationMatch, getModel } from "./catalog";
+import { getCity, regionCapital } from "./geo";
 import type { Fuel, Listing, Transmission } from "./types";
 
 // Dealer feed import: dealers send their own stock as JSON (format on /pro-prodejce).
@@ -21,6 +22,8 @@ export interface FeedVehicle {
   powerKw: number;
   color: string;
   region: string;
+  /** optional town slug (lib/geo); defaults to the regional capital */
+  city?: string;
   features: string[];
   description: string;
 }
@@ -73,6 +76,7 @@ export function validateVehicle(v: Record<string, unknown>): string[] {
   if (!isString(v.fuel) || !(v.fuel in FUEL_LABEL)) reasons.push("neznámé palivo");
   if (v.transmission !== "manuál" && v.transmission !== "automat") reasons.push("převodovka musí být manuál nebo automat");
   if (!isString(v.region) || !REGIONS.includes(v.region)) reasons.push("neznámý kraj");
+  if (v.city !== undefined && !(isString(v.city) && getCity(v.city)?.region === v.region)) reasons.push("město nepatří do uvedeného kraje");
   if (v.color !== undefined && !isString(v.color)) reasons.push("barva musí být text");
   if (v.description !== undefined && !isString(v.description)) reasons.push("popis musí být text");
   if (v.features !== undefined && !(Array.isArray(v.features) && v.features.every(isString))) reasons.push("výbava musí být seznam textů");
@@ -143,6 +147,7 @@ export function importFeed(feed: Feed): ImportReport {
       body: model.body,
       color: v.color ?? "neuvedeno",
       region: v.region,
+      city: v.city ?? regionCapital(v.region)!.slug,
       sellerType: "autobazar",
       sellerName: feed.seller,
       // Dealer feeds carry no VIN in this prototype; the vehicle check shows that honestly.

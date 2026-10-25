@@ -88,3 +88,17 @@ export const analyticsConsent = createStore<Consent | null>(
   null,
   (v): v is Consent | null => v === null || v === "granted" || v === "denied",
 );
+
+/** The visitor's chosen town and radius for "near me" search; null means the whole country. */
+export interface SavedLocation {
+  city: string;
+  radius: number;
+}
+
+export const savedLocation = createStore<SavedLocation | null>(
+  "vozodrom.location",
+  null,
+  (v): v is SavedLocation | null =>
+    v === null ||
+    (!!v && typeof v === "object" && typeof (v as SavedLocation).city === "string" && typeof (v as SavedLocation).radius === "number"),
+);

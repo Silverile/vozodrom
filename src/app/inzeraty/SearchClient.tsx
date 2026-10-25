@@ -6,9 +6,10 @@ import { useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, getBrand, getModel, models } from "@/lib/catalog";
+import { OPEN_LOCATION_PICKER, RADII, distanceKm, getCity, withinRadius } from "@/lib/geo";
 import { listings } from "@/lib/listings";
 import { marketEstimate } from "@/lib/market";
-import { savedSearches } from "@/lib/storage";
+import { savedLocation, savedSearches } from "@/lib/storage";
 import type { Body, Fuel, Listing } from "@/lib/types";
 
 const SORTS = {
@@ -22,7 +23,7 @@ const SORTS = {
   najezd: { label: "Nejnižší nájezd", fn: (a: Listing, b: Listing) => a.mileageKm - b.mileageKm },
   rok: { label: "Nejmladší", fn: (a: Listing, b: Listing) => b.year - a.year },
 } as const;
-type SortKey = keyof typeof SORTS;
+type SortKey = keyof typeof SORTS | "nejblize";
 
 const nf = new Intl.NumberFormat("cs-CZ");
 
@@ -44,12 +45,18 @@ function buildIndex() {
         BODY_LABEL[l.body],
         l.transmission,
         l.region,
+        getCity(l.city)?.name,
         l.color,
         ...l.features,
       ].join(" "),
     })),
   );
   return index;
+}
+
+function distanceTo(l: Listing, center: { lat: number; lon: number }): number {
+  const city = getCity(l.city);
+  return city ? distanceKm(city, center) : Infinity;
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -67,6 +74,7 @@ export function SearchClient() {
   const pathname = usePathname();
   const index = useMemo(buildIndex, []);
   const saved = savedSearches.useValue();
+  const stored = savedLocation.useValue();
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const q = params.get("q") ?? "";
@@ -82,6 +90,13 @@ export function SearchClient() {
   const kmMax = Number(params.get("najezdDo") ?? 0);
   const sort = (params.get("razeni") ?? "nejnovejsi") as SortKey;
 
+  // Location comes from the URL (shareable, saved searches) and falls back to the
+  // town chosen in the header. "mesto=cr" means the whole country.
+  const cityParam = params.get("mesto");
+  const center = cityParam ? (cityParam === "cr" ? undefined : getCity(cityParam)) : getCity(stored?.city);
+  const rawRadius = Number(cityParam ? params.get("okruh") ?? 0 : stored?.radius ?? 0);
+  const radius = (RADII as readonly number[]).includes(rawRadius) ? rawRadius : 0;
+
   function update(key: string, value: string) {
     const next = new URLSearchParams(params.toString());
     if (value) next.set(key, value);
@@ -90,6 +105,16 @@ export function SearchClient() {
     if (key === "model") next.delete("generace");
     const query = next.toString();
     router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  }
+
+  function setLocation(slug: string | null, km: number) {
+    savedLocation.write(slug ? { city: slug, radius: km } : null);
+    const next = new URLSearchParams(params.toString());
+    next.set("mesto", slug ?? "cr");
+    if (slug && km) next.set("okruh", String(km));
+    else next.delete("okruh");
+    if (!slug && next.get("razeni") === "nejblize") next.delete("razeni");
+    router.replace(`${pathname}?${next.toString()}`, { scroll: false });
   }
 
   const results = useMemo(() => {
@@ -106,8 +131,13 @@ export function SearchClient() {
       .filter((l) => !priceMax || l.price <= priceMax)
       .filter((l) => !yearFrom || l.year >= yearFrom)
       .filter((l) => !kmMax || l.mileageKm <= kmMax)
-      .sort((SORTS[sort] ?? SORTS.nejnovejsi).fn);
-  }, [index, q, brand, model, generation, fuel, body, gearbox, region, priceMax, yearFrom, kmMax, sort]);
+      .filter((l) => !center || withinRadius(l.city, center, radius))
+      .sort(
+        sort === "nejblize" && center
+          ? (a, b) => distanceTo(a, center) - distanceTo(b, center) || a.price - b.price
+          : (SORTS[sort as keyof typeof SORTS] ?? SORTS.nejnovejsi).fn,
+      );
+  }, [index, q, brand, model, generation, fuel, body, gearbox, region, priceMax, yearFrom, kmMax, sort, center, radius]);
 
   const selectedModel = brand && model ? getModel(brand, model) : undefined;
   const brandName = getBrand(brand)?.name;
@@ -218,6 +248,20 @@ export function SearchClient() {
         </div>
       </div>
 
+      <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label="Místo">
+        <button className="pill" data-on={!center} aria-pressed={!center} onClick={() => setLocation(null, 0)}>Celá ČR</button>
+        {center ? (
+          RADII.map((km) => (
+            <button key={km} className="pill" data-on={radius === km} aria-pressed={radius === km} onClick={() => setLocation(center.slug, km)}>
+              {km === 0 ? `📍 ${center.name}` : `+${km} km`}
+            </button>
+          ))
+        ) : null}
+        <button className="pill" onClick={() => window.dispatchEvent(new Event(OPEN_LOCATION_PICKER))}>
+          {center ? "Jiné město" : "📍 Vybrat město"}
+        </button>
+      </div>
+
       {chips.length > 0 && (
         <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="Aktivní filtry">
           {chips.map(([key, label]) => (
@@ -243,6 +287,7 @@ export function SearchClient() {
               )}
               <select className="input w-auto" value={sort} onChange={(e) => update("razeni", e.target.value)} aria-label="Řazení">
                 {Object.entries(SORTS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}
+                {center && <option value="nejblize">Nejblíže</option>}
               </select>
             </div>
           </div>

@@ -19,6 +19,7 @@ const EXAMPLE = `{
       "engine": "2.0 TDI", "fuel": "nafta",
       "transmission": "automat", "powerKw": 110,
       "color": "šedá", "region": "Praha",
+      "city": "praha",                // nepovinné, jinak krajské město
       "features": ["Navigace", "Tempomat"],
       "description": "…"
     }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { FavoriteButton } from "@/components/FavoriteButton";
+import { Place } from "@/components/Place";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel } from "@/lib/catalog";
 import { formatDate, formatKm, formatPrice } from "@/lib/format";
 import { getListing } from "@/lib/listings";
@@ -53,7 +54,7 @@ const ROWS: Row[] = [
         : "—",
   },
   { label: "Prodejce", value: (l) => l.sellerName },
-  { label: "Kraj", value: (l) => l.region },
+  { label: "Místo", value: (l) => <Place city={l.city} fallback={l.region} /> },
 ];
 
 function bestIds(row: Row, cars: Listing[]): Set<string> {

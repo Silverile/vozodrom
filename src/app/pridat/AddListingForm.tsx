@@ -2,15 +2,16 @@
 
 import { ListingRow } from "@/components/ListingRow";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, brands, generationMatch, getModel, models } from "@/lib/catalog";
+import { citiesIn, getCity } from "@/lib/geo";
 import { type FeedVehicle, validateVehicle } from "@/lib/feed";
 import { createStore } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 
-type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features"> & { vin: string };
+type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string };
 
 const EMPTY: Draft = {
   brand: "", model: "", year: 2020, mileageKm: 0, price: 0, engine: "", fuel: "benzin", transmission: "manuál",
-  powerKw: 0, color: "", region: "", description: "", vin: "",
+  powerKw: 0, color: "", region: "", city: "", description: "", vin: "",
 };
 
 const isDraft = (v: unknown): v is Draft =>
@@ -32,7 +33,7 @@ export function AddListingForm() {
     draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "" } : {}) });
 
   const problems = [
-    ...validateVehicle({ ...draft, features: [] }),
+    ...validateVehicle({ ...draft, city: draft.city || undefined, features: [] }),
     ...(vinProblem(draft.vin) ? [vinProblem(draft.vin)!] : []),
   ];
   const model = getModel(draft.brand, draft.model);
@@ -53,6 +54,7 @@ export function AddListingForm() {
         body: model.body,
         color: draft.color || "stříbrná",
         region: draft.region || "kraj neuveden",
+        city: draft.city,
         sellerType: "soukromý",
         sellerName: "Vy",
         vin: draft.vin || "neuvedeno",
@@ -88,10 +90,18 @@ export function AddListingForm() {
         <label className="text-sm">Cena při platbě najednou (Kč)
           <input className={input} type="number" inputMode="numeric" value={draft.price || ""} onChange={(e) => set("price", Number(e.target.value))} />
         </label>
-        <label className="text-sm">Kraj
-          <select className={input} value={draft.region} onChange={(e) => set("region", e.target.value)}>
+        <label className="text-sm">Místo
+          <select
+            className={input}
+            value={draft.city}
+            onChange={(e) => draftStore.write({ ...draft, city: e.target.value, region: getCity(e.target.value)?.region ?? "" })}
+          >
             <option value="">Vyberte</option>
-            {REGIONS.map((r) => <option key={r} value={r}>{r}</option>)}
+            {REGIONS.map((r) => (
+              <optgroup key={r} label={r}>
+                {citiesIn(r).map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+              </optgroup>
+            ))}
           </select>
         </label>
         <label className="text-sm">Palivo

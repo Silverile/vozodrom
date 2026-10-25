@@ -5,6 +5,7 @@ import { marketEstimate } from "@/lib/market";
 import type { Listing } from "@/lib/types";
 import { CarImage } from "./CarImage";
 import { FavoriteButton } from "./FavoriteButton";
+import { Place } from "./Place";
 import { StkBadge } from "./StkBadge";
 import { PriceMeter, VerdictBadge } from "./VerdictBadge";
 
@@ -48,7 +49,7 @@ export function ListingRow({ listing }: { listing: Listing }) {
           <span className="sr-only"> (cena při platbě v hotovosti)</span>
         </span>
         {estimate && <PriceMeter score={estimate.score} className="hidden sm:inline-flex" />}
-        <span className="text-xs text-[var(--color-muted)] sm:mt-auto whitespace-nowrap">{listing.region} · {formatAgo(listing.postedAt)}</span>
+        <span className="text-xs text-[var(--color-muted)] sm:mt-auto whitespace-nowrap"><Place city={listing.city} fallback={listing.region} /> · {formatAgo(listing.postedAt)}</span>
       </div>
       <FavoriteButton id={listing.id} label={name} className="absolute left-5 top-5 z-10 !h-8 !w-8 text-base" />
     </article>

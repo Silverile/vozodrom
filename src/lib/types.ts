@@ -90,6 +90,8 @@ export interface Listing {
   body: Body;
   color: string;
   region: string;
+  /** town slug from lib/geo */
+  city: string;
   sellerType: SellerType;
   sellerName: string;
   vin: string;

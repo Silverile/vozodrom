@@ -1,6 +1,7 @@
 import deltaFeed from "@/data/feeds/testovaci-autobazar-delta.json";
 import { REGIONS, generationFor, models } from "./catalog";
 import { type Feed, type ImportReport, importFeed } from "./feed";
+import { citiesIn } from "./geo";
 import type { Listing, StkRecord, Transmission } from "./types";
 
 // Deterministic generator for fictional test listings: the same build always
@@ -76,6 +77,14 @@ function stkHistory(year: number, mileageKm: number, firstStkYear: number): StkR
   return records.reverse();
 }
 
+/** Town inside the region, from a separate generator so adding towns did not reshuffle the other test data. */
+function cityFor(region: string, index: number): string {
+  const towns = citiesIn(region);
+  // Regional capitals get about half of the listings, like real markets.
+  const r = mulberry32(index * 104729 + 17)();
+  return (r < 0.5 ? towns[0] : towns[Math.floor(r * towns.length)]).slug;
+}
+
 function buildListings(): Listing[] {
   const out: Listing[] = [];
   let index = 1;
@@ -113,6 +122,7 @@ function buildListings(): Listing[] {
         body: model.body,
         color: pick(COLORS),
         region: pick(REGIONS),
+        city: "",
         sellerType,
         sellerName: sellerType === "autobazar" ? pick(BAZAARS) : "Soukromý prodejce",
         vin: fakeVin(index),
@@ -131,6 +141,7 @@ function buildListings(): Listing[] {
               }
             : undefined,
       });
+      out[out.length - 1].city = cityFor(out[out.length - 1].region, index);
       index++;
     }
   }
