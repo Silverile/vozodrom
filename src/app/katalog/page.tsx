@@ -41,7 +41,7 @@ function AzList({ section, makes }: { section: MakeSection; makes: Make[] }) {
               return (
                 <li key={m.slug}>
                   <Link href={`/katalog/${m.slug}/`} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-[var(--color-field)]">
-                    <BrandLogo slug={m.slug} name={m.name} size={26} />
+                    <BrandLogo slug={m.slug} name={m.name} size={26} square />
                     <span className={`min-w-0 truncate ${n ? "font-semibold" : ""} ${m.defunct ? "text-[var(--color-muted)]" : ""}`}>{m.name}</span>
                     {n > 0 && <span className="text-xs text-[var(--color-muted)]">{n}</span>}
                   </Link>
