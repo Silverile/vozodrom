@@ -20,10 +20,11 @@ for name in sorted(os.listdir(ROOT)):
     im = Image.open(os.path.join(ROOT, name)).convert("RGBA")
     px = im.load()
     w, h = im.size
-    # Background colour: the most common opaque corner pixel (white for most JPGs)
-    corners = [px[0, 0], px[w - 1, 0], px[0, h - 1], px[w - 1, h - 1]]
-    opaque = [c for c in corners if c[3] > 200]
-    bg = max(set(opaque), key=opaque.count) if opaque else None
+    # Background colour: the most common opaque pixel along the image border (white for most JPGs).
+    # The whole border, not just the corners: a logo can touch a corner (Blata's outline).
+    border = [px[x, y] for x in range(w) for y in (0, h - 1)] + [px[x, y] for y in range(h) for x in (0, w - 1)]
+    opaque = [c for c in border if c[3] > 200]
+    bg = max(set(opaque), key=opaque.count) if len(opaque) > len(border) / 2 else None
     mask = Image.new("L", (w, h))
     mp = mask.load()
     for y in range(h):
