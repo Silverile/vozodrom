@@ -48,6 +48,8 @@ export interface CardTrim {
 }
 
 export interface CardPhoto {
+  /** width / height of the original, from scripts/photo-sizes.mjs; null when unknown */
+  aspect?: number | null;
   url: string;
   page: string;
   credit: string;

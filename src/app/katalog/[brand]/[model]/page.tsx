@@ -5,6 +5,7 @@ import { Bar } from "@/components/Bar";
 import { CarImage } from "@/components/CarImage";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
+import { CarPhoto } from "@/components/CarPhoto";
 import { RealStats } from "@/components/RealStats";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
@@ -20,7 +21,6 @@ import {
   type CardTrim,
   cardOf,
   coverOf,
-  thumb,
   yearsSpan,
 } from "@/lib/modelCards";
 import { type StatsEntry, lineStats } from "@/lib/stats";
@@ -155,8 +155,8 @@ function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneratio
   if (!gen.photo) return null;
   return (
     <figure className={`min-w-0 ${className}`}>
-      {/* Commons thumbnail; static export, so no next/image optimisation */}
-      <img src={thumb(gen.photo.url, 960)} alt={alt} loading={eager ? "eager" : "lazy"} className="w-full aspect-[3/2] object-contain rounded-xl bg-[var(--color-photo)]" />
+      {/* 16:10 frame without empty bars (CarPhoto) */}
+      <CarPhoto photo={gen.photo} alt={alt} width={960} eager={eager} className="rounded-xl" />
       <figcaption className="mt-1 text-[11px] text-[var(--color-muted)] truncate">
         Foto: <a href={gen.photo.page} rel="noopener" className="underline hover:text-[var(--color-ink)]">{gen.photo.credit}</a>
       </figcaption>
@@ -383,9 +383,9 @@ export default async function ModelPage({ params }: { params: Params }) {
               <li key={i} className="min-w-0">
                 <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
                   {g.photo ? (
-                    <img src={thumb(g.photo.url, 480)} alt={`${title} ${g.name ?? g.code ?? ""}`} loading="lazy" className="w-full aspect-[4/3] object-contain bg-[var(--color-photo)]" />
+                    <CarPhoto photo={g.photo} alt={`${title} ${g.name ?? g.code ?? ""}`} />
                   ) : (
-                    <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[4/3]" />
+                    <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
                   )}
                   <div className="p-3">
                     <div className="font-semibold truncate">{g.name ?? g.code ?? `${i + 1}. generace`}</div>

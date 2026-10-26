@@ -9,7 +9,8 @@ import { listings, listingsOf } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
 import { factsOf, historyOf, hostOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
-import { BODY_GROUPS, cardOf, coverOf, thumb } from "@/lib/modelCards";
+import { BODY_GROUPS, cardOf, coverOf } from "@/lib/modelCards";
+import { CarPhoto } from "@/components/CarPhoto";
 import type { Body } from "@/lib/types";
 
 // Every make has a page. Makes with curated model lines show the whole range as photo cards,
@@ -32,9 +33,9 @@ function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: Mo
           <li key={l.slug} className="min-w-0">
             <Link href={`/katalog/${slug}/${l.slug}/`} className="card block overflow-hidden hover:shadow-lg transition h-full">
               {cover ? (
-                <img src={thumb(cover.url, 480)} alt={`${make} ${l.name}`} loading="lazy" className="w-full aspect-[4/3] object-contain bg-[var(--color-photo)]" />
+                <CarPhoto photo={cover} alt={`${make} ${l.name}`} />
               ) : (
-                <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[4/3]" />
+                <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
               )}
               <div className="p-3">
                 <div className="font-semibold truncate">{make} {l.name}</div>
