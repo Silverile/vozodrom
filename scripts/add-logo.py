@@ -3,7 +3,7 @@
 Each image is saved as public/logos/<slug>.png (at most 400px high), registered in
 src/data/brand-logo-files.json, and given a one-colour mask by mono-raster.py.
 An optional "|<fraction>" after the path crops that share off every edge first, for images that come
-with a frame around the logo, and "|<fraction>|dark" keeps only dark strokes. Run node scripts/makes-index.mjs afterwards.
+with a frame around the logo, and "|<fraction>|dark" (or "dark:<0-255 cut-off>") keeps only dark strokes. Run node scripts/makes-index.mjs afterwards.
 """
 import json, os, subprocess, sys
 from PIL import Image
@@ -25,9 +25,11 @@ for arg in sys.argv[1:]:
     if inset:
         dx, dy = round(im.width * float(inset)), round(im.height * float(inset))
         im = im.crop((dx, dy, im.width - dx, im.height - dy))
-    if mode == "dark":
+    if mode.startswith("dark"):
         # Keep only dark lines; mid-grey fills (chrome wings on Borgward) would merge into one blob.
-        im = Image.eval(im.convert("L"), lambda v: 255 if v > 140 else 0).convert("RGBA")
+        # "dark:100" sets a stricter brightness cut-off than the default 140.
+        cut = int(mode.partition(":")[2] or 140)
+        im = Image.eval(im.convert("L"), lambda v: 255 if v > cut else 0).convert("RGBA")
     if im.height > 400:
         im = im.resize((round(im.width * 400 / im.height), 400), Image.LANCZOS)
     for ext in (".svg", ".jpg", ".jpeg", ".gif", ".webp"):
