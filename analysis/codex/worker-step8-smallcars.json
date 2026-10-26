@@ -1,0 +1,194 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "Junior 1.0 MPI 37 kW",
+      "fields": {
+        "engine.displacementCc": 997,
+        "transmission.type": "manual",
+        "transmission.gears": 5
+      },
+      "sources": [
+        "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+      ],
+      "fieldSources": {
+        "engine.displacementCc": [
+          "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+        ],
+        "transmission.type": [
+          "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+        ],
+        "transmission.gears": [
+          "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+        ]
+      },
+      "noteCs": "Primarni skolici material vyrobce SSP32: strana14 uvadi pro motor1.0/37kW objem997cm3; strany12 a22 prirazuji prevodovku002H s peti rychlostmi. Objem997 se shoduje se dvema zaznamy Junior v Auta5P; proti chybe966cm3 v dobovem HNonline uprednostnen primarni motorovy podklad. Nejde o preneseni hmotnosti puvodni zakladni Fabie na Junior. Hmotnost1010/1035 zustava nevyresena."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+      "fields": {
+        "transmission.gears": 6,
+        "dimensionsMm.length": 4002,
+        "dimensionsMm.width": 1646,
+        "dimensionsMm.height": 1441,
+        "dimensionsMm.wheelbase": 2462
+      },
+      "sources": [
+        "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+      ],
+      "fieldSources": {
+        "transmission.gears": [
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+        ],
+        "dimensionsMm.length": [
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+        ],
+        "dimensionsMm.width": [
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+        ],
+        "dimensionsMm.height": [
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+        ]
+      },
+      "noteCs": "Rozmery a sestistupnovy manual se tykaji RS hatchbacku, nikoli bezne Fabie. Dokumentace modeluRS2003-2007 primo uvadi4002x1646x1441mm a6MT; dobovy testADAC2006 pro EuroIVBLT potvrzuje tyto rozmery a rozvor2462mm. Hmotnost ani presny0-100 z techto podkladu neprenasime: hmotnost i zrychleni se mezi trhem a revizi lisi. Predchozi poznamku o nezjistenem poctu stupnu a rozmerech tato evidence nahrazuje."
+    },
+    {
+      "lineSlug": "karoq",
+      "generationIndex": 0,
+      "trimName": "1.5 TSI 110 kW – manuální",
+      "fields": {
+        "consumptionCycle": "WLTP combined"
+      },
+      "sources": [
+        "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+      ],
+      "fieldSources": {
+        "consumptionCycle": [
+          "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+        ]
+      },
+      "noteCs": "List4.4.2022 jednoznacne oznacuje kombinovanou spotrebuWLTP pro1.5TSI110kW6MT hodnotami6.0-6.7l/100km. Norma doplnena, ale scalar spotreby zustava null; dolni mez spotreby nebyla zvolena."
+    }
+  ],
+  "additions": [],
+  "needsReview": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW",
+      "fields": [
+        "consumptionL100",
+        "massKg"
+      ],
+      "reason": "Aggregate2003-2007version still unscoped. Already-separate2006EuroIVsample has5.3. Do not replace aggregate with5.3 or5.4 universally. UK2003brochure5.1 andUK2006EuroIII5.4/EuroIV5.3 require separate documentary records."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+      "fields": [
+        "massKg",
+        "acceleration0to100s"
+      ],
+      "reason": "Manufacturer overview1245-1315kg and9.5s; German ADAC2006 lists1320kgEU and9.6s factory. UK brochure9.5s is0-62mph. Keep exact mass/0-100 null for this UK sample unless UK-specific source reconciles definitions."
+    },
+    {
+      "lineSlug": "karoq",
+      "generationIndex": 0,
+      "trimName": "1.5 TSI 110 kW – manuální",
+      "fields": [
+        "consumptionL100"
+      ],
+      "reason": "Only6.0-6.7WLTP interval in exact2022manualFWDscope; requires specified homologated equipment for scalar."
+    }
+  ],
+  "helpWanted": [
+    {
+      "model": "Fabia I Junior1.0MPI37kW",
+      "fields": [
+        "massKg",
+        "massBasis"
+      ],
+      "request": "Dated Czech manufacturer Junior price/technical sheet or original vehicle conformity specification identifying base weight and driver inclusion;1010and1035kg secondaryentries differ."
+    },
+    {
+      "model": "Fabia I RS EuroIV UK05/2006",
+      "fields": [
+        "massKg",
+        "acceleration0to100s"
+      ],
+      "request": "UK technical data/owners supplement for BLT confirming0-100km/h not0-62mph and mass with driver definition."
+    },
+    {
+      "model": "Fabia I Combi1.4 16V55kW2001",
+      "fields": [
+        "transmission.type",
+        "transmission.gears",
+        "drive"
+      ],
+      "request": "Original Czech April2001 tested car transmission description: gearbox manual/automatic must be identified. Manufacturer also offered automatic, so no default5MT assigned."
+    }
+  ],
+  "audit": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "versions": 4,
+      "withConsumption": 3
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 1,
+      "versions": 5,
+      "withConsumption": 5
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 2,
+      "versions": 4,
+      "withConsumption": 4
+    },
+    {
+      "lineSlug": "roomster",
+      "generationIndex": 0,
+      "versions": 6,
+      "withConsumption": 6
+    },
+    {
+      "lineSlug": "citigo",
+      "generationIndex": 0,
+      "versions": 2,
+      "withConsumption": 2
+    },
+    {
+      "lineSlug": "rapid",
+      "generationIndex": 0,
+      "versions": 3,
+      "withConsumption": 3
+    },
+    {
+      "lineSlug": "yeti",
+      "generationIndex": 0,
+      "versions": 6,
+      "withConsumption": 6
+    },
+    {
+      "lineSlug": "kodiaq",
+      "generationIndex": 0,
+      "versions": 2,
+      "withConsumption": 2
+    }
+  ]
+}

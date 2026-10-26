@@ -343,3 +343,21 @@ Commons: four replacement files and one existing file visually inspected in orig
 - 1203: File:Škoda-1203-sanitní Dolní-Kalná-P1040342.jpg
 - 105-120-125: File:Škoda 105 BJ 1978 (Foto Hilarmont) (1).JPG
 <!-- skoda-step7:end -->
+
+<!-- skoda-step8:start -->
+## Škoda specifications step 8 — 26 October 2026
+
+Three research groups checked remaining historic and 1990s–2010s version gaps. Selected manufacturer/manual factual specifications only; own scope notes, no copied prose or entire tables. Exact URLs and measurement definitions retained per field. Manufacturer documents remain copyrighted; Wikidata and Commons licensing unchanged. Worker evidence and limitations: analysis/codex/skoda-step8-evidence.json and skoda-step8-review.json.
+
+- https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf
+- https://www.skoda-storyboard.com/sk/historicke-automobily-sk/7-castles-trial-2022-krasne-auta-v-malebnej-krajine/
+- https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf
+- https://cdn.skoda-storyboard.com/2019/02/190227-The-%C5%A0KODA-FELICIA-convertible-celebrated-its-world-premiere-60-years-ago.pdf
+- https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf
+- https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf
+- https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf
+- https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/
+- https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf
+
+Three existing Commons originals visually inspected. 633 passed whole-car framing; 1101/1102 and 130/135/136 rejected and set null. No new photo files selected or binaries stored. Licence/author metadata retained in skoda-card-photo-evidence.json. Decisions: skoda-step8-photo-review.json; failed requests and pending files: skoda-step8-photo-candidates.json.
+<!-- skoda-step8:end -->

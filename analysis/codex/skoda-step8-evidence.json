@@ -1,0 +1,601 @@
+{
+  "retrievedDate": "2026-10-26",
+  "sources": [
+    "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf",
+    "https://www.skoda-storyboard.com/sk/historicke-automobily-sk/7-castles-trial-2022-krasne-auta-v-malebnej-krajine/",
+    "https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf",
+    "https://cdn.skoda-storyboard.com/2019/02/190227-The-%C5%A0KODA-FELICIA-convertible-celebrated-its-world-premiere-60-years-ago.pdf",
+    "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf",
+    "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf",
+    "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/",
+    "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+  ],
+  "workers": [
+    {
+      "file": "worker-step8-historic.json",
+      "retrievedOn": "2026-10-26",
+      "patches": [
+        {
+          "lineSlug": "favorit",
+          "generationIndex": 0,
+          "trimName": "135 L",
+          "fields": {
+            "acceleration0to100s": 15,
+            "consumptionL100": 5.5,
+            "consumptionCycle": "EHK constant speed90km/h; nominal with+10percent tolerance"
+          },
+          "sources": [
+            "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+          ],
+          "noteCs": "Andrt/Malina, Údržba a opravy, tištěná s. 15: referenční karburátorová 135 L se základním stálým převodem, bez neřízeného katalyzátoru a bez vstřikování. Uvedeno nominální zrychlení 0–100 km/h 15 s s řazením a tolerancí +4 s; nejde o přesný výsledek redakčního měření. Spotřeba 5.5 l/100 km je metodikou EHK při stálých 90 km/h s tolerancí +10 %. Nezaměňovat se spotřebou 5.6 pro stálý převod 4.167, standardní od 1/1993. Hmotnostní scope do 7/1991 zůstává zachován.",
+          "fieldSources": {
+            "acceleration0to100s": [
+              "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+            ],
+            "consumptionL100": [
+              "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+            ],
+            "consumptionCycle": [
+              "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+            ]
+          }
+        },
+        {
+          "lineSlug": "forman",
+          "generationIndex": 0,
+          "trimName": "135 GLX – karburátor",
+          "fields": {
+            "acceleration0to100s": 17
+          },
+          "sources": [
+            "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+          ],
+          "noteCs": "Andrt/Malina, Údržba a opravy, tištěná s. 23, společný sloupec Forman 135 L/LX/LS/GLX: nominální zrychlení 0–100 km/h 17 s s řazením, tolerance +4 s. Nejde o redakčně naměřenou hodnotu. Spotřeba se dále liší podle katalyzátoru a motorového kódu; zde nedoplňována.",
+          "fieldSources": {
+            "acceleration0to100s": [
+              "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
+            ]
+          }
+        },
+        {
+          "lineSlug": "440-445-450",
+          "generationIndex": 0,
+          "trimName": "440",
+          "fields": {
+            "consumptionL100": 7.7,
+            "consumptionCycle": "period manufacturer figure; measurement protocol unspecified"
+          },
+          "sources": [
+            "https://www.skoda-storyboard.com/sk/historicke-automobily-sk/7-castles-trial-2022-krasne-auta-v-malebnej-krajine/"
+          ],
+          "noteCs": "Výrobce v přehledu muzeálního vozu 440 z roku 1957 uvádí 7.7 l/100 km, ale nepopisuje zkušební postup. Zobrazeno jako dobový údaj s neuvedenou metodikou. Není mu dodatečně přiřazeno měření při 70/90 km/h, kombinovaný NEDC ani WLTP.",
+          "fieldSources": {
+            "consumptionL100": [
+              "https://www.skoda-storyboard.com/sk/historicke-automobily-sk/7-castles-trial-2022-krasne-auta-v-malebnej-krajine/"
+            ],
+            "consumptionCycle": [
+              "https://www.skoda-storyboard.com/sk/historicke-automobily-sk/7-castles-trial-2022-krasne-auta-v-malebnej-krajine/"
+            ]
+          }
+        },
+        {
+          "lineSlug": "440-445-450",
+          "generationIndex": 0,
+          "trimName": "450",
+          "fields": {
+            "consumptionL100": 9,
+            "consumptionCycle": "period average; measurement protocol unspecified"
+          },
+          "sources": [
+            "https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"
+          ],
+          "noteCs": "Tisková zpráva výrobce 25. 9. 2017, první strana, výslovně uvádí průměrnou spotřebu 9 l/100 km pro sériovou Škodu 450. Předpis ani stálou rychlost neuvádí; proto je přiznána neurčená dobová metodika a nikoli domyšlený moderní cyklus. Rozpor hmotnosti tím není vyřešen.",
+          "fieldSources": {
+            "consumptionL100": [
+              "https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"
+            ],
+            "consumptionCycle": [
+              "https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"
+            ]
+          }
+        },
+        {
+          "lineSlug": "felicia-1959",
+          "generationIndex": 0,
+          "trimName": "Felicia 1.1",
+          "fields": {
+            "consumptionL100": 9,
+            "consumptionCycle": "period average; measurement protocol unspecified"
+          },
+          "sources": [
+            "https://cdn.skoda-storyboard.com/2019/02/190227-The-%C5%A0KODA-FELICIA-convertible-celebrated-its-world-premiere-60-years-ago.pdf"
+          ],
+          "noteCs": "Zakladni Felicia1.1 podle vyrocni tiskove zpravy vyrobce27.2.2019, PDFstrana1. Prumerna spotreba9l/100km ma neuvedenou dobovou metodiku; nejde o WLTP/NEDC a udaj se neprenasi na FeliciaSuper1.2. Ani tento udaj nerozhoduje rozpor maximalni rychlosti.",
+          "fieldSources": {
+            "consumptionL100": [
+              "https://cdn.skoda-storyboard.com/2019/02/190227-The-%C5%A0KODA-FELICIA-convertible-celebrated-its-world-premiere-60-years-ago.pdf"
+            ],
+            "consumptionCycle": [
+              "https://cdn.skoda-storyboard.com/2019/02/190227-The-%C5%A0KODA-FELICIA-convertible-celebrated-its-world-premiere-60-years-ago.pdf"
+            ]
+          }
+        }
+      ],
+      "additions": [],
+      "needsReview": [
+        {
+          "lineSlug": "100-110",
+          "trimName": "100 /100L",
+          "fields": [
+            "acceleration0to100s"
+          ],
+          "reason": "Factory24s vs periodtest29s cannot be collapsed into a unique scalar without testload/protocol; leftnull."
+        },
+        {
+          "lineSlug": "110-r",
+          "fields": [
+            "acceleration0to100s"
+          ],
+          "reason": "19vs18.5s unresolved; no0–80or0–62mph conversion applied."
+        },
+        {
+          "lineSlug": "100-110",
+          "trimName": "110LS",
+          "fields": [
+            "consumptionL100"
+          ],
+          "reason": "Historical summaries disagree8.5vs9L without edition/protocol; no singlevalue selected."
+        },
+        {
+          "lineSlug": "favorit",
+          "trimName": "136L",
+          "fields": [
+            "acceleration0to100s",
+            "consumptionL100"
+          ],
+          "reason": "Repairmanual givesnominal14s and5.2at90km/h forbase136, butexistingrecord has unresolved136Lpoweridentity conflict. Withheld until versioncode reconciled."
+        },
+        {
+          "lineSlug": "favorit",
+          "trimName": "135Le /135LSe",
+          "fields": [
+            "acceleration0to100s",
+            "consumptionL100"
+          ],
+          "reason": "ControlledEcotroniccarburettor cannot be equated with injection or unregulatedcatalyst columns. Need originalexportbrochure byenginecode."
+        },
+        {
+          "lineSlug": "105-120-125",
+          "trimName": "105S /120GLS /125L",
+          "fields": [
+            "acceleration0to100s",
+            "consumptionL100"
+          ],
+          "reason": "No additional exact-year/gearboxprimarytable verified in this worker; generic1976or1987Lfigures not copied onto1985S/GLS or1989L."
+        },
+        {
+          "lineSlug": "forman",
+          "trimName": "135GLXcarburettor",
+          "fields": [
+            "consumptionL100"
+          ],
+          "reason": "Base/catalyst/enginecode choices change value5.8/5.9/6.0 at90km/h; do not choose without emissionscode."
+        }
+      ],
+      "verification": {
+        "fieldCount": 10,
+        "sourceLimitations": [
+          "Andrt/MalinaPDF fullwebopen rejected18MBsize; cited page15and23 tables plusfootnotes read from targetedPDFsearch extracts. Tablecolumnlayout not visuallychecked thisworker.",
+          "FeliciaPDF fullwebopen rejected22MBsize; complete indexedpage141table explicitly separatesFelicia/Combi andstates93/116ES. Not claimed new fullPDFvisualinspection.",
+          "450PDF opened successfully;440OEMSlovakpage read/queried separately. Unknownprotocol labels are deliberate."
+        ]
+      },
+      "helpWanted": [
+        "Favorit135Le/LSe Ecotronic originalexporttechnicaltable with exactenginecode and0–100/consumptionprotocol.",
+        "Škoda100/100L periodfactoryandtest0–100 procedures showing vehicleload and revision, to explain24vs29s.",
+        "Škoda110R period0–100test conditions explaining18.5vs19s.",
+        "Forman135GLX1993 carburettor emissionscode/catalyst type before selecting90km/hconsumption."
+      ],
+      "delegatedFindings": [
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "1.3 MPI 40 kW - hatchback (pozdni navod)",
+          "fields": {
+            "consumptionL100": 6.4,
+            "consumptionCycle": "93/116/ES combined"
+          },
+          "sources": [
+            "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+          ],
+          "noteCs": "Původní pozdní návod k obsluze Felicia, tištěná s. 141: samostatný sloupec Felicia a motor 1.3 l/40 kW; kombinace 6.4 l/100 km podle výslovně uvedené směrnice 93/116 ES. Nepřenášet na starší BMM40 ani na jinou definici třetinového Euromixu.",
+          "fieldSources": {
+            "consumptionL100": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ],
+            "consumptionCycle": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ]
+          }
+        },
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "Combi 1.3 MPI 50 kW (pozdni navod)",
+          "fields": {
+            "consumptionL100": 6.7,
+            "consumptionCycle": "93/116/ES combined"
+          },
+          "sources": [
+            "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+          ],
+          "noteCs": "Původní pozdní návod, tištěná s. 141: výslovně samostatný sloupec Felicia Combi, motor 1.3 l/50 kW; kombinovaná spotřeba 6.7 l/100 km podle 93/116 ES. Údaj nebyl zkopírován z hatchbacku, i když se číselně shoduje.",
+          "fieldSources": {
+            "consumptionL100": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ],
+            "consumptionCycle": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "file": "worker-step8-largecars.json",
+      "retrievedAt": "2026-10-26",
+      "patches": [
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "1.3 MPI 40 kW - hatchback (pozdni navod)",
+          "fields": {
+            "consumptionL100": 6.4,
+            "consumptionCycle": "93/116/ES combined"
+          },
+          "sources": [
+            "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+          ],
+          "fieldSources": {
+            "consumptionL100": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ],
+            "consumptionCycle": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ]
+          },
+          "noteCs": "Doplněna kombinovaná spotřeba přímo z tabulky téhož pozdního českého návodu na tištěné straně141: motor1,3l/40kW, sloupec FELICIA, 8,8město/5,0mimo/6,4kombinace. Záhlaví výslovně uvádí směrnici93/116ES. Hodnota se týká již vybrané MPI varianty podle tohoto návodu, nikoli staršího BMM. Přesné datum vydání návodu a modelový rok zůstávají neurčeny."
+        },
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "Combi 1.3 MPI 50 kW (pozdni navod)",
+          "fields": {
+            "consumptionL100": 6.7,
+            "consumptionCycle": "93/116/ES combined"
+          },
+          "sources": [
+            "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+          ],
+          "fieldSources": {
+            "consumptionL100": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ],
+            "consumptionCycle": [
+              "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+            ]
+          },
+          "noteCs": "Doplněna kombinovaná spotřeba přímo ze samostatných sloupců FELICIA COMBI na tištěné straně141 téhož pozdního českého návodu: motor1,3l/50kW, 9,3město/5,1mimo/6,7kombinace. Není kopírována z hatchbacku; výrobce uvádí pro oba typy stejné hodnoty odděleně. Norma93/116ES je přímo v záhlaví. Přesný modelový rok návodu zůstává neznámý."
+        }
+      ],
+      "additions": [],
+      "audit": {
+        "scope": "Existing OctaviaI/II/III,SuperbI/II/III and Felicia records only.",
+        "fuelConsumptionNullsBefore": 2,
+        "fuelConsumptionNullsAfter": 0,
+        "newNonNullFields": 4,
+        "note": "All existing selected OctaviaI/II/III andSuperbI/II/III versions already had fuel consumption and cycle populated at read time. No additional versions created. CurrentIV WLTP range-only values remain untouched."
+      },
+      "needsReview": [
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "1.3 MPI 40 kW - hatchback (pozdni navod)",
+          "fields": [
+            "transmission.gears",
+            "specificationScope.modelYear"
+          ],
+          "reason": "Precise late-manual edition year and explicit gearbox-count page were not verified in available readable primary source; retained null."
+        },
+        {
+          "lineSlug": "felicia",
+          "generationIndex": 0,
+          "trimName": "Combi 1.3 MPI 50 kW (pozdni navod)",
+          "fields": [
+            "transmission.gears",
+            "specificationScope.modelYear"
+          ],
+          "reason": "Precise late-manual edition year and explicit gearbox-count page were not verified in available readable primary source; retained null."
+        }
+      ],
+      "helpWanted": [
+        "Felicia: title/imprint pages of this exact late Czech manual to establish edition and market/model year; neither search indexing date nor website publication date is a model year.",
+        "Felicia: readable technical description or gearbox page of this same late manual explicitly identifying five forward speeds; general model knowledge was not used to fill source-specific nulls.",
+        "OctaviaIAGN1.8 20V92kW early5MT acceleration remains a known separate unresolved10.7/10.9s conflict; no new primary factory sheet located in this consumption-focused batch."
+      ],
+      "verification": [
+        "Read current skoda.json and enumerated all consumption-null versions for the requested old Octavia/Superb andFelicia sections. Only the two specified Felicia MPI records were null.",
+        "Original Czech manufacturer manual page141 exposed as complete indexed table by targeted web search: two separate FELICIA/FELICIACOMBI body groups, exact engine rows, consumption-cycle header93/116ES.",
+        "Direct web open rejected the PDF because its22216055-byte size exceeds tool content-length limit. The table facts are indexed-source evidence, not a claim of local full-PDF visual review.",
+        "Two local in-memory PDF extraction attempts could not start: python and the earlier supplied Python313 path are not available in this worker environment. No binaries downloaded or files created by those attempts.",
+        "No shared catalogue or script edited; no fuel-range minimum selected."
+      ]
+    },
+    {
+      "file": "worker-step8-smallcars.json",
+      "retrievedAt": "2026-10-26",
+      "patches": [
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "fields": {
+            "engine.displacementCc": 997,
+            "transmission.type": "manual",
+            "transmission.gears": 5
+          },
+          "sources": [
+            "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+          ],
+          "fieldSources": {
+            "engine.displacementCc": [
+              "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+            ],
+            "transmission.type": [
+              "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+            ],
+            "transmission.gears": [
+              "https://www.scribd.com/document/343564459/scoda-ssp-ru-032-en-Fabia-pdf"
+            ]
+          },
+          "noteCs": "Primarni skolici material vyrobce SSP32: strana14 uvadi pro motor1.0/37kW objem997cm3; strany12 a22 prirazuji prevodovku002H s peti rychlostmi. Objem997 se shoduje se dvema zaznamy Junior v Auta5P; proti chybe966cm3 v dobovem HNonline uprednostnen primarni motorovy podklad. Nejde o preneseni hmotnosti puvodni zakladni Fabie na Junior. Hmotnost1010/1035 zustava nevyresena."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+          "fields": {
+            "transmission.gears": 6,
+            "dimensionsMm.length": 4002,
+            "dimensionsMm.width": 1646,
+            "dimensionsMm.height": 1441,
+            "dimensionsMm.wheelbase": 2462
+          },
+          "sources": [
+            "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+          ],
+          "fieldSources": {
+            "transmission.gears": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+            ],
+            "dimensionsMm.length": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+            ],
+            "dimensionsMm.width": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+            ],
+            "dimensionsMm.height": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+            ],
+            "dimensionsMm.wheelbase": [
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+            ]
+          },
+          "noteCs": "Rozmery a sestistupnovy manual se tykaji RS hatchbacku, nikoli bezne Fabie. Dokumentace modeluRS2003-2007 primo uvadi4002x1646x1441mm a6MT; dobovy testADAC2006 pro EuroIVBLT potvrzuje tyto rozmery a rozvor2462mm. Hmotnost ani presny0-100 z techto podkladu neprenasime: hmotnost i zrychleni se mezi trhem a revizi lisi. Predchozi poznamku o nezjistenem poctu stupnu a rozmerech tato evidence nahrazuje."
+        },
+        {
+          "lineSlug": "karoq",
+          "generationIndex": 0,
+          "trimName": "1.5 TSI 110 kW – manuální",
+          "fields": {
+            "consumptionCycle": "WLTP combined"
+          },
+          "sources": [
+            "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+          ],
+          "fieldSources": {
+            "consumptionCycle": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ]
+          },
+          "noteCs": "List4.4.2022 jednoznacne oznacuje kombinovanou spotrebuWLTP pro1.5TSI110kW6MT hodnotami6.0-6.7l/100km. Norma doplnena, ale scalar spotreby zustava null; dolni mez spotreby nebyla zvolena."
+        }
+      ],
+      "additions": [],
+      "needsReview": [
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "RS 1.9 TDI-PD 96 kW",
+          "fields": [
+            "consumptionL100",
+            "massKg"
+          ],
+          "reason": "Aggregate2003-2007version still unscoped. Already-separate2006EuroIVsample has5.3. Do not replace aggregate with5.3 or5.4 universally. UK2003brochure5.1 andUK2006EuroIII5.4/EuroIV5.3 require separate documentary records."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+          "fields": [
+            "massKg",
+            "acceleration0to100s"
+          ],
+          "reason": "Manufacturer overview1245-1315kg and9.5s; German ADAC2006 lists1320kgEU and9.6s factory. UK brochure9.5s is0-62mph. Keep exact mass/0-100 null for this UK sample unless UK-specific source reconciles definitions."
+        },
+        {
+          "lineSlug": "karoq",
+          "generationIndex": 0,
+          "trimName": "1.5 TSI 110 kW – manuální",
+          "fields": [
+            "consumptionL100"
+          ],
+          "reason": "Only6.0-6.7WLTP interval in exact2022manualFWDscope; requires specified homologated equipment for scalar."
+        }
+      ],
+      "helpWanted": [
+        {
+          "model": "Fabia I Junior1.0MPI37kW",
+          "fields": [
+            "massKg",
+            "massBasis"
+          ],
+          "request": "Dated Czech manufacturer Junior price/technical sheet or original vehicle conformity specification identifying base weight and driver inclusion;1010and1035kg secondaryentries differ."
+        },
+        {
+          "model": "Fabia I RS EuroIV UK05/2006",
+          "fields": [
+            "massKg",
+            "acceleration0to100s"
+          ],
+          "request": "UK technical data/owners supplement for BLT confirming0-100km/h not0-62mph and mass with driver definition."
+        },
+        {
+          "model": "Fabia I Combi1.4 16V55kW2001",
+          "fields": [
+            "transmission.type",
+            "transmission.gears",
+            "drive"
+          ],
+          "request": "Original Czech April2001 tested car transmission description: gearbox manual/automatic must be identified. Manufacturer also offered automatic, so no default5MT assigned."
+        }
+      ],
+      "audit": [
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "versions": 4,
+          "withConsumption": 3
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 1,
+          "versions": 5,
+          "withConsumption": 5
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 2,
+          "versions": 4,
+          "withConsumption": 4
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "versions": 6,
+          "withConsumption": 6
+        },
+        {
+          "lineSlug": "citigo",
+          "generationIndex": 0,
+          "versions": 2,
+          "withConsumption": 2
+        },
+        {
+          "lineSlug": "rapid",
+          "generationIndex": 0,
+          "versions": 3,
+          "withConsumption": 3
+        },
+        {
+          "lineSlug": "yeti",
+          "generationIndex": 0,
+          "versions": 6,
+          "withConsumption": 6
+        },
+        {
+          "lineSlug": "kodiaq",
+          "generationIndex": 0,
+          "versions": 2,
+          "withConsumption": 2
+        }
+      ]
+    }
+  ],
+  "photoReview": {
+    "reviewedAt": "2026-10-26",
+    "method": "Original Commons files viewed from OS temporary storage. Whole-car rule; no new image binaries in repository.",
+    "decisions": [
+      {
+        "lineSlug": "1101-1102",
+        "generationIndex": 0,
+        "file": "File:Škoda 1101 tudor.JPG",
+        "decision": "rejected",
+        "noteCs": "Přední levý konec nárazníku je mimo záběr a vůz nemá dostatečný okraj. Fotografie nesplňuje pravidlo celého automobilu."
+      },
+      {
+        "lineSlug": "130-135-136",
+        "generationIndex": 0,
+        "file": "File:ŠKODA 130 GL.JPG",
+        "decision": "rejected",
+        "noteCs": "Těsný pohled zezadu neukazuje celou délku karoserie ani všechna kola. Pro ilustraci celé modelové rodiny je nevhodný."
+      },
+      {
+        "lineSlug": "633",
+        "generationIndex": 0,
+        "file": "File:Škoda 633 - 1933.JPG",
+        "decision": "passed",
+        "noteCs": "Celý automobil je v předním tříčtvrtečním pohledu s okrajem kolem nárazníku, střechy i kol. Okolní auta a městský mobiliář nezakrývají významnou část karoserie. Přesný rok a původnost výbavy kontrola nepotvrzuje."
+      }
+    ],
+    "unresolved": [
+      {
+        "lineSlug": "420-standard",
+        "file": "File:Škoda 420 Standard vr.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "430",
+        "file": "File:2007-08-cesko-166.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "440-445-450",
+        "file": "File:Škoda-440 Studenec-WP20170826151026.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "637",
+        "file": "File:Škoda 637 (1934) 02.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "645",
+        "file": "File:Skoda 645 1.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "650",
+        "file": "File:Škoda 650 (1934).jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "860",
+        "file": "File:13-04-05-Skoda Museum Mladá Boleslav by RalfR-015.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      },
+      {
+        "lineSlug": "citigo",
+        "file": "File:2014 Škoda Citigo 5-door, front right.jpg",
+        "reason": "HTTP 429; no visual decision, remains pending"
+      }
+    ]
+  },
+  "scope": "Existing-version facts only. Source prose/tables not reproduced wholesale. Nominal historic figures retain published tolerances and test-cycle notes."
+}

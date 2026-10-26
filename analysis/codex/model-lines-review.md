@@ -3972,3 +3972,41 @@ Four replacements passed whole-car framing: 1201 STW, 422, L&K/Škoda 110, and 1
 
 Detailed field gaps and withheld lead decisions: skoda-step7-review.json. Remaining gaps are partly sourceable; the range and version coverage are not complete. Build: build-skoda-cards.mjs, then write-skoda-step7-review.mjs; validate-model-cards.mjs and validate-model-lines.mjs.
 <!-- skoda-step7:end -->
+
+<!-- skoda-step8:start -->
+## Škoda step 8 — remaining historic consumption and acceleration
+
+All 171 existing versions retained; no added versions this pass. Three parallel research groups completed. 23 previously null fields populated, counting individual dimensions, cycle labels and gearbox fields separately. Elapsed 3.9 minutes. Full dimensions 123 → 124.
+
+| Field | Before | After |
+| --- | ---: | ---: |
+| massKg | 118 | 118 |
+| acceleration0to100s | 104 | 106 |
+| consumptionL100 | 70 | 76 |
+| consumptionKwh100 | 11 | 11 |
+| rangeKm | 12 | 12 |
+| dimensionsMm.length | 131 | 132 |
+| dimensionsMm.width | 131 | 132 |
+| dimensionsMm.height | 130 | 131 |
+| dimensionsMm.wheelbase | 125 | 126 |
+
+Existing Octavia I–III, Superb I–III, Fabia II–III, Roomster, Citigo, European Rapid, Yeti and Kodiaq I version records already had consumption. Workers targeted remaining Felicia/historic fields and exact transmission or dimension gaps. Original source scope and published tolerances remain in each patched record. Nominal manual specifications are not claimed as measured results for every surviving vehicle. Contemporary consumption ranges remain scalar null; no fuel-range minimum selected.
+
+### Photos
+
+- 1101-1102: rejected — Přední levý konec nárazníku je mimo záběr a vůz nemá dostatečný okraj. Fotografie nesplňuje pravidlo celého automobilu.
+- 130-135-136: rejected — Těsný pohled zezadu neukazuje celou délku karoserie ani všechna kola. Pro ilustraci celé modelové rodiny je nevhodný.
+- 633: passed — Celý automobil je v předním tříčtvrtečním pohledu s okrajem kolem nárazníku, střechy i kol. Okolní auta a městský mobiliář nezakrývají významnou část karoserie. Přesný rok a původnost výbavy kontrola nepotvrzuje.
+
+References 69 → 67; reviewed 10 → 11; pending 56. Rejected images set null. Downloads that returned HTTP429 were not visually approved; no bypass or repeated retry loop. Images viewed only from OS temporary files.
+
+### Help wanted
+
+- Licensed full-car replacements for 1101/1102 and 130/135/136; 4R remains without an approved reference. 56 existing references still need review.
+- Original Junior homologation/weight sheet and market-specific version identification; existing mass disagreement is unresolved.
+- Exact historic acceleration test protocols and editions, especially 110 R 18.5/19.0 s and engine/year/body-specific figures. Do not convert 0–80 or 0–62 mph into 0–100.
+- Original prewar and 1950s manuals with consumption protocol, version-specific masses and acceleration; many contemporary descriptions give only maximum speed or approximate fuel consumption.
+- Remaining worker-specific gaps, evidence limits and source references are retained in skoda-step8-review.json. Škoda coverage is still partial. This pass demonstrates diminishing returns for already-covered 1990s–2010s consumption; further research should use specific missing documents rather than repeat broad searches.
+
+Rebuild with build-skoda-cards.mjs and write-skoda-step8-review.mjs; run both model validators.
+<!-- skoda-step8:end -->

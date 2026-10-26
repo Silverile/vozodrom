@@ -1,0 +1,89 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "trimName": "1.3 MPI 40 kW - hatchback (pozdni navod)",
+      "fields": {
+        "consumptionL100": 6.4,
+        "consumptionCycle": "93/116/ES combined"
+      },
+      "sources": [
+        "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+      ],
+      "fieldSources": {
+        "consumptionL100": [
+          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+        ],
+        "consumptionCycle": [
+          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+        ]
+      },
+      "noteCs": "Doplněna kombinovaná spotřeba přímo z tabulky téhož pozdního českého návodu na tištěné straně141: motor1,3l/40kW, sloupec FELICIA, 8,8město/5,0mimo/6,4kombinace. Záhlaví výslovně uvádí směrnici93/116ES. Hodnota se týká již vybrané MPI varianty podle tohoto návodu, nikoli staršího BMM. Přesné datum vydání návodu a modelový rok zůstávají neurčeny."
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "trimName": "Combi 1.3 MPI 50 kW (pozdni navod)",
+      "fields": {
+        "consumptionL100": 6.7,
+        "consumptionCycle": "93/116/ES combined"
+      },
+      "sources": [
+        "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+      ],
+      "fieldSources": {
+        "consumptionL100": [
+          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+        ],
+        "consumptionCycle": [
+          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+        ]
+      },
+      "noteCs": "Doplněna kombinovaná spotřeba přímo ze samostatných sloupců FELICIA COMBI na tištěné straně141 téhož pozdního českého návodu: motor1,3l/50kW, 9,3město/5,1mimo/6,7kombinace. Není kopírována z hatchbacku; výrobce uvádí pro oba typy stejné hodnoty odděleně. Norma93/116ES je přímo v záhlaví. Přesný modelový rok návodu zůstává neznámý."
+    }
+  ],
+  "additions": [],
+  "audit": {
+    "scope": "Existing OctaviaI/II/III,SuperbI/II/III and Felicia records only.",
+    "fuelConsumptionNullsBefore": 2,
+    "fuelConsumptionNullsAfter": 0,
+    "newNonNullFields": 4,
+    "note": "All existing selected OctaviaI/II/III andSuperbI/II/III versions already had fuel consumption and cycle populated at read time. No additional versions created. CurrentIV WLTP range-only values remain untouched."
+  },
+  "needsReview": [
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "trimName": "1.3 MPI 40 kW - hatchback (pozdni navod)",
+      "fields": [
+        "transmission.gears",
+        "specificationScope.modelYear"
+      ],
+      "reason": "Precise late-manual edition year and explicit gearbox-count page were not verified in available readable primary source; retained null."
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "trimName": "Combi 1.3 MPI 50 kW (pozdni navod)",
+      "fields": [
+        "transmission.gears",
+        "specificationScope.modelYear"
+      ],
+      "reason": "Precise late-manual edition year and explicit gearbox-count page were not verified in available readable primary source; retained null."
+    }
+  ],
+  "helpWanted": [
+    "Felicia: title/imprint pages of this exact late Czech manual to establish edition and market/model year; neither search indexing date nor website publication date is a model year.",
+    "Felicia: readable technical description or gearbox page of this same late manual explicitly identifying five forward speeds; general model knowledge was not used to fill source-specific nulls.",
+    "OctaviaIAGN1.8 20V92kW early5MT acceleration remains a known separate unresolved10.7/10.9s conflict; no new primary factory sheet located in this consumption-focused batch."
+  ],
+  "verification": [
+    "Read current skoda.json and enumerated all consumption-null versions for the requested old Octavia/Superb andFelicia sections. Only the two specified Felicia MPI records were null.",
+    "Original Czech manufacturer manual page141 exposed as complete indexed table by targeted web search: two separate FELICIA/FELICIACOMBI body groups, exact engine rows, consumption-cycle header93/116ES.",
+    "Direct web open rejected the PDF because its22216055-byte size exceeds tool content-length limit. The table facts are indexed-source evidence, not a claim of local full-PDF visual review.",
+    "Two local in-memory PDF extraction attempts could not start: python and the earlier supplied Python313 path are not available in this worker environment. No binaries downloaded or files created by those attempts.",
+    "No shared catalogue or script edited; no fuel-range minimum selected."
+  ]
+}
