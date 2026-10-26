@@ -376,3 +376,22 @@ Only six human-supplied URLs, the equivalent public canonical Scribd address and
 
 Scribd canonical equivalent: https://www.scribd.com/document/81802893/Manual-Skoda-Octavia-1-8-92kW . Auto.cz direct access403; indexed technical excerpts used, not a claim of unrestricted page access. 4R original candidate and terms: skoda-step9-4r-photo-review.json. Its whole-car framing passes, but catalogue reuse permission is unconfirmed, so the photo is not in the public card. No free licence inferred from press/news permission.
 <!-- skoda-step9:end -->
+
+<!-- skoda-wide-photos:start -->
+## Škoda photo framing replacements — 26 October 2026
+
+Commons photo references only; no image binaries copied into repository. Author, licence URL and source file page retained for each selected photo. Visual decisions recorded in analysis/codex/skoda-step10-photo-review.json and worker-wide-*.json. 10 replaced / 14 retained from 24 aspect outliers. Sources viewed as original files or proportional published previews; metadata read through API where available or rendered/cached Commons file pages. New policy prefers entire vehicle, approximately5%margin, front three-quarter, aspect near3:2. Popular/Epiq4:3 fallbacks have ample vertical margin. No local image cropping/editing. Commons CC licences unchanged.
+
+- [File:Techno Classica 2018, Essen (IMG 9665).jpg](https://commons.wikimedia.org/wiki/File:Techno_Classica_2018,_Essen_(IMG_9665).jpg) — Matti Blume; CC BY-SA 4.0; 5472×3648.
+- [File:20221030 159 Naxos.jpg](https://commons.wikimedia.org/wiki/File:20221030_159_Naxos.jpg) — Jean Housen; CC BY-SA 4.0; 6000×4000.
+- [File:Škoda Popular 420 1.JPG](https://commons.wikimedia.org/wiki/File:%C5%A0koda_Popular_420_1.JPG) — <a href="//commons.wikimedia.org/wiki/User:Ji%C5%99%C3%AD_Erben" title="User:Jiří Erben">Jiří Erben</a>; CC BY-SA 3.0; 2560×1920.
+- [File:Skoda Yeti – Frontansicht, 14. Juni 2011, Mettmann.jpg](https://commons.wikimedia.org/wiki/File:Skoda_Yeti_%E2%80%93_Frontansicht%2C_14._Juni_2011%2C_Mettmann.jpg) — M 93; CC BY-SA 3.0 de; 2253×1473.
+- [File:2013 Skoda Rapid S TSi.jpg](https://commons.wikimedia.org/wiki/File:2013_Skoda_Rapid_S_TSi.jpg) — Calreyn88; CC BY-SA 4.0; 2040×1404.
+- [File:2022 Skoda Octavia SE TSi.jpg](https://commons.wikimedia.org/wiki/File:2022_Skoda_Octavia_SE_TSi.jpg) — Calreyn88; CC BY-SA 4.0; 1842×1214.
+- [File:2014 Skoda Fabia III Typ NJ3 1.2 TSI Style Metall-Grau-Metallic Vorderansicht.jpg](https://commons.wikimedia.org/wiki/File:2014_Skoda_Fabia_III_Typ_NJ3_1.2_TSI_Style_Metall-Grau-Metallic_Vorderansicht.jpg) — Kickaffe (Mario von Berg); CC BY-SA 4.0; 2000×1214.
+- [File:Škoda Fabia IV 1X7A7110.jpg](https://commons.wikimedia.org/wiki/File:Škoda_Fabia_IV_1X7A7110.jpg) — Alexander-93; CC BY-SA 4.0; 3616×2412.
+- [File:Skoda Karoq 2017 1.jpg](https://commons.wikimedia.org/wiki/File:Skoda_Karoq_2017_1.jpg) — Mike-fiesta; CC BY-SA 4.0; 6016×4016.
+- [File:Skoda Epiq front quarter view.jpg](https://commons.wikimedia.org/wiki/File:Skoda_Epiq_front_quarter_view.jpg) — Oil151kv; CC BY 4.0; 4080×3060.
+
+Full ratio and kept/missing report: analysis/codex/skoda-wide-photos-review.json. Size-registry handoff: analysis/codex/skoda-wide-photo-size-additions.json. Existing versions/specifications unchanged. This pass does not finish all remaining photo reviews.
+<!-- skoda-wide-photos:end -->

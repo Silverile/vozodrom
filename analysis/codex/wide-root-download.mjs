@@ -1,0 +1,9 @@
+import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {createHash}from'node:crypto';
+const rows=[
+ ['rapid-india','Skoda Rapid.jpg',1265,844,'Rishabh Mathur','CC BY 2.0','https://creativecommons.org/licenses/by/2.0/'],
+ ['epiq','Škoda Epiq Sindelfingen 2026 IMG 8278.jpg',5941,4023,'Alexander Migl','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/'],
+ ['epiq','Škoda Epiq Sindelfingen 2026 IMG 8241.jpg',4043,2540,'Alexander Migl','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/'],
+ ['kylaq','4th International Auto Show, Bangalore (2025) 81.jpg',4080,3072,'Gpkp','CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/']
+].map(([lineSlug,file,width,height,authorHtml,licence,licenceUrl])=>{const fn=file.replaceAll(' ','_'),hash=createHash('md5').update(fn).digest('hex');return{lineSlug,file:'File:'+file,url:'https://upload.wikimedia.org/wikipedia/commons/'+hash[0]+'/'+hash.slice(0,2)+'/'+encodeURIComponent(fn),filePageUrl:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(fn),width,height,authorHtml,licence,licenceUrl,aspect:width/height,metadataMethod:'Dimensions, author and licence read from Commons file page through web source; upload URL resolved from Commons filename hash and checked by HTTP.'};});
+for(const [i,p]of rows.entries()){try{const r=await fetch(p.url,{signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('HTTP '+r.status);p.localPath=path.join(os.tmpdir(),'vozodrom-wide-root-'+i+'.jpg');fs.writeFileSync(p.localPath,Buffer.from(await r.arrayBuffer()));p.downloaded=true;}catch(e){p.error=e.message;}await new Promise(r=>setTimeout(r,1500));}
+fs.writeFileSync('analysis/codex/wide-root-downloads.json',JSON.stringify(rows,null,2)+'\n');console.log(JSON.stringify(rows.map(p=>({file:p.file,path:p.localPath,error:p.error})),null,2));

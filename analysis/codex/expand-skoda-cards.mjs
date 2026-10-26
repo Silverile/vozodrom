@@ -9,6 +9,7 @@ import {enrichStep6,step6Sources} from './skoda-step6.mjs';
 import {enrichStep7,step7Sources} from './skoda-step7.mjs';
 import {enrichStep8,step8Sources} from './skoda-step8.mjs';
 import {enrichStep9,step9Sources} from './skoda-step9.mjs';
+import {replaceWidePhoto} from './skoda-wide-photos.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,d)=>fs.writeFileSync(p,JSON.stringify(d,null,2)+'\n');
 const e=read('analysis/codex/skoda-card-evidence.json'),photos=read('analysis/codex/skoda-card-photo-evidence.json');
 const additions=read('src/data/catalog/model-line-additions.json').filter(a=>!(a.makeSlug==='skoda'&&range.some(r=>r[0]===a.slug)));
@@ -84,6 +85,7 @@ for(const c of cards){for(const [i,g]of c.generations.entries()){
  enrichStep7(c,g,i);
  enrichStep8(c,g,i);
  enrichStep9(c,g,i);
+ replaceWidePhoto(c,g,i);
  if(g.trims)for(const t of g.trims){g.sources.push(...t.sources);c.sources.push(...t.sources);}
  g.sources=[...new Set(g.sources)];
  }

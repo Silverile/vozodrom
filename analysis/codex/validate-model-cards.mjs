@@ -46,7 +46,7 @@ assert.equal(cards.find(c=>c.lineSlug==='110-r').generations[0].trims[0].acceler
 const named100=cards.find(c=>c.lineSlug==='100-110').generations[0].trims;assert.deepEqual(named100.map(t=>t.name),['100','100 L','110 L','110 LS']);assert.equal(named100[0].engine.powerStandard,'ISO');assert.equal(named100[0].massKg,805);assert.equal(named100[0].acceleration0to100s,null);
 assert.equal(cards.find(c=>c.lineSlug==='favorit').generations[0].trims.find(t=>t.name==='136 L').engine.powerKw,null,'conflicting Favorit power must remain null');
 console.log(`${cards.length} cards, ${generations} generations/families, ${photoCount} Commons references, ${engines} partial engine records, ${trimCount} selected version records validated.`);
-console.log('UTF-8, existing/addition slugs, explicit unknowns, source references, dimensions/engine units, photo metadata/licences and scoped OEM examples passed. Photos remain external references; reviewed originals were viewed from temporary storage.');
+console.log('UTF-8, existing/addition slugs, explicit unknowns, source references, dimensions/engine units, photo metadata/licences and scoped OEM examples passed. Photos remain external references; inspection method is recorded per review.');
 
 function validatePhotoDecision(lineSlug,generationIndex,photo){
  const reviews=fs.readdirSync('analysis/codex').filter(f=>/^skoda-step\d+-photo-review\.json$/.test(f)).flatMap(f=>{const r=read('analysis/codex/'+f);return r.decisions.map(d=>({...d,reviewedAt:r.reviewedAt}));});

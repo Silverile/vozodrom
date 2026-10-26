@@ -4033,3 +4033,51 @@ These six leads are processed. Close broad research now; remaining gaps are expl
 
 Rebuild: build-skoda-cards.mjs, write-skoda-step9-review.mjs; run model-card and model-line validators.
 <!-- skoda-step9:end -->
+
+<!-- skoda-wide-photos:start -->
+## Škoda photo aspect and margin pass — 26 October 2026
+
+Human instructions #37–38 supersede previous framing preferences: whole vehicle, approximately5% minimum margin on every side, front three-quarter; prefer1.4–1.7 aspect. Audit used Claude-owned src/data/photo-sizes.json plus existing Commons metadata. 24 photographs were outside1.3–1.75; 10 replaced and 14 retained after candidate checks. Three parallel researchers plus root; 6.7 minutes to merge. No commits or image editing. No image binaries in repository.
+
+| Line / generation | Old aspect | New aspect |
+| --- | ---: | ---: |
+| 645 / generation 1 | 1.778 | 1.500 |
+| praktik / generation 1 | 1.244 | 1.500 |
+| popular / generation 1 | 0.750 | 1.333 |
+| yeti / generation 1 | 1.961 | 1.530 |
+| rapid / generation 1 | 1.999 | 1.453 |
+| octavia / generation 4 | 2.228 | 1.517 |
+| fabia / generation 3 | 1.859 | 1.647 |
+| fabia / generation 4 | 1.835 | 1.499 |
+| karoq / generation 1 | 1.807 | 1.498 |
+| epiq / generation 1 | 1.224 | 1.333 |
+
+Popular and Epiq are explicitly documented4:3 fallbacks within the display fill band, with unusually ample vertical margin to withstand16:10 cover. Other replacements are close to3:2. Approved images were inspected as originals or published proportional960px previews; method and exact file licence/author are in worker evidence. Reviewed status does not certify specific trim/year/originality. FabiaIII changes facelift phase within the generation. OctaviaIV changes the illustration from liftback toCombi within the same generation. The Praktik car is relatively small against a harbour background; all parts remain visible.
+
+### Retained targets
+
+- 420-standard / generation 1: Druhý průchod nevyřazoval 4:3 podle poměru. Prohlédnuto šest dalších 960px náhledů: Museum 1934 01 má levý okraj pouze ~1,7 %; Museum1934 02 zadní pohled a těsný pravý okraj. 2007-08-cesko-145 je téměř čelní a stojan překrývá přední nárazník/masku. rr005 podobně zakrytý stojanem, navíc červený 418 Standard, nikoli zaručený 420. rr006 a rr023 pouze detaily. Žádná lepší úplná přední fotografie se všemi požadovanými okraji.
+- 650 / generation 1: Kategorie Commons obsahuje jediný soubor, současnou fotografii z roku 1934. Žádná jiná kandidátní fotografie k posouzení.
+- favorit-1936 / generation 1: Jediný široký kandidát v kategorii Skoda Favorit typ 923.JPG (4592×3056) byl prohlédnut v originálu: vůz mezi dalšími exponáty, přední nárazník příliš blízko spodního okraje a bok částečně zakryt sousedním vozem. Ostatní soubory v úplném seznamu převážně 4:3. Náhrada zamítnuta.
+- octavia / generation 1: Původní fotografie ponechána: prověřené alternativy nesplnily 5% rezervu nebo nebyly vhodným reprezentativním čelním pohledem. Ponechání není nové schválení původní fotografie.
+- octavia / generation 3: Původní fotografie ponechána: prověřené alternativy nesplnily 5% rezervu nebo nebyly vhodným reprezentativním čelním pohledem. Ponechání není nové schválení původní fotografie.
+- superb / generation 2: Původní fotografie ponechána: prověřené alternativy nesplnily 5% rezervu nebo nebyly vhodným reprezentativním čelním pohledem. Ponechání není nové schválení původní fotografie.
+- superb / generation 3: Původní fotografie ponechána: prověřené alternativy nesplnily 5% rezervu nebo nebyly vhodným reprezentativním čelním pohledem. Ponechání není nové schválení původní fotografie.
+- kamiq / generation 1: Prohlédnut zveřejněný náhled File:2019 Skoda Kamiq SE 1.0 Front.jpg (5181 × 3450; poměr 1,502; autor Vauxford, CC BY-SA 4.0): evropský Kamiq, přední tříčtvrteční pohled, celý vůz, ale levý okraj přibližně 4 % šířky a spodní přibližně 4,5 % výšky; nesplňuje požadavek 5 %, zamítnuto. Dále zkontrolována metadata File:Škoda Kamiq (2019) IMG 8635.jpg (5017 × 3339; 1,503; Alexander-93; CC BY-SA 4.0), ale bez úspěšně otevřeného náhledu nelze schválit. Stávající snímek ponechán.
+- kodiaq / generation 1: Dohledány a prohlédnuty další dvě konkrétní fotografie: File:2018 Skoda Kodiaq.jpg (2387 × 1648; 1,448; Calreyn88; CC BY-SA 4.0) má přední pohled, ale vlevo přibližně 2 %, nahoře 3 % a dole pod 5 % okraje; zamítnuto. File:Skoda Kodiaq Facelift IMG 5978.jpg (4960 × 3062; 1,620; Alexander Migl; CC BY-SA 4.0) má celý vůz a správnou generaci po faceliftu, ale boční/spodní okraje pod 5 %; zamítnuto. Původní soubor ponechán; neznamená to nové schválení jeho okrajů.
+- kodiaq / generation 2: Pro II nalezen File:Škoda Kodiaq II IMG 9428.jpg (4988 × 3082; 1,618), ale stránka výslovně uvádí pravý zadní pohled, tedy nesplňuje přední pohled. Pro I kategorie ověřena, žádná nová náhrada vizuálně schválena. Původní snímky ponechány; neznamená to nové schválení jejich okrajů. Další prohlédnutý náhled File:Škoda Kodiaq 1.5 TSI mHEV (2025) (54533281282).jpg (5675 × 3724; 1,524; Charles; CC BY 2.0) je zadní pohled, zamítnut. Metadata File:Škoda Kodiaq II Auto Zuerich 2023 1X7A0985.jpg (4581 × 3056; 1,499; Alexander-93; CC BY-SA 4.0) ověřena, ale náhled nebyl prohlédnut, tudíž bez schválení.
+- elroq / generation 1: Prohlédnut náhled File:Škoda Elroq DSC 9257.jpg (3733 × 2283; 1,635): zadní tříčtvrteční pohled a boční okraje pod 5 %, zamítnuto. File:Škoda Elroq IMG 2639.jpg (5335 × 3551; 1,502), licence CC BY-SA 4.0 / Alexander Migl, zůstává bez vizuálního schválení. Stávající snímek ponechán.
+- kylaq / generation 1: Cached Commons category contains2files: current1.778YouTube frame and Bangalore81 at1.328. ViewedBangalore81: roof is onlyabout3–4%fromtop; foreground/showcontext and tightframing do not meetthe preferred5%margin. Existingimage retained; no assertionthat nootherCommonsfileexists.
+- peaq / generation 1: Viewed8235frontthree-quarter at1.496 but bothside marginsabout3–4%; rejected. Viewed8237rearthree-quarter is too tight;8284interior. Cached2026Peaqseries4:3 alternatives were identified but not approved. Existingimage retained.
+- rapid-india / generation 1: Skoda Rapid.jpg (1.499) is the correct India model and front three-quarter view, but left margin is about4%; not approved under the new5%rule. Skoda Rapid Ind front20230602 remains1.778 and the manufacturer Rapid.jpg is2.0, so neither resolves the aspect criterion.
+
+Retained does not mean newly approved framing. No suitable inspected replacement was accepted in this pass; this is not proof that no other suitable Commons file exists. API/original requests returned429; API calls stopped, available published previews and cached file pages were used, without repeatedly retrying blocked originals.
+
+### Missing and integration
+
+Still missing: 1101-1102, 130-135-136, 4r. Total 67 photo references, 21 reviewed and 46 pending. Existing reviewed status predates this stricter margin rule unless included in this pass; it is not a certification of all existing photos under the new rule.
+
+Claude must merge **analysis/codex/skoda-wide-photo-size-additions.json** into its **src/data/photo-sizes.json** so display aspect lookup uses the new URLs. Codex did not modify that Claude-owned file. Specifications and all172 versions unchanged, verified by SHA256 comparison of version, engine and dimensions data.
+
+Evidence: skoda-wide-photos-review.json, skoda-step10-photo-review.json, worker-wide-*.json. Rebuild: merge-skoda-wide-photos.mjs then build-skoda-cards.mjs; validate-skoda-wide-photos.mjs and validate-model-cards.mjs. Do not rerun the baseline audit on the updated catalogue when reproducing this pass.
+<!-- skoda-wide-photos:end -->
