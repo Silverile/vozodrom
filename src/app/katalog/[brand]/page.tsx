@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BrandLogo } from "@/components/BrandLogo";
+import { BrandLogo, isWide } from "@/components/BrandLogo";
 import { CarImage } from "@/components/CarImage";
 import { BODY_LABEL, getBrand, modelsOf } from "@/lib/catalog";
 import { items } from "@/lib/classifieds";
@@ -110,9 +110,10 @@ export default async function BrandPage({ params }: { params: Params }) {
         <Link href="/katalog/" className="hover:underline">Katalog</Link> / {make.name}
       </nav>
       <div className="card mt-3 p-5 sm:p-6 grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
-        <div className="flex items-center gap-4 min-w-0">
-          <span className="grid place-items-center shrink-0 w-20 h-20 rounded-2xl bg-[var(--color-field)]">
-            <BrandLogo slug={make.slug} name={make.name} size={56} square />
+        <div className="flex flex-wrap items-center gap-4 min-w-0">
+          {/* wide wordmarks (Škoda, Michelin…) get a wider box instead of shrinking into a square */}
+          <span className="grid place-items-center shrink-0 min-w-20 h-20 px-3 rounded-2xl bg-[var(--color-field)]">
+            <BrandLogo slug={make.slug} name={make.name} size={56} square={!isWide(make.slug)} />
           </span>
           <div className="min-w-0">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{make.name}</h1>
@@ -128,11 +129,11 @@ export default async function BrandPage({ params }: { params: Params }) {
             )}
           </div>
         </div>
-        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-3 min-w-0">
+        <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 min-w-0">
           {tiles.map(([label, value]) => (
             <div key={label} className="rounded-xl bg-[var(--color-field)] px-3 py-2.5 min-w-0">
               <dt className="text-xs text-[var(--color-muted)]">{label}</dt>
-              <dd className="font-bold leading-snug break-words">{value}</dd>
+              <dd className="font-bold leading-snug [overflow-wrap:normal] [word-break:normal] hyphens-auto" lang="cs">{value}</dd>
             </div>
           ))}
         </dl>

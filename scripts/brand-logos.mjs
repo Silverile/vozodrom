@@ -54,7 +54,6 @@ const MAP = {
   "renault": "Renault",
   "rolls-royce": "Rolls-Royce",
   "seat": "SEAT",
-  "skoda": "ŠKODA",
   "smart": "smart",
   "subaru": "Subaru",
   "suzuki": "Suzuki",

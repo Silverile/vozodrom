@@ -46,3 +46,8 @@ export function BrandLogo({ slug, name, size = 32, square = false }: { slug: str
     </span>
   );
 }
+
+/** Wordmarks wider than about 2:1 read better unsquared, in a wider box. */
+export function isWide(slug: string): boolean {
+  return !PATHS[slug] && (FILES[slug]?.aspect ?? 1) > 2;
+}
