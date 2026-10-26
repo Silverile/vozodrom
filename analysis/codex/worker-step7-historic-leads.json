@@ -1,0 +1,56 @@
+{
+  "retrievedOn": "2026-10-26",
+  "patches": [],
+  "additions": [],
+  "leadDecisions": [
+    {
+      "model": "440", "lead": "900kg early without heater /920kg from1957",
+      "decision": "Not verified as proposed. Do not fill or create a900–920range.",
+      "evidence": "JanTuček, Octavia – dáma značky Škoda, printpage20 explicitly distinguishes Standard920kg from Export930kg. It does not establish900kg without heater or a1957mass transition. Club transcription likewise920kg, while Automobil1957recap gives930kg without a configuration label. Heater/history information alone does not establish mass.",
+      "sources": ["https://storage.bookup.cz/ebooks/preview/000/977/091/preview_9788027140763.pdf", "https://www.spartaky.cz/Content/pid=17.html.html", "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html"],
+      "candidateForFuture": { "Standard.massKg": 920, "Export.massKg": 930, "massBasis": "kerb per modern historical monograph; driver convention unspecified" },
+      "limitation": "Modern monograph opened, but no originalmanual/homologation corroboration located during this worker. Existing generic440 record is not explicitlyStandard/Export; new named versions should await primary corroboration."
+    },
+    {
+      "model": "445", "lead": "920kg",
+      "decision": "Not verified. Original manual scan still needed.",
+      "evidence": "A website presenting a rewritten445owner-manual summary instead reports dry900kg/kerb930kg. It is not an inspected originalscan and cannot establish the human920lead or safely overrule it.",
+      "sources": ["https://www.for-veteran.eu/skoda-445-navod-k-obsluze"],
+      "limitation": "Search extract only; directpage cachemiss. Do not promote rewritten text as originalmanufacturer document."
+    },
+    {
+      "model": "450", "lead": "930–935kg",
+      "decision": "930kg independently confirmed by manufacturer,935unverified. Not a publishedconfigurationrange; no range/minimum patch.",
+      "evidence": "Škoda25September2017release, PDFpage1, explicitly states kerb930kg. It also states128km/h and average9L/100km, but does not specify testcycle or driver convention. Existing900kg source has no documented configuration distinction; conflict remains unresolved.",
+      "sources": ["https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"],
+      "limitation": "Cannot merge differing sources into900–935or930–935range. Existingconflictnullrule preserved."
+    },
+    {
+      "model": "1201 sedan", "lead": "1050vs1060kg",
+      "decision": "Unresolved. Neither generic midpoint nor range justified.",
+      "evidence": "Manufacturer winter2012magazine explicitly labels1201typ980with1050kg; comparative technical table and rewrittenmanual report1060kg. A separate2022manufacturer release1050kg explicitly describes1200and therefore cannot reconcile1201.",
+      "sources": ["https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf", "https://www.for-veteran.eu/historie-a-technicka-data-skoda-1200-1201", "https://www.for-veteran.eu/skoda-1201-navod-k-obsluze", "https://cdn.skoda-storyboard.com/2022/07/220721_70-let-vozu-SKODA-1200-Celokovova-karoserie-z-aerodynamickeho-tunelu.pdf"],
+      "limitation": "Need original1201manual edition and body/equipment description before splitting source specifications."
+    },
+    {
+      "model": "1201 STW / van", "lead": "STW1120kg / van1090kg",
+      "decision": "Rejected for automatic1201assignment: these are explicitly1200figures in the technical transcription.",
+      "evidence": "The club page heading says basic technical parameters ofŠkoda1200 and table givesSTW1120/van1090. Comparative1200/1201table says unparenthesized1200and parenthesized1201: STW1120(1150),van1090(1120). Thus1201candidatevalues areSTW1150/van1120, requiring originalmanual corroboration. A museum-style1956STWentry1120conflicts rather than resolves this.",
+      "sources": ["https://skoda1202.predseda.com/technik3.htm", "https://www.for-veteran.eu/historie-a-technicka-data-skoda-1200-1201", "https://auta5p.eu/katalog/skoda/s1201_01.php"],
+      "limitation": "No new1201bodyversions added from1200values."
+    },
+    {
+      "model": "1201 ambulance / pickup", "lead": "ambulance1220kg / pickup1040kg",
+      "decision": "Plausible secondary table values but primary body-specific source not located; keep unfilled.",
+      "evidence": "Comparative table1220kg is shared where no parenthesis is present;1040kgpickup appears only in1201parentheses. No inspected originalmanual/catalogue independently verifies these body records.",
+      "sources": ["https://www.for-veteran.eu/historie-a-technicka-data-skoda-1200-1201"],
+      "limitation": "No driver convention inferred; no manufacturer configuration-range minimum permission invoked."
+    }
+  ],
+  "needsReview": [
+    { "lineSlug": "440-445-450", "trimName": "440", "fields": ["massKg"], "reason": "Find original440manual/prospect distinguishingStandard andExport, with mass convention. Human900earlylead not verified." },
+    { "lineSlug": "440-445-450", "trimName": "445", "fields": ["massKg"], "reason": "Find original445manual masspage;920humanlead differs from rewrittenmanual930kerb/900dry." },
+    { "lineSlug": "440-445-450", "trimName": "450", "fields": ["massKg"], "reason": "OEM930confirmed; need originalmanual to explain prior900and human935. These are not endpoints of a sourcedrange." },
+    { "lineSlug": "1201", "fields": ["trims"], "reason": "Find1201originalbody-specificmanual. Do not copy1200STW1120/van1090. Secondary1201candidatesSTW1150/van1120,ambulance1220,pickup1040require primary corroboration." }
+  ]
+}

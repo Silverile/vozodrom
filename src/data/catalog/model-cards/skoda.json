@@ -1105,7 +1105,9 @@
           "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
           "credit": "Hilarmont / Wikimedia Commons / CC BY-SA 3.0 de",
           "depicts": "generation",
-          "visualReview": "pending",
+          "visualReview": "reviewed",
+          "reviewedAt": "2026-10-26",
+          "reviewNoteCs": "Celý předmodernizační sedan 105 je viditelný s okrajem, bez významného zakrytí. Fotografie neukazuje konkrétní provedení M z roku 1985 ani 125 L z roku 1989.",
           "sources": [
             "https://commons.wikimedia.org/wiki/File:%C5%A0koda_105_BJ_1978_(Foto_Hilarmont)_(1).JPG"
           ]
@@ -1814,10 +1816,6 @@
       {
         "field": "generations[0].trims[4].rangeCycle",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].photo.visualReview",
-        "reason": "Identity/licence metadata retained; composition and exact variant correspondence require visual review."
       }
     ]
   },
@@ -1862,7 +1860,23 @@
           "Europe"
         ],
         "marketNotesCs": "Historická nebo evropská řada; dostupnost v ČR není doložena počtem inzerátů.",
-        "photo": null,
+        "photo": {
+          "source": "commons",
+          "file": "File:Laurin Klement 110.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Laurin_Klement_110.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Laurin_Klement_110.jpg",
+          "author": "Rainerhaufe",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "credit": "Rainerhaufe / Wikimedia Commons / CC BY-SA 4.0",
+          "depicts": "generation",
+          "visualReview": "reviewed",
+          "reviewedAt": "2026-10-26",
+          "reviewNoteCs": "Celý muzejní vůz je v záběru s okrajem, bez zakrytí sousedními automobily. Model je doložen metadaty Commons; přesný rok, výbava a původnost detailů nejsou potvrzeny.",
+          "sources": [
+            "https://commons.wikimedia.org/wiki/File:Laurin_Klement_110.jpg"
+          ]
+        },
         "trims": [
           {
             "name": "L&K Škoda 110",
@@ -1910,20 +1924,18 @@
         "sources": [
           "https://www.skoda-auto.com/world/timeline",
           "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
-          "https://commons.wikimedia.org/wiki/File:Laurin_%26_Klement_-_%C5%A0koda_110.JPG"
+          "https://commons.wikimedia.org/wiki/File:Laurin_%26_Klement_-_%C5%A0koda_110.JPG",
+          "https://commons.wikimedia.org/wiki/File:Laurin_Klement_110.jpg"
         ]
       }
     ],
     "sources": [
       "https://www.skoda-auto.com/world/timeline",
       "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
-      "https://commons.wikimedia.org/wiki/File:Laurin_%26_Klement_-_%C5%A0koda_110.JPG"
+      "https://commons.wikimedia.org/wiki/File:Laurin_%26_Klement_-_%C5%A0koda_110.JPG",
+      "https://commons.wikimedia.org/wiki/File:Laurin_Klement_110.jpg"
     ],
     "needsReview": [
-      {
-        "field": "scope",
-        "reason": "Špička levého předního blatníku se dotýká levého okraje a přední kolo dolního okraje; chybí okraj kolem vozu. Fotografie odstraněna; přesná výbava není potvrzena."
-      },
       {
         "field": "segment",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
@@ -1974,10 +1986,6 @@
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].photo",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -2118,7 +2126,8 @@
               "displacementCc": 1107,
               "cylinders": 4,
               "powerKw": 38,
-              "torqueNm": null
+              "torqueNm": null,
+              "powerStandard": "DIN"
             },
             "transmission": {
               "type": "manual",
@@ -2138,12 +2147,13 @@
             "specificationScope": {
               "market": "source-production",
               "modelYear": null,
-              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány. Dobový průměr 8,5 l/100 km bez určení cyklu; nelze přímo srovnávat s WLTP. Zrychlení 18,5/19 s zůstává sporné."
+              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány. Dobový průměr 8,5 l/100 km bez určení cyklu; nelze přímo srovnávat s WLTP. Zrychlení 18,5/19 s zůstává sporné. Normu DIN pro uváděných 38 kW výslovně uvádí česká tisková zpráva výrobce k 50. výročí 110 R. Tato zpráva zároveň uvádí 19 s a pneumatiky 165 SR 14, ale nepopisuje metodiku zkoušky ani poloviční zatížení. Hodnota 18,5 s zatím nebyla přiřazena k doloženému samostatnému měření; generační zrychlení proto zůstává sporné."
             },
             "sources": [
               "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
               "https://cs.wikipedia.org/w/index.php?oldid=26216420",
-              "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/"
+              "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
+              "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
             ],
             "fieldSources": {
               "dimensionsMm.wheelbase": [
@@ -2154,6 +2164,9 @@
               ],
               "consumptionCycle": [
                 "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/"
+              ],
+              "engine.powerStandard": [
+                "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
               ]
             },
             "consumptionCycle": "historical average; test cycle not specified",
@@ -2168,7 +2181,8 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_110_R_1977.jpg",
           "https://cs.wikipedia.org/w/index.php?oldid=26216420",
           "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
-          "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/"
+          "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
+          "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
         ],
         "fieldSources": {
           "trunkL": [
@@ -2182,12 +2196,21 @@
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_110_R_1977.jpg",
       "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
       "https://cs.wikipedia.org/w/index.php?oldid=26216420",
-      "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/"
+      "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
+      "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
     ],
     "needsReview": [
       {
         "field": "scope",
         "reason": "Existing Czech summary gives 18.5 s; manufacturer Garde/110 R retrospective gives 19 s. Exact test/tyre/year scope is unresolved; scalar withheld."
+      },
+      {
+        "field": "scope",
+        "reason": "Výrobce v retrospektivě potvrzuje19s; nebyl nalezen původní zkušební protokol nebo příslušná stránka dobového návodu vysvětlující18,5s. Tvrzení, že18,5s je naměřený test a19s tovární limit při poloviční zátěži, není ověřeno. Zatím ponechat null."
+      },
+      {
+        "field": "scope",
+        "reason": "DIN52k/38kW a obecné osazení165SR14 potvrzuje výrobce.62kSAE ani poloviční užitečné zatížení při zkoušce nebyly ověřeny v primárním dokumentu. Nevyvozovat metodiku z blízkosti údajů v jednom odstavci."
       },
       {
         "field": "segment",
@@ -2821,7 +2844,23 @@
           "Europe"
         ],
         "marketNotesCs": "Historická nebo evropská řada; dostupnost v ČR není doložena počtem inzerátů.",
-        "photo": null,
+        "photo": {
+          "source": "commons",
+          "file": "File:1955 skoda 1201 kombi 1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/1955_skoda_1201_kombi_1.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:1955_skoda_1201_kombi_1.jpg",
+          "author": "Jessispaps at German Wikipedia\n\n(Original text: Jessispaps)",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "credit": "Jessispaps at German Wikipedia\n\n(Original text: Jessispaps) / Wikimedia Commons / CC BY-SA 3.0",
+          "depicts": "generation",
+          "visualReview": "reviewed",
+          "reviewedAt": "2026-10-26",
+          "reviewNoteCs": "Celé kombi STW v předním tříčtvrtečním pohledu, všechny nárazníky, střecha i kola jsou v záběru s okrajem. Karoserie je před renovací; přesná výbava a rok nejsou touto kontrolou potvrzeny.",
+          "sources": [
+            "https://commons.wikimedia.org/wiki/File:1955_skoda_1201_kombi_1.jpg"
+          ]
+        },
         "trims": [
           {
             "name": "1201 typ 980 – sedan",
@@ -2869,6 +2908,7 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1289557156",
           "https://commons.wikimedia.org/wiki/File:Skoda_1201_Stationsvagn_1959.jpg",
+          "https://commons.wikimedia.org/wiki/File:1955_skoda_1201_kombi_1.jpg",
           "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf"
         ]
       }
@@ -2876,6 +2916,7 @@
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1289557156",
       "https://commons.wikimedia.org/wiki/File:Skoda_1201_Stationsvagn_1959.jpg",
+      "https://commons.wikimedia.org/wiki/File:1955_skoda_1201_kombi_1.jpg",
       "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf"
     ],
     "needsReview": [
@@ -2885,7 +2926,7 @@
       },
       {
         "field": "scope",
-        "reason": "Pravý přední konec nárazníku dosahuje okraje snímku, chybí požadovaný okraj kolem celého vozidla. Fotografie STW odstraněna; nutný širší celkový záběr."
+        "reason": "Find1201originalbody-specificmanual. Do not copy1200STW1120/van1090. Secondary1201candidatesSTW1150/van1120,ambulance1220,pickup1040require primary corroboration."
       },
       {
         "field": "segment",
@@ -2937,10 +2978,6 @@
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].photo",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -3586,7 +3623,23 @@
           "Europe"
         ],
         "marketNotesCs": "Historická nebo evropská řada; dostupnost v ČR není doložena počtem inzerátů.",
-        "photo": null,
+        "photo": {
+          "source": "commons",
+          "file": "File:Škoda-1203-sanitní Dolní-Kalná-P1040342.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
+          "author": "Jiří Erben",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "credit": "Jiří Erben / Wikimedia Commons / CC BY-SA 3.0",
+          "depicts": "generation",
+          "visualReview": "reviewed",
+          "reviewedAt": "2026-10-26",
+          "reviewNoteCs": "Celý vůz Škoda 1203 v sanitním provedení, s nárazníky, střechou a koly v záběru. Není to fotografie konkrétní skříňové technické verze v tabulce; rok ani výrobní závod nelze z obrazu doložit.",
+          "sources": [
+            "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg"
+          ]
+        },
         "trims": [
           {
             "name": "1203 – původní dodávka",
@@ -3659,6 +3712,7 @@
           "https://en.wikipedia.org/w/index.php?oldid=1312792836",
           "https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf",
           "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG",
+          "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
           "https://cdn.skoda-storyboard.com/2018/09/180914-50-years-of-the-%C5%A0KODA-1203-Reliable-all-round-van-with-cult-status.pdf"
         ]
       }
@@ -3667,13 +3721,10 @@
       "https://en.wikipedia.org/w/index.php?oldid=1312792836",
       "https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf",
       "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG",
+      "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
       "https://cdn.skoda-storyboard.com/2018/09/180914-50-years-of-the-%C5%A0KODA-1203-Reliable-all-round-van-with-cult-status.pdf"
     ],
     "needsReview": [
-      {
-        "field": "scope",
-        "reason": "Detailní čelní pohled nezobrazuje celou boční karoserii a kola. Navíc je viditelné označení 1203 M, které nepotvrzuje původní provedení AZNP 1968. Fotografie odstraněna; nutný vhodný celkový snímek původní verze."
-      },
       {
         "field": "segment",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
@@ -3712,10 +3763,6 @@
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].photo",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -4852,7 +4899,23 @@
           "Europe"
         ],
         "marketNotesCs": "Historická nebo evropská řada; dostupnost v ČR není doložena počtem inzerátů.",
-        "photo": null,
+        "photo": {
+          "source": "commons",
+          "file": "File:13-04-05-Skoda Museum Mladá Boleslav by RalfR-008.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/13-04-05-Skoda_Museum_Mlad%C3%A1_Boleslav_by_RalfR-008.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:13-04-05-Skoda_Museum_Mlad%C3%A1_Boleslav_by_RalfR-008.jpg",
+          "author": "Ralf Roletschek",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "credit": "Ralf Roletschek / Wikimedia Commons / CC BY 3.0",
+          "depicts": "generation",
+          "visualReview": "reviewed",
+          "reviewedAt": "2026-10-26",
+          "reviewNoteCs": "Celý otevřený vůz v muzeu je viditelný s okrajem, bez zakrytí karoserie. Jde o historický neopravený exemplář; fotografie neurčuje parametry všech karosářských variant.",
+          "sources": [
+            "https://commons.wikimedia.org/wiki/File:13-04-05-Skoda_Museum_Mlad%C3%A1_Boleslav_by_RalfR-008.jpg"
+          ]
+        },
         "trims": [
           {
             "name": "422",
@@ -4900,20 +4963,18 @@
         "sources": [
           "https://cs.wikipedia.org/w/index.php?oldid=21647047",
           "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
-          "https://commons.wikimedia.org/wiki/File:2007-08-cesko-176.jpg"
+          "https://commons.wikimedia.org/wiki/File:2007-08-cesko-176.jpg",
+          "https://commons.wikimedia.org/wiki/File:13-04-05-Skoda_Museum_Mlad%C3%A1_Boleslav_by_RalfR-008.jpg"
         ]
       }
     ],
     "sources": [
       "https://cs.wikipedia.org/w/index.php?oldid=21647047",
       "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
-      "https://commons.wikimedia.org/wiki/File:2007-08-cesko-176.jpg"
+      "https://commons.wikimedia.org/wiki/File:2007-08-cesko-176.jpg",
+      "https://commons.wikimedia.org/wiki/File:13-04-05-Skoda_Museum_Mlad%C3%A1_Boleslav_by_RalfR-008.jpg"
     ],
     "needsReview": [
-      {
-        "field": "scope",
-        "reason": "Přední kolo dosahuje dolního okraje a tabule zakrývá část předního blatníku/nárazníku. Fotografie nevyhovuje požadavku celého nezakrytého vozu s okrajem."
-      },
       {
         "field": "segment",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
@@ -4964,10 +5025,6 @@
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].photo",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -5642,6 +5699,18 @@
       {
         "field": "scope",
         "reason": "Retain null: both are kerb figures; equipment/date difference is not documented precisely enough to assign one to the generic record."
+      },
+      {
+        "field": "scope",
+        "reason": "Find original440manual/prospect distinguishingStandard andExport, with mass convention. Human900earlylead not verified."
+      },
+      {
+        "field": "scope",
+        "reason": "Find original445manual masspage;920humanlead differs from rewrittenmanual930kerb/900dry."
+      },
+      {
+        "field": "scope",
+        "reason": "OEM930confirmed; need originalmanual to explain prior900and human935. These are not endpoints of a sourcedrange."
       },
       {
         "field": "segment",
@@ -7532,6 +7601,10 @@
       {
         "field": "generations[0].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
+      },
+      {
+        "field": "scope",
+        "reason": "Not started beyond discovery; concentrate this batch on firstRoomsterDSG. OEM CitigoeiV2019sources have12.3/12.5s publication differences and fuel/range intervals requiring revision scope before new entry."
       },
       {
         "field": "generations[0].trims[0].from",
@@ -10138,7 +10211,8 @@
           "https://cs.wikipedia.org/w/index.php?oldid=26215791",
           "https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi",
           "https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/",
-          "https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163"
+          "https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163",
+          "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
         ],
         "trims": [
           {
@@ -10417,6 +10491,86 @@
                 "https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163"
               ]
             }
+          },
+          {
+            "name": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1896,
+              "cylinders": 4,
+              "powerKw": 96,
+              "torqueNm": 310,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": null
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": null,
+            "topSpeedKmh": 206,
+            "acceleration0to100s": null,
+            "consumptionL100": 5.3,
+            "consumptionCycle": "93/116 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "United Kingdom / Euro IV documentary sample",
+              "modelYear": null,
+              "noteCs": "Spotreba pro sloupec Euro IV v originalnim britskem katalogu vydanem kveten 2006. Dokument urcuje prechod na Euro IV od vyrobniho tydne 43, 24. 10. 2005; Euro III ma v teze tabulce 5,4 l/100km. Nevztahuje se univerzalne na cele obdobi 2003-2007. Udaj 9,5 s je pouze 0-62 mph, neprevadi se na presny 0-100 km/h. Z tohoto technickeho prehledu nejsou bez dalsi kontroly preneseny rozmery, presna hmotnost ani pocet prevodovych stupnu."
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "engine.fuel": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "engine.cylinders": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "engine.powerKw": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "transmission.type": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "drive": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "consumptionL100": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ],
+              "consumptionCycle": [
+                "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+              ]
+            }
           }
         ],
         "fieldSources": {
@@ -10558,7 +10712,9 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381766516",
           "https://commons.wikimedia.org/wiki/File:2009_Skoda_Fabia_silver_front.jpg",
-          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf",
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+          "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
         ],
         "trims": [
           {
@@ -10864,6 +11020,220 @@
               ],
               "consumptionCycle": [
                 "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+              ]
+            }
+          },
+          {
+            "name": "RS 1.4 TSI 132 kW DSG - hatchback (katalog 03/2010)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1390,
+              "cylinders": 4,
+              "powerKw": 132,
+              "torqueNm": 250,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4029,
+              "width": 1642,
+              "height": 1492,
+              "wheelbase": 2464
+            },
+            "massKg": 1318,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "kerb including 75 kg driver; standard version",
+            "topSpeedKmh": 224,
+            "acceleration0to100s": 7.3,
+            "consumptionL100": 6.2,
+            "consumptionCycle": "NEDC / 99/100 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / basic version",
+              "modelYear": null,
+              "noteCs": "Zakladni provedeni podle originalniho katalogu FA16220 03/10, nikoli australska tare mass. Pohotovostni hmotnost vcetne ridice 75 kg. Spotrebu 6,2 a cyklus NEDC nezavisle potvrzuje tiskovy material vyrobce 1. 3. 2011. Rozmery z nakresu teto revize; nejde o standardni Fabii ani pozdejsi revizi s jinym rozvorem. Rok vydani dokumentu neni automaticky modelovy rok."
+            },
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+              "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.fuel": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.powerKw": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "transmission.type": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "drive": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "massKg": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "massBasis": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "consumptionL100": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+                "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
+              ],
+              "consumptionCycle": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+                "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
+              ]
+            }
+          },
+          {
+            "name": "RS Combi 1.4 TSI 132 kW DSG (katalog 03/2010)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "kombi",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1390,
+              "cylinders": 4,
+              "powerKw": 132,
+              "torqueNm": 250,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4276,
+              "width": 1642,
+              "height": 1494,
+              "wheelbase": 2464
+            },
+            "massKg": 1313,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "kerb including 75 kg driver; standard version",
+            "topSpeedKmh": 226,
+            "acceleration0to100s": 7.3,
+            "consumptionL100": 6.2,
+            "consumptionCycle": "NEDC / 99/100 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / basic version",
+              "modelYear": null,
+              "noteCs": "Zakladni provedeni podle originalniho katalogu FA16220 03/10, nikoli australska tare mass. Pohotovostni hmotnost vcetne ridice 75 kg. Spotrebu 6,2 a cyklus NEDC nezavisle potvrzuje tiskovy material vyrobce 1. 3. 2011. Rozmery z nakresu teto revize; nejde o standardni Fabii ani pozdejsi revizi s jinym rozvorem. Rok vydani dokumentu neni automaticky modelovy rok."
+            },
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+              "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.fuel": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.powerKw": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "transmission.type": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "drive": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "massKg": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "massBasis": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf"
+              ],
+              "consumptionL100": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+                "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
+              ],
+              "consumptionCycle": [
+                "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+                "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/"
               ]
             }
           }
@@ -11820,7 +12190,10 @@
       "https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi",
       "https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/",
       "https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163",
+      "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf",
       "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf",
+      "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
+      "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/",
       "https://cdn.skoda-storyboard.com/2018/08/TD-FABIA-petrol_EN.pdf",
       "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043="
     ],
@@ -12246,6 +12619,14 @@
         "reason": "Period test identifies body/engine precisely but does not explicitly state gearbox count, drive, inclusion of driver or legal consumption directive. Unknowns retained."
       },
       {
+        "field": "scope",
+        "reason": "Exact manufacturer Junior1.0 dated technical sheet needed; do not overwrite null using uncertain secondary mass.1035 versus1010 is unresolved, not proven1.2 confusion."
+      },
+      {
+        "field": "scope",
+        "reason": "Keep aggregate record null; new datedEuroIV sample5.3 separates revisions. Older2003UKbrochure5.1 remains another publication value, not universal conflict resolver."
+      },
+      {
         "field": "generations[0].dimensionsMm.width",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -12386,6 +12767,74 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
+        "field": "generations[0].trims[3].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].transmission.gears",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].dimensionsMm.length",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].dimensionsMm.width",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].dimensionsMm.height",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].dimensionsMm.wheelbase",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massBasis",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].acceleration0to100s",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
         "field": "generations[1].trims[0].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -12467,6 +12916,78 @@
       },
       {
         "field": "generations[1].trims[2].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[3].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[1].trims[4].specificationScope.modelYear",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -22664,6 +23185,10 @@
         "reason": "No Octavia I additions researched in this five-minute batch."
       },
       {
+        "field": "scope",
+        "reason": "Auto.cz15.12.1997 má10,7s v textu a10,9s v tabulce. Není doloženo, že text označuje vlastní měření, ani primární tovární protokol10,9s pro přesný AGN/5MT/modelový rok. Databáze10,9s nazývá factoryclaim, ale nejde o primární dokument. Ponechat null."
+      },
+      {
         "field": "generations[0].trims[0].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -24876,143 +25401,328 @@
         },
         "trims": [
           {
-            "name": "1.2 HTP",
-            "kind": "engine-version",
+            "name": "1.2 HTP 51 kW 5M – 14palcová kola (2011)",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "dodavka",
             "engine": {
               "fuel": "petrol",
-              "displacementCc": null,
-              "cylinders": null,
+              "displacementCc": 1198,
+              "cylinders": 3,
               "powerKw": 51,
-              "torqueNm": null
+              "torqueNm": 112
             },
             "transmission": {
-              "type": null,
-              "gears": null
+              "type": "manual",
+              "gears": 5
             },
             "drive": null,
             "dimensionsMm": {
-              "length": null,
-              "width": null,
-              "height": null,
-              "wheelbase": null
+              "length": 4213,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": 2608
             },
-            "massKg": null,
-            "topSpeedKmh": null,
-            "acceleration0to100s": null,
-            "consumptionL100": null,
+            "massKg": 1170,
+            "topSpeedKmh": 159,
+            "acceleration0to100s": 15.9,
+            "consumptionL100": 6.2,
             "specificationScope": {
-              "market": "source-production",
-              "modelYear": null,
-              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány."
+              "market": "Europe / Estonia manufacturer price list",
+              "modelYear": 2011,
+              "noteCs": "Přesně vymezená evropská verze podle oficiálního estonského ceníku Škoda platného od 1. 1. 2011. Hmotnost zahrnuje řidiče 75 kg a výslovně patří 14palcovým kolům; u 15palcových kol výrobce uvádí 1180 kg. Nejde o odvozené minimum ani odhad výbavy. Jde o estonskou technickou specifikaci stejné evropské motorizace, nikoli potvrzení české standardní výbavy. Spotřeba je uvedený průměr/kombinace bez výslovného předpisu měření; není označena WLTP. Rozvor 2608 mm se nepřenáší na jiné roky."
             },
             "sources": [
-              "https://cs.wikipedia.org/w/index.php?oldid=20610870"
+              "https://cs.wikipedia.org/w/index.php?oldid=20610870",
+              "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
             ],
-            "consumptionCycle": null,
+            "consumptionCycle": "combined (manufacturer2011; precise measurement protocol unspecified)",
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
-            "massBasis": null
+            "massBasis": "manufacturer standard14-inch-wheel kerb weight including75kgdriver, Estonia2011",
+            "fieldSources": {
+              "name": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "kind": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.type": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massKg": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massBasis": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionL100": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionCycle": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "specificationScope.market": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ]
+            }
           },
           {
-            "name": "1.2 TSI",
-            "kind": "engine-version",
+            "name": "1.2 TSI 63 kW 5M – 14palcová kola (2011)",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "dodavka",
             "engine": {
               "fuel": "petrol",
-              "displacementCc": null,
-              "cylinders": null,
+              "displacementCc": 1197,
+              "cylinders": 4,
               "powerKw": 63,
-              "torqueNm": null
+              "torqueNm": 160
             },
             "transmission": {
-              "type": null,
-              "gears": null
+              "type": "manual",
+              "gears": 5
             },
             "drive": null,
             "dimensionsMm": {
-              "length": null,
-              "width": null,
-              "height": null,
-              "wheelbase": null
+              "length": 4213,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": 2608
             },
-            "massKg": null,
-            "topSpeedKmh": null,
-            "acceleration0to100s": null,
-            "consumptionL100": null,
+            "massKg": 1191,
+            "topSpeedKmh": 172,
+            "acceleration0to100s": 12.6,
+            "consumptionL100": 5.7,
             "specificationScope": {
-              "market": "source-production",
-              "modelYear": null,
-              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány."
+              "market": "Europe / Estonia manufacturer price list",
+              "modelYear": 2011,
+              "noteCs": "Evropská technická verze z oficiálního estonského ceníku Škoda platného od 1. 1. 2011. Výrobce přímo rozlišuje hmotnost 1191 kg pro 14palcová a 1201 kg pro 15palcová kola, vždy včetně řidiče 75 kg; zde jsou vybrána výslovně doložená 14palcová kola, nikoli minimum neurčené konfigurace. Česká standardní výbava není tímto potvrzena. Průměrná spotřeba 5.7 l/100 km nemá v tomto listu uveden konkrétní předpis měření. Rozměry včetně rozvoru 2608 mm platí pouze pro tento podklad."
             },
             "sources": [
-              "https://cs.wikipedia.org/w/index.php?oldid=20610870"
+              "https://cs.wikipedia.org/w/index.php?oldid=20610870",
+              "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
             ],
-            "consumptionCycle": null,
+            "consumptionCycle": "combined (manufacturer2011; precise measurement protocol unspecified)",
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
-            "massBasis": null
+            "massBasis": "manufacturer standard14-inch-wheel kerb weight including75kgdriver, Estonia2011",
+            "fieldSources": {
+              "name": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "kind": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.type": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massKg": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massBasis": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionL100": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionCycle": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "specificationScope.market": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ]
+            }
           },
           {
-            "name": "1.6 TDI",
-            "kind": "engine-version",
+            "name": "1.6 TDI CR 66 kW 5M – 15palcová kola (2011)",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "dodavka",
             "engine": {
               "fuel": "diesel",
-              "displacementCc": null,
-              "cylinders": null,
+              "displacementCc": 1598,
+              "cylinders": 4,
               "powerKw": 66,
-              "torqueNm": null
+              "torqueNm": 230
             },
             "transmission": {
-              "type": null,
-              "gears": null
+              "type": "manual",
+              "gears": 5
             },
             "drive": null,
             "dimensionsMm": {
-              "length": null,
-              "width": null,
-              "height": null,
-              "wheelbase": null
+              "length": 4213,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": 2608
             },
-            "massKg": null,
-            "topSpeedKmh": null,
-            "acceleration0to100s": null,
-            "consumptionL100": null,
+            "massKg": 1292,
+            "topSpeedKmh": 171,
+            "acceleration0to100s": 13.3,
+            "consumptionL100": 4.7,
             "specificationScope": {
-              "market": "source-production",
-              "modelYear": null,
-              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány."
+              "market": "Europe / Estonia manufacturer price list",
+              "modelYear": 2011,
+              "noteCs": "Evropská verze podle oficiálního estonského ceníku platného od 1. 1. 2011. List výslovně určuje 15palcová kola jako standard pro 1.6 TDI CR 66 kW a uvádí pohotovostní hmotnost 1292 kg včetně řidiče 75 kg. Jde o přesnou publikovanou konfiguraci, ne zvolenou dolní mez. Česká standardní výbava ani celé výrobní období nejsou potvrzeny. Kombinovaná/průměrná spotřeba 4.7 l/100 km je převzata jako fakt bez doplnění neuvedeného předpisu měření."
             },
             "sources": [
-              "https://cs.wikipedia.org/w/index.php?oldid=20610870"
+              "https://cs.wikipedia.org/w/index.php?oldid=20610870",
+              "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
             ],
-            "consumptionCycle": null,
+            "consumptionCycle": "combined (manufacturer2011; precise measurement protocol unspecified)",
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
-            "massBasis": null
+            "massBasis": "manufacturer standard15-inch-wheel kerb weight including75kgdriver, Estonia2011",
+            "fieldSources": {
+              "name": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "kind": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.type": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massKg": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "massBasis": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionL100": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "consumptionCycle": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ],
+              "specificationScope.market": [
+                "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
+              ]
+            }
           }
         ],
         "sources": [
           "https://cs.wikipedia.org/w/index.php?oldid=20610870",
-          "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Praktik_front_20080313.JPG"
+          "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Praktik_front_20080313.JPG",
+          "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
         ]
       }
     ],
     "sources": [
       "https://cs.wikipedia.org/w/index.php?oldid=20610870",
-      "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Praktik_front_20080313.JPG"
+      "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Praktik_front_20080313.JPG",
+      "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf"
     ],
     "needsReview": [
+      {
+        "field": "scope",
+        "reason": "Source names average consumption with urban/extraurban values but does not explicitly name99/100orNEDC. The stored label states protocol unspecified; no inventedWLTPclaim."
+      },
+      {
+        "field": "scope",
+        "reason": "Technical source is officialEstonianŠkodaprice list effective1January2011. Enginesmatchexistinggeneric records exactly, but availability/CZequipment must not be inferred. Root should setmarketEurope/Estonia andreplacegeneric scope note rather than assertingCZequipment."
+      },
+      {
+        "field": "scope",
+        "reason": "Existingfamily2620mm differs from dealer2011table2608mm. Preserve datedversion2608and flag broadgenerationdimension; do not silentlyoverwrite familydimension."
+      },
       {
         "field": "segment",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
@@ -25066,67 +25776,7 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].trims[0].engine.displacementCc",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].engine.cylinders",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].transmission.type",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].transmission.gears",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].trims[0].drive",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.length",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.width",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.height",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.wheelbase",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].massKg",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].acceleration0to100s",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionL100",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].specificationScope.modelYear",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionCycle",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -25142,10 +25792,6 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].trims[0].massBasis",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].trims[1].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -25154,67 +25800,7 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].trims[1].engine.displacementCc",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].engine.cylinders",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].engine.torqueNm",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].transmission.type",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].transmission.gears",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].trims[1].drive",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.length",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.width",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.height",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.wheelbase",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].massKg",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].topSpeedKmh",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].acceleration0to100s",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].consumptionL100",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].specificationScope.modelYear",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[1].consumptionCycle",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -25230,10 +25816,6 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].trims[1].massBasis",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].trims[2].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -25242,67 +25824,7 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].trims[2].engine.displacementCc",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].engine.cylinders",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].engine.torqueNm",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].transmission.type",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].transmission.gears",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].trims[2].drive",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.length",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.width",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.height",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.wheelbase",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].massKg",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].topSpeedKmh",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].acceleration0to100s",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].consumptionL100",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].specificationScope.modelYear",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].consumptionCycle",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -25315,10 +25837,6 @@
       },
       {
         "field": "generations[0].trims[2].rangeCycle",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[2].massBasis",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -27454,7 +27972,8 @@
           "https://en.wikipedia.org/w/index.php?oldid=1360297837",
           "https://www.wikidata.org/wiki/Q392071",
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Roomster_front_20070918.jpg",
-          "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542"
+          "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542",
+          "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
         ],
         "trims": [
           {
@@ -27762,6 +28281,309 @@
                 "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542"
               ]
             }
+          },
+          {
+            "name": "1.2 TSI 63 kW - 5MT (CZ katalog 05/2011)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "mpv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1197,
+              "cylinders": 4,
+              "powerKw": 63,
+              "torqueNm": 160,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 5
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4214,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": null
+            },
+            "massKg": 1221,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "kerb mass of basic version including 75 kg driver",
+            "topSpeedKmh": 172,
+            "acceleration0to100s": 12.6,
+            "consumptionL100": 5.7,
+            "consumptionCycle": "99/100 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Czech Republic / original manufacturer brochure",
+              "modelYear": null,
+              "noteCs": "Zakladni bezny Roomster po modernizaci podle ceskeho katalogu 05/2011, nikoli Scout ani Praktik. Bez paketu Green tec: udaj spotreby 5,3 patri teto zvlastni verzi, nepouziva se zde. Pohotovostni hmotnost vcetne ridice 75 kg podle tabulky. Nakres katalogu uvadi rozvor 2621 mm, ale dobovy navod 2620 mm; pole zustava null do vysvetleni rozdilu. Rok vydani katalogu neni automaticky modelovy rok."
+            },
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.fuel": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.cylinders": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.powerKw": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.type": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.gears": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "drive": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massKg": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massBasis": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionL100": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionCycle": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ]
+            }
+          },
+          {
+            "name": "1.2 TSI 77 kW - 5MT (CZ katalog 05/2011)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "mpv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1197,
+              "cylinders": 4,
+              "powerKw": 77,
+              "torqueNm": 175,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 5
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4214,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": null
+            },
+            "massKg": 1237,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "kerb mass of basic version including 75 kg driver",
+            "topSpeedKmh": 184,
+            "acceleration0to100s": 10.9,
+            "consumptionL100": 5.7,
+            "consumptionCycle": "99/100 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Czech Republic / original manufacturer brochure",
+              "modelYear": null,
+              "noteCs": "Zakladni bezny Roomster po modernizaci podle ceskeho katalogu 05/2011, nikoli Scout ani Praktik. Bez paketu Green tec: udaj spotreby 5,3 patri teto zvlastni verzi, nepouziva se zde. Pohotovostni hmotnost vcetne ridice 75 kg podle tabulky. Nakres katalogu uvadi rozvor 2621 mm, ale dobovy navod 2620 mm; pole zustava null do vysvetleni rozdilu. Rok vydani katalogu neni automaticky modelovy rok."
+            },
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.fuel": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.cylinders": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.powerKw": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.type": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.gears": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "drive": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massKg": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massBasis": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionL100": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionCycle": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ]
+            }
+          },
+          {
+            "name": "1.2 TSI 77 kW - DSG7 (CZ katalog 05/2011)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "mpv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1197,
+              "cylinders": 4,
+              "powerKw": 77,
+              "torqueNm": 175,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4214,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": null
+            },
+            "massKg": 1271,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "kerb mass of basic version including 75 kg driver",
+            "topSpeedKmh": 184,
+            "acceleration0to100s": 11,
+            "consumptionL100": 5.7,
+            "consumptionCycle": "99/100 combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Czech Republic / original manufacturer brochure",
+              "modelYear": null,
+              "noteCs": "Zakladni bezny Roomster po modernizaci podle ceskeho katalogu 05/2011, nikoli Scout ani Praktik. Hodnoty v kulatych zavorkach jsou pro DSG7. Pohotovostni hmotnost vcetne ridice 75 kg podle tabulky. Nakres katalogu uvadi rozvor 2621 mm, ale dobovy navod 2620 mm; pole zustava null do vysvetleni rozdilu. Rok vydani katalogu neni automaticky modelovy rok."
+            },
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.fuel": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.cylinders": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.powerKw": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.type": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "transmission.gears": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "drive": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massKg": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "massBasis": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionL100": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ],
+              "consumptionCycle": [
+                "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+              ]
+            }
           }
         ]
       }
@@ -27770,7 +28592,8 @@
       "https://en.wikipedia.org/w/index.php?oldid=1360297837",
       "https://www.wikidata.org/wiki/Q392071",
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Roomster_front_20070918.jpg",
-      "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542"
+      "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542",
+      "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
     ],
     "needsReview": [
       {
@@ -27922,6 +28745,14 @@
         "reason": "Pouze tři původní varianty 2007; faceliftové TSI/CR, automat a Scout zbývají."
       },
       {
+        "field": "scope",
+        "reason": "Only three factory documentary samples from Czech05/2011brochure. No production-boundary or complete engine-range claim. Scout dimensions not borrowed from standardRoomster."
+      },
+      {
+        "field": "scope",
+        "reason": "Catalogue drawing2621mm versus contemporaneous2011manual2620mm unresolved; scalar null for all three samples."
+      },
+      {
         "field": "generations[0].trims[0].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -27991,6 +28822,126 @@
       },
       {
         "field": "generations[0].trims[2].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].dimensionsMm.wheelbase",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].dimensionsMm.wheelbase",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].dimensionsMm.wheelbase",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].specificationScope.modelYear",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       }
     ]
@@ -31892,7 +32843,9 @@
           "https://en.wikipedia.org/w/index.php?oldid=1323631364",
           "https://www.wikidata.org/wiki/Q392105",
           "https://commons.wikimedia.org/wiki/File:2011_Skoda_Yeti_S_TSi_1.2_Front.jpg",
-          "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf"
+          "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf",
+          "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+          "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
         ],
         "trims": [
           {
@@ -32200,6 +33153,339 @@
                 "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf"
               ]
             }
+          },
+          {
+            "name": "2.0 TDI 81 kW - 4x4 6MT (2016)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 81,
+              "torqueNm": 250,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": 4222,
+              "width": 1793,
+              "height": 1691,
+              "wheelbase": 2578
+            },
+            "massKg": 1550,
+            "massBasis": "Pohotovostní hmotnost základního provedení včetně řidiče 75 kg.",
+            "massRangeKg": null,
+            "massReference": "base-version",
+            "topSpeedKmh": 175,
+            "acceleration0to100s": 12.2,
+            "consumptionL100": 5.3,
+            "consumptionCycle": "NEDC kombinovaná (1999/100/EC)",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / manufacturer Yeti 4x4 technical specification",
+              "modelYear": 2016,
+              "noteCs": "Yeti po faceliftu, technická data výrobce 7. 11. 2016, EU6 diesel. Základní provedení se 7J×16 a pneumatikami 215/60 R16; rozměry podle tohoto listu mají délku 4222 mm. Nejde o FWD, snížené Active s 205/55 R16 ani automatické přiřazení obchodního označení Outdoor. Návod 11/2016 potvrzuje stejné hmotnosti a dynamiku pro odpovídající 4x4 převodovky; nepřebíráme odlišné obecné databázové hodnoty Outdoor 4227 mm."
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+              "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massKg": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "massBasis": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massReference": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "acceleration0to100s": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "consumptionL100": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "consumptionCycle": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ]
+            }
+          },
+          {
+            "name": "2.0 TDI 110 kW - 4x4 6MT (2016)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 110,
+              "torqueNm": 340,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": 4222,
+              "width": 1793,
+              "height": 1691,
+              "wheelbase": 2578
+            },
+            "massKg": 1565,
+            "massBasis": "Pohotovostní hmotnost základního provedení včetně řidiče 75 kg.",
+            "massRangeKg": null,
+            "massReference": "base-version",
+            "topSpeedKmh": 195,
+            "acceleration0to100s": 9.1,
+            "consumptionL100": 5.1,
+            "consumptionCycle": "NEDC kombinovaná (1999/100/EC)",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / manufacturer Yeti 4x4 technical specification",
+              "modelYear": 2016,
+              "noteCs": "Yeti po faceliftu, technická data výrobce 7. 11. 2016, EU6 diesel. Základní provedení se 7J×16 a pneumatikami 215/60 R16; rozměry podle tohoto listu mají délku 4222 mm. Nejde o FWD, snížené Active s 205/55 R16 ani automatické přiřazení obchodního označení Outdoor. Návod 11/2016 potvrzuje stejné hmotnosti a dynamiku pro odpovídající 4x4 převodovky; nepřebíráme odlišné obecné databázové hodnoty Outdoor 4227 mm."
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+              "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massKg": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "massBasis": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massReference": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "acceleration0to100s": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "consumptionL100": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "consumptionCycle": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ]
+            }
+          },
+          {
+            "name": "2.0 TDI 110 kW - 4x4 DSG6 (2016)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 110,
+              "torqueNm": 340,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 6
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": 4222,
+              "width": 1793,
+              "height": 1691,
+              "wheelbase": 2578
+            },
+            "massKg": 1585,
+            "massBasis": "Pohotovostní hmotnost základního provedení včetně řidiče 75 kg.",
+            "massRangeKg": null,
+            "massReference": "base-version",
+            "topSpeedKmh": 192,
+            "acceleration0to100s": 9.2,
+            "consumptionL100": 5.5,
+            "consumptionCycle": "NEDC kombinovaná (1999/100/EC)",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / manufacturer Yeti 4x4 technical specification",
+              "modelYear": 2016,
+              "noteCs": "Yeti po faceliftu, technická data výrobce 7. 11. 2016, EU6 diesel. Základní provedení se 7J×16 a pneumatikami 215/60 R16; rozměry podle tohoto listu mají délku 4222 mm. Nejde o FWD, snížené Active s 205/55 R16 ani automatické přiřazení obchodního označení Outdoor. Návod 11/2016 potvrzuje stejné hmotnosti a dynamiku pro odpovídající 4x4 převodovky; nepřebíráme odlišné obecné databázové hodnoty Outdoor 4227 mm."
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+              "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.length": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.width": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.height": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massKg": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "massBasis": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "massReference": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "acceleration0to100s": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+                "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
+              ],
+              "consumptionL100": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ],
+              "consumptionCycle": [
+                "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf"
+              ]
+            }
           }
         ]
       }
@@ -32208,7 +33494,9 @@
       "https://en.wikipedia.org/w/index.php?oldid=1323631364",
       "https://www.wikidata.org/wiki/Q392105",
       "https://commons.wikimedia.org/wiki/File:2011_Skoda_Yeti_S_TSi_1.2_Front.jpg",
-      "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf"
+      "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf",
+      "https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf",
+      "https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik"
     ],
     "needsReview": [
       {
@@ -32336,6 +33624,14 @@
         "reason": "Pouze tři FWD varianty 2016; 4x4, DSG a starší motory zbývají."
       },
       {
+        "field": "scope",
+        "reason": "Manufacturer technical sheet publishes4222mm body without a separate Outdoor heading. These records are scoped to that sheet, not named Outdoor. Some secondary Outdoor databases show4227mm; do not copy that length or merge these records into a specifically named Outdoor version without a dedicated source."
+      },
+      {
+        "field": "scope",
+        "reason": "Power standard and exact production bounds for these individual configurations are not established by this technical sheet; left null."
+      },
+      {
         "field": "generations[0].trims[0].from",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -32405,6 +33701,90 @@
       },
       {
         "field": "generations[0].trims[2].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[3].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[5].rangeCycle",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       }
     ]

@@ -301,3 +301,45 @@ Worker/root fixtures: worker-step6-compacts.json, worker-step6-current-suv.json,
 
 Five original Commons photographs visually inspected from temporary storage:1200 and1202 passed whole-car framing;1201,422 andL&K/Škoda110 rejected. Decisions and filenames: analysis/codex/skoda-step6-photo-review.json. Retained author/licence metadata unchanged; no image binaries stored in repository. 60 remaining references still require review.
 <!-- skoda-step6:end -->
+
+<!-- skoda-step7:start -->
+## Škoda specifications step 7 — 26 October 2026
+
+Six research groups checked manufacturer brochures, original technical sheets, contemporary press materials and historical manual leads. Individually selected factual values, original structure and Czech notes; source prose and tables were not reproduced wholesale. Copyright in brochures remains with their owners; Wikidata CC0 identity licensing is unchanged. Per-field URLs and dated market/body/gearbox scopes are retained in each version.
+
+Fixtures: worker-step7-acceleration-leads.json, worker-step7-fabia-leads.json, worker-step7-historic-leads.json, worker-step7-praktik.json, worker-step7-roomster-automatic.json, worker-step7-yeti-awd.json. Applied changes: analysis/codex/skoda-step7-evidence.json. Rejected/unresolved human leads and remaining gaps: skoda-step7-review.json. Published-minimum mass policy unchanged; no conflation of incompatible sources into ranges.
+
+- https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/
+- https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf
+- https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/
+- https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf
+- https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf
+- https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf
+- https://cdn.skoda-storyboard.com/2016/12/TD_YETI_4x4_en.pdf
+- https://manualzz.com/doc/52175742/skoda-yeti--2016-11--korisni%C4%8Dki-priru%C4%8Dnik
+- https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4
+- https://www.automobile-catalog.com/car/1997/3134330/skoda_octavia_1_8_20v.html
+- https://auta5p.eu/katalog/skoda/fabia_36.php
+- https://auta5p.eu/katalog/skoda/fabia_04.php
+- https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi
+- https://dominiccars.sk/recenzia-skoda-fabia-junior-1-4-mpi/
+- https://storage.bookup.cz/ebooks/preview/000/977/091/preview_9788027140763.pdf
+- https://www.spartaky.cz/Content/pid=17.html.html
+- https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html
+- https://www.for-veteran.eu/skoda-445-navod-k-obsluze
+- https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf
+- https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf
+- https://www.for-veteran.eu/historie-a-technicka-data-skoda-1200-1201
+- https://www.for-veteran.eu/skoda-1201-navod-k-obsluze
+- https://cdn.skoda-storyboard.com/2022/07/220721_70-let-vozu-SKODA-1200-Celokovova-karoserie-z-aerodynamickeho-tunelu.pdf
+- https://skoda1202.predseda.com/technik3.htm
+- https://auta5p.eu/katalog/skoda/s1201_01.php
+
+Commons: four replacement files and one existing file visually inspected in original form from temporary storage. Metadata and API query history: skoda-card-photo-evidence.json, skoda-step7-photo-candidates.json. Review decisions: skoda-step7-photo-review.json. Full vehicle visible with margin in approved images; captions limit body/year applicability. 59 references remain pending. No image binaries stored in repository.
+
+- 1201: File:1955 skoda 1201 kombi 1.jpg
+- 422: File:13-04-05-Skoda Museum Mladá Boleslav by RalfR-008.jpg
+- 110-1925: File:Laurin Klement 110.jpg
+- 1203: File:Škoda-1203-sanitní Dolní-Kalná-P1040342.jpg
+- 105-120-125: File:Škoda 105 BJ 1978 (Foto Hilarmont) (1).JPG
+<!-- skoda-step7:end -->

@@ -1,0 +1,124 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "110-r",
+      "generationIndex": 0,
+      "trimName": "110 R",
+      "fields": {
+        "engine.powerStandard": "DIN"
+      },
+      "sources": [
+        "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+      ],
+      "fieldSources": {
+        "engine.powerStandard": [
+          "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+        ]
+      },
+      "noteCs": "Normu DIN pro uváděných 38 kW výslovně uvádí česká tisková zpráva výrobce k 50. výročí 110 R. Tato zpráva zároveň uvádí 19 s a pneumatiky 165 SR 14, ale nepopisuje metodiku zkoušky ani poloviční zatížení. Hodnota 18,5 s zatím nebyla přiřazena k doloženému samostatnému měření; generační zrychlení proto zůstává sporné."
+    }
+  ],
+  "additions": [],
+  "needsReview": [
+    {
+      "lineSlug": "110-r",
+      "generationIndex": 0,
+      "trimName": "110 R",
+      "fields": [
+        "acceleration0to100s"
+      ],
+      "reason": "Výrobce v retrospektivě potvrzuje19s; nebyl nalezen původní zkušební protokol nebo příslušná stránka dobového návodu vysvětlující18,5s. Tvrzení, že18,5s je naměřený test a19s tovární limit při poloviční zátěži, není ověřeno. Zatím ponechat null.",
+      "sources": [
+        "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/",
+        "https://www.skoda110r.com/download.php?sekce=4"
+      ]
+    },
+    {
+      "lineSlug": "110-r",
+      "generationIndex": 0,
+      "trimName": "110 R",
+      "fields": [
+        "SAE power comparison",
+        "acceleration test payload and tyres"
+      ],
+      "reason": "DIN52k/38kW a obecné osazení165SR14 potvrzuje výrobce.62kSAE ani poloviční užitečné zatížení při zkoušce nebyly ověřeny v primárním dokumentu. Nevyvozovat metodiku z blízkosti údajů v jednom odstavci.",
+      "sources": [
+        "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "trimName": "1.8 20V – liftback (1996)",
+      "fields": [
+        "acceleration0to100s"
+      ],
+      "reason": "Auto.cz15.12.1997 má10,7s v textu a10,9s v tabulce. Není doloženo, že text označuje vlastní měření, ani primární tovární protokol10,9s pro přesný AGN/5MT/modelový rok. Databáze10,9s nazývá factoryclaim, ale nejde o primární dokument. Ponechat null.",
+      "sources": [
+        "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4",
+        "https://www.automobile-catalog.com/car/1997/3134330/skoda_octavia_1_8_20v.html"
+      ]
+    }
+  ],
+  "leadDecisions": [
+    {
+      "lead": "110 R: power is52PS DIN rather than62PS SAE",
+      "status": "partially-verified",
+      "accepted": [
+        "38kW/52k according to DIN is explicitly stated in manufacturer Czech press release."
+      ],
+      "notAccepted": [
+        "62SAE comparison not verified in primary scan.",
+        "Power-standard distinction does not itself establish acceleration-test conditions."
+      ],
+      "sources": [
+        "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+      ]
+    },
+    {
+      "lead": "110 R factory0–10019.0s versus measured18.5s, halfpayload165SR14",
+      "status": "partially-verified-unresolved",
+      "accepted": [
+        "19s published by manufacturer retrospective.",
+        "165SR14 radial tyre fitment published by manufacturer."
+      ],
+      "notAccepted": [
+        "Halfpayload condition unverified.",
+        "18.5s not tied to independently identified measurement/test protocol.",
+        "Do not label19s homologation claim or18.5s measured solely on this evidence."
+      ],
+      "sources": [
+        "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+      ]
+    },
+    {
+      "lead": "OctaviaIAGN92kWMT5 factory10.9s versus measured10.7s",
+      "status": "unresolved",
+      "accepted": [
+        "Both figures are present in the same period Auto.cz article, in different sections.",
+        "Secondary automobile-catalog labels10.9s factoryclaim."
+      ],
+      "notAccepted": [
+        "No original factory brochure/manual containing10.9s for this exact earlyvariant found in the bounded search.",
+        "Auto.cz10.7s prose is not explicitly identified as measured."
+      ],
+      "sources": [
+        "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4",
+        "https://www.automobile-catalog.com/car/1997/3134330/skoda_octavia_1_8_20v.html"
+      ]
+    }
+  ],
+  "helpWanted": [
+    "110 R: original AZNP owner-manual performance page, including edition/year and acceleration load/tyre footnotes; manufacturer primary source for62SAE if comparison is desired.",
+    "OctaviaIAGN1.8 20V92kW earlyliftback5MT: original1996–1998 manufacturer technical-data sheet showing0–100 and measurement definition. An archive inventory identifies Danish brochure OC00238 3/97 but its actual technical pages were not inspected."
+  ],
+  "verification": [
+    "Opened manufacturer Czech110R anniversary release and read technical paragraph: explicit DIN38kW,19s,165SR14.",
+    "Opened manufacturer English110R retrospective: confirms38kW/52hp,165SR14 and general body/mass, but English version does not state0–100.",
+    "Period Octavia Auto.cz article read previously through indexed full technical table; current direct request403; secondary factoryclaim page indexed, not treated as original factory evidence.",
+    "Located110R club archive index listing original1970/1972/1975/1977 owner-manual scans; direct archive request timed out. Scan contents not read.",
+    "Located Danish archive inventory for Octavia brochure OC00238 3/97; inventory only, not technical-page evidence.",
+    "No optionalTDI81/96versions researched; no shared catalogue edited."
+  ]
+}
