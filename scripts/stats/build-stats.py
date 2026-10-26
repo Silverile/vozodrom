@@ -37,6 +37,7 @@ def label(code):
 def add_fleet(t, a):
     t["n"] += a["n"]
     t["imported"] += a["imported"]
+    t["importBase"] += a.get("importBase", 0)
     for f in ("years", "fuel", "colors", "countries"):
         for k, v in a[f].items():
             t[f][k] += v
@@ -60,7 +61,7 @@ def add_stk(t, a):
         t["rollback"][1] += a["rollback"][1]
 
 
-new_fleet = lambda: {"n": 0, "imported": 0, "years": Counter(), "fuel": Counter(), "colors": Counter(), "countries": Counter()}
+new_fleet = lambda: {"n": 0, "imported": 0, "importBase": 0, "years": Counter(), "fuel": Counter(), "colors": Counter(), "countries": Counter()}
 new_stk = lambda: {"ages": defaultdict(lambda: [0, 0, 0]), "defects": defaultdict(lambda: [0, 0, 0, 0]), "with": 0, "km": defaultdict(Counter), "rollback": [0, 0]}
 
 
@@ -101,8 +102,9 @@ def fleet_out(f):
         "years": [[int(y), n] for y, n in years if n >= 5],
         "fuel": dict(share(f["fuel"], f["n"])),
         "colors": share(f["colors"], max(1, sum(f["colors"].values())), 8),
-        "imported": round(f["imported"] / f["n"], 4),
-        "countries": share(f["countries"], max(1, sum(f["countries"].values())), 6),
+        # only when cars built from 1995 are a real part of the group (not a few re-registered classics)
+        "imported": round(f["imported"] / f["importBase"], 4) if f["importBase"] >= max(MIN_N, 0.3 * f["n"]) else None,
+        "countries": share(f["countries"], max(1, sum(f["countries"].values())), 6) if f["importBase"] >= max(MIN_N, 0.3 * f["n"]) else [],
     }
 
 

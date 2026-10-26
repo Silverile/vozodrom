@@ -68,8 +68,12 @@ class Matcher:
         cards = load("src/data/model-cards-index.json")
         self.lines = {}  # make -> [(folded name, slug)] longest first
         self.gens = {}  # (make, line) -> [(from, to, codes)]
+        self.years = {}  # (make, line) -> (from, to)
         for l in lines:
-            names = {fold(l["name"]), *(fold(a) for a in l.get("aliases") or [])}
+            self.years[(l["makeSlug"], l["slug"])] = (l.get("from"), l.get("to"))
+            # "Octavia (1959)" is registered as plain "OCTAVIA": the year picks between same-named lines.
+            base = re.sub(r"\s*\([^)]*\d{4}[^)]*\)\s*$", "", l["name"])
+            names = {fold(l["name"]), fold(base), *(fold(a) for a in l.get("aliases") or [])}
             # "105/120/125" and "1000/1100 MB" are families: each number is a name of its own.
             if "/" in l["name"]:
                 names |= {fold(p) for p in l["name"].split("/")}
@@ -100,10 +104,18 @@ class Matcher:
         first = k.split(" ")[0] if k else ""
         return self.make_by_key.get(first)
 
-    def line(self, make: str, raw_model: str):
+    def line(self, make: str, raw_model: str, year=None):
+        """Model-line slug; when several lines share the matched name, the one built in `year`."""
         key = (make, raw_model)
-        if key in self._cache:
-            return self._cache[key]
+        if key not in self._cache:
+            self._cache[key] = self._lines(make, raw_model)
+        slugs = self._cache[key]
+        if len(slugs) <= 1 or not year:
+            return slugs[0] if slugs else None
+        inside = [s for s in slugs if (self.years[(make, s)][0] or 0) <= year <= (self.years[(make, s)][1] or 9999)]
+        return (inside or slugs)[0]
+
+    def _lines(self, make: str, raw_model: str):
         m = fold(raw_model)
         mk = self.make_names.get(make, "")
         if mk and m.startswith(mk + " "):
@@ -117,6 +129,7 @@ class Matcher:
                 m2 = f"{b[1]} {m2}"
         cands = [m, m2] if make == "mercedes-benz" else [m, m2, compact(m), compact(m2)]
         found = None
+        matched_name = None
         for raw, slug in RAW_ALIASES.get(make, {}).items():
             if any(c == raw or c.startswith(raw + " ") for c in cands):
                 found = slug
@@ -129,12 +142,17 @@ class Matcher:
                 # "I30CW" is an i30 with a body suffix; "C30" is not a "C3" (next char a digit).
                 glued = make != "mercedes-benz" and cand.startswith(name) and len(cand) > len(name) and cand[len(name)].isalpha()
                 if cand == name or cand.startswith(name + " ") or glued:
-                    found = slug
+                    found, matched_name = slug, name
                     break
             if found:
                 break
-        self._cache[key] = found
-        return found
+        if not found:
+            return []
+        if matched_name is None:
+            return [found]
+        # every line registered under the same name, newest first
+        same = [s for n, s in self.lines.get(make, []) if n == matched_name]
+        return sorted(set(same), key=lambda s: -(self.years[(make, s)][0] or 0))
 
     def generation(self, make: str, line: str, year, type_text: str = ""):
         """Index of the generation built in `year`; a type code like (5E) in the raw text breaks ties."""

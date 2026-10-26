@@ -58,7 +58,7 @@ def parse_day(path):
                 continue
             reg = rec.get("DatumPrvniRegistrace", "")[:4]
             year = int(reg) if reg.isdigit() else None
-            line = matcher.line(make, rec.get("ObchodniOznaceni", "")) or ""
+            line = matcher.line(make, rec.get("ObchodniOznaceni", ""), year) or ""
             gen = matcher.generation(make, line, year, rec.get("ObchodniOznaceni", "")) if line else None
             if not line and rec.get("Kategorie", "") in ("M1", "N1"):
                 unmatched[f"{make}|{rec.get('ObchodniOznaceni', '').strip()}"] += 1

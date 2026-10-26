@@ -6,6 +6,31 @@ import { FUEL_NAMES, type StatsEntry, type StatsMeta, czDate } from "@/lib/stats
 
 const capitalize = (s: string) => s.charAt(0) + s.slice(1).toLowerCase();
 
+// The register uses official state names ("Spolková republika Německo"); show the short ones.
+const COUNTRY: Record<string, string> = {
+  "Spolková republika Německo": "Německo",
+  "Rakouská republika": "Rakousko",
+  "Italská republika": "Itálie",
+  "Francouzská republika": "Francie",
+  "Belgické království": "Belgie",
+  "Slovenská republika": "Slovensko",
+  "Švýcarská konfederace": "Švýcarsko",
+  "Nizozemské království": "Nizozemsko",
+  "Polská republika": "Polsko",
+  "Švédské království": "Švédsko",
+  "Dánské království": "Dánsko",
+  "Maďarská republika": "Maďarsko",
+  "Spojené Státy Americké": "USA",
+  "Velká Británie a Severní Irsko": "Velká Británie",
+  "Německá demokratická republika": "NDR",
+  "Španělské království": "Španělsko",
+  "Lucemburské velkovévodství": "Lucembursko",
+  "Litevská republika": "Litva",
+  "Norské království": "Norsko",
+  "Spojené Arabské Emiráty": "SAE",
+};
+const country = (c: string) => COUNTRY[c] ?? c.replace(/ (republika|království)$/i, "");
+
 function Card({ title, children, note }: { title: string; children: React.ReactNode; note?: string }) {
   return (
     <section className="card min-w-0 p-5">
@@ -38,9 +63,9 @@ export function RealStats({ entry, meta, title }: { entry: StatsEntry; meta: Sta
     <div>
       <h2 className="text-xl font-bold mt-10 mb-3">Skutečná data z ČR <span className="text-base font-normal text-[var(--color-muted)]">· {title}</span></h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {fleet && <Tile label="Jezdí v Česku" value={formatNumber(fleet.n)} hint="vozidel v provozu" />}
+        {fleet && <Tile label="V registru ČR" value={formatNumber(fleet.n)} hint="vozidel se stavem „v provozu“" />}
         {fleet?.avgAge != null && <Tile label="Průměrné stáří" value={`${fleet.avgAge.toLocaleString("cs-CZ")} let`} />}
-        {fleet && <Tile label="Dovezeno ojeté" value={formatPercent(fleet.imported)} hint={fleet.countries[0] ? `nejčastěji ${fleet.countries[0][0]}` : undefined} />}
+        {fleet && fleet.imported != null && <Tile label="Dovezeno ojeté" value={formatPercent(fleet.imported)} hint={fleet.countries[0] ? `nejčastěji ${country(fleet.countries[0][0])}` : undefined} />}
         {stk && <Tile label="Neprošlo STK" value={formatPercent(stk.failRate)} hint={`z ${formatNumber(stk.inspections)} prohlídek`} />}
       </div>
 
@@ -48,7 +73,7 @@ export function RealStats({ entry, meta, title }: { entry: StatsEntry; meta: Sta
         {stk && stk.byAge.length > 0 && (
           <Card title="Neprošlo STK podle stáří" note="Podíl pravidelných prohlídek s výsledkem „částečně způsobilé“ nebo „nezpůsobilé“. Stáří = rok prohlídky minus rok první registrace.">
             <div className="space-y-2">
-              {stk.byAge.filter(([age]) => age >= 2 && age <= 25).map(([age, n, rate]) => (
+              {stk.byAge.filter(([age]) => age >= 4 && age <= 24 && age % 2 === 0).map(([age, n, rate]) => (
                 <Bar key={age} label={`${age} ${age < 5 ? "roky" : "let"}`} value={rate} max={maxFail} display={`${formatPercent(rate)} · ${formatNumber(n)}×`} />
               ))}
             </div>
@@ -57,18 +82,26 @@ export function RealStats({ entry, meta, title }: { entry: StatsEntry; meta: Sta
 
         {stk && stk.defects.length > 0 && (
           <Card title="Nejčastější závady při STK" note="Podíl pravidelných prohlídek, při kterých byla závada zjištěna. Číslo v závorce je kód podle vyhlášky 211/2018 Sb.">
-            <div className="space-y-2">
+            <ol className="space-y-3">
               {stk.defects.slice(0, 8).map((d) => (
-                <Bar key={d.code} label={`${d.label ?? "Závada"} (${d.code})`} value={d.share} max={maxDefect} display={formatPercent(d.share)} />
+                <li key={d.code} className="text-sm">
+                  <div className="flex justify-between gap-3">
+                    <span className="min-w-0">{d.label ?? "Závada"} <span className="text-[var(--color-muted)]">({d.code})</span></span>
+                    <b className="shrink-0">{formatPercent(d.share)}</b>
+                  </div>
+                  <div className="mt-1 h-1.5 rounded-full bg-[var(--color-field)]">
+                    <div className="h-full rounded-full bg-[var(--color-brand)]" style={{ width: `${(d.share / maxDefect) * 100}%` }} />
+                  </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </Card>
         )}
 
         {stk && stk.km.length > 0 && (
           <Card title="Nájezd podle stáří" note={`Medián stavu tachometru při STK; v závorce rozmezí, ve kterém je polovina vozů.${stk.rollback ? ` Stočený tachometr (stav nižší než při předchozí prohlídce): ${formatPercent(stk.rollback.share)} z ${formatNumber(stk.rollback.vehicles)} vozů s více prohlídkami.` : ""}`}>
             <div className="space-y-2">
-              {stk.km.filter(([age]) => age >= 2 && age <= 20 && age % 2 === 0).map(([age, p25, p50, p75]) => (
+              {stk.km.filter(([age]) => age >= 4 && age <= 20 && age % 2 === 0).map(([age, p25, p50, p75]) => (
                 <Bar key={age} label={`${age} let`} value={p50} max={maxKm} display={`${formatKm(p50)} (${Math.round(p25 / 1000)}–${Math.round(p75 / 1000)} tis.)`} />
               ))}
             </div>
@@ -105,14 +138,15 @@ export function RealStats({ entry, meta, title }: { entry: StatsEntry; meta: Sta
             {fleet.countries.length > 0 && (
               <p className="text-sm mt-1">
                 <span className="text-[var(--color-muted)]">Dovoz ojetých hlavně z: </span>
-                {fleet.countries.slice(0, 4).map(([c, s]) => `${c} ${formatPercent(s)}`).join(", ")}
+                {fleet.countries.slice(0, 4).map(([c, s]) => `${country(c)} ${formatPercent(s)}`).join(", ")}
               </p>
             )}
           </Card>
         )}
       </div>
       <p className="mt-3 text-xs text-[var(--color-muted)] max-w-3xl">
-        Zdroj: Ministerstvo dopravy ČR, otevřená data – Registr silničních vozidel (výpis {meta.register.built.slice(0, 7)}) a technické prohlídky
+        Počet v registru zahrnuje i vozidla, která nikdo neodhlásil, i když už nejezdí; skutečný provoz lépe ukazuje počet prohlídek STK.
+        Podíl dovezených ojetých počítáme jen u vozů vyrobených od roku 1995. Zdroj: Ministerstvo dopravy ČR, otevřená data – Registr silničních vozidel (výpis {meta.register.built.slice(0, 7)}) a technické prohlídky
         z IS TP ({czDate(meta.stk.from)} – {czDate(meta.stk.to)}). Zveřejňujeme jen souhrny skupin s alespoň {meta.minN} vozidly nebo prohlídkami.
       </p>
     </div>

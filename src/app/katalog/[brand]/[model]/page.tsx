@@ -115,7 +115,7 @@ function dims(d: { length?: number | null; width?: number | null; height?: numbe
 }
 
 /** Trim table columns, shown only when at least one trim has a value. */
-const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null }[] = [
+const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?: (t: CardTrim) => string | null | undefined }[] = [
   { label: "Karoserie", value: (t) => (t.bodyType ? BODY_NAMES[t.bodyType] ?? t.bodyType : null) },
   { label: "Roky", value: (t) => yearsSpan(t.from ?? null, t.to ?? null, false) || null },
   { label: "Motor", value: (t) => [t.engine?.displacementCc ? `${t.engine.displacementCc} cm³` : null, t.engine?.fuel ? CARD_FUEL[t.engine.fuel] : null].filter(Boolean).join(", ") || null },
@@ -131,17 +131,24 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null }[] =
   { label: "Převodovka", value: (t) => (t.transmission?.type ? `${GEARBOX[t.transmission.type] ?? t.transmission.type}${t.transmission.gears ? ` ${t.transmission.gears}st.` : ""}` : null) },
   { label: "Pohon", value: (t) => (t.drive ? DRIVE[t.drive] ?? t.drive : null) },
   { label: "Rozměry", value: (t) => dims(t.dimensionsMm) },
-  { label: "Hmotnost", value: (t) => (t.massKg ? `${num(t.massKg)} kg` : null) },
+  // A published minimum (manufacturer gives a range by equipment) reads "od X kg"; the range goes to the tooltip.
+  {
+    label: "Hmotnost",
+    value: (t) => (t.massKg ? `${t.massReference === "published-minimum" ? "od " : ""}${num(t.massKg)} kg` : null),
+    tip: (t) =>
+      [t.massRangeKg ? `rozpětí ${num(t.massRangeKg.min)}–${num(t.massRangeKg.max)} kg podle výbavy` : null, t.massBasis].filter(Boolean).join(". ") || null,
+  },
   { label: "Max. rychlost", value: (t) => (t.topSpeedKmh ? `${t.topSpeedKmh} km/h` : null) },
   { label: "0–100", value: (t) => (t.acceleration0to100s ? `${t.acceleration0to100s.toLocaleString("cs-CZ")} s` : null) },
   {
     label: "Spotřeba",
     value: (t) => {
       const v = t.consumptionL100 ? `${t.consumptionL100.toLocaleString("cs-CZ")} l` : t.consumptionKwh100 ? `${t.consumptionKwh100.toLocaleString("cs-CZ")} kWh` : null;
-      return v ? `${v}/100 km${t.consumptionCycle ? ` (${t.consumptionCycle})` : ""}` : null;
+      return v ? `${v}/100 km` : null;
     },
+    tip: (t) => t.consumptionCycle,
   },
-  { label: "Dojezd", value: (t) => (t.rangeKm ? `${num(t.rangeKm)} km${t.consumptionCycle ? ` (${t.consumptionCycle})` : ""}` : null) },
+  { label: "Dojezd", value: (t) => (t.rangeKm ? `${num(t.rangeKm)} km` : null), tip: (t) => t.rangeCycle ?? t.consumptionCycle },
 ];
 
 function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneration; alt: string; className?: string; eager?: boolean }) {
@@ -184,7 +191,7 @@ function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; titl
       </div>
       {stats && (stats.fleet || stats.stk) && (
         <ul className="mt-2 flex flex-wrap gap-1.5 text-xs">
-          {stats.fleet && <li className="chip">V Česku jezdí {formatNumber(stats.fleet.n)}</li>}
+          {stats.fleet && <li className="chip">V registru ČR {formatNumber(stats.fleet.n)}</li>}
           {stats.stk && <li className="chip">Neprošlo STK {formatPercent(stats.stk.failRate)}</li>}
           {stats.stk?.km.find(([age]) => age === 10) && (
             <li className="chip">Nájezd v 10 letech ~{formatKm(stats.stk.km.find(([age]) => age === 10)![2])}</li>
@@ -246,16 +253,24 @@ function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; titl
               {gen.trims.map((t, i) => (
                 <tr key={i} className="border-t border-[var(--color-line)]">
                   <td className="py-1.5 pr-3 font-medium">{t.name ?? "—"}</td>
-                  {columns.map((c) => (
-                    <td key={c.label} className="pr-3 whitespace-nowrap">{c.value(t) ?? "—"}</td>
-                  ))}
+                  {columns.map((c) => {
+                    const v = c.value(t);
+                    const tip = v ? c.tip?.(t) : null;
+                    return (
+                      <td key={c.label} className="pr-3 whitespace-nowrap" title={tip ?? undefined}>
+                        {v ?? "—"}
+                        {tip && <span className="ml-0.5 text-[var(--color-muted)] cursor-help" aria-label={tip}>ⓘ</span>}
+                      </td>
+                    );
+                  })}
                 </tr>
               ))}
             </tbody>
           </table>
           {columns.some((c) => c.label === "Výkon") && (
             <p className="mt-2 text-xs text-[var(--color-muted)]">
-              Výkon podle normy ISO, není-li uvedeno jinak (SAE = starší americká metodika, UN-GTR.21 = výkon elektromobilů). Výbavy a trhy se mohou lišit.
+              Výkon podle normy ISO, není-li uvedeno jinak (SAE = starší americká metodika, UN-GTR.21 = výkon elektromobilů). U spotřeby a hmotnosti
+              ukazuje ⓘ metodiku měření. Výbavy a trhy se mohou lišit.
             </p>
           )}
         </div>

@@ -11,7 +11,8 @@ export interface FleetStats {
   years: [number, number][];
   fuel: Record<string, number>;
   colors: [string, number][];
-  imported: number;
+  /** Share of cars built from 1995 that were first registered abroad; null when too few. */
+  imported: number | null;
   countries: [string, number][];
 }
 
@@ -44,7 +45,8 @@ const cache = new Map<string, MakeFile | null>();
 function load(make: string): MakeFile | null {
   if (!cache.has(make)) {
     const file = path.join(process.cwd(), "src", "data", "stats", `${make}.json`);
-    cache.set(make, fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as MakeFile) : null);
+    if (!fs.existsSync(file)) return null; // not cached: the dev server may see the file appear later
+    cache.set(make, JSON.parse(fs.readFileSync(file, "utf8")) as MakeFile);
   }
   return cache.get(make) ?? null;
 }

@@ -39,6 +39,12 @@ export interface CardTrim {
   consumptionCycle?: string | null;
   consumptionKwh100?: number | null;
   rangeKm?: number | null;
+  rangeCycle?: string | null;
+  /** What the mass includes (kerb with or without driver, historical "pohotovostní"…), as the source states it. */
+  massBasis?: string | null;
+  /** "published-minimum" when massKg is the lowest value of a published range. */
+  massReference?: string | null;
+  massRangeKg?: { min: number; max: number } | null;
 }
 
 export interface CardPhoto {
