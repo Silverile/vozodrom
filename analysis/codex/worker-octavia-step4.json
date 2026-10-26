@@ -1,0 +1,98 @@
+{
+  "retrievedAt": "2026-10-26",
+  "scope": "Octavia I: three existing 1996 launch liftback records only. Facts independently selected; no prose or tables copied.",
+  "patches": [
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "trimName": "1.6 MPI – liftback (1996)",
+      "fields": {
+        "engine.displacementCc": 1598,
+        "engine.torqueNm": 135,
+        "transmission.type": "manual",
+        "transmission.gears": 5,
+        "massKg": 1160,
+        "massBasis": "Pohotovostní hmotnost; zahrnutí řidiče zdroj neupřesňuje.",
+        "topSpeedKmh": 170,
+        "acceleration0to100s": 14.4,
+        "consumptionL100": 7.6,
+        "consumptionCycle": "Kombinovaná dobová normovaná spotřeba; právní norma v testu neuvedena."
+      },
+      "sources": [
+        "https://www.auto.cz/test-skoda-octavia-1-6-55-kw-24"
+      ],
+      "noteCs": "Údaje raného liftbacku 1.6 MPI 55 kW s pětistupňovým manuálem z dobového testu základní výbavy zveřejněného 5. 3. 1998; nejsou přebírány z faceliftovaného Tour. Hmotnost 1160 kg je shodná s indexovaným výrobcovým retrospektivním přehledem pro rok 1996. Rok 1996 označuje zahájení nabídky, testovaný exemplář je z roku 1998. Spotřeba 7,6 je tabulková kombinovaná, nikoli testem naměřených přibližně 8,5."
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "trimName": "1.8 20V – liftback (1996)",
+      "fields": {
+        "engine.displacementCc": 1781,
+        "engine.torqueNm": 173,
+        "transmission.type": "manual",
+        "transmission.gears": 5,
+        "drive": "fwd",
+        "massKg": 1265,
+        "massBasis": "Pohotovostní hmotnost bez řidiče; specifikace SLX s manuální převodovkou.",
+        "topSpeedKmh": 201,
+        "acceleration0to100s": null,
+        "consumptionL100": 8.6,
+        "consumptionCycle": "NEDC kombinovaná"
+      },
+      "sources": [
+        "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4",
+        "https://www.automobile-catalog.com/car/1996/3134330/skoda_octavia_1_8_20v.html",
+        "https://www.motorsdb.com/fiche-technique/auto/32560/Skoda-Octavia-1-8-1996-1999.html"
+      ],
+      "noteCs": "Zúžení na raný liftback SLX s pětistupňovým manuálem; automat má jiné údaje. Hmotnost 1265 kg a nejvyšší rychlost 201 km/h potvrzuje dobový test Auto.cz z 15. 12. 1997 i dvě specifikační databáze. U zrychlení je rozpor: vlastní text testu uvádí 10,7 s, jeho technická tabulka a databáze 10,9 s; ponecháno null. Kombinovaných 8,6 l/100 km NEDC potvrzují dvě databáze. Hodnoty 6,1/7,8/9,6 v dobovém testu nelze číst jako město/mimo/kombinace: odpovídají staršímu cyklu 90/120/město. Simulované hodnoty ProfessCars nejsou použity."
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "trimName": "1.9 TDI – liftback (1996)",
+      "fields": {
+        "transmission.type": "manual",
+        "transmission.gears": 5,
+        "drive": "fwd",
+        "massKg": 1285,
+        "massBasis": "Pohotovostní hmotnost bez řidiče; raný liftback 66 kW s pětistupňovým manuálem.",
+        "topSpeedKmh": 178,
+        "acceleration0to100s": 13.9,
+        "consumptionL100": 5.1,
+        "consumptionCycle": "ECE 90/120/město – kombinovaná dobová hodnota"
+      },
+      "sources": [
+        "https://www.automobile-catalog.com/car/1996/3134375/skoda_octavia_1_9_tdi_90.html",
+        "https://www.auto.cz/skoda-octavia-1u-1996-2010-prvni-moderni-generace-vydrzela-ve-vyrobe-14-let-131885",
+        "https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/"
+      ],
+      "noteCs": "Specifikace evropského liftbacku 1.9 TDI 66 kW s pětistupňovým manuálem nabízeného od října 1996 do poloviny roku 1998. Dobových normovaných 5,1 l/100 km nezávisle potvrzuje výrobce; databáze je přiřazuje staršímu ECE cyklu, zatímco pro NEDC uvádí 5,2. Hmotnost 1285 kg potvrzuje retrospektiva Auto.cz. Zrychlení 13,9 s je databází označeno jako tovární údaj, není použita simulace 13,5 s."
+    }
+  ],
+  "needsReview": [
+    {
+      "trimName": "1.8 20V – liftback (1996)",
+      "field": "acceleration0to100s",
+      "reason": "Dobový test má 10,7 s v próze, 10,9 s v technické tabulce. Jednoznačný dobový prospekt by rozhodl."
+    },
+    {
+      "trimName": "1.6 MPI – liftback (1996)",
+      "field": "consumptionCycle",
+      "reason": "Dobový test označuje 7,6 jako kombinovanou hodnotu, konkrétní směrnici neuvádí; neoznačovat automaticky NEDC."
+    },
+    {
+      "trimName": "1.6 MPI – liftback (1996)",
+      "field": "dimensionsMm.height",
+      "reason": "Stávajících 1429 mm potvrzuje dobový test; indexovaný OEM retrospektivní PDF pro 1996 uvádí 1431 mm, ale samotný PDF vrací 404. Nelze bez primárního prospektu rozhodnout, zda jde o překlep nebo jiný stav měření."
+    }
+  ],
+  "verification": [
+    "Auto.cz 1.6 dobový test: page opened successfully; prose, date and gearbox read; technical table exposed in indexed search result.",
+    "Auto.cz 1.8 dobový test: indexed full article and technical table read; original outdated link cache miss, current /test- URL found.",
+    "Automobile-catalog two exact 1996 technical pages: detailed indexed specs read, direct requests return 402; no paywall bypass or paid access attempted.",
+    "MotorsDB 1.8: detailed indexed specification read, direct request returns 403; no bypass attempted.",
+    "Škoda Storyboard 1996 launch retrospective opened successfully; confirms three launch engines and 5.1 l/100 km for TDI.",
+    "OEM skoda_magazin_zima_2011.pdf indexed table read but direct request 404; not used as sole source for a patch."
+  ]
+}

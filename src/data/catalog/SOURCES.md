@@ -196,3 +196,48 @@ Sources checked for selected specifications:
 
 Photo addition: https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG — author Kelovy, public-domain metadata from Commons API; original URL/file-page/author/licence retained in the photo record. Visual review is pending. No image binary downloaded. 4R remains unresolved. Detailed omissions and source conflicts are in model-lines-review.md and skoda-specs-step3-review.json.
 <!-- skoda-specs-step3:end -->
+
+<!-- skoda-specs-step4:start -->
+## Škoda version specifications step 4 — 26 October 2026
+
+Selected facts checked via general web search, original manufacturer releases, a mirrored 1999 manufacturer brochure, AZNP 1987 manual (printed pp.6–7), Andrt/Malina service book (printed p.13) and Czech Wikipedia. Facts independently structured; no wholesale prose/tables or image binaries retained. Period documents are **not CC0**; Wikidata CC0 applies only to the original identity data. Photo licences remain file-specific.
+
+Fixture: analysis/codex/skoda-specs-step4.mjs; applied facts: skoda-specs-step4-evidence.json; omissions/conflicts: skoda-specs-step4-review.json. Every added populated field has URL provenance. Cycles and mass definitions must remain visible when rendered.
+
+- https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf
+- https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/
+- https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/125-let-skoda-auto-pribehy-mene-znamych-modelu-skoda-felicia-fun/
+- https://cs.wikipedia.org/w/index.php?oldid=26215791
+- https://cs.wikipedia.org/wiki/%C5%A0koda_Felicia
+- https://skodafeliciafun.co.uk/March_1999_Skoda_Felicia_Fun_Sales_Brochure_GermanWP.pdf
+- https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf
+- https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf
+- https://cdn.skoda-storyboard.com/2018/09/180914-50-years-of-the-%C5%A0KODA-1203-Reliable-all-round-van-with-cult-status.pdf
+- https://www.skoda-storyboard.com/en/press-releases/70-years-of-the-skoda-1200-all-steel-body-refined-in-the-wind-tunnel/
+- https://www.skoda-storyboard.com/en/press-releases/skoda-popular-monte-carlo-1936-1939-the-elegant-model-with-rally-dna/
+
+Whole-car photo framing is now required. Existing references are pending visual review, not approved under this rule. No new photo references this turn.
+
+
+Parallel research merged: worker-historic-step4.json, worker-octavia-step4.json, worker-fabia-step4.json (6 patches). Octavia I adds body/engine/gearbox-scoped masses and consumption; the 1.6 technical sample was tested in 1998 and its note distinguishes it from the 1996 launch. Junior gains period-test acceleration/consumption and original hatchback dimensions. 450's 900/930 kg conflict is null. Octavia 1.8's 10.7/10.9 s conflict is null. RS consumption revision, Junior displacement, and Octavia height/source-access limitations remain explicit in worker evidence and scope review notes.
+
+Additional Help wanted: 440/450 original year/equipment mass pages; 1201 sedan 1050/1060 kg reconciliation; Octavia I 1.8 homologated 0–100 value; Fabia Junior exact kerb mass and 966/997 cc reconciliation; exact RS brochure revision mapping 5.1/5.4 litres and cycle.
+
+Worker source references:
+
+- https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html
+- https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf
+- https://www.spartaky.cz/Content/pid=17.html.html
+- https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf
+- https://www.for-veteran.eu/skoda-1201-navod-k-obsluze
+- https://www.auto.cz/test-skoda-octavia-1-6-55-kw-24
+- https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4
+- https://www.automobile-catalog.com/car/1996/3134330/skoda_octavia_1_8_20v.html
+- https://www.motorsdb.com/fiche-technique/auto/32560/Skoda-Octavia-1-8-1996-1999.html
+- https://www.automobile-catalog.com/car/1996/3134375/skoda_octavia_1_9_tdi_90.html
+- https://www.auto.cz/skoda-octavia-1u-1996-2010-prvni-moderni-generace-vydrzela-ve-vyrobe-14-let-131885
+- https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/
+- https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi
+- https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/
+
+<!-- skoda-specs-step4:end -->

@@ -154,9 +154,16 @@ export interface CatalogModelCardTrim {
   drive: "fwd" | "rwd" | "awd" | "rr" | null;
   dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null };
   massKg: number | null;
+  /** Source convention; no conversion between kerb, dry and driver-inclusive weights. */
+  massBasis: string | null;
   topSpeedKmh: number | null;
   acceleration0to100s: number | null;
   consumptionL100: number | null;
+  /** Preserve constant-speed/period averages; do not imply WLTP when unspecified. */
+  consumptionCycle: string | null;
+  consumptionKwh100: number | null;
+  rangeKm: number | null;
+  rangeCycle: string | null;
   specificationScope: { market: string; modelYear: number | null; noteCs: string };
   sources: string[];
 }

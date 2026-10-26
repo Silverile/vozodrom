@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import {range} from './skoda-range-definitions.mjs';
 import {facts,urls,trim} from './skoda-trim-facts.mjs';
 import {enrichGeneration,specSources,conflicts} from './skoda-specs-step3.mjs';
+import {enrichStep4,step4Sources,step4Conflicts} from './skoda-specs-step4.mjs';
+import {applyWorkerPatches,workerSources} from './skoda-step4-workers.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,d)=>fs.writeFileSync(p,JSON.stringify(d,null,2)+'\n');
 const e=read('analysis/codex/skoda-card-evidence.json'),photos=read('analysis/codex/skoda-card-photo-evidence.json');
 const additions=read('src/data/catalog/model-line-additions.json').filter(a=>!(a.makeSlug==='skoda'&&range.some(r=>r[0]===a.slug)));
@@ -70,6 +72,8 @@ for(const c of cards){for(const [i,g]of c.generations.entries()){
   if(!g.trims&&b?.engine){const sizes=[...new Set([...(b.engine).matchAll(/\b(\d\.\d)\s*L\b/g)].map(m=>m[1]))];if(sizes.length)g.trims=sizes.map(n=>trim(`Motor ${n} l – výbava neurčena`,p.source,{kind:'engine-version',bodyType:g.bodyTypes?.length===1?g.bodyTypes[0]:null}));}
  }
  enrichGeneration(c,g,i,e);
+ enrichStep4(c,g,i);
+ applyWorkerPatches(c,g,i);
  if(g.trims)for(const t of g.trims){g.sources.push(...t.sources);c.sources.push(...t.sources);}
  g.sources=[...new Set(g.sources)];
  }
@@ -93,6 +97,9 @@ for(const c of cards){for(const [i,g]of c.generations.entries()){
 for(const l of additions){for(const[k,v]of Object.entries(l))if(v===null&&!l.needsReview.some(r=>r.field===k))l.needsReview.push({field:k,reason:'Unknown or shared family value; needs a model-specific source.'});}
 cards.sort((a,b)=>a.lineSlug.localeCompare(b.lineSlug,'en'));write('src/data/catalog/model-cards/skoda.json',cards);write('src/data/catalog/model-line-additions.json',additions);
 const primary=read('analysis/codex/model-line-primary-facts.json');
+for(const url of workerSources)if(!primary.sources.some(s=>s.url===url))primary.sources.push({url,publisher:'Manufacturer / period press / technical reference (see worker evidence)',retrievedDate:'2026-10-26',facts:{scope:'Selected independently researched worker facts; exact version and uncertainty in worker-*-step4.json.'}});
+const book=primary.sources.find(s=>s.url===step4Sources.favoritBook);if(book)book.publisher='Andrt/Malina — maintenance and repair manual (mirrored copy)';
+for(const url of [...Object.values(step4Sources),...step4Conflicts.flatMap(x=>x.sources)])if(!primary.sources.some(s=>s.url===url))primary.sources.push({url,publisher:url.includes('wikipedia.org')?'Wikipedia factual revision':'Škoda Auto',retrievedDate:'2026-10-26',facts:{scope:'Selected step-4 facts with field-level provenance, explicit consumption cycles and version/body scopes.'}});
 for(const url of Object.values(specSources))if(!primary.sources.some(s=>s.url===url))primary.sources.push({url,publisher:url.includes('wikipedia.org')?'Wikipedia factual revision':'Škoda Auto',retrievedDate:'2026-10-26',facts:{scope:'Selected named-version facts retained in skoda-specs-step3.mjs; source standards and body scopes explicit.'}});
 write('analysis/codex/skoda-specs-step3-evidence.json',{startedAt:'2026-10-26T20:18:03Z',generatedAt:new Date().toISOString(),sources:specSources,versionFacts:cards.flatMap(c=>c.generations.flatMap((g,i)=>(g.trims||[]).filter(t=>t.fieldSources).map(t=>({lineSlug:c.lineSlug,generationIndex:i,...t})))),generationFacts:cards.flatMap(c=>c.generations.map((g,i)=>({lineSlug:c.lineSlug,generationIndex:i,dimensionsMm:g.dimensionsMm,trunkL:g.trunkL,specificationScope:g.specificationScope,fieldSources:g.fieldSources})).filter(g=>g.fieldSources)),conflicts,scope:'Selected factual records only. No source prose, whole tables or image binaries retained.'});
 for(const url of Object.values(urls))if(!primary.sources.some(s=>s.url===url))primary.sources.push({url,publisher:'Škoda Auto / official importer',retrievedDate:'2026-10-26',facts:{scope:'Selected step-2 factual references; structured version facts in skoda-trim-facts.mjs',production:url===urls.garde?'Garde 1981–1984; Rapid 1984–1990':url===urls.van?'1203 AZNP 1968–1981':url===urls.standard?'420 Standard 1933':''}});

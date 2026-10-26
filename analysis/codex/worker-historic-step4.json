@@ -1,0 +1,64 @@
+{
+  "retrievedOn": "2026-10-26",
+  "scope": "440/445/450, 1201/1202 and 100/110; independent historical source checks",
+  "patches": [
+    {
+      "lineSlug": "440-445-450",
+      "generationIndex": 0,
+      "trimName": "440",
+      "fields": { "transmission.type": "manual", "transmission.gears": 4, "drive": "rwd", "engine.torqueNm": 68.6 },
+      "sources": ["https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html"],
+      "scopeNoteCs": "Převodovka, pohon a moment podle technického přehledu časopisu Automobil k provedení z roku 1957. Údaje o hmotnosti nejsou přeneseny kvůli rozdílným historickým podkladům."
+    },
+    {
+      "lineSlug": "440-445-450",
+      "generationIndex": 0,
+      "trimName": "450",
+      "fields": { "transmission.type": "manual", "transmission.gears": 4, "drive": "rwd", "massKg": null },
+      "sources": ["https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"],
+      "scopeNoteCs": "Výrobce potvrzuje čtyřstupňovou převodovku s řazením pod volantem a pohon zadních kol. Hmotnost zůstává neurčena: tisková zpráva výrobce uvádí pohotovostních 930 kg, dosavadní tabulka 900 kg; rozdíl provedení se nepodařilo doložit."
+    }
+  ],
+  "conflicts": [
+    {
+      "lineSlug": "440-445-450", "trimName": "440", "field": "massKg",
+      "values": [920, 930],
+      "sources": ["https://www.spartaky.cz/Content/pid=17.html.html", "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html"],
+      "decision": "Retain null: both are kerb figures; equipment/date difference is not documented precisely enough to assign one to the generic record."
+    },
+    {
+      "lineSlug": "1201", "trimName": "1201 typ 980 – sedan", "field": "massKg",
+      "values": [1050, 1060],
+      "sources": ["https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf", "https://www.for-veteran.eu/skoda-1201-navod-k-obsluze"],
+      "decision": "Retain null: OEM magazine gives1050kg while owner-manual transcription gives1060kg; no precise version reconciliation."
+    }
+  ],
+  "notApplied": [
+    {
+      "lineSlug": "440-445-450", "trimName": "440", "field": "consumptionL100", "value": 7.7,
+      "sources": ["https://www.spartaky.cz/Content/pid=17.html.html"],
+      "reason": "Club transcription calls it basic consumption but gives no exact measurement cycle. Period Automobil article instead gives7–8L/100km at steady70km/h; do not assign that protocol to7.7 without an original manual page."
+    },
+    {
+      "lineSlug": "440-445-450", "trimName": "450", "field": "consumptionL100", "value": 9,
+      "sources": ["https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf"],
+      "reason": "OEM explicitly says average9L/100km but no test protocol. Safe to show only as period average, cycle unspecified, if the UI supports that label; not WLTP/NEDC."
+    },
+    {
+      "lineSlug": "1202", "trimName": "1202 STW – série 67–97", "field": "consumptionL100", "value": 9.4,
+      "sources": ["https://www.velkykluk.cz/historie/skoda_1202_stw/technicke_parametry/index.htm"],
+      "reason": "Indexed technical transcription gives9.4 but no cycle. Full page fetch timed out, so not a final applied fact."
+    },
+    {
+      "lineSlug": "440-445-450", "trimName": "440", "field": "acceleration0to100s", "value": null,
+      "sources": ["https://www.spartaky.cz/Content/pid=17.html.html"],
+      "reason": "The visible42-second acceleration figure is60–100km/h, not0–100. Do not put42 into the0–100 column."
+    }
+  ],
+  "helpWanted": [
+    "Original 440/445/450 manual or homologation page binding kerb mass to model year/equipment;440 sources disagree920/930kg,450900/930kg.",
+    "Original100/110 consumption test protocol for nominal7.6/8.0/8.5L values; do not infer a constant-speed cycle.",
+    "Original1201 sedan weight page with model year, distinguishing1050 and1060kg.",
+    "Original1202 STW manual consumption procedure for9.4L/100km and0–100 acceleration if measured."
+  ]
+}

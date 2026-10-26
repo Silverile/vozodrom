@@ -1,0 +1,54 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "Junior 1.0 MPI 37 kW",
+      "fields": {
+        "dimensionsMm.width": 1646,
+        "dimensionsMm.height": 1451,
+        "engine.torqueNm": 84,
+        "acceleration0to100s": 21.6,
+        "topSpeedKmh": 147,
+        "consumptionL100": 6.6,
+        "consumptionCycle": "combined (period manufacturer declaration; standard unspecified)"
+      },
+      "sources": [
+        "https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi",
+        "https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/"
+      ],
+      "fieldSources": {
+        "dimensionsMm.width": ["https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/"],
+        "dimensionsMm.height": ["https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/"],
+        "engine.torqueNm": ["https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi"],
+        "acceleration0to100s": ["https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi"],
+        "topSpeedKmh": ["https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi"],
+        "consumptionL100": ["https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi"],
+        "consumptionCycle": ["https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi"]
+      },
+      "noteCs": "Junior 1.0 MPI podle dobového slovenského testu z 15. 4. 2002; spotřeba 6,6 l/100 km je výrobcem udaná kombinovaná hodnota, nikoli testem dosažených přibližně 7 l/100 km. Norma měření není v článku určena. Šířka a výška patří původnímu hatchbacku, jehož rozměry potvrzuje výrobce; nejsou přeneseny z kombi ani RS. Pohotovostní hmotnost zůstává neurčena. Objem motoru není převzat: článek uvádí 966 cm³, jiné podklady 997 cm³."
+    }
+  ],
+  "needsReview": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "Junior 1.0 MPI 37 kW",
+      "fields": ["massKg", "engine.displacementCc"],
+      "reason": "Period HNonline test gives no mass and states 966 cm³; Auta5P gives 1010 kg kerb and 997 cm³. No exact primary mass definition found within this worker's timebox. Do not infer driver inclusion or resolve conflicting displacement by guess."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW",
+      "fields": ["massKg", "consumptionCycle"],
+      "reason": "UK manufacturer November 2003 brochure gives kerb1315 kg depending on equipment, combined5.1L/100 under93/116, acceleration9.6s (0–62mph), max204. Current catalogue says5.4 and9.5s; later press test gives1315 and5.4 equivalent. Do not choose mass range endpoint1245–1315 as universal, or attach an early brochure cycle to later5.4 without exact revision match.",
+      "sources": [
+        "https://xr793.com/wp-content/uploads/2022/09/2004-Skoda-Fabia-Specs-Prices-UK.pdf",
+        "https://www.carenthusiast.com/reviews/article/1590/Skoda/2006-Skoda-Fabia%2BvRS/.html"
+      ]
+    }
+  ],
+  "verification": "Opened HNonline primary road test and OEM Storyboard article; inspected indexed text of original UK manufacturer brochure. No catalogue files edited."
+}

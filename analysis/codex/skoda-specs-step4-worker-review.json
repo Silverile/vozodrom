@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-10-26T21:57:36.302Z",
+  "completed": [
+    "worker-historic-step4.json",
+    "worker-octavia-step4.json",
+    "worker-fabia-step4.json"
+  ],
+  "patches": 6,
+  "notes": [
+    {
+      "lineSlug": "440-445-450",
+      "trimName": "440",
+      "field": "massKg",
+      "values": [
+        920,
+        930
+      ],
+      "sources": [
+        "https://www.spartaky.cz/Content/pid=17.html.html",
+        "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html"
+      ],
+      "decision": "Retain null: both are kerb figures; equipment/date difference is not documented precisely enough to assign one to the generic record."
+    },
+    {
+      "lineSlug": "1201",
+      "trimName": "1201 typ 980 – sedan",
+      "field": "massKg",
+      "values": [
+        1050,
+        1060
+      ],
+      "sources": [
+        "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf",
+        "https://www.for-veteran.eu/skoda-1201-navod-k-obsluze"
+      ],
+      "decision": "Retain null: OEM magazine gives1050kg while owner-manual transcription gives1060kg; no precise version reconciliation."
+    },
+    {
+      "trimName": "1.8 20V – liftback (1996)",
+      "field": "acceleration0to100s",
+      "reason": "Dobový test má 10,7 s v próze, 10,9 s v technické tabulce. Jednoznačný dobový prospekt by rozhodl."
+    },
+    {
+      "trimName": "1.6 MPI – liftback (1996)",
+      "field": "consumptionCycle",
+      "reason": "Dobový test označuje 7,6 jako kombinovanou hodnotu, konkrétní směrnici neuvádí; neoznačovat automaticky NEDC."
+    },
+    {
+      "trimName": "1.6 MPI – liftback (1996)",
+      "field": "dimensionsMm.height",
+      "reason": "Stávajících 1429 mm potvrzuje dobový test; indexovaný OEM retrospektivní PDF pro 1996 uvádí 1431 mm, ale samotný PDF vrací 404. Nelze bez primárního prospektu rozhodnout, zda jde o překlep nebo jiný stav měření."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "Junior 1.0 MPI 37 kW",
+      "fields": [
+        "massKg",
+        "engine.displacementCc"
+      ],
+      "reason": "Period HNonline test gives no mass and states 966 cm³; Auta5P gives 1010 kg kerb and 997 cm³. No exact primary mass definition found within this worker's timebox. Do not infer driver inclusion or resolve conflicting displacement by guess."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW",
+      "fields": [
+        "massKg",
+        "consumptionCycle"
+      ],
+      "reason": "UK manufacturer November 2003 brochure gives kerb1315 kg depending on equipment, combined5.1L/100 under93/116, acceleration9.6s (0–62mph), max204. Current catalogue says5.4 and9.5s; later press test gives1315 and5.4 equivalent. Do not choose mass range endpoint1245–1315 as universal, or attach an early brochure cycle to later5.4 without exact revision match.",
+      "sources": [
+        "https://xr793.com/wp-content/uploads/2022/09/2004-Skoda-Fabia-Specs-Prices-UK.pdf",
+        "https://www.carenthusiast.com/reviews/article/1590/Skoda/2006-Skoda-Fabia%2BvRS/.html"
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html",
+    "https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf",
+    "https://www.spartaky.cz/Content/pid=17.html.html",
+    "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf",
+    "https://www.for-veteran.eu/skoda-1201-navod-k-obsluze",
+    "https://www.auto.cz/test-skoda-octavia-1-6-55-kw-24",
+    "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4",
+    "https://www.automobile-catalog.com/car/1996/3134330/skoda_octavia_1_8_20v.html",
+    "https://www.motorsdb.com/fiche-technique/auto/32560/Skoda-Octavia-1-8-1996-1999.html",
+    "https://www.automobile-catalog.com/car/1996/3134375/skoda_octavia_1_9_tdi_90.html",
+    "https://www.auto.cz/skoda-octavia-1u-1996-2010-prvni-moderni-generace-vydrzela-ve-vyrobe-14-let-131885",
+    "https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/",
+    "https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi",
+    "https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/"
+  ]
+}

@@ -21,6 +21,13 @@ for(let i=0;i<cards.length;i++){
   if(g.engines)for(const e of g.engines){engines++;assert(e.fuel===null||fuels.has(e.fuel));assert(e.displacementCc===null||Number.isInteger(e.displacementCc)&&e.displacementCc>0);if(e.fuel==='electric')assert.equal(e.displacementCc,null);if(e.powerKwMin!==null&&e.powerKwMax!==null)assert(e.powerKwMin<=e.powerKwMax);if(e.displacementCc!==null)assert([1289,1498,1984].includes(e.displacementCc),'exact cc needs factual evidence');}
   assert(g.trims===null||Array.isArray(g.trims));
   trimCount+=g.trims?.length||0;
+  for(const t of g.trims||[]){
+   for(const k of ['consumptionCycle','rangeCycle','massBasis'])assert(t[k]===null||typeof t[k]==='string'&&t[k].length>0,'missing/invalid '+k);
+   for(const k of ['consumptionKwh100','rangeKm'])assert(t[k]===null||typeof t[k]==='number'&&t[k]>0,'missing/invalid '+k);
+   if(t.consumptionL100!==null||t.consumptionKwh100!==null)assert(t.consumptionCycle,'consumption without cycle/scope');
+   if(t.rangeKm!==null)assert(t.rangeCycle,'range without cycle');
+   if(t.engine.fuel!=='electric'&&t.engine.fuel!=='petrol-phev'){assert.equal(t.consumptionKwh100,null);assert.equal(t.rangeKm,null);}
+  }
   validateFieldSources(g);for(const t of g.trims||[])validateFieldSources(t);
   for(const t of g.trims||[]){assert(['technical-version','engine-version'].includes(t.kind));assert(t.name);assert(t.bodyType===null||bodies.has(t.bodyType));assert(t.drive===null||['fwd','rwd','awd','rr'].includes(t.drive));assert(t.engine.fuel===null||fuels.has(t.engine.fuel));assert(t.sources.length>0);for(const u of t.sources)assert(known.has(u),'unknown trim source '+u);for(const n of Object.values(t.engine))if(typeof n==='number')assert(n>0);for(const n of Object.values(t.dimensionsMm))assert(n===null||Number.isInteger(n)&&n>500&&n<7000);for(const k of ['massKg','topSpeedKmh','acceleration0to100s','consumptionL100'])assert(t[k]===null||typeof t[k]==='number'&&t[k]>0);if(t.engine.fuel==='electric'){assert.equal(t.engine.displacementCc,null);assert.equal(t.consumptionL100,null);}if(t.from!==null&&t.to!==null)assert(t.from<=t.to);}
   if(g.photo){photoCount++;const p=g.photo,s=photoEvidence.files[p.file];assert(s,'unretrieved photo '+p.file);assert(/\.(?:jpe?g|png|webp)$/i.test(p.file),'photo must be a raster image');assert.equal(p.source,'commons');assert.equal(p.filePageUrl,s.filePageUrl);assert.equal(p.url,s.url.split('?')[0]);assert.equal(p.licence,s.licence);assert.equal(p.licenceUrl,s.licenceUrl);assert(p.author&&p.credit.includes(p.author));assert(/^CC BY|^CC0|^Public domain/.test(p.licence));assert(!/Showcar|concept|Volkswagen|prototype/i.test(p.file));assert.equal(p.visualReview,'pending');}
@@ -31,6 +38,8 @@ for(let i=0;i<cards.length;i++){
 assert.deepEqual([...seen].sort(),lines.map(l=>l.slug).sort());
 const o=cards.find(c=>c.lineSlug==='octavia').generations[3];assert(o.engines.some(e=>e.displacementCc===1498&&e.powerKwMax===110));
 const el=cards.find(c=>c.lineSlug==='elroq').generations[0];assert.equal(el.trunkL,470);assert.equal(el.specificationScope.modelYear,2025);
+assert.deepEqual(el.trims.map(t=>[t.consumptionKwh100,t.rangeKm]),[[15.7,377],[15.7,430],[15.2,574],[16.2,549]]);
+assert.equal(cards.find(c=>c.lineSlug==='110-r').generations[0].trims[0].acceleration0to100s,null,'unresolved 18.5/19 conflict');
 const named100=cards.find(c=>c.lineSlug==='100-110').generations[0].trims;assert.deepEqual(named100.map(t=>t.name),['100','100 L','110 L','110 LS']);assert.equal(named100[0].engine.powerStandard,'ISO');assert.equal(named100[0].massKg,805);assert.equal(named100[0].acceleration0to100s,null);
 assert.equal(cards.find(c=>c.lineSlug==='favorit').generations[0].trims.find(t=>t.name==='136 L').engine.powerKw,null,'conflicting Favorit power must remain null');
 console.log(`${cards.length} cards, ${generations} generations/families, ${photoCount} Commons references, ${engines} partial engine records, ${trimCount} selected version records validated.`);

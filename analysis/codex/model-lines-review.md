@@ -3772,3 +3772,64 @@ Remaining: complete pre-war coachwork/type variants; early/late 1000/1100 MB and
 
 Rebuild: `node analysis/codex/build-skoda-cards.mjs` (includes step 3), then `node analysis/codex/write-skoda-specs-step3-review.mjs`. Validate with `validate-model-lines.mjs` and `validate-model-cards.mjs`. Started 20:18:03 UTC; elapsed minutes are reported in the bridge handoff.
 <!-- skoda-specs-step3:end -->
+
+<!-- skoda-specs-step4:start -->
+## Škoda step 4 — consumption standards and scoped mass
+
+Partial enrichment of 113 selected versions, not every production combination. Full dimensions: 45 → 47. This section supersedes previous current-coverage claims; earlier sections are historical snapshots.
+
+| Populated version field | Before | After |
+| --- | ---: | ---: |
+| massKg | 15 | 29 |
+| acceleration0to100s | 27 | 30 |
+| consumptionL100 | 2 | 20 |
+| consumptionKwh100 | 0 | 4 |
+| rangeKm | 0 | 4 |
+| consumptionCycle | 0 | 24 |
+| rangeCycle | 0 | 4 |
+| dimensionsMm.length | 48 | 52 |
+| dimensionsMm.width | 51 | 55 |
+| dimensionsMm.height | 50 | 54 |
+| dimensionsMm.wheelbase | 52 | 52 |
+
+Added ready-to-drive masses from AZNP's 1987 manual for named L/GL saloons, and nominal Favorit L masses explicitly scoped through July 1991 (source tolerance ±5%). Popular Monte Carlo coupe and 1200 sedan receive body-specific mass references. No range endpoint was assigned as an exact mass. The 1999 Fun brochure gives driver-inclusive ranges, a different quantity from the existing historical empty-weight figure. Modern Elroq masses remain null because only configuration-dependent ranges are published.
+
+Consumption is labelled by its actual condition: EHK at 90 km/h, original 1203 at 60 km/h, Felicia 93/116 combined, or historical reported average with cycle unspecified. These are not interchangeable with WLTP. Four Elroq versions gain WLTP electricity consumption and range; 85's quoted range applies from June 2025. No Sportline applicability is implied. Added fields: consumptionCycle, consumptionKwh100, rangeKm, rangeCycle, massBasis. **UI must display cycles, electric units and mass scope alongside the numbers.**
+
+110 R acceleration is null after finding 18.5 versus 19 seconds. The 135/136 maximum speeds also remain null after conflicting 1987 manual and summary values. No average or favourable endpoint chosen. Detailed field-level omissions for every version: skoda-specs-step4-review.json. Rebuild: node analysis/codex/build-skoda-cards.mjs then node analysis/codex/write-skoda-specs-step4-review.mjs.
+
+### Help wanted
+
+- 110 R: original homologation or period test tying 0–100 (18.5/19 s) to tyre size and year.
+- 135 L/GL and 136 L/GL: original year-specific maximum-speed specification resolving 145/148 and 150/153 km/h.
+- 105 S, 120 GLS, 125 L: exact year/equipment kerb masses; 130 GL: consumption row unambiguously covering that trim.
+- Felicia BMM/MPI/1.6/1.9: body, facelift, equipment and weight convention mapped to exact mass; current manual gives ranges.
+- Pre-war 4R: full-car photograph with usable Commons licence or manufacturer press terms; acceleration and body-specific mass/dimensions.
+
+Remaining archival/model-year gaps still look sourceable in part; it is **not** established that no reliable sources exist. Modern masses/consumption published only as ranges cannot honestly become scalar values without choosing an exact configuration. All 69 existing photos still have visualReview pending. New mandatory rule: whole vehicle with margin, no clipped bumper/roof/wheels, no major occlusion; rejected references must become null. This turn does not certify the existing images.
+
+Sources inaccessible in full included the 22 MB Felicia manual and 18 MB service book in the web reader. Selected service-book facts came from clear indexed text; scanned 1987 manual visual rendering was unavailable in this environment, so no visual-page-review claim is made. No Drom pages/photos were used.
+
+
+Parallel research merged: worker-historic-step4.json, worker-octavia-step4.json, worker-fabia-step4.json (6 patches). Octavia I adds body/engine/gearbox-scoped masses and consumption; the 1.6 technical sample was tested in 1998 and its note distinguishes it from the 1996 launch. Junior gains period-test acceleration/consumption and original hatchback dimensions. 450's 900/930 kg conflict is null. Octavia 1.8's 10.7/10.9 s conflict is null. RS consumption revision, Junior displacement, and Octavia height/source-access limitations remain explicit in worker evidence and scope review notes.
+
+Additional Help wanted: 440/450 original year/equipment mass pages; 1201 sedan 1050/1060 kg reconciliation; Octavia I 1.8 homologated 0–100 value; Fabia Junior exact kerb mass and 966/997 cc reconciliation; exact RS brochure revision mapping 5.1/5.4 litres and cycle.
+
+Worker source references:
+
+- https://www.automobilrevue.cz/rubriky/testy/predstavujeme/automobil-01-1957-hity-1-rocniku_44657.html
+- https://cdn.skoda-storyboard.com/2017/09/170925-Jubileum-modelu-%C5%A0KODA-450.pdf
+- https://www.spartaky.cz/Content/pid=17.html.html
+- https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf
+- https://www.for-veteran.eu/skoda-1201-navod-k-obsluze
+- https://www.auto.cz/test-skoda-octavia-1-6-55-kw-24
+- https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4
+- https://www.automobile-catalog.com/car/1996/3134330/skoda_octavia_1_8_20v.html
+- https://www.motorsdb.com/fiche-technique/auto/32560/Skoda-Octavia-1-8-1996-1999.html
+- https://www.automobile-catalog.com/car/1996/3134375/skoda_octavia_1_9_tdi_90.html
+- https://www.auto.cz/skoda-octavia-1u-1996-2010-prvni-moderni-generace-vydrzela-ve-vyrobe-14-let-131885
+- https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/
+- https://hnonline.sk/dennik/servisne-prilohy/28306-test-skoda-fabia-junior-1-0-mpi
+- https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/
+
+<!-- skoda-specs-step4:end -->
