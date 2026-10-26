@@ -35,6 +35,10 @@ export interface CardTrim {
   topSpeedKmh?: number | null;
   acceleration0to100s?: number | null;
   consumptionL100?: number | null;
+  /** Test cycle of the consumption and range figures, e.g. "WLTP", "NEDC", "ČSN". */
+  consumptionCycle?: string | null;
+  consumptionKwh100?: number | null;
+  rangeKm?: number | null;
 }
 
 export interface CardPhoto {

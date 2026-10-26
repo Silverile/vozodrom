@@ -132,7 +132,14 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null }[] =
   { label: "Hmotnost", value: (t) => (t.massKg ? `${num(t.massKg)} kg` : null) },
   { label: "Max. rychlost", value: (t) => (t.topSpeedKmh ? `${t.topSpeedKmh} km/h` : null) },
   { label: "0–100", value: (t) => (t.acceleration0to100s ? `${t.acceleration0to100s.toLocaleString("cs-CZ")} s` : null) },
-  { label: "Spotřeba", value: (t) => (t.consumptionL100 ? `${t.consumptionL100.toLocaleString("cs-CZ")} l/100 km` : null) },
+  {
+    label: "Spotřeba",
+    value: (t) => {
+      const v = t.consumptionL100 ? `${t.consumptionL100.toLocaleString("cs-CZ")} l` : t.consumptionKwh100 ? `${t.consumptionKwh100.toLocaleString("cs-CZ")} kWh` : null;
+      return v ? `${v}/100 km${t.consumptionCycle ? ` (${t.consumptionCycle})` : ""}` : null;
+    },
+  },
+  { label: "Dojezd", value: (t) => (t.rangeKm ? `${num(t.rangeKm)} km${t.consumptionCycle ? ` (${t.consumptionCycle})` : ""}` : null) },
 ];
 
 function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneration; alt: string; className?: string; eager?: boolean }) {
@@ -140,7 +147,7 @@ function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneratio
   return (
     <figure className={`min-w-0 ${className}`}>
       {/* Commons thumbnail; static export, so no next/image optimisation */}
-      <img src={thumb(gen.photo.url, 960)} alt={alt} loading={eager ? "eager" : "lazy"} className="w-full aspect-[3/2] object-cover rounded-xl bg-[var(--color-field)]" />
+      <img src={thumb(gen.photo.url, 960)} alt={alt} loading={eager ? "eager" : "lazy"} className="w-full aspect-[3/2] object-contain rounded-xl bg-[var(--color-photo)]" />
       <figcaption className="mt-1 text-[11px] text-[var(--color-muted)] truncate">
         Foto: <a href={gen.photo.page} rel="noopener" className="underline hover:text-[var(--color-ink)]">{gen.photo.credit}</a>
       </figcaption>
@@ -343,7 +350,7 @@ export default async function ModelPage({ params }: { params: Params }) {
               <li key={i} className="min-w-0">
                 <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
                   {g.photo ? (
-                    <img src={thumb(g.photo.url, 480)} alt={`${title} ${g.name ?? g.code ?? ""}`} loading="lazy" className="w-full aspect-[4/3] object-cover bg-[var(--color-field)]" />
+                    <img src={thumb(g.photo.url, 480)} alt={`${title} ${g.name ?? g.code ?? ""}`} loading="lazy" className="w-full aspect-[4/3] object-contain bg-[var(--color-photo)]" />
                   ) : (
                     <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[4/3]" />
                   )}

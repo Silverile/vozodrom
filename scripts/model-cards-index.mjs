@@ -1,16 +1,17 @@
 // Builds src/data/model-cards-index.json: the model cards (generations, trims, photos) for the
-// model pages, keyed by make and line. Source: src/data/catalog/model-cards/*.json (curated in
-// analysis/codex/). Review metadata is dropped; sources and photo credits are kept.
+// model pages, keyed by make and line. Sources: src/data/catalog/model-cards/*.json (Codex, curated in
+// analysis/codex/) and src/data/model-cards/*.json (researched by Claude's agents, same shape).
+// Review metadata is dropped; sources and photo credits are kept.
 //
 // Run after the model cards change: node scripts/model-cards-index.mjs
 
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 
-const dir = new URL("../src/data/catalog/model-cards/", import.meta.url);
+const dirs = ["../src/data/catalog/model-cards/", "../src/data/model-cards/"].map((d) => new URL(d, import.meta.url));
 const index = {};
 let count = 0;
 
-for (const name of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
+for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(dir) : []).filter((f) => f.endsWith(".json")).map((f) => [dir, f]))) {
   for (const card of JSON.parse(readFileSync(new URL(name, dir), "utf8"))) {
     (index[card.makeSlug] ??= {})[card.lineSlug] = {
       name: card.name,

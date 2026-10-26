@@ -32,7 +32,7 @@ function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: Mo
           <li key={l.slug} className="min-w-0">
             <Link href={`/katalog/${slug}/${l.slug}/`} className="card block overflow-hidden hover:shadow-lg transition h-full">
               {cover ? (
-                <img src={thumb(cover.url, 480)} alt={`${make} ${l.name}`} loading="lazy" className="w-full aspect-[4/3] object-cover bg-[var(--color-field)]" />
+                <img src={thumb(cover.url, 480)} alt={`${make} ${l.name}`} loading="lazy" className="w-full aspect-[4/3] object-contain bg-[var(--color-photo)]" />
               ) : (
                 <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[4/3]" />
               )}
