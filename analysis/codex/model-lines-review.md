@@ -3833,3 +3833,46 @@ Worker source references:
 - https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/
 
 <!-- skoda-specs-step4:end -->
+
+<!-- skoda-step5:start -->
+## Škoda step 5 — six worker tasks and scoped production versions
+
+This section supersedes earlier current totals. 113 → 141 selected versions; 28 representative additions. Existing-version improvements are reported separately so additions do not disguise gaps. Full dimension sets 47 → 91; on the original 113 versions: 63.
+
+| Field | Before | Same original versions after | All versions after |
+| --- | ---: | ---: | ---: |
+| massKg | 29 | 29 | 55 |
+| acceleration0to100s | 30 | 44 | 72 |
+| consumptionL100 | 20 | 20 | 46 |
+| consumptionKwh100 | 4 | 9 | 11 |
+| rangeKm | 4 | 10 | 12 |
+| dimensionsMm.length | 52 | 68 | 96 |
+| dimensionsMm.width | 55 | 71 | 99 |
+| dimensionsMm.height | 54 | 70 | 98 |
+| dimensionsMm.wheelbase | 52 | 68 | 96 |
+
+Six research tasks ran in two waves of three (runtime concurrency limit), plus root electric research and merge. All completed. Worker fixtures: worker-step5-compacts.json, worker-step5-electric.json, worker-step5-enyaq-early.json, worker-step5-fabia-older.json, worker-step5-octavia.json, worker-step5-roomster-yeti-rapid.json, worker-step5-superb-suv.json. No worker edited the shared catalogue.
+
+Main additions: Octavia II/III (7), Fabia II/III (7), Superb II/III (3), Roomster/Yeti/Rapid (9), 2025 Enyaq 60 150 kW and 85x (2). This remains a representative subset, not all engines, gearboxes, bodies or equipment combinations. The newer Enyaq 60 is separate from the existing 132 kW version. Old model/body/facelift measurements are not propagated to later variants. Exact base-version masses are used only where the manufacturer explicitly supplies that base value and definition; configuration ranges remain scalar null. Document dates do not automatically establish a model year or production start/end.
+
+Epiq 55 uses the 14 September 2026 production technical sheet; older preview values are superseded for that scoped version. Epiq 35/40 specifications are explicitly preliminary in that sheet and were not populated as definitive mass/acceleration values. Early Enyaq 50/80 consumption uses NEDC, while their range is WLTP: **show separate consumptionCycle and rangeCycle**. No cross-cycle comparison is implied.
+
+### Photo review
+
+- 100-110: passed — Celé vozidlo včetně nárazníků, střechy a kol je v záběru s okrajem; bez významného zakrytí. Přední tříčtvrteční pohled. Kontrola nepotvrzuje konkrétní výbavu či rok.
+- 1000-1100-mb: passed — Celý čtyřdveřový vůz je v záběru, nárazníky a kola nejsou uříznuty. Muzejní okolí nekrývá karoserii; konkrétní motor či rok nejsou potvrzeny.
+- 110-r: passed — Oranžové kupé v předním tříčtvrtečním pohledu je celé v záběru s okrajem, bez zakrytí. Kontrola nepotvrzuje přesný rok či originálnost všech detailů.
+- 1203: rejected — Detailní čelní pohled nezobrazuje celou boční karoserii a kola. Navíc je viditelné označení 1203 M, které nepotvrzuje původní provedení AZNP 1968. Fotografie odstraněna; nutný vhodný celkový snímek původní verze.
+
+Photo references 69 → 68; reviewed 3, pending 65. Review confirms whole-car framing and broad generation correspondence, not exact trim, year or originality. 1203 is null pending replacement. Three other attempted original downloads returned HTTP429; no bypass or repeated hammering. Images were viewed from OS temporary storage only. Photo decisions are reproducible through skoda-step5-photo-review.json.
+
+### Help wanted
+
+- Exact configured homologation/CoC values for Fabia IV, Scala/Kamiq 2024, Octavia IV, Superb IV, Karoq, Kodiaq II and Enyaq/Elroq: manufacturer mass and consumption are usually ranges. Need equipment, wheels, seats, body, gearbox and date.
+- Epiq 35/40: final production homologation replacing the explicitly preliminary figures.
+- Original AZNP 1203: licensed full-car three-quarter photo showing the complete body and wheels, not a later 1203 M/TAZ variant.
+- Remaining photo references: full framing/identity review, especially historic/body variants. 4R still has no accepted photograph.
+- Unfilled engines and estates: complete generation-specific CZ brochures for Octavia II/III, Fabia II/III, Superb II/III, Roomster, Yeti and Rapid; selected additions here do not prove completeness.
+
+Detailed nulls for every version and worker-specific issues: skoda-step5-review.json. Some gaps remain sourceable; no claim that research is exhausted. Rebuild: node analysis/codex/build-step5-electric-evidence.mjs; node analysis/codex/build-skoda-cards.mjs; node analysis/codex/write-skoda-step5-review.mjs. Elapsed wall-clock minutes recorded in JSON: 5.3.
+<!-- skoda-step5:end -->

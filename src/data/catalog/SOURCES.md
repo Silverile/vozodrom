@@ -241,3 +241,33 @@ Worker source references:
 - https://www.skoda-storyboard.com/en/skoda-world/heritage/birthdays-for-the-felicia-and-fabia/
 
 <!-- skoda-specs-step4:end -->
+
+<!-- skoda-step5:start -->
+## Škoda specifications step 5 — 26 October 2026
+
+Primary manufacturer technical sheets and original brochures, including mirrored copies, were independently read by six worker tasks and the merge owner. Only selected facts were structured; no source prose, complete tables or photo binaries copied. Original brochures are not CC0. Wikidata CC0 identity licensing and per-file Commons photo licences remain unchanged.
+
+Worker evidence: worker-step5-compacts.json, worker-step5-electric.json, worker-step5-enyaq-early.json, worker-step5-fabia-older.json, worker-step5-octavia.json, worker-step5-roomster-yeti-rapid.json, worker-step5-superb-suv.json. Applied factual snapshot: analysis/codex/skoda-step5-evidence.json. All added or patched populated technical fields have URL provenance. Scoped body, document date, transmission, base-weight definition and consumption/range cycles must remain visible. Historical sources and old counts above are retained as dated snapshots.
+
+- https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf
+- https://cdn.skoda-storyboard.com/2024/01/TD-Kamiq-en_e3841ce1.pdf
+- https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=
+- https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-en_0308de7f.pdf
+- https://cdn.skoda-storyboard.com/2026/08/TD_Skoda_Epiq_en_69592937.pdf
+- https://cdn.skoda-storyboard.com/2021/03/TD-ENYAQ-iV-EN.pdf
+- https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf
+- https://cdn.skoda-storyboard.com/2018/08/TD-FABIA-petrol_EN.pdf
+- https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf
+- https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf
+- https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf
+- https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542
+- https://cdn.skoda-storyboard.com/2016/12/TD_YETI_en.pdf
+- https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf
+- https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf
+- https://cdn.skoda-storyboard.com/2024/11/TD-Kodiaq-en_83435dd3.pdf
+- https://skoda.metrotehnica.ro/files/3117/1222/0129/TD-Superb-en_87b42ad4.pdf
+- https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf
+- https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf
+
+Four existing Commons references visually checked: three passed whole-car framing; the 1203 frontal close-up was rejected and removed. Decisions/file identities and Czech notes: analysis/codex/skoda-step5-photo-review.json. Licences/author credits of retained photographs are unchanged. Remaining photographs are pending review; no downloaded image binaries are retained in the project.
+<!-- skoda-step5:end -->

@@ -1,0 +1,1988 @@
+{
+  "generatedAt": "2026-10-26T22:05:58.078Z",
+  "elapsedMinutes": 5.3,
+  "before": {
+    "startedAt": "2026-10-26T22:00:41Z",
+    "versions": 113,
+    "counts": {
+      "massKg": 29,
+      "acceleration0to100s": 30,
+      "consumptionL100": 20,
+      "consumptionKwh100": 4,
+      "rangeKm": 4,
+      "dimensionsMm.length": 52,
+      "dimensionsMm.width": 55,
+      "dimensionsMm.height": 54,
+      "dimensionsMm.wheelbase": 52
+    },
+    "completeDimensions": 47,
+    "photos": 69
+  },
+  "after": {
+    "versions": 141,
+    "counts": {
+      "massKg": 55,
+      "acceleration0to100s": 72,
+      "consumptionL100": 46,
+      "consumptionKwh100": 11,
+      "rangeKm": 12,
+      "dimensionsMm.length": 96,
+      "dimensionsMm.width": 99,
+      "dimensionsMm.height": 98,
+      "dimensionsMm.wheelbase": 96
+    },
+    "completeDimensions": 91
+  },
+  "existingAfter": {
+    "versions": 113,
+    "counts": {
+      "massKg": 29,
+      "acceleration0to100s": 44,
+      "consumptionL100": 20,
+      "consumptionKwh100": 9,
+      "rangeKm": 10,
+      "dimensionsMm.length": 68,
+      "dimensionsMm.width": 71,
+      "dimensionsMm.height": 70,
+      "dimensionsMm.wheelbase": 68
+    },
+    "completeDimensions": 63
+  },
+  "additions": {
+    "versions": 28,
+    "counts": {
+      "massKg": 26,
+      "acceleration0to100s": 28,
+      "consumptionL100": 26,
+      "consumptionKwh100": 2,
+      "rangeKm": 2,
+      "dimensionsMm.length": 28,
+      "dimensionsMm.width": 28,
+      "dimensionsMm.height": 28,
+      "dimensionsMm.wheelbase": 28
+    },
+    "completeDimensions": 28
+  },
+  "workers": [
+    {
+      "file": "worker-step5-compacts.json",
+      "patches": 11,
+      "additions": 0
+    },
+    {
+      "file": "worker-step5-electric.json",
+      "patches": 3,
+      "additions": 2
+    },
+    {
+      "file": "worker-step5-enyaq-early.json",
+      "patches": 3,
+      "additions": 0
+    },
+    {
+      "file": "worker-step5-fabia-older.json",
+      "patches": 0,
+      "additions": 7
+    },
+    {
+      "file": "worker-step5-octavia.json",
+      "patches": 1,
+      "additions": 7
+    },
+    {
+      "file": "worker-step5-roomster-yeti-rapid.json",
+      "patches": 0,
+      "additions": 9
+    },
+    {
+      "file": "worker-step5-superb-suv.json",
+      "patches": 3,
+      "additions": 3
+    }
+  ],
+  "workerNotes": [
+    {
+      "file": "worker-step5-compacts.json",
+      "lineSlug": "scala",
+      "generationIndex": 0,
+      "trimNames": [
+        "1.0 TSI evo2 70 kW",
+        "1.0 TSI evo2 85 kW",
+        "1.5 TSI evo2 110 kW"
+      ],
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Manufacturer MY2024 source gives equipment-dependent ranges only. Need exact homologated equipment/wheel configuration to populate scalars. Same 2024 source gives fixed body dimensions and dynamics."
+    },
+    {
+      "file": "worker-step5-compacts.json",
+      "lineSlug": "kamiq",
+      "generationIndex": 0,
+      "trimNames": [
+        "1.0 TSI evo2 70 kW",
+        "1.0 TSI evo2 85 kW",
+        "1.5 TSI evo2 110 kW"
+      ],
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "MY2024 Essence/Selection manufacturer sheet gives equipment-dependent ranges only. Do not substitute midpoint, lower or upper endpoint. Height1531 is kerb condition and must not be conflated with other reported roof/rail heights."
+    },
+    {
+      "file": "worker-step5-compacts.json",
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "trimNames": [
+        "1.0 MPI 59 kW",
+        "1.0 TSI 70 kW",
+        "1.0 TSI 85 kW",
+        "1.0 TSI DSG 85 kW",
+        "1.5 TSI DSG 110 kW"
+      ],
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Current Slovak importer sheet only supplies ranges; basis and cycle identified but scalars require exact configured homologation. Actual model year not stated; URL cache-buster must not be treated as document date."
+    },
+    {
+      "file": "worker-step5-electric.json",
+      "lineSlug": "epiq",
+      "reason": "14 September 2026 technical sheet explicitly marks all Epiq35/40 values preliminary. Their masses/acceleration are not populated as final production specifications; earlier preview values differ from the later sheet."
+    },
+    {
+      "file": "worker-step5-electric.json",
+      "lineSlug": "elroq",
+      "reason": "Existing four versions have acceleration and dimensions. Mass remains null: manufacturer gives driver-inclusive configuration intervals only."
+    },
+    {
+      "file": "worker-step5-enyaq-early.json",
+      "lineSlug": "enyaq",
+      "trimName": "Enyaq 50",
+      "fields": [
+        "massKg"
+      ],
+      "reason": "Manufacturer2021kerb interval1940–2061kg including75kgdriver, no single configuration weight."
+    },
+    {
+      "file": "worker-step5-enyaq-early.json",
+      "lineSlug": "enyaq",
+      "trimName": "Enyaq 60",
+      "fields": [
+        "massKg",
+        "consumptionKwh100",
+        "consumptionCycle"
+      ],
+      "reason": "Manufacturer2021 publishes intervals only for mass and bothNEDC/WLTP consumption."
+    },
+    {
+      "file": "worker-step5-enyaq-early.json",
+      "lineSlug": "enyaq",
+      "trimName": "Enyaq 80",
+      "fields": [
+        "massKg"
+      ],
+      "reason": "Manufacturer2021kerb interval2090–2308kg including75kgdriver; NEDCscalar consumption must not be displayed asWLTP."
+    },
+    {
+      "file": "worker-step5-enyaq-early.json",
+      "lineSlug": "enyaq",
+      "fields": [
+        "specificationScope.modelYear"
+      ],
+      "reason": "Do not merge2022technical revision into2021rows.2022OEMPDF gives different heights/wheelbases and60acceleration8.8s/range408km. This evidence deliberately pins all three records to8March2021."
+    },
+    {
+      "file": "worker-step5-fabia-older.json",
+      "lineSlug": "fabia",
+      "fields": [
+        "full version coverage",
+        "modelYear"
+      ],
+      "reason": "Representative basic hatchbacks only:3 for generationII and4 forIII. Brochure issue dates known; exact model-year designation and production boundaries not claimed. Estate,diesel,RS and earlier/later revisions remain outside this worker batch."
+    },
+    {
+      "file": "worker-step5-octavia.json",
+      "lineSlug": "octavia",
+      "generationIndex": 3,
+      "trimName": "1.5 TSI 110 kW – liftback",
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Manufacturer publishes configuration ranges only; exact configuration or homologation sheet needed for a scalar."
+    },
+    {
+      "file": "worker-step5-octavia.json",
+      "lineSlug": "octavia",
+      "generationIndex": 1,
+      "fields": [
+        "additional engine and body combinations"
+      ],
+      "reason": "Four selected 2011 manual liftbacks only; 1.6 MPI, DSG, earlier PD diesels, pre-facelift and Combi still to research."
+    },
+    {
+      "file": "worker-step5-octavia.json",
+      "lineSlug": "octavia",
+      "generationIndex": 2,
+      "fields": [
+        "additional engine and body combinations"
+      ],
+      "reason": "Three selected 2017 petrol liftbacks only; diesel, Combi, earlier versions and later 1.5 TSI remain."
+    },
+    {
+      "file": "worker-step5-roomster-yeti-rapid.json",
+      "lineSlug": "roomster",
+      "field": "massBasis",
+      "reason": "Prospekt uvádí kerb weight a standard version model, ale neříká, zda je započten řidič. Neprovádět převod na hmotnost bez řidiče ani s řidičem."
+    },
+    {
+      "file": "worker-step5-roomster-yeti-rapid.json",
+      "lineSlug": "roomster",
+      "field": "additional versions",
+      "reason": "Pouze tři původní varianty 2007; faceliftové TSI/CR, automat a Scout zbývají."
+    },
+    {
+      "file": "worker-step5-roomster-yeti-rapid.json",
+      "lineSlug": "yeti",
+      "field": "additional versions",
+      "reason": "Pouze tři FWD varianty 2016; 4x4, DSG a starší motory zbývají."
+    },
+    {
+      "file": "worker-step5-roomster-yeti-rapid.json",
+      "lineSlug": "rapid",
+      "field": "additional versions",
+      "reason": "Pouze tři liftbackové benzínové varianty 2017; diesely a předfaceliftové TSI zbývají."
+    },
+    {
+      "file": "worker-step5-superb-suv.json",
+      "lineSlug": "karoq",
+      "trimName": "1.5 TSI 110 kW – manuální",
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Manufacturer publishes equipment-dependent ranges; need a configuration-specific homologation record."
+    },
+    {
+      "file": "worker-step5-superb-suv.json",
+      "lineSlug": "kodiaq",
+      "trimName": "1.5 TSI mHEV 110 kW DSG",
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Selection5-seat scope explicit; mass and consumption remain manufacturer ranges.7-seat needs separate named version."
+    },
+    {
+      "file": "worker-step5-superb-suv.json",
+      "lineSlug": "superb",
+      "trimName": "1.5 TSI mHEV 110 kW DSG",
+      "fields": [
+        "massKg",
+        "consumptionL100"
+      ],
+      "reason": "Liftback Essence/Selection only; equipment-dependent ranges; Combi requires a separate row."
+    },
+    {
+      "file": "worker-step5-superb-suv.json",
+      "lineSlug": "superb",
+      "generationIndex": 1,
+      "fields": [
+        "generation.bodyTypes"
+      ],
+      "reason": "Existing SuperbII maps TwinDoor liftback as sedan; this worker preserves that mapping rather than editing the generation. Consider consistent liftback treatment later."
+    }
+  ],
+  "photos": {
+    "before": 69,
+    "after": 68,
+    "reviewed": 3,
+    "pending": 65,
+    "rejected": [
+      {
+        "lineSlug": "1203",
+        "generationIndex": 0,
+        "file": "File:ŠKODA 1203.JPG",
+        "decision": "rejected",
+        "noteCs": "Detailní čelní pohled nezobrazuje celou boční karoserii a kola. Navíc je viditelné označení 1203 M, které nepotvrzuje původní provedení AZNP 1968. Fotografie odstraněna; nutný vhodný celkový snímek původní verze."
+      }
+    ]
+  },
+  "missing": [
+    {
+      "lineSlug": "100-110",
+      "generationIndex": 0,
+      "name": "100",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "100-110",
+      "generationIndex": 0,
+      "name": "100 L",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "100-110",
+      "generationIndex": 0,
+      "name": "110 L",
+      "missing": [
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "100-110",
+      "generationIndex": 0,
+      "name": "110 LS",
+      "missing": [
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1000-1100-mb",
+      "generationIndex": 0,
+      "name": "1000 MB – rané provedení",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height"
+      ]
+    },
+    {
+      "lineSlug": "1000-1100-mb",
+      "generationIndex": 0,
+      "name": "1100 MBX De Luxe",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "name": "105 S",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "name": "105 L",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "name": "120 L",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "name": "120 GLS",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "name": "125 L",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "110-1925",
+      "generationIndex": 0,
+      "name": "L&K Škoda 110",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "110-r",
+      "generationIndex": 0,
+      "name": "110 R",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1101-1102",
+      "generationIndex": 0,
+      "name": "1101 Tudor",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1200",
+      "generationIndex": 0,
+      "name": "1200 typ 955",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "1201",
+      "generationIndex": 0,
+      "name": "1201 typ 980 – sedan",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1202",
+      "generationIndex": 0,
+      "name": "1202 STW – série 67–97",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1202",
+      "generationIndex": 0,
+      "name": "1202 dodávka – série 67–97",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "1202",
+      "generationIndex": 0,
+      "name": "1202 Pick-up – série 67–97",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.height"
+      ]
+    },
+    {
+      "lineSlug": "1203",
+      "generationIndex": 0,
+      "name": "1203 – původní dodávka",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "130 L",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "130 GL",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "135 L",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "135 GL",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "136 L",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "130-135-136",
+      "generationIndex": 0,
+      "name": "136 GL",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "422",
+      "generationIndex": 0,
+      "name": "422",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "430",
+      "generationIndex": 0,
+      "name": "430",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "440-445-450",
+      "generationIndex": 0,
+      "name": "440",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "440-445-450",
+      "generationIndex": 0,
+      "name": "445",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "440-445-450",
+      "generationIndex": 0,
+      "name": "450",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "4r",
+      "generationIndex": 0,
+      "name": "4R",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "633",
+      "generationIndex": 0,
+      "name": "Motor 1792 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "637",
+      "generationIndex": 0,
+      "name": "Motor 1961 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "645",
+      "generationIndex": 0,
+      "name": "645",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "860",
+      "generationIndex": 0,
+      "name": "860",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "elroq",
+      "generationIndex": 0,
+      "name": "Elroq 50",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "elroq",
+      "generationIndex": 0,
+      "name": "Elroq 60",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "elroq",
+      "generationIndex": 0,
+      "name": "Elroq 85",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "elroq",
+      "generationIndex": 0,
+      "name": "Elroq RS",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 50",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 60",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 80",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 85",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq RS (2024–)",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 60 150 kW – modernizace 2025",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "enyaq",
+      "generationIndex": 0,
+      "name": "Enyaq 85x 210 kW – modernizace 2025",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "epiq",
+      "generationIndex": 0,
+      "name": "Epiq 35",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "epiq",
+      "generationIndex": 0,
+      "name": "Epiq 40",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "epiq",
+      "generationIndex": 0,
+      "name": "Epiq 55",
+      "missing": [
+        "massKg",
+        "consumptionL100"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "name": "RS 1.9 TDI-PD 96 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "name": "Junior 1.0 MPI 37 kW",
+      "missing": [
+        "massKg",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 1,
+      "name": "1.2 HTP 44 kW 5MT (katalog 04/2009)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 1,
+      "name": "1.2 12V HTP 51 kW 5MT (katalog 04/2009)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 1,
+      "name": "1.4 16V 63 kW 5MT (katalog 04/2009)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 2,
+      "name": "1.0 MPI 55 kW 5MT (technicky list 08/2018)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 2,
+      "name": "1.0 TSI 70 kW 5MT (technicky list 08/2018)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 2,
+      "name": "1.0 TSI 81 kW 6MT (technicky list 08/2018)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 2,
+      "name": "1.0 TSI 81 kW DSG (technicky list 08/2018)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "name": "1.0 MPI 59 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "name": "1.0 TSI 70 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "name": "1.0 TSI 85 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "name": "1.0 TSI DSG 85 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 3,
+      "name": "1.5 TSI DSG 110 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "favorit",
+      "generationIndex": 0,
+      "name": "135 L",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "favorit",
+      "generationIndex": 0,
+      "name": "136 L",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "favorit",
+      "generationIndex": 0,
+      "name": "135 Le",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "favorit",
+      "generationIndex": 0,
+      "name": "135 LSe",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "favorit-1936",
+      "generationIndex": 0,
+      "name": "Motor 1802 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "favorit-1936",
+      "generationIndex": 0,
+      "name": "Motor 2091 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "name": "1.3 BMM 40 kW – hatchback",
+      "missing": [
+        "massKg",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "name": "1.3 MPI 50 kW – hatchback",
+      "missing": [
+        "massKg",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length"
+      ]
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "name": "1.6 MPI 55 kW – hatchback",
+      "missing": [
+        "massKg",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length"
+      ]
+    },
+    {
+      "lineSlug": "felicia",
+      "generationIndex": 0,
+      "name": "1.9 D 47 kW – hatchback",
+      "missing": [
+        "massKg",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length"
+      ]
+    },
+    {
+      "lineSlug": "felicia-1959",
+      "generationIndex": 0,
+      "name": "Felicia 1.1",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "felicia-1959",
+      "generationIndex": 0,
+      "name": "Felicia Super 1.2",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "felicia-1959",
+      "generationIndex": 0,
+      "name": "Felicia 1.1 – muzejní provedení 1961",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "felicia-fun",
+      "generationIndex": 0,
+      "name": "Fun 1.3 MPI LX",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "felicia-fun",
+      "generationIndex": 0,
+      "name": "Fun 1.6 MPI",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "felicia-fun",
+      "generationIndex": 0,
+      "name": "Fun 1.9 D",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "forman",
+      "generationIndex": 0,
+      "name": "135 GLX – karburátor",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "garde",
+      "generationIndex": 0,
+      "name": "Garde 1.2",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kamiq",
+      "generationIndex": 0,
+      "name": "1.0 TSI evo2 70 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kamiq",
+      "generationIndex": 0,
+      "name": "1.0 TSI evo2 85 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kamiq",
+      "generationIndex": 0,
+      "name": "1.5 TSI evo2 110 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kamiq-china",
+      "generationIndex": 0,
+      "name": "Motor 1.2 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "kamiq-china",
+      "generationIndex": 0,
+      "name": "Motor 1.5 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "karoq",
+      "generationIndex": 0,
+      "name": "1.5 TSI 110 kW – manuální",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kodiaq",
+      "generationIndex": 1,
+      "name": "1.5 TSI mHEV 110 kW DSG",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "kushaq",
+      "generationIndex": 0,
+      "name": "Motor 1.0 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "kushaq",
+      "generationIndex": 0,
+      "name": "Motor 1.5 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "kylaq",
+      "generationIndex": 0,
+      "name": "Motor 1.0 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "name": "1.6 MPI – liftback (1996)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "name": "1.8 20V – liftback (1996)",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "name": "1.9 TDI – liftback (1996)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 1,
+      "name": "1.2 TSI 77 kW - liftback 6MT (2011)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 1,
+      "name": "1.4 TSI 90 kW - liftback 6MT (2011)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 1,
+      "name": "1.6 TDI CR DPF 77 kW - liftback 5MT (2011)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 1,
+      "name": "2.0 TDI CR DPF 103 kW - liftback 6MT (2011)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 2,
+      "name": "1.0 TSI 85 kW - liftback 6MT (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 2,
+      "name": "1.4 TSI 110 kW - liftback 6MT (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 2,
+      "name": "1.4 TSI 110 kW - liftback DSG7 (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 3,
+      "name": "1.5 TSI 110 kW – liftback",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "octavia-1959",
+      "generationIndex": 0,
+      "name": "Octavia 1.1 – sedan (1960)",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "octavia-1959",
+      "generationIndex": 0,
+      "name": "Octavia Super 1.2 – sedan",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "pickup",
+      "generationIndex": 0,
+      "name": "Motor 1289 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "pickup",
+      "generationIndex": 1,
+      "name": "Motor 1289 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "pickup",
+      "generationIndex": 1,
+      "name": "Motor 1598 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "pickup",
+      "generationIndex": 1,
+      "name": "Motor 1896 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "popular",
+      "generationIndex": 0,
+      "name": "Popular Monte Carlo – kupé",
+      "missing": [
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "popular",
+      "generationIndex": 0,
+      "name": "Popular Monte Carlo – roadster",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "praktik",
+      "generationIndex": 0,
+      "name": "1.2 HTP",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "praktik",
+      "generationIndex": 0,
+      "name": "1.2 TSI",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "praktik",
+      "generationIndex": 0,
+      "name": "1.6 TDI",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid",
+      "generationIndex": 0,
+      "name": "1.0 TSI 70 kW - liftback 5MT (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "rapid",
+      "generationIndex": 0,
+      "name": "1.0 TSI 81 kW - liftback 6MT (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "rapid",
+      "generationIndex": 0,
+      "name": "1.4 TSI 92 kW - liftback DSG7 (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "rapid-1935",
+      "generationIndex": 0,
+      "name": "Motor 1386 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-1935",
+      "generationIndex": 0,
+      "name": "Motor 1558 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-1984",
+      "generationIndex": 0,
+      "name": "Motor 1174 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-1984",
+      "generationIndex": 0,
+      "name": "Motor 1289 cm³ – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-india",
+      "generationIndex": 0,
+      "name": "Motor 1.0 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-india",
+      "generationIndex": 0,
+      "name": "Motor 1.6 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "rapid-india",
+      "generationIndex": 0,
+      "name": "Motor 1.5 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "roomster",
+      "generationIndex": 0,
+      "name": "1.2 HTP 12V 51 kW - 5MT (2007)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "roomster",
+      "generationIndex": 0,
+      "name": "1.6 16V 77 kW - 5MT (2007)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "roomster",
+      "generationIndex": 0,
+      "name": "1.9 TDI PD 77 kW bez DPF - 5MT (2007)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "scala",
+      "generationIndex": 0,
+      "name": "1.0 TSI evo2 70 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "scala",
+      "generationIndex": 0,
+      "name": "1.0 TSI evo2 85 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "scala",
+      "generationIndex": 0,
+      "name": "1.5 TSI evo2 110 kW",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "slavia",
+      "generationIndex": 0,
+      "name": "Motor 1.0 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "slavia",
+      "generationIndex": 0,
+      "name": "Motor 1.5 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "superb",
+      "generationIndex": 1,
+      "name": "1.4 TSI 92 kW – liftback, manuální (2013)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "superb",
+      "generationIndex": 2,
+      "name": "2.0 TDI 110 kW – liftback, manuální (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "superb",
+      "generationIndex": 2,
+      "name": "1.4 TSI ACT 110 kW – liftback, manuální (2017)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "superb",
+      "generationIndex": 3,
+      "name": "1.5 TSI mHEV 110 kW DSG",
+      "missing": [
+        "massKg",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "superb-1934",
+      "generationIndex": 0,
+      "name": "Superb 3000 OHV",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "vos",
+      "generationIndex": 0,
+      "name": "Motor 5.2 l – výbava neurčena",
+      "missing": [
+        "massKg",
+        "acceleration0to100s",
+        "consumptionL100",
+        "consumptionKwh100",
+        "rangeKm",
+        "dimensionsMm.length",
+        "dimensionsMm.width",
+        "dimensionsMm.height",
+        "dimensionsMm.wheelbase"
+      ]
+    },
+    {
+      "lineSlug": "yeti",
+      "generationIndex": 0,
+      "name": "1.2 TSI 81 kW - 6MT (2016)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "yeti",
+      "generationIndex": 0,
+      "name": "1.4 TSI 92 kW - 6MT (2016)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    },
+    {
+      "lineSlug": "yeti",
+      "generationIndex": 0,
+      "name": "2.0 TDI 110 kW - FWD 6MT (2016)",
+      "missing": [
+        "consumptionKwh100",
+        "rangeKm"
+      ]
+    }
+  ]
+}

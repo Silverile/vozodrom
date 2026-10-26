@@ -90,6 +90,9 @@ export interface CatalogModelCardPhoto {
   credit: string;
   depicts: "generation";
   visualReview: "pending" | "reviewed";
+  /** Framing/generation review does not certify trim, originality or exact model year. */
+  reviewedAt?: string;
+  reviewNoteCs?: string;
   sources: string[];
 }
 export interface CatalogModelCardEngine {
