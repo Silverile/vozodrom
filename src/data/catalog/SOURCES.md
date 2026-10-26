@@ -361,3 +361,18 @@ Three research groups checked remaining historic and 1990s–2010s version gaps.
 
 Three existing Commons originals visually inspected. 633 passed whole-car framing; 1101/1102 and 130/135/136 rejected and set null. No new photo files selected or binaries stored. Licence/author metadata retained in skoda-card-photo-evidence.json. Decisions: skoda-step8-photo-review.json; failed requests and pending files: skoda-step8-photo-candidates.json.
 <!-- skoda-step8:end -->
+
+<!-- skoda-step9:start -->
+## Škoda targeted sources step 9 — 26 October 2026
+
+Only six human-supplied URLs, the equivalent public canonical Scribd address and already-held Roomster manufacturer evidence were inspected. Facts individually structured; source prose, complete tables and image binaries not copied. Detailed source decisions, before/after values and access limits: analysis/codex/skoda-step9-review.json and worker-step9-*.json. A separate Junior1.2HTP technical sample is distinguished from Junior1.0MPI. ProductionUnits is a source-published historical total, not fabricated market statistics.
+
+- https://motomuseum-hostalek.cz/index.php?grhead=2&nav=01&id_group=47&t=_art_print&id_art=1049
+- https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/
+- https://ru.scribd.com/document/81802893/Manual-Skoda-Octavia-1-8-92kW
+- https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181
+- https://skodaroomster.eu/tech-udaje.html
+- https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/
+
+Scribd canonical equivalent: https://www.scribd.com/document/81802893/Manual-Skoda-Octavia-1-8-92kW . Auto.cz direct access403; indexed technical excerpts used, not a claim of unrestricted page access. 4R original candidate and terms: skoda-step9-4r-photo-review.json. Its whole-car framing passes, but catalogue reuse permission is unconfirmed, so the photo is not in the public card. No free licence inferred from press/news permission.
+<!-- skoda-step9:end -->

@@ -105,6 +105,8 @@ export interface CatalogModelCardEngine {
   variant: string | null;
 }
 export interface CatalogModelCardGeneration {
+  /** Source-published production total for this whole generation/family; not listings or surviving cars. */
+  productionUnits?: number | null;
   /** Source URLs indexed by populated specification field, where reconciled. */
   fieldSources?: Record<string, string[]>;
   /** Selected technical/engine versions, not a complete equipment list. */

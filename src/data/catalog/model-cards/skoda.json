@@ -2147,13 +2147,14 @@
             "specificationScope": {
               "market": "source-production",
               "modelYear": null,
-              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány. Dobový průměr 8,5 l/100 km bez určení cyklu; nelze přímo srovnávat s WLTP. Zrychlení 18,5/19 s zůstává sporné. Normu DIN pro uváděných 38 kW výslovně uvádí česká tisková zpráva výrobce k 50. výročí 110 R. Tato zpráva zároveň uvádí 19 s a pneumatiky 165 SR 14, ale nepopisuje metodiku zkoušky ani poloviční zatížení. Hodnota 18,5 s zatím nebyla přiřazena k doloženému samostatnému měření; generační zrychlení proto zůstává sporné."
+              "noteCs": "Doložená technická verze; nejde o úplný seznam výbav. Neznámé hodnoty nejsou odhadovány. Dobový průměr 8,5 l/100 km bez určení cyklu; nelze přímo srovnávat s WLTP. Zrychlení 18,5/19 s zůstává sporné. Normu DIN pro uváděných 38 kW výslovně uvádí česká tisková zpráva výrobce k 50. výročí 110 R. Tato zpráva zároveň uvádí 19 s a pneumatiky 165 SR 14, ale nepopisuje metodiku zkoušky ani poloviční zatížení. Hodnota 18,5 s zatím nebyla přiřazena k doloženému samostatnému měření; generační zrychlení proto zůstává sporné. Dodaný článek výrobce z 3. 8. 2020 o muzejním vozu 110 R (1971) výslovně označuje již uložených 880 kg jako pohotovostní hmotnost. Započtení řidiče ani náplní neupřesňuje; dnešní metodika EU se nedoplňuje. Článek neuvádí zrychlení 0–100 km/h, takže nerozhoduje rozdíl 18.5/19 s."
             },
             "sources": [
               "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
               "https://cs.wikipedia.org/w/index.php?oldid=26216420",
               "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
-              "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+              "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/",
+              "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"
             ],
             "fieldSources": {
               "dimensionsMm.wheelbase": [
@@ -2167,13 +2168,16 @@
               ],
               "engine.powerStandard": [
                 "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+              ],
+              "massBasis": [
+                "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"
               ]
             },
             "consumptionCycle": "historical average; test cycle not specified",
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
-            "massBasis": null
+            "massBasis": "period kerb weight; driver/load convention unspecified"
           }
         ],
         "sources": [
@@ -2182,7 +2186,8 @@
           "https://cs.wikipedia.org/w/index.php?oldid=26216420",
           "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
           "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
-          "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+          "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/",
+          "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"
         ],
         "fieldSources": {
           "trunkL": [
@@ -2197,7 +2202,8 @@
       "https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/",
       "https://cs.wikipedia.org/w/index.php?oldid=26216420",
       "https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/",
-      "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/"
+      "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/sportovni-kupe-skoda-110-r-slavi-50-let/",
+      "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"
     ],
     "needsReview": [
       {
@@ -2262,10 +2268,6 @@
       },
       {
         "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].massBasis",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       }
     ]
@@ -5892,7 +5894,9 @@
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -5905,7 +5909,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Souhrnná karta; rozměry a roky konkrétních verzí nejsou automaticky přebírány ze sdílené rodinné stránky. Krajní roky samy nepotvrzují nepřerušenou výrobu."
+          "noteCs": "Souhrnná karta; rozměry a roky konkrétních verzí nejsou automaticky přebírány ze sdílené rodinné stránky. Krajní roky samy nepotvrzují nepřerušenou výrobu. Výrobce uvádí 975 vyrobených vozů rodiny 4R v letech 1928–1930; nejde o počet současných inzerátů ani dochovaných exemplářů."
         },
         "trunkL": null,
         "markets": [
@@ -5931,7 +5935,7 @@
               "type": "manual",
               "gears": 4
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": null,
               "width": null,
@@ -5945,29 +5949,46 @@
             "specificationScope": {
               "market": "source-production",
               "modelYear": null,
-              "noteCs": "Historická technická verze z oficiální časové osy. U 422 se zdroje liší začátkem výroby (1929/1930), u 860 koncem (1932/1933); sporná mez zůstává null."
+              "noteCs": "Historická technická verze z oficiální časové osy. U 422 se zdroje liší začátkem výroby (1929/1930), u 860 koncem (1932/1933); sporná mez zůstává null. Popisek výrobce výslovně uvádí pohon zadních kol. Údaj nepotvrzuje polohu motoru ani rozměry konkrétní karoserie."
             },
             "sources": [
-              "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta"
+              "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
+              "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/"
             ],
             "consumptionCycle": null,
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
-            "massBasis": null
+            "massBasis": null,
+            "fieldSources": {
+              "drive": [
+                "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/"
+              ]
+            }
           }
         ],
         "sources": [
           "https://www.skoda-auto.com/world/timeline",
           "https://www.skoda-storyboard.com/en/09-skoda-4r-limousina/",
+          "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/",
           "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta"
-        ]
+        ],
+        "fieldSources": {
+          "drivetrains": [
+            "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/"
+          ],
+          "productionUnits": [
+            "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/"
+          ]
+        },
+        "productionUnits": 975
       }
     ],
     "sources": [
       "https://www.skoda-auto.com/world/timeline",
       "https://www.skoda-storyboard.com/en/09-skoda-4r-limousina/",
-      "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta"
+      "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta",
+      "https://www.skoda-storyboard.com/cs/09-skoda-4r-limousina/"
     ],
     "needsReview": [
       {
@@ -5988,10 +6009,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -6040,10 +6057,6 @@
       },
       {
         "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].trims[0].drive",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -10184,7 +10197,8 @@
           "https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163",
           "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf",
           "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
-          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/",
+          "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
         ],
         "trims": [
           {
@@ -10572,6 +10586,101 @@
               ],
               "dimensionsMm.wheelbase": [
                 "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/"
+              ]
+            }
+          },
+          {
+            "name": "Junior 1.2 HTP 40 kW - hatchback (test pred faceliftem)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1198,
+              "cylinders": 3,
+              "powerKw": 40,
+              "torqueNm": 106,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
+            "drive": null,
+            "dimensionsMm": {
+              "length": 3960,
+              "width": 1646,
+              "height": 1451,
+              "wheelbase": 2462
+            },
+            "massKg": 1010,
+            "massRangeKg": null,
+            "massReference": null,
+            "massBasis": "pohotovostni hmotnost per period road-test table; driver inclusion unspecified",
+            "topSpeedKmh": 151,
+            "acceleration0to100s": 18.4,
+            "consumptionL100": 5.9,
+            "consumptionCycle": "combined (period technical table; measurement standard unspecified)",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Czech Republic / individually documented pre-facelift test version",
+              "modelYear": null,
+              "noteCs": "Samostatna verze Junior1.2HTP podle technicke tabulky doboveho testu Auto.cz. Clanek vyslovne upozornuje na provedeni pred faceliftem; datum vyroby ani modelovy rok neurceny. Hmotnost1010kg je v tabulce oznacena pohotovostni, zahrnuti ridice neni uvedeno. Kombinovana spotreba5.9l/100km je tabulkovy udaj, konkretni homologacni predpis neni urcen. Neprepisuje Junior1.0MPI37kW. Plna stranka pri primem otevreni vratila403; tabulka a poznamka o provedeni byly dostupne ve vyhledavacim indexu."
+            },
+            "sources": [
+              "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "engine.fuel": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "engine.displacementCc": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "engine.cylinders": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "engine.powerKw": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "engine.torqueNm": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "dimensionsMm.length": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "dimensionsMm.width": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "dimensionsMm.height": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "massKg": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "massBasis": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "topSpeedKmh": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "acceleration0to100s": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "consumptionL100": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+              ],
+              "consumptionCycle": [
+                "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
               ]
             }
           }
@@ -12197,6 +12306,7 @@
       "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf",
       "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/",
+      "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181",
       "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf",
       "https://www.allcarcentral.com/Skoda_pdf/Skoda_FabiaRS_Catalogue_2010.pdf",
       "https://comunicacion.skoda.es/dossier/dossier-novedades-skoda-en-el-salon-de-ginebra-2011/",
@@ -12806,6 +12916,54 @@
       },
       {
         "field": "generations[0].trims[3].specificationScope.modelYear",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].from",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].to",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].engine.powerStandard",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].transmission.type",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].transmission.gears",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].drive",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].massRangeKg",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].massReference",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].consumptionKwh100",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeKm",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].rangeCycle",
+        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
+      },
+      {
+        "field": "generations[0].trims[4].specificationScope.modelYear",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {

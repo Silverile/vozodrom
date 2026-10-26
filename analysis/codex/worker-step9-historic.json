@@ -1,0 +1,83 @@
+{
+  "retrievedOn": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "110-r",
+      "generationIndex": 0,
+      "trimName": "110 R",
+      "fields": { "massBasis": "period kerb weight; driver/load convention unspecified" },
+      "sources": ["https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"],
+      "fieldSources": {
+        "massBasis": ["https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/"]
+      },
+      "noteCs": "Dodaný článek výrobce z 3. 8. 2020 o muzejním vozu 110 R (1971) výslovně označuje již uložených 880 kg jako pohotovostní hmotnost. Započtení řidiče ani náplní neupřesňuje; dnešní metodika EU se nedoplňuje. Článek neuvádí zrychlení 0–100 km/h, takže nerozhoduje rozdíl 18.5/19 s."
+    }
+  ],
+  "additions": [],
+  "beforeAfter": [
+    {
+      "lineSlug": "110-r", "trimName": "110 R", "field": "massBasis", "before": null,
+      "after": "period kerb weight; driver/load convention unspecified", "decision": "Source explicitly names kerbweight; definition is safe to record without changing mass880."
+    },
+    {
+      "lineSlug": "110-r", "trimName": "110 R", "field": "massKg", "before": 880, "after": 880,
+      "decision": "Confirmed by suppliedmanufacturerpage; unchanged."
+    },
+    {
+      "lineSlug": "110-r", "trimName": "110 R", "field": "dimensionsMm", "before": { "length": 4155, "width": 1620, "height": 1340, "wheelbase": 2400 },
+      "after": { "length": 4155, "width": 1620, "height": 1340, "wheelbase": 2400 },
+      "decision": "Length,width,height confirmed; suppliedpage does notstatewheelbase, so no newwheelbaseprovenance."
+    },
+    {
+      "lineSlug": "110-r", "trimName": "110 R", "field": "acceleration0to100s", "before": null, "after": null,
+      "decision": "No acceleration value or procedure on suppliedpage;19/18.5conflict remains."
+    },
+    {
+      "lineSlug": "110-r", "trimName": "110 R", "field": "consumptionL100", "before": 8.5, "after": 8.5,
+      "decision": "Suppliedpage contains no consumptionfigure; unchanged value retains its existingother source and unspecifiedprotocol label."
+    },
+    {
+      "lineSlug": "440-445-450", "trimName": "440 /445 /450", "field": "massKg", "before": null, "after": null,
+      "decision": "SuppliedmuseumURLdescribes1201,nottheseversions. No mass orprotocol transferred."
+    }
+  ],
+  "sourceDecisions": [
+    {
+      "url": "https://motomuseum-hostalek.cz/index.php?grhead=2&nav=01&id_group=47&t=_art_print&id_art=1049",
+      "status": "not-settled",
+      "actualPageTitle": "ŠKODA 1201",
+      "readScope": "Fullarticlebodytechnicaldescription andfooter inspected; not merelysearchsnippet.",
+      "settled": [],
+      "notSettled": ["440mass", "445mass", "450mass", "110Racceleration"],
+      "reason": "The linkedarticle is about1201typ980andcannotverify440/445/450. It only mentions440/445incidentally forsharedcarburettor or prototypephotos. No original440/445/450technicalmassrecord is supplied.",
+      "potential1201FindingsForParent": {
+        "mass1050": "Labelledvlastní váha zavřeného vozu, notexplicitpohotovostní; do notsilentlyequate conventions.",
+        "ambulanceMass1220": "Likewisevlastníváha, no exactyear/load/equipment definition; not an automaticallyusablekerbrecord.",
+        "consumption8": "Sedan8L/100km,no statedcycle; existingmanufactureraverage9–10conflicts rather than resolves.",
+        "speed105then115": "105km/h general, explicitly115claimedafter1958. No1966/1956bound inferred.",
+        "torque8point6kgm": "Sourceunitkgm, notNm; no unrequested conversion made.",
+        "dimensions": "Sedan4500/1680/1520/WB2685matchesexisting1201reference, not440body."
+      }
+    },
+    {
+      "url": "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/zaklad-sportovnich-uspechu-skoda-110-r-erko-1971/",
+      "status": "partly-settled",
+      "actualPageTitle": "Základ sportovních úspěchů: ŠKODA110R Erko(1971)",
+      "documentDate": "2020-08-03",
+      "readScope": "Fullarticlebody andmedia/footer inspected; numericalfacts compared withcurrenttrim.",
+      "settled": ["Existingmass880explicitlykerb", "ExistingL4155/W1620/H1340", "Existing1107cc4cyl38kW", "Existingmanual4", "Existingmax145"],
+      "notSettled": ["0–100acceleration19vs18.5", "Driverincludedinmass", "Consumptionprotocol", "Wheelbase"],
+      "reason": "The manufacturerarticle identifiesamuseum1971car butalso discusseswhole1970–1980line. It containsneither0–100timenorfuelconsumption. The19secondquote knownfromanothermanufacturerarticle isnotpresenthere; thisURLmustnotbecitedasitsproof. PowerDINisnotstatedonthisparticularpage either."
+    }
+  ],
+  "needsReview": [
+    { "lineSlug": "110-r", "trimName": "110 R", "field": "acceleration0to100s", "reason": "Remainnull: suppliedpage addsno testload,tyreconditionorprotocol explaining19vs18.5s." },
+    { "lineSlug": "440-445-450", "fields": ["massKg"], "reason": "No newrelevantsource. Existingnote900–930mustnotbeinterpretedasmanufacturerpublishedconfigurationrange." },
+    { "lineSlug": "1201", "fields": ["massKg"], "reason": "Outoftargetpatchscope buthumanURLadds1050vlastníweight wording, notkerbdefinition; prior1050vs1060conflict isnotresolved." }
+  ],
+  "helpWanted": [
+    "CorrectHošťálekarticleURLororiginal440/445/450manualpagesbindingmass toStandard/Export/yearandweightdefinition.",
+    "110Roriginal0–100measurementreportorhomologationwithvehicleload andexplicit18.5/19seconds, since suppliedErko1971articlegivesneither.",
+    "1201originalmanualpage definingvlastní/pohotovostnímass andequipment to reconcile1050and1060kg; museumURLaloneisnotthatpage."
+  ]
+}

@@ -15,7 +15,7 @@ for(let i=0;i<cards.length;i++){
  assert(typeof c.summaryCs==='string'&&c.summaryCs.length>70);assert(!c.summaryCs.includes('�'));assert(c.summaryCs.split(/[.!?](?:\s|$)/).filter(s=>s.trim()).length>=2);assert(c.generations.length>0);assert.equal(c.isAddition,additions.some(a=>a.makeSlug===c.makeSlug&&a.slug===c.lineSlug));
  for(const u of c.sources)assert(known.has(u),'unknown source '+u);
  for(const [j,g]of c.generations.entries()){
-  generations++;assert(g.bodyTypes===null||g.bodyTypes.every(b=>bodies.has(b)));assert(g.to!==null||g.productionStatus==='current'||c.needsReview.some(r=>r.field===`generations[${j}].to`));
+  generations++;if(g.productionUnits!=null){assert(Number.isInteger(g.productionUnits)&&g.productionUnits>0);assert(g.fieldSources?.productionUnits?.length>0);}assert(g.bodyTypes===null||g.bodyTypes.every(b=>bodies.has(b)));assert(g.to!==null||g.productionStatus==='current'||c.needsReview.some(r=>r.field===`generations[${j}].to`));
   if(g.from!==null&&g.to!==null)assert(g.from<=g.to);for(const u of g.sources)assert(known.has(u),'unknown generation source '+u);
   for(const n of Object.values(g.dimensionsMm))assert(n===null||Number.isInteger(n)&&n>500&&n<7000);assert(g.trunkL===null||g.trunkL>0);
   if(g.engines)for(const e of g.engines){engines++;assert(e.fuel===null||fuels.has(e.fuel));assert(e.displacementCc===null||Number.isInteger(e.displacementCc)&&e.displacementCc>0);if(e.fuel==='electric')assert.equal(e.displacementCc,null);if(e.powerKwMin!==null&&e.powerKwMax!==null)assert(e.powerKwMin<=e.powerKwMax);if(e.displacementCc!==null)assert([1289,1498,1984].includes(e.displacementCc),'exact cc needs factual evidence');}

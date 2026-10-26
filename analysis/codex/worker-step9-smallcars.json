@@ -1,0 +1,359 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [],
+  "additions": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trim": {
+        "name": "Junior 1.2 HTP 40 kW - hatchback (test pred faceliftem)",
+        "kind": "technical-version",
+        "from": null,
+        "to": null,
+        "bodyType": "hatchback",
+        "engine": {
+          "fuel": "petrol",
+          "displacementCc": 1198,
+          "cylinders": 3,
+          "powerKw": 40,
+          "torqueNm": 106,
+          "powerStandard": null
+        },
+        "transmission": {
+          "type": null,
+          "gears": null
+        },
+        "drive": null,
+        "dimensionsMm": {
+          "length": 3960,
+          "width": 1646,
+          "height": 1451,
+          "wheelbase": 2462
+        },
+        "massKg": 1010,
+        "massRangeKg": null,
+        "massReference": null,
+        "massBasis": "pohotovostni hmotnost per period road-test table; driver inclusion unspecified",
+        "topSpeedKmh": 151,
+        "acceleration0to100s": 18.4,
+        "consumptionL100": 5.9,
+        "consumptionCycle": "combined (period technical table; measurement standard unspecified)",
+        "consumptionKwh100": null,
+        "rangeKm": null,
+        "rangeCycle": null,
+        "specificationScope": {
+          "market": "Czech Republic / individually documented pre-facelift test version",
+          "modelYear": null,
+          "noteCs": "Samostatna verze Junior1.2HTP podle technicke tabulky doboveho testu Auto.cz. Clanek vyslovne upozornuje na provedeni pred faceliftem; datum vyroby ani modelovy rok neurceny. Hmotnost1010kg je v tabulce oznacena pohotovostni, zahrnuti ridice neni uvedeno. Kombinovana spotreba5.9l/100km je tabulkovy udaj, konkretni homologacni predpis neni urcen. Neprepisuje Junior1.0MPI37kW. Plna stranka pri primem otevreni vratila403; tabulka a poznamka o provedeni byly dostupne ve vyhledavacim indexu."
+        },
+        "sources": [
+          "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+        ],
+        "fieldSources": {
+          "bodyType": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "engine.fuel": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "engine.displacementCc": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "engine.cylinders": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "engine.powerKw": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "engine.torqueNm": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "dimensionsMm.length": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "dimensionsMm.width": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "dimensionsMm.height": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "massKg": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "massBasis": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "topSpeedKmh": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "acceleration0to100s": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "consumptionL100": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ],
+          "consumptionCycle": [
+            "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181"
+          ]
+        }
+      }
+    }
+  ],
+  "sourceDecisions": [
+    {
+      "source": "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181",
+      "access": "Direct full-page open returned HTTP 403. The search index returned the article's technical table, conclusion and explicit note that the tested car preceded the facelift; those indexed passages were read. No claim of full direct-page access.",
+      "sourceVersion": "Fabia Junior 1.2 HTP, 1198 cm3, three cylinders, 40 kW; preceding facelift according to article note. It is not the existing 1.0 MPI 997 cm3, four-cylinder, 37 kW record.",
+      "fields": [
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "massKg",
+          "before": null,
+          "sourceValue": 1010,
+          "after": null,
+          "decision": "not-settled: version mismatch",
+          "reason": "The article explicitly associates the 1010 kg kerb figure with the tested 1198 cm3 three-cylinder 40 kW version. It cannot establish the 997 cm3 four-cylinder 37 kW version's mass or resolve its 1010/1035 kg discrepancy."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "massBasis",
+          "before": null,
+          "sourceValue": "pohotovostni hmotnost; driver inclusion not stated in indexed table",
+          "after": null,
+          "decision": "not-settled",
+          "reason": "No driver inclusion or exact original manufacturing year is established by the retrieved passages. Do not add 75 kg or identify an assumed test-year model."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "engine.displacementCc",
+          "before": 997,
+          "sourceValue": 1198,
+          "after": 997,
+          "decision": "retain existing: different engine",
+          "reason": "The test is a separate 1.2 HTP engine; 1198 is not a correction to the 1.0 MPI record."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "engine.powerKw",
+          "before": 37,
+          "sourceValue": 40,
+          "after": 37,
+          "decision": "retain existing: different engine"
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "acceleration0to100s",
+          "before": 21.6,
+          "sourceValue": 18.4,
+          "after": 21.6,
+          "decision": "retain existing: different engine"
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "consumptionL100",
+          "before": 6.6,
+          "sourceValue": 5.9,
+          "after": 6.6,
+          "decision": "retain existing: different engine",
+          "reason": "The supplied test table's combined value belongs to 1.2 HTP. No NEDC/WLTP standard was inferred from the publication's age."
+        },
+        {
+          "lineSlug": "fabia",
+          "generationIndex": 0,
+          "trimName": "Junior 1.0 MPI 37 kW",
+          "field": "dimensionsMm",
+          "before": {
+            "length": 3960,
+            "width": 1646,
+            "height": 1451,
+            "wheelbase": 2462
+          },
+          "sourceValue": {
+            "length": 3960,
+            "width": 1646,
+            "height": 1451,
+            "wheelbase": 2462
+          },
+          "after": {
+            "length": 3960,
+            "width": 1646,
+            "height": 1451,
+            "wheelbase": 2462
+          },
+          "decision": "no change: matching body dimensions do not identify engine or mass"
+        }
+      ],
+      "outcome": "Deferred in initial worker brief; amended after clarification to add this independently documented 1.2 HTP Junior as a separate version. Existing 1.0 MPI remains unchanged.",
+      "newVersionBeforeAfter": {
+        "lineSlug": "fabia",
+        "generationIndex": 0,
+        "trimName": "Junior 1.2 HTP 40 kW - hatchback (test pred faceliftem)",
+        "before": "absent",
+        "after": {
+          "engine": {
+            "fuel": "petrol",
+            "displacementCc": 1198,
+            "cylinders": 3,
+            "powerKw": 40,
+            "torqueNm": 106,
+            "powerStandard": null
+          },
+          "dimensionsMm": {
+            "length": 3960,
+            "width": 1646,
+            "height": 1451,
+            "wheelbase": 2462
+          },
+          "massKg": 1010,
+          "massBasis": "pohotovostni hmotnost per period road-test table; driver inclusion unspecified",
+          "topSpeedKmh": 151,
+          "acceleration0to100s": 18.4,
+          "consumptionL100": 5.9,
+          "consumptionCycle": "combined (period technical table; measurement standard unspecified)"
+        },
+        "unsettled": [
+          "from",
+          "to",
+          "modelYear",
+          "drive",
+          "transmission.type",
+          "transmission.gears",
+          "driver inclusion"
+        ]
+      }
+    },
+    {
+      "source": "https://skodaroomster.eu/tech-udaje.html",
+      "access": "Read complete returned page, lines 0-22. It is the exterior-dimensions page of an archived microsite; no explicit document date, engine, gearbox, mass or consumption on this page.",
+      "crossCheckSources": [
+        "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+      ],
+      "fields": [
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "trimNames": [
+            "1.2 TSI 63 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - DSG7 (CZ katalog 05/2011)"
+          ],
+          "field": "dimensionsMm.length",
+          "before": 4214,
+          "sourceValue": 4214,
+          "oemBrochureValue": 4214,
+          "after": 4214,
+          "decision": "confirmed unchanged"
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "trimNames": [
+            "1.2 TSI 63 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - DSG7 (CZ katalog 05/2011)"
+          ],
+          "field": "dimensionsMm.width",
+          "before": 1684,
+          "sourceValue": 1684,
+          "oemBrochureValue": 1684,
+          "after": 1684,
+          "decision": "confirmed unchanged"
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "trimNames": [
+            "1.2 TSI 63 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - DSG7 (CZ katalog 05/2011)"
+          ],
+          "field": "dimensionsMm.height",
+          "before": 1607,
+          "sourceValue": 1607,
+          "oemBrochureValue": 1607,
+          "after": 1607,
+          "decision": "confirmed unchanged"
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "trimNames": [
+            "1.2 TSI 63 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - 5MT (CZ katalog 05/2011)",
+            "1.2 TSI 77 kW - DSG7 (CZ katalog 05/2011)"
+          ],
+          "field": "dimensionsMm.wheelbase",
+          "before": null,
+          "sourceValue": 2620,
+          "oemBrochureValue": 2621,
+          "after": null,
+          "decision": "not-settled: source disagreement",
+          "reason": "The supplied undated microsite gives 2620; the original manufacturer 05/2011 brochure drawing gives 2621. The extra undated copy does not explain the discrepancy or justify overriding the dated brochure."
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "trimNames": [
+            "1.2 HTP 12V 51 kW - 5MT (2007)",
+            "1.6 16V 77 kW - 5MT (2007)",
+            "1.9 TDI PD 77 kW bez DPF - 5MT (2007)"
+          ],
+          "field": "dimensionsMm.wheelbase",
+          "before": 2617,
+          "sourceValue": 2620,
+          "after": 2617,
+          "decision": "retain explicitly dated 2007 source",
+          "reason": "The undated supplied page also has a different length, 4214 versus the 2007 sample's 4205. Do not transfer its figures to earlier samples or infer a year from the page's footer."
+        },
+        {
+          "lineSlug": "roomster",
+          "generationIndex": 0,
+          "field": "consumptionL100",
+          "decision": "not-settled: absent from supplied page",
+          "reason": "This exterior-dimensions page contains no engine, transmission, consumption or cycle. Existing original-brochure consumption values remain unchanged."
+        }
+      ],
+      "outcome": "No patch. Existing TSI body length, width and height corroborated; wheelbase discrepancy remains unresolved. No date or Scout/Praktik scope inferred."
+    }
+  ],
+  "needsReview": [
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "Junior 1.0 MPI 37 kW",
+      "fields": [
+        "massKg",
+        "massBasis"
+      ],
+      "reason": "Supplied Auto.cz test is explicitly 1.2 HTP, not the existing 1.0 MPI. Primary exact-version mass evidence still needed."
+    },
+    {
+      "lineSlug": "roomster",
+      "generationIndex": 0,
+      "fields": [
+        "dimensionsMm.wheelbase for the 05/2011 TSI samples"
+      ],
+      "reason": "Undated microsite 2620 versus dated OEM brochure drawing 2621; preserve null until a correction, measurement definition or exact revision mapping explains both."
+    }
+  ],
+  "helpWanted": [
+    "Fabia Junior 1.0 MPI 37 kW: dated manufacturer technical sheet identifying mass and driver inclusion. The supplied 1.2 HTP test cannot resolve it.",
+    "Roomster 05/2011 TSI variants: manufacturer clarification/correction of 2621 mm brochure drawing versus 2620 mm microsite/manual value."
+  ],
+  "verification": "Supplied source URLs and already-used Roomster05/2011brochure checked. Separate1.2HTP addition authorized after initial scoped audit; no shared catalogue files edited."
+}

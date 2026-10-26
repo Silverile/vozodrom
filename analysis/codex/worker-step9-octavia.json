@@ -1,0 +1,94 @@
+{
+  "retrievedAt": "2026-10-26",
+  "patches": [],
+  "additions": [],
+  "sourceDecisions": [
+    {
+      "source": "https://ru.scribd.com/document/81802893/Manual-Skoda-Octavia-1-8-92kW",
+      "canonicalSource": "https://www.scribd.com/document/81802893/Manual-Skoda-Octavia-1-8-92kW",
+      "decision": "Readable through ordinary canonical www address; original ru address unavailable to web tool. Same document81802893, no account or paid access.",
+      "documentScope": "Manufacturer workshop manual, 1.8ltr/92kW engine mechanical components. Basic publication S00.5104.50.20 edition08.96, supplemented through04.03. Public Scribd page identifies136pages. It is not a whole-vehicle brochure or road-test report.",
+      "matchedVariant": {
+        "lineSlug": "octavia",
+        "generationIndex": 0,
+        "trimName": "1.8 20V – liftback (1996)",
+        "existingBodyType": "hatchback",
+        "existingGearbox": "manual5",
+        "existingModelYear": 1996,
+        "sourceBodyType": null,
+        "sourceGearboxCount": null,
+        "sourceRoadTestYear": null
+      },
+      "fieldBeforeAfter": [
+        {
+          "field": "acceleration0to100s",
+          "before": null,
+          "after": null,
+          "status": "not-settled",
+          "reason": "No vehicle acceleration specification in readable engine technical section or contents. The10.9 search hits are strengthclass10.9 fixing bolts, not seconds."
+        },
+        {
+          "field": "engine.displacementCc",
+          "before": 1781,
+          "after": 1781,
+          "status": "corroborated-no-change",
+          "reason": "Engine-features table00-1 listsAGN displacement1.781litres; no change needed."
+        },
+        {
+          "field": "engine.powerKw",
+          "before": 92,
+          "after": 92,
+          "status": "corroborated-no-change",
+          "reason": "Engine-features table00-1 lists92kW/6000rpm; no change needed."
+        },
+        {
+          "field": "engine.torqueNm",
+          "before": 173,
+          "after": 173,
+          "status": "not-changed",
+          "reason": "Table contains173Nm/4100rpm and170Nm/4200rpm with two manufacturing-date ranges. Flattened OCR does not safely preserve all column relations; no new date-specific reassignment made."
+        }
+      ],
+      "notSettled": [
+        "Whether10.9s is manufacturer acceleration for the exact earlyliftbackAGN/manual5/model-year scope.",
+        "Whether10.7s in the period Auto.cz prose denotes actual measured performance rather than a typo or an alternative configuration.",
+        "Any payload, tyres, weather or acceleration-test method."
+      ],
+      "pageEvidence": [
+        {
+          "section": "00-1 Engine features",
+          "publicationRevision": "02.02 S00.5104.55.20",
+          "observations": "AGN;1.781litres;92kW/6000rpm;both173Nm/4100rpm and170Nm/4200rpm. OCR shows08.96–07.97 and08.97–05.99 date groups, but visual column binding was not verified."
+        },
+        {
+          "section": "13-1 Crank Assembly",
+          "publicationRevision": "04.01 S00.5104.54.20",
+          "observations": "10.9 refers to bolt strength class, with40Nm tightening specification. It cannot be used as0–100 acceleration."
+        }
+      ]
+    }
+  ],
+  "needsReview": [
+    {
+      "lineSlug": "octavia",
+      "generationIndex": 0,
+      "trimName": "1.8 20V – liftback (1996)",
+      "fields": [
+        "acceleration0to100s"
+      ],
+      "reason": "Supplied engine workshop manual does not settle the10.7/10.9s whole-vehicle conflict. Preserve null. Need original1996–1998 vehicle brochure/technical sheet or an explicitly measured test with exact car and load conditions."
+    }
+  ],
+  "accessLimits": [
+    "The supplied ru.scribd.com URL was reported inaccessible by web tool. The ordinary www.scribd.com canonical page for same document opened successfully.",
+    "Inspected publicly readable OCR/text, table of contents and engine-features section. No sign-in, subscription, download service or account used.",
+    "No completePDF downloaded; no original table-layout visual inspection. Some later mechanical-page OCR is garbled.",
+    "Uploader-assigned Scribd licence is not accepted as proof of rights to manufacturer text; only independently recorded facts and review decisions are included."
+  ],
+  "verification": [
+    "Read current OctaviaIexistingAGN92kW/manual5 card and current unresolved accelerationnull.",
+    "Opened canonicalScribd81802893 readable page,136pages declared; inspected manufacturer title/revision list,contents andtechnical section00-1.",
+    "Searched within readable page forTechnicalData,AGN,173,acceleration,10.9 and10,9. Noacceleration match;10.9occurrences identified asboltgrade.",
+    "No catalogue/script edits; only assigned evidence file created."
+  ]
+}

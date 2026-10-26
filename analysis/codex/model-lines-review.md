@@ -4010,3 +4010,26 @@ References 69 → 67; reviewed 10 → 11; pending 56. Rejected images set null. 
 
 Rebuild with build-skoda-cards.mjs and write-skoda-step8-review.mjs; run both model validators.
 <!-- skoda-step8:end -->
+
+<!-- skoda-step9:start -->
+## Škoda step 9 — six human-supplied sources
+
+Targeted pass completed by three workers and root in 2.2 minutes. No broad search. Existing 171 version identities retained; 1 separately identified version added. Total 172. Detailed per-field before/after and source access limits: skoda-step9-review.json.
+
+1. **Hošťálek:** supplied URL is about **1201**, not 440/445/450. It reports own weight 1050 kg for the closed passenger body and 1220 kg for ambulance, plus period consumption without a protocol. This does not settle the earlier kerb-weight definitions/configurations or supply 440-series specifications. Existing mass nulls retained.
+2. **110 R Storyboard:** massBasis null → period kerb, driver/load convention unspecified; existing 880 kg unchanged. Length, width, height and power corroborated. No acceleration or consumption figure on this supplied page; 18.5/19.0 s remains unresolved.
+3. **Octavia manual:** readable canonical Scribd copy is an engine-repair manual, not a vehicle performance sheet. The 10.9 occurrences identify bolt strength grades. Acceleration null → null; no guessed gearbox/body performance.
+4. **Auto.cz Junior:** test is the separate **1.2 HTP, 1198 cm³, 3 cylinders, 40 kW**. The 1010 kg figure does not resolve the existing 1.0 MPI mass. Added a separately scoped pre-facelift test sample with its documented mass, dimensions, torque, speed, acceleration and combined consumption; year, driver inclusion, gearbox and drive unknown. Direct page returned403; indexed technical passages inspected. No claim of full-page direct access.
+5. **Roomster microsite:** body 4214×1684×1607 mm corroborated; 2620 mm wheelbase still conflicts with 2621 in the original May2011 brochure. Exact TSI wheelbase null → null. Earlier 2007 dimensions retained under their own dated scope.
+6. **4R Storyboard:** version drive null → rwd; generation drivetrains null → [rwd]; productionUnits absent → **975** for the whole model family, not surviving cars or advertisements. Existing 1928–1930 dates corroborated. No mass, dimensions or performance in caption. Optional productionUnits type and validation added.
+
+### 4R photograph
+
+Original manufacturer image visually passed: whole vehicle in frame with margin. Publisher is Škoda Auto; individual photographer not established. Footer permits adequate press/news use subject to stated conditions, but does not expressly grant permanent commercial-catalogue reuse. **Public card photo remains null**, with URL, publisher, terms, visual decision and usage uncertainty preserved in skoda-step9-4r-photo-review.json. This is not a Commons/free-content licence. No binary stored in repository. Existing photo review remains 11 reviewed / 56 pending.
+
+### Closing the Škoda research loop / Help wanted
+
+These six leads are processed. Close broad research now; remaining gaps are explicit and should await specific new evidence: original 440-series and body-specific1201 weight documents; Junior1.0 mass/homologation; earlyAGN vehicle performance sheet;110R acceleration protocol; Roomster wheelbase correction; licensed full-car replacements or explicit permission covering catalogue reuse of the4R photo. Existing tables remain partial and do not claim all versions are documented.
+
+Rebuild: build-skoda-cards.mjs, write-skoda-step9-review.mjs; run model-card and model-line validators.
+<!-- skoda-step9:end -->
