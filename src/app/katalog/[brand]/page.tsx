@@ -7,7 +7,7 @@ import { BODY_LABEL, getBrand, modelsOf } from "@/lib/catalog";
 import { items } from "@/lib/classifieds";
 import { listings, listingsOf } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
-import { factsOf, hostOf } from "@/lib/brandFacts";
+import { factsOf, historyOf, hostOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
 import { BODY_GROUPS, cardOf, coverOf, thumb } from "@/lib/modelCards";
 import type { Body } from "@/lib/types";
@@ -86,6 +86,7 @@ export default async function BrandPage({ params }: { params: Params }) {
 
   // Brand fact tiles: only what is known, most useful first, at most six.
   const facts = factsOf(slug);
+  const history = historyOf(slug);
   const listingCount = make.sections.reduce((sum, s) => sum + itemCount(s), 0);
   const currentModels = lines.filter((l) => l.current).length;
   const tiles = (
@@ -136,6 +137,28 @@ export default async function BrandPage({ params }: { params: Params }) {
           ))}
         </dl>
       </div>
+
+      {history.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-xl font-bold mb-3">Z historie</h2>
+          <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(12rem,1fr))]">
+            {history.map((m, i) => (
+              <li key={i} className="card p-4 min-w-0 relative">
+                <div className="text-2xl font-extrabold text-[var(--color-brand)] tabular-nums">{m.year}</div>
+                <p className="mt-1 text-sm leading-snug">{m.text}</p>
+              </li>
+            ))}
+          </ol>
+          <details className="mt-2 text-xs text-[var(--color-muted)]">
+            <summary className="cursor-pointer hover:text-[var(--color-ink)]">Zdroje</summary>
+            <ul className="mt-1 space-y-0.5">
+              {[...new Set(history.map((m) => m.source))].map((s) => (
+                <li key={s} className="truncate"><a href={s} rel="noopener nofollow" className="underline hover:text-[var(--color-ink)]">{s}</a></li>
+              ))}
+            </ul>
+          </details>
+        </section>
+      )}
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {make.sections.map((s) => {

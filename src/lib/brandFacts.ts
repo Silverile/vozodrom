@@ -1,4 +1,5 @@
 import factIndex from "@/data/brand-facts.json";
+import historyIndex from "@/data/brand-history.json";
 
 // Facts about each make for its brand page, from Wikidata (CC0) via scripts/brand-facts.mjs,
 // with hand corrections in scripts/brand-facts-overrides.json. Unknown values are null.
@@ -30,4 +31,19 @@ export function hostOf(url: string): string {
   } catch {
     return url;
   }
+}
+
+// Short brand histories: 3–5 milestones per make, own Czech text, each with a source
+// (src/data/brand-history.json, written and fact-checked by hand).
+
+export interface Milestone {
+  year: number;
+  text: string;
+  source: string;
+}
+
+const HISTORY = historyIndex as unknown as Record<string, { milestones: Milestone[] }>;
+
+export function historyOf(slug: string): Milestone[] {
+  return [...(HISTORY[slug]?.milestones ?? [])].sort((a, b) => a.year - b.year);
 }

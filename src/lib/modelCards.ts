@@ -19,7 +19,15 @@ export interface CardTrim {
   from?: number | null;
   to?: number | null;
   bodyType?: string | null;
-  engine?: { fuel?: CardFuel | null; displacementCc?: number | null; cylinders?: number | null; powerKw?: number | null; torqueNm?: number | null } | null;
+  engine?: {
+    fuel?: CardFuel | null;
+    displacementCc?: number | null;
+    cylinders?: number | null;
+    powerKw?: number | null;
+    /** Measurement standard of powerKw: "ISO", "SAE" or "UN-GTR.21"; null when the source does not say. */
+    powerStandard?: string | null;
+    torqueNm?: number | null;
+  } | null;
   transmission?: { type?: string | null; gears?: number | null } | null;
   drive?: string | null;
   dimensionsMm?: { length?: number | null; width?: number | null; height?: number | null; wheelbase?: number | null } | null;

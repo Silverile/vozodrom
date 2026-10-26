@@ -117,7 +117,14 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null }[] =
   { label: "Karoserie", value: (t) => (t.bodyType ? BODY_NAMES[t.bodyType] ?? t.bodyType : null) },
   { label: "Roky", value: (t) => yearsSpan(t.from ?? null, t.to ?? null, false) || null },
   { label: "Motor", value: (t) => [t.engine?.displacementCc ? `${t.engine.displacementCc} cm³` : null, t.engine?.fuel ? CARD_FUEL[t.engine.fuel] : null].filter(Boolean).join(", ") || null },
-  { label: "Výkon", value: (t) => (t.engine?.powerKw ? `${t.engine.powerKw} kW` : null) },
+  // ISO is the default; other standards (old SAE gross figures, UN GTR 21 for electric cars) are named.
+  {
+    label: "Výkon",
+    value: (t) =>
+      t.engine?.powerKw
+        ? `${t.engine.powerKw.toLocaleString("cs-CZ")} kW${t.engine.powerStandard && t.engine.powerStandard !== "ISO" ? ` (${t.engine.powerStandard})` : ""}`
+        : null,
+  },
   { label: "Moment", value: (t) => (t.engine?.torqueNm ? `${t.engine.torqueNm} Nm` : null) },
   { label: "Převodovka", value: (t) => (t.transmission?.type ? `${GEARBOX[t.transmission.type] ?? t.transmission.type}${t.transmission.gears ? ` ${t.transmission.gears}st.` : ""}` : null) },
   { label: "Pohon", value: (t) => (t.drive ? DRIVE[t.drive] ?? t.drive : null) },
@@ -228,6 +235,11 @@ function GenerationDetail({ gen, title, id }: { gen: CardGeneration; title: stri
               ))}
             </tbody>
           </table>
+          {columns.some((c) => c.label === "Výkon") && (
+            <p className="mt-2 text-xs text-[var(--color-muted)]">
+              Výkon podle normy ISO, není-li uvedeno jinak (SAE = starší americká metodika, UN-GTR.21 = výkon elektromobilů). Výbavy a trhy se mohou lišit.
+            </p>
+          )}
         </div>
       )}
     </section>
