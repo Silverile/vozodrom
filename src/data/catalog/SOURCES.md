@@ -271,3 +271,33 @@ Worker evidence: worker-step5-compacts.json, worker-step5-electric.json, worker-
 
 Four existing Commons references visually checked: three passed whole-car framing; the 1203 frontal close-up was rejected and removed. Decisions/file identities and Czech notes: analysis/codex/skoda-step5-photo-review.json. Licences/author credits of retained photographs are unchanged. Remaining photographs are pending review; no downloaded image binaries are retained in the project.
 <!-- skoda-step5:end -->
+
+<!-- skoda-step6:start -->
+## Škoda specifications step 6 — 26 October 2026
+
+General web and manufacturer/archive research continued. Selected facts independently structured; no source prose or complete tables reproduced. Source PDFs remain copyrighted; this does not change Wikidata CC0 identity licensing or Commons photo licences. Explicit instruction #27 permits the minimum of a published mass range; massRangeKg retains the original interval, massReference labels it published-minimum, and massBasis preserves driver/load convention and configuration uncertainty. Fuel-consumption ranges remain scalar null.
+
+Worker/root fixtures: worker-step6-compacts.json, worker-step6-current-suv.json, worker-step6-electric.json, worker-step6-felicia-citigo.json, worker-step6-historic-mass.json, worker-step6-octavia-current.json, worker-step6-octavia-one.json, worker-step6-older-mainstream.json. Applied facts and source maps: analysis/codex/skoda-step6-evidence.json; omissions/conflicts: skoda-step6-review.json.
+
+- https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf
+- https://cdn.skoda-storyboard.com/2024/01/TD-Kamiq-en_e3841ce1.pdf
+- https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=
+- https://skoda.metrotehnica.ro/files/3117/1222/0129/TD-Superb-en_87b42ad4.pdf
+- https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf
+- https://cdn.skoda-storyboard.com/2024/11/TD-Kodiaq-en_83435dd3.pdf
+- https://cdn.skoda-storyboard.com/2016/08/TD-KODIAQ-en.pdf
+- https://cdn.skoda-storyboard.com/2021/03/TD-ENYAQ-iV-EN.pdf
+- https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-en_0308de7f.pdf
+- https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf
+- https://cdn.skoda-storyboard.com/2026/08/TD_Skoda_Epiq_en_69592937.pdf
+- https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf
+- https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf
+- https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php
+- https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf
+- https://www.allcarcentral.com/Skoda_pdf/Skoda_OctaviaTour_Catalogue_2009.pdf
+- https://manualzz.com/doc/5858171/skoda-superb--2007-05--manuale-del-proprietario
+- https://xr793.com/wp-content/uploads/2022/09/2004-Skoda-Superb-UK.pdf
+- https://www.auto.cz/test-skoda-fabia-combi-1-4-16v-55-kw-optimalni-volba-04-2001-163
+
+Five original Commons photographs visually inspected from temporary storage:1200 and1202 passed whole-car framing;1201,422 andL&K/Škoda110 rejected. Decisions and filenames: analysis/codex/skoda-step6-photo-review.json. Retained author/licence metadata unchanged; no image binaries stored in repository. 60 remaining references still require review.
+<!-- skoda-step6:end -->

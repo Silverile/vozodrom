@@ -159,6 +159,9 @@ export interface CatalogModelCardTrim {
   massKg: number | null;
   /** Source convention; no conversion between kerb, dry and driver-inclusive weights. */
   massBasis: string | null;
+  /** Retained published interval; massKg may identify its minimum only when labelled. */
+  massRangeKg?: { min: number; max: number } | null;
+  massReference?: "published-minimum" | "base-version" | null;
   topSpeedKmh: number | null;
   acceleration0to100s: number | null;
   consumptionL100: number | null;

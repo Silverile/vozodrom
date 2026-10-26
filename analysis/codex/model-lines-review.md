@@ -3876,3 +3876,48 @@ Photo references 69 → 68; reviewed 3, pending 65. Review confirms whole-car fr
 
 Detailed nulls for every version and worker-specific issues: skoda-step5-review.json. Some gaps remain sourceable; no claim that research is exhausted. Rebuild: node analysis/codex/build-step5-electric-evidence.mjs; node analysis/codex/build-skoda-cards.mjs; node analysis/codex/write-skoda-step5-review.mjs. Elapsed wall-clock minutes recorded in JSON: 5.3.
 <!-- skoda-step5:end -->
+
+<!-- skoda-step6:start -->
+## Škoda step 6 — published minimum mass and additional versions
+
+Current totals supersede earlier snapshots: 141 → 162 versions, 21 additions. Exact original-version identities retained. Full dimensions 91 → 115; same original versions after: 94.
+
+| Populated field | Before | Same original versions after | All versions after |
+| --- | ---: | ---: | ---: |
+| massKg | 55 | 86 | 107 |
+| acceleration0to100s | 72 | 72 | 93 |
+| consumptionL100 | 46 | 46 | 58 |
+| consumptionKwh100 | 11 | 11 | 11 |
+| rangeKm | 12 | 12 | 12 |
+| dimensionsMm.length | 96 | 99 | 120 |
+| dimensionsMm.width | 99 | 99 | 120 |
+| dimensionsMm.height | 98 | 98 | 119 |
+| dimensionsMm.wheelbase | 96 | 96 | 117 |
+
+### Changed mass policy
+
+Bridge instruction #27 explicitly authorizes the lightest stated mass configuration. 39 records now use **massReference: published-minimum**, with the complete manufacturer interval retained in **massRangeKg {min,max}**. Every such massKg equals the lower published endpoint. massBasis preserves whether the driver is included. **A published minimum does not prove the trim, wheels or optional equipment at that minimum.** Unidentified configurations remain explicitly unidentified; they are not invented as a named base trim. UI should label these values as minimums and offer the range/basis alongside them. Earlier review sections saying no range endpoint was used describe the former policy. Consumption intervals were not converted to scalar minimums. Distinct-source conflicts (e.g. 450 mass900/930) were not recast as configuration ranges.
+
+Six research tasks in two waves of three, plus root electric/current-Octavia work, completed. New representative versions include Superb I, Fabia I Combi, Octavia I Tour liftback/Combi, Kodiaq I, Scala/Kamiq DSG, Felicia MPI/Combi and Citigo MT/ASG. Current Octavia IV gains three further powertrain combinations. Coverage remains partial. New source/date/body/gearbox scopes are in every record. 2008 Octavia Tour values are not assigned to 1996 launch cars. BMM Felicia mass was not copied from the late MPI manual. Felicia1.9D torque is now null because the new manufacturer manual gives124Nm versus previous125Nm.
+
+### Photographs
+
+- 1200: passed — Celý sedan je v záběru, včetně nárazníků, střechy a kol; okolní vozy jej významně nezakrývají. Přesný rok a výbava nejsou potvrzeny.
+- 1201: rejected — Pravý přední konec nárazníku dosahuje okraje snímku, chybí požadovaný okraj kolem celého vozidla. Fotografie STW odstraněna; nutný širší celkový záběr.
+- 1202: passed — Celé kombi STW, nárazníky, střecha a kola jsou viditelné s okrajem, bez významného zakrytí. Konkrétní motorová série není obrazem potvrzena.
+- 422: rejected — Přední kolo dosahuje dolního okraje a tabule zakrývá část předního blatníku/nárazníku. Fotografie nevyhovuje požadavku celého nezakrytého vozu s okrajem.
+- 110-1925: rejected — Špička levého předního blatníku se dotýká levého okraje a přední kolo dolního okraje; chybí okraj kolem vozu. Fotografie odstraněna; přesná výbava není potvrzena.
+
+References 68 → 65; total reviewed 5, pending 60. These checks cover whole-car framing and broad model correspondence, not exact trim/year/originality. Rejected photos are null and not replaced with unsuitable crops. Original files were viewed from OS temporary storage only. Server429 responses were respected; no bypass or process termination.
+
+### Help wanted
+
+- Named minimum-weight configurations: actual wheel/equipment definitions or CoC examples matching published minima for current models; minimum endpoint alone does not identify those configurations.
+- Felicia BMM40 pre-facelift: original weight page. Later MPI manufacturer manual cannot establish its mass. Felicia1.9D: engine/year-specific124/125Nm reconciliation.
+- 105S1985,120GLS1985,1100MBX: trustworthy exact-scope mass references. 120GLS database1290kg kerb was rejected as inconsistent, not averaged.
+- Fabia I RS: readable original brochure confirming its own minimum kerb mass and driver convention; whole-hatchback1090–1315kg range cannot be assigned as a vRS-specific minimum.
+- Full-car licensed replacements for1201STW,422 andL&K/Škoda110; previous1203 replacement and4R remain unresolved.
+- Remaining engines, gearboxes and bodies: particularly Octavia I81/96kWdiesels and historic variants. All nulls and withheld candidates are listed in skoda-step6-review.json.
+
+Remaining gaps still appear partly sourceable; research is not exhausted. Rebuild root fixtures with build-step6-electric-evidence.mjs and build-step6-octavia-evidence.mjs, then build-skoda-cards.mjs and write-skoda-step6-review.mjs. Elapsed 5.3 wall-clock minutes.
+<!-- skoda-step6:end -->

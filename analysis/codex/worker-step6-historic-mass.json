@@ -1,0 +1,102 @@
+{
+  "retrievedOn": "2026-10-26",
+  "patches": [
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "trimName": "125 L",
+      "modelYear": 1989,
+      "fields": {
+        "massKg": 875,
+        "massBasis": "period kerb weight as reported by owner of1989vehicle; driver convention not stated"
+      },
+      "sources": [
+        "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
+      ],
+      "noteCs": "Pohotovostní hmotnost 875 kg podle přímého popisu autora, který vůz 125 L zakoupil nový v roce 1989 a provozoval jej do roku 1995. Zdroj neupřesňuje započtení řidiče; dnešní evropská metodika se nedoplňuje. Údaj odpovídá již vymezenému vzorovému roku 1989, nikoli hmotnosti každé možné výbavy. Nejde o vážení konkrétního kusu ani dolní mez intervalu.",
+      "fieldSources": {
+        "massKg": [
+          "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
+        ],
+        "massBasis": [
+          "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
+        ]
+      }
+    }
+  ],
+  "candidatesNotApplied": [
+    {
+      "lineSlug": "105-120-125",
+      "generationIndex": 0,
+      "trimName": "105 S",
+      "modelYear": 1985,
+      "fields": {
+        "massKg": 855,
+        "massBasis": "vehicle mass, convention unspecified"
+      },
+      "sources": [
+        "https://auta5p.eu/zkusenosti/skoda_105/s105_01.php"
+      ],
+      "reason": "Search index explicitly identifies1985facelift105S and855kg, but full page failed Unicode decoding. Do not claim page-level verification. Older club figures855kg are pre-August1983, so not an independent exact-year crosscheck. Candidate retained for next turn/manual verification."
+    },
+    {
+      "lineSlug": "1000-1100-mb",
+      "generationIndex": 0,
+      "trimName": "1100 MBX De Luxe",
+      "fields": {
+        "massKg": 815,
+        "massBasis": "kerb per press test; precise load/driver convention unspecified"
+      },
+      "sources": [
+        "https://www.idnes.cz/auto/zpravodajstvi/skoda-1100-mbx-7-castles-trial-veteran-jizda-60-vyroci-narozeniny-kvasiny.A260515_121534_automoto_lobl",
+        "https://auta5p.eu/muzea/muzeum_skoda_2001/mb_25.php",
+        "https://hvg.hu/cegauto/20180504_kezimunka_gyonyoru_skoda_kupe_1100_mbx_oldtimer_balaton_csehszlovak_auto"
+      ],
+      "reason": "Search extracts agree815kg for1100MBX: museum observation and direct press encounter. OEM2016release815kg explicitly describes1000MBX only, so it cannot validate1100mass. DirectHVGpage unavailable; retain candidate rather than automatically merge potentially recycled1000data."
+    },
+    {
+      "lineSlug": "1101-1102",
+      "generationIndex": 0,
+      "trimName": "1101 Tudor",
+      "fields": {
+        "massKg": 940,
+        "massBasis": "kerb, basic version per historical monograph; driver convention unstated"
+      },
+      "sources": [
+        "https://dwn.alza.cz/ebook/nahled/pdf/EK50298"
+      ],
+      "reason": "JanTuček, Auta v Československu1945–1990, Grada2024, printpage16 explicitly gives940kg for basic1101 and matching4050/1500/1520dimensions, not approximately. This is a modern historical monograph rather than primary homologation; OEMapproximate940must remain approximate. Parent may review this stronger exact wording but automatic patch withheld."
+    }
+  ],
+  "needsReview": [
+    {
+      "lineSlug": "105-120-125",
+      "trimName": "120 GLS",
+      "fields": [
+        "massKg"
+      ],
+      "reason": "No verified1985-specific mass in time. Auto-Data lists1290kg kerb and1690kg gross, contradicting period-family855–915kg kerb; clearly unsuitable to fill this gap. Do not recast inconsistent sources as a range."
+    },
+    {
+      "lineSlug": "fabia",
+      "generationIndex": 0,
+      "trimName": "RS 1.9 TDI-PD 96 kW",
+      "fields": [
+        "massKg"
+      ],
+      "sources": [
+        "https://autocatalogarchive.com/wp-content/uploads/2024/08/Skoda-Fabia-2004-UK.pdf",
+        "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+      ],
+      "reason": "2004UKbrochure index has vRS-specific1315kg but direct fetch403, driver footnote not inspected. Open2006UKbrochure only publishes hatchback-wide1090–1315kg, so1315is upper endpoint of whole engine range, not a vRSminimum verified there. No patch."
+    }
+  ],
+  "verification": {
+    "openedSources": [
+      "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php",
+      "https://dwn.alza.cz/ebook/nahled/pdf/EK50298",
+      "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+    ],
+    "excludedSource": "https://www.auto-data.net/cz/skoda-105-120-744-1.2-120-gls-58hp-14122"
+  }
+}
