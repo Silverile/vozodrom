@@ -5,6 +5,7 @@ import { Bar } from "@/components/Bar";
 import { CarImage } from "@/components/CarImage";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
+import { RealStats } from "@/components/RealStats";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
 import { listingsOf } from "@/lib/listings";
@@ -22,6 +23,7 @@ import {
   thumb,
   yearsSpan,
 } from "@/lib/modelCards";
+import { type StatsEntry, lineStats } from "@/lib/stats";
 import type { Body } from "@/lib/types";
 
 // One page per model line. Every curated line has one; demo models add owner ratings, STK data,
@@ -155,7 +157,7 @@ function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneratio
   );
 }
 
-function GenerationDetail({ gen, title, id }: { gen: CardGeneration; title: string; id: string }) {
+function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry }) {
   const facts: [string, string | null][] = [
     ["Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
     ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => f.year).join(", ") : null],
@@ -180,6 +182,15 @@ function GenerationDetail({ gen, title, id }: { gen: CardGeneration; title: stri
         <h3 className="font-bold text-lg">{title}</h3>
         <span className="text-sm text-[var(--color-muted)]">{yearsSpan(gen.from, gen.to, gen.current)}</span>
       </div>
+      {stats && (stats.fleet || stats.stk) && (
+        <ul className="mt-2 flex flex-wrap gap-1.5 text-xs">
+          {stats.fleet && <li className="chip">V Česku jezdí {formatNumber(stats.fleet.n)}</li>}
+          {stats.stk && <li className="chip">Neprošlo STK {formatPercent(stats.stk.failRate)}</li>}
+          {stats.stk?.km.find(([age]) => age === 10) && (
+            <li className="chip">Nájezd v 10 letech ~{formatKm(stats.stk.km.find(([age]) => age === 10)![2])}</li>
+          )}
+        </ul>
+      )}
       <div className={`mt-4 grid gap-5 ${gen.photo ? "md:grid-cols-[minmax(0,22rem)_1fr]" : ""}`}>
         <Photo gen={gen} alt={title} />
         <div className="min-w-0">
@@ -271,6 +282,7 @@ export default async function ModelPage({ params }: { params: Params }) {
   const powers = powerRange(gens);
   const offers = model ? listingsOf(brandSlug, modelSlug) : [];
   const demo = getBrand(brandSlug) && model ? model : undefined;
+  const real = lineStats(brandSlug, modelSlug);
 
   const prices = offers.map((l) => l.price);
   const byYear = Object.entries(
@@ -324,7 +336,13 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
             {(gens.length || line?.generations.length) ? <Stat label="Generace" value={gens.length || line?.generations.length} /> : null}
             {powers && <Stat label="Výkon" value={powers} />}
-            {demo ? <Stat label="Neprošlo STK*" value={formatPercent(demo.stk.failRate)} /> : bodies.length > 1 ? <Stat label="Karoserie" value={bodies.length} /> : null}
+            {real?.entry.stk ? (
+              <Stat label="Neprošlo STK" value={formatPercent(real.entry.stk.failRate)} />
+            ) : demo ? (
+              <Stat label="Neprošlo STK*" value={formatPercent(demo.stk.failRate)} />
+            ) : bodies.length > 1 ? (
+              <Stat label="Karoserie" value={bodies.length} />
+            ) : null}
             <Stat
               label="Inzeráty"
               value={
@@ -367,11 +385,13 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
               const i = gens.length - 1 - r;
-              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
+              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} stats={real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
             })}
           </div>
         </>
       )}
+
+      {real && <RealStats entry={real.entry} meta={real.meta} title={title} />}
 
       {!card && line && line.generations.length === 0 && (
         <p className="card p-5 mt-8 text-sm text-[var(--color-muted)]">
@@ -413,7 +433,7 @@ export default async function ModelPage({ params }: { params: Params }) {
             </Section>
           )}
 
-          <Section
+          {!real?.entry.stk && (<Section
             title="Nejčastější závady při STK"
             note={`* Testovací data. V ostrém provozu: otevřená data Ministerstva dopravy o technických prohlídkách (${formatNumber(demo.stk.inspections)} prohlídek v ukázce).`}
           >
@@ -422,15 +442,15 @@ export default async function ModelPage({ params }: { params: Params }) {
                 <Bar key={d.label} label={d.label} value={d.share} max={Math.max(...demo.stk.defects.map((x) => x.share))} display={formatPercent(d.share)} />
               ))}
             </div>
-          </Section>
+          </Section>)}
 
-          <Section id="najezd" title="Typický nájezd podle stáří" note="* Medián stavu tachometru při STK, testovací data.">
+          {!real?.entry.stk && (<Section id="najezd" title="Typický nájezd podle stáří" note="* Medián stavu tachometru při STK, testovací data.">
             <div className="space-y-2.5">
               {demo.mileageByAge.map((m) => (
                 <Bar key={m.age} label={`${m.age} ${m.age === 1 ? "rok" : m.age < 5 ? "roky" : "let"}`} value={m.km} max={Math.max(...demo.mileageByAge.map((x) => x.km))} display={formatKm(m.km)} />
               ))}
             </div>
-          </Section>
+          </Section>)}
 
           {byYear.length > 0 && (
             <Section id="ceny" title="Ceny v inzerátech podle ročníku" note={`Rozpětí: ${formatPrice(Math.min(...prices))} – ${formatPrice(Math.max(...prices))}.`}>
@@ -442,10 +462,12 @@ export default async function ModelPage({ params }: { params: Params }) {
             </Section>
           )}
 
-          <Section title="V provozu v ČR*" note="* Testovací data. V ostrém provozu: Centrální registr vozidel.">
-            <div className="text-3xl font-extrabold">{formatNumber(demo.registered)}</div>
-            <p className="text-sm text-[var(--color-muted)] mt-1">registrovaných vozidel</p>
-          </Section>
+          {!real?.entry.fleet && (
+            <Section title="V provozu v ČR*" note="* Testovací data. V ostrém provozu: Centrální registr vozidel.">
+              <div className="text-3xl font-extrabold">{formatNumber(demo.registered)}</div>
+              <p className="text-sm text-[var(--color-muted)] mt-1">registrovaných vozidel</p>
+            </Section>
+          )}
         </div>
       )}
 
