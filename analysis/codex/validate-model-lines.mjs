@@ -40,5 +40,5 @@ for(let i=0;i<lines.length;i++){
 const demo=fs.readFileSync('src/lib/catalog.ts','utf8');const expected=[...demo.matchAll(/slug: "([^"]+)", brandSlug: "([^"]+)", name:/g)].map(m=>m[2]+'/'+m[1]);assert.equal(expected.length,25);for(const key of expected)assert(keys.has(key),'missing demo compatibility '+key);
 const expectedCount=Object.values(selection).reduce((n,s)=>n+s.split('\n').length,0)+additions.length;assert.equal(lines.length,expectedCount);
 console.log(`${lines.length} lines across ${order.length} makes validated; all 801 existing entries unchanged; all 25 demo slugs preserved (including volkswagen/id4).`);
-if(fs.existsSync('analysis/codex/model-cards-pilot-baseline.json'))console.log('Model-card pilot: all 883 original line objects unchanged; approved Peaq addition validated.');
+if(fs.existsSync('analysis/codex/model-cards-pilot-baseline.json'))console.log(`Model-card additions: all 883 original line objects unchanged; ${additions.length} explicitly recorded additions validated.`);
 console.log('UTF-8, ordering, scoped uniqueness, retrieved source URLs, dated facts, explicit unknowns, body enum, generation references and absence of fabricated statistics passed.');

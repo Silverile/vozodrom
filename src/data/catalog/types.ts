@@ -102,6 +102,8 @@ export interface CatalogModelCardEngine {
   variant: string | null;
 }
 export interface CatalogModelCardGeneration {
+  /** Selected technical/engine versions, not a complete equipment list. */
+  trims: CatalogModelCardTrim[] | null;
   code: string | null;
   name: string;
   from: number | null;
@@ -134,4 +136,24 @@ export interface CatalogModelCard {
   generations: CatalogModelCardGeneration[];
   sources: string[];
   needsReview: CatalogModelLineReview[];
+}
+
+export interface CatalogModelCardTrim {
+  name: string;
+  kind: "technical-version" | "engine-version";
+  from: number | null;
+  /** Unknown production bound, not an assertion that the version is current. */
+  to: number | null;
+  bodyType: CatalogBody | null;
+  engine: { fuel: CatalogFuel | null; displacementCc: number | null; cylinders: number | null; powerKw: number | null; torqueNm: number | null };
+  transmission: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed" | null; gears: number | null };
+  /** rr = rear engine/rear-wheel drive; rwd does not specify engine position. */
+  drive: "fwd" | "rwd" | "awd" | "rr" | null;
+  dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null };
+  massKg: number | null;
+  topSpeedKmh: number | null;
+  acceleration0to100s: number | null;
+  consumptionL100: number | null;
+  specificationScope: { market: string; modelYear: number | null; noteCs: string };
+  sources: string[];
 }

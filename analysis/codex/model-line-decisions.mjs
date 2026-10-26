@@ -84,7 +84,7 @@ export const badgeSpecificSources={
  'citroen/evasion':{box:'First generation'},'citroen/c8':{box:'Second generation',ranges:[0]}
 };
 export const manualExclusions={
- skoda:[['Octavia RS / Scout','trim or performance/body derivative; merged into Octavia'],['Octavia (1959)','pre-1990 historical line, distinct from modern Octavia'],['Vision concepts','concept vehicles']],
+ skoda:[['Octavia RS / Scout','trim or performance/body derivative; merged into Octavia'],['Vision concepts','concept vehicles']],
  volkswagen:[['Golf GTI / R / GTE / Alltrack','performance, drivetrain or equipment derivatives; merged into Golf'],['Tiguan Allspace','long-wheelbase derivative; merged into Tiguan'],['Lavida / Lamando / Sagitar / Phideon / ID.6','regional-market lines outside the selected Europe-focused inventory'],['Gol / Saveiro / Virtus / Tera','regional-market lines outside this pass'],['Tayron I','Chinese-market first generation; European range/date boundary remains in needsReview']],
  hyundai:[['i30 N / N Line','performance/equipment derivatives; merged into i30'],['Tucson ix35','European renamed generation; merged into Tucson'],['Creta / Alcazar / Venue / Mufasa / Custo','regional-market lines outside the reviewed European selection'],['Genesis sedan / Genesis Coupe','historical Hyundai/Genesis badge assignment deferred; not silently merged with the Genesis make']],
  kia:[['GT / GT-Line','performance/equipment derivatives'],['ProCeed','Ceed hatchback/shooting-brake derivative; merged into Ceed with alias'],['K3 / K5 / K7 / K8 / K9 / Telluride / Sonet / Seltos','regional model/badge ranges not admitted without European variant review']],

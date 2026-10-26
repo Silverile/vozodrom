@@ -35,10 +35,16 @@ When a source model label explicitly starts with another selected make, a confli
 
 Run node analysis/codex/resolve.mjs, then node analysis/codex/build-catalog.mjs, then node analysis/codex/validate-catalog.mjs from the repository root. All read the saved snapshot; network is not required.
 
+
+
+
+
+
+
 <!-- model-lines-curation:start -->
 ## Curated European model-line layer (40 makes)
 
-model-lines-auto.json is a separate manually selected layer containing 884 lines and 548 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet, Daewoo, Daihatsu, SsangYong/KGM, Land Rover, Jaguar, Porsche, Jeep, Alfa Romeo, Lancia, smart and MG. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
+model-lines-auto.json is a separate manually selected layer containing 926 lines and 548 generation entries for the ten demo makes plus Audi, Mercedes-Benz, Peugeot, Citroën, Opel, Fiat, SEAT, Cupra, MINI, Volvo, Saab, Honda, Mazda, Nissan, Mitsubishi, Subaru, Suzuki, Lexus, Chevrolet, Daewoo, Daihatsu, SsangYong/KGM, Land Rover, Jaguar, Porsche, Jeep, Alfa Romeo, Lancia, smart and MG. Its CatalogModelLine type is in types.ts. The 432-make identity dataset and raw model files remain unchanged.
 
 Additional factual sources are individual **English Wikipedia model articles**, retrieved through https://en.wikipedia.org/w/api.php with exact revision IDs. Each model and generation lists permanent oldid source URLs. Full source URLs, request titles/timestamps and selected factual fields are in [model-line-evidence.json](../../../analysis/codex/model-line-evidence.json); manual grouping and all unresolved fields are in [model-lines-review.md](../../../analysis/codex/model-lines-review.md). No marketplace data, article prose, images or entire tables were reproduced. Wikipedia facts were not all independently confirmed with manufacturers. The earlier CC0 designation refers to Wikidata structured identities; it is not a blanket licence assertion for Wikipedia pages.
 
@@ -78,6 +84,23 @@ Targeted manufacturer checks and factual corrections are recorded in [model-line
 - [Alfa Romeo / Stellantis: alfa-junior-name-2024](https://www.media.stellantis.com/uk-en/alfa-romeo/press/alfa-romeo-milano-name-is-not-okay-junior-then)
 - [Alfa Romeo: alfa-mito-end-series](https://www.alfaromeo.com/end-of-series/mito)
 - [Skoda Auto: skoda-peaq-production-2026](https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-the-new-peaq-in-mlada-boleslav/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-auto.com/world/timeline)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/125-let-skoda-auto-pribehy-mene-znamych-modelu-skoda-felicia-fun/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-releases/90th-anniversary-of-the-skoda-product-family-with-steel-backbone/)
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf)
+- [Škoda Auto / official importer: undefined](https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/the-all-skoda-superb-press-kit-2/powertrains-debut-of-mild-hybrid-plug-in-hybrid-with-up-to-120-kilometres-of-electric-range/)
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2024/04/05_Tiskova_mapa_Skoda_Kodiaq_Media_launch_Pohonne_jednotky_675cec68.pdf)
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/skoda-octavia-media-launch-press-kit/powertrains-four-petrol-and-two-diesel-engines-as-well-as-two-mild-hybrid-options/)
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/09-skoda-4r-limousina/)
+- [Škoda Auto / official importer: undefined](https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta)
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2016/05/skoda-auto-annual-report-2011.pdf)
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf)
+- [Škoda Auto / official importer: undefined](https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf)
 
 In particular, the manufacturer’s 2012–2020 Octavia III interval supersedes the retrieved Wikipedia end year; Epiq’s Czech-market presence was checked in an October 2026 Škoda announcement. Manufacturer source URLs supplement the permanent Wikipedia revisions; not every field has manufacturer corroboration.
 
@@ -103,3 +126,35 @@ Manufacturer specification/facelift URLs used by the cards:
 
 Photo metadata endpoint: https://commons.wikimedia.org/w/api.php. Reuse guidance: https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia.
 <!-- skoda-cards:end -->
+
+<!-- skoda-range-step2:start -->
+## Škoda range and selected technical versions — step 2
+
+Retrieved 2026-10-26. The original 17-card pilot is extended to 59 cards, 70 generation/family records and 90 selected technical/engine versions. This supersedes the pilot's historical/regional omissions, without claiming an exhaustive inventory. New line objects are isolated in model-line-additions.json; original 883 line objects are unchanged.
+
+Factual Wikipedia infobox snapshots (English/Czech), revision IDs and API requests: analysis/codex/skoda-card-evidence.json. Commons metadata/requests: analysis/codex/skoda-card-photo-evidence.json. Only facts and reference metadata retained, no prose or image binaries. Selected manufacturer/version facts: analysis/codex/skoda-trim-facts.mjs; source chronology overrides: analysis/codex/model-line-primary-facts.json. Nulls, rejected combinations, scope conflicts and missing work: analysis/codex/skoda-range-review.json and model-lines-review.md.
+
+Wikidata identity data remain CC0. Wikipedia prose/tables have not been copied; Czech summaries are independently written. Photo licences are file-specific and must be honoured when an image is displayed; keep the credit and file-page link. All photo visual reviews remain pending.
+
+Additional manufacturer/reference URLs checked for selected facts:
+
+- https://www.skoda-auto.com/world/timeline
+- https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/
+- https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/
+- https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/125-let-skoda-auto-pribehy-mene-znamych-modelu-skoda-felicia-fun/
+- https://www.skoda-storyboard.com/en/press-releases/90th-anniversary-of-the-skoda-product-family-with-steel-backbone/
+- https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf
+- https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=
+- https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/
+- https://www.skoda-storyboard.com/en/press-kits/the-all-skoda-superb-press-kit-2/powertrains-debut-of-mild-hybrid-plug-in-hybrid-with-up-to-120-kilometres-of-electric-range/
+- https://cdn.skoda-storyboard.com/2024/04/05_Tiskova_mapa_Skoda_Kodiaq_Media_launch_Pohonne_jednotky_675cec68.pdf
+- https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf
+- https://www.skoda-storyboard.com/en/press-kits/skoda-octavia-media-launch-press-kit/powertrains-four-petrol-and-two-diesel-engines-as-well-as-two-mild-hybrid-options/
+- https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf
+- https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta
+- https://www.skoda-storyboard.com/en/09-skoda-4r-limousina/
+- https://cdn.skoda-storyboard.com/2016/05/skoda-auto-annual-report-2011.pdf
+- https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf
+
+The official importer Fabia PDF returned different revision values than its indexed search excerpt (height 1464 mm versus 1459 mm); structured records use the opened PDF and identify the scope. Manufacturer conflicts for 422/860/VOS/Felicia Fun and related-model contamination in the Indian Rapid source are explicitly retained for review. The list-of-vehicles page was used only as a coverage checklist: https://en.wikipedia.org/wiki/List_of_%C5%A0koda_vehicles . No new Drom pages or photos were used in this step.
+<!-- skoda-range-step2:end -->

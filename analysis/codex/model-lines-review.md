@@ -1,12 +1,12 @@
 # Curated car model lines — 40 makes
 
-Delivered **884 manually selected model-line entries across 40 makes**, with **548 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **MG**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
+Delivered **926 manually selected model-line entries across 40 makes**, with **548 sourced generation entries**. The ten demo makes were handled first, followed by the remaining queue order through **MG**. All **25 exact demo slugs** are preserved, including **volkswagen/id4**, not id-4. No routes or application code were changed.
 
-**This is not complete factual enrichment of all 40 makes.** 227 lines retain unresolved production intervals, 49 have bodyTypes=null, 697 have generations=null, and 73 have no unique line-level Wikidata match. There are 2544 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. All 40 makes in the agreed selection queue are now represented. Metadata reconciliation remains incomplete. Batch 1 added Saab, Honda, Mazda, Nissan and Mitsubishi. Batch 2 added Subaru, Suzuki, Lexus, Chevrolet and Daewoo. Batch 3 added Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. Batch 4 adds Jeep, Alfa Romeo, Lancia, smart and MG; all 801 prior entries are preserved exactly against SHA-256 baselines.
+**This is not complete factual enrichment of all 40 makes.** 232 lines retain unresolved production intervals, 60 have bodyTypes=null, 739 have generations=null, and 81 have no unique line-level Wikidata match. There are 2662 explicit needsReview items, including indexed generation fields; all are listed below. Missing generations mean unreviewed/incomplete, not that the car has no generations. All 40 makes in the agreed selection queue are now represented. Metadata reconciliation remains incomplete. Batch 1 added Saab, Honda, Mazda, Nissan and Mitsubishi. Batch 2 added Subaru, Suzuki, Lexus, Chevrolet and Daewoo. Batch 3 added Daihatsu, SsangYong/KGM, Land Rover, Jaguar and Porsche. Batch 4 adds Jeep, Alfa Romeo, Lancia, smart and MG; all 801 prior entries are preserved exactly against SHA-256 baselines.
 
 | Make | Slug | Lines | Known start | Known body set | Generation entries | Lines needing review |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Škoda | skoda | 17 | 17 | 17 | 16 | 13 |
+| Škoda | skoda | 59 | 54 | 48 | 16 | 55 |
 | Volkswagen | volkswagen | 31 | 26 | 27 | 23 | 29 |
 | Hyundai | hyundai | 28 | 26 | 27 | 18 | 27 |
 | Kia | kia | 27 | 22 | 27 | 17 | 26 |
@@ -95,6 +95,23 @@ Trims, powertrain labels, facelifts and body/length derivatives are merged into 
 - [Alfa Romeo / Stellantis: alfa-junior-name-2024](https://www.media.stellantis.com/uk-en/alfa-romeo/press/alfa-romeo-milano-name-is-not-okay-junior-then) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [Alfa Romeo: alfa-mito-end-series](https://www.alfaromeo.com/end-of-series/mito) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 - [Skoda Auto: skoda-peaq-production-2026](https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-the-new-peaq-in-mlada-boleslav/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-auto.com/world/timeline) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/cs/historicke-vozy-cs/skoda-garde-pred-40-lety-zamirila-do-bratislavy/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-releases/skoda-110-r-1970-1980-elegant-coupe-and-basis-for-many-sporting-successes/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/125-let-skoda-auto-pribehy-mene-znamych-modelu-skoda-felicia-fun/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-releases/90th-anniversary-of-the-skoda-product-family-with-steel-backbone/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/the-all-skoda-superb-press-kit-2/powertrains-debut-of-mild-hybrid-plug-in-hybrid-with-up-to-120-kilometres-of-electric-range/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2024/04/05_Tiskova_mapa_Skoda_Kodiaq_Media_launch_Pohonne_jednotky_675cec68.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/press-kits/skoda-octavia-media-launch-press-kit/powertrains-four-petrol-and-two-diesel-engines-as-well-as-two-mild-hybrid-options/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda-storyboard.com/en/09-skoda-4r-limousina/) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2016/05/skoda-auto-annual-report-2011.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
+- [Škoda Auto / official importer: undefined](https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf) — factual chronology/current-market checks recorded in model-line-primary-facts.json.
 
 Octavia III uses **2012–2020** from Škoda’s 2026 history instead of the retrieved Wikipedia field ending in 2019. BMW’s manufacturing history corroborates production starts earlier than familiar launch years (for example E46 in 1997 versus its 1998 market introduction). Its global sixth-generation range is not substituted for an unresolved European body/market end date. Epiq is included after checking Škoda’s October 2026 Czech-market announcement. These targeted checks do not independently certify all remaining Wikipedia facts.
 
@@ -167,35 +184,152 @@ All outstanding needsReview fields remain listed per make below. Global factory 
 
 The agreed 40-make selection queue is complete. There is no next make in this queue. Metadata reconciliation for the delivered 40, especially shared vans, Citroën/DS phases, reused BMW i3/iX3/Volvo names and region-specific generation boundaries, remains explicitly outstanding. Late-2026 programmes without checked production evidence were not silently added. Batch 3 brand rename facts and source conflict are recorded in model-line-brand-notes.json.
 
-## Škoda (skoda) — 17 lines
+## Škoda (skoda) — 59 lines
 
-Citigo, Elroq, Enyaq, Epiq, Fabia, Favorit, Felicia, Kamiq, Karoq, Kodiaq, Octavia, Peaq, Rapid, Roomster, Scala, Superb, Yeti.
+100 / 110, 1000 / 1100 MB, 105 / 120 / 125, 110 (1925), 110 R, 1101 / 1102 Tudor, 1200, 1201, 1202, 1203, 130 / 135 / 136, 420 Standard, 422, 430, 440 / 445 / 450, 4R, 633, 637, 645, 650, 860, Citigo, Elroq, Enyaq, Enyaq Coupé, Epiq, Fabia, Favorit, Favorit (1936), Felicia, Felicia (1959), Felicia Fun, Forman, Garde, Hispano-Suiza, Kamiq, Kamiq (Čína), Karoq, Kodiaq, Kodiaq GT, Kushaq, Kylaq, Octavia, Octavia (1959), Peaq, Pick-up, Popular, Praktik, Rapid, Rapid (1935), Rapid (1984), Rapid (Indie), Roomster, Scala, Slavia, Superb, Superb (1934), VOS, Yeti.
 
 ### Excluded, merged or deferred
 
 - **Octavia RS / Scout** — merged: trim or performance/body derivative; merged into Octavia.
-- **Octavia (1959)** — excluded: pre-1990 historical line, distinct from modern Octavia.
 - **Vision concepts** — excluded: concept vehicles.
 
 ### Every outstanding needsReview item
 
 | Line | Field | Reason |
 | --- | --- | --- |
+| 100 / 110 (100-110) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 100 / 110 (100-110) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1000 / 1100 MB (1000-1100-mb) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1000 / 1100 MB (1000-1100-mb) | generations | Unknown or shared family value; needs a model-specific source. |
+| 105 / 120 / 125 (105-120-125) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 105 / 120 / 125 (105-120-125) | generations | Unknown or shared family value; needs a model-specific source. |
+| 110 (1925) (110-1925) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 110 (1925) (110-1925) | generations | Unknown or shared family value; needs a model-specific source. |
+| 110 (1925) (110-1925) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| 110 R (110-r) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 110 R (110-r) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1101 / 1102 Tudor (1101-1102) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1101 / 1102 Tudor (1101-1102) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1200 (1200) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1200 (1200) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1201 (1201) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1201 (1201) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1202 (1202) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1202 (1202) | generations | Unknown or shared family value; needs a model-specific source. |
+| 1203 (1203) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 1203 (1203) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 1203 (1203) | generations | Unknown or shared family value; needs a model-specific source. |
+| 130 / 135 / 136 (130-135-136) | from | Unknown or shared family value; needs a model-specific source. |
+| 130 / 135 / 136 (130-135-136) | to | Unknown or shared family value; needs a model-specific source. |
+| 130 / 135 / 136 (130-135-136) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 130 / 135 / 136 (130-135-136) | generations | Unknown or shared family value; needs a model-specific source. |
+| 130 / 135 / 136 (130-135-136) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| 420 Standard (420-standard) | to | Unknown or shared family value; needs a model-specific source. |
+| 420 Standard (420-standard) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 420 Standard (420-standard) | generations | Unknown or shared family value; needs a model-specific source. |
+| 420 Standard (420-standard) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| 422 (422) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 422 (422) | from | Unknown or shared family value; needs a model-specific source. |
+| 422 (422) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 422 (422) | generations | Unknown or shared family value; needs a model-specific source. |
+| 430 (430) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 430 (430) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 430 (430) | generations | Unknown or shared family value; needs a model-specific source. |
+| 440 / 445 / 450 (440-445-450) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 440 / 445 / 450 (440-445-450) | generations | Unknown or shared family value; needs a model-specific source. |
+| 4R (4r) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 4R (4r) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 4R (4r) | generations | Unknown or shared family value; needs a model-specific source. |
+| 4R (4r) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| 633 (633) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 633 (633) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 633 (633) | generations | Unknown or shared family value; needs a model-specific source. |
+| 637 (637) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 637 (637) | generations | Unknown or shared family value; needs a model-specific source. |
+| 645 (645) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 645 (645) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 645 (645) | generations | Unknown or shared family value; needs a model-specific source. |
+| 650 (650) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 650 (650) | generations | Unknown or shared family value; needs a model-specific source. |
+| 860 (860) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| 860 (860) | to | Unknown or shared family value; needs a model-specific source. |
+| 860 (860) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| 860 (860) | generations | Unknown or shared family value; needs a model-specific source. |
 | Citigo (citigo) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Elroq (elroq) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Enyaq (enyaq) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Enyaq Coupé (enyaq-coupe) | to | Unknown or shared family value; needs a model-specific source. |
+| Enyaq Coupé (enyaq-coupe) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Enyaq Coupé (enyaq-coupe) | generations | Unknown or shared family value; needs a model-specific source. |
+| Enyaq Coupé (enyaq-coupe) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
 | Epiq (epiq) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Favorit (favorit) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Favorit (1936) (favorit-1936) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| Favorit (1936) (favorit-1936) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Favorit (1936) (favorit-1936) | generations | Unknown or shared family value; needs a model-specific source. |
 | Felicia (felicia) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Felicia (1959) (felicia-1959) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Felicia (1959) (felicia-1959) | generations | Unknown or shared family value; needs a model-specific source. |
+| Felicia Fun (felicia-fun) | from | Unknown or shared family value; needs a model-specific source. |
+| Felicia Fun (felicia-fun) | to | Unknown or shared family value; needs a model-specific source. |
+| Felicia Fun (felicia-fun) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Felicia Fun (felicia-fun) | generations | Unknown or shared family value; needs a model-specific source. |
+| Felicia Fun (felicia-fun) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| Forman (forman) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Forman (forman) | generations | Unknown or shared family value; needs a model-specific source. |
+| Forman (forman) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| Garde (garde) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Garde (garde) | generations | Unknown or shared family value; needs a model-specific source. |
+| Hispano-Suiza (hispano-suiza) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Hispano-Suiza (hispano-suiza) | generations | Unknown or shared family value; needs a model-specific source. |
 | Kamiq (kamiq) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Kamiq (Čína) (kamiq-china) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Kamiq (Čína) (kamiq-china) | generations | Unknown or shared family value; needs a model-specific source. |
 | Kodiaq (kodiaq) | generations[0].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
 | Kodiaq (kodiaq) | generations[0].bodyTypes | No explicit generation-specific body mapping. |
 | Kodiaq (kodiaq) | generations[1].code | Source does not establish one unambiguous European code; ordinal/name and regional codes are not guessed. |
+| Kodiaq GT (kodiaq-gt) | from | Unknown or shared family value; needs a model-specific source. |
+| Kodiaq GT (kodiaq-gt) | to | Unknown or shared family value; needs a model-specific source. |
+| Kodiaq GT (kodiaq-gt) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Kodiaq GT (kodiaq-gt) | generations | Unknown or shared family value; needs a model-specific source. |
+| Kodiaq GT (kodiaq-gt) | wikidataQid | Unknown or shared family value; needs a model-specific source. |
+| Kushaq (kushaq) | to | Unknown or shared family value; needs a model-specific source. |
+| Kushaq (kushaq) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Kushaq (kushaq) | generations | Unknown or shared family value; needs a model-specific source. |
+| Kylaq (kylaq) | to | Unknown or shared family value; needs a model-specific source. |
+| Kylaq (kylaq) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Kylaq (kylaq) | generations | Unknown or shared family value; needs a model-specific source. |
+| Octavia (1959) (octavia-1959) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Octavia (1959) (octavia-1959) | generations | Unknown or shared family value; needs a model-specific source. |
 | Peaq (peaq) | generations[0].code | Manufacturer confirms series production in August 2026; no generation/type code established. |
 | Peaq (peaq) | scope | Pilot addition; August production and June market launch are distinct. |
+| Peaq (peaq) | to | Unknown or shared family value; needs a model-specific source. |
+| Pick-up (pickup) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Pick-up (pickup) | generations | Unknown or shared family value; needs a model-specific source. |
+| Popular (popular) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| Popular (popular) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Popular (popular) | generations | Unknown or shared family value; needs a model-specific source. |
+| Praktik (praktik) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| Praktik (praktik) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Praktik (praktik) | generations | Unknown or shared family value; needs a model-specific source. |
 | Rapid (rapid) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Rapid (1935) (rapid-1935) | bodyTypes | Unknown or shared family value; needs a model-specific source. |
+| Rapid (1935) (rapid-1935) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Rapid (1935) (rapid-1935) | generations | Unknown or shared family value; needs a model-specific source. |
+| Rapid (1984) (rapid-1984) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Rapid (1984) (rapid-1984) | generations | Unknown or shared family value; needs a model-specific source. |
+| Rapid (Indie) (rapid-india) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Rapid (Indie) (rapid-india) | generations | Unknown or shared family value; needs a model-specific source. |
 | Roomster (roomster) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 | Scala (scala) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
+| Slavia (slavia) | to | Unknown or shared family value; needs a model-specific source. |
+| Slavia (slavia) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Slavia (slavia) | generations | Unknown or shared family value; needs a model-specific source. |
+| Superb (1934) (superb-1934) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| Superb (1934) (superb-1934) | generations | Unknown or shared family value; needs a model-specific source. |
+| VOS (vos) | from | Unknown or shared family value; needs a model-specific source. |
+| VOS (vos) | productionPeriods | Unknown or shared family value; needs a model-specific source. |
+| VOS (vos) | generations | Unknown or shared family value; needs a model-specific source. |
 | Yeti (yeti) | generations | Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations. |
 
 Coverage: this is an editorial European-market selection, not a certified complete historical manufacturer's inventory. All variants and late-2026 additions have not been independently reconciled. Shared source articles do not establish every badge's dates or generation codes.
@@ -3483,3 +3617,104 @@ The card format adds productionStatus, specificationScope, engineCoverage, nomin
 No image binaries were downloaded. Commons filename, file page, author and licence metadata were checked, but visual angle/trim/facelift matching remains pending (no browser available for visual review). The scope-review JSON lists the remaining historic and non-European models, body derivatives and technical gaps. This pilot covers the 16 existing modern lines plus Peaq; it is not a complete historic Skoda inventory.
 
 Offline reproduction: node analysis/codex/build-skoda-cards.mjs. Validation: node analysis/codex/validate-model-cards.mjs.
+
+<!-- skoda-range-step2:start -->
+## Škoda step 2 — 26 October 2026
+
+This section supersedes the earlier pilot's historic/regional deferral and grouping notes for Škoda. Delivered **59 cards / 70 generation-or-family records / 68 Commons references / 90 selected version records**. Added **42 lines** beyond the 17-card pilot; the full catalogue now has 926 lines across the same 40 makes. All original 883 line objects remain protected by the existing hash baseline.
+
+**Coverage is expanded, not certified exhaustive since 1925.** Named historic families, regional India/China products, separately requested Forman, Pick-up, Praktik, Enyaq Coupé and Felicia Fun have cards. Multi-type families (440/445/450, 1000/1100 MB, 105/120/125 and the pre-war Popular/Superb families) still need type-by-type/generation reconciliation. Early L&K-to-Škoda transitions such as 120/125/350/360/545 and the claimed 6R remain an explicit inventory audit queue; 6R was not added without an established source. Racing-only, prototype and concept vehicles (including 935 Dynamic and Sagitta) are excluded; heavy trucks are outside this passenger/LCV pass. No new Drom pages or images were fetched this turn.
+
+### Reading trims correctly
+
+`trims` contains **41 technical versions** and **49 engine-only records**; it is not a complete equipment-level or engine/gearbox cross-product. The extra `kind`, `sources` and `specificationScope` fields prevent displaying an unknown equipment level as a verified trim. Exact cc are never derived from rounded litre labels. Null dates on trim records mean unknown, not still produced. Rear-engine/rear-wheel drive is `rr`; generic rear-wheel drive is `rwd`.
+
+All requested current families have selected version records, but current-market completeness is unverified: Fabia IV, Scala, Kamiq, Octavia IV, Superb IV, Karoq (dated 2022 evidence), Kodiaq II, Elroq, Enyaq and Epiq. Historic engine-only records deliberately retain null technical values rather than borrowing unrelated family variants. Neither WLTP consumption nor EU/DIN mass ranges are collapsed to fabricated scalar values. Electric consumption remains null in l/100 km; a future kWh/100 km field is needed. No listing counts, prices, ratings or reliability statistics are invented.
+
+**No trim records yet:** 130-135-136, 420-standard, 650, citigo, enyaq-coupe, hispano-suiza, kodiaq-gt, peaq, popular, rapid, roomster, yeti. Other lines also have incomplete trim and facelift coverage. Full null-by-field review is embedded in each card's `needsReview`; line-list nulls remain listed in the global tables above.
+
+### Material conflicts and scopes
+
+- **1200**: Displacement conflict: Wikipedia 1213 cc versus official importer magazine 1221 cc; exact trim capacity is withheld.
+- **1203**: Date bounds cover original AZNP Vrchlabí production only, not all later TAZ/OMP manufacture; no TAZ badge photo substituted.
+- **130-135-136**: Shared Type 742 dates and 105 photo must not be assigned to this subset. Family-subset production dates require separate confirmation.
+- **422**: Wikipedia lists production from 1929; official importer timeline says 1930. Start remains null.
+- **860**: Wikipedia ends in 1932; official importer timeline says 1933. End remains null and does not imply current production.
+- **felicia-fun**: Manufacturer sources differ on start (1995, 1996, 1997); production interval remains unresolved. 7.3 l/100 km uses historic 93/116/EU, not WLTP.
+- **rapid-india**: Wikipedia infobox mixes a 2009 related-model start and implausible 5467 mm length. Start is corrected to 2011 using the manufacturer annual report; all dimensions withheld.
+- **vos**: Manufacturer describes 1950–1952, Wikipedia 1949–1952. Start remains null. Armoured-only dimensions are not assigned to the whole family.
+
+The Popular and pre-war Superb outer year bounds do not assert continuous wartime production. Forman/Pick-up/Praktik/Enyaq Coupé overlap earlier umbrella cards; UI must treat them as related derivatives, not add their statistics to parent totals.
+
+### Photographs
+
+All 68 references retain original file URL, file page, author, licence URL, credit and `visualReview: pending`. No image binary was downloaded. Metadata checks are not visual approval or proof of exact facelift/trim correspondence. Wrong search hits (rally car, tram, unrelated PDFs, TAZ badge and boot-only shot) were rejected.
+
+**Missing generation/family photos:** 1203 / 1203 – modelová rodina; 4r / 4R – modelová rodina. Optional photos by body style remain incomplete.
+
+| Line | Generation/family records | Version records | Missing photos | Review items |
+| --- | ---: | ---: | ---: | ---: |
+| 100-110 | 1 | 1 | 0 | 27 |
+| 1000-1100-mb | 1 | 2 | 0 | 51 |
+| 105-120-125 | 1 | 2 | 0 | 45 |
+| 110-1925 | 1 | 1 | 0 | 25 |
+| 110-r | 1 | 1 | 0 | 14 |
+| 1101-1102 | 1 | 1 | 0 | 30 |
+| 1200 | 1 | 1 | 0 | 31 |
+| 1201 | 1 | 1 | 0 | 24 |
+| 1202 | 1 | 1 | 0 | 34 |
+| 1203 | 1 | 1 | 1 | 23 |
+| 130-135-136 | 1 | 0 | 0 | 19 |
+| 420-standard | 1 | 0 | 0 | 16 |
+| 422 | 1 | 1 | 0 | 27 |
+| 430 | 1 | 1 | 0 | 28 |
+| 440-445-450 | 1 | 2 | 0 | 54 |
+| 4r | 1 | 1 | 1 | 27 |
+| 633 | 1 | 1 | 0 | 35 |
+| 637 | 1 | 1 | 0 | 32 |
+| 645 | 1 | 1 | 0 | 24 |
+| 650 | 1 | 0 | 0 | 16 |
+| 860 | 1 | 1 | 0 | 26 |
+| citigo | 1 | 0 | 0 | 16 |
+| elroq | 1 | 4 | 0 | 49 |
+| enyaq | 1 | 5 | 0 | 94 |
+| enyaq-coupe | 1 | 0 | 0 | 16 |
+| epiq | 1 | 3 | 0 | 62 |
+| fabia | 4 | 5 | 0 | 137 |
+| favorit | 1 | 1 | 0 | 26 |
+| favorit-1936 | 1 | 2 | 0 | 54 |
+| felicia | 1 | 3 | 0 | 66 |
+| felicia-1959 | 1 | 2 | 0 | 51 |
+| felicia-fun | 1 | 3 | 0 | 59 |
+| forman | 1 | 1 | 0 | 28 |
+| garde | 1 | 1 | 0 | 14 |
+| hispano-suiza | 1 | 0 | 0 | 12 |
+| kamiq | 1 | 3 | 0 | 55 |
+| kamiq-china | 1 | 2 | 0 | 47 |
+| karoq | 1 | 1 | 0 | 23 |
+| kodiaq | 2 | 1 | 0 | 63 |
+| kodiaq-gt | 1 | 0 | 0 | 17 |
+| kushaq | 1 | 2 | 0 | 48 |
+| kylaq | 1 | 1 | 0 | 30 |
+| octavia | 4 | 1 | 0 | 135 |
+| octavia-1959 | 1 | 2 | 0 | 48 |
+| peaq | 1 | 0 | 0 | 15 |
+| pickup | 2 | 4 | 0 | 83 |
+| popular | 1 | 0 | 0 | 17 |
+| praktik | 1 | 3 | 0 | 63 |
+| rapid | 1 | 0 | 0 | 34 |
+| rapid-1935 | 1 | 2 | 0 | 54 |
+| rapid-1984 | 1 | 2 | 0 | 46 |
+| rapid-india | 1 | 3 | 0 | 71 |
+| roomster | 1 | 0 | 0 | 36 |
+| scala | 1 | 3 | 0 | 60 |
+| slavia | 1 | 2 | 0 | 49 |
+| superb | 4 | 1 | 0 | 141 |
+| superb-1934 | 1 | 5 | 0 | 114 |
+| vos | 1 | 1 | 0 | 34 |
+| yeti | 1 | 0 | 0 | 31 |
+
+Rebuild offline: `node analysis/codex/record-skoda-range-primary.mjs`, then `node analysis/codex/build-skoda-cards.mjs`, `node analysis/codex/expand-skoda-cards.mjs`, `node analysis/codex/build-model-lines.mjs`, `node analysis/codex/write-model-lines-review.mjs`, `node analysis/codex/write-skoda-range-review.mjs`. Validate with both model-line and model-card validators. Snapshot retrieval scripts are optional and use public Wikimedia APIs; they never fetch Drom or image binaries.
+
+Started 19:55:51 UTC; artifacts generated 2026-10-26T20:11:18.710Z. Time to final validation is reported in the bridge handoff.
+<!-- skoda-range-step2:end -->
