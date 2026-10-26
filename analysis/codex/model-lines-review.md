@@ -3718,3 +3718,57 @@ Rebuild offline: `node analysis/codex/record-skoda-range-primary.mjs`, then `nod
 
 Started 19:55:51 UTC; artifacts generated 2026-10-26T20:11:18.710Z. Time to final validation is reported in the bridge handoff.
 <!-- skoda-range-step2:end -->
+
+<!-- skoda-specs-step3:start -->
+## Škoda step 3 — named versions and scoped specifications
+
+This section supersedes the step-2 specification counts. The **59 cards and 70 generation/family records are unchanged in identity**. Version records increased from **90 to 113**; generic engine-only records were replaced where a named version could be established. This is **partial enrichment**, not specifications for every version. Only **3** version records currently have all eight requested core fields populated; nulls remain for others.
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| cards | 59 | 59 |
+| generations | 70 | 70 |
+| versions | 90 | 113 |
+| namedVersions | 41 | 87 |
+| engineOnly | 49 | 26 |
+| photos | 68 | 69 |
+| versionsWithPower | 44 | 86 |
+| versionsWithMass | 4 | 15 |
+| versionsWithAcceleration | 8 | 27 |
+| versionsWithAllDimensions | 9 | 45 |
+| generationsWithTrunk | 1 | 6 |
+| versionsWithAllRequestedCoreFields | 0 | 3 |
+
+Changed lines: 100-110, 1000-1100-mb, 105-120-125, 110-r, 1101-1102, 1202, 1203, 130-135-136, 440-445-450, elroq, fabia, favorit, felicia, felicia-1959, forman, garde, octavia, octavia-1959, popular, superb-1934.
+
+The 100/110 card now names **100, 100 L, 110 L and 110 LS** with individual masses, ISO power/torque and shared sedan dimensions. **110 R remains on its separate existing card**, with its own coupe height and added wheelbase/acceleration references. Named 105 S/L, 120 L/GLS and 125 L use an explicitly scoped post-1983 dimensional sample. Sedans 130/135/136 are kept separate from Rapid and competition cars. 440/445/450 and 1202 STW/van/pick-up distinguish bodies and masses rather than sharing a generic weight.
+
+Favorit has 135 L, 136 L, 135 Le and 135 LSe; Forman has the manufacturer-described 135 GLX. Felicia records distinguish BMM versus MPI and the hatchback body. The original Octavia gains three launch-year 1996 engine versions and a scoped liftback overview. Fabia I gains Junior and RS references; RS's 1245–1315 kg range is not converted to a scalar mass. Later/current-generation trim records were not comprehensively enriched this turn.
+
+### Sources and interpretation
+
+New fixture: analysis/codex/skoda-specs-step3.mjs. Final applied factual snapshot: skoda-specs-step3-evidence.json. Detailed missing core fields for **every version** and per-line progress: skoda-specs-step3-review.json. The before snapshot is pinned in skoda-specs-step3-baseline.json. No source prose or complete tables are copied; no Drom pages or photographs were used this turn.
+
+New `fieldSources` maps point populated fields to their supporting URLs. `engine.powerStandard` distinguishes ISO and SAE where the source states the standard. **UI should display this distinction or the scoped note; SAE and ISO figures must not be silently presented as directly comparable.** Historical kerb masses are not converted to modern EU driver-inclusive masses. A null mass is not the lower endpoint of a known range.
+
+Manufacturer Classic Days text and Wikipedia disagree for Favorit 136 L output; the value is null. Garde's 4175 mm length is taken from its specific manufacturer description, rather than Rapid's 4200 mm family value. Some dimensions and measurements were removed where the scope could not be reconciled.
+
+- **100-110 / 100 / 100 L acceleration0to100s**: 24 s versus measured 29 s; no common protocol established.
+- **100-110 / trunkL**: 370 l combined versus manual 400 l (280+120); compartment conventions differ.
+- **105-120-125 / 120 GLS transmission.gears**: Sources disagree whether 5-speed introduction belongs to 1984 or 1985.
+- **130-135-136 / 130 acceleration0to100s**: 15 s versus 17 s in consulted summaries; withheld pending original documentation.
+- **favorit / 136 L engine.powerKw**: Czech source: 46 kW; manufacturer Classic Days text labels 136 L but gives 58 hp. Version/engine identity unresolved.
+- **favorit / massKg / trunkL**: Mass ranges and conflicting boot volumes are not assigned to named trims.
+- **octavia-1959 / dimensionsMm.wheelbase / massKg**: Manufacturer 2390 mm versus encyclopaedia 2400 mm; manufacturer mass is approximate.
+- **felicia / dimensionsMm.length / massKg**: Length changes with facelift; body/engine/equipment-specific mass unresolved.
+
+Additional conflicts: basic Fabia I width/height differ between English and Czech summaries; unresolved overview values are null. The 1000 MB summaries disagree on length/width/height; those dimensions remain null while its scoped early engine, 755 kg mass and 120 km/h maximum speed come from the manufacturer. Felicia 1959 base maximum speed differs 120/130 km/h across manufacturer material; it is null, and the 930 kg figure is attached specifically to the manufacturer-described 1961 museum vehicle.
+
+### Photographs and remaining work
+
+1203 now has a Commons public-domain reference by Kelovy, File:ŠKODA 1203.JPG, with metadata retained and visual review pending. **4R remains without a suitable established Commons reference**. All 69 references still require visual review; no image binaries were downloaded.
+
+Remaining: complete pre-war coachwork/type variants; early/late 1000/1100 MB and MBX; all 105/120 year/equipment/gearbox combinations and masses; Favorit LX/LS/GLX engine/year reconciliation; complete Felicia body/trim masses; full Octavia I and Fabia I powertrain tables; then current-generation variant-specific dimensions, masses and acceleration. Missing historical acceleration has not been fabricated. Some manufacturer brochures were inaccessible (403 or size limits); their unseen tables were not used.
+
+Rebuild: `node analysis/codex/build-skoda-cards.mjs` (includes step 3), then `node analysis/codex/write-skoda-specs-step3-review.mjs`. Validate with `validate-model-lines.mjs` and `validate-model-cards.mjs`. Started 20:18:03 UTC; elapsed minutes are reported in the bridge handoff.
+<!-- skoda-specs-step3:end -->

@@ -158,3 +158,41 @@ Additional manufacturer/reference URLs checked for selected facts:
 
 The official importer Fabia PDF returned different revision values than its indexed search excerpt (height 1464 mm versus 1459 mm); structured records use the opened PDF and identify the scope. Manufacturer conflicts for 422/860/VOS/Felicia Fun and related-model contamination in the Indian Rapid source are explicitly retained for review. The list-of-vehicles page was used only as a coverage checklist: https://en.wikipedia.org/wiki/List_of_%C5%A0koda_vehicles . No new Drom pages or photos were used in this step.
 <!-- skoda-range-step2:end -->
+
+<!-- skoda-specs-step3:start -->
+## Škoda specifications step 3 — 26 October 2026
+
+Selected named-version facts and explicit conflicts are retained in analysis/codex/skoda-specs-step3.mjs and the final applied skoda-specs-step3-evidence.json. Factual English/Czech Wikipedia revisions and manufacturer publications were used; no marketplace database or Drom page was used. Old step-2 counts above are historical; current output has 113 selected version records, not an exhaustive set.
+
+Every newly mapped populated field uses `fieldSources`; power standards are explicit where known. Differing measurement standards are identified, and unresolved body/year/value conflicts stay null. Exact capacities are never computed from nominal litre labels. Facts were independently structured, with no copied source prose or complete tables. Existing Wikidata CC0 identity licensing and file-specific Commons photo licences remain unchanged.
+
+Sources checked for selected specifications:
+
+- https://cs.wikipedia.org/w/index.php?oldid=26216420
+- https://cs.wikipedia.org/w/index.php?oldid=26245159
+- https://cs.wikipedia.org/w/index.php?oldid=26255881
+- https://cs.wikipedia.org/w/index.php?oldid=26136151
+- https://cs.wikipedia.org/w/index.php?oldid=26326808
+- https://cs.wikipedia.org/w/index.php?oldid=26215791
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-favorit-136-l-1988-1994/
+- https://www.skoda-storyboard.com/en/skoda-world/heritage/happy-birthday-dear-favorit/
+- https://www.skoda-storyboard.com/en/press-releases/celebrating-30-years-of-the-skoda-felicia-the-brands-first-model-under-the-vw-groups-wing/
+- https://cdn.skoda-storyboard.com/2016/09/160905-Series-production-of-best-selling-%C5%A0KODA-OCTAVIA-began-20-years-ago.pdf
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-octavia-1959-1964/
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-felicia-1959-1964/
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-1100-mbx-1967-1969/
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/the-skoda-1101-tudor-celebrates-its-80th-anniversary/
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/
+- https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-superb-3000-ohv-1938-1949/
+- https://cs.wikipedia.org/w/index.php?oldid=26165769
+- https://cs.wikipedia.org/w/index.php?oldid=25452147
+- https://cs.wikipedia.org/w/index.php?oldid=25082854
+- https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/
+- https://cs.wikipedia.org/w/index.php?oldid=26215787
+- https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/veterany-na-upati-alp-vozy-skoda-na-startu-rally-bodensee-klassik/
+- https://webapps.skoda-auto.sk/Magazin/skoda_magazin_leto_2013.pdf
+- https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/
+- https://cdn.skoda-storyboard.com/2025/06/Skoda_Elroq_Technical_data_d5686460.pdf
+
+Photo addition: https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG — author Kelovy, public-domain metadata from Commons API; original URL/file-page/author/licence retained in the photo record. Visual review is pending. No image binary downloaded. 4R remains unresolved. Detailed omissions and source conflicts are in model-lines-review.md and skoda-specs-step3-review.json.
+<!-- skoda-specs-step3:end -->
