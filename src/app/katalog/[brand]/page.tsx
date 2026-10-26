@@ -7,6 +7,7 @@ import { BODY_LABEL, getBrand, modelsOf } from "@/lib/catalog";
 import { items } from "@/lib/classifieds";
 import { listings, listingsOf } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
+import { factsOf, hostOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
 import { BODY_GROUPS, cardOf, coverOf, thumb } from "@/lib/modelCards";
 import type { Body } from "@/lib/types";
@@ -15,6 +16,8 @@ import type { Body } from "@/lib/types";
 // grouped by body type, A–Z or by year; each line links to its model page.
 
 type Params = Promise<{ brand: string }>;
+
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const PICTOGRAM: Record<string, Body> = { kupe: "hatchback", kabriolet: "hatchback", liftback: "hatchback", pickup: "suv", dodavka: "mpv" };
 
@@ -77,21 +80,62 @@ export default async function BrandPage({ params }: { params: Params }) {
     ["ostatni", "Ostatní", lines.filter((l) => !l.bodyTypes.some((b) => BODY_GROUPS.some(([k]) => k === b)))] as [string, string, ModelLine[]],
   ].filter(([, , g]) => g.length > 0);
   const byYear = [...lines].sort((a, b) => (b.from ?? 0) - (a.from ?? 0));
+
   const itemCount = (section: MakeSection) =>
     section === "auto" ? listings.filter((l) => l.brandSlug === slug).length : items.filter((i) => i.section === section && resolveMake(i.make)?.slug === slug).length;
+
+  // Brand fact tiles: only what is known, most useful first, at most six.
+  const facts = factsOf(slug);
+  const listingCount = make.sections.reduce((sum, s) => sum + itemCount(s), 0);
+  const currentModels = lines.filter((l) => l.current).length;
+  const tiles = (
+    [
+      ["Založeno", facts?.founded ? `${facts.founded}${facts.foundedIn && facts.foundedIn !== facts.hq ? `, ${facts.foundedIn}` : ""}` : null],
+      ["Konec výroby", facts?.dissolved ? String(facts.dissolved) : null],
+      ["Sídlo", [facts?.hq, make.country].filter(Boolean).join(", ") || null],
+      ["Patří pod", facts?.parent ?? null],
+      ["Modely v katalogu", lines.length ? `${lines.length}${currentModels ? ` · ${currentModels} vyráběných` : ""}` : null],
+      ["Inzeráty", String(listingCount)],
+      ["Zakladatelé", facts?.founders.length ? facts.founders.slice(0, 2).join(", ") + (facts.founders.length > 2 ? " a další" : "") : null],
+      ["Zaměstnanci", facts?.employees ? `${facts.employees.value.toLocaleString("cs-CZ")}${facts.employees.year ? ` (${facts.employees.year})` : ""}` : null],
+    ] as [string, string | null][]
+  )
+    .filter((t): t is [string, string] => Boolean(t[1]))
+    .slice(0, 6);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <nav className="text-sm text-[var(--color-muted)]">
         <Link href="/katalog/" className="hover:underline">Katalog</Link> / {make.name}
       </nav>
-      <h1 className="flex items-center gap-3 text-3xl font-extrabold tracking-tight mt-2">
-        <BrandLogo slug={make.slug} name={make.name} size={44} />
-        {make.name}
-      </h1>
-      <p className="mt-1 text-[var(--color-muted)]">
-        {[make.country, make.defunct && "značka se už nevyrábí"].filter(Boolean).join(" · ")}
-      </p>
+      <div className="card mt-3 p-5 sm:p-6 grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div className="flex items-center gap-4 min-w-0">
+          <span className="grid place-items-center shrink-0 w-20 h-20 rounded-2xl bg-[var(--color-field)]">
+            <BrandLogo slug={make.slug} name={make.name} size={56} square />
+          </span>
+          <div className="min-w-0">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{make.name}</h1>
+            <p className="mt-1 text-[var(--color-muted)]">
+              {[facts?.description ? capitalize(facts.description) : make.country, (make.defunct || facts?.dissolved) && "značka se už nevyrábí"]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+            {facts?.website && (
+              <a href={facts.website} rel="noopener nofollow" className="inline-block mt-2 text-sm font-semibold text-[var(--color-brand)] hover:underline">
+                {hostOf(facts.website)} ↗
+              </a>
+            )}
+          </div>
+        </div>
+        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-3 min-w-0">
+          {tiles.map(([label, value]) => (
+            <div key={label} className="rounded-xl bg-[var(--color-field)] px-3 py-2.5 min-w-0">
+              <dt className="text-xs text-[var(--color-muted)]">{label}</dt>
+              <dd className="font-bold leading-snug break-words">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {make.sections.map((s) => {
