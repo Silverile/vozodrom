@@ -68,7 +68,6 @@ const MAP = {
   "daf": "DAF",
   "hitachi-construction-machinery": "Hitachi",
   "iveco": "IVECO",
-  "jcb": "JCB",
   "john-deere": "John Deere",
   "man-truck-bus": "MAN",
   "scania": "Scania",

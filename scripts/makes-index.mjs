@@ -23,6 +23,16 @@ const DISPLAY = {
   "iveco-bus": "Iveco Bus",
   "nokian-tyres": "Nokian",
 };
+// Hand corrections of catalogue records whose Wikidata match was a namesake or a subsidiary.
+// qid null = no matching Wikidata item (facts then come only from brand-facts-overrides.json).
+const CORRECTIONS = {
+  jcb: { country: "Spojené království", qid: "Q1542317" }, // was the Japanese credit-card company
+  blata: { country: "Česko", qid: null, keys: ["blata"] }, // was the Spreewald region in Germany
+  same: { defunct: false }, // the tractor brand still exists within SDF
+  "hitachi-construction-machinery": { country: "Japonsko" }, // was the Dutch European subsidiary
+  "austin-motor-company": { country: "Spojené království" }, // was Morocco
+};
+
 const SUFFIX = / (Motor Company|Automobiles|Technology|Motors|Motor|Company|Group|AG|GmbH|Corporation)$/;
 const display = (m) => DISPLAY[m.slug] ?? m.name.replace(SUFFIX, "");
 
@@ -41,6 +51,7 @@ const index = makes
       logo: Boolean(logos[m.slug]),
       qid: m.qid,
       keys,
+      ...CORRECTIONS[m.slug],
     };
   })
   .sort((a, b) => a.name.localeCompare(b.name, "cs"));
