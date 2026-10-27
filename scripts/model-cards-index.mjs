@@ -10,6 +10,17 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 const sizesFile = new URL("../src/data/photo-sizes.json", import.meta.url);
 const sizes = existsSync(sizesFile) ? JSON.parse(readFileSync(sizesFile, "utf8")) : {};
 const aspectOf = (size) => (size ? Math.round((size[0] / size[1]) * 100) / 100 : null);
+const photoOf = (p) =>
+  p
+    ? {
+        url: p.url.split("?")[0], // drop the utm tracking the Commons API appends
+        page: p.filePageUrl,
+        credit: p.credit,
+        licence: p.licence,
+        licenceUrl: p.licenceUrl ?? null,
+        aspect: aspectOf(sizes[p.url.split("?")[0]]),
+      }
+    : null;
 const dirs = ["../src/data/catalog/model-cards/", "../src/data/model-cards/"].map((d) => new URL(d, import.meta.url));
 const index = {};
 let count = 0;
@@ -26,7 +37,15 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         from: g.from ?? null,
         to: g.to ?? null,
         current: g.productionStatus === "current",
-        facelifts: (g.facelift ?? []).map((f) => ({ year: f.year, note: f.note ?? null })),
+        // a facelift may carry its own name, end year, chassis code and photo (shown as its own stage)
+        facelifts: (g.facelift ?? []).map((f) => ({
+          year: f.year,
+          to: f.to ?? null,
+          name: f.name ?? null,
+          code: f.code ?? null,
+          note: f.note ?? null,
+          photo: photoOf(f.photo),
+        })),
         bodyTypes: g.bodyTypes ?? [],
         engines: g.engines ?? [],
         drivetrains: g.drivetrains ?? [],
@@ -35,16 +54,7 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         trunkL: g.trunkL ?? null,
         markets: g.markets ?? [],
         trims: g.trims ?? [],
-        photo: g.photo
-          ? {
-              url: g.photo.url.split("?")[0], // drop the utm tracking the Commons API appends
-              page: g.photo.filePageUrl,
-              credit: g.photo.credit,
-              licence: g.photo.licence,
-              licenceUrl: g.photo.licenceUrl ?? null,
-              aspect: aspectOf(sizes[g.photo.url.split("?")[0]]),
-            }
-          : null,
+        photo: photoOf(g.photo),
         sources: g.sources ?? [],
       })),
       sources: card.sources ?? [],

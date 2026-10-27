@@ -95,6 +95,20 @@ export interface CatalogModelCardPhoto {
   reviewNoteCs?: string;
   sources: string[];
 }
+/** Visible mid-life exterior update; year can be the reveal year, productionYear scopes market timing. */
+export interface CatalogModelCardFacelift {
+  year: number;
+  /** End of this appearance stage, not end of the whole generation. */
+  to?: number | null;
+  name?: string;
+  /** Source-published stage label; null if not established. */
+  code?: string | null;
+  productionYear: number | null;
+  note: string;
+  sources: string[];
+  /** Reviewed illustration of this appearance: Commons attribution or permitted official editorial press photograph. */
+  photo?: CatalogModelCardPhoto | null;
+}
 export interface CatalogModelCardEngine {
   fuel: CatalogFuel | null;
   /** Exact cylinder capacity only; never calculated from a rounded marketing litre value. Electric: null = not applicable. */
@@ -118,7 +132,7 @@ export interface CatalogModelCardGeneration {
   to: number | null;
   productionStatus: "current" | "ended" | "unknown";
   /** Null = unreviewed, not "no facelift". Presentation and production years can differ. */
-  facelift: { year: number; productionYear: number | null; note: string; sources: string[] }[] | null;
+  facelift: CatalogModelCardFacelift[] | null;
   bodyTypes: CatalogBody[] | null;
   engines: CatalogModelCardEngine[] | null;
   engineCoverage: "partial" | "unknown";

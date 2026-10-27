@@ -57,13 +57,53 @@ export interface CardPhoto {
   licenceUrl: string | null;
 }
 
+export interface CardFacelift {
+  year: number;
+  /** last year of this stage; null = until the next facelift or the generation's end */
+  to: number | null;
+  name: string | null;
+  code: string | null;
+  note: string | null;
+  photo: CardPhoto | null;
+}
+
+/** A generation's look-stages as Drom shows them: the original, then each facelift with its own years. */
+export interface GenerationStage {
+  label: string;
+  code: string | null;
+  from: number | null;
+  to: number | null;
+  current: boolean;
+  photo: CardPhoto | null;
+}
+
+export function stagesOf(g: CardGeneration): GenerationStage[] {
+  const fl = [...g.facelifts].sort((a, b) => a.year - b.year);
+  if (!fl.length) return [{ label: "", code: g.code, from: g.from, to: g.to, current: g.current, photo: g.photo }];
+  const many = fl.length > 1;
+  return [
+    { label: "", code: g.code, from: g.from, to: fl[0].year, current: false, photo: g.photo },
+    ...fl.map((f, i) => {
+      const last = i === fl.length - 1;
+      return {
+        label: f.name ?? (many ? `${i + 1}. facelift` : "facelift"),
+        code: f.code,
+        from: f.year,
+        to: f.to ?? (last ? g.to : fl[i + 1].year),
+        current: last && g.current,
+        photo: f.photo,
+      };
+    }),
+  ];
+}
+
 export interface CardGeneration {
   code: string | null;
   name: string | null;
   from: number | null;
   to: number | null;
   current: boolean;
-  facelifts: { year: number; note: string | null }[];
+  facelifts: CardFacelift[];
   bodyTypes: string[];
   engines: CardEngine[];
   drivetrains: string[];

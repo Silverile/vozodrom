@@ -21,6 +21,7 @@ import {
   type CardTrim,
   cardOf,
   coverOf,
+  stagesOf,
   yearsSpan,
 } from "@/lib/modelCards";
 import { type StatsEntry, lineStats } from "@/lib/stats";
@@ -167,7 +168,7 @@ function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneratio
 function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry }) {
   const facts: [string, string | null][] = [
     ["Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
-    ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => f.year).join(", ") : null],
+    ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => (f.name ? `${f.year} (${f.name})` : f.year)).join(", ") : null],
     ["Karoserie", gen.bodyTypes.length ? gen.bodyTypes.map((b) => BODY_NAMES[b] ?? b).join(", ") : null],
     ["Pohon", gen.drivetrains.length ? gen.drivetrains.map((d) => DRIVE[d] ?? d).join(", ") : null],
     [
@@ -181,6 +182,8 @@ function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; titl
     ["Zavazadelník", gen.trunkL ? `${num(gen.trunkL)} l` : null],
   ];
   const shown = facts.filter(([, v]) => v);
+  // facelifts with their own photo get a picture next to the original look
+  const faceliftPhotos = stagesOf(gen).slice(1).filter((st) => st.photo);
   const columns = TRIM_COLUMNS.filter((c) => gen.trims.some((t) => c.value(t)));
 
   return (
@@ -237,6 +240,21 @@ function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; titl
           )}
         </div>
       </div>
+      {faceliftPhotos.length > 0 && (
+        <div className="mt-5 grid gap-3 grid-cols-2 sm:grid-cols-3">
+          {faceliftPhotos.map((st) => (
+            <figure key={st.label} className="min-w-0">
+              <CarPhoto photo={st.photo!} alt={`${title} ${st.label}`} className="rounded-xl" />
+              <figcaption className="mt-1 text-xs">
+                <b>{st.label}</b> <span className="text-[var(--color-muted)]">{yearsSpan(st.from, st.to, st.current)}</span>
+                <span className="block truncate text-[11px] text-[var(--color-muted)]">
+                  Foto: <a href={st.photo!.page} rel="noopener" className="underline hover:text-[var(--color-ink)]">{st.photo!.credit}</a>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
       {gen.trims.length > 0 && (
         <div className="mt-5 overflow-x-auto">
           <h4 className="font-semibold text-sm mb-2">Verze a technické údaje</h4>
@@ -379,23 +397,37 @@ export default async function ModelPage({ params }: { params: Params }) {
         <>
           <h2 className="text-xl font-bold mt-10 mb-3">Generace <span className="text-base font-normal text-[var(--color-muted)]">· {gens.length}</span></h2>
           <ol className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-            {gens.map((g, i) => (
-              <li key={i} className="min-w-0">
-                <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-                  {g.photo ? (
-                    <CarPhoto photo={g.photo} alt={`${title} ${g.name ?? g.code ?? ""}`} />
-                  ) : (
-                    <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
-                  )}
-                  <div className="p-3">
-                    <div className="font-semibold truncate">{g.name ?? g.code ?? `${i + 1}. generace`}</div>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {[yearsSpan(g.from, g.to, g.current), g.code && g.name && !g.name.includes(g.code) ? g.code : null].filter(Boolean).join(" · ")}
+            {gens.flatMap((g, i) => {
+              // the original look, then each facelift that has its own photo, as on Drom
+              const stages = stagesOf(g);
+              const shown = [stages[0], ...stages.slice(1).filter((st) => st.photo)];
+              const base = g.name ?? g.code ?? `${i + 1}. generace`;
+              return shown.map((st, k) => (
+                <li key={`${i}-${k}`} className="min-w-0">
+                  <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
+                    {st.photo ? (
+                      <CarPhoto photo={st.photo} alt={`${title} ${base} ${st.label}`.trim()} />
+                    ) : (
+                      <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
+                    )}
+                    <div className="p-3">
+                      <div className="font-semibold truncate">
+                        {base}
+                        {st.label && <span className="ml-1.5 text-xs font-medium text-[var(--color-brand)]">{st.label}</span>}
+                      </div>
+                      <div className="text-xs text-[var(--color-muted)]">
+                        {[
+                          shown.length > 1 ? yearsSpan(st.from, st.to, st.current) : yearsSpan(g.from, g.to, g.current),
+                          k === 0 && g.code && g.name && !g.name.includes(g.code) ? g.code : st.label ? st.code : null,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            ))}
+                  </a>
+                </li>
+              ));
+            })}
           </ol>
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
