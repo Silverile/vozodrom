@@ -69,6 +69,15 @@ class Matcher:
         self.lines = {}  # make -> [(folded name, slug)] longest first
         self.gens = {}  # (make, line) -> [(from, to, codes)]
         self.years = {}  # (make, line) -> (from, to)
+        # Lines known only from a model card (Claude's agents) join the curated list.
+        known = {(l["makeSlug"], l["slug"]) for l in lines}
+        for mk, by_line in cards.items():
+            for slug, c in by_line.items():
+                if (mk, slug) in known:
+                    continue
+                froms = [g["from"] for g in c["generations"] if g.get("from")]
+                tos = [g["to"] for g in c["generations"] if g.get("to")]
+                lines.append({"makeSlug": mk, "slug": slug, "name": c["name"], "from": min(froms, default=None), "to": max(tos, default=None)})
         for l in lines:
             self.years[(l["makeSlug"], l["slug"])] = (l.get("from"), l.get("to"))
             # "Octavia (1959)" is registered as plain "OCTAVIA": the year picks between same-named lines.

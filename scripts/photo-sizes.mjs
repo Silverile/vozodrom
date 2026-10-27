@@ -10,7 +10,7 @@ const out = new URL("../src/data/photo-sizes.json", import.meta.url);
 const sizes = existsSync(out) ? JSON.parse(readFileSync(out, "utf8")) : {};
 const cards = JSON.parse(readFileSync(new URL("../src/data/model-cards-index.json", import.meta.url), "utf8"));
 const urls = new Set();
-for (const make of Object.values(cards)) for (const card of Object.values(make)) for (const g of card.generations) if (g.photo?.url) urls.add(g.photo.url);
+for (const make of Object.values(cards)) for (const card of Object.values(make)) for (const g of card.generations) if (g.photo?.url) urls.add(g.photo.url.split("?")[0]);
 
 const todo = [...urls].filter((u) => !sizes[u] && u.startsWith("https://upload.wikimedia.org/"));
 const UA = { "User-Agent": "vozodrom-prototype/0.1 (https://vozodrom.cz; photo sizes)" };

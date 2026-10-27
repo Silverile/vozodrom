@@ -3,7 +3,7 @@ import cardIndex from "@/data/model-cards-index.json";
 // Model cards: generations, engines, trims and Commons photos per model line
 // (src/data/catalog/model-cards/ via scripts/model-cards-index.mjs). Unknown values are null.
 
-export type CardFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "diesel-mhev" | "electric" | "hydrogen";
+export type CardFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-lpg" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "diesel-mhev" | "electric" | "hydrogen";
 
 export interface CardEngine {
   fuel: CardFuel | null;
@@ -140,6 +140,7 @@ export const CARD_FUEL: Record<CardFuel, string> = {
   petrol: "benzin",
   diesel: "nafta",
   "petrol-cng": "benzin + CNG",
+  "petrol-lpg": "benzin + LPG",
   "petrol-mhev": "mild hybrid",
   "petrol-hev": "plný hybrid",
   "diesel-mhev": "nafta, mild hybrid",

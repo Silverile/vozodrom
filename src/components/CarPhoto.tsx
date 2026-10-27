@@ -6,7 +6,7 @@ import { type CardPhoto, thumb } from "@/lib/modelCards";
 
 export function CarPhoto({ photo, alt, width = 500, eager = false, className = "" }: { photo: CardPhoto; alt: string; width?: number; eager?: boolean; className?: string }) {
   const src = thumb(photo.url, width);
-  const fills = photo.aspect == null || (photo.aspect >= 1.3 && photo.aspect <= 1.75);
+  const fills = photo.aspect != null && photo.aspect >= 1.44 && photo.aspect <= 1.75; // cover crops at most ~5% per edge
   return (
     <div className={`relative w-full aspect-[16/10] overflow-hidden bg-[var(--color-photo)] ${className}`}>
       {!fills && <img src={src} alt="" aria-hidden loading="lazy" className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-60" />}

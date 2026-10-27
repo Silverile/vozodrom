@@ -9,6 +9,7 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 
 const sizesFile = new URL("../src/data/photo-sizes.json", import.meta.url);
 const sizes = existsSync(sizesFile) ? JSON.parse(readFileSync(sizesFile, "utf8")) : {};
+const aspectOf = (size) => (size ? Math.round((size[0] / size[1]) * 100) / 100 : null);
 const dirs = ["../src/data/catalog/model-cards/", "../src/data/model-cards/"].map((d) => new URL(d, import.meta.url));
 const index = {};
 let count = 0;
@@ -36,12 +37,12 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         trims: g.trims ?? [],
         photo: g.photo
           ? {
-              url: g.photo.url,
+              url: g.photo.url.split("?")[0], // drop the utm tracking the Commons API appends
               page: g.photo.filePageUrl,
               credit: g.photo.credit,
               licence: g.photo.licence,
               licenceUrl: g.photo.licenceUrl ?? null,
-              aspect: sizes[g.photo.url] ? Math.round((sizes[g.photo.url][0] / sizes[g.photo.url][1]) * 100) / 100 : null,
+              aspect: aspectOf(sizes[g.photo.url.split("?")[0]]),
             }
           : null,
         sources: g.sources ?? [],

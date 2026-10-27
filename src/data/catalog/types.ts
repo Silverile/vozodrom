@@ -78,7 +78,7 @@ export interface CatalogModelLine {
   needsReview: CatalogModelLineReview[];
 }
 
-export type CatalogFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-mhev" | "petrol-phev" | "electric";
+export type CatalogFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-lpg" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "electric";
 export interface CatalogModelCardPhoto {
   source: "commons" | "press";
   file: string;
@@ -136,6 +136,8 @@ export interface CatalogModelCard {
   makeSlug: string;
   lineSlug: string;
   name: string;
+  /** Sourced regional names/renames of this same model line, not separate trim cards. */
+  aliases?: string[];
   isAddition: boolean;
   segment: string | null;
   summaryCs: string | null;
