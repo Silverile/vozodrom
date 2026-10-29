@@ -1,0 +1,153 @@
+{
+  "make": "vinfast",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "vf-7",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q111784765"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vf-8",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q105063992"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vf-9",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q105064047"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "VF e34",
+      "from": 2021,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast_VF_e34"
+      ]
+    },
+    {
+      "name": "VF 3",
+      "from": 2024,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast_VF_3"
+      ]
+    },
+    {
+      "name": "Minio Green / VF 2",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast"
+      ]
+    },
+    {
+      "name": "Limo Green / VF MPV 7",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast"
+      ]
+    },
+    {
+      "name": "Herio Green",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast"
+      ]
+    },
+    {
+      "name": "Nerio Green",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/VinFast"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "president",
+      "path": "summaryCs",
+      "from": "VinFast President byl limitovaný luxusní odvozenec SUV LUX SA2.0 s šestilitrovým osmiválcem, vyráběný od září 2020 v počtu zhruba 500 kusů. Šlo o nejdražší model značky v éře spalovacích motorů, jejichž výrobu VinFast v roce 2022 ukončil.",
+      "to": "VinFast President byl limitovaný luxusní odvozenec SUV LUX SA2.0 s osmiválcem GM o objemu 6,2 litru, vyráběný od září 2020 v počtu zhruba 500 kusů. Šlo o nejdražší model značky v éře spalovacích motorů, jejichž výrobu VinFast v roce 2022 ukončil.",
+      "sources": [
+        "https://www.carscoops.com/2020/10/vinfast-president-luxury-suv-launched-as-limited-run-vietnam-only-affair/",
+        "https://paultan.org/2020/09/07/vinfast-president-suv/"
+      ],
+      "verify": "reverted (partially): the 6.2 l V8 is right, but en.wikipedia.org/wiki/VinFast_President says the engine model is not officially disclosed; it is believed to be a GM LS, and some sources say a Chrysler 6.2 Hemi. The supplier 'GM' was removed from summaryCs, which now reads 's osmiválcem o objemu 6,2 litru'. en-wiki also gives 455 hp, a third value for the power conflict"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "VF 5 body type",
+      "values": {
+        "models-auto": "suv",
+        "card": "hatchback"
+      },
+      "kept": "hatchback (card unchanged)"
+    },
+    {
+      "where": "President power",
+      "values": {
+        "press (carscoops, paultan)": "420 hp",
+        "VinFast VN shop page Vietnamese text": "480 hp"
+      },
+      "kept": "null in card"
+    }
+  ],
+  "openQuestions": [
+    "models-auto vf31 (Q105063842) appears to be an early 2021 project name, not a sold model; confirm and remove or map.",
+    "VinFast has no rows in model-lines-auto."
+  ],
+  "summary": "VinFast cards consistent with sources; President engine wording fixed (6.2 l GM V8). Proposed 6 missing models (VF e34, VF 3, Green taxi family) and body types."
+}

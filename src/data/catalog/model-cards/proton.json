@@ -5,28 +5,42 @@
     "name": "Arena",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Arena je dvoudveřový pickup z nabídky značky Proton. Firemní historie uvádí jeho premiéru v listopadu 2002.",
+    "summaryCs": "Arena je dvoumístný pickup (coupé utility) odvozený od sedanu Wira/Persona, vyráběný v letech 2002–2009; ve Spojeném království a v Austrálii se prodával jako Proton Jumbuck. Firemní historie uvádí jeho premiéru v listopadu 2002.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Arena",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2002,
+        "to": 2009,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G15"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4455,
+          "width": 1690,
+          "height": 1420,
+          "wheelbase": 2600
         },
         "specificationScope": {
           "market": "source-production",
@@ -43,12 +57,46 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Arena"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Arena"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Arena"
     ],
     "needsReview": [
       {
@@ -60,43 +108,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -127,6 +143,9 @@
         "field": "coverage",
         "reason": "Dílčí katalog primárních pramenů; historické motorizace, přesné tovární intervaly a fotografie nejsou kompletní. Neověřené hodnoty ponechány null."
       }
+    ],
+    "aliases": [
+      "Jumbuck"
     ]
   },
   {
@@ -135,7 +154,7 @@
     "name": "Chancellor",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Chancellor byl koncipován jako reprezentační sedan především pro cestující se služebním řidičem. Výroční zpráva Proton potvrzuje jeho uvedení v prosinci 2005.",
+    "summaryCs": "Chancellor byl prodloužený reprezentační sedan na základě modelu Waja, koncipovaný především pro cestující se služebním řidičem a poháněný dvoulitrovým šestiválcem V6. Výroční zpráva Proton potvrzuje jeho uvedení v prosinci 2005.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -143,13 +162,22 @@
         "name": "Chancellor",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "V6 6A12"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -173,12 +201,25 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006"
-        ]
+          "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006",
+          "https://en.wikipedia.org/wiki/Proton_Waja"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006"
+      "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006",
+      "https://en.wikipedia.org/wiki/Proton_Waja"
     ],
     "needsReview": [
       {
@@ -199,10 +240,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -271,16 +308,27 @@
       {
         "code": null,
         "name": "e.MAS 5",
-        "from": null,
+        "from": 2025,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "variant": "elektromotor 85 kW"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -348,13 +396,32 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf"
-        ]
+          "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "drivetrains": [
+            "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf"
+      "https://emas.proton.com/wp-content/uploads/2025/10/ENG-Press-Release-Proton-e.MAS-5-Malaysias-First-Affordable-Electric-Vehicle-Officially-Launched.pdf",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -366,23 +433,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -515,15 +570,24 @@
       {
         "code": null,
         "name": "e.MAS 7 BEV",
-        "from": null,
+        "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 160,
+            "powerKwMax": 160,
+            "variant": "elektromotor 160 kW"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -635,20 +699,44 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://csgroup.my/wp-content/uploads/2025/01/Proton-e.MAS-7-Brochure-A4-161224_CS_Prima.pdf"
-        ]
+          "https://csgroup.my/wp-content/uploads/2025/01/Proton-e.MAS-7-Brochure-A4-161224_CS_Prima.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://csgroup.my/wp-content/uploads/2025/01/Proton-e.MAS-7-Brochure-A4-161224_CS_Prima.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       },
       {
         "code": null,
         "name": "e.MAS 7 PHEV – samostatná hybridní větev",
         "from": 2026,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
+        "engines": [
+          {
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "plug-in hybrid"
+          }
+        ],
         "engineCoverage": "unknown",
         "drivetrains": null,
         "transmissions": null,
@@ -673,14 +761,24 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/happenings/2026/august/proton-maintains-momentum-with-second-best-sales-performance-of-2026"
-        ]
+          "https://www.proton.com/happenings/2026/august/proton-maintains-momentum-with-second-best-sales-performance-of-2026",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
       "https://csgroup.my/wp-content/uploads/2025/01/Proton-e.MAS-7-Brochure-A4-161224_CS_Prima.pdf",
-      "https://www.proton.com/happenings/2026/august/proton-maintains-momentum-with-second-best-sales-performance-of-2026"
+      "https://www.proton.com/happenings/2026/august/proton-maintains-momentum-with-second-best-sales-performance-of-2026",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -692,19 +790,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -840,10 +930,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -909,15 +995,24 @@
       {
         "code": null,
         "name": "Ertiga",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2016,
+        "to": 2019,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "1.4"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -986,13 +1081,32 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.aseancap.org/v4/wp-content/uploads/2017/05/Proton-Ertiga-1.pdf"
-        ]
+          "https://www.aseancap.org/v4/wp-content/uploads/2017/05/Proton-Ertiga-1.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://www.aseancap.org/v4/wp-content/uploads/2017/05/Proton-Ertiga-1.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.aseancap.org/v4/wp-content/uploads/2017/05/Proton-Ertiga-1.pdf"
+      "https://www.aseancap.org/v4/wp-content/uploads/2017/05/Proton-Ertiga-1.pdf",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -1004,19 +1118,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1157,22 +1259,53 @@
       {
         "code": null,
         "name": "Exora",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2009,
+        "to": 2023,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2011,
+            "productionYear": null,
+            "name": "Exora Bold / Prime",
+            "code": null,
+            "photo": null,
+            "note": "První modernizace představená 15. prosince 2011; další revize MC2, Enhanced, RC a RC2 do roku 2023.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Exora"
+            ]
+          }
+        ],
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "variant": "CamPro CPS (2009–2016)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1561,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "CamPro CFE turbo (2011–2023)"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4615,
+          "width": 1809,
+          "height": 1691,
+          "wheelbase": 2730
         },
         "specificationScope": {
           "market": "source-production",
@@ -1189,12 +1322,58 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Exora",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Exora",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Exora",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Exora",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "productionUnits": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Exora"
+          ]
+        },
+        "productionUnits": 196583
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Exora",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -1206,43 +1385,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1281,28 +1424,74 @@
     "name": "Gen.2",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Gen.2 je osobní hatchback využívající motor CamPro a domácí platformu Proton. Uvedení řady spadá do roku 2004.",
+    "summaryCs": "Gen.2 je pětidveřový liftback využívající motor CamPro a domácí platformu Proton, vyráběný v letech 2004–2012. Ve Spojeném království byl uveden v září 2004.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Gen.2",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2004,
+        "to": 2012,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2007,
+            "productionYear": null,
+            "name": "Mid-life facelift",
+            "code": null,
+            "photo": null,
+            "note": "Modernizace uvedená 1. 12. 2007 v Thajsku a v březnu 2008 v Malajsii; poslední úprava 20. 5. 2010.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Gen-2"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "CamPro S4PE"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 82,
+            "powerKwMax": 82,
+            "variant": "CamPro S4PH / IAFM"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "variant": "CamPro CPS"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4310,
+          "width": 1725,
+          "height": 1435,
+          "wheelbase": 2600
         },
         "specificationScope": {
           "market": "source-production",
@@ -1319,12 +1508,54 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Gen-2",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Gen-2"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Gen-2",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -1336,43 +1567,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1411,28 +1606,47 @@
     "name": "Inspira",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Inspira je sedan z historické nabídky značky. Při uvedení výrobce zdůrazňoval také možnost ovládání převodovky pádly pod volantem.",
+    "summaryCs": "Inspira je sedan z let 2010–2015, přeznačená devátá generace Mitsubishi Lancer. Při uvedení výrobce zdůrazňoval také možnost ovládání převodovky pádly pod volantem.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Inspira",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2010,
+        "to": 2015,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "4B10 MIVEC"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "variant": "4B11 MIVEC"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4570,
+          "width": 1760,
+          "height": 1490,
+          "wheelbase": 2635
         },
         "specificationScope": {
           "market": "source-production",
@@ -1449,12 +1663,51 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Inspira",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Inspira"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Inspira",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -1466,43 +1719,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1541,28 +1762,70 @@
     "name": "Iriz",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Iriz je pětidveřový malý hatchback Proton. První provedení podstoupilo zkoušku ASEAN NCAP v roce 2014.",
+    "summaryCs": "Iriz je pětidveřový malý hatchback Proton vyráběný od září 2014 do září 2025. První provedení podstoupilo zkoušku ASEAN NCAP v roce 2014.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "P2-30A",
         "name": "Iriz",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2014,
+        "to": 2025,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2019,
+            "productionYear": 2019,
+            "name": "První modernizace",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena 23. dubna 2019.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Iriz"
+            ]
+          },
+          {
+            "year": 2021,
+            "productionYear": 2021,
+            "name": "Druhá modernizace",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena 5. srpna 2021, nová příď sdílená s modelem Persona.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Iriz"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1332,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "variant": "VVT S4PE"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "variant": "VVT S4PH"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
           "width": null,
           "height": null,
-          "wheelbase": null
+          "wheelbase": 2555
         },
         "specificationScope": {
           "market": "source-production",
@@ -1624,41 +1887,57 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf"
-        ]
+          "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf",
+          "https://en.wikipedia.org/wiki/Proton_Iriz",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "code": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "productionUnits": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ]
+        },
+        "productionUnits": 97576
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf"
+      "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf",
+      "https://en.wikipedia.org/wiki/Proton_Iriz",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1675,10 +1954,6 @@
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1803,9 +2078,9 @@
       {
         "code": null,
         "name": "Juara",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2001,
+        "to": 2003,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -1835,12 +2110,25 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -1849,14 +2137,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1972,9 +2252,9 @@
       {
         "code": null,
         "name": "Perdana – rodina Honda",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2013,
+        "to": 2020,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -2006,14 +2286,32 @@
         "sources": [
           "https://www.proton.com/corporate/milestones",
           "https://cljlaw.com/files/hansard/DR/pdf/DR-04112014.pdf",
-          "https://www.drb-hicom.com/downloads/ar2017.pdf"
-        ]
+          "https://www.drb-hicom.com/downloads/ar2017.pdf",
+          "https://en.wikipedia.org/wiki/Proton_Perdana",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Perdana",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Perdana",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Perdana",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
       "https://cljlaw.com/files/hansard/DR/pdf/DR-04112014.pdf",
-      "https://www.drb-hicom.com/downloads/ar2017.pdf"
+      "https://www.drb-hicom.com/downloads/ar2017.pdf",
+      "https://en.wikipedia.org/wiki/Proton_Perdana",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -2082,14 +2380,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2166,15 +2456,36 @@
       {
         "code": null,
         "name": "Persona – řada uvedená 2007",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2007,
+        "to": 2016,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2010,
+            "productionYear": null,
+            "name": "Persona Elegance",
+            "code": null,
+            "photo": null,
+            "note": "Výrazná modernizace v březnu 2010.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Persona"
+            ]
+          }
+        ],
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "CamPro S4PH / IAFM"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2198,21 +2509,78 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Persona",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Persona",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Persona",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Persona",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Persona"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Persona"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Persona"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Persona – řada uvedená 2016",
-        "from": null,
+        "from": 2016,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2019,
+            "productionYear": 2019,
+            "name": "První modernizace",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena 23. dubna 2019.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Persona"
+            ]
+          },
+          {
+            "year": 2021,
+            "productionYear": 2021,
+            "name": "Druhá modernizace",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena 5. srpna 2021.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Persona"
+            ]
+          }
+        ],
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "variant": "VVT S4PH (sdíleno s Iriz)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2237,14 +2605,36 @@
         "trims": null,
         "sources": [
           "https://www.drb-hicom.com/downloads/ar2017.pdf",
-          "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf"
-        ]
+          "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf",
+          "https://en.wikipedia.org/wiki/Proton_Persona",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles",
+          "https://en.wikipedia.org/wiki/Proton_Iriz"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Persona",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Persona",
+            "https://en.wikipedia.org/wiki/Proton_Iriz"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Persona"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Persona"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
       "https://www.drb-hicom.com/downloads/ar2017.pdf",
-      "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf"
+      "https://www.aseancap.org/v4/wp-content/uploads/2017/09/Proton-Iriz-with-Persona.pdf",
+      "https://en.wikipedia.org/wiki/Proton_Persona",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles",
+      "https://en.wikipedia.org/wiki/Proton_Iriz"
     ],
     "needsReview": [
       {
@@ -2253,22 +2643,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2324,19 +2698,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2407,7 +2769,7 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "P3-21A",
         "name": "Prevé",
         "from": 2012,
         "to": 2018,
@@ -2416,15 +2778,32 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1597,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "variant": "CamPro IAFM+"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1561,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "CamPro CFE turbo"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4543,
+          "width": 1786,
+          "height": 1524,
+          "wheelbase": 2650
         },
         "specificationScope": {
           "market": "source-production",
@@ -2442,13 +2821,38 @@
         "trims": null,
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
-        ]
+          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+          "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
+      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+      "https://en.wikipedia.org/wiki/Proton_Prev%C3%A9"
     ],
     "needsReview": [
       {
@@ -2456,15 +2860,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2473,22 +2869,6 @@
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2527,28 +2907,39 @@
     "name": "Putra",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Putra je dvoudveřové kupé z historické nabídky Proton. Historie výrobce jej spojuje s technickým základem rodiny Wira.",
+    "summaryCs": "Putra je dvoudveřové kupé z let 1996–2001 (krátce obnovené v roce 2004 pro domácí trh), ve Spojeném království prodávané jako Proton Coupé nebo M21. Historie výrobce jej spojuje s technickým základem rodiny Wira.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Putra",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1996,
+        "to": 2004,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "4G93 DOHC (102,82 kW)"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4225,
+          "width": 1690,
+          "height": 1365,
+          "wheelbase": 2440
         },
         "specificationScope": {
           "market": "source-production",
@@ -2565,12 +2956,51 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Putra",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Putra",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Putra",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Putra",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Putra"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Putra",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -2582,43 +3012,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2649,6 +3047,10 @@
         "field": "coverage",
         "reason": "Dílčí katalog primárních pramenů; historické motorizace, přesné tovární intervaly a fotografie nejsou kompletní. Neověřené hodnoty ponechány null."
       }
+    ],
+    "aliases": [
+      "Coupé",
+      "M21"
     ]
   },
   {
@@ -2665,7 +3067,7 @@
         "name": "S70",
         "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -2828,15 +3230,22 @@
           "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
           "https://cms-assets.proton.com/proton-cms-blob/media/hsxlpppe/2026-protons70_brochure_fa.pdf",
           "https://cms-assets.proton.com/proton-cms-blob/media/ftalgh1b/s70-brochure.pdf",
-          "https://cms-assets.proton.com/proton-cms-blob/media/ralp4ym0/2026-proton-s70-owner-manual.pdf"
-        ]
+          "https://cms-assets.proton.com/proton-cms-blob/media/ralp4ym0/2026-proton-s70-owner-manual.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
       "https://cms-assets.proton.com/proton-cms-blob/media/hsxlpppe/2026-protons70_brochure_fa.pdf",
       "https://cms-assets.proton.com/proton-cms-blob/media/ftalgh1b/s70-brochure.pdf",
-      "https://cms-assets.proton.com/proton-cms-blob/media/ralp4ym0/2026-proton-s70-owner-manual.pdf"
+      "https://cms-assets.proton.com/proton-cms-blob/media/ralp4ym0/2026-proton-s70-owner-manual.pdf",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -3042,8 +3451,8 @@
         "code": null,
         "name": "Saga I / Iswara",
         "from": 1985,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2008,
+        "productionStatus": "ended",
         "facelift": [
           {
             "year": 1992,
@@ -3061,10 +3470,36 @@
           "sedan",
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G13"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G15"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 3
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -3087,21 +3522,82 @@
         "trims": null,
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
-        ]
+          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+          "https://en.wikipedia.org/wiki/Proton_Saga",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Saga II",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2008,
+        "to": 2016,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2010,
+            "productionYear": null,
+            "name": "Saga FL",
+            "code": null,
+            "photo": null,
+            "note": "Představena 30. listopadu 2010.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Saga"
+            ]
+          },
+          {
+            "year": 2011,
+            "productionYear": null,
+            "name": "Saga FLX",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena zhruba osm měsíců po FL; nové motory IAFM+ a převodovka CVT.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Saga"
+            ]
+          }
+        ],
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "CamPro IAFM"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "CamPro IAFM"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3125,21 +3621,78 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Saga",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Saga III",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2016,
+        "to": 2025,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2019,
+            "productionYear": 2019,
+            "name": "Modernizace 2019",
+            "code": null,
+            "photo": null,
+            "note": "Představena 6. srpna 2019, CVT nahrazena čtyřstupňovým automatem.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Saga"
+            ]
+          },
+          {
+            "year": 2022,
+            "productionYear": 2022,
+            "name": "Revize 2022",
+            "code": null,
+            "photo": null,
+            "note": "Úprava z 12. května 2022.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Saga"
+            ]
+          }
+        ],
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 69,
+            "powerKwMax": 69,
+            "variant": "VVT S4PE"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3251,21 +3804,55 @@
         ],
         "sources": [
           "https://www.drb-hicom.com/downloads/ar2017.pdf",
-          "https://proton.teamvaal.co.za/result/Articles/PROTON-SAGA-YOUR-PERFECT-CITY-COMPANION-19630?DateFormat=dd+MMM+yyyy&HAF=False"
-        ]
+          "https://proton.teamvaal.co.za/result/Articles/PROTON-SAGA-YOUR-PERFECT-CITY-COMPANION-19630?DateFormat=dd+MMM+yyyy&HAF=False",
+          "https://en.wikipedia.org/wiki/Proton_Saga",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Saga – All-New Saga (AMA)",
-        "from": null,
+        "from": 2025,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "variant": "BHE15 PFI"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3347,7 +3934,7 @@
             },
             "transmission": {
               "type": "automatic",
-              "gears": null
+              "gears": 4
             },
             "drive": null,
             "dimensionsMm": {
@@ -3421,8 +4008,26 @@
         "sources": [
           "https://www.proton.com/corporate/milestones",
           "https://cms-assets.proton.com/proton-cms-blob/media/40ehguyc/all-new-saga-leaflet.pdf",
-          "https://cms-assets.proton.com/proton-cms-blob/media/pilpye32/all-new-saga-owners-manual.pdf"
-        ]
+          "https://cms-assets.proton.com/proton-cms-blob/media/pilpye32/all-new-saga-owners-manual.pdf",
+          "https://en.wikipedia.org/wiki/Proton_Saga",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Saga",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://cms-assets.proton.com/proton-cms-blob/media/40ehguyc/all-new-saga-leaflet.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Saga"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3431,7 +4036,9 @@
       "https://www.drb-hicom.com/downloads/ar2017.pdf",
       "https://cms-assets.proton.com/proton-cms-blob/media/40ehguyc/all-new-saga-leaflet.pdf",
       "https://cms-assets.proton.com/proton-cms-blob/media/pilpye32/all-new-saga-owners-manual.pdf",
-      "https://proton.teamvaal.co.za/result/Articles/PROTON-SAGA-YOUR-PERFECT-CITY-COMPANION-19630?DateFormat=dd+MMM+yyyy&HAF=False"
+      "https://proton.teamvaal.co.za/result/Articles/PROTON-SAGA-YOUR-PERFECT-CITY-COMPANION-19630?DateFormat=dd+MMM+yyyy&HAF=False",
+      "https://en.wikipedia.org/wiki/Proton_Saga",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -3440,10 +4047,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3459,15 +4062,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3512,22 +4107,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3580,22 +4159,6 @@
       },
       {
         "field": "generations[2].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3807,19 +4370,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3916,10 +4471,6 @@
       },
       {
         "field": "generations[3].trims[1].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].trims[1].transmission.gears",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4053,22 +4604,80 @@
       {
         "code": null,
         "name": "Satria I",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 1994,
+        "to": 2005,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 1996,
+            "productionYear": null,
+            "name": "Modernizace",
+            "code": null,
+            "photo": null,
+            "note": "Přepracovaná záď; v Malajsii 1996, na dalších trzích později.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Satria"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G13"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G15"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G92"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "4G93 DOHC (GTi)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 3
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 3995,
+          "width": 1710,
+          "height": 1365,
+          "wheelbase": 2440
         },
         "specificationScope": {
           "market": "source-production",
@@ -4085,28 +4694,98 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Satria"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Satria Neo",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2006,
+        "to": 2015,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "variant": "CamPro S4PE"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 82,
+            "powerKwMax": 82,
+            "variant": "CamPro S4PH"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "variant": "CamPro CPS"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 3905,
+          "width": 1710,
+          "height": 1420,
+          "wheelbase": 2440
         },
         "specificationScope": {
           "market": "source-production",
@@ -4123,12 +4802,46 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Satria"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Satria"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Satria"
     ],
     "needsReview": [
       {
@@ -4140,43 +4853,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4208,43 +4885,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4287,28 +4932,58 @@
     "name": "Savvy",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Savvy je malý osobní automobil, který Proton uvedl v roce 2005. Dobová výroční zpráva rozlišuje manuální i robotizované provedení převodovky.",
+    "summaryCs": "Savvy je malý pětidveřový hatchback s motorem Renault 1,2 l, který Proton vyráběl v letech 2005–2011; exportní vozy dorazily do Spojeného království v září 2005. Dobová výroční zpráva rozlišuje manuální i robotizované provedení převodovky.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Savvy",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2005,
+        "to": 2011,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2007,
+            "productionYear": 2007,
+            "name": "Modernizace 2007",
+            "code": null,
+            "photo": null,
+            "note": "Uvedena 3. ledna 2007 na Tchaj-wanu a 19. ledna 2007 v Malajsii.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_Savvy"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 55,
+            "powerKwMax": 55,
+            "variant": "Renault D4F"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automated-manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 3710,
+          "width": 1643,
+          "height": 1480,
+          "wheelbase": 2395
         },
         "specificationScope": {
           "market": "source-production",
@@ -4326,13 +5001,55 @@
         "trims": null,
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006"
-        ]
+          "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006",
+          "https://en.wikipedia.org/wiki/Proton_Savvy",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_Savvy"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006"
+      "https://www.scribd.com/document/261100111/Annual-Report-of-PROTON-2006",
+      "https://en.wikipedia.org/wiki/Proton_Savvy",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -4344,43 +5061,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4425,9 +5106,9 @@
       {
         "code": null,
         "name": "Suprima S",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2013,
+        "to": 2019,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
@@ -4502,13 +5183,26 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.muziumnegara.gov.my/ms/kereta-proton-suprima-s"
-        ]
+          "https://www.muziumnegara.gov.my/ms/kereta-proton-suprima-s",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.muziumnegara.gov.my/ms/kereta-proton-suprima-s"
+      "https://www.muziumnegara.gov.my/ms/kereta-proton-suprima-s",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -4517,14 +5211,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4679,28 +5365,42 @@
     "name": "Tiara",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Tiara rozšířila historickou nabídku o malý osobní vůz. Uvedení je doloženo firemními milníky, úplná technická matice zůstává k doplnění.",
+    "summaryCs": "Tiara byl malý pětidveřový hatchback z let 1996–2000 odvozený od Citroënu AX, s motorem 1,1 l. Uvedení je doloženo firemními milníky.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Tiara",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1996,
+        "to": 2000,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.1,
+            "powerKwMin": 45,
+            "powerKwMax": 45,
+            "variant": "TU1"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 3525,
+          "width": 1555,
+          "height": 1355,
+          "wheelbase": 2290
         },
         "specificationScope": {
           "market": "source-production",
@@ -4717,12 +5417,51 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.proton.com/corporate/milestones"
-        ]
+          "https://www.proton.com/corporate/milestones",
+          "https://en.wikipedia.org/wiki/Proton_Tiara",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Tiara"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.proton.com/corporate/milestones"
+      "https://www.proton.com/corporate/milestones",
+      "https://en.wikipedia.org/wiki/Proton_Tiara",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -4734,43 +5473,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4809,7 +5516,7 @@
     "name": "Waja",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Waja je sedan vyvinutý značkou Proton. Její výrobní období je doloženo souhrnnou tabulkou výrobce.",
+    "summaryCs": "Waja je sedan vyvinutý značkou Proton (květen 2000 – červen 2011) na upravené platformě Mitsubishi Carisma / Volvo S40; v Evropě se prodával jako Proton Impian. Její výrobní období je doloženo souhrnnou tabulkou výrobce.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -4822,15 +5529,48 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 76,
+            "powerKwMax": 76,
+            "variant": "4G18 SOHC"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 82,
+            "powerKwMax": 82,
+            "variant": "CamPro S4PH"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "variant": "CamPro CPS"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "variant": "Renault F4P"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4470,
+          "width": 1740,
+          "height": 1420,
+          "wheelbase": 2600
         },
         "specificationScope": {
           "market": "source-production",
@@ -4848,13 +5588,36 @@
         "trims": null,
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
-        ]
+          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+          "https://en.wikipedia.org/wiki/Proton_Waja"
+        ],
+        "fieldSources": {
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Waja"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
+      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+      "https://en.wikipedia.org/wiki/Proton_Waja",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -4870,31 +5633,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4925,6 +5668,9 @@
         "field": "coverage",
         "reason": "Dílčí katalog primárních pramenů; historické motorizace, přesné tovární intervaly a fotografie nejsou kompletní. Neověřené hodnoty ponechány null."
       }
+    ],
+    "aliases": [
+      "Impian"
     ]
   },
   {
@@ -4933,11 +5679,11 @@
     "name": "Wira",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Wira doplnila nabídku o sedan a pětidveřový Aeroback. Názvosloví exportních modelů Persona vyžaduje odlišení od samostatné malajsijské Persony uvedené v roce 2007.",
+    "summaryCs": "Wira (1993–2009) doplnila nabídku o sedan a pětidveřový Aeroback na základě čtvrté generace Mitsubishi Lancer; ve Spojeném království a v Evropě se od listopadu 1993 prodávala jako Proton Persona. Toto exportní jméno je třeba odlišit od samostatné malajsijské Persony uvedené v roce 2007.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "C90",
         "name": "Wira / Aeroback",
         "from": 1993,
         "to": 2009,
@@ -4947,15 +5693,56 @@
           "sedan",
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G13"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4G15"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 83,
+            "powerKwMax": 83,
+            "variant": "4G92"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "variant": "4G93 DOHC"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "4D68"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4270,
+          "width": 1680,
+          "height": 1385,
+          "wheelbase": 2500
         },
         "specificationScope": {
           "market": "source-production",
@@ -4973,13 +5760,38 @@
         "trims": null,
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
-        ]
+          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+          "https://en.wikipedia.org/wiki/Proton_Wira"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_Wira"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
+      "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
+      "https://en.wikipedia.org/wiki/Proton_Wira"
     ],
     "needsReview": [
       {
@@ -4987,15 +5799,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5004,22 +5808,6 @@
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5058,15 +5846,15 @@
     "name": "X50",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "X50 je kompaktní SUV vyvinuté ve spolupráci s Geely. Výrazná modernizace v roce 2025 přinesla nový vzhled přídě, kabinu a čtyřválcový motor.",
+    "summaryCs": "X50 je kompaktní SUV vyráběné od září 2020, přeznačené Geely Binyue. Výrazná modernizace v roce 2025 přinesla nový vzhled přídě, kabinu a čtyřválcový motor.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "X50",
-        "from": null,
+        "from": 2020,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": [
           {
             "year": 2025,
@@ -5084,15 +5872,45 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1477,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "variant": "3cyl turbo PFI (do 2025)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1477,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "variant": "3cyl turbo GDi (do 2025)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 133,
+            "powerKwMax": 133,
+            "variant": "BHE15TD 4cyl turbo (od modernizace 2025)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": 4380,
           "width": 1795,
           "height": 1609,
-          "wheelbase": null
+          "wheelbase": 2600
         },
         "specificationScope": {
           "market": "source-production",
@@ -5156,14 +5974,40 @@
         "sources": [
           "https://www.proton.com/corporate/milestones",
           "https://cms-assets.proton.com/proton-cms-blob/media/axmbrvrf/all-new-proton-x50-leaflet.pdf",
-          "https://www.proton.com/happenings/2025/july/the-all-new-proton-x50-is-here-malaysia-s-no1-b-segment-suv-raises-the-bar-once-more"
-        ]
+          "https://www.proton.com/happenings/2025/july/the-all-new-proton-x50-is-here-malaysia-s-no1-b-segment-suv-raises-the-bar-once-more",
+          "https://en.wikipedia.org/wiki/Proton_X50",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_X50",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_X50",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/wiki/Proton_X50"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_X50"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_X50"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_X50"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
       "https://cms-assets.proton.com/proton-cms-blob/media/axmbrvrf/all-new-proton-x50-leaflet.pdf",
-      "https://www.proton.com/happenings/2025/july/the-all-new-proton-x50-is-here-malaysia-s-no1-b-segment-suv-raises-the-bar-once-more"
+      "https://www.proton.com/happenings/2025/july/the-all-new-proton-x50-is-here-malaysia-s-no1-b-segment-suv-raises-the-bar-once-more",
+      "https://en.wikipedia.org/wiki/Proton_X50",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -5172,10 +6016,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5191,19 +6031,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5294,23 +6122,69 @@
     "name": "X70",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "X70 zahájilo nabídku moderních SUV Proton. Řada prošla několika změnami pohonu; vybraná tabulka zde zachycuje čtyřválcovou nabídku roku 2026.",
+    "summaryCs": "X70 (od roku 2018, přeznačené Geely Boyue) zahájilo nabídku moderních SUV Proton. Řada prošla modernizací v roce 2024 a několika změnami pohonu; vybraná tabulka zde zachycuje čtyřválcovou nabídku roku 2026.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "X70",
-        "from": null,
+        "from": 2018,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2024,
+            "productionYear": 2024,
+            "name": "Modernizace 2024",
+            "code": null,
+            "photo": null,
+            "note": "Výrazná modernizace uvedená 2. srpna 2024.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Proton_X70"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 136,
+            "powerKwMax": 136,
+            "variant": "4G18TDB turbo (2018–2024)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "3cyl turbo (2022–2025)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 133,
+            "powerKwMax": 133,
+            "variant": "BHE15 4cyl turbo (od 2026)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "automatic",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -5377,13 +6251,40 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://cms-assets.proton.com/proton-cms-blob/media/vi2lsfge/2026-proton-x70-brochure.pdf"
-        ]
+          "https://cms-assets.proton.com/proton-cms-blob/media/vi2lsfge/2026-proton-x70-brochure.pdf",
+          "https://en.wikipedia.org/wiki/Proton_X70",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_X70",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_X70",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_X70",
+            "https://cms-assets.proton.com/proton-cms-blob/media/vi2lsfge/2026-proton-x70-brochure.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_X70"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_X70"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/wiki/Proton_X70"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://cms-assets.proton.com/proton-cms-blob/media/vi2lsfge/2026-proton-x70-brochure.pdf"
+      "https://cms-assets.proton.com/proton-cms-blob/media/vi2lsfge/2026-proton-x70-brochure.pdf",
+      "https://en.wikipedia.org/wiki/Proton_X70",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -5395,27 +6296,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5552,17 +6437,39 @@
       {
         "code": null,
         "name": "X90",
-        "from": null,
+        "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol-mhev",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "3G15TDB tříválec turbo, 48V mild hybrid (do 2025)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 133,
+            "powerKwMax": 133,
+            "variant": "BHE15-EFZ čtyřválec turbo (od 2026)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": 4830,
           "width": 1900,
@@ -5715,13 +6622,37 @@
         ],
         "sources": [
           "https://www.proton.com/corporate/milestones",
-          "https://cms-assets.proton.com/proton-cms-blob/media/lzkpxp31/2026-proton-x90-leaflet.pdf"
-        ]
+          "https://cms-assets.proton.com/proton-cms-blob/media/lzkpxp31/2026-proton-x90-leaflet.pdf",
+          "https://en.wikipedia.org/wiki/Proton_X90",
+          "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Proton_X90",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Proton_X90",
+            "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/wiki/Proton_X90",
+            "https://cms-assets.proton.com/proton-cms-blob/media/lzkpxp31/2026-proton-x90-leaflet.pdf"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/wiki/Proton_X90"
+          ],
+          "transmissions": [
+            "https://en.wikipedia.org/wiki/Proton_X90"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.proton.com/corporate/milestones",
-      "https://cms-assets.proton.com/proton-cms-blob/media/lzkpxp31/2026-proton-x90-leaflet.pdf"
+      "https://cms-assets.proton.com/proton-cms-blob/media/lzkpxp31/2026-proton-x90-leaflet.pdf",
+      "https://en.wikipedia.org/wiki/Proton_X90",
+      "https://en.wikipedia.org/wiki/List_of_Proton_vehicles"
     ],
     "needsReview": [
       {
@@ -5733,10 +6664,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5745,15 +6672,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -85,7 +85,7 @@
     "trims": [
      {
       "name": "1.3 65 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2005,
       "to": 2010,
       "bodyType": "suv",
@@ -172,7 +172,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],
@@ -218,7 +218,7 @@
     "trims": [
      {
       "name": "1.3 68 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2010,
       "to": 2013,
       "bodyType": "suv",
@@ -261,7 +261,7 @@
      },
      {
       "name": "1.5 78 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2010,
       "to": 2013,
       "bodyType": "suv",
@@ -406,7 +406,7 @@
    {
     "code": null,
     "name": "M300",
-    "from": null,
+    "from": 2009,
     "to": 2013,
     "productionStatus": "ended",
     "facelift": null,
@@ -456,12 +456,13 @@
     "photo": null,
     "sources": [
      "https://en.wikipedia.org/wiki/Fiat_Multipla",
-     "https://en.wikipedia.org/wiki/Zotye_Auto"
+     "https://en.wikipedia.org/wiki/Zotye_Auto",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
     ],
     "trims": [
      {
       "name": "E300 EV",
-      "kind": "version",
+      "kind": "technical-version",
       "from": null,
       "to": null,
       "bodyType": "mpv",
@@ -502,7 +503,12 @@
        "https://en.wikipedia.org/wiki/Fiat_Multipla"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "from": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+     ]
+    }
    }
   ],
   "sources": [
@@ -513,10 +519,6 @@
    {
     "field": "lineSlug",
     "noteCs": "Řada chybí v model-lines-auto.json i model-line-additions.json; slug převzat z models-auto.json bez předpony značky."
-   },
-   {
-    "field": "generations[0].from",
-    "noteCs": "Článek o Multiple uvádí výrobu Zotye 2008–2013, článek o značce 2009–2013; začátek ponechán null."
    },
    {
     "field": "generations[0].dimensionsMm",
@@ -627,7 +629,7 @@
     "trims": [
      {
       "name": "1.0 42 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2013,
       "to": 2017,
       "bodyType": "hatchback",
@@ -670,7 +672,7 @@
      },
      {
       "name": "Z100 EV 27 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2015,
       "to": null,
       "bodyType": "hatchback",
@@ -713,7 +715,7 @@
      },
      {
       "name": "Cloud 100 45 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2018,
       "to": 2019,
       "bodyType": "hatchback",
@@ -986,7 +988,7 @@
     "trims": [
      {
       "name": "1.5 82 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2014,
       "to": null,
       "bodyType": "sedan",
@@ -1105,7 +1107,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],
@@ -1149,7 +1151,7 @@
     "trims": [
      {
       "name": "Z560 1.5T 110 kW CVT",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2017,
       "to": null,
       "bodyType": "sedan",
@@ -1162,7 +1164,7 @@
        "torqueNm": 200
       },
       "transmission": {
-       "type": "cvt",
+       "type": "automatic",
        "gears": null
       },
       "drive": "fwd",
@@ -1192,7 +1194,7 @@
      },
      {
       "name": "Z560 1.5T 106 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2017,
       "to": null,
       "bodyType": "sedan",
@@ -1270,7 +1272,19 @@
     "from": 2015,
     "to": 2021,
     "productionStatus": "ended",
-    "facelift": null,
+    "facelift": [
+     {
+      "year": 2018,
+      "to": null,
+      "name": "Z700H",
+      "code": null,
+      "productionYear": null,
+      "note": "Modernizace s drobnými úpravami exteriéru a interiéru, prodávaná jako Z700H.",
+      "sources": [
+       "https://en.wikipedia.org/w/index.php?title=Zotye_Z700&oldid=1327157319"
+      ]
+     }
+    ],
     "bodyTypes": [
      "sedan"
     ],
@@ -1332,9 +1346,15 @@
      ]
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/Zotye_Z700"
+     "https://en.wikipedia.org/wiki/Zotye_Z700",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Z700&oldid=1327157319"
     ],
-    "trims": []
+    "trims": [],
+    "fieldSources": {
+     "facelift": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Z700&oldid=1327157319"
+     ]
+    }
    }
   ],
   "sources": [
@@ -1390,7 +1410,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],
@@ -1420,7 +1440,7 @@
     "trims": [
      {
       "name": "1.5T 82 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2016,
       "to": 2021,
       "bodyType": "suv",
@@ -1484,13 +1504,13 @@
   "name": "T500",
   "isAddition": true,
   "segment": "C-SUV",
-  "summaryCs": "Zotye T500 je kompaktní SUV představené v roce 2017 a prodávané od roku 2018. Poháněl ho přeplňovaný motor 1,5 l s manuální nebo automatickou převodovkou.",
+  "summaryCs": "Zotye T500 je kompaktní SUV představené v roce 2017 a prodávané od března 2018. Poháněl ho přeplňovaný motor 1,5 l s manuální nebo automatickou převodovkou.",
   "coverage": "pilot-partial",
   "generations": [
    {
     "code": null,
     "name": "T500",
-    "from": 2017,
+    "from": 2018,
     "to": 2021,
     "productionStatus": "ended",
     "facelift": null,
@@ -1555,13 +1575,20 @@
      ]
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/Zotye_T500"
+     "https://en.wikipedia.org/wiki/Zotye_T500",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
     ],
-    "trims": []
+    "trims": [],
+    "fieldSources": {
+     "from": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+     ]
+    }
    }
   ],
   "sources": [
-   "https://en.wikipedia.org/wiki/Zotye_T500"
+   "https://en.wikipedia.org/wiki/Zotye_T500",
+   "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
   ],
   "needsReview": [
    {
@@ -1589,7 +1616,7 @@
   ],
   "isAddition": true,
   "segment": "D-SUV",
-  "summaryCs": "Zotye T600 je středně velké SUV z roku 2013 a nejprodávanější model značky, vzhledem připomínající Audi Q5 a VW Touareg. Vznikly varianty Sport a Coupe; po modernizaci v roce 2018 zůstala jen verze Coupe pod názvem T600.",
+  "summaryCs": "Zotye T600 je středně velké SUV z roku 2013 a nejprodávanější model značky, vzhledem připomínající Audi Q5 a VW Touareg. Vznikly varianty Sport a Coupe; po modernizaci v roce 2018 zůstala jen verze Coupe pod názvem T600. Výroba skončila s útlumem automobilky (bankrot 2021, obnovení 2022, zastavení výroby v červnu 2025).",
   "coverage": "pilot-partial",
   "generations": [
    {
@@ -1597,7 +1624,7 @@
     "name": "T600",
     "from": 2013,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "ended",
     "facelift": [
      {
       "year": 2018,
@@ -1699,12 +1726,14 @@
     },
     "sources": [
      "https://en.wikipedia.org/wiki/Zotye_T600",
-     "https://www.auto-data.net/en/zotye-t600-1.5-162hp-33770"
+     "https://www.auto-data.net/en/zotye-t600-1.5-162hp-33770",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_T600&oldid=1372066484"
     ],
     "trims": [
      {
       "name": "1.5T 119 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2013,
       "to": null,
       "bodyType": "suv",
@@ -1747,7 +1776,7 @@
      },
      {
       "name": "2.0T 130 kW DCT",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2015,
       "to": null,
       "bodyType": "suv",
@@ -1789,12 +1818,20 @@
        "https://en.wikipedia.org/wiki/Zotye_T600"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "productionStatus": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+      "https://en.wikipedia.org/w/index.php?title=Zotye_T600&oldid=1372066484"
+     ]
+    }
    }
   ],
   "sources": [
    "https://en.wikipedia.org/wiki/Zotye_T600",
-   "https://www.auto-data.net/en/zotye-t600-generation-6411"
+   "https://www.auto-data.net/en/zotye-t600-generation-6411",
+   "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+   "https://en.wikipedia.org/w/index.php?title=Zotye_T600&oldid=1372066484"
   ],
   "needsReview": [
    {
@@ -1914,7 +1951,7 @@
     "trims": [
      {
       "name": "1.8T 130 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2017,
       "to": null,
       "bodyType": "suv",
@@ -1957,7 +1994,7 @@
      },
      {
       "name": "2.0T 140 kW DCT",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2017,
       "to": null,
       "bodyType": "suv",
@@ -2153,7 +2190,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],
@@ -2356,7 +2393,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],
@@ -2605,7 +2642,7 @@
     "trims": [
      {
       "name": "E200 60 kW",
-      "kind": "version",
+      "kind": "technical-version",
       "from": 2016,
       "to": 2021,
       "bodyType": "hatchback",
@@ -2628,8 +2665,8 @@
        "height": 1630,
        "wheelbase": 1810
       },
-      "massKg": null,
-      "massBasis": null,
+      "massKg": 1080,
+      "massBasis": "kerb",
       "topSpeedKmh": 150,
       "acceleration0to100s": null,
       "consumptionL100": null,
@@ -2643,8 +2680,14 @@
        "noteCs": "Dojezd a rychlost podle údajů výrobce citovaných Wikipedií; cyklus neuveden."
       },
       "sources": [
-       "https://en.wikipedia.org/wiki/Zotye_E200"
-      ]
+       "https://en.wikipedia.org/wiki/Zotye_E200",
+       "https://en.wikipedia.org/w/index.php?title=Zotye_E200&oldid=1346761066"
+      ],
+      "fieldSources": {
+       "massKg": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_E200&oldid=1346761066"
+       ]
+      }
      }
     ]
    }
@@ -2679,9 +2722,9 @@
    {
     "code": null,
     "name": "E30",
-    "from": null,
+    "from": 2016,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "ended",
     "facelift": null,
     "bodyTypes": [
      "hatchback"
@@ -2733,9 +2776,22 @@
      ]
     },
     "sources": [
-     "https://en.wikipedia.org/wiki/Zotye_Auto"
+     "https://en.wikipedia.org/wiki/Zotye_Auto",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+     "https://en.wikipedia.org/w/index.php?oldid=1369498338",
+     "https://carnewschina.com/2016/06/28/a-hip-little-zotye-zhima-e30-ev-in-china/"
     ],
-    "trims": []
+    "trims": [],
+    "fieldSources": {
+     "from": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+      "https://en.wikipedia.org/w/index.php?oldid=1369498338",
+      "https://carnewschina.com/2016/06/28/a-hip-little-zotye-zhima-e30-ev-in-china/"
+     ],
+     "productionStatus": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+     ]
+    }
    }
   ],
   "sources": [
@@ -2770,7 +2826,7 @@
     "name": "V10",
     "from": 2011,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "ended",
     "facelift": null,
     "bodyTypes": [
      "mpv"
@@ -2799,9 +2855,15 @@
     "marketNotesCs": "Prodáván v Číně; do Evropy oficiálně nedovážen.",
     "photo": null,
     "sources": [
-     "https://en.wikipedia.org/wiki/Zotye_Auto"
+     "https://en.wikipedia.org/wiki/Zotye_Auto",
+     "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
     ],
-    "trims": []
+    "trims": [],
+    "fieldSources": {
+     "productionStatus": [
+      "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+     ]
+    }
    }
   ],
   "sources": [
@@ -2957,7 +3019,7 @@
       "gears": 5
      },
      {
-      "type": "cvt",
+      "type": "automatic",
       "gears": null
      }
     ],

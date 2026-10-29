@@ -1,0 +1,240 @@
+{
+  "make": "wuling-motors",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": 1998,
+      "to": 1982,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Motors",
+        "https://www.wikidata.org/wiki/Q3817853"
+      ],
+      "confidence": "medium",
+      "note": "Wikidata P571 says 1998 (likely the listed holding company). en.wikipedia says the Wuling brand was established in 1982 by Liuzhou Wuling Automobile.",
+      "verify": "confirmed (medium): en.wikipedia Wuling_Motors infobox Founded 1982 and 'The Wuling car brand was established in 1982 by Liuzhou Wuling Automobile'. Caveat: 1998 is the holding company Q3817853 (enwiki category 'companies established in 1998'); if qid stays Q3817853, record 1982 as the brand year in the conflict note"
+    },
+    {
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Wuling",
+        "SAIC-GM-Wuling",
+        "Wuling Motors Holdings"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Motors"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia Wuling_Motors (Wuling Motor Holdings, d/b/a Wuling Motors); en.wikipedia SAIC-GM-Wuling notes both companies use the Wuling brand"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "wuling-bingo",
+      "field": "name/aliases",
+      "from": "Wuling Bingo",
+      "to": "Wuling Binguo (alias Bingo)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Binguo"
+      ],
+      "confidence": "medium",
+      "note": "The card line slug is binguo.",
+      "verify": "confirmed: en.wikipedia Wuling_Binguo 'commonly mentioned in English sources as the Wuling Bingo'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "wuling-hongguang-mini-ev",
+      "field": "productionStart",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Hongguang_Mini_EV"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: models-auto inceptionYear is already 2020; en.wikipedia Wuling_Hongguang_Mini_EV first generation from 2020"
+    },
+    {
+      "file": "models-auto",
+      "slug": "wuling-victory",
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Kaijie"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Victory"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Wuling_Victory 'Chinese: 五菱凯捷; pinyin: Wǔlíng Kǎijié'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "wuling-asta",
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Xingchen"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Asta"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Wuling_Asta 'Also called: Wuling Xingchen' (五菱星辰)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "wuling-alvez",
+      "reason": "Duplicate of wuling-xingchi. The Alvez is the Indonesian/Brunei name of the Xingchi; the card line is 'xingchi' with alias Alvez.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q117816084",
+        "https://www.wikidata.org/wiki/Q114036134"
+      ],
+      "verify": "confirmed: en.wikipedia Wuling_Xingchi 'In Indonesia, the Xingchi is sold as the Wuling Alvez'"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Wuling Sunshine (Zhiguang)",
+      "from": 2002,
+      "to": null,
+      "bodyTypes": [
+        "mpv",
+        "dodavka"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Sunshine"
+      ],
+      "verify": "confirmed: en.wikipedia Wuling_Sunshine nameplate 2002-present, microvan/van"
+    },
+    {
+      "name": "Wuling Cortez",
+      "from": 2018,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Baojun_730"
+      ]
+    },
+    {
+      "name": "Wuling Almaz",
+      "from": 2019,
+      "to": 2026,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Baojun_530"
+      ],
+      "verify": "confirmed: en.wikipedia Baojun_530 Indonesian launch 27 Feb 2019, replaced on 5 Feb 2026 by the Wuling Eksion (rebadged Starlight 560)"
+    },
+    {
+      "name": "Wuling Cloud EV",
+      "from": 2024,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Baojun_Yunduo"
+      ]
+    },
+    {
+      "name": "Wuling Starlight 560 (Eksion)",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Starlight_560"
+      ]
+    },
+    {
+      "name": "Wuling Hongguang S1 / Confero",
+      "from": 2015,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Confero"
+      ],
+      "verify": "confirmed with correction: en.wikipedia Wuling_Confero, China launch 20 Aug 2015 but discontinued in China early 2017; production 2017-present only in Indonesia (Confero). Body is a 5-door wagon/MPV"
+    },
+    {
+      "name": "Wuling Binguo Plus",
+      "from": 2024,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Binguo"
+      ],
+      "verify": "plausible, not fully confirmed: en.wikipedia Wuling_Binguo lists Binguo Plus as a related crossover/SUV model, but gives no year"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "hongguang",
+      "path": "generations[0].to / productionStatus",
+      "from": [
+        2013,
+        "ended"
+      ],
+      "to": [
+        null,
+        "unknown"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Hongguang"
+      ],
+      "note": "The first generation continued as the Hongguang S (2013 facelift) and later as the Hongguang S Classic alongside the second generation (2019-present per en.wikipedia). The end year is not established.",
+      "verify": "confirmed: en.wikipedia Wuling_Hongguang infobox '2010-present (Hongguang S)', alias 'Hongguang S Classic (2019-present)', and the first-generation S 'was sold alongside as the Wuling Hongguang S Classic'. 'present' is unsourced, so unknown/null is the honest value; 2013/ended was wrong"
+    },
+    {
+      "lineSlug": "hongguang-mini-ev",
+      "path": "summaryCs",
+      "from": "...druhá generace ... přišla v roce 2025.",
+      "to": "...druhá generace ... byla představena a zavedena do výroby v prosinci 2024, prodej začal v únoru 2025.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wuling_Hongguang_Mini_EV"
+      ],
+      "note": "The summary contradicted generations[1].from = 2024.",
+      "verify": "confirmed: en.wikipedia Wuling_Hongguang_Mini_EV 'unveiled in December 2024 and launched on 22 February 2025', production from Dec 2024"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "make foundedYear",
+      "values": {
+        "wikidata Q3817853": 1998,
+        "en.wikipedia Wuling Motors": 1982
+      },
+      "kept": 1998
+    },
+    {
+      "where": "almaz successor (Eksion)",
+      "values": {
+        "en.wikipedia Baojun 530 / Starlight 560": "Eksion succeeds Almaz",
+        "katadata.co.id pre-launch reports": "Eksion possibly a separate line; Starlight 560 = 'Almaz Darion'"
+      },
+      "kept": "Eksion succeeds Almaz (card unchanged)"
+    }
+  ],
+  "openQuestions": [
+    "Is the Jiachen (730M) still in production now that the Starlight 730 is named its successor (en.wikipedia)? The card keeps it as current.",
+    "Is the Hongguang S1/Confero still produced in Indonesia in 2026? The card keeps it as current without a dated source.",
+    "Should Wuling stay in the 'auto' section? The brand has no official EU sales. The only European link is the Lithuanian-assembled Freze Nikrob, based on the Hongguang Mini EV.",
+    "Most models-auto entries for Wuling lack years and body types. The cards have them; the shared file could be back-filled from the cards in the final pass."
+  ],
+  "summary": "The cards were mostly consistent with en.wikipedia. Spot checks confirmed the Mini EV II / Aira photo, the Asta, Jiachen and Victory codes and engines, the Cortez/730 history and the Starlight 560 = MG Hector Tomahawk. Fixed: the Hongguang first-generation end (2013 -> unknown, still sold as the S/S Classic) and a Mini EV summary date. Proposed: the founding year (1998 vs 1982), the Alvez/Xingchi duplicate and 7 missing lines."
+}

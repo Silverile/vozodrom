@@ -1,0 +1,21 @@
+# Round 6: bounded Lexus / Dodge depth
+
+2026-10-29. Lexus: 17 logged edits (8 data, 9 maintenance); Dodge: 9 (2 data, 7 maintenance). One CT technical version added, one CT engine summary and three Caliber engine summaries added. Three existing Caliber technical rows independently corroborated for fuel, displacement, power, torque, drive and transmission type. No complete make or generation claim.
+
+Lexus LC coupe and convertible were incorrectly marked current. Both now end in 2026: [OEM Japanese LC page](https://lexus.jp/models/lc/) explicitly marks every LC version sales-ended; [OEM factory-delivery list updated 2026-10-23](https://lexus.jp/news/info/delivery/) excludes LC. [Road & Track](https://www.roadandtrack.com/news/a70202730/lexus-lc-500-production-ends-august-2026/) independently obtained Lexus confirmation of final model year and reports the OEM dealer letter production schedule ending August2026. This is an announced production schedule corroborated by current OEM sales cessation, not inspection of a last-unit certificate.
+
+Earlier start-year changes rechecked:
+
+- IS SportCross 2001 retained: contemporary [OEM press release](https://media.lexus.co.uk/lexus-is300-and-sportcross-redefining-compact-luxury-saloons/) documents normal October2001 retail; Toyota's [Gita lineage](https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60000183/index.html) starts July2001. Exact Lexus factory start month remains unverified; Toyota-badged release alone does not prove Lexus production.
+- LC Convertible 2020 retained: [OEM manual index](https://manual.lexus.jp/lc/) expressly states production from June2020, plus [Japanese release](https://global.toyota/jp/newsroom/lexus/32732194.html) July2020 retail. 2019 prototype and reveal do not change production year.
+- RX L 2017 retained: [Japanese OEM launch](https://global.toyota/jp/newsroom/lexus/20116694.html) December7,2017 and [OEM manual production index](https://manual.lexus.jp/rx/) December2017 corroborate. UK2018 is regional launch. Earlier NHTSA PDF inaccessible this pass.
+
+CT data: [OEM technical sheet](https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1612176799210129MCTTechSpec.pdf), [EU brochure](https://l1-movies.lexus-europe.com/media/downloads/ct-brochure.pdf), [ADAC specification and test](https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lexus/ct/a10-facelift/240421/). 1798cc, 73kW/142Nm combustion engine; 100kW hybrid system; FWD e-CVT; 180km/h, 10.3s. Engine-summary power denotes system output; trim engine power explicitly denotes combustion output. No invented combined torque or e-CVT gear count. Mass/dimensions/consumption left null in new trim because facelift, equipment and conventions differ.
+
+Caliber: existing [OEM September2006 EU technical sheet](https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/dodge_caliber_specificationsONA.pdf) technical rows retain mass/performance. Independently corroborated engine/drive/transmission-type values using the [ADAC September2009 MY2010 report](https://www.mit-pferden-reisen.de/files/Zugfahrzeuge_ADACliste_ab400.pdf), including report legend. Later 2.2CRD and SRT4 are outside this bounded engine-summary set, engineCoverage remains partial.
+
+Commons CT description/date/credit/license and Caliber description/date/credit/license opened and checked. CT is February2011 CT200h; Caliber is ordinary 2008 body photographed in Pennsylvania, matching international generation, not proving EU trim. Prior visual reviews retained; no new visual review claim or image replacement.
+
+Verification: `node analysis/sweep/codex/round6-lexus-dodge-verify.cjs` passed exact before-value audit replay for 17/9 edits, preservation of all pre-round report arrays, and strict TypeScript catalogue types for both entire make files. Transient type-check file removed. No tsconfig.tsbuildinfo write.
+
+Remaining: 18 Lexus lines without new technical row; IS factory start month; CT facelift/code/end year source reconciliation and other photos; all 81 other Dodge lines, Caliber later engines and independent mass/performance corroboration. Every source in existence cannot be exhaustively searched; this is a source-backed partial pass.

@@ -1,0 +1,107 @@
+{
+  "make": "polestar",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-line-additions",
+      "slug": "2",
+      "field": "to/productionStatus",
+      "from": [
+        null,
+        "current"
+      ],
+      "to": [
+        2026,
+        "ended"
+      ],
+      "sources": [
+        "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (medium): de-wiki Polestar_2 technical table: last build window 06/2024-05/2026; en-wiki Polestar_2: second generation announced Feb 2026 for a 2027 launch (neither states the end outright, medium confidence)"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 1,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "2",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2026,
+      "sources": [
+        "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+      ],
+      "verify": "confirmed (medium): de-wiki Polestar_2 technical table: last build window 06/2024-05/2026; en-wiki Polestar_2: second generation announced Feb 2026 for a 2027 launch (neither states the end outright, medium confidence)"
+    },
+    {
+      "lineSlug": "2",
+      "path": "generations[0].productionStatus",
+      "from": "current",
+      "to": "ended",
+      "sources": [
+        "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+      ],
+      "verify": "confirmed (medium): de-wiki Polestar_2 technical table: last build window 06/2024-05/2026; en-wiki Polestar_2: second generation announced Feb 2026 for a 2027 launch (neither states the end outright, medium confidence)"
+    },
+    {
+      "lineSlug": "2",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2023,
+          "to": null,
+          "productionYear": null,
+          "note": "Modernizace pro modelový rok 2024: přední část SmartZone, jednomotorové verze přešly na pohon zadních kol, vyšší výkon a dojezd.",
+          "sources": [
+            "https://www.yorkshirepost.co.uk/lifestyle/cars/polestar-2-update-improved-power-range-and-performance-4002682"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.yorkshirepost.co.uk/lifestyle/cars/polestar-2-update-improved-power-range-and-performance-4002682"
+      ],
+      "verify": "confirmed: en-wiki Polestar_2 and de-wiki Polestar_2: facelift revealed January 2023 for MY2024 (RWD single motor, 82 kWh, new front)"
+    },
+    {
+      "lineSlug": "2",
+      "path": "summaryCs",
+      "from": "Polestar 2 je elektrický pětidveřový fastback. Jednomotorové verze původně poháněly přední kola; pozdější technická modernizace přešla u těchto verzí na pohon zadních kol.",
+      "to": "Polestar 2 je elektrický pětidveřový fastback. Jednomotorové verze původně poháněly přední kola; pozdější technická modernizace přešla u těchto verzí na pohon zadních kol. Výroba v Číně skončila v roce 2026 po více než 200 tisících kusů; nástupce je ohlášen na rok 2027.",
+      "sources": [
+        "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+      ],
+      "verify": "confirmed (medium): de-wiki Polestar_2 technical table: last build window 06/2024-05/2026; en-wiki Polestar_2: second generation announced Feb 2026 for a 2027 launch (neither states the end outright, medium confidence)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Polestar 2 end of production",
+      "values": {
+        "TV2 Broom via driveteslacanada (2026-10-24)": "ended 2026",
+        "Polestar markets (2026 MY still sold)": "on sale"
+      },
+      "kept": 2026
+    }
+  ],
+  "openQuestions": [
+    "Make foundedYear 1996 is Flash Engineering (racing team); Polestar as a car brand dates from 2017 — decide which the catalogue shows.",
+    "Polestar 2 successor announced for early 2027; add as new generation when produced."
+  ],
+  "summary": "Polestar 2 marked ended 2026 (secondhand report, medium confidence) and given its MY2024 facelift; Polestar 4 SUV (Busan, Q2 2026) confirmed; other cards matched sources."
+}

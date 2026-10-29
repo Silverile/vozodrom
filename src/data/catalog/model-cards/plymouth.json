@@ -5,17 +5,19 @@
     "name": "Acclaim",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Acclaim je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Acclaim byl střední sedan prodávaný pro modelové roky 1989–1995. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Acclaim – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Acclaim – rodina MY1989–1995, vybrané záznamy EPA",
+        "from": 1989,
+        "to": 1995,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -418,8 +420,25 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/9063",
           "https://www.fueleconomy.gov/ws/rest/vehicle/9064",
           "https://www.fueleconomy.gov/ws/rest/vehicle/11987",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/11988"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/11988",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -430,7 +449,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/9063",
       "https://www.fueleconomy.gov/ws/rest/vehicle/9064",
       "https://www.fueleconomy.gov/ws/rest/vehicle/11987",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/11988"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/11988",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -438,23 +459,11 @@
         "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
       },
       {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
-      },
-      {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1126,15 +1135,15 @@
     "name": "Barracuda",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Barracuda byla sportovní rodina Plymouthu vyráběná v šedesátých a sedmdesátých letech. Druhá generace nabízela uzavřené i otevřené karoserie; katalog 1970 dokládá další podobu včetně výkonných verzí Cuda.",
+    "summaryCs": "Plymouth Barracuda byl dvoudveřový sportovní vůz vyráběný pro modelové roky 1964–1974 ve třech generacích: první jako fastback kupé (1964–1966), druhá i jako hardtop a kabriolet (1967–1969) a třetí na platformě E jako hardtop a kabriolet včetně výkonných verzí ’Cuda (1970–1974).",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Barracuda – raná řada od 1964",
+        "name": "Barracuda – 1. generace (MY1964–1966)",
         "from": 1964,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1966,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -1162,12 +1171,30 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://tnmot.org/collection/plymouth-barracuda/"
-        ]
+          "https://tnmot.org/collection/plymouth-barracuda/",
+          "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       },
       {
         "code": null,
-        "name": "Barracuda – druhá generace",
+        "name": "Barracuda – 2. generace (MY1967–1969)",
         "from": 1967,
         "to": 1969,
         "productionStatus": "ended",
@@ -1199,13 +1226,31 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://tnmot.org/collection/plymouth-barracuda/"
-        ]
+          "https://tnmot.org/collection/plymouth-barracuda/",
+          "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       },
       {
         "code": null,
-        "name": "Barracuda / Cuda – doložený MY1970",
-        "from": null,
+        "name": "Barracuda / Cuda – 3. generace (MY1970–1974), doložený MY1970",
+        "from": 1970,
         "to": 1974,
         "productionStatus": "ended",
         "facelift": null,
@@ -1367,13 +1412,34 @@
         ],
         "sources": [
           "https://over-drive-magazine.com/wp-content/uploads/2024/04/1970-Plymouth-Barracuda-1-12C.pdf",
-          "https://tnmot.org/collection/plymouth-barracuda/"
-        ]
+          "https://tnmot.org/collection/plymouth-barracuda/",
+          "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
       "https://tnmot.org/collection/plymouth-barracuda/",
-      "https://over-drive-magazine.com/wp-content/uploads/2024/04/1970-Plymouth-Barracuda-1-12C.pdf"
+      "https://over-drive-magazine.com/wp-content/uploads/2024/04/1970-Plymouth-Barracuda-1-12C.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Barracuda",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -1386,10 +1452,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1510,10 +1572,6 @@
       },
       {
         "field": "generations[2].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1845,15 +1903,15 @@
     "name": "Belvedere",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Belvedere patřila k osobním řadám značky Plymouth. Katalog 1970 dokládá sedany, kupé i kombi.",
+    "summaryCs": "Plymouth Belvedere byla osobní řada vyráběná pro modelové roky 1954–1970, do roku 1961 jako velký vůz, od roku 1962 jako střední třída. Poslední generace (1968–1970) se nabízela jako sedan, kupé a kombi; od Belvedere se odvozovaly i Satellite, GTX a Road Runner.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Belvedere – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Belvedere – 7. generace (MY1968–1970), doložený MY1970",
+        "from": 1968,
+        "to": 1970,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -1927,12 +1985,33 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_Belvedere",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Belvedere",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Belvedere",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Belvedere",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Belvedere",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -1945,14 +2024,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2099,17 +2170,19 @@
     "name": "Breeze",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Breeze je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Breeze byl střední sedan prodávaný pro modelové roky 1996–2000. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Breeze – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Breeze – rodina MY1996–2000, vybrané záznamy EPA",
+        "from": 1996,
+        "to": 2000,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -2548,8 +2621,25 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/14347",
           "https://www.fueleconomy.gov/ws/rest/vehicle/15945",
           "https://www.fueleconomy.gov/ws/rest/vehicle/15947",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/15946"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/15946",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -2561,7 +2651,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/14347",
       "https://www.fueleconomy.gov/ws/rest/vehicle/15945",
       "https://www.fueleconomy.gov/ws/rest/vehicle/15947",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/15946"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/15946",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -2569,23 +2661,11 @@
         "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
       },
       {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
-      },
-      {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3317,15 +3397,15 @@
     "name": "Caravelle",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Caravelle je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Caravelle byl střední vůz prodávaný pro modelové roky 1983–1989. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Caravelle – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Caravelle – rodina MY1983–1989, vybrané záznamy EPA",
+        "from": 1983,
+        "to": 1989,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -3774,8 +3854,23 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/3425",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5766",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5767",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/5768"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/5768",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://www.fueleconomy.gov/ws/rest/vehicle/5766"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3787,7 +3882,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/3425",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5766",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5767",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/5768"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/5768",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -3804,14 +3901,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4555,15 +4644,15 @@
     "name": "Colt",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Colt je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Colt byl přeznačený vůz Mitsubishi (Galant, Lancer, Mirage/Colt) prodávaný v Kanadě od roku 1976 a v USA od modelového roku 1977 do 1994 v několika generacích hatchbacků, sedanů i kombi. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Colt – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Colt – rodina MY1976–1994, vybrané záznamy EPA",
+        "from": 1976,
+        "to": 1994,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -5064,8 +5153,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/10792",
           "https://www.fueleconomy.gov/ws/rest/vehicle/10791",
           "https://www.fueleconomy.gov/ws/rest/vehicle/6361",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/7421"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/7421",
+          "https://en.wikipedia.org/wiki/Plymouth_Colt",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Colt"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Colt"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Colt",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -5078,7 +5181,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/10792",
       "https://www.fueleconomy.gov/ws/rest/vehicle/10791",
       "https://www.fueleconomy.gov/ws/rest/vehicle/6361",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/7421"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/7421",
+      "https://en.wikipedia.org/wiki/Plymouth_Colt",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -5095,14 +5200,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5942,17 +6039,19 @@
     "name": "Colt Vista",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Colt Vista je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Colt Vista byl kompaktní MPV prodávaný pro modelové roky 1984–1994. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Colt Vista – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Colt Vista – rodina MY1984–1994, vybrané záznamy EPA",
+        "from": 1984,
+        "to": 1994,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -6355,8 +6454,25 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/5846",
           "https://www.fueleconomy.gov/ws/rest/vehicle/11150",
           "https://www.fueleconomy.gov/ws/rest/vehicle/11152",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/11153"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/11153",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -6367,7 +6483,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/5846",
       "https://www.fueleconomy.gov/ws/rest/vehicle/11150",
       "https://www.fueleconomy.gov/ws/rest/vehicle/11152",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/11153"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/11153",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -6375,23 +6493,11 @@
         "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
       },
       {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
-      },
-      {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7083,15 +7189,15 @@
     "name": "Conquest",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Conquest je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Conquest byl sportovní vůz prodávaný pro modelové roky 1984–1986. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Conquest – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Conquest – rodina MY1984–1986, vybrané záznamy EPA",
+        "from": 1984,
+        "to": 1986,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -7480,8 +7586,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/193",
           "https://www.fueleconomy.gov/ws/rest/vehicle/194",
           "https://www.fueleconomy.gov/ws/rest/vehicle/1883",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/1884"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/1884",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -7492,7 +7612,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/193",
       "https://www.fueleconomy.gov/ws/rest/vehicle/194",
       "https://www.fueleconomy.gov/ws/rest/vehicle/1883",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/1884"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/1884",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -7509,14 +7631,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8181,10 +8295,10 @@
     "generations": [
       {
         "code": null,
-        "name": "Duster – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Duster (MY1970–1976), doložený MY1970",
+        "from": 1970,
+        "to": 1976,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -8256,12 +8370,28 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -8274,14 +8404,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8428,15 +8550,15 @@
     "name": "Fury",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Fury začínala jako sportovněji zaměřené provedení Belvedere a následně se stala samostatnou řadou. Záznam zahrnuje ranou historii i vybrané karoserie z katalogu modelového roku 1970.",
+    "summaryCs": "Plymouth Fury začínal v letech 1956–1958 jako sportovní dvoudveřový hardtop v řadě Belvedere a od roku 1959 byl samostatnou řadou velkých, v letech 1962–1964 a 1975–1978 středních vozů; jako sedan, kupé, kabriolet i kombi se vyráběl do modelového roku 1978, pak jméno pokračovalo jako Gran Fury.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Fury – raná subserie Belvedere, MY1956–1958",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Fury – subserie Belvedere (MY1956–1958)",
+        "from": 1956,
+        "to": 1958,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -8464,15 +8586,33 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://petersen.org/pages/petersen-vehicle/1958-plymouth-fury-christine"
-        ]
+          "https://petersen.org/pages/petersen-vehicle/1958-plymouth-fury-christine",
+          "https://en.wikipedia.org/wiki/Plymouth_Fury",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       },
       {
         "code": null,
-        "name": "Fury – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Fury – 5. generace (MY1969–1973), doložený MY1970",
+        "from": 1969,
+        "to": 1973,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -8547,13 +8687,34 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_Fury",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Fury",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
       "https://petersen.org/pages/petersen-vehicle/1958-plymouth-fury-christine",
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Fury",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -8566,14 +8727,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8634,14 +8787,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8798,15 +8943,15 @@
     "name": "Gran Fury",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Gran Fury je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Gran Fury byl velký, později střední vůz prodávaný pro modelové roky 1975–1989. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Gran Fury – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Gran Fury – rodina MY1975–1989, vybrané záznamy EPA",
+        "from": 1975,
+        "to": 1989,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -9196,8 +9341,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/3428",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5769",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5770",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/5771"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/5771",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -9209,7 +9368,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/3428",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5769",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5770",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/5771"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/5771",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -9226,14 +9387,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9893,15 +10046,15 @@
     "name": "GTX",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "GTX byla výkonná osobní varianta značky Plymouth. Pro modelový rok 1970 je doložena dvoudveřová karoserie hardtop.",
+    "summaryCs": "Plymouth GTX byl luxusněji vybavený střední muscle car odvozený od Belvedere, vyráběný pro modelové roky 1967–1971 se standardním motorem V8 440. Generace 1968–1970 se nabízela jako hardtop kupé, kabriolet jen do roku 1969.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "GTX – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "GTX – 2. generace (MY1968–1970), doložený MY1970",
+        "from": 1968,
+        "to": 1970,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -9973,12 +10126,33 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_GTX",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_GTX",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_GTX",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_GTX",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_GTX",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -9991,14 +10165,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10145,15 +10311,15 @@
     "name": "Horizon",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Horizon je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Horizon byl malý vůz prodávaný pro modelové roky 1978–1990. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Horizon – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Horizon – rodina MY1978–1990, vybrané záznamy EPA",
+        "from": 1978,
+        "to": 1990,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -10506,8 +10672,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/3281",
           "https://www.fueleconomy.gov/ws/rest/vehicle/3282",
           "https://www.fueleconomy.gov/ws/rest/vehicle/6568",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/6569"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/6569",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10517,7 +10697,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/3281",
       "https://www.fueleconomy.gov/ws/rest/vehicle/3282",
       "https://www.fueleconomy.gov/ws/rest/vehicle/6568",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/6569"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/6569",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -10534,14 +10716,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -11141,17 +11315,19 @@
     "name": "Laser",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Laser je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Laser byl sportovní kupé prodávaný pro modelové roky 1990–1994. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Laser – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Laser – rodina MY1990–1994, vybrané záznamy EPA",
+        "from": 1990,
+        "to": 1994,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -11590,8 +11766,25 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/8772",
           "https://www.fueleconomy.gov/ws/rest/vehicle/10794",
           "https://www.fueleconomy.gov/ws/rest/vehicle/10796",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/10797"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/10797",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11603,7 +11796,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/8772",
       "https://www.fueleconomy.gov/ws/rest/vehicle/10794",
       "https://www.fueleconomy.gov/ws/rest/vehicle/10796",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/10797"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/10797",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -11611,23 +11806,11 @@
         "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
       },
       {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
-      },
-      {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -12359,15 +12542,15 @@
     "name": "Model Q",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "První období značky dokládá originální seznam dílů Chrysler Plymouth vydaný v červnu 1928. Záznam zachycuje tuto ranou identitu; přesný výrobní interval a technická provedení vyžadují další ověření.",
+    "summaryCs": "Model Q byl první vůz značky Plymouth (zpočátku „Chrysler Plymouth“), představený v červenci 1928 a odvozený od Chrysleru 52 s řadovým čtyřválcem o výkonu 45 k. V únoru 1929 ho nahradil Model U.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Chrysler Plymouth – dokumentace Model Q, 1928",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1928,
+        "to": 1929,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": null,
@@ -12393,12 +12576,38 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.ply33.com/Models/Q/scans/1928Q_PlymouthParts.pdf"
-        ]
+          "https://www.ply33.com/Models/Q/scans/1928Q_PlymouthParts.pdf",
+          "https://rmsothebys.com/auctions/fc13/lots/r324-1928-plymouth-model-q",
+          "https://macsmotorcitygarage.com/june-7-1928-walter-p-chrysler-introduces-the-plymouth/",
+          "https://www.conceptcarz.com/z19176/Plymouth-Model-Q.aspx",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://rmsothebys.com/auctions/fc13/lots/r324-1928-plymouth-model-q",
+            "https://macsmotorcitygarage.com/june-7-1928-walter-p-chrysler-introduces-the-plymouth/",
+            "https://www.conceptcarz.com/z19176/Plymouth-Model-Q.aspx"
+          ],
+          "to": [
+            "https://rmsothebys.com/auctions/fc13/lots/r324-1928-plymouth-model-q",
+            "https://macsmotorcitygarage.com/june-7-1928-walter-p-chrysler-introduces-the-plymouth/",
+            "https://www.conceptcarz.com/z19176/Plymouth-Model-Q.aspx"
+          ],
+          "productionStatus": [
+            "https://rmsothebys.com/auctions/fc13/lots/r324-1928-plymouth-model-q",
+            "https://macsmotorcitygarage.com/june-7-1928-walter-p-chrysler-introduces-the-plymouth/",
+            "https://www.conceptcarz.com/z19176/Plymouth-Model-Q.aspx",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://www.ply33.com/Models/Q/scans/1928Q_PlymouthParts.pdf"
+      "https://www.ply33.com/Models/Q/scans/1928Q_PlymouthParts.pdf",
+      "https://rmsothebys.com/auctions/fc13/lots/r324-1928-plymouth-model-q",
+      "https://macsmotorcitygarage.com/june-7-1928-walter-p-chrysler-introduces-the-plymouth/",
+      "https://www.conceptcarz.com/z19176/Plymouth-Model-Q.aspx",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -12411,14 +12620,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -12489,17 +12690,20 @@
     "name": "Neon",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Neon je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Neon byl kompaktní vůz prodávaný pro modelové roky 1995–2001 (poslední kus vyroben 28. června 2001) – první generace jako sedan i kupé, druhá od modelového roku 2000 jen jako sedan. V Evropě se stejný vůz prodával jako Chrysler Neon. Karta obsahuje vybrané americké záznamy spotřeby EPA.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Neon – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Neon – 1. generace",
+        "from": 1995,
+        "to": 1999,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kupe"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -12524,13 +12728,13 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Průřez doloženými modelovými roky 1995, 1998, 2001. Tento souhrn nespojuje různé generace do jedné skutečné výrobní generace; jejich rozdělení dosud chybí."
+          "noteCs": "Vybrané záznamy EPA pro modelové roky 1995, 1998."
         },
         "trunkL": null,
         "markets": [
           "USA"
         ],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "marketNotesCs": "V Evropě se stejný vůz prodával jako Chrysler Neon.",
         "photo": null,
         "trims": [
           {
@@ -12704,7 +12908,78 @@
             "sources": [
               "https://www.fueleconomy.gov/ws/rest/vehicle/14250"
             ]
-          },
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plymouth_Neon",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/11904",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/11905",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/14249",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/14250"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
+      },
+      {
+        "code": null,
+        "name": "Neon – 2. generace",
+        "from": 2000,
+        "to": 2001,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "sedan"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "USA-EPA",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Vybrané záznamy EPA pro modelové roky 2001."
+        },
+        "trunkL": null,
+        "markets": [
+          "USA"
+        ],
+        "marketNotesCs": "V Evropě se stejný vůz prodával jako Chrysler Neon.",
+        "photo": null,
+        "trims": [
           {
             "name": "Neon 2001 2 l Automatic 3-spd",
             "kind": "technical-version",
@@ -12793,13 +13068,29 @@
           }
         ],
         "sources": [
-          "https://www.fueleconomy.gov/ws/rest/vehicle/11904",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/11905",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/14249",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/14250",
+          "https://en.wikipedia.org/wiki/Plymouth_Neon",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
           "https://www.fueleconomy.gov/ws/rest/vehicle/16680",
           "https://www.fueleconomy.gov/ws/rest/vehicle/16681"
-        ]
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Neon",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -12808,523 +13099,17 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/14249",
       "https://www.fueleconomy.gov/ws/rest/vehicle/14250",
       "https://www.fueleconomy.gov/ws/rest/vehicle/16680",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/16681"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/16681",
+      "https://en.wikipedia.org/wiki/Plymouth_Neon",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
     ],
     "needsReview": [
       {
         "field": "generations",
-        "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
+        "reason": "Rozděleno na generace podle en Wikipedie; roky jsou modelové roky. Technické údaje jsou zatím jen vybrané záznamy EPA."
       },
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       }
     ],
@@ -13336,17 +13121,19 @@
     "name": "Prowler",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Prowler je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Prowler byl dvoumístný roadster ve stylu hot rodu s vidlicovým šestiválcem 3,5 l, vyráběný od roku 1997; pod značkou Plymouth pro modelové roky 1997 a 1999–2001, poté jako Chrysler Prowler do roku 2002 (celkem 11 702 vozů). Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Prowler – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Prowler – rodina MY1997–2001, vybrané záznamy EPA",
+        "from": 1997,
+        "to": 2001,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -13513,14 +13300,40 @@
         "sources": [
           "https://www.fueleconomy.gov/ws/rest/vehicle/14811",
           "https://www.fueleconomy.gov/ws/rest/vehicle/15616",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/16460"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/16460",
+          "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://www.fueleconomy.gov/ws/rest/vehicle/16460"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.fueleconomy.gov/ws/rest/vehicle/14811",
       "https://www.fueleconomy.gov/ws/rest/vehicle/15616",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/16460"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/16460",
+      "https://en.wikipedia.org/wiki/Plymouth_Prowler",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -13528,23 +13341,11 @@
         "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
       },
       {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
-      },
-      {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -13832,7 +13633,9 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       }
     ],
-    "aliases": []
+    "aliases": [
+      "Chrysler Prowler"
+    ]
   },
   {
     "makeSlug": "plymouth",
@@ -13840,15 +13643,15 @@
     "name": "Reliant",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Reliant je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Reliant byl střední vůz prodávaný pro modelové roky 1981–1989. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Reliant – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Reliant – rodina MY1981–1989, vybrané záznamy EPA",
+        "from": 1981,
+        "to": 1989,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -14297,8 +14100,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/2322",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5772",
           "https://www.fueleconomy.gov/ws/rest/vehicle/5774",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/5773"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/5773",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -14310,7 +14127,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/2322",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5772",
       "https://www.fueleconomy.gov/ws/rest/vehicle/5774",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/5773"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/5773",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -14327,14 +14146,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -15090,15 +14901,15 @@
     "name": "Road Runner",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Road Runner spojoval výkonný motor s jednodušší výbavou. Pro rok 1970 katalog uvádí kupé, hardtop i kabriolet.",
+    "summaryCs": "Plymouth Road Runner byl střední muscle car na platformě B vyráběný v letech 1968–1980; jméno a znělku „beep beep“ licencoval od Warner Bros. První generace (1968–1970) se nabízela jako kupé, hardtop i kabriolet, od roku 1976 šlo jen o výbavový paket modelu Volaré.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Road Runner – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Road Runner – 1. generace (MY1968–1970), doložený MY1970",
+        "from": 1968,
+        "to": 1970,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe",
@@ -15173,13 +14984,34 @@
         ],
         "sources": [
           "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
-          "https://xr793.com/wp-content/uploads/2018/11/1970-Plymouth-Rapid-Transit-System.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2018/11/1970-Plymouth-Rapid-Transit-System.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
       "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
-      "https://xr793.com/wp-content/uploads/2018/11/1970-Plymouth-Rapid-Transit-System.pdf"
+      "https://xr793.com/wp-content/uploads/2018/11/1970-Plymouth-Rapid-Transit-System.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -15192,14 +15024,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -15338,15 +15162,15 @@
     "name": "Satellite",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Satellite rozšiřovala nabídku středně velkých Plymouthů. Dobový katalog dokládá uzavřené i otevřené karoserie a varianty kombi.",
+    "summaryCs": "Plymouth Satellite byla střední řada na platformě B vyráběná pro modelové roky 1965–1974, zpočátku jako nejvyšší provedení Belvedere. Druhá generace (1968–1970) se nabízela jako kabriolet, hardtop kupé, sedan i kombi; po roce 1974 ji nahradil Fury.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Satellite – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Satellite – 2. generace (MY1968–1970), doložený MY1970",
+        "from": 1968,
+        "to": 1970,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -15421,12 +15245,33 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_Satellite",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Satellite",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Satellite",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Satellite",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Satellite",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -15439,14 +15284,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -15593,15 +15430,15 @@
     "name": "Sundance",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Sundance je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Sundance byl kompaktní vůz prodávaný pro modelové roky 1987–1994. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Sundance – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Sundance – rodina MY1987–1994, vybrané záznamy EPA",
+        "from": 1987,
+        "to": 1994,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -16446,8 +16283,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/9975",
           "https://www.fueleconomy.gov/ws/rest/vehicle/10951",
           "https://www.fueleconomy.gov/ws/rest/vehicle/10953",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/10955"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/10955",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -16468,7 +16319,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/9975",
       "https://www.fueleconomy.gov/ws/rest/vehicle/10951",
       "https://www.fueleconomy.gov/ws/rest/vehicle/10953",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/10955"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/10955",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -16485,14 +16338,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -17886,15 +17731,15 @@
     "name": "Superbird",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Superbird byla aerodynamicky upravená výkonná varianta Plymouthu. Muzejní sbírkový katalog dokládá její podobu pro rok 1970.",
+    "summaryCs": "Plymouth Superbird byla homologační verze Road Runneru s vysokým zadním křídlem pro závody NASCAR, vyráběná jen pro modelový rok 1970.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Superbird – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Superbird (MY1970)",
+        "from": 1970,
+        "to": 1970,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -17922,12 +17767,33 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://americaspackardmuseum.omeka.net/collections/show/27"
-        ]
+          "https://americaspackardmuseum.omeka.net/collections/show/27",
+          "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://americaspackardmuseum.omeka.net/collections/show/27"
+      "https://americaspackardmuseum.omeka.net/collections/show/27",
+      "https://en.wikipedia.org/wiki/Plymouth_Road_Runner",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -17936,14 +17802,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18002,15 +17860,15 @@
     "name": "Turismo",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Turismo je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Turismo byl malý vůz prodávaný pro modelové roky 1983–1987. Karta obsahuje vybrané americké záznamy spotřeby EPA; v Evropě se pod značkou Plymouth oficiálně nenabízel.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Turismo – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Turismo – rodina MY1983–1987, vybrané záznamy EPA",
+        "from": 1983,
+        "to": 1987,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": [
@@ -18364,8 +18222,22 @@
           "https://www.fueleconomy.gov/ws/rest/vehicle/1885",
           "https://www.fueleconomy.gov/ws/rest/vehicle/1886",
           "https://www.fueleconomy.gov/ws/rest/vehicle/3087",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/3088"
-        ]
+          "https://www.fueleconomy.gov/ws/rest/vehicle/3088",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -18376,7 +18248,9 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/1885",
       "https://www.fueleconomy.gov/ws/rest/vehicle/1886",
       "https://www.fueleconomy.gov/ws/rest/vehicle/3087",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/3088"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/3088",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -18393,14 +18267,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -19000,15 +18866,15 @@
     "name": "Valiant",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Valiant byla kompaktní osobní řada v nabídce Plymouthu. Tento dílčí záznam zachycuje čtyřdveřový sedan modelového roku 1970.",
+    "summaryCs": "Plymouth Valiant byl kompaktní vůz vyráběný pro modelové roky 1960–1976 ve čtyřech generacích. Montoval se a prodával i mimo USA, v Evropě například v Nizozemsku, Švédsku a Švýcarsku. Karta zachycuje třetí generaci (1967–1973) se čtyřdveřovým sedanem modelového roku 1970.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Valiant – doložený MY1970",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "Valiant – 3. generace (MY1967–1973), doložený MY1970",
+        "from": 1967,
+        "to": 1973,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -19080,12 +18946,33 @@
           }
         ],
         "sources": [
-          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
-        ]
+          "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+          "https://en.wikipedia.org/wiki/Plymouth_Valiant",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Valiant",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Valiant",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Valiant",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+            "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf"
+      "https://xr793.com/wp-content/uploads/2016/11/1970-Plymouth-Makes-It.pdf",
+      "https://en.wikipedia.org/wiki/Plymouth_Valiant",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+      "https://en.wikipedia.org/wiki/Plymouth_(automobile)"
     ],
     "needsReview": [
       {
@@ -19098,14 +18985,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -19252,17 +19131,80 @@
     "name": "Voyager",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Voyager je doložen v amerických záznamech spotřeby EPA. Přehled obsahuje vybrané motory a převodovky pro konkrétní modelové roky; evropská nabídka není ověřena.",
+    "summaryCs": "Plymouth Voyager se prodával pro modelové roky 1974–2000: nejdříve jako velká dodávka (1974–1983), od roku 1984 jako MPV ve třech generacích S, AS a NS. Druhá generace se v Evropě prodávala jako Chrysler Voyager; po zrušení značky Plymouth jméno převzal Chrysler.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Voyager – vybrané záznamy EPA",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "code": "AB",
+        "name": "Voyager – velká dodávka (AB)",
+        "from": 1974,
+        "to": 1983,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "dodavka"
+        ],
+        "engines": null,
+        "engineCoverage": "unknown",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "USA-EPA",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Pro tuto generaci zatím nejsou převzaty záznamy EPA."
+        },
+        "trunkL": null,
+        "markets": [
+          "USA"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "code": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
+      },
+      {
+        "code": "S",
+        "name": "Voyager – 1. generace MPV (S)",
+        "from": 1984,
+        "to": 1990,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -19276,38 +19218,6 @@
             "fuel": "petrol",
             "displacementCc": null,
             "displacementLitresNominal": 2.6,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": "Nominální objem EPA; vybrané americké modelové roky."
-          },
-          {
-            "fuel": "petrol",
-            "displacementCc": null,
-            "displacementLitresNominal": 2.5,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": "Nominální objem EPA; vybrané americké modelové roky."
-          },
-          {
-            "fuel": "petrol",
-            "displacementCc": null,
-            "displacementLitresNominal": 3,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": "Nominální objem EPA; vybrané americké modelové roky."
-          },
-          {
-            "fuel": "petrol",
-            "displacementCc": null,
-            "displacementLitresNominal": 3.3,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": "Nominální objem EPA; vybrané americké modelové roky."
-          },
-          {
-            "fuel": "petrol",
-            "displacementCc": null,
-            "displacementLitresNominal": 2.4,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "Nominální objem EPA; vybrané americké modelové roky."
@@ -19327,7 +19237,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Průřez doloženými modelovými roky 1984, 1993, 2000. Tento souhrn nespojuje různé generace do jedné skutečné výrobní generace; jejich rozdělení dosud chybí."
+          "noteCs": "Vybrané záznamy EPA pro modelové roky 1984."
         },
         "trunkL": null,
         "markets": [
@@ -19464,7 +19374,97 @@
             "sources": [
               "https://www.fueleconomy.gov/ws/rest/vehicle/27581"
             ]
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/27580",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/27582",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/27581"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "code": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
+      },
+      {
+        "code": "AS",
+        "name": "Voyager – 2. generace MPV (AS)",
+        "from": 1991,
+        "to": 1995,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
           },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "USA-EPA",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Vybrané záznamy EPA pro modelové roky 1993."
+        },
+        "trunkL": null,
+        "markets": [
+          "USA"
+        ],
+        "marketNotesCs": "V Evropě a Mexiku se tato generace prodávala jako Chrysler Voyager.",
+        "photo": null,
+        "trims": [
           {
             "name": "Voyager/Grand Voyager 2WD 1993 2.5 l Automatic 3-spd",
             "kind": "technical-version",
@@ -19593,7 +19593,97 @@
             "sources": [
               "https://www.fueleconomy.gov/ws/rest/vehicle/10526"
             ]
+          }
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/10523",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/10525",
+          "https://www.fueleconomy.gov/ws/rest/vehicle/10526"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "code": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
+      },
+      {
+        "code": "NS",
+        "name": "Voyager – 3. generace MPV (NS)",
+        "from": 1996,
+        "to": 2000,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
           },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "Nominální objem EPA; vybrané americké modelové roky."
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "USA-EPA",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Vybrané záznamy EPA pro modelové roky 2000."
+        },
+        "trunkL": null,
+        "markets": [
+          "USA"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": [
           {
             "name": "Voyager/Grand Voyager 2WD 2000 2.4 l Automatic 3-spd",
             "kind": "technical-version",
@@ -19725,16 +19815,34 @@
           }
         ],
         "sources": [
-          "https://www.fueleconomy.gov/ws/rest/vehicle/27580",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/27582",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/27581",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/10523",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/10525",
-          "https://www.fueleconomy.gov/ws/rest/vehicle/10526",
+          "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+          "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles",
           "https://www.fueleconomy.gov/ws/rest/vehicle/16232",
           "https://www.fueleconomy.gov/ws/rest/vehicle/16233",
           "https://www.fueleconomy.gov/ws/rest/vehicle/16234"
-        ]
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "bodyTypes": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ],
+          "code": [
+            "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+            "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -19746,811 +19854,17 @@
       "https://www.fueleconomy.gov/ws/rest/vehicle/10526",
       "https://www.fueleconomy.gov/ws/rest/vehicle/16232",
       "https://www.fueleconomy.gov/ws/rest/vehicle/16233",
-      "https://www.fueleconomy.gov/ws/rest/vehicle/16234"
+      "https://www.fueleconomy.gov/ws/rest/vehicle/16234",
+      "https://en.wikipedia.org/wiki/Plymouth_Voyager",
+      "https://en.wikipedia.org/wiki/List_of_Plymouth_vehicles"
     ],
     "needsReview": [
       {
         "field": "generations",
-        "reason": "EPA je evidence modelových roků a konfigurací, nikoli tovární výrobní historie. Rodinu je nutné rozdělit do skutečných generací a ověřit výrobní data."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Třída velikosti EPA sama o sobě neurčuje přesně typ karoserie; nepřebírá se automaticky jako sedan/hatchback."
+        "reason": "Rozděleno na generace podle en Wikipedie; roky jsou modelové roky. Technické údaje jsou zatím jen vybrané záznamy EPA."
       },
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[0].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[1].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[1].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[1].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[2].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[2].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[2].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[3].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[3].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[3].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[4].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[4].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[4].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[5].displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[5].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines[5].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[2].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[4].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[5].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[6].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[7].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].massKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[8].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       }
     ],

@@ -1,0 +1,91 @@
+{
+  "make": "fisker-automotive",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "fisker-atlantic",
+      "qid": "Q5455192",
+      "reason": "Founder testimony dated 24 April 2013 states Atlantic had not entered production; original manufacturer release describes a design prototype. Exclude from production-model selection, preserving the prototype record separately.",
+      "sources": [
+        "https://oversight.house.gov/wp-content/uploads/2013/04/FISKER-Testimony.pdf",
+        "https://allcarcentral.com/Fisker_pdf/Fisker_Atlantic_2013.pdf"
+      ]
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Original Fisker Automotive must remain distinct from2016 Fisker Inc and subsequent Karma Automotive manufacturer.",
+    "Photos were inventoried by existing filename only; this pass performed no new visual verification."
+  ],
+  "summary": "Partial breadth pass: Bankruptcy court finding confirms Karma stopped July2012 and never restarted; existing2011–2012 original Karma scope retained. All local identities inventoried; remaining specifications, histories, generation codes, photos and current production are not certified. Root independently proposes excluding fisker-atlantic from ordinary production-model selection.",
+  "localIdentityInventory": {
+    "raw": [
+      {
+        "slug": "fisker-atlantic",
+        "name": "Fisker Atlantic"
+      }
+    ],
+    "lines": [
+      {
+        "slug": "karma",
+        "name": "Karma"
+      }
+    ],
+    "additions": [
+      {
+        "slug": "karma",
+        "name": "Karma"
+      }
+    ],
+    "cards": [
+      {
+        "lineSlug": "karma",
+        "name": "Karma",
+        "generations": [
+          {
+            "name": "Karma – původní Fisker Automotive",
+            "code": null,
+            "from": 2011,
+            "to": 2012,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      }
+    ]
+  },
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 1,
+    "modelLinesInventoried": 1,
+    "additionsInventoried": 1,
+    "catalogCardsInventoried": 1,
+    "generationRowsInventoried": 1,
+    "externalChecks": [
+      {
+        "scope": "Bankruptcy court finding confirms Karma stopped July2012 and never restarted; existing2011–2012 original Karma scope retained.",
+        "sources": [
+          "https://www.deb.uscourts.gov/sites/deb/files/opinions/fah-fisker-warn-act-combined_0.pdf"
+        ]
+      },
+      {
+        "scope": "Independent root raw-model eligibility review: fisker-atlantic",
+        "sources": [
+          "https://oversight.house.gov/wp-content/uploads/2013/04/FISKER-Testimony.pdf",
+          "https://allcarcentral.com/Fisker_pdf/Fisker_Atlantic_2013.pdf",
+          "https://www.deb.uscourts.gov/sites/deb/files/opinions/fah-fisker-warn-act-combined_0.pdf"
+        ],
+        "result": "Founder testimony dated 24 April 2013 states Atlantic had not entered production; original manufacturer release describes a design prototype. Exclude from production-model selection, preserving the prototype record separately."
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

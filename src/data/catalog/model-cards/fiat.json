@@ -12555,7 +12555,17 @@
         "from": 2009,
         "to": 2022,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2015,
+            "productionYear": null,
+            "note": "European market introduction of the restyled 263 family; shown at Paris in 2014, so this is not its first reveal year. Exact production start unverified.",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/fiat/press/der-neue-fiat-doblo-der-geraumige-van-fur-aktive-familien",
+              "https://www.autobild.de/artikel/fiat-modelle-gebraucht-im-vergleich-25880785.html"
+            ]
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "unknown",
@@ -12582,7 +12592,9 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Doblò"
+          "https://en.wikipedia.org/wiki/Fiat_Doblò",
+          "https://www.media.stellantis.com/de-de/fiat/press/der-neue-fiat-doblo-der-geraumige-van-fur-aktive-familien",
+          "https://www.autobild.de/artikel/fiat-modelle-gebraucht-im-vergleich-25880785.html"
         ]
       },
       {
@@ -12623,7 +12635,9 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Doblò"
+      "https://en.wikipedia.org/wiki/Fiat_Doblò",
+      "https://www.media.stellantis.com/de-de/fiat/press/der-neue-fiat-doblo-der-geraumige-van-fur-aktive-familien",
+      "https://www.autobild.de/artikel/fiat-modelle-gebraucht-im-vergleich-25880785.html"
     ],
     "needsReview": [
       {
@@ -12692,10 +12706,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -12943,7 +12953,26 @@
         "from": 2006,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2014,
+            "productionYear": null,
+            "note": "European exterior update. Manufacturer marketing calls this its sixth generation; retained within the existing 2006 platform generation.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/the-new-fiat-ducato-more-technology-more-efficiency-more-value",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC"
+            ]
+          },
+          {
+            "year": 2021,
+            "productionYear": null,
+            "note": "Exterior and cabin update; exact production start unverified. Selected events only; later updates remain unreviewed.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC"
+            ]
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "unknown",
@@ -12986,12 +13015,18 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Ducato"
+          "https://en.wikipedia.org/wiki/Fiat_Ducato",
+          "https://www.media.stellantis.com/uk-en/fiat-professional/press/the-new-fiat-ducato-more-technology-more-efficiency-more-value",
+          "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Ducato"
+      "https://en.wikipedia.org/wiki/Fiat_Ducato",
+      "https://www.media.stellantis.com/uk-en/fiat-professional/press/the-new-fiat-ducato-more-technology-more-efficiency-more-value",
+      "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC"
     ],
     "needsReview": [
       {
@@ -13128,10 +13163,6 @@
       },
       {
         "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -13886,17 +13917,19 @@
     "name": "Freemont",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada Freemont je zde vedena jako samostatná výrobní rodina značky Fiat. Přehled rozlišuje doložené výrobní etapy; výbavy, regionální nabídka a technické verze zatím nejsou vyčerpávající.",
+    "summaryCs": "Fiat Freemont je sedmimístné SUV odvozené z modelu Dodge Journey. Výroba pod značkou Fiat začala v mexické Toluce v červenci 2011; datum ukončení této konkrétní řady zde zůstává neověřené.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Freemont",
-        "from": 2008,
-        "to": 2020,
+        "from": 2011,
+        "to": null,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -13938,12 +13971,26 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Freemont"
-        ]
+          "https://en.wikipedia.org/wiki/Fiat_Freemont",
+          "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+          "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+            "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut"
+          ],
+          "bodyTypes": [
+            "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+            "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Freemont"
+      "https://en.wikipedia.org/wiki/Fiat_Freemont",
+      "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+      "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut"
     ],
     "needsReview": [
       {
@@ -13956,10 +14003,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -14009,6 +14052,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Konec výroby pod tímto konkrétním jménem není v tomto průchodu ověřen; datum širší rodiny nesmí být převzato automaticky."
       }
     ]
   },
@@ -16827,7 +16874,7 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "176",
         "name": "I (176)",
         "from": 1993,
         "to": 1999,
@@ -16875,16 +16922,28 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Punto"
+          "https://en.wikipedia.org/wiki/Fiat_Punto",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/",
+          "https://en.wikipedia.org/w/index.php?title=Fiat_Punto&oldid=1380487989"
         ]
       },
       {
-        "code": null,
+        "code": "188",
         "name": "II (188)",
         "from": 1999,
         "to": 2010,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2003,
+            "productionYear": null,
+            "note": "European exterior update presented in May 2003; exact production start unverified.",
+            "sources": [
+              "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-punto",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -17307,16 +17366,37 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Punto",
           "https://www.italiaspeed.com/new_models/new_models_2003/punto_2003/newmodels_punto_2003_08.html",
-          "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-punto"
+          "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-punto",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/",
+          "https://en.wikipedia.org/w/index.php?title=Fiat_Punto&oldid=1380487989"
         ]
       },
       {
-        "code": null,
+        "code": "199",
         "name": "III (199) / Grande Punto / Punto Evo",
         "from": 2005,
         "to": 2018,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2009,
+            "productionYear": null,
+            "note": "European Punto Evo exterior update; not a separate platform generation.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/2012-fiat-punto-technology-meets-style",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/"
+            ]
+          },
+          {
+            "year": 2012,
+            "productionYear": null,
+            "note": "European exterior update and return to the Punto name; exact production start unverified.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/2012-fiat-punto-technology-meets-style",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -17977,7 +18057,10 @@
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Grande_Punto",
-          "https://www.media.stellantis.com/uploads/em/2012/FIAT/SCHEDE_TECNICHE/120207_F_Punto2012_ST_ALL_GBR.PDF"
+          "https://www.media.stellantis.com/uploads/em/2012/FIAT/SCHEDE_TECNICHE/120207_F_Punto2012_ST_ALL_GBR.PDF",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/",
+          "https://en.wikipedia.org/w/index.php?title=Fiat_Punto&oldid=1380487989",
+          "https://www.media.stellantis.com/uk-en/fiat/press/2012-fiat-punto-technology-meets-style"
         ]
       }
     ],
@@ -17986,15 +18069,14 @@
       "https://en.wikipedia.org/wiki/Fiat_Grande_Punto",
       "https://www.media.stellantis.com/uploads/em/2012/FIAT/SCHEDE_TECNICHE/120207_F_Punto2012_ST_ALL_GBR.PDF",
       "https://www.italiaspeed.com/new_models/new_models_2003/punto_2003/newmodels_punto_2003_08.html",
-      "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-punto"
+      "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-punto",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/punto/",
+      "https://en.wikipedia.org/w/index.php?title=Fiat_Punto&oldid=1380487989",
+      "https://www.media.stellantis.com/uk-en/fiat/press/2012-fiat-punto-technology-meets-style"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18051,14 +18133,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18215,14 +18289,6 @@
       },
       {
         "field": "generations[1].trims[3].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18393,17 +18459,19 @@
     "name": "Qubo",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada Qubo je zde vedena jako samostatná výrobní rodina značky Fiat. Přehled rozlišuje doložené výrobní etapy; výbavy, regionální nabídka a technické verze zatím nejsou vyčerpávající.",
+    "summaryCs": "Fiat Qubo byl uveden v roce 2008 jako kompaktní osobní víceúčelový vůz se dvěma bočními posuvnými dveřmi. Není totožný s celou rodinou užitkového Fiorina vyráběnou od roku 1977; datum ukončení původního Quba zde zůstává neověřené.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Qubo",
-        "from": 1977,
-        "to": 2024,
+        "from": 2008,
+        "to": null,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -18429,12 +18497,22 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Qubo"
-        ]
+          "https://en.wikipedia.org/wiki/Fiat_Qubo",
+          "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space"
+          ],
+          "bodyTypes": [
+            "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Qubo"
+      "https://en.wikipedia.org/wiki/Fiat_Qubo",
+      "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space"
     ],
     "needsReview": [
       {
@@ -18447,10 +18525,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18504,6 +18578,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Konec výroby pod tímto konkrétním jménem není v tomto průchodu ověřen; datum širší rodiny nesmí být převzato automaticky."
       }
     ]
   },

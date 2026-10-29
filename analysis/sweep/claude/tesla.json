@@ -1,0 +1,105 @@
+{
+  "make": "tesla",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "roadster-q43253563",
+      "reason": "second-generation Roadster (unveiled 2017) not in series production as of 2026-10; keep roadster-q210893 (2008–2012) as the Roadster line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q43253563"
+      ],
+      "verify": "confirmed: en-wiki Tesla_Roadster_(second_generation): production 'yet to commence (planned for 2028)'; redesigned car unveiled 2026-10-15"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Model S",
+      "from": 2012,
+      "to": 2026,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://www.electrive.com/2026/05/11/final-tesla-model-s-rolls-off-the-production-line/",
+        "https://www.wikidata.org/wiki/Q1057025"
+      ],
+      "verify": "confirmed: en-wiki Tesla_Model_S infobox June 2012 - May 2026 (last units Fremont 2026-05-13; one section says April)"
+    },
+    {
+      "name": "Cybercab",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://driveteslacanada.ca/news/tesla-cybercab-production-starts-in-q2-2026-says-elon-musk/"
+      ],
+      "verify": "confirmed: en-wiki Tesla_Cybercab (formal production April 2026)"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 49,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "count": 46,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelLineReview.reason)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "cybercab",
+      "path": "summaryCs",
+      "from": "Cybercab je dvoumístný elektrický robotaxík bez volantu a pedálů, určený pro autonomní taxislužbu Tesly. Představen byl v říjnu 2024, sériová výroba v Texasu začala v únoru 2026.",
+      "to": "Cybercab je dvoumístný elektrický robotaxík bez volantu a pedálů, určený pro autonomní taxislužbu Tesly. Představen byl v říjnu 2024, první vůz vyjel z linky v Texasu v únoru 2026 a výroba se rozběhla v dubnu 2026.",
+      "sources": [
+        "https://www.basenor.com/blogs/news/tesla-cybercab-production-begins-at-giga-texas-inside-the-april-21-milestone",
+        "https://driveteslacanada.ca/news/tesla-cybercab-production-starts-in-q2-2026-says-elon-musk/"
+      ],
+      "verify": "confirmed: en-wiki Tesla_Cybercab: first production unit Feb 2026, formal production began April 2026 at Giga Texas"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Model S/X last car",
+      "values": {
+        "Tesla post on X 2026-05-10 (electrive)": "May 2026",
+        "other report": "April 2026"
+      },
+      "kept": 2026
+    },
+    {
+      "where": "Cybercab production start",
+      "values": {
+        "first unit (blogs)": "2026-02",
+        "production start (blogs, Musk on X)": "2026-04"
+      },
+      "kept": 2026
+    }
+  ],
+  "openQuestions": [
+    "Model 3 Highland Performance and Model Y Juniper Performance powerKw stay null: sources give 460 hp vs 461 kW and do not agree; needs ev-database/Tesla EU spec (ev-database returned 429).",
+    "Model Y L (six-seat, China 2025) and Model Y/3 'Standard' (2025) are not separate cards; decide whether Model Y L needs mention for Europe (not sold in EU as of 2026-10).",
+    "Cybertruck is not officially sold in Europe; card kept as an addition for grey imports."
+  ],
+  "summary": "Card data mostly confirmed (Model S/X production ended May 2026). Fixed Cybercab production-start wording, normalised 49 trim kinds and 46 needsReview entries to types.ts; proposed Model S and Cybercab for models-auto and removal of the unproduced 2nd-gen Roadster item."
+}

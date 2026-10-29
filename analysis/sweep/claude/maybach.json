@@ -1,0 +1,880 @@
+{
+  "make": "maybach",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "57",
+      "field": "to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://mbpassion.de/2023/12/die-produktionszahlen-der-maybach-baureihe-240/"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with conflict: de.wikipedia Maybach_57_und_62 gives production June 2002-December 2012 (last car 17 Dec 2012); card note keeps 2013 for late S cars per mbpassion https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "57",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "62",
+      "field": "to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with conflict: de.wikipedia gives Dec 2012 (see 57) https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "62",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "zeppelin",
+      "field": "from",
+      "from": null,
+      "to": 1930,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau DS7/DS8 from 1930 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "zeppelin",
+      "field": "to",
+      "from": null,
+      "to": 1940,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin_DS_8"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau DS8 to 1939/40 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "sw",
+      "field": "from",
+      "from": null,
+      "to": 1935,
+      "sources": [
+        "https://maybach.com/?p=29"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau SW35 1935 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "sw",
+      "field": "to",
+      "from": null,
+      "to": 1941,
+      "sources": [
+        "https://maybach.com/?p=29",
+        "https://stories.technik-museum.de/en/discover/exhibits/maybach-sw-35/"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau SW42 to 1941 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "landaulet",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Landaulet built 2008-2013 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "mercedes-maybach-gls",
+      "reason": "Mercedes-Maybach is a Mercedes-Benz sub-brand from 2015; belongs under mercedes-benz, not the defunct Maybach make (card file deliberately excludes it)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed with caveat: Mercedes-Maybach GLS is a Mercedes-Benz sub-brand model, but models-auto has no Maybach rows under mercedes-benz, so re-attribute to mercedes-benz rather than delete https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "file": "models-auto",
+      "slug": "57-a-62",
+      "reason": "combined entry duplicates lines 57 and 62",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed with caveat: 57-a-62 is the ONLY models-auto row for the 57/62; delete only if separate 57 and 62 rows are added (lines 57 and 62 exist in model-lines-auto)"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "57",
+      "path": "generations[0].code",
+      "from": null,
+      "to": "W240",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia Maybach_57_und_62 short version W 240 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://mbpassion.de/2023/12/die-produktionszahlen-der-maybach-baureihe-240/"
+      ],
+      "verify": "confirmed with conflict: de.wikipedia gives production to December 2012 (last car 17 Dec 2012); kept 2013 because the card note documents late 57 S per mbpassion production figures https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 5728,
+        "width": 1980,
+        "height": null,
+        "wheelbase": 3390
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia 5728/1980, wheelbase 3390 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 5513,
+          "displacementLitresNominal": 5.5,
+          "powerKwMin": 405,
+          "powerKwMax": 405,
+          "variant": "5.5 V12 biturbo (57)"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 6,
+          "powerKwMin": 450,
+          "powerKwMax": 471,
+          "variant": "6.0 V12 biturbo (57 S, Zeppelin)"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia 57 5513 cc 405 kW; 57 S 5980 cc 450 kW; Zeppelin +21 kW = 471 kW https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2010,
+          "to": null,
+          "name": "Modernizace 2010",
+          "code": null,
+          "productionYear": 2010,
+          "note": "Modelový rok 2010: drobná modernizace, délka 57 vzrostla z 5728 na 5734 mm.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "unverified: de.wikipedia mentions no 2010 facelift"
+    },
+    {
+      "lineSlug": "57",
+      "path": "summaryCs",
+      "from": "Maybach 57 je novodobý luxusní sedan samostatně obnovené značky. Provedení S a Zeppelin jsou technické varianty této rodiny, nikoli předválečný model Zeppelin.",
+      "to": "Maybach 57 (W240) je luxusní sedan obnovené značky Maybach koncernu DaimlerChrysler, vyráběný v Sindelfingenu od roku 2002 do začátku roku 2013. Poháněl ho přeplňovaný V12 5,5 l (405 kW), verze 57 S a Zeppelin měly V12 6,0 l s výkonem 450, resp. 471 kW.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://mbpassion.de/2023/12/die-produktionszahlen-der-maybach-baureihe-240/"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].code",
+      "from": null,
+      "to": "V240",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia long version V 240 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed with conflict: see 57 (de.wikipedia Dec 2012) https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 6165,
+        "width": 1980,
+        "height": null,
+        "wheelbase": 3827
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia 6165/1980, wheelbase 3827 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 5513,
+          "displacementLitresNominal": 5.5,
+          "powerKwMin": 405,
+          "powerKwMax": 405,
+          "variant": "5.5 V12 biturbo (62)"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 6,
+          "powerKwMin": 450,
+          "powerKwMax": 471,
+          "variant": "6.0 V12 biturbo (62 S, Zeppelin)"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed: de.wikipedia engines as for 57 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2010,
+          "to": null,
+          "name": "Modernizace 2010",
+          "code": null,
+          "productionYear": 2010,
+          "note": "Modelový rok 2010: drobná modernizace, délka 62 vzrostla z 6165 na 6171 mm.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "unverified: de.wikipedia mentions no 2010 facelift"
+    },
+    {
+      "lineSlug": "62",
+      "path": "summaryCs",
+      "from": "Maybach 62 představuje delší novodobou limuzínu. Údaje jsou odděleny od kratšího 57 i od otevřeného Landauletu.",
+      "to": "Maybach 62 (V240) je prodloužená verze limuzíny Maybach 57 s rozvorem 3827 mm, určená hlavně pro cestování vzadu. Vyráběla se od roku 2002 do začátku roku 2013 s motory V12 5,5 l (405 kW) a ve verzích 62 S a Zeppelin V12 6,0 l (450 a 471 kW).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://mbpassion.de/2023/12/die-produktionszahlen-der-maybach-baureihe-240/"
+      ]
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62",
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed: de.wikipedia Landaulet 2008-2013 https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "generations[0].bodyTypes",
+      "from": null,
+      "to": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ]
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "generations[0].productionUnits",
+      "from": null,
+      "to": 22,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach_57_and_62"
+      ],
+      "verify": "confirmed with conflict: de.wikipedia says 21 Landaulets built (vs 22); within 5% https://de.wikipedia.org/wiki/Maybach_57_und_62"
+    },
+    {
+      "lineSlug": "12",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1929,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau Typ 12 1929-1930/31 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "12",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maybach"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1930,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin"
+      ],
+      "verify": "confirmed: de.wikipedia Maybach-Motorenbau DS7 1930-1933/34 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1934,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin"
+      ],
+      "verify": "confirmed: DS7 to 1933/34 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1930,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin",
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin_DS_8"
+      ],
+      "verify": "confirmed: DS8 from 1930 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1940,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin",
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin_DS_8"
+      ],
+      "verify": "confirmed: DS8 to 1939/40 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin_DS_8"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "generations[1].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 7922,
+          "displacementLitresNominal": 8,
+          "powerKwMin": 147,
+          "powerKwMax": 147,
+          "variant": "V12 8,0 l"
+        }
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Maybach_Zeppelin_DS_8"
+      ]
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1935,
+      "sources": [
+        "https://maybach.com/?p=29"
+      ],
+      "verify": "confirmed: SW35 1935-1936 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://maybach.com/?p=29"
+      ]
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1936,
+      "sources": [
+        "https://maybach.com/?p=29"
+      ],
+      "verify": "confirmed: SW38 1936-1939 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1939,
+      "sources": [
+        "https://maybach.com/?p=29"
+      ],
+      "verify": "confirmed: SW38 to 1939 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://maybach.com/?p=29"
+      ]
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1939,
+      "sources": [
+        "https://maybach.com/?p=29",
+        "https://stories.technik-museum.de/en/discover/exhibits/maybach-sw-35/"
+      ],
+      "verify": "confirmed: SW42 1939/40-1941 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 1941,
+      "sources": [
+        "https://maybach.com/?p=29",
+        "https://stories.technik-museum.de/en/discover/exhibits/maybach-sw-35/"
+      ],
+      "verify": "confirmed: SW42 to 1941 https://de.wikipedia.org/wiki/Maybach-Motorenbau"
+    },
+    {
+      "lineSlug": "sw",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://maybach.com/?p=29"
+      ]
+    },
+    {
+      "lineSlug": "12",
+      "path": "summaryCs",
+      "from": "Maybach12 byl uveden v roce1929 jako raný dvanáctiválcový model. Přesné výrobní období a návaznost na pozdějšíZeppelin zůstávají odděleny od data představení.",
+      "to": "Maybach 12 byl uveden v roce 1929 jako raný dvanáctiválcový model. Přesné výrobní období a návaznost na pozdější Zeppelin zůstávají odděleny od data představení.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "12",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "summaryCs",
+      "from": "Maybach57 je novodobý luxusní sedan samostatně obnovené značky. ProvedeníS aZeppelin jsou technické varianty této rodiny, nikoli předválečný modelZeppelin.",
+      "to": "Maybach 57 je novodobý luxusní sedan samostatně obnovené značky. Provedení S a Zeppelin jsou technické varianty této rodiny, nikoli předválečný model Zeppelin.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].specificationScope.market",
+      "from": "World Version, manufacturer2008 brochure",
+      "to": "World Version, manufacturer 2008 brochure",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].specificationScope.noteCs",
+      "from": "Zavazadelník605L podle společné tabulky výrobce; rozměry zakázkových historických karoserií sem nejsou přenášeny. Přesný konec celé rodiny není jednotně uzavřen: základní provedení končí2012, některéS podle pramenů2013. Proto není modelový interval celé rodiny omezen paušálně na2012.",
+      "to": "Zavazadelník 605L podle společné tabulky výrobce; rozměry zakázkových historických karoserií sem nejsou přenášeny. Přesný konec celé rodiny není jednotně uzavřen: základní provedení končí 2012, některé S podle pramenů 2013. Proto není modelový interval celé rodiny omezen paušálně na 2012.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].trims[0].name",
+      "from": "57 — World Version2008 brochure",
+      "to": "57 — World Version 2008 brochure",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].trims[0].massBasis",
+      "from": "EC92/21 version95/48:90%fuel,68kg driver plus7kg luggage; standard equipment",
+      "to": "EC92/21 version 95/48:90%fuel,68kg driver plus 7kg luggage; standard equipment",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].trims[0].consumptionCycle",
+      "from": "Combined EC80/1268 prescribed cycle, original2008 brochure; not WLTP",
+      "to": "Combined EC80/1268 prescribed cycle, original 2008 brochure; not WLTP",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].trims[0].specificationScope.market",
+      "from": "World Version, manufacturer brochure archived as2008; US units not converted",
+      "to": "World Version, manufacturer brochure archived as 2008; US units not converted",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "57",
+      "path": "generations[0].trims[0].specificationScope.noteCs",
+      "from": "Druhá hodnota v tabulce je výslovně pro62. Hmotnost zahrnuje řidiče a zavazadlo podle poznámkyvýrobce; nejde o suchou hmotnost. Pětistupňový automat doložen původním technickým listem. Pozdější úspornější hodnoty a motoryS nejsou sloučeny.",
+      "to": "Druhá hodnota v tabulce je výslovně pro 62. Hmotnost zahrnuje řidiče a zavazadlo podle poznámkyvýrobce; nejde o suchou hmotnost. Pětistupňový automat doložen původním technickým listem. Pozdější úspornější hodnoty a motory S nejsou sloučeny.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "summaryCs",
+      "from": "Maybach62 představuje delší novodobou limuzínu. Údaje jsou odděleny od kratšího57 i od otevřenéhoLandauletu.",
+      "to": "Maybach 62 představuje delší novodobou limuzínu. Údaje jsou odděleny od kratšího 57 i od otevřeného Landauletu.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].specificationScope.market",
+      "from": "World Version, manufacturer2008 brochure",
+      "to": "World Version, manufacturer 2008 brochure",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].specificationScope.noteCs",
+      "from": "Zavazadelník605L podle společné tabulky výrobce; rozměry zakázkových historických karoserií sem nejsou přenášeny. Přesný konec celé rodiny není jednotně uzavřen: základní provedení končí2012, některéS podle pramenů2013. Proto není modelový interval celé rodiny omezen paušálně na2012.",
+      "to": "Zavazadelník 605L podle společné tabulky výrobce; rozměry zakázkových historických karoserií sem nejsou přenášeny. Přesný konec celé rodiny není jednotně uzavřen: základní provedení končí 2012, některé S podle pramenů 2013. Proto není modelový interval celé rodiny omezen paušálně na 2012.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].trims[0].name",
+      "from": "62 — World Version2008 brochure",
+      "to": "62 — World Version 2008 brochure",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].trims[0].massBasis",
+      "from": "EC92/21 version95/48:90%fuel,68kg driver plus7kg luggage; standard equipment",
+      "to": "EC92/21 version 95/48:90%fuel,68kg driver plus 7kg luggage; standard equipment",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].trims[0].consumptionCycle",
+      "from": "Combined EC80/1268 prescribed cycle, original2008 brochure; not WLTP",
+      "to": "Combined EC80/1268 prescribed cycle, original 2008 brochure; not WLTP",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].trims[0].specificationScope.market",
+      "from": "World Version, manufacturer brochure archived as2008; US units not converted",
+      "to": "World Version, manufacturer brochure archived as 2008; US units not converted",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "62",
+      "path": "generations[0].trims[0].specificationScope.noteCs",
+      "from": "Druhá hodnota v tabulce je výslovně pro62. Hmotnost zahrnuje řidiče a zavazadlo podle poznámkyvýrobce; nejde o suchou hmotnost. Pětistupňový automat doložen původním technickým listem. Pozdější úspornější hodnoty a motoryS nejsou sloučeny.",
+      "to": "Druhá hodnota v tabulce je výslovně pro 62. Hmotnost zahrnuje řidiče a zavazadlo podle poznámkyvýrobce; nejde o suchou hmotnost. Pětistupňový automat doložen původním technickým listem. Pozdější úspornější hodnoty a motory S nejsou sloučeny.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "dsh",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "summaryCs",
+      "from": "Landaulet je malosériové provedení s otevíratelnou střechou nad zadní částí kabiny. Je oddělen od původní studie a od pozdějšího terénníhoMercedes-MaybachG650Landaulet.",
+      "to": "Landaulet je malosériové provedení s otevíratelnou střechou nad zadní částí kabiny. Je oddělen od původní studie a od pozdějšího terénního Mercedes-Maybach G650 Landaulet.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "generations[0].specificationScope.noteCs",
+      "from": "Daimlerův výroční dokument výslovně rozlišuje studii z konce2007, zakázkovou výrobu od začátku2008 a první předání v listopadu2008. Přesný konec malosérie nebyl potvrzen.",
+      "to": "Daimlerův výroční dokument výslovně rozlišuje studii z konce 2007, zakázkovou výrobu od začátku 2008 a první předání v listopadu 2008. Přesný konec malosérie nebyl potvrzen.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "landaulet",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "sw",
+      "path": "summaryCs",
+      "from": "ŘadaSW používala novější podvozkové řešení s výkyvnými nápravami. Tři objemová označení a individuální karoserie zde nejsou vydávány za jedinou technickou verzi.",
+      "to": "Řada SW používala novější podvozkové řešení s výkyvnými nápravami. Tři objemová označení a individuální karoserie zde nejsou vydávány za jedinou technickou verzi.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w3",
+      "path": "summaryCs",
+      "from": "W3 zahájil vlastní automobilovou výrobuMaybach. Továrna dodávala podvozek a pohon, zatímco individuální karoserie vznikaly u specializovaných karosáren.",
+      "to": "W3 zahájil vlastní automobilovou výrobu Maybach. Továrna dodávala podvozek a pohon, zatímco individuální karoserie vznikaly u specializovaných karosáren.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w3",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w5",
+      "path": "summaryCs",
+      "from": "W5 pokračoval jako velká šestiválcová řada. ProvedeníSG patří k téže historické rodině a jednotlivé karoserie nemají bez konkrétního zdroje společné rozměry.",
+      "to": "W5 pokračoval jako velká šestiválcová řada. Provedení SG patří k téže historické rodině a jednotlivé karoserie nemají bez konkrétního zdroje společné rozměry.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w5",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w6",
+      "path": "summaryCs",
+      "from": "W6 rozvíjel předválečné šestiválcové automobilyMaybach. Delší podvozky a převodovkové verzeDSG je nutné rozlišovat podle konkrétního vozu.",
+      "to": "W6 rozvíjel předválečné šestiválcové automobily Maybach. Delší podvozky a převodovkové verze DSG je nutné rozlišovat podle konkrétního vozu.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "w6",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historické karoserie byly individuálně zakázkové. PozdějšíMercedes-Maybach je subznačkaMercedes-Benz a není součástí tohoto katalogu samostatné značkyMaybach.",
+      "to": "Historické karoserie byly individuálně zakázkové. Pozdější Mercedes-Maybach je subznačka Mercedes-Benz a není součástí tohoto katalogu samostatné značky Maybach.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    },
+    {
+      "lineSlug": "zeppelin",
+      "path": "summaryCs",
+      "from": "Zeppelin označuje předválečné dvanáctiválcové vozyDS7 aDS8. Není zaměňován se stejnojmennou zvláštní výbavou novodobýchMaybach57 a62.",
+      "to": "Zeppelin označuje předválečné dvanáctiválcové vozy DS7 a DS8. Není zaměňován se stejnojmennou zvláštní výbavou novodobých Maybach 57 a 62.",
+      "sources": [
+        "text defect: missing spaces"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "57/62 end of production",
+      "values": {
+        "en.wikipedia Maybach 57/62": "February 2013",
+        "en.wikipedia Maybach (last car)": "17 December 2012",
+        "mbpassion 57 S": "January 2013"
+      },
+      "kept": 2013
+    }
+  ],
+  "openQuestions": [
+    "Mercedes-Maybach S-Class/GLS/EQS SUV are what a Czech buyer meets today; confirm they live under mercedes-benz.",
+    "Landaulet body set to kabriolet (open rear roof); reviewer may prefer sedan."
+  ],
+  "summary": "All Maybach text fields had spaces stripped before numbers and capitals (fixed). 57/62 got codes W240/V240, dimensions, engines, 2010 facelift and end 2013; pre-war Zeppelin and SW dated."
+}

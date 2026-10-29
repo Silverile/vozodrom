@@ -1,0 +1,68 @@
+{
+  "make": "saic-motor",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "shanghai-sh760",
+      "field": "productionStart",
+      "from": null,
+      "to": 1964,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374264191"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: de.wikipedia Shanghai_SH760 infobox gives 1958-1991 for the Feng Huang/SH760 family (series production from 1960); the SH760 name dates from 1964, so 1964 holds for the SH760 line itself"
+    },
+    {
+      "file": "models-auto",
+      "slug": "shanghai-sh760",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374264191"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Shanghai_SH760 infobox ends 1991; total 'knapp 80.000', consistent with 79,526"
+    },
+    {
+      "file": "models-auto",
+      "slug": "shanghai-sh760",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan",
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374264191"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Shanghai_SH760 lists the sedan as the main body plus a small-series 3-door pick-up (also a few convertibles and an estate)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "wuling-sunshine",
+      "reason": "belongs to make wuling-motors (SAIC-GM-Wuling brand); duplicate of wuling-motors card line \"sunshine\" (Zhiguang)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q2594909"
+      ],
+      "verify": "confirmed with caveat: Wikidata Q2594909 zh label 五菱之光 (Wuling Zhiguang) = wuling-motors card line 'sunshine' (aliases Zhiguang). That card line is isAddition and has no model-line-additions entry yet, so add wuling-motors/sunshine to the additions (or re-attribute this row's makeSlug) before deleting, or the model disappears from the catalogue"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "shanghai-sh760"
+  ],
+  "conflicts": [],
+  "openQuestions": [
+    "\"SAIC Motor\" is a group, not a consumer brand: its passenger cars are sold as MG, Roewe, Maxus (separate makes). Consider renaming the make to \"Shanghai\" (historic SH760 brand) or merging; left unchanged."
+  ],
+  "summary": "Created a card for the Shanghai SH760 (1964-1991, 79,526 built). Proposed removing Wuling Sunshine from SAIC Motor as a duplicate of the Wuling Motors line."
+}

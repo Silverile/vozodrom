@@ -8,6 +8,13 @@
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 
 const lines = JSON.parse(readFileSync(new URL("../src/data/catalog/model-lines-auto.json", import.meta.url), "utf8"));
+// Reviewed additions may not yet be materialized in the source-generated auto file.
+const additions = JSON.parse(readFileSync(new URL("../src/data/catalog/model-line-additions.json", import.meta.url), "utf8"));
+const lineKeys = new Set(lines.map(l => `${l.makeSlug}/${l.slug}`));
+for (const line of additions) if (!lineKeys.has(`${line.makeSlug}/${line.slug}`)) {
+  lines.push(line);
+  lineKeys.add(`${line.makeSlug}/${line.slug}`);
+}
 
 const index = {};
 for (const l of lines) {

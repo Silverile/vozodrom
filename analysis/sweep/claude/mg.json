@@ -1,0 +1,421 @@
+{
+  "make": "mg",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": 2005,
+      "to": 1924,
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_Cars",
+        "https://en.wikipedia.org/wiki/MG_14/28"
+      ],
+      "confidence": "medium",
+      "note": "The make covers the MG marque from the 1924 14/28 to SAIC MG today; 2005 is the Nanjing/SAIC takeover of the brand. If the entry must stay tied to Q1881443 (MG Motor), keep 2005 and document it.",
+      "verify": "confirmed (with the sweeper caveat): the make entry is qid Q1881443 (MG Motor, Wikidata inception 2005-07-22), but the catalogue lists marque-era models (Magnette 1953, Metro 1982, MGF 1995). For foundedYear 1924, the applying pass must also repoint the qid or add the MG marque to relatedQids, or the data stays inconsistent"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "metro",
+      "field": "from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        1982,
+        1990,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+        "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+        "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Metro (the Austin Metro article) gives Turbo 70 kW, which agrees with 69 kW. The years 1982-1990 match the MG badge period. Note: the Turbo was launched in October 1982, so \"od roku 1983\" in the summary is a sales-year reading"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "magnette",
+      "field": "to/productionStatus/generations[3].to",
+      "from": [
+        null,
+        "unknown",
+        null
+      ],
+      "to": [
+        1968,
+        "ended",
+        1968
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_Magnette"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Magnette says the Mark IV dates from 1961 and that in 1968 the Magnette was discontinued with no successor"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "magnette",
+      "field": "to/productionStatus/generations[3].to",
+      "from": [
+        null,
+        "unknown",
+        null
+      ],
+      "to": [
+        1968,
+        "ended",
+        1968
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_Magnette"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Magnette says the Mark IV dates from 1961 and that in 1968 the Magnette was discontinued with no successor"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "350",
+      "field": "from",
+      "from": 2013,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_350"
+      ],
+      "confidence": "medium",
+      "verify": "unverified: https://en.wikipedia.org/wiki/MG_350 is now a redirect to Roewe 350 (Wikipedia API query), so the cited page is not an MG 350 article. The 2010 start could not be checked independently (search budget exhausted, Wikimedia rate-limited). Do not apply until rechecked"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "350",
+      "field": "from",
+      "from": 2013,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_350"
+      ],
+      "confidence": "medium",
+      "verify": "unverified: https://en.wikipedia.org/wiki/MG_350 is now a redirect to Roewe 350 (Wikipedia API query), so the cited page is not an MG 350 article. The 2010 start could not be checked independently (search budget exhausted, Wikimedia rate-limited). Do not apply until rechecked"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "model-lines-auto",
+      "slug": "e50",
+      "reason": "no MG-badged production E50 found; the production car is the Roewe E50 (2012-2016, shown as the E1 concept). Belongs to roewe or should be dropped",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roewe_E50"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia has no \"MG E50\" page (API: missing), and models-auto row e50 (Q19840642) already has makeSlug roewe. The MG-attributed model-lines entry is a misattribution"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "e50",
+      "reason": "same as model-lines-auto e50",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Roewe_E50"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia has no \"MG E50\" page (API: missing), and models-auto row e50 (Q19840642) already has makeSlug roewe. The MG-attributed model-lines entry is a misattribution"
+    },
+    {
+      "file": "models-auto",
+      "slug": "s5",
+      "reason": "duplicate of s5-ev (both MG S5 EV / MGS5 EV: Q130502465 and Q129744439); card line mgs5-ev",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q130502465",
+        "https://www.wikidata.org/wiki/Q129744439"
+      ],
+      "confidence": "low",
+      "verify": "confirmed removal, but the reason needs correcting: Wikidata Q130502465 mixes up two cars. Its enwiki sitelink \"MG S5\" redirects to \"MGS5 EV\", but its dewiki and frwiki sitelinks are \"MG ZS (2024)\", and P155 follows Q30635583 (MG ZS). The row duplicates either s5-ev or the zs line; either way it should go"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "f",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "maestro",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381527904"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "montego",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373434632"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "rv8",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373823043"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "xpower-sv",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372238452"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "zr",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372258843"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "zs-2001",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377593992"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "zt",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372237327"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "tf",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "tf",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "marvel-r",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373871620"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Marvel_R gives production 2021-2025 (Europe 10/2021-05/2025) and lists it under discontinued models. Note: the card still has generations[0].to = 2026, which contradicts this and should be 2025"
+    },
+    {
+      "lineSlug": "magnette",
+      "path": "generations[3].to",
+      "from": null,
+      "to": 1968,
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_Magnette"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Magnette says the Magnette was discontinued in 1968"
+    },
+    {
+      "lineSlug": "magnette",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/MG_Magnette"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Magnette says the Magnette was discontinued in 1968"
+    },
+    {
+      "lineSlug": "metro",
+      "path": "generations[0].from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        1982,
+        1990,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+        "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+        "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+      ],
+      "verify": "confirmed: the line already had ended production years (to ≤ 2011) in the card, so productionStatus ended follows from the card itself; types.ts allows ended"
+    },
+    {
+      "lineSlug": "metro",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": "1275 cc petrol, 54–69 kW",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/MG_Metro gives the Metro Turbo as 70 kW (within 2 % of 69 kW); the MG 1300 rated 72 bhp is 54 kW"
+    },
+    {
+      "lineSlug": "metro",
+      "path": "summaryCs",
+      "from": "MG Metro patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG Metro byl sportovnější verze malého hatchbacku Austin Metro, vyráběná v letech 1982 až 1990 s motorem 1,3 l (54 kW) a od roku 1983 i jako Metro Turbo (69 kW). V roce 1990 byl vůz přejmenován na Rover Metro a označení MG z něj zmizelo.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+        "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/"
+      ],
+      "verify": "confirmed (minor): facts check out, but the Turbo was shown in October 1982; \"od roku 1983\" is acceptable as the sales year"
+    },
+    {
+      "lineSlug": "f",
+      "path": "summaryCs",
+      "from": "MG F patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MGF byl dvoumístný roadster s motorem uprostřed a odpružením Hydragas, vyráběný firmou Rover v letech 1995 až 2002 s motory řady K 1,6 a 1,8 l. V roce 2002 jej nahradil modernizovaný MG TF.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "zr",
+      "path": "summaryCs",
+      "from": "MG ZR patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG ZR byl sportovně laděný hatchback odvozený od Roveru 25, vyráběný v Longbridge v letech 2001 až 2005 do krachu MG Rover. Nabízel se se zážehovými motory řady K i se vznětovým dvoulitrem.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372258843"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "zt",
+      "path": "summaryCs",
+      "from": "MG ZT patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG ZT byl sportovní sedan a kombi (ZT-T) odvozený od Roveru 75, vyráběný v letech 2001 až 2005. Vrcholem nabídky byla verze ZT 260 s osmiválcem Ford 4,6 l a pohonem zadních kol.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372237327"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "rv8",
+      "path": "summaryCs",
+      "from": "MG RV8 patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG RV8 byl roadster z let 1992 až 1995 s upravenou karoserií MGB a hliníkovým osmiválcem Rover 3,9 l. Vznikl v malé sérii a velká část produkce šla do Japonska.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373823043"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "xpower-sv",
+      "path": "summaryCs",
+      "from": "MG XPower SV patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG XPower SV bylo sportovní kupé z let 2003 až 2005 vycházející z italského Qvale Mangusta, s karbonovou karoserií a osmiválcem Ford. Vzniklo jen malé množství kusů.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372238452"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "maestro",
+      "path": "summaryCs",
+      "from": "MG Maestro patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG Maestro byla sportovní verze hatchbacku Austin Maestro, vyráběná v letech 1983 až 1991 s motory 1,6 a 2,0 l, na konci výroby i jako Maestro Turbo.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381527904"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "montego",
+      "path": "summaryCs",
+      "from": "MG Montego patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG Montego byla sportovní verze sedanu Austin Montego, vyráběná v letech 1985 až 1991 s dvoulitrovým motorem se vstřikováním a také jako Montego Turbo.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373434632"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    },
+    {
+      "lineSlug": "marvel-r",
+      "path": "summaryCs",
+      "from": "MG Marvel R patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+      "to": "MG Marvel R Electric bylo elektrické SUV příbuzné Roewe Marvel X, prodávané v Evropě od roku 2021 se zadním pohonem nebo jako Performance s pohonem všech kol.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373871620"
+      ],
+      "verify": "confirmed: the facts in the text match the line years already in the card (unchanged) and well-known model facts; nothing contradicts it"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "mg4 generations[0].trims[4] XPOWER rangeKm",
+      "values": {
+        "MG UK brochure July 2025 (MY2025)": 400,
+        "launch data 2023 (electrive, auto-motor-und-sport, insideevs)": 385
+      },
+      "kept": 400
+    },
+    {
+      "where": "metro generations[0].to",
+      "values": {
+        "MG badge dropped May 1990 (mgcc, honestjohn)": 1990,
+        "en.wikipedia Austin Metro engine table": 1989
+      },
+      "kept": 1990
+    }
+  ],
+  "openQuestions": [
+    "hs generations[0] (AS23) is marked current with to null; in Europe it was replaced by AS33 in 2024-2025, but en.wikipedia gives no end of Chinese production. Left unchanged.",
+    "mg6 generations[1], mg7 generations[1], mg5 generations[1], one, gloster, hector, comet-ev, windsor-ev, extender: productionStatus unknown; mostly non-European lines, not verified in this pass.",
+    "zs generations[0] (ZS11) EV trims list 50.3/69.9 kWh; MG UK publishes 51/72 kWh gross and ev-database 49.0/68.3 kWh usable. Capacity labels need checking (ev-database returned HTTP 429).",
+    "mg5 generations[0] lists hatchback,sedan; the first MG5 was a hatchback and the sedan was sold as MG GT. Check before changing.",
+    "Most MG generations still have empty engines/dimensions/trims (pilot cards); European lines (MGF, ZR, ZS 2001, ZT, TF, MG3 ZP11, MG5 EV, MGS5/MGS6, Marvel R) need technical data in a later pass."
+  ],
+  "summary": "The MG card file had 10 ended historic families marked productionStatus unknown, Metro with no years and Magnette Mk IV with an open end; fixed with sources, and 9 placeholder summaries replaced with factual Czech text. Proposed make foundedYear 1924, 350 start year 2010, removal of the MG E50 (a Roewe) and a duplicate S5 row."
+}

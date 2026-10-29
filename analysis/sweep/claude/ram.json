@@ -1,0 +1,391 @@
+{
+  "make": "ram",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": 2010,
+      "to": 2009,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed with conflict: fr-wiki Ram_Trucks 'fondee par Chrysler en novembre 2009'; but Wikidata Q165708 P571 and es-wiki give 2010 (brand separation effective for MY2010)"
+    },
+    {
+      "field": "country",
+      "from": null,
+      "to": "Spojené státy americké (Q30)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks",
+        "https://www.wikidata.org/wiki/Q165708"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Wikidata Q165708 P17 = Q30 (referenced); an unreferenced Q16 (Canada) value also exists"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-line-additions",
+      "slug": "1500",
+      "field": "generations[0].to/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2024,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en-wiki Ram_pickup: DS production to 2024 (1500 Classic MY2024); 4th-gen HD from MY2010, 5th-gen HD debuted Jan 2019"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "1500",
+      "field": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en-wiki Ram_pickup: DS production to 2024 (1500 Classic MY2024); 4th-gen HD from MY2010, 5th-gen HD debuted Jan 2019"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "2500",
+      "field": "generations",
+      "from": "unknown",
+      "to": "2010–2018 ended; 2019– current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en-wiki Ram_pickup: DS production to 2024 (1500 Classic MY2024); 4th-gen HD from MY2010, 5th-gen HD debuted Jan 2019"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "3500",
+      "field": "generations",
+      "from": "unknown",
+      "to": "2010–2018 ended; 2019– current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en-wiki Ram_pickup: DS production to 2024 (1500 Classic MY2024); 4th-gen HD from MY2010, 5th-gen HD debuted Jan 2019"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "dakota",
+      "field": "from/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2025,
+        "current"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "rampage",
+      "field": "from/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2023,
+        "current"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: es-wiki Ram_Trucks lists Rampage 2023-present"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "1000",
+      "field": "from/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2018,
+        "current"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "confidence": "medium",
+      "verify": "unverified: es-wiki Ram_Trucks groups Ram 700/1000 from 2014; en-wiki gives 2018 for the Toro-based 1000"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "700",
+      "field": "from",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: es-wiki Ram_Trucks dates Ram 700 from 2014"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "ProMaster (van; in models-auto, no line) — Fiat Ducato rebadge for North America",
+      "from": 2013,
+      "to": null,
+      "bodyTypes": [
+        "dodavka"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 35,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "1500",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "1500",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "1500",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "2500",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "2500",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "2500",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "2500",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "3500",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "3500",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "3500",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "3500",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+      ],
+      "verify": "confirmed: en-wiki Ram_pickup (1500 Classic ended MY2024; 4th-gen HD MY2010-2018, 5th-gen HD 2019)"
+    },
+    {
+      "lineSlug": "700",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "verify": "confirmed: es-wiki Ram_Trucks Ram 700 from 2014"
+    },
+    {
+      "lineSlug": "700",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "verify": "confirmed: es-wiki Ram_Trucks Ram 700 from 2014"
+    },
+    {
+      "lineSlug": "700",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "verify": "confirmed: es-wiki Ram_Trucks Ram 700 from 2014"
+    },
+    {
+      "lineSlug": "1000",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ]
+    },
+    {
+      "lineSlug": "1000",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ]
+    },
+    {
+      "lineSlug": "1200",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ]
+    },
+    {
+      "lineSlug": "rampage",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "verify": "confirmed: es-wiki Ram_Trucks Rampage 2023-present"
+    },
+    {
+      "lineSlug": "rampage",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ram_Trucks"
+      ],
+      "verify": "confirmed: es-wiki Ram_Trucks Rampage 2023-present"
+    },
+    {
+      "lineSlug": "dakota",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina",
+        "https://news.agrofy.com.ar/noticia/214438/ram-dakota-nueva-pick-que-ya-se-fabrica-argentina"
+      ]
+    },
+    {
+      "lineSlug": "dakota",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina",
+        "https://news.agrofy.com.ar/noticia/214438/ram-dakota-nueva-pick-que-ya-se-fabrica-argentina"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "ProMaster / ProMaster City are North-American rebadges of Fiat Ducato / Doblò; Czech buyers meet the Fiat originals — consider removing them from Ram 'auto' or keeping as dodavka.",
+    "Ram 1200 name covers two unrelated trucks (UAE 2016–2019 Fiat Fullback/Mitsubishi Triton; Mexico 2025– Changan/Peugeot Landtrek); the card covers only the Mexican one.",
+    "For Czech buyers the relevant Ram is the 1500 (DT, 2018–) via AEC Europe imports; older Dodge Ram 1500 belongs under Dodge."
+  ],
+  "summary": "Filled generation dates and production status for 1500/2500/3500/700/1000/1200/Dakota/Rampage from en-wiki (oldid 1380790759) and Stellantis Argentina; proposed founding year 2009 and country USA."
+}

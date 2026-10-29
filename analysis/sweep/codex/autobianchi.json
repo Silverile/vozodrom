@@ -1,0 +1,107 @@
+{
+  "make": "autobianchi",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "bianchina",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.autobianchi.org/registro-storico/"
+      ]
+    },
+    {
+      "lineSlug": "bianchina",
+      "path": "generations[0].fieldSources",
+      "from": null,
+      "to": {
+        "productionStatus": [
+          "https://www.autobianchi.org/registro-storico/"
+        ]
+      },
+      "sources": [
+        "https://www.autobianchi.org/registro-storico/"
+      ]
+    },
+    {
+      "lineSlug": "stellina",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.autobianchi.org/registro-storico/"
+      ]
+    },
+    {
+      "lineSlug": "stellina",
+      "path": "generations[0].fieldSources",
+      "from": null,
+      "to": {
+        "productionStatus": [
+          "https://www.autobianchi.org/registro-storico/"
+        ]
+      },
+      "sources": [
+        "https://www.autobianchi.org/registro-storico/"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "stellina.generations[0].from",
+      "values": {
+        "registryHistoryProduction": 1963,
+        "registryAnniversary2024": 1964
+      },
+      "kept": null,
+      "sources": [
+        "https://www.autobianchi.org/la-storia/",
+        "https://www.autobianchi.org/erba-lario-fiere-22-09-2024-mostra-scambio-60-autobianchi-stellina/"
+      ],
+      "note": "Registry history explicitly says June1963 production, whereas60th anniversary in2024 suggests1964. Keep exact SOP unknown pending archival resolution."
+    },
+    {
+      "where": "Giardiniera move to Autobianchi production",
+      "values": {
+        "Fiat2007History": 1966,
+        "Stellantis2025HeritageText": 1968,
+        "existingCardTransitionStart": 1965
+      },
+      "kept": "Existing separate transitional-registration and badge records; no date replacement.",
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/fiat/press/preview-the-new-fiat-500",
+        "https://www.media.stellantis.com/de-de/heritage-hub-italy/press/ausstellung-im-heritage-hub-in-turin-willkommen-in-der-heimat-des-fiat-500"
+      ],
+      "note": "Plant move, registration make and actual badge change are distinct events; source histories disagree on terminology/timing."
+    }
+  ],
+  "openQuestions": [
+    "Partial breadth pass:7 selected cards/8 records and2 raw entries inventoried. Raw coverage is much smaller than curated coverage.",
+    "Bianchina and Stellina statuses now ended, based on licensed historical registry explicit statement noAutobianchi model in production since1996. Exact final years remain null.",
+    "Make dissolvedYear1992 is a corporate-entity claim, not brand retirement. Registry says no models produced since1996; do not overwrite corporate date with brand/history date without entity review.",
+    "Y10 card end1995 versus2026 FIAT release noting30years between registrations of lastAutobianchiY10 and firstPandinaTributo does not prove manufacture in1996; registration and production must remain distinct.",
+    "A112Abarth is a variant already covered byA112, not a missing independent card. Manufacturer heritage confirms1969A112 origin and1971Abarth introduction.",
+    "Raw extraction needs broader identity/brand reconciliation; do not create duplicateAbarth card simply because onlyA112Abarth appears raw.",
+    "Complete production dates, all technical values and photos were not independently certified."
+  ],
+  "summary": "Partial Autobianchi sweep corrected two historical unknown production statuses to ended, retained unresolved Stellina/Giardiniera dates as explicit source conflicts, and identified raw-model undercoverage.",
+  "coverage": {
+    "cardsInventoried": 7,
+    "generationRecordsInventoried": 8,
+    "rawModelsInventoried": 2,
+    "fullyVerifiedModels": [],
+    "sourceIndependence": "Manufacturer heritage publications plus licensed RegistroAutobianchi custodian history."
+  },
+  "reviewedSources": [
+    "https://www.autobianchi.org/registro-storico/",
+    "https://www.media.stellantis.com/em-en/heritage-hub-italy/press/heritage-pays-tribute-to-the-history-of-abarth-with-two-special-projects",
+    "https://www.media.stellantis.com/em-en/fiat/press/new-pandina-tributo-autobianchi-fiat-celebrates-30-years-since-the-last-y10"
+  ]
+}

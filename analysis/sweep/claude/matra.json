@@ -1,0 +1,476 @@
+{
+  "make": "matra",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "bagheera",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "murena",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357993613"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "djet",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141060"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "530",
+      "field": "bodyTypes",
+      "from": [
+        "kupe"
+      ],
+      "to": [
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Rancho",
+      "from": 1977,
+      "to": 1983,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609",
+        "https://fr.wikipedia.org/w/index.php?oldid=240180322"
+      ],
+      "note": "Present in model-lines-auto/model-line-additions and in the card file, but missing from models-auto.json (Wikidata Q1366036 not checked)."
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "all text fields (summaryCs, names, notes)",
+      "from": "words glued together, e.g. \"motoremFordV4\", \"původníA\", \"výrobaMatra\"",
+      "to": "spaces restored (40 strings), e.g. \"motorem Ford V4\", \"výroba Matra\"",
+      "sources": []
+    },
+    {
+      "lineSlug": "530",
+      "path": "summaryCs",
+      "from": "Sportovní vůz s motorem Ford V4 existoval jako původní A, upravený LX i jednodušší SX. Karoserie a výbavy nejsou zaměněny za nové modelové ř…",
+      "to": "Matra 530 (M530) je sportovní 2+2 s motorem uprostřed, které Matra Sports vyráběla v letech 1967–1973. Poháněl ho vidlicový čtyřválec Ford T…",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ]
+    },
+    {
+      "lineSlug": "530",
+      "path": "generations[0].productionUnits",
+      "from": null,
+      "to": 9609,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ],
+      "verify": "confirmed: de.wikipedia Matra 530 (9,609 built)"
+    },
+    {
+      "lineSlug": "530",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4197,
+        "width": 1620,
+        "height": 1200,
+        "wheelbase": 2650
+      },
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ],
+      "verify": "reverted (partial): wheelbase 2650 set back to null. de.wikipedia Matra 530 and fr.wikipedia Matra 530 both give 2560 mm; en 2650 looks like a digit swap. Length/width/height kept (fr LX data sheet 4200x1620x1200)."
+    },
+    {
+      "lineSlug": "530",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 4
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ]
+    },
+    {
+      "lineSlug": "530",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 1699,
+          "displacementLitresNominal": 1.7,
+          "powerKwMin": null,
+          "powerKwMax": null,
+          "variant": "Ford Taunus V4 1.7 (výkon podle verze, viz verze)"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370557876"
+      ]
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "summaryCs",
+      "from": "Kupé Matra-Simca má tři sedadla vedle sebe a motor uprostřed. Karta zatím nerozlišuje všechny modernizace a motorové výbavy.",
+      "to": "Matra Bagheera je kupé s motorem uprostřed a třemi sedadly vedle sebe, vyráběné ve spolupráci se Simcou (později Talbot) v letech 1973–1980.…",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ]
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].productionUnits",
+      "from": null,
+      "to": 47802,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ],
+      "verify": "confirmed: de.wikipedia Matra Bagheera (about 47,802)"
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 3974,
+        "width": 1734,
+        "height": 1175,
+        "wheelbase": 2370
+      },
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ],
+      "verify": "confirmed: de.wikipedia Matra Bagheera (3974x1734x1175, wheelbase 2370 until 1976)"
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "rwd"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ]
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 4
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ]
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 1294,
+          "displacementLitresNominal": 1.3,
+          "powerKwMin": 62.6,
+          "powerKwMax": 62.6,
+          "variant": "Simca Poissy 1.3 OHV"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": 1442,
+          "displacementLitresNominal": 1.4,
+          "powerKwMin": 62.6,
+          "powerKwMax": 67.1,
+          "variant": "Simca Poissy 1.4 OHV (S od 1975)"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ],
+      "verify": "confirmed with note: de.wikipedia Matra Bagheera gives 62 kW (84 PS) for 1294 cc and 66 kW (90 PS) for 1442 cc; card 62.6/67.1 within 2 %"
+    },
+    {
+      "lineSlug": "bagheera",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 1976,
+          "productionYear": 1976,
+          "name": "Bagheera II",
+          "code": null,
+          "note": "Velká modernizace: nové nárazníky obepínající karoserii, jiná zadní boční okna, větší zadní svítilny a nová palubní deska.",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141270"
+      ],
+      "verify": "confirmed: de.wikipedia Matra Bagheera notes body/dimension change from 1976 (Series II marketed from autumn 1977)"
+    },
+    {
+      "lineSlug": "djet",
+      "path": "summaryCs",
+      "from": "Malé sportovní kupé původně vyvinul René Bonnet. Karta zachycuje pouze období převzaté výroby Matra, nikoli všechny starší vozy René Bonnet.",
+      "to": "Djet je malé sportovní kupé s motorem uprostřed, které vyvinul René Bonnet a po převzetí jeho firmy v roce 1964 ho vyráběla Matra (Matra-Bon…",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141060"
+      ]
+    },
+    {
+      "lineSlug": "djet",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4220,
+        "width": 1500,
+        "height": 1200,
+        "wheelbase": 2400
+      },
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141060"
+      ],
+      "verify": "reverted (partial): width 1500 set back to null. fr.wikipedia Matra Djet gives 1400-1450 mm, de.wikipedia gives 1400/1250 mm; en 1500 unsupported. Length 4220 (fr upper bound), height, wheelbase 2400 kept."
+    },
+    {
+      "lineSlug": "djet",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "rwd"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141060"
+      ]
+    },
+    {
+      "lineSlug": "djet",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 4
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141060"
+      ]
+    },
+    {
+      "lineSlug": "murena",
+      "path": "summaryCs",
+      "from": "Nástupce Bagheery zachoval tři přední sedadla a dostal pozinkovanou nosnou konstrukci. Základnímotory a tovární S jsou rozlišeny bez směšová…",
+      "to": "Matra Murena je nástupce Bagheery, vyráběný pod značkou Talbot-Matra v letech 1980–1983. Zachoval motor uprostřed a tři sedadla vedle sebe, …",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357993613"
+      ]
+    },
+    {
+      "lineSlug": "murena",
+      "path": "generations[0].productionUnits",
+      "from": null,
+      "to": 10680,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357993613"
+      ]
+    },
+    {
+      "lineSlug": "murena",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 5
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357993613"
+      ]
+    },
+    {
+      "lineSlug": "rancho",
+      "path": "summaryCs",
+      "from": "Volnočasový vůz Matra-Simca vychází z techniky Simca. Výroba a pozdější doprodej nejsou považovány za totožné období.",
+      "to": "Matra Rancho je jeden z prvních evropských volnočasových vozů, který Matra vyráběla v Romorantinu v letech 1977–1983 (doprodej do roku 1984)…",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609",
+        "https://fr.wikipedia.org/w/index.php?oldid=240180322"
+      ]
+    },
+    {
+      "lineSlug": "rancho",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4315,
+        "width": 1665,
+        "height": 1735,
+        "wheelbase": 2520
+      },
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609",
+        "https://fr.wikipedia.org/w/index.php?oldid=240180322"
+      ]
+    },
+    {
+      "lineSlug": "rancho",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "fwd"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609"
+      ]
+    },
+    {
+      "lineSlug": "rancho",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 4
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609"
+      ]
+    },
+    {
+      "lineSlug": "rancho",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 1442,
+          "displacementLitresNominal": 1.4,
+          "powerKwMin": 59,
+          "powerKwMax": 59,
+          "variant": "Simca Type 315 1.4 OHV"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357141609",
+        "https://fr.wikipedia.org/w/index.php?oldid=240180322"
+      ]
+    },
+    {
+      "lineSlug": "530",
+      "path": "generations[0].dimensionsMm.wheelbase",
+      "from": null,
+      "to": 2560,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=255556526",
+        "https://fr.wikipedia.org/w/index.php?oldid=237936225"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "rancho generations[0].to",
+      "values": {
+        "en.wikipedia (oldid 1357141609) infobox": 1984,
+        "fr.wikipedia text (oldid 240180322): production stopped 1983, stock sold until 1984": 1983
+      },
+      "kept": 1983
+    },
+    {
+      "where": "rancho productionUnits",
+      "values": {
+        "en.wikipedia": 57792,
+        "fr.wikipedia": 56457
+      },
+      "kept": null
+    },
+    {
+      "where": "djet generations[0].from/to",
+      "values": {
+        "en.wikipedia Matra era 1965–1967, last Jet 6 sold 1968": "1965–1967",
+        "card": "1964–1968"
+      },
+      "kept": "1964–1968"
+    }
+  ],
+  "openQuestions": [
+    "Matra make foundedYear 1937 not re-verified (company history gives 1941/1945 depending on the entity); dissolvedYear 2003 matches the end of Matra Automobile.",
+    "needsReview entries in all files of this batch use \"noteCs\" or \"reason\" inconsistently with types.ts (reason); not normalised.",
+    "Bagheera has no photo; a Commons image with full margins still has to be picked.",
+    "Espace (I–III) and Avantime were built by Matra but sold as Renault; kept under Renault, not proposed as Matra models."
+  ],
+  "summary": "Matra cards had all spaces before proper nouns and numbers stripped (text corruption, 40 strings) and placeholder summaries; summaries rewritten from Wikipedia, Bagheera/Rancho/530/Djet/Murena got dimensions, engines, transmissions, production totals and the 1976 Bagheera II facelift."
+}

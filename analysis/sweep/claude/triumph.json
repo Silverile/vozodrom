@@ -1,0 +1,301 @@
+{
+  "make": "triumph",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "13-35",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1924,
+        1926
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_13/35"
+      ],
+      "confidence": "high",
+      "verify": "rejected: conflict between en.wikipedia (1924-1926) and https://de.wikipedia.org/wiki/Triumph_13/35 (1925-1927); the card also leaves the end year null. Record it as a conflict instead"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tr2",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1953,
+        1955
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR2"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: 1953-1955 matches the established TR2 dates; the card generation has the same years. No new external page fetched (Wikimedia API rate-limited)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tr5",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1967,
+        1968
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR5"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Triumph_TR5 infobox gives 1967-1968"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tr7",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1974,
+        1981
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR7"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: 1974-1981 matches the card generation; no new external page fetched (rate limits)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "spitfire",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1962,
+        1980
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_Spitfire"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: 1962-1980 matches the card lines and summary; no new external page fetched (rate limits)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "2000",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1963,
+        1977
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_2000"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Triumph_2000 infobox gives 1963-1977"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tr3",
+      "field": "productionEnd",
+      "from": 1962,
+      "to": 1957,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR3"
+      ],
+      "confidence": "low",
+      "note": "Only if TR3A stays a separate slug (as in the cards); otherwise 1962 is right for the TR3/TR3A family.",
+      "verify": "confirmed (conditional, as the sweeper noted): https://de.wikipedia.org/wiki/Triumph_TR3 says the TR3 appeared in September 1955 with 13,377 built by 1957, and the TR3A ran 1957-1962. 1957 is right only while tr3a stays a separate slug"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "fury",
+      "reason": "concept/prototype: the Triumph Fury was a single 1964 roadster prototype, never produced",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_Fury",
+        "https://www.wikidata.org/wiki/Q7844508"
+      ],
+      "verify": "confirmed: Wikidata Q7844508 has no inception or production data. The only image is \"1964 Triumph Fury.jpg\", and it is a single 1964 prototype that was never produced (sourced only from Wikidata/Commons, because Wikipedia was rate-limited)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tr",
+      "reason": "umbrella entity for the TR series (Q687195), duplicate of tr2/tr3/tr3a/tr4/tr4a/tr5/tr250/tr6/tr7/tr8; has no card",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q687195"
+      ],
+      "verify": "confirmed: Wikidata Q687195 is described as a \"series of British motorcar models\" (followed by / follows other series, no manufacturer of its own). It is an umbrella entry, not a single model"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Twelve",
+      "from": 1939,
+      "to": 1939,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=175602930"
+      ],
+      "note": "already a card (isAddition true); needs a model-line-additions row",
+      "verify": "unverified: the card rows already exist (isAddition). de.wikipedia could not be reached to recheck the years (rate limit); this is only a bookkeeping row"
+    },
+    {
+      "name": "Scorpion",
+      "from": 1931,
+      "to": 1933,
+      "bodyTypes": [
+        "sedan",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=175602860"
+      ],
+      "note": "already a card (isAddition true); needs a model-line-additions row",
+      "verify": "unverified: the card rows already exist (isAddition). de.wikipedia could not be reached to recheck the years (rate limit); this is only a bookkeeping row"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "13-35",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1926,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_13/35"
+      ],
+      "verify": "reverted: the card had a needsReview note recording that en.wikipedia says 1924-1926 and de.wikipedia 1925-1927 (rechecked: https://de.wikipedia.org/wiki/Triumph_13/35 says von 1925 bis 1927). The end year was left null on purpose; the sweep took one side of a recorded conflict without a new source"
+    },
+    {
+      "lineSlug": "13-35",
+      "path": "generations[0].trims[0].to",
+      "from": null,
+      "to": 1926,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_13/35"
+      ],
+      "verify": "reverted: the card had a needsReview note recording that en.wikipedia says 1924-1926 and de.wikipedia 1925-1927 (rechecked: https://de.wikipedia.org/wiki/Triumph_13/35 says von 1925 bis 1927). The end year was left null on purpose; the sweep took one side of a recorded conflict without a new source"
+    },
+    {
+      "lineSlug": "tr250",
+      "path": "generations[0].engines[0].powerKwMin/powerKwMax",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        83,
+        83
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR5"
+      ],
+      "verify": "reverted: the card had a needsReview note recording 111 bhp (en.wikipedia) against 104 bhp / 77 kW (de.wikipedia), with the value left null on purpose. Rechecked: https://de.wikipedia.org/wiki/Triumph_TR5 says 77 kW for the TR250, which is about 8 % below 83 kW. No new source resolves it"
+    },
+    {
+      "lineSlug": "tr250",
+      "path": "generations[0].trims[0].engine.powerKw",
+      "from": null,
+      "to": 83,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_TR5"
+      ],
+      "verify": "reverted: the card had a needsReview note recording 111 bhp (en.wikipedia) against 104 bhp / 77 kW (de.wikipedia), with the value left null on purpose. Rechecked: https://de.wikipedia.org/wiki/Triumph_TR5 says 77 kW for the TR250, which is about 8 % below 83 kW. No new source resolves it"
+    },
+    {
+      "lineSlug": "spitfire",
+      "path": "generations[0].engines[0].powerKwMin/powerKwMax",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        47,
+        47
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_Spitfire"
+      ],
+      "verify": "reverted: the card had a needsReview note recording 63 bhp (en.wikipedia) against 60 PS / 44 kW (de.wikipedia, which mentions a 60-63 PS range), with the value left null on purpose. Rechecked: https://de.wikipedia.org/wiki/Triumph_Spitfire gives 44 kW, about 6 % below 47 kW (gross vs DIN rating, powerStandard unknown)"
+    },
+    {
+      "lineSlug": "spitfire",
+      "path": "generations[0].trims[0].engine.powerKw",
+      "from": null,
+      "to": 47,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Triumph_Spitfire"
+      ],
+      "verify": "reverted: the card had a needsReview note recording 63 bhp (en.wikipedia) against 60 PS / 44 kW (de.wikipedia, which mentions a 60-63 PS range), with the value left null on purpose. Rechecked: https://de.wikipedia.org/wiki/Triumph_Spitfire gives 44 kW, about 6 % below 47 kW (gross vs DIN rating, powerStandard unknown)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "tr7 summaryCs total production",
+      "values": {
+        "en.wikipedia TR7 infobox (112,368 coupes + 28,864 convertibles)": 141232,
+        "en.wikipedia TR7 production section": 115000
+      },
+      "kept": "more than 140 000 (infobox breakdown)"
+    },
+    {
+      "where": "spitfire generations[4] USA 1500 power kW",
+      "values": {
+        "card (earlier US 1500)": 43,
+        "en.wikipedia Spitfire (53 bhp DIN)": 40
+      },
+      "kept": 43
+    },
+    {
+      "where": "vitesse-q2454466 start year",
+      "values": {
+        "card / classic-trader": 1937,
+        "some sale listings": 1936
+      },
+      "kept": 1937
+    },
+    {
+      "where": "tr2 topSpeedKmh",
+      "values": {
+        "card": 173,
+        "en.wikipedia (The Motor 1954 test)": 172.7
+      },
+      "kept": 173
+    },
+    {
+      "where": "13-35 generations[0].to and trims[0].to (series-production fill 2026-10-29)",
+      "values": {
+        "https://en.wikipedia.org/w/index.php?oldid=1248974501": 1926,
+        "https://de.wikipedia.org/w/index.php?oldid=175602724": 1927
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Pre-war Vitesse (1936 vs 1937 start) has no dedicated en.wikipedia article; needs a period source.",
+    "Triumph 2000 Mk 2 / 2.5 PI / 2500 TC / 2500 S trim power stays null: en.wikipedia gives no figures; carfolio or period brochures needed (Wikipedia API was rate-limited during this sweep)."
+  ],
+  "summary": "Triumph cards (37 lines incl. 2 additions) were already well sourced; spot-checks of about 10 lines against en.wikipedia found small gaps (13/35 end year, TR250 and Spitfire 4 power), fixed in 6 card values. Proposed removal of the Fury prototype and the TR umbrella row, plus production years for model rows."
+}

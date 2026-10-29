@@ -1,0 +1,599 @@
+{
+  "make": "bentley",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].engine.displacementCc",
+      "from": null,
+      "to": 5950,
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837"
+      ],
+      "round": 8,
+      "note": "Exact capacity explicitly published by OEM heritage sheet (indexed; direct fetch 403) and Auto-Data."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].transmission.type",
+      "from": null,
+      "to": "automatic",
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "round": 8,
+      "note": "Original W12 technical version only; not an assertion about the full family."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].transmission.gears",
+      "from": null,
+      "to": 8,
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "round": 8,
+      "note": "Original W12 eight-speed automatic."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].acceleration0to100s",
+      "from": null,
+      "to": 4.1,
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "round": 8,
+      "note": "OEM explicitly labels 0–100 kph; no conversion from 0–62 mph required."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].dimensionsMm.width",
+      "from": null,
+      "to": 1998,
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837"
+      ],
+      "round": 8,
+      "note": "Width without mirrors; retained conflicting length/wheelbase as null."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].specificationScope.noteCs",
+      "from": "Vybrané údaje původníhoW12:447kW podle výroční zprávy2015,900Nm a301km/h podle výrobního heritage listu2016. Nominální6,0l není přepočten na přesnécm³. Zdrojové0–62mph není automaticky zapsáno jako0–100km/h.",
+      "to": "Vybrané údaje původního W12 pro modelový rok 2016. Přesný objem 5950 cm³, osmistupňový automat, šířka bez zrcátek 1998 mm a zrychlení 0–100 km/h za 4,1 s jsou doloženy výrobním heritage listem a nezávislými údaji. Délka, rozvor a hmotnost zůstávají null kvůli rozdílům mezi zdroji a metodikami; nejde o úplný přehled motorů ani výbav.",
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "round": 8,
+      "note": "Replace obsolete unknown-capacity/acceleration limitation, retain unresolved dimensions and mass."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "name": "Modernizace Bentayga 2020",
+          "code": null,
+          "productionYear": 2020,
+          "note": "Doložená modernizace se změnami přídě, zádě a infotainmentu; výroba modernizovaného V8 zahájena v červenci 2020. Rodina v této kartě zahrnuje původní i modernizované vozy a EWB; úplnost dalších změn není potvrzena.",
+          "sources": [
+            "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+            "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+          ],
+          "year": 2020
+        }
+      ],
+      "sources": [
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "round": 8,
+      "note": "Manufacturer annual report identifies 2020 update; contemporary independent report explicitly establishes July2020 production, not merely unveiling."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].trims[0].sources",
+      "from": [
+        "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824"
+      ],
+      "to": [
+        "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
+      ],
+      "round": 8,
+      "note": "Technical trim evidence maintenance."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Bentley_Bentayga",
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "round": 8,
+      "note": "Generation evidence maintenance."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "sources",
+      "from": [
+        "https://annualreport2016.volkswagenag.com/divisions/bentley.html",
+        "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.bentleymotors.com/en/models.html",
+        "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+      ],
+      "to": [
+        "https://annualreport2016.volkswagenag.com/divisions/bentley.html",
+        "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.bentleymotors.com/en/models.html",
+        "https://en.wikipedia.org/wiki/Bentley_Bentayga",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "round": 8,
+      "note": "Card evidence maintenance."
+    },
+    {
+      "lineSlug": "bentayga",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "round": 8,
+      "note": "Remove only review entries for newly sourced populated fields."
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "8Litre production end",
+      "values": {
+        "https://www.bentleymotors.com/en/about-bentley/history-and-heritage/bentley-story.html": "1930–1932",
+        "Common1931 endpoint": "Needs factory chassis vs final coachwork distinction"
+      },
+      "kept": null
+    },
+    {
+      "where": "round8 Bentayga original W12 dimensions and mass",
+      "values": {
+        "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824": "length5141mm; wheelbase2992mm; mass2440kg without basis",
+        "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837": "length5140mm; wheelbase2995mm; mass2440kg without basis",
+        "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html": "mass2440kg including driver"
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Flying Spur fourth generation absent from current three-stage card; exact factory start cannot be substituted with unveilingSeptember2024.",
+    "Final W12 engine/car2024 does not prove whole Bentayga/Flying Spur family ceased, since other powertrains continue.",
+    "8Litre end remains unknown pending chassis vs completed-car scope reconciliation.",
+    "Batur coupe/convertible and Bacalar starts/ends need manufacture-specific evidence; unknown fields retained.",
+    "Raw list includes Speed8 race car and several coachbuilt/private names; road-car eligibility requires separate evidence.",
+    "Round8: Bentley heritage now calls2020 Bentayga second generation while current card groups original/facelift/EWB as one family. Generation schema split needs complete scoped engines/photos; no unsupported code or entire-generation end assigned.",
+    "Round8: Bentayga photo metadata checked; no new visual certification, original W12 has a different engine/year from family illustration. Complete Bentley generation, trim and photo review remains incomplete."
+  ],
+  "summary": "Partial Bentley breadth pass identifies missing manufacturer-designated fourth Flying Spur generation and documents historic8Litre end conflict. No direct card changes; launch years and engine cessation were not substituted for whole-model production dates.",
+  "generationProposals": [
+    {
+      "file": "model-lines-auto and model-cards",
+      "slug": "flying-spur",
+      "action": "Reconcile missing manufacturer-designated fourth generation",
+      "match": {
+        "existingStage": "Third family2019 onward"
+      },
+      "from": null,
+      "to": null,
+      "productionStatus": "unknown",
+      "sources": [
+        "https://www.bentleymedia.com/attachment/0e7e0f1e-6e8b-45c7-89ae-87c9e2010e09",
+        "https://www.bentleymedia.com/attachment/032ecd23-1978-466d-902b-7bd405620568"
+      ],
+      "reason": "OEM explicitly calls2024 car fourth generation; retained third-family row may be platform-level grouping. Exact SOP and schema policy required before splitting or overwriting its photo/specs."
+    }
+  ],
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 41,
+    "modelLinesInventoried": 24,
+    "additionsInventoried": 24,
+    "catalogCardsInventoried": 24,
+    "generationRowsInventoried": 38,
+    "externalChecks": [
+      {
+        "scope": "Official historic marque chronology and8Litre range",
+        "sources": [
+          "https://www.bentleymotors.com/en/about-bentley/history-and-heritage/bentley-story.html"
+        ]
+      },
+      {
+        "scope": "Fourth-generation Flying Spur launched2024; production-spec example2025; W12 cessation2024",
+        "sources": [
+          "https://www.bentleymedia.com/attachment/0e7e0f1e-6e8b-45c7-89ae-87c9e2010e09",
+          "https://www.bentleymedia.com/attachment/032ecd23-1978-466d-902b-7bd405620568",
+          "https://www.bentleymedia.com/attachment/d618a35c-76a2-41ac-abee-4de883101c4c"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  },
+  "photoReviews": [
+    {
+      "round": 8,
+      "lineSlug": "bentayga",
+      "path": "generations[0].photo",
+      "checkedAt": "2026-10-29",
+      "method": "Commons description, categories, licence and fixed revision; no new visual inspection",
+      "result": "retain-family-illustration",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:2021_Bentley_Bentayga_V8_Auto.jpg&oldid=848441481",
+        "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+        "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+      ],
+      "evidence": "Commons description identifies Bentayga, category Bentley Bentayga V8, filename labels 2021; author Calreyn88 and CC BY-SA4.0 match credit. Fits existing broad original/facelift/EWB family row; does not depict original2016 W12 trim or establish EWB. Image fetch failed; prior2026-10-27 visualReview retained as historical evidence only."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "arnage",
+      "path": "generations[0].photo",
+      "result": "retain-generation-illustration",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:2003_Bentley_Arnage_T_in_Jupiter,_FL_(front_right).jpg&oldid=1279645060"
+      ],
+      "evidence": "Description explicitly identifies2003 Arnage T old face; categories Arnage(1998) and2003 Bentley automobiles fit1998–2009 generation. Author Jagvar public-domain release matches existing credit. No new image inspection."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "continental-gt",
+      "path": "generations[2].photo",
+      "result": "retain-generation-illustration",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:Bentley_Continental_GT_(3rd_gen.)_IMG_2929.jpg&oldid=1084616474"
+      ],
+      "evidence": "Description explicitly identifies third-generation Continental GT; current category narrows to GT V8(2019–2024), consistent with2018–2024 broad third-family row. Author Alexander Migl and CC BY-SA4.0 match credit. Does not independently prove exact photographed trim or2018 start."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "continental-gt",
+      "path": "generations[0].photo",
+      "result": "unverified-retrieval-failed",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2005_Bentley_Continental_GT_(6238387241).jpg"
+      ],
+      "evidence": "Direct web opening returned cache miss or inaccessible URL. Filename alone is insufficient for identity certification; card photo and historical visual review preserved."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "continental-gt",
+      "path": "generations[1].photo",
+      "result": "unverified-retrieval-failed",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Bentley-continental-gt-v8s-mulliner-driving-spec-vat-qualifying-234224106-1.jpg"
+      ],
+      "evidence": "Direct web opening returned cache miss or inaccessible URL. Filename alone is insufficient for identity certification; card photo and historical visual review preserved."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "flying-spur",
+      "path": "generations[2].photo",
+      "result": "unverified-retrieval-failed",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Bentley_Flying_Spur_(2019)_Retro_Classics_2020_IMG_0141.jpg"
+      ],
+      "evidence": "Direct web opening returned cache miss or inaccessible URL. Filename alone is insufficient for identity certification; card photo and historical visual review preserved."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "mulsanne",
+      "path": "generations[1].photo",
+      "result": "unverified-retrieval-failed",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2015_Bentley_Mulsanne_Speed_V8_Auto.jpg"
+      ],
+      "evidence": "Direct web opening returned cache miss or inaccessible URL. Filename alone is insufficient for identity certification; card photo and historical visual review preserved."
+    },
+    {
+      "round": 8,
+      "checkedAt": "2026-10-29",
+      "method": "Commons file-description/category/credit audit; no new visual inspection",
+      "lineSlug": "turbo-r",
+      "path": "generations[0].photo",
+      "result": "unverified-retrieval-failed",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Bentley_Turbo_R_at_Legendy_2018_in_Prague.jpg"
+      ],
+      "evidence": "Direct web opening returned cache miss or inaccessible URL. Filename alone is insufficient for identity certification; card photo and historical visual review preserved."
+    }
+  ]
+}

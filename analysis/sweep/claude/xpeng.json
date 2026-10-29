@@ -1,0 +1,128 @@
+{
+  "make": "xpeng",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "p7-q65064122",
+      "field": "slug",
+      "from": "p7-q65064122",
+      "to": "p7",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q65064122"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "p7-q130527663",
+      "field": "slug",
+      "from": "p7-q130527663",
+      "to": "p7-plus",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q130527663"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: wikidata Q130527663 label is 'XPeng P7+' (EV executive sedan)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "g3",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/XPeng_G3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "g6",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q118150730"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "g7",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://cnevpost.com/2025/07/03/xpeng-launches-g7-suv/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "x9",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "mpv"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q123498159"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "g9l",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://cnevpost.com/2026/10/12/xpeng-launches-g9l-europe/"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "identy-x",
+      "reason": "pre-series of about 15 cars for founders/investors (2017), never sold as a model; predecessor of G3",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q106628175"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/XPeng_G3 says Identy X/XPeng 1.0 was a 15-car pre-production run reserved for founders and investors"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "g7",
+      "path": "summaryCs",
+      "from": "XPeng G7 je elektrické SUV střední velikosti s pohonem zadních kol, uvedené v Číně v červnu 2025. Prvním autem značky bylo s průhledovým displejem vyvinutým s Huawei. Aktualizace z ledna 2026 přidala verzi s range extenderem.",
+      "to": "XPeng G7 je elektrické SUV střední velikosti s pohonem zadních kol, představené v Číně v červnu 2025 a na trh uvedené 3. července 2025. Prvním autem značky bylo s průhledovým displejem vyvinutým s Huawei. Aktualizace z ledna 2026 přidala verzi s range extenderem.",
+      "sources": [
+        "https://cnevpost.com/2025/07/03/xpeng-launches-g7-suv/",
+        "https://carnewschina.com/2025/06/11/xpeng-g7-suv-officailly-unveiled-features-ar-hud-and-turing-ai-chips-from-32400-usd-in-china/"
+      ],
+      "verify": "confirmed: cnevpost 2025-07-03 says official launch 3 Jul 2025 at RMB 195,800 after presale from 11 Jun 2025. en.wikipedia.org/wiki/XPeng_G7 only says 'launched in June' (presale), which the new text covers"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "XPeng has 14 models but no rows in model-lines-auto; lines should be generated so cards are listed.",
+    "P5 end of production: phased out after the Mona M03 launch (Aug 2024), exact month not confirmed."
+  ],
+  "summary": "XPeng cards largely verified (G3 end Dec 2023, Mona M03 Aug 2024, G9L Europe launch Oct 2026 from Graz); one summary fix for the G7 launch date. Proposed slug cleanups, body types and removal of the IDENTY X pre-series."
+}

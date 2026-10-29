@@ -1,0 +1,265 @@
+{
+  "make": "tagaz",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "vega",
+      "field": "productionStart",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=152940307"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vega",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=152940307"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vega",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=152940307"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "aquila",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=154430339"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "file": "models-auto",
+      "slug": "aquila",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=154430339",
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "road-partner-pickup",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "pickup"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155040953"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Tager",
+      "from": 2008,
+      "to": 2014,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=151460569",
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ]
+    },
+    {
+      "name": "Road Partner",
+      "from": 2008,
+      "to": 2011,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155040953",
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ],
+      "verify": "confirmed (weak): ru.wikipedia SsangYong_Musso gives 2008–2011 in the infobox and 2008–2014 in the body text, so the end year is disputed"
+    },
+    {
+      "name": "C10",
+      "from": 2011,
+      "to": 2014,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611",
+        "https://ru.wikipedia.org/w/index.php?oldid=146528204"
+      ]
+    },
+    {
+      "name": "C190",
+      "from": 2011,
+      "to": 2013,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ]
+    },
+    {
+      "name": "Vortex Tingo",
+      "from": 2010,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ]
+    },
+    {
+      "name": "Vortex Corda",
+      "from": 2010,
+      "to": 2012,
+      "bodyTypes": [
+        "sedan",
+        "hatchback"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155201611"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "road-partner",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155040953"
+      ],
+      "verify": "confirmed (weak): the ru.wikipedia.org/wiki/SsangYong_Musso infobox gives TagAZ 2008–2011, but its body text says 2008–2014, and de.wikipedia TagAZ gives no end year. Keep 2011 with the conflict recorded"
+    },
+    {
+      "lineSlug": "road-partner",
+      "path": "generations[0].trims[\"2.3 110 kW 4x4\"].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155040953"
+      ],
+      "verify": "confirmed (weak): the ru.wikipedia.org/wiki/SsangYong_Musso infobox gives TagAZ 2008–2011, but its body text says 2008–2014, and de.wikipedia TagAZ gives no end year. Keep 2011 with the conflict recorded"
+    },
+    {
+      "lineSlug": "road-partner",
+      "path": "generations[0].trims[\"3.2 162 kW 4x4\"].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=155040953"
+      ],
+      "verify": "confirmed (weak): the ru.wikipedia.org/wiki/SsangYong_Musso infobox gives TagAZ 2008–2011, but its body text says 2008–2014, and de.wikipedia TagAZ gives no end year. Keep 2011 with the conflict recorded"
+    },
+    {
+      "lineSlug": "aquila",
+      "path": "generations[0].bodyTypes",
+      "from": null,
+      "to": [
+        "sedan"
+      ],
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=154430339"
+      ],
+      "verify": "confirmed: the Aquila is a four-door saloon with fastback styling, and no source found calls it a coupé or liftback; types.ts allows sedan"
+    },
+    {
+      "lineSlug": "aquila",
+      "path": "generations[0].trims[0].bodyType",
+      "from": null,
+      "to": "sedan",
+      "sources": [
+        "https://ru.wikipedia.org/w/index.php?oldid=154430339"
+      ],
+      "verify": "confirmed: the Aquila is a four-door saloon with fastback styling, and no source found calls it a coupé or liftback; types.ts allows sedan"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 16,
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts: trim kind is 'technical-version'|'engine-version'; review entries are {field, reason}"
+    },
+    {
+      "lineSlug": "*",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "count": 17,
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts: trim kind is 'technical-version'|'engine-version'; review entries are {field, reason}"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "road-partner generations[0].to",
+      "values": {
+        "ru.wikipedia KGM Musso oldid 155040953": 2011,
+        "card note (ru wiki plant period)": 2014
+      },
+      "kept": 2011
+    },
+    {
+      "where": "aquila generations[0].from",
+      "values": {
+        "ru.wikipedia Tagaz Aquila oldid 154430339": 2012,
+        "ru.wikipedia TagAZ oldid 155201611 (orders Jan 2013, sales Mar 2013)": 2013
+      },
+      "kept": 2013
+    },
+    {
+      "where": "tager generations[0].to",
+      "values": {
+        "ru.wikipedia KGM Korando oldid 151460569": 2014,
+        "auto-data.net (per existing card note)": 2012
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Vortex (Estina, Tingo, Corda) was a separate TagAZ brand for Chery licence copies; keep under tagaz or create a vortex make?",
+    "Tagaz Master/LC100 and Hardy are light trucks/buses – correctly absent from auto.",
+    "vortex-corda bodyTypes in card left null (Chery Amulet came as sedan and liftback); proposal above is medium confidence only.",
+    "c30 card has no years/body/power – sources still conflicting; candidate for removal if nothing is found."
+  ],
+  "summary": "TagAZ cards fixed for schema (16 trim kinds, 17 needsReview keys), Road Partner end year set to 2011 and Aquila body to sedan; six card-only lines (Tager, Road Partner, C10, C190, Vortex Tingo/Corda) proposed as missing models-auto entries."
+}

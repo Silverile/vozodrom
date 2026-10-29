@@ -1,0 +1,91 @@
+{
+  "make": "wartburg",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "353-de-luxe",
+      "reason": "trim of the 353, duplicate of 353 line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90994023"
+      ],
+      "verify": "confirmed: Wikidata Q90994023 is P279 subclass of Q2536748 (Wartburg 353) with only a Commons sitelink"
+    },
+    {
+      "file": "models-auto",
+      "slug": "353-tourist",
+      "reason": "body variant (estate) of the 353, duplicate of 353 line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90926102"
+      ],
+      "verify": "confirmed: Wikidata Q90926102 is P279 subclass of Q2536748 (Wartburg 353) with only a Commons sitelink"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Wartburg-Motorwagen (Eisenach, Decauville licence)",
+      "from": 1898,
+      "to": 1904,
+      "bodyTypes": null,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wartburg_(Automobil)"
+      ],
+      "verify": "confirmed (start only): de-wiki Wartburg_(Automarke): first Decauville-licence cars of 1898 already carried the Wartburg name; end year 1904 not confirmed there"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 26,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "count": 44,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelLineReview.reason)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 26,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "1.3 length/width",
+      "values": {
+        "de-wiki oldid 266157925 (Limousine)": "4220 x 1645 mm",
+        "other wikis (per earlier card review)": "differ"
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "model-lines-auto has no wartburg lines at all; the cards (311, 312, 313, 353, 1-3, motorwagen) have no line entries to attach to.",
+    "1.3: de-wiki gives Limousine 4220 x 1645 x 1495 mm (Tourist 4280 mm); the earlier card left length/width null because wikis disagree — confirm and fill.",
+    "312-300 HT body: de-wiki describes it as a 2+2 cabriolet with standard hardtop (541 built); kept as kabriolet."
+  ],
+  "summary": "Checked 311/312/313/353/1.3 dates, units and bodies against de-wiki; no factual errors found. Normalised 26 trim kinds and 44 needsReview entries; proposed removal of two trim items from models-auto."
+}

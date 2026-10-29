@@ -1,0 +1,65 @@
+{
+  "make": "wanderer",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Německo (Q183)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q59183",
+        "https://de.wikipedia.org/wiki/Wanderer_(Unternehmen)"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: wikidata Q59183 'German manufacturer...'. Its HQ Chemnitz (Q2749) has the qualifier country Q183. Wikidata P17 itself lists German Empire (Q43287) and Saxony (Q153015), so Q183 is the modern-country normalisation"
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "W 14",
+      "from": 1931,
+      "to": 1932,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wanderer_W_14"
+      ]
+    },
+    {
+      "name": "W 15 / W 17 / W 20",
+      "from": 1932,
+      "to": 1933,
+      "bodyTypes": [
+        "sedan",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wanderer_W_15"
+      ]
+    },
+    {
+      "name": "W 245 / W 250 / W 45 / W 50 / W 51",
+      "from": 1935,
+      "to": 1938,
+      "bodyTypes": [
+        "sedan",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wanderer_W_45"
+      ]
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Wanderer has no model-lines-auto rows.",
+    "makes.json dissolvedYear 1945 is the company; car production ended 1941."
+  ],
+  "summary": "Spot checks against de-wiki (W 24 1937-1940, 22,488 built, chassis shared with DKW Sonderklasse; W 23/W 26/W 52 dates and 2651 cm3 engine) matched; no card fixes. Proposed a country fix and 3 missing models that are already carded as additions."
+}

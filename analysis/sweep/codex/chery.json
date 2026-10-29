@@ -1,0 +1,1413 @@
+{
+  "make": "chery",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": 1297,
+          "displacementLitresNominal": 1.3,
+          "powerKwMin": 61,
+          "powerKwMax": 61,
+          "variant": "SQR473F – J1 1.3 TE (South Africa)"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": 1297,
+          "displacementLitresNominal": 1.3,
+          "powerKwMin": 62,
+          "powerKwMax": 62,
+          "variant": "SQR473F – A1 1.3 MT/AMT (archived international specification)"
+        }
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "reason": "Two region-scoped 1.3 specifications; do not flatten 61/62 kW regional variants. Each independently corroborated by EN or DE vehicle article.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].engineCoverage",
+      "from": "unknown",
+      "to": "partial",
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "reason": "Only the two checked 1.3 exports are populated; not an exhaustive world engine list.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "fwd"
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393"
+      ],
+      "reason": "Manufacturer and independent vehicle article agree on front-wheel drive.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].dimensionsMm.length",
+      "from": null,
+      "to": 3700,
+      "sources": [
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "reason": "Manufacturer and independent article agree. Height remains null because 1527/1564 mm appears in OEM family table.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].dimensionsMm.width",
+      "from": null,
+      "to": 1578,
+      "sources": [
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "reason": "Manufacturer and independent article agree. Height remains null because 1527/1564 mm appears in OEM family table.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].dimensionsMm.wheelbase",
+      "from": null,
+      "to": 2390,
+      "sources": [
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "reason": "Manufacturer and independent article agree. Height remains null because 1527/1564 mm appears in OEM family table.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].trims",
+      "from": null,
+      "to": [
+        {
+          "name": "J1 1.3 TE – South Africa, 5MT",
+          "kind": "technical-version",
+          "from": null,
+          "to": null,
+          "bodyType": "hatchback",
+          "engine": {
+            "fuel": "petrol",
+            "displacementCc": 1297,
+            "cylinders": 4,
+            "powerKw": 61,
+            "torqueNm": 114
+          },
+          "transmission": {
+            "type": "manual",
+            "gears": 5
+          },
+          "drive": "fwd",
+          "dimensionsMm": {
+            "length": 3700,
+            "width": 1578,
+            "height": 1527,
+            "wheelbase": 2390
+          },
+          "massKg": null,
+          "massBasis": null,
+          "topSpeedKmh": null,
+          "acceleration0to100s": null,
+          "consumptionL100": null,
+          "consumptionCycle": null,
+          "consumptionKwh100": null,
+          "rangeKm": null,
+          "rangeCycle": null,
+          "specificationScope": {
+            "market": "South Africa",
+            "modelYear": null,
+            "noteCs": "Historická exportní specifikace J1 1.3 TE; nejde o potvrzení české nabídky. Výrobní roky této varianty, hmotnost a výkony jízdy zůstávají neověřené. Mezinárodní A1 má v jiném prameni 62 kW / 122 Nm; parametry se nemísí."
+          },
+          "sources": [
+            "https://cheryauto.co.za/models/j1/",
+            "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+            "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+            "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+            "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+          ]
+        }
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "reason": "Add scoped historical J1 specification: OEM + independent article/Auto-data; mass and road-performance unknown for exact trim.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Chery_A1",
+        "https://en.wikipedia.org/wiki/List_of_Chery_vehicles"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Chery_A1",
+        "https://en.wikipedia.org/wiki/List_of_Chery_vehicles",
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "reason": "Retain existing sources and append exact checked provenance.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Chery_A1",
+        "https://en.wikipedia.org/wiki/List_of_Chery_vehicles"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Chery_A1",
+        "https://en.wikipedia.org/wiki/List_of_Chery_vehicles",
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "reason": "Append checked provenance without replacing earlier references.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "lineSlug": "a1",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Doplněny pouze dvě doložené specifikace 1,3 l; úplná evropská a světová nabídka včetně dalších motorů vyžaduje ověření."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Ověřena historická J1 1.3 TE pro Jižní Afriku; evropské výbavy, výrobní interval a jízdní výkony této varianty zatím nejsou úplné."
+        }
+      ],
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "reason": "Remove resolved null tasks; retain explicit partial-engine and trim coverage limitations.",
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "a1 SQR473F regional specifications",
+      "values": {
+        "https://cheryauto.co.za/models/j1/": "61 kW / 114 Nm, J1 1.3 TE",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html": "62 kW / 122 Nm, A1 1.3 MT/AMT"
+      },
+      "kept": "Separate regional engine entries; torque recorded only in scoped South Africa trim",
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://en.wikipedia.org/w/index.php?title=Chery_A1&oldid=1360505393",
+        "https://de.wikipedia.org/w/index.php?title=Chery_A1&oldid=269463549"
+      ],
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    },
+    {
+      "where": "a1 exact-variant mass/height",
+      "values": {
+        "https://cheryauto.co.za/models/j1/": "1404 kg kerb mass, 1527 mm height",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html": "1040 kg MT / 1049 kg AMT; 1527 (1564) mm height",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963": "1070 kg; 1527 mm"
+      },
+      "kept": "Exact J1 trim mass null; family height null. No typo correction inferred.",
+      "sources": [
+        "https://cheryauto.co.za/models/j1/",
+        "https://web.archive.org/web/20110803064452/http://www.cheryinternational.com/specifications/en/a1.html",
+        "https://www.auto-data.net/en/chery-kimo-a1-1.3i-83hp-13963"
+      ],
+      "pass": "DEPTH-ROUND8-2026-10-29"
+    }
+  ],
+  "openQuestions": [
+    "Arrizo/Tiggo numerical naming and market-specific Pro/Plus aliases still need family mapping.",
+    "Do not reassign all group products to Chery brand just because corporate parent lists them.",
+    "DEPTH-ROUND8: Tiggo7 image is a second-generation exhibition vehicle from November2019; cannot infer series-production start or Czech variant identity.",
+    "DEPTH-ROUND8: A1 2007–2015 unchanged; EN/DE articles agree but are not independent sources of one another. Auto-data starts2006, not reconciled to series production.",
+    "DEPTH-ROUND8: South African J3 manufacturer page and old brochure expose87kW/147Nm versus93kW/160Nm variants; no A3 data changed because European production and variant scope not reconciled."
+  ],
+  "summary": "Partial chery breadth pass: Automobile company founded8January1997; manufacturer distinguishes EXEED/JETOUR/Cowin brands. All local identities inventoried; only listed external checks verified, with unresolved scope and date questions retained.",
+  "localInventory": {
+    "make": {
+      "slug": "chery",
+      "name": "Chery",
+      "country": "Čína",
+      "countryQid": "Q148",
+      "countries": [
+        {
+          "qid": "Q148",
+          "name": "Čína"
+        }
+      ],
+      "qid": "Q591001",
+      "relatedQids": [
+        "Q98172997"
+      ],
+      "status": null,
+      "foundedYear": 1997,
+      "dissolvedYear": null,
+      "sections": [
+        "auto"
+      ],
+      "aliases": [],
+      "sourceUrl": "https://www.wikidata.org/wiki/Q591001"
+    },
+    "raw": [
+      {
+        "slug": "a1",
+        "name": "A1"
+      },
+      {
+        "slug": "a11",
+        "name": "A11"
+      },
+      {
+        "slug": "a13",
+        "name": "A13"
+      },
+      {
+        "slug": "a15",
+        "name": "A15"
+      },
+      {
+        "slug": "a3",
+        "name": "A3"
+      },
+      {
+        "slug": "a5",
+        "name": "A5"
+      },
+      {
+        "slug": "arrizo-3",
+        "name": "Arrizo 3"
+      },
+      {
+        "slug": "arrizo-5",
+        "name": "Arrizo 5"
+      },
+      {
+        "slug": "arrizo-7",
+        "name": "Arrizo 7"
+      },
+      {
+        "slug": "arrizo-8",
+        "name": "Arrizo 8"
+      },
+      {
+        "slug": "arrizo-gx",
+        "name": "Arrizo GX"
+      },
+      {
+        "slug": "arrizo-m7",
+        "name": "Arrizo M7"
+      },
+      {
+        "slug": "e3",
+        "name": "E3"
+      },
+      {
+        "slug": "e5",
+        "name": "E5"
+      },
+      {
+        "slug": "eastar",
+        "name": "Eastar"
+      },
+      {
+        "slug": "eastar-1st-generation",
+        "name": "Eastar (1st generation)"
+      },
+      {
+        "slug": "eq5",
+        "name": "eQ5"
+      },
+      {
+        "slug": "eq7",
+        "name": "eQ7"
+      },
+      {
+        "slug": "exeed-ex7",
+        "name": "Exeed EX7"
+      },
+      {
+        "slug": "fulwin-a9l",
+        "name": "Fulwin A9L"
+      },
+      {
+        "slug": "fulwin-t11",
+        "name": "Fulwin T11"
+      },
+      {
+        "slug": "fulwin-t9l",
+        "name": "Fulwin T9L"
+      },
+      {
+        "slug": "karry",
+        "name": "Karry"
+      },
+      {
+        "slug": "karry-k60",
+        "name": "Karry K60"
+      },
+      {
+        "slug": "q22",
+        "name": "Q22"
+      },
+      {
+        "slug": "qq",
+        "name": "QQ"
+      },
+      {
+        "slug": "qq-ice-cream",
+        "name": "QQ Ice Cream"
+      },
+      {
+        "slug": "qq6",
+        "name": "QQ6"
+      },
+      {
+        "slug": "qqme",
+        "name": "QQme"
+      },
+      {
+        "slug": "rely-x5",
+        "name": "Rely X5"
+      },
+      {
+        "slug": "riich-m1",
+        "name": "Riich M1"
+      },
+      {
+        "slug": "tansuo-06",
+        "name": "Tansuo 06"
+      },
+      {
+        "slug": "tiggo",
+        "name": "Tiggo"
+      },
+      {
+        "slug": "tiggo-3",
+        "name": "Tiggo 3"
+      },
+      {
+        "slug": "tiggo-3x",
+        "name": "Tiggo 3x"
+      },
+      {
+        "slug": "tiggo-5",
+        "name": "Tiggo 5"
+      },
+      {
+        "slug": "tiggo-5x",
+        "name": "Tiggo 5x"
+      },
+      {
+        "slug": "tiggo-7",
+        "name": "Tiggo 7"
+      },
+      {
+        "slug": "tiggo-8",
+        "name": "Tiggo 8"
+      },
+      {
+        "slug": "tiggo-8l",
+        "name": "Tiggo 8L"
+      },
+      {
+        "slug": "tiggo-9",
+        "name": "Tiggo 9"
+      },
+      {
+        "slug": "tiggo-9l",
+        "name": "Tiggo 9L"
+      },
+      {
+        "slug": "tiggo-9x",
+        "name": "Tiggo 9X"
+      },
+      {
+        "slug": "tiggo-v",
+        "name": "Tiggo V"
+      },
+      {
+        "slug": "v5",
+        "name": "V5"
+      },
+      {
+        "slug": "wujie-pro",
+        "name": "Wujie Pro"
+      },
+      {
+        "slug": "x1",
+        "name": "X1"
+      }
+    ],
+    "lines": [
+      {
+        "slug": "a1",
+        "name": "A1 / Kimo"
+      },
+      {
+        "slug": "a3",
+        "name": "A3 / M11"
+      },
+      {
+        "slug": "a5",
+        "name": "A5 / E5"
+      },
+      {
+        "slug": "arrizo-5",
+        "name": "Arrizo5"
+      },
+      {
+        "slug": "arrizo-6",
+        "name": "Arrizo6 / GX / 5Plus"
+      },
+      {
+        "slug": "arrizo-7",
+        "name": "Arrizo7"
+      },
+      {
+        "slug": "arrizo-8",
+        "name": "Arrizo8"
+      },
+      {
+        "slug": "e3",
+        "name": "E3 / Arrizo3"
+      },
+      {
+        "slug": "eastar",
+        "name": "Eastar"
+      },
+      {
+        "slug": "eastar-cross",
+        "name": "EastarCross / ArrizoM7"
+      },
+      {
+        "slug": "eq",
+        "name": "eQ / QQ3EV"
+      },
+      {
+        "slug": "eq1",
+        "name": "eQ1"
+      },
+      {
+        "slug": "eq5",
+        "name": "eQ5 / eQ7"
+      },
+      {
+        "slug": "fulwin",
+        "name": "Fulwin / Amulet"
+      },
+      {
+        "slug": "fulwin-2",
+        "name": "Fulwin2"
+      },
+      {
+        "slug": "himla",
+        "name": "Himla"
+      },
+      {
+        "slug": "qq",
+        "name": "QQ / QQ3"
+      },
+      {
+        "slug": "qq-ice-cream",
+        "name": "QQ IceCream"
+      },
+      {
+        "slug": "qq6",
+        "name": "QQ6 / Cowin1"
+      },
+      {
+        "slug": "qqme",
+        "name": "QQme"
+      },
+      {
+        "slug": "tansuo-06",
+        "name": "Tansuo06"
+      },
+      {
+        "slug": "tiggo-3",
+        "name": "Tiggo / Tiggo3"
+      },
+      {
+        "slug": "tiggo-2",
+        "name": "Tiggo2 / 3x"
+      },
+      {
+        "slug": "tiggo-4",
+        "name": "Tiggo4 / 5x"
+      },
+      {
+        "slug": "tiggo-5",
+        "name": "Tiggo5"
+      },
+      {
+        "slug": "tiggo-7",
+        "name": "Tiggo7"
+      },
+      {
+        "slug": "tiggo-8",
+        "name": "Tiggo8"
+      },
+      {
+        "slug": "tiggo-9",
+        "name": "Tiggo9"
+      },
+      {
+        "slug": "wujie-pro",
+        "name": "WujiePro"
+      }
+    ],
+    "additions": [
+      {
+        "slug": "a1",
+        "name": "A1 / Kimo"
+      },
+      {
+        "slug": "a3",
+        "name": "A3 / M11"
+      },
+      {
+        "slug": "a5",
+        "name": "A5 / E5"
+      },
+      {
+        "slug": "arrizo-5",
+        "name": "Arrizo5"
+      },
+      {
+        "slug": "arrizo-6",
+        "name": "Arrizo6 / GX / 5Plus"
+      },
+      {
+        "slug": "arrizo-7",
+        "name": "Arrizo7"
+      },
+      {
+        "slug": "arrizo-8",
+        "name": "Arrizo8"
+      },
+      {
+        "slug": "e3",
+        "name": "E3 / Arrizo3"
+      },
+      {
+        "slug": "eastar",
+        "name": "Eastar"
+      },
+      {
+        "slug": "eastar-cross",
+        "name": "EastarCross / ArrizoM7"
+      },
+      {
+        "slug": "eq",
+        "name": "eQ / QQ3EV"
+      },
+      {
+        "slug": "eq1",
+        "name": "eQ1"
+      },
+      {
+        "slug": "eq5",
+        "name": "eQ5 / eQ7"
+      },
+      {
+        "slug": "fulwin",
+        "name": "Fulwin / Amulet"
+      },
+      {
+        "slug": "fulwin-2",
+        "name": "Fulwin2"
+      },
+      {
+        "slug": "himla",
+        "name": "Himla"
+      },
+      {
+        "slug": "qq",
+        "name": "QQ / QQ3"
+      },
+      {
+        "slug": "qq-ice-cream",
+        "name": "QQ IceCream"
+      },
+      {
+        "slug": "qq6",
+        "name": "QQ6 / Cowin1"
+      },
+      {
+        "slug": "qqme",
+        "name": "QQme"
+      },
+      {
+        "slug": "tansuo-06",
+        "name": "Tansuo06"
+      },
+      {
+        "slug": "tiggo-2",
+        "name": "Tiggo2 / 3x"
+      },
+      {
+        "slug": "tiggo-3",
+        "name": "Tiggo / Tiggo3"
+      },
+      {
+        "slug": "tiggo-4",
+        "name": "Tiggo4 / 5x"
+      },
+      {
+        "slug": "tiggo-5",
+        "name": "Tiggo5"
+      },
+      {
+        "slug": "tiggo-7",
+        "name": "Tiggo7"
+      },
+      {
+        "slug": "tiggo-8",
+        "name": "Tiggo8"
+      },
+      {
+        "slug": "tiggo-9",
+        "name": "Tiggo9"
+      },
+      {
+        "slug": "wujie-pro",
+        "name": "WujiePro"
+      }
+    ],
+    "cards": [
+      {
+        "lineSlug": "a1",
+        "name": "A1 / Kimo",
+        "summaryCs": "A1 je malý hatchback Chery nabízený na více exportních trzích. Kimo, J1 a další regionální jména zde nevytvářejí duplicitní karty.",
+        "generations": [
+          {
+            "name": "A1 / Kimo – souhrnná rodina",
+            "code": null,
+            "from": 2007,
+            "to": 2015,
+            "productionStatus": "ended",
+            "photoFile": "File:2010 Chery A1, front 8.5.18.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "a3",
+        "name": "A3 / M11",
+        "summaryCs": "A3 je kompaktní řada Chery dostupná jako sedan a hatchback. Pod označením M11 nebo J3 se objevovala také na exportních trzích.",
+        "generations": [
+          {
+            "name": "A3 / M11 – souhrnná rodina",
+            "code": null,
+            "from": 2008,
+            "to": 2015,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "a5",
+        "name": "A5 / E5",
+        "summaryCs": "A5 je kompaktní sedan známý také pod jmény Fora nebo Elara. Navazující E5 je zachycen v rodině odděleným záznamem, aby nezanikla změna provedení.",
+        "generations": [
+          {
+            "name": "A5 / E5 – souhrnná rodina",
+            "code": "A21",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "E5 / A21FL – navazující sedan",
+            "code": "A21FL",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "arrizo-5",
+        "name": "Arrizo5",
+        "summaryCs": "Arrizo5 je kompaktní sedan Chery. Tato karta zachycuje původní řadu a neslučuje ji automaticky s odlišnou rodinouGX/Arrizo6.",
+        "generations": [
+          {
+            "name": "Arrizo5 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "arrizo-6",
+        "name": "Arrizo6 / GX / 5Plus",
+        "summaryCs": "RodinaGX je na exportních trzích známá jako Arrizo6 a navazuje na ni označení Arrizo5Plus. Není zde zaměňována s původním Arrizo5 ani s novou větší řadouArrizo8.",
+        "generations": [
+          {
+            "name": "Arrizo6 / GX / 5Plus – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "arrizo-7",
+        "name": "Arrizo7",
+        "summaryCs": "Arrizo7 je samostatná sedanová řada Chery. Souhrnná karta zatím nerozlišuje všechny exportní ročníky a technické změny.",
+        "generations": [
+          {
+            "name": "Arrizo7 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "arrizo-8",
+        "name": "Arrizo8",
+        "summaryCs": "Arrizo8 je větší sedan v novější nabídce Chery. Plug-in hybridní označení FulwinA8/A8L je uvedeno jako příbuzná větev; jeho parametry nejsou přeneseny na benzinová provedení.",
+        "generations": [
+          {
+            "name": "Arrizo8 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "e3",
+        "name": "E3 / Arrizo3",
+        "summaryCs": "E3 a pozdější označení Arrizo3 patří k malé sedanové větvi Chery. Záznam zachovává přejmenování bez vytváření karty pro každý obchodní název.",
+        "generations": [
+          {
+            "name": "E3 / Arrizo3 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "eastar",
+        "name": "Eastar",
+        "summaryCs": "Eastar je větší sedan Chery s více vývojovými podobami. JménoE8 nebo Cowin5 může označovat konkrétní navazující větev, nikoli shodnou specifikaci všech vozů.",
+        "generations": [
+          {
+            "name": "Eastar – souhrnná rodina",
+            "code": "B11",
+            "from": null,
+            "to": 2011,
+            "productionStatus": "ended",
+            "photoFile": null
+          },
+          {
+            "name": "EastarII / E8",
+            "code": "B16",
+            "from": 2012,
+            "to": 2016,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "eastar-cross",
+        "name": "EastarCross / ArrizoM7",
+        "summaryCs": "EastarCross je víceúčelová rodina Chery, známá také jakoV5. Následující označení ArrizoM7 je zde zahrnuto do stejné vývojové větve.",
+        "generations": [
+          {
+            "name": "EastarCross / ArrizoM7 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "eq",
+        "name": "eQ / QQ3EV",
+        "summaryCs": "Elektrická věteveQ vycházela z městských vozůQQ. Motorové a akumulátorové údaje se zde nepřenášejí z benzinového QQ.",
+        "generations": [
+          {
+            "name": "eQ / QQ3EV – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "eq1",
+        "name": "eQ1",
+        "summaryCs": "eQ1 je malý elektrický městský vůz CheryNewEnergy. OznačeníLittleAnt je zde vedeno jako jméno této rodiny.",
+        "generations": [
+          {
+            "name": "eQ1 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "eq5",
+        "name": "eQ5 / eQ7",
+        "summaryCs": "Elektrická SUV věteveQ5 je známá také jakoBigAnt. Navazující jménoeQ7 je odděleno záznamem rodiny; kompletní technické rozlišení obou podob zatím není hotové.",
+        "generations": [
+          {
+            "name": "eQ5 / eQ7 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "eQ7 – navazující elektrickéSUV",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "fulwin",
+        "name": "Fulwin / Amulet",
+        "summaryCs": "Raný Fulwin, známý také jakoA11, stál na počátku výroby osobních vozů Chery. Navazující A15/Cowin/Amulet je zde zachycen jako modernizovaná větev stejného základu, nikoli nová karta pro každé exportní jméno.",
+        "generations": [
+          {
+            "name": "Fulwin / Amulet – souhrnná rodina",
+            "code": "A11",
+            "from": 1999,
+            "to": 2006,
+            "productionStatus": "ended",
+            "photoFile": null
+          },
+          {
+            "name": "A15 / Cowin / Amulet – modernizovaná větev",
+            "code": "A15",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "File:Car in Syria.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "fulwin-2",
+        "name": "Fulwin2",
+        "summaryCs": "Fulwin2 je novější malá řada Chery odlišná od původníhoA11. Nabídka zahrnovala sedan i hatchback a řadu exportních názvů.",
+        "generations": [
+          {
+            "name": "Fulwin2 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "himla",
+        "name": "Himla",
+        "summaryCs": "Himla je novější užitková řada Chery s karoseriípick-up. Různé motory a trhy nejsou sloučeny do jedné odhadnuté technické verze.",
+        "generations": [
+          {
+            "name": "Himla – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qq",
+        "name": "QQ / QQ3",
+        "summaryCs": "QQ je malá městská řada Chery s několika vývojovými podobami. Elektrické deriváty a nové užití jména neznamenají, že všechny ročníky mají stejnou karoserii nebo techniku.",
+        "generations": [
+          {
+            "name": "QQ / QQ3 S11 – první rodina",
+            "code": "S11",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "NewQQ S15 – navazující rodina",
+            "code": "S15",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qq-ice-cream",
+        "name": "QQ IceCream",
+        "summaryCs": "QQIceCream je samostatně pojmenovaný malý elektrický model. Není veden pouze jako výbava staršího benzinovéhoQQ.",
+        "generations": [
+          {
+            "name": "QQ IceCream – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qq6",
+        "name": "QQ6 / Cowin1",
+        "summaryCs": "QQ6 je malý vůz s odděleným zavazadlovým prostorem. Označení Cowin1 a Jaggi jsou zde vedena jako názvy této rodiny, nikoli jako nezávislé modely.",
+        "generations": [
+          {
+            "name": "QQ6 / Cowin1 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qqme",
+        "name": "QQme",
+        "summaryCs": "QQme je samostatně pojmenovaný malý model Chery. Není totožný s běžným QQ ani s jeho elektrickou odvozeninou.",
+        "generations": [
+          {
+            "name": "QQme – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tansuo-06",
+        "name": "Tansuo06",
+        "summaryCs": "Tansuo06 je samostatně pojmenovaná větev SUV Chery. Příbuzná označení Jaecoo nejsou automaticky dalšími modely pod značkouChery.",
+        "generations": [
+          {
+            "name": "Tansuo06 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-2",
+        "name": "Tiggo2 / 3x",
+        "summaryCs": "Tiggo3x je menší SUV prodávané také jako Tiggo2. OznačeníPro je příslušnou variantou této rodiny, nikoli samostatnou modelovou řadou.",
+        "generations": [
+          {
+            "name": "Tiggo2 / 3x – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-3",
+        "name": "Tiggo / Tiggo3",
+        "summaryCs": "Původní Tiggo je kompaktní SUV později přejmenované na Tiggo3. Modernizace a exportní název J11 zde patří pod jednu modelovou kartu.",
+        "generations": [
+          {
+            "name": "Tiggo / Tiggo3 – souhrnná rodina",
+            "code": "T11",
+            "from": 2005,
+            "to": 2023,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-4",
+        "name": "Tiggo4 / 5x",
+        "summaryCs": "RodinaTiggo5x je na řadě exportních trhů známá jako Tiggo4 nebo TiggoCross. Karta neslučuje její specifikace s původním větším Tiggo5.",
+        "generations": [
+          {
+            "name": "Tiggo4 / 5x – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-5",
+        "name": "Tiggo5",
+        "summaryCs": "Tiggo5 je samostatná dřívější řada SUV. Navzdory podobnému jménu není totožná s menším Tiggo5x ani s každou exportní verzí Tiggo4.",
+        "generations": [
+          {
+            "name": "Tiggo5 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-7",
+        "name": "Tiggo7",
+        "summaryCs": "Tiggo7 je kompaktní SUV s několika souběžnými modernizacemi a regionálními nabídkami. České benzinové a plug-in hybridní verze jsou popsány samostatně, aby se nepletly s čínskými výkony motorů.",
+        "generations": [
+          {
+            "name": "Tiggo7 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "File:Chery Tiggo 7 II 001.jpg"
+          },
+          {
+            "name": "Tiggo7 – české benzinové provedení",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "Tiggo7 – českéPHEV se zdrojovými konflikty",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-8",
+        "name": "Tiggo8",
+        "summaryCs": "Tiggo8 je větší SUV s víceřadou kabinou. Pro/Plus/CSH jsou zachyceny v rámci rodiny a konkrétní české verze mají vlastní hmotnosti a technickou působnost.",
+        "generations": [
+          {
+            "name": "Tiggo8 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "Tiggo8 – české benzinovéUnique",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "Tiggo8 – českéPHEV Unique",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tiggo-9",
+        "name": "Tiggo9",
+        "summaryCs": "Tiggo9 je novější velké SUV Chery. Česká plug-in hybridní verze je vedena odděleně od nepotvrzených parametrů jiných trhů a ročníků.",
+        "generations": [
+          {
+            "name": "Tiggo9 – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "Tiggo9 – českéPHEV UniqueAWD",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "wujie-pro",
+        "name": "WujiePro",
+        "summaryCs": "WujiePro je samostatně pojmenovaný malý elektrický model Chery. Souhrnný záznam zatím nemá ověřenou úplnou technickou tabulku ani výrobní hranice.",
+        "generations": [
+          {
+            "name": "WujiePro – souhrnná rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      }
+    ],
+    "photoScope": "Filename metadata inventoried only; no new visual image review performed."
+  },
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 47,
+    "modelLinesInventoried": 29,
+    "additionsInventoried": 29,
+    "catalogCardsInventoried": 29,
+    "generationRowsInventoried": 39,
+    "externalChecks": [
+      {
+        "scope": "Automobile company founded8January1997; manufacturer distinguishes EXEED/JETOUR/Cowin brands",
+        "sources": [
+          "https://www.cheryinternational.com/my/aboutchery_my/introduction_my/index.shtml",
+          "https://en.cheryholding.com/article/category/plate.html"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  },
+  "photoReviews": [
+    {
+      "lineSlug": "a1",
+      "generation": 0,
+      "file": "File:2010 Chery A1, front 8.5.18.jpg",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:2010_Chery_A1,_front_8.5.18.jpg&oldid=750591626",
+        "https://commons.wikimedia.org/wiki/Category:Chery_A1"
+      ],
+      "result": "Description identifies 2010 Chery A1 in Luoyang; Chery A1 category matches single family. Author Kevauto and CC BY-SA 4.0 match card. Retained unchanged.",
+      "checkedAt": "2026-10-29",
+      "pass": "DEPTH-ROUND8",
+      "visualInspection": false,
+      "scope": "Commons description, categories and credit text checked; images not newly visually inspected."
+    },
+    {
+      "lineSlug": "fulwin",
+      "generation": 1,
+      "file": "File:Car in Syria.jpg",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:Car_in_Syria.jpg&oldid=1053726070",
+        "https://commons.wikimedia.org/wiki/Category:Chery_Amulet"
+      ],
+      "result": "Description identifies Chery Amulet in Syria, 2009; categories Chery Amulet and white liftbacks match A15/Amulet branch. High Contrast / CC BY 3.0 Germany. Retained unchanged.",
+      "checkedAt": "2026-10-29",
+      "pass": "DEPTH-ROUND8",
+      "visualInspection": false,
+      "scope": "Commons description, categories and credit text checked; images not newly visually inspected."
+    },
+    {
+      "lineSlug": "tiggo-7",
+      "generation": 0,
+      "file": "File:Chery Tiggo 7 II 001.jpg",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:Chery_Tiggo_7_II_001.jpg&oldid=960528301",
+        "https://commons.wikimedia.org/wiki/Category:Chery_Tiggo_7_(2nd_generation)"
+      ],
+      "result": "Description and category explicitly second generation, photographed Auto Guangzhou 25 Nov 2019. Author Jengtingchen / CC BY-SA 4.0. Broad aggregate family card retained, but exhibition photo does not establish Czech 2026 production specification or SOP.",
+      "checkedAt": "2026-10-29",
+      "pass": "DEPTH-ROUND8",
+      "visualInspection": false,
+      "scope": "Commons description, categories and credit text checked; images not newly visually inspected."
+    }
+  ],
+  "depthPasses": [
+    {
+      "checkedAt": "2026-10-29",
+      "pass": "DEPTH-ROUND8",
+      "status": "partial",
+      "lines": [
+        "a1"
+      ],
+      "generationRowsInScope": 1,
+      "photoIdentityRowsChecked": 3,
+      "loggedChanges": 10,
+      "remaining": "28 other model lines require depth work; A1 code/facelifts, complete European engine/trim range, series-production boundaries independently of Wikipedia, and exact-variant mass/performance remain unresolved. No new visual photo inspection."
+    }
+  ]
+}

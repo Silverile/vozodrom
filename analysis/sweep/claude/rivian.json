@@ -1,0 +1,109 @@
+{
+  "make": "rivian",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "r1t",
+      "field": "productionStart",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Rivian_R1T&oldid=1381285354"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: first production R1T built Sep 2021, ahead of the first R1S hand-overs in Dec 2021 (https://en.wikipedia.org/wiki/Rivian_R1S)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "r1s",
+      "field": "productionStart",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Rivian_R1S&oldid=1382266124"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Rivian_R1S infobox production 2022 (two units to executives Dec 2021, customer deliveries Aug 2022)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "r2",
+      "field": "productionStart",
+      "from": null,
+      "to": 2026,
+      "sources": [
+        "https://electrek.co/2026/04/22/rivian-r2-starts-production-tornado-deliveries-spring/",
+        "https://www.carscoops.com/2026/04/rivian-r2-production-begins/"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Rivian_R2 (production April 2026, deliveries June 2026)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "r2",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://electrek.co/2026/04/22/rivian-r2-starts-production-tornado-deliveries-spring/"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Rivian_R2 (5-door SUV)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "r3x",
+      "reason": "R3X je sportovní varianta R3, ne samostatný model; Wikidata položka nemá ani jeden sitelink. Obě ve výrobě k 2026-10 nejsou.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q125552515",
+        "https://en.wikipedia.org/wiki/Rivian_R3"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Rivian_R3 calls R3X an outdoor/performance variant of the R3, production TBA; https://www.wikidata.org/wiki/Q125552515 describes it as upcoming"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "r1t",
+    "r1s",
+    "r2"
+  ],
+  "conflicts": [
+    {
+      "where": "r1s rozvor",
+      "values": {
+        "en Wikipedie infobox": 3076,
+        "en Wikipedie sekce Chassis": 3080
+      },
+      "kept": 3076
+    },
+    {
+      "where": "r1t Dual-Motor moment",
+      "values": {
+        "en Wikipedie tabulka": 827,
+        "en Wikipedie text": 830
+      },
+      "kept": 827
+    }
+  ],
+  "openQuestions": [
+    "EDV (užitková dodávka pro Amazon) v models-auto ponechána – je to dodávka, nikoli osobní auto; rozhodnout, zda patří do sekce auto. Karta nevytvořena.",
+    "R3 (ohlášen 3/2024) zatím není ve výrobě – ponechat jako budoucí model, nebo skrýt do zahájení výroby?",
+    "Rivian se oficiálně neprodává v Evropě; karty mají markets North America.",
+    "Commons API vracelo během sweepu chybu rate limit; nové karty mají photo null a needsReview – doplnit snímky s ověřenou licencí.",
+    "Nové soubory karet je třeba zapsat do src/data/model-cards-index.json přes scripts/model-cards-index.mjs (index jsme needitovali)."
+  ],
+  "summary": "Vytvořeny karty R1T (2021–, Gen 2 2024), R1S (2022–) a R2 (výroba od 22. 4. 2026); navrženy roky výroby do models-auto a odstranění R3X jako varianty R3.",
+  "verifyCardsAdded": {
+    "r1t": "confirmed: Quad Gen 1 623 kW / 1231 Nm, Dual 397 kW / 827 Nm, Gen 2 June 2024; no value refuted",
+    "r1s": "confirmed: from 2022 matches https://en.wikipedia.org/wiki/Rivian_R1S infobox",
+    "r2": "confirmed: Launch Edition 489 kW and 330 mi (531 km) EPA match https://en.wikipedia.org/wiki/Rivian_R2 (307 mi with all-terrain tyres); dimensions there (4715/1905/1700/2935 mm) could be added"
+  }
+}

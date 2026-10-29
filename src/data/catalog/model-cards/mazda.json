@@ -599,8 +599,33 @@
         "name": "DJ",
         "from": 2014,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2019,
+            "to": 2023,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "První modernizace třetí generace (DJ) v roce 2019; v Japonsku současně přejmenování z Demio na Mazda2.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda2"
+            ],
+            "photo": null
+          },
+          {
+            "year": 2023,
+            "to": null,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Druhá modernizace představená 27. ledna 2023 (nová přední maska a barevné kombinace).",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda2"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -775,7 +800,12 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda2",
           "https://media-assets.mazda.eu/raw/upload/mazdafr/contentassets/c97d8c7e04e14b70a02c1864b6bab6e2/fiche-produit-mazda2-2023.pdf"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda2"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1007,10 +1037,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1155,8 +1181,21 @@
         "name": "Mazda2 Hybrid",
         "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2024,
+            "to": null,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Modernizace Mazdy2 Hybrid v roce 2024 navázala na modernizovanou Toyotu Yaris (XP210).",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda2"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -1183,8 +1222,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://uk.mazda-press.com/news/2021/2022-mazda2-hybrid/"
-        ]
+          "https://uk.mazda-press.com/news/2021/2022-mazda2-hybrid/",
+          "https://en.wikipedia.org/wiki/Mazda2"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda2"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1199,10 +1244,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1275,7 +1316,20 @@
         "from": 2003,
         "to": 2008,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2006,
+            "to": 2008,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Modernizace Series II představená v červenci 2006.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda3"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "partial",
@@ -1576,7 +1630,8 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381407537",
-          "https://pliki.elektroda.pl/1059664,mazda3_fl_english.html"
+          "https://pliki.elektroda.pl/1059664,mazda3_fl_english.html",
+          "https://en.wikipedia.org/wiki/Mazda3"
         ]
       },
       {
@@ -1804,12 +1859,25 @@
         ]
       },
       {
-        "code": null,
-        "name": "3 – přehled řady",
+        "code": "BM/BN",
+        "name": "BM/BN",
         "from": 2013,
         "to": 2018,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2016,
+            "to": 2018,
+            "name": "facelift",
+            "code": "BN",
+            "productionYear": null,
+            "note": "Modernizace ze srpna 2016 nese typové označení BN.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda3"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "partial",
@@ -2282,8 +2350,17 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381407537",
-          "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf"
-        ]
+          "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf",
+          "https://en.wikipedia.org/wiki/Mazda3"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda3"
+          ],
+          "name": [
+            "https://en.wikipedia.org/wiki/Mazda3"
+          ]
+        }
       },
       {
         "code": "BP",
@@ -2607,10 +2684,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3279,14 +3352,6 @@
       },
       {
         "field": "generations[1].trims[3].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5482,7 +5547,33 @@
         "from": 2012,
         "to": 2024,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2015,
+            "to": 2018,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "První modernizace: světová premiéra na autosalonu v Los Angeles v listopadu 2014, evropská premiéra na autosalonu v Ženevě 2015.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda6_(third_generation)"
+            ],
+            "photo": null
+          },
+          {
+            "year": 2018,
+            "to": null,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Druhá modernizace představená v listopadu 2017 v Los Angeles (nová přední a zadní část); v Evropě v prodeji od léta 2018.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda6_(third_generation)",
+              "https://carmagazine.co.uk/car-news/motor-shows-events/los-angeles/2017/2018-mazda-6-facelift-at-2017-la-show"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "partial",
@@ -5869,7 +5960,8 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1371067233",
-          "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf"
+          "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf",
+          "https://en.wikipedia.org/wiki/Mazda6_(third_generation)"
         ]
       }
     ],
@@ -6231,10 +6323,6 @@
       },
       {
         "field": "generations[1].trims[6].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7242,22 +7330,24 @@
     "name": "6e",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Mazda 6e je samostatná modelová řada v katalogu značky. Přehled rozlišuje doložené generace; uvedené technické verze představují pouze výběr pro konkrétní trh a rok.",
+    "summaryCs": "Elektrický liftback střední třídy, v Číně prodávaný jako Mazda EZ-6 a vyvinutý se společností Changan. V Evropě od roku 2025 s bateriemi 68,8 kWh a 80 kWh a pohonem zadních kol.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "6e – přehled řady",
-        "from": null,
+        "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -7272,20 +7362,40 @@
           "bodyType": null,
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
-        "trunkL": null,
+        "trunkL": 330,
         "markets": [],
-        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "marketNotesCs": "V Číně se prodává jako Mazda EZ-6 od roku 2024; evropská verze 6e debutovala v Bruselu 10. ledna 2025 a do prodeje přišla v polovině roku 2025. Vyrábí se v Číně (Changan Mazda).",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1375870662",
-          "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/"
-        ]
+          "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/",
+          "https://en.wikipedia.org/wiki/Mazda_EZ-6"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_EZ-6"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_EZ-6"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_EZ-6",
+            "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/"
+          ],
+          "trunkL": [
+            "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/"
+          ],
+          "drivetrains": [
+            "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1375870662",
-      "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/"
+      "https://uk.mazda-press.com/news/2025/all-new-mazda6e-unveiled-at-brussels-motor-show/",
+      "https://en.wikipedia.org/wiki/Mazda_EZ-6"
     ],
     "needsReview": [
       {
@@ -7294,10 +7404,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7310,10 +7416,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7349,10 +7451,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].photo",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -7369,15 +7467,15 @@
     "name": "929",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Mazda 929 je samostatná modelová řada v katalogu značky. Přehled rozlišuje doložené generace; uvedené technické verze představují pouze výběr pro konkrétní trh a rok.",
+    "summaryCs": "Mazda 929 bylo exportní označení velkých sedanů a kupé, které se v Japonsku prodávaly jako Luce, Cosmo a Sentia. Jméno se používalo v letech 1973–1997.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "929 – přehled řady",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1973,
+        "to": 1997,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -7401,20 +7499,36 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "marketNotesCs": "Exportní jméno pro vozy Luce (LA2, LA4, HC), kupé Cosmo HB a nakonec Sentia (HD, HE); název 929 se používal jen pro export, v letech 1973–1997.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381623192",
           "https://en.wikipedia.org/w/index.php?oldid=1381314459",
-          "https://www.wikidata.org/wiki/Q6005605"
-        ]
+          "https://www.wikidata.org/wiki/Q6005605",
+          "https://en.wikipedia.org/wiki/Mazda_929"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_929"
+          ],
+          "to": [
+            "https://en.wikipedia.org/wiki/Mazda_929"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_929"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_929"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381623192",
       "https://en.wikipedia.org/w/index.php?oldid=1381314459",
-      "https://www.wikidata.org/wiki/Q6005605"
+      "https://www.wikidata.org/wiki/Q6005605",
+      "https://en.wikipedia.org/wiki/Mazda_929"
     ],
     "needsReview": [
       {
@@ -7423,14 +7537,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7860,7 +7966,7 @@
         "name": "B-Series – přehled řady",
         "from": 1961,
         "to": 2006,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -7889,8 +7995,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1374281782",
-          "https://www.wikidata.org/wiki/Q2302203"
-        ]
+          "https://www.wikidata.org/wiki/Q2302203",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -7977,9 +8089,9 @@
       {
         "code": null,
         "name": "BT-50 – přehled řady",
-        "from": null,
+        "from": 2006,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -8003,13 +8115,25 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "marketNotesCs": "Tři generace: UN (2006–2011), UP/UR (2011–2020) a TF (od 2020, odvozená od Isuzu D-Max). Souhrnný záznam řady, generace nejsou rozepsány.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1371177063",
-          "https://www.wikidata.org/wiki/Q1473317"
-        ]
+          "https://www.wikidata.org/wiki/Q1473317",
+          "https://en.wikipedia.org/wiki/Mazda_BT-50"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ]
+        }
       }
     ],
     "sources": [
@@ -8023,10 +8147,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8439,8 +8559,8 @@
         "code": null,
         "name": "Cosmo / Cosmo Sport",
         "from": 1967,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1995,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -8464,12 +8584,23 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "marketNotesCs": "Čtyři generace: L10 (1967–1972, export 110S), CD (1975–1981, export RX-5), HB (1981–1989, export i jako 929) a Eunos Cosmo JC (1990–1995, jen Japonsko).",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Cosmo"
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/wiki/Mazda_Cosmo"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_Cosmo"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_Cosmo"
+          ]
+        }
       }
     ],
     "sources": [
@@ -8484,10 +8615,6 @@
       {
         "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Souhrnný konec 1995/1996 se liší podle zdroje a poslední modelové rodiny; neaplikováno bez rozlišení."
       },
       {
         "field": "generations[0].facelift",
@@ -8556,16 +8683,29 @@
     "name": "CX-3",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Mazda CX-3 je samostatná modelová řada v katalogu značky. Přehled rozlišuje doložené generace; uvedené technické verze představují pouze výběr pro konkrétní trh a rok.",
+    "summaryCs": "Malé SUV CX-3 (DK) vychází z Mazdy2 třetí generace. V Evropě se prodávalo od roku 2015 do prosince 2021, výroba pro jiné trhy pokračovala.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "DK",
         "name": "CX-3 – přehled řady",
         "from": 2014,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2018,
+            "to": null,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Menší modernizace v roce 2018 s novou maskou chladiče.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda_CX-3"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -8588,7 +8728,7 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "marketNotesCs": "Prodej v Evropě skončil v prosinci 2021; výroba pro jiné trhy (Thajsko, Mexiko, Austrálie) podle zdroje pokračuje, japonská nabídka skončila v roce 2026.",
         "photo": {
           "source": "commons",
           "file": "2018 Mazda CX-3 Sport Nav+ 4X4 2.0 Front.jpg",
@@ -8609,13 +8749,26 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1364809724",
-          "https://www.wikidata.org/wiki/Q18702360"
-        ]
+          "https://www.wikidata.org/wiki/Q18702360",
+          "https://en.wikipedia.org/wiki/Mazda_CX-3"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-3"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-3"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-3"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1364809724",
-      "https://www.wikidata.org/wiki/Q18702360"
+      "https://www.wikidata.org/wiki/Q18702360",
+      "https://en.wikipedia.org/wiki/Mazda_CX-3"
     ],
     "needsReview": [
       {
@@ -8623,15 +8776,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8695,11 +8840,11 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "DM",
         "name": "CX-30 – přehled řady",
         "from": 2019,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -8902,8 +9047,17 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1378562643",
           "https://www.wikidata.org/wiki/Q61993966",
-          "https://autokinito.com.cy/assets/MAZDA/PDF/MAZDA-CX-30.pdf"
-        ]
+          "https://autokinito.com.cy/assets/MAZDA/PDF/MAZDA-CX-30.pdf",
+          "https://en.wikipedia.org/wiki/Mazda_CX-30"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-30"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-30"
+          ]
+        }
       }
     ],
     "sources": [
@@ -8914,10 +9068,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9149,7 +9299,7 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "GK",
         "name": "CX-4",
         "from": 2016,
         "to": null,
@@ -9182,7 +9332,12 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_CX-4"
-        ]
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-4"
+          ]
+        }
       }
     ],
     "sources": [
@@ -9192,10 +9347,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9275,7 +9426,21 @@
         "from": 2012,
         "to": 2017,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2015,
+            "to": 2017,
+            "name": "facelift",
+            "code": null,
+            "productionYear": 2015,
+            "note": "Modernizace představená na autosalonu v Los Angeles v listopadu 2014; německý zdroj uvádí modernizaci od února 2015.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda_CX-5",
+              "https://de.wikipedia.org/wiki/Mazda_CX-5"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "unknown",
@@ -9316,7 +9481,9 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1379166699"
+          "https://en.wikipedia.org/w/index.php?oldid=1379166699",
+          "https://en.wikipedia.org/wiki/Mazda_CX-5",
+          "https://de.wikipedia.org/wiki/Mazda_CX-5"
         ]
       },
       {
@@ -9325,7 +9492,21 @@
         "from": 2016,
         "to": 2025,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2021,
+            "to": 2025,
+            "name": "facelift",
+            "code": null,
+            "productionYear": null,
+            "note": "Modernizace představená v září 2021; v Evropě od modelového roku 2022.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Mazda_CX-5",
+              "https://de.wikipedia.org/wiki/Mazda_CX-5"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": null,
         "engines": null,
         "engineCoverage": "partial",
@@ -9669,7 +9850,9 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379166699",
-          "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf"
+          "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf",
+          "https://en.wikipedia.org/wiki/Mazda_CX-5",
+          "https://de.wikipedia.org/wiki/Mazda_CX-5"
         ]
       },
       {
@@ -9715,10 +9898,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9771,10 +9950,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10170,7 +10345,7 @@
         "name": "CX-50",
         "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -10198,8 +10373,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-50"
-        ]
+          "https://en.wikipedia.org/wiki/Mazda_CX-50",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10291,7 +10472,7 @@
         "name": "CX-60 – přehled řady",
         "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -10424,8 +10605,14 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1378993028",
           "https://www.wikidata.org/wiki/Q111154152",
-          "https://www.mazda.com.cy/Portals/7/adam/Contents/b_SEvsw9_U-_Z5100Pi-7Q/Link/CX-60_Spec_V2_230718.pdf"
-        ]
+          "https://www.mazda.com.cy/Portals/7/adam/Contents/b_SEvsw9_U-_Z5100Pi-7Q/Link/CX-60_Spec_V2_230718.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10583,7 +10770,7 @@
         "name": "CX-7 – přehled řady",
         "from": 2006,
         "to": 2012,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -10628,8 +10815,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1378540109",
-          "https://www.wikidata.org/wiki/Q1140384"
-        ]
+          "https://www.wikidata.org/wiki/Q1140384",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10714,7 +10907,7 @@
         "name": "CX-70",
         "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -10742,8 +10935,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-70"
-        ]
+          "https://en.wikipedia.org/wiki/Mazda_CX-70",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10831,7 +11030,7 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "KG",
         "name": "CX-8",
         "from": 2017,
         "to": null,
@@ -10859,12 +11058,20 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "marketNotesCs": "Japonská výroba skončila v prosinci 2023; montáž v Malajsii měla pokračovat nejméně do roku 2026. V Evropě se oficiálně neprodávala.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_CX-8"
-        ]
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-8"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_CX-8"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10874,10 +11081,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10956,7 +11159,7 @@
         "name": "CX-80 – přehled řady",
         "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -11013,7 +11216,7 @@
             "topSpeedKmh": null,
             "acceleration0to100s": null,
             "consumptionL100": 8.1,
-            "consumptionCycle": "WLTP combined",
+            "consumptionCycle": "WLTP combined (charge-sustaining, nevážená)",
             "consumptionKwh100": null,
             "rangeKm": null,
             "rangeCycle": null,
@@ -11073,8 +11276,14 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1369151120",
           "https://www.wikidata.org/wiki/Q125503512",
-          "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-80/cx-80-price-and-spec-oct24.pdf"
-        ]
+          "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-80/cx-80-price-and-spec-oct24.pdf",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11353,7 +11562,7 @@
         "name": "CX-90",
         "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -11381,8 +11590,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-90"
-        ]
+          "https://en.wikipedia.org/wiki/Mazda_CX-90",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11474,7 +11689,7 @@
         "name": "Demio – přehled řady",
         "from": 1996,
         "to": 2002,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
@@ -11503,8 +11718,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1362298783",
-          "https://www.wikidata.org/wiki/Q500052"
-        ]
+          "https://www.wikidata.org/wiki/Q500052",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11591,7 +11812,7 @@
       {
         "code": null,
         "name": "E-Series – přehled řady",
-        "from": null,
+        "from": 1977,
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
@@ -11617,13 +11838,22 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "marketNotesCs": "Exportní označení dodávek Bongo a Bongo Brawny (E1300/E1400/E1600 od 2. generace 1977, E2000/E2200 u dalších generací). Konec exportního označení není doložen.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379407072",
-          "https://www.wikidata.org/wiki/Q1622735"
-        ]
+          "https://www.wikidata.org/wiki/Q1622735",
+          "https://en.wikipedia.org/wiki/Mazda_Bongo"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_Bongo"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_Bongo"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11637,10 +11867,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -11958,7 +12184,7 @@
         "name": "MPV – přehled řady",
         "from": 1988,
         "to": 2016,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -11987,8 +12213,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1377406676",
-          "https://www.wikidata.org/wiki/Q660703"
-        ]
+          "https://www.wikidata.org/wiki/Q660703",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -12077,7 +12309,7 @@
         "name": "MX-3 – přehled řady",
         "from": 1991,
         "to": 1998,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -12122,8 +12354,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1371604857",
-          "https://www.wikidata.org/wiki/Q1755480"
-        ]
+          "https://www.wikidata.org/wiki/Q1755480",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -12204,11 +12442,11 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "DR",
         "name": "MX-30 – přehled řady",
         "from": 2020,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -12253,8 +12491,17 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1376821146",
-          "https://www.wikidata.org/wiki/Q72190919"
-        ]
+          "https://www.wikidata.org/wiki/Q72190919",
+          "https://en.wikipedia.org/wiki/Mazda_MX-30"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://en.wikipedia.org/wiki/Mazda_MX-30"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_MX-30"
+          ]
+        }
       }
     ],
     "sources": [
@@ -12264,10 +12511,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -13857,7 +14100,7 @@
         "name": "Premacy – přehled řady",
         "from": 1999,
         "to": 2004,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -13886,8 +14129,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1368249870",
-          "https://www.wikidata.org/wiki/Q1541535"
-        ]
+          "https://www.wikidata.org/wiki/Q1541535",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -13975,8 +14224,8 @@
         "code": null,
         "name": "R360 Coupé",
         "from": 1960,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1969,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -14000,7 +14249,7 @@
         },
         "trunkL": null,
         "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "marketNotesCs": "Plná výroba trvala do roku 1966; verze s automatickou převodovkou se pro tělesně postižené řidiče dodávala na objednávku do roku 1969.",
         "photo": {
           "source": "commons",
           "file": "1961 Mazda R360 Coupé 01.jpg",
@@ -14021,7 +14270,22 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_R360"
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/wiki/Mazda_R360"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_R360"
+          ],
+          "productionUnits": [
+            "https://en.wikipedia.org/wiki/Mazda_R360"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_R360"
+          ]
+        },
+        "productionUnits": 65737
       }
     ],
     "sources": [
@@ -14036,10 +14300,6 @@
       {
         "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Zdroje rozlišují osobní nabídku do 1966 a širší výrobní období do 1969; přesný rozsah konce nebyl sjednocen."
       },
       {
         "field": "generations[0].facelift",
@@ -14674,7 +14934,7 @@
         "name": "RX-8 – přehled řady",
         "from": 2003,
         "to": 2012,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -14703,8 +14963,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1378375068",
-          "https://www.wikidata.org/wiki/Q520673"
-        ]
+          "https://www.wikidata.org/wiki/Q520673",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -15027,7 +15293,7 @@
         "name": "Tribute – přehled řady",
         "from": 2000,
         "to": 2011,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -15056,8 +15322,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372066350",
-          "https://www.wikidata.org/wiki/Q951813"
-        ]
+          "https://www.wikidata.org/wiki/Q951813",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -15263,7 +15535,7 @@
         "name": "Xedos 6 – přehled řady",
         "from": 1992,
         "to": 1999,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -15308,8 +15580,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1344098342",
-          "https://www.wikidata.org/wiki/Q1974845"
-        ]
+          "https://www.wikidata.org/wiki/Q1974845",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -15394,7 +15672,7 @@
         "name": "Xedos 9 – přehled řady",
         "from": 1993,
         "to": 2002,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -15423,8 +15701,14 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379251168",
-          "https://www.wikidata.org/wiki/Q1852384"
-        ]
+          "https://www.wikidata.org/wiki/Q1852384",
+          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        }
       }
     ],
     "sources": [
@@ -15499,6 +15783,161 @@
     ],
     "aliases": [
       "Millenia"
+    ]
+  },
+  {
+    "makeSlug": "mazda",
+    "lineSlug": "cx-6e",
+    "name": "CX-6e",
+    "aliases": [
+      "EZ-60"
+    ],
+    "isAddition": true,
+    "segment": null,
+    "summaryCs": "Elektrické SUV střední velikosti vyvinuté se společností Changan, v Číně prodávané jako Mazda EZ-60. Evropská premiéra proběhla v Bruselu v lednu 2026, prodej v Evropě od léta 2026.",
+    "coverage": "pilot-partial",
+    "generations": [
+      {
+        "productionUnits": null,
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_EZ-60"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_EZ-60"
+          ],
+          "drivetrains": [
+            "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+          ],
+          "trunkL": [
+            "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+          ]
+        },
+        "trims": [
+          {
+            "name": "78 kWh RWD 258",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "electric",
+              "displacementCc": null,
+              "cylinders": null,
+              "powerKw": 190,
+              "torqueNm": 290,
+              "powerStandard": null
+            },
+            "fieldSources": {
+              "powerKw": [
+                "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+              ],
+              "torqueNm": [
+                "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+              ],
+              "rangeKm": [
+                "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+              ]
+            },
+            "transmission": {
+              "type": "single-speed",
+              "gears": 1
+            },
+            "drive": "rwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": null,
+            "acceleration0to100s": null,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": 484,
+            "rangeCycle": "WLTP (předběžný údaj)",
+            "specificationScope": {
+              "market": "DE",
+              "modelYear": 2026,
+              "noteCs": "Předběžné evropské údaje před zahájením prodeje; rozměry jsou ve zdroji jen zaokrouhlené, proto nejsou vyplněny."
+            },
+            "sources": [
+              "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+            ]
+          }
+        ],
+        "code": null,
+        "name": "CX-6e",
+        "from": 2025,
+        "to": null,
+        "productionStatus": "current",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "variant": "78 kWh LFP, zadní elektromotor"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "rwd"
+        ],
+        "transmissions": [
+          {
+            "type": "single-speed",
+            "gears": 1
+          }
+        ],
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "DE",
+          "modelYear": 2026,
+          "variant": null,
+          "bodyType": "suv",
+          "noteCs": "Výroba v Nanjingu od srpna 2025; evropské údaje jsou předběžné."
+        },
+        "trunkL": 468,
+        "markets": [],
+        "marketNotesCs": "V Číně jako EZ-60 od roku 2025; v Evropě jako CX-6e od léta 2026, vyrábí se v Číně.",
+        "photo": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_EZ-60",
+          "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+        ]
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mazda_EZ-60",
+      "https://www.electrive.com/2026/01/09/mazda-to-introduce-chinese-built-electric-suv-as-cx-6e-in-europe-this-summer"
+    ],
+    "needsReview": [
+      {
+        "field": "generations[0].photo",
+        "reason": "Fotografie zatím nevybrána."
+      },
+      {
+        "field": "generations[0].dimensionsMm",
+        "reason": "Přesné rozměry v mm z oficiálního technického listu nejsou doloženy."
+      },
+      {
+        "field": "generations[0].code",
+        "reason": "Typové označení nebylo doloženo."
+      }
     ]
   }
 ]

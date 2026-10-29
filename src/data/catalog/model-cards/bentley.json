@@ -1241,7 +1241,19 @@
         "from": 2015,
         "to": null,
         "productionStatus": "current",
-        "facelift": null,
+        "facelift": [
+          {
+            "name": "Modernizace Bentayga 2020",
+            "code": null,
+            "productionYear": 2020,
+            "note": "Doložená modernizace se změnami přídě, zádě a infotainmentu; výroba modernizovaného V8 zahájena v červenci 2020. Rodina v této kartě zahrnuje původní i modernizované vozy a EWB; úplnost dalších změn není potvrzena.",
+            "sources": [
+              "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+              "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
+            ],
+            "year": 2020
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -1291,27 +1303,27 @@
             "bodyType": "suv",
             "engine": {
               "fuel": "petrol",
-              "displacementCc": null,
+              "displacementCc": 5950,
               "cylinders": 12,
               "powerKw": 447,
               "powerStandard": null,
               "torqueNm": 900
             },
             "transmission": {
-              "type": null,
-              "gears": null
+              "type": "automatic",
+              "gears": 8
             },
             "drive": "awd",
             "dimensionsMm": {
               "length": null,
-              "width": null,
+              "width": 1998,
               "height": null,
               "wheelbase": null
             },
             "massKg": null,
             "massBasis": null,
             "topSpeedKmh": 301,
-            "acceleration0to100s": null,
+            "acceleration0to100s": 4.1,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -1320,16 +1332,23 @@
             "specificationScope": {
               "market": "manufacturer-production",
               "modelYear": 2016,
-              "noteCs": "Vybrané údaje původníhoW12:447kW podle výroční zprávy2015,900Nm a301km/h podle výrobního heritage listu2016. Nominální6,0l není přepočten na přesnécm³. Zdrojové0–62mph není automaticky zapsáno jako0–100km/h."
+              "noteCs": "Vybrané údaje původního W12 pro modelový rok 2016. Přesný objem 5950 cm³, osmistupňový automat, šířka bez zrcátek 1998 mm a zrychlení 0–100 km/h za 4,1 s jsou doloženy výrobním heritage listem a nezávislými údaji. Délka, rozvor a hmotnost zůstávají null kvůli rozdílům mezi zdroji a metodikami; nejde o úplný přehled motorů ani výbav."
             },
             "sources": [
               "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
-              "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824"
+              "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+              "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+              "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html"
             ]
           }
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+          "https://en.wikipedia.org/wiki/Bentley_Bentayga",
+          "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
+          "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+          "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html",
+          "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+          "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
         ]
       }
     ],
@@ -1338,7 +1357,11 @@
       "https://annualreports.com/HostedData/AnnualReportArchive/v/OTC_VWAGY_2015.pdf",
       "https://www.bentleymedia.com/attachment/58a1cc5b-134c-4e9e-8e59-121bdcad4824",
       "https://www.bentleymotors.com/en/models.html",
-      "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+      "https://en.wikipedia.org/wiki/Bentley_Bentayga",
+      "https://www.auto-data.net/de/bentley-bentayga-6.0-tsi-w12-608hp-awd-automatic-cod-22837",
+      "https://www.motor-talk.de/news/luxusschiff-mit-luxusproblemen-t5940370.html",
+      "https://annualreport2020.volkswagenag.com/divisions/bentley.html",
+      "https://www.carscoops.com/2020/07/bentley-bentayga-facelift-enters-production-as-factory-output-returns-to-100/"
     ],
     "needsReview": [
       {
@@ -1351,10 +1374,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1402,27 +1421,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[0].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[0].engine.powerStandard",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[0].transmission.type",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].transmission.gears",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].dimensionsMm.width",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1439,10 +1442,6 @@
       },
       {
         "field": "generations[0].trims[0].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].acceleration0to100s",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -11,22 +11,39 @@
       {
         "code": null,
         "name": "D60",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2019,
+        "to": 2024,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 122,
+            "powerKwMax": 122,
+            "variant": "1.3T"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 126,
+            "powerKwMax": 126,
+            "variant": "1.5T"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4720,
+          "width": 1860,
+          "height": 1736,
+          "wheelbase": 2760
         },
         "specificationScope": {
           "market": "source-production",
@@ -36,21 +53,64 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Europe"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_D60&oldid=1346912555",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -124,6 +184,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
       }
     ],
     "aliases": [
@@ -137,7 +205,7 @@
     "name": "D90",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Velké SUV představuje samostatnou modelovou rodinu značky. Výbavy Pro ani exportní názvy samy o sobě nepotvrzují novou generaci.",
+    "summaryCs": "D90 je velké sedmimístné SUV na rámovém podvozku, vyráběné od roku 2017 se zážehovým i vznětovým dvoulitrem. Luxusnější odvozená verze se prodává jako Maxus Territory.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -150,15 +218,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 157,
+            "powerKwMax": 157,
+            "variant": "2.0T 20L4E"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1996,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "variant": "2.0 SC20M"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 160,
+            "powerKwMax": 160,
+            "variant": "2.0 SC20M twin-turbo (D90 Pro)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 5005,
+          "width": 1932,
+          "height": 1875,
+          "wheelbase": 2950
         },
         "specificationScope": {
           "market": "source-production",
@@ -168,7 +261,10 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Australia"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": {
           "source": "commons",
@@ -191,14 +287,40 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+        ],
+        "fieldSources": {
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_D90&oldid=1363748134",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -264,6 +386,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
       }
     ],
     "aliases": [
@@ -276,27 +402,36 @@
     "name": "EV30",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Kompaktní elektrická dodávka známá v Evropě jako eDeliver 3. Jednotlivé délky karoserie a velikosti akumulátoru nejsou v tomto přehledu technicky zaměňovány.",
+    "summaryCs": "EV30 je kompaktní elektrická dodávka vyráběná od roku 2018, v Evropě prodávaná jako eDeliver 3 (od roku 2020) s akumulátorem 35 nebo 52,5 kWh a ve dvou délkách.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "EV30",
-        "from": null,
+        "from": 2018,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 70,
+            "powerKwMax": 118,
+            "variant": "35 / 52,5 kWh"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
-          "height": null,
+          "width": 1780,
+          "height": 1895,
           "wheelbase": null
         },
         "specificationScope": {
@@ -307,21 +442,59 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "United Kingdom",
+          "Europe"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663",
+            "https://www.saicmaxus.co.uk/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_EV30&oldid=1360404663",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/"
     ],
     "needsReview": [
       {
@@ -395,6 +568,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -415,19 +596,52 @@
         "name": "G10",
         "from": 2014,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": 107,
+            "powerKwMax": 107,
+            "variant": "2.4 4G69 (2014–2016)"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 168,
+            "powerKwMax": 168,
+            "variant": "2.0T 20L4E"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 112,
+            "powerKwMax": 112,
+            "variant": "1.9 Multijet II"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "variant": "EG10"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
+          "length": 5168,
+          "width": 1980,
+          "height": 1928,
           "wheelbase": null
         },
         "specificationScope": {
@@ -438,21 +652,52 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Australia"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G10&oldid=1379089521",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -522,6 +767,22 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[3].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -541,22 +802,39 @@
       {
         "code": null,
         "name": "G20",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2019,
+        "to": 2025,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 160,
+            "powerKwMax": 167,
+            "variant": "2.0T"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 120,
+            "powerKwMax": 122,
+            "variant": "2.0 π"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 5198,
+          "width": 1980,
+          "height": 1928,
+          "wheelbase": 3198
         },
         "specificationScope": {
           "market": "source-production",
@@ -573,14 +851,50 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G20&oldid=1340495935",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -654,6 +968,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
       }
     ],
     "aliases": [
@@ -672,22 +994,55 @@
       {
         "code": null,
         "name": "G50",
-        "from": null,
+        "from": 2018,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 122,
+            "powerKwMax": 122,
+            "variant": "1.3T"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 126,
+            "powerKwMax": 126,
+            "variant": "1.5T"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 87,
+            "powerKwMax": 87,
+            "variant": "Euniq 5"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "variant": "Mifa 5"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4825,
+          "width": 1825,
+          "height": 1778,
+          "wheelbase": 2800
         },
         "specificationScope": {
           "market": "source-production",
@@ -697,21 +1052,61 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Europe"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://de.wikipedia.org/w/index.php?oldid=267691797",
+          "https://ru.wikipedia.org/w/index.php?oldid=155895349"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059"
+          ],
+          "from": [
+            "https://de.wikipedia.org/w/index.php?oldid=267691797",
+            "https://ru.wikipedia.org/w/index.php?oldid=155895349"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G50&oldid=1374807059",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -785,6 +1180,30 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[2].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[3].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -799,28 +1218,37 @@
     "name": "G70 / Mifa 7",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Novější rodina MPV zahrnuje různá pohonná provedení a exportní názvy. Vozy prodávané se značkou MG zde nejsou samostatnou produkcí značky Maxus.",
+    "summaryCs": "G70 je MPV uvedené v roce 2023; jeho elektrická verze Mifa 7 se v Evropě prodává od roku 2024 s akumulátory 77 nebo 90 kWh. Vozy se značkou MG zde nejsou samostatnou produkcí značky Maxus.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "G70 / Mifa 7",
-        "from": null,
+        "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "variant": "Mifa 7 (64/77/90 kWh)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4907,
+          "width": 1885,
+          "height": 1756,
+          "wheelbase": 2675
         },
         "specificationScope": {
           "market": "source-production",
@@ -830,21 +1258,68 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "United Kingdom",
+          "Europe"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/",
+          "https://vanfleetworld.co.uk/maxus-debuts-electric-mifa-7-mpv-and-edeliver-5-van-at-cv-show/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "dimensionsMm.length": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850",
+            "https://www.saicmaxus.co.uk/",
+            "https://vanfleetworld.co.uk/maxus-debuts-electric-mifa-7-mpv-and-edeliver-5-van-at-cv-show/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G70&oldid=1379474850",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/",
+      "https://vanfleetworld.co.uk/maxus-debuts-electric-mifa-7-mpv-and-edeliver-5-van-at-cv-show/"
     ],
     "needsReview": [
       {
@@ -918,6 +1393,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -936,15 +1419,24 @@
       {
         "code": null,
         "name": "G90",
-        "from": null,
+        "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol-mhev",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 170,
+            "powerKwMax": 170,
+            "variant": "2.0T 48V"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -961,21 +1453,46 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -1049,6 +1566,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
       }
     ],
     "aliases": []
@@ -1065,9 +1586,9 @@
       {
         "code": null,
         "name": "Mifa 9",
-        "from": null,
+        "from": 2021,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -1090,7 +1611,11 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "United Kingdom",
+          "Europe"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": [
@@ -1143,8 +1668,27 @@
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
           "https://en.wikipedia.org/wiki/Maxus",
           "https://www.saicmaxus.com/uploads/month_2208/2022080207115743209.pdf",
-          "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/"
-        ]
+          "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+            "https://www.saicmaxus.co.uk/"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+            "https://www.saicmaxus.co.uk/"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1152,7 +1696,10 @@
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
       "https://en.wikipedia.org/wiki/Maxus",
       "https://www.saicmaxus.com/uploads/month_2208/2022080207115743209.pdf",
-      "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/"
+      "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/"
     ],
     "needsReview": [
       {
@@ -1280,18 +1827,51 @@
         "name": "T60",
         "from": 2016,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 160,
+            "powerKwMax": 165,
+            "variant": "2.0T 20L4E"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2378,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": 100,
+            "powerKwMax": 104,
+            "variant": "2.4 4G69"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1996,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "variant": "2.0 D20"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2776,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": 100,
+            "powerKwMax": 110,
+            "variant": "2.8 SC28R"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 1900,
           "height": null,
           "wheelbase": null
         },
@@ -1303,21 +1883,50 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Australia",
+          "United Kingdom"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+            "https://www.saicmaxus.co.uk/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/"
     ],
     "needsReview": [
       {
@@ -1399,15 +2008,15 @@
     "name": "T70",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Pickup navazující na užitkové portfolio značky. Přesné vztahy k místním označením Interstellar a jednotlivé modernizace nejsou v tomto dílčím přehledu uzavřeny.",
+    "summaryCs": "T70 je odvozenina pickupu T60 představená v dubnu 2019 jako první pickup Maxus s motorem SAIC π. V některých zemích se prodává jako MG Extender.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "T70",
-        "from": null,
+        "from": 2019,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -1437,14 +2046,28 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_T60&oldid=1375207529",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -1528,27 +2151,60 @@
     "name": "T90",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Pickup byl nabízen i v elektrické podobě. Parametry elektrického exportního provedení zde nejsou doplňovány z údajů spalovacího čínského vozu.",
+    "summaryCs": "T90 je pickup vyráběný od roku 2021, nabízený se vznětovými i zážehovými motory a jako elektrický T90EV. Nástupcem elektrické verze v Evropě je eTerron 9.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "T90",
-        "from": null,
+        "from": 2021,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": 1996,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "variant": "2.0 D20"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 160,
+            "powerKwMax": 160,
+            "variant": "2.0 D20 bi-turbo"
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 184,
+            "powerKwMax": 184,
+            "variant": "2.0T 20A4E"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "variant": "T90EV 88,55 kWh"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
-          "height": null,
+          "width": 1900,
+          "height": 1845,
           "wheelbase": null
         },
         "specificationScope": {
@@ -1566,14 +2222,41 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049"
+          ],
+          "dimensionsMm.height": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_T90&oldid=1340768049",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_Terron_9&oldid=1382485360"
     ],
     "needsReview": [
       {
@@ -1647,6 +2330,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[3].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -1672,15 +2367,32 @@
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "variant": "2.0 TD"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "variant": "EV70 / eDeliver 7"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 2030,
           "height": null,
-          "wheelbase": null
+          "wheelbase": 3000
         },
         "specificationScope": {
           "market": "source-production",
@@ -1690,7 +2402,12 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "United Kingdom",
+          "Europe",
+          "Australia"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": {
           "source": "commons",
@@ -1713,14 +2430,38 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/"
+        ],
+        "fieldSources": {
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223",
+            "https://www.saicmaxus.co.uk/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_V70&oldid=1381204223",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/"
     ],
     "needsReview": [
       {
@@ -1790,6 +2531,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -1804,26 +2557,43 @@
     "name": "V80",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Dodávková řada vycházející z britského LDV Maxus. Elektrické, vodíkové a obytné deriváty jsou zde vedeny jako příbuzná provedení, nikoli jako úplný soupis samostatných karoserií.",
+    "summaryCs": "V80 je dodávka vycházející z britského LDV Maxus (2004–2009), kterou SAIC vyrábí v Číně od roku 2011. Elektrická EV80, vodíková FCV80 a obytná RV80 jsou příbuzná provedení.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "V80",
-        "from": null,
+        "from": 2011,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 88,
+            "powerKwMax": 100,
+            "variant": "2.5 VM R425"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "variant": "EV80"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 1998,
           "height": null,
           "wheelbase": null
         },
@@ -1835,21 +2605,51 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "United Kingdom",
+          "Australia"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938"
+          ],
+          "dimensionsMm.width": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=LDV_Maxus&oldid=1374792938",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
     ],
     "needsReview": [
       {
@@ -1923,6 +2723,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [
@@ -1944,15 +2756,32 @@
       {
         "code": null,
         "name": "V90",
-        "from": null,
+        "from": 2019,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": 1996,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "variant": "2.0 SC20M"
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 170,
+            "variant": "eDeliver 9"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1969,7 +2798,12 @@
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
         "trunkL": null,
-        "markets": [],
+        "markets": [
+          "China",
+          "Europe",
+          "United Kingdom",
+          "Australia"
+        ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": {
           "source": "commons",
@@ -1992,14 +2826,40 @@
         "sources": [
           "https://maxus.ae/About",
           "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-          "https://en.wikipedia.org/wiki/Maxus"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus",
+          "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428",
+          "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+          "https://www.saicmaxus.co.uk/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428",
+            "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428"
+          ],
+          "engineCoverage": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428"
+          ],
+          "markets": [
+            "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428",
+            "https://www.saicmaxus.co.uk/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://maxus.ae/About",
       "https://www.maxusqatar.com/docs/maxus-d90.pdf",
-      "https://en.wikipedia.org/wiki/Maxus"
+      "https://en.wikipedia.org/wiki/Maxus",
+      "https://en.wikipedia.org/w/index.php?title=Maxus_V90&oldid=1361215428",
+      "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
+      "https://www.saicmaxus.co.uk/"
     ],
     "needsReview": [
       {
@@ -2069,6 +2929,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Zdroj sweepu uvádí jen nominální objem v litrech; přesný objem v cm³ nedoložen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Hodnota nebyla ve zdrojích sweepu 2026-10-29 doložena."
       }
     ],
     "aliases": [

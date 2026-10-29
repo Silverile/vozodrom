@@ -1,0 +1,473 @@
+{
+  "make": "ford",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[0].to",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
+      ],
+      "confidence": "high",
+      "reason": "OEM Cologne production chronology explicitly states Puma production 1997–2001; existing summary already agrees."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "summaryCs",
+      "from": "Jméno Puma nesly dva odlišné vozy: malé kupé na technice Fiesty (1997–2001) a crossover SUV vyráběný od roku 2019 v rumunské Craiově. Crossover se nabízí s mild hybridem, jako sportovní ST a od roku 2024 i jako elektrická Puma Gen-E.",
+      "to": "Jméno Puma nesly dva odlišné vozy: malé kupé na technice Fiesty (1997–2001) a crossover SUV vyráběný od roku 2019 v rumunské Craiově. Elektrická Puma Gen-E byla představena v prosinci 2024; sériová výroba a první dodávky následovaly v roce 2025.",
+      "sources": [
+        "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf",
+        "https://www.fordotosan.com.tr/en/operations/production/plants",
+        "https://media.ford.com/content/dam/fordmedia/Europe/en/2024/12/Puma-Gen-E/PUMA_GEN-E_release_241202.pdf"
+      ],
+      "confidence": "high",
+      "reason": "Separate December-2024 reveal/order opening from factory production and deliveries in 2025."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].facelift[0].note",
+      "from": "Modernizace v únoru 2024: nová světla a maska, větší displej; elektrická verze Gen-E od konce roku 2024.",
+      "to": "Modernizace v únoru 2024: nová světla a maska, větší displej. Elektrická Puma Gen-E byla představena v prosinci 2024; výroba a první dodávky od roku 2025.",
+      "sources": [
+        "https://www.fordotosan.com.tr/en/operations/production/plants",
+        "https://media.ford.com/content/dam/fordmedia/Europe/en/2024/12/Puma-Gen-E/PUMA_GEN-E_release_241202.pdf"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "capri",
+      "field": "generations[0].from",
+      "from": 1969,
+      "to": 1968,
+      "sources": [
+        "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
+      ],
+      "confidence": "high",
+      "reason": "OEM Cologne chronology dates Capri manufacture from 1968; 1969 is commercial introduction, not calendar SOP."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].engines[0].powerKwMax",
+      "from": 88,
+      "to": 103,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.stark-automotive.com/frontend/images/categories/pdf/en/259685.pdf"
+      ],
+      "confidence": "high",
+      "reason": "ADAC records 92 kW from 2013 and 103 kW from 2016; Stark manufacturer application catalogue lists the 103 kW production version. Stark full PDF fetch failed: indexed excerpt only.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].engines[4].powerKwMin",
+      "from": null,
+      "to": 70,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+      ],
+      "confidence": "high",
+      "reason": "ADAC technical table and Motorservice manufacturer catalogue agree on T3JB 1.6 TDCi 70 kW/95 PS. Motorservice full PDF exceeded size limit: indexed excerpt only.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].engines[4].powerKwMax",
+      "from": null,
+      "to": 70,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+      ],
+      "confidence": "high",
+      "reason": "ADAC technical table and Motorservice manufacturer catalogue agree on T3JB 1.6 TDCi 70 kW/95 PS. Motorservice full PDF exceeded size limit: indexed excerpt only.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].trims[6].engine.powerKw",
+      "from": null,
+      "to": 70,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+      ],
+      "confidence": "high",
+      "reason": "Same T3JB 70 kW corroboration as engine range; trim name already labels 70 kW.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].engines[0].displacementCc",
+      "from": 999,
+      "to": 998,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
+      ],
+      "confidence": "high",
+      "reason": "ADAC table and Dipa Sport manufacturer application sheet both state 998 cc.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "b-max",
+      "field": "generations[0].engines[3].displacementCc",
+      "from": 1498,
+      "to": 1499,
+      "sources": [
+        "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+        "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
+      ],
+      "confidence": "high",
+      "reason": "ADAC table and Dipa Sport manufacturer application sheet both state 1499 cc.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].engines[4].powerKwMin",
+      "from": null,
+      "to": 123.5,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and Irish price list state exactly 123.5 kW; independent ADAC rounds to 124 kW. Preserve OEM precision with explicit rounding note: numeric sources differ in precision, not the motor.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].engines[4].powerKwMax",
+      "from": null,
+      "to": 123.5,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and Irish price list state exactly 123.5 kW; independent ADAC rounds to 124 kW. Preserve OEM precision with explicit rounding note: numeric sources differ in precision, not the motor.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].engine.powerKw",
+      "from": null,
+      "to": 123.5,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Exact OEM output 123.5 kW appears in two Ford publications; independent ADAC publishes rounded 124 kW. Apply with specification note explaining precision difference.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].dimensionsMm.length",
+      "from": null,
+      "to": 4214,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and ADAC agree. Width excludes mirrors, length excludes towbar, height is unladen. ADAC February-2026 version used only for dimensions, not updated range.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].dimensionsMm.width",
+      "from": null,
+      "to": 1805,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and ADAC agree. Width excludes mirrors, length excludes towbar, height is unladen. ADAC February-2026 version used only for dimensions, not updated range.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].dimensionsMm.height",
+      "from": null,
+      "to": 1555,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and ADAC agree. Width excludes mirrors, length excludes towbar, height is unladen. ADAC February-2026 version used only for dimensions, not updated range.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].dimensionsMm.wheelbase",
+      "from": null,
+      "to": 2588,
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and ADAC agree. Width excludes mirrors, length excludes towbar, height is unladen. ADAC February-2026 version used only for dimensions, not updated range.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].specificationScope.noteCs",
+      "from": "Elektromobil; výkon 123/124 kW se ve zdrojích liší. Dojezd a spotřeba WLTP pro základní verzi.",
+      "to": "Elektromobil; Ford uvádí přesně 123,5 kW (168 PS), ADAC zaokrouhluje na 124 kW. Dojezd 376 km a spotřeba 13,1 kWh/100 km WLTP odpovídají základní verzi při uvedení v roce 2025; nejde o aktualizovanou verzi 2026.",
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+      ],
+      "confidence": "high",
+      "reason": "Resolve rounding discrepancy while scoping existing launch range to its model version.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "puma",
+      "field": "generations[1].trims[7].rangeCycle",
+      "from": null,
+      "to": "WLTP",
+      "sources": [
+        "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+        "https://ford.sml.si/media/ford/pricelists/P-2ZE1-2025-2.0.pdf"
+      ],
+      "confidence": "high",
+      "reason": "Ford launch factsheet and manufacturer Slovenian spec sheet label combined range WLTP. Field is absent and should be added.",
+      "passType": "DEPTH",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "F-150",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://corporate.ford.com/operations/locations/global-plants/"
+      ],
+      "note": "Current Dearborn/Kansas City product; raw identity exists but selected card/model-line coverage missing. Common-import relevance deserves editorial inclusion."
+    },
+    {
+      "name": "Maverick",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://corporate.ford.com/operations/locations/global-plants/"
+      ],
+      "note": "Current Hermosillo pickup; distinguish new pickup from historical Ford Maverick coupe/sedan and Nissan-derived SUV."
+    },
+    {
+      "name": "Bronco Sport",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://corporate.ford.com/operations/locations/global-plants/"
+      ],
+      "note": "Current Hermosillo product; distinct from larger Bronco model card."
+    },
+    {
+      "name": "Expedition",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://corporate.ford.com/operations/locations/global-plants/"
+      ],
+      "note": "Current Kentucky Truck product; selected-model coverage missing."
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Scorpio II final production year",
+      "values": {
+        "winningCard": 1998,
+        "OEMCologneChronology": 1999
+      },
+      "kept": 1998,
+      "sources": [
+        "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
+      ],
+      "note": "Manufacturer total-line Cologne chronology says 1985–1999; existing generation claim 1998 requires precise final-assembly versus model/sales timing reconciliation before replacement."
+    }
+  ],
+  "openQuestions": [
+    "Partial breadth pass: 19 catalog cards/33 generation records and 32 winning-copy cards/103 records inventoried; 401 raw entries counted. No complete technical certification.",
+    "Winning copy is Claude-owned; all its corrections above are proposals and were not applied.",
+    "Consul 1970s, later Taunus families and later Zephyr generations remain acknowledged gaps in historic catalog cards, not newly verified missing cards.",
+    "Ford Model A 1932 endpoint is supported by OEM Cologne chronology; did not replace it with US model-year 1931.",
+    "Ford Focus IV 2025, Fiesta 2023, Mondeo Europe 2022 and Edge II 2024 endpoints were inventoried but not all independently reverified this pass.",
+    "No generation-status changes made from contemporary sales or order opening alone.",
+    "Craiova manufacturer plant source explicitly confirms Puma Gen-E, E-Transit Courier and E-Tourneo Courier production from 2025; existing merged cards need powertrain-stage separation without inventing extra body generations.",
+    "Full raw-identity duplicate/concept/region reconciliation and all photographs/trim values remain open.",
+    "Runtime src/lib/modelCards.ts explicitly supports liftback; the six observations are catalog-type/runtime drift, not established rendering bugs. No hatchback normalization is proposed.",
+    "F-150, Maverick, Bronco Sport and Expedition gaps refer to selected model-line/card coverage, not raw identity absence; exact raw identifiers should be reconciled before adding."
+  ],
+  "summary": "Partial Ford sweep reviewed both copies without editing Claude-owned cards; proposed four sourced production/date-text corrections, logged six shared type/runtime discrepancies, and four selected-model coverage gaps.",
+  "coverage": {
+    "catalogCards": 19,
+    "catalogGenerations": 33,
+    "winningCards": 32,
+    "winningGenerations": 103,
+    "rawModels": 401,
+    "fullyVerifiedModels": []
+  },
+  "schemaReconciliation": [
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "mondeo",
+      "field": "generations[0].bodyTypes",
+      "observed": [
+        "sedan",
+        "liftback",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "mondeo",
+      "field": "generations[1].bodyTypes",
+      "observed": [
+        "sedan",
+        "liftback",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "mondeo",
+      "field": "generations[2].bodyTypes",
+      "observed": [
+        "sedan",
+        "liftback",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "mondeo",
+      "field": "generations[3].bodyTypes",
+      "observed": [
+        "sedan",
+        "liftback",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "mondeo",
+      "field": "generations[4].bodyTypes",
+      "observed": [
+        "sedan",
+        "liftback",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    },
+    {
+      "file": "src/data/model-cards/ford.json",
+      "slug": "scorpio",
+      "field": "generations[0].bodyTypes",
+      "observed": [
+        "liftback",
+        "sedan",
+        "kombi"
+      ],
+      "issue": "CatalogBody excludes liftback but runtime modelCards supports it; shared type/runtime reconciliation needed.",
+      "options": [
+        "Extend catalog type to represent liftback explicitly.",
+        "Agree a deliberate broad-category mapping while preserving precise display wording."
+      ],
+      "action": "No body replacement proposed or applied."
+    }
+  ]
+}

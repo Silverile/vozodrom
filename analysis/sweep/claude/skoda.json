@@ -1,0 +1,469 @@
+{
+  "make": "skoda",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1895,
+      "sources": [
+        "https://www.wikidata.org/wiki/Q29637",
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Auto"
+      ],
+      "confidence": "medium",
+      "note": "Laurin & Klement founded 1895; Škoda brand on cars from 1925. Decide whether foundedYear means company (1895) or brand (1925).",
+      "verify": "confirmed: de.wikipedia Škoda Auto infobox: Gründung 1895 as Laurin & Klement (18 Dec 1895), Škoda name from 1925 (https://de.wikipedia.org/wiki/%C5%A0koda_Auto); 1895 matches the company-founding convention"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "130-135-136",
+      "field": "from",
+      "from": null,
+      "to": 1984,
+      "sources": [
+        "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Škoda 130: family 1984–1990 (https://de.wikipedia.org/wiki/%C5%A0koda_130)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "130-135-136",
+      "field": "to",
+      "from": null,
+      "to": 1990,
+      "sources": [
+        "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Škoda 130: family 1984–1990 (https://de.wikipedia.org/wiki/%C5%A0koda_130)"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "130-135-136",
+      "field": "from",
+      "from": null,
+      "to": 1984,
+      "sources": [
+        "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Škoda 130: family 1984–1990 (https://de.wikipedia.org/wiki/%C5%A0koda_130)"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "130-135-136",
+      "field": "to",
+      "from": null,
+      "to": 1990,
+      "sources": [
+        "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Škoda 130: family 1984–1990 (https://de.wikipedia.org/wiki/%C5%A0koda_130)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "superb-iii",
+      "field": "bodyTypes",
+      "from": [
+        "kombi",
+        "sedan"
+      ],
+      "to": [
+        "hatchback",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Superb"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Superb III is a liftback + combi (de.wikipedia https://de.wikipedia.org/wiki/%C5%A0koda_Superb_III); liftback maps to hatchback in the body vocabulary (no liftback value exists), matching the superb card generation III bodyTypes"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "104",
+      "reason": "truck (Wikidata cs: typ užitkového automobilu), not a passenger car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403352"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: cs.wikipedia Škoda 104: užitkový automobil (truck/bus/fire engine), 1929–1940 (https://cs.wikipedia.org/wiki/%C5%A0koda_104)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "206",
+      "reason": "truck (Wikidata cs: model nákladního automobilu)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403726"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: cs.wikipedia Škoda 206: utility vehicle, mainly flatbed truck/bus, 1930–1939 (https://cs.wikipedia.org/wiki/%C5%A0koda_206)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "256",
+      "reason": "medium truck (Wikidata cs: střední nákladní automobil)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403838"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: cs.wikipedia Škoda 256: střední nákladní automobil, 1939–1947 (https://cs.wikipedia.org/wiki/%C5%A0koda_256)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "306",
+      "reason": "truck (Wikidata cs: model nákladního automobilu)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403941"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: cs.wikipedia Škoda 306: truck, 1929–1939, ~185 built (https://cs.wikipedia.org/wiki/%C5%A0koda_306)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "sentinel",
+      "reason": "steam lorry (parní automobil), not a passenger car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q13634413"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "l-nakladni-automobil",
+      "reason": "truck (name: nákladní automobil)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10404862"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "liaz-rt",
+      "reason": "LIAZ truck, belongs to commercial vehicles / make LIAZ",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12032400"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fabia-r5",
+      "reason": "rally car (Wikidata: rally car)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q20354830"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fabia-rally2-evo",
+      "reason": "rally car (Wikidata: rally car)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q65042038"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "200-rs",
+      "reason": "racing prototype derived from 110 R (Wikidata cs description)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403699"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: cs.wikipedia Škoda 200 RS: racing prototype from 110 R, 3 built incl. 180 RS (https://cs.wikipedia.org/wiki/%C5%A0koda_200_RS)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "130-rs",
+      "reason": "rally/race car based on 130",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q9396960"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: cs.wikipedia Škoda 130 RS: závodní automobil for rallies/circuits, ~300 built (https://cs.wikipedia.org/wiki/%C5%A0koda_130_RS)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "160-rs-mtx",
+      "reason": "racing car (Metalex MTX), not a production model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90883423"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "favorit-prototype",
+      "reason": "prototype of Favorit, not a production model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90701223"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "favorit-sedan",
+      "reason": "unproduced Favorit sedan prototype",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90701327"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (not independently re-sourced): name/Wikidata class plainly a truck, rally car or prototype; no source found suggesting a road-sold passenger model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "furgonet",
+      "reason": "van prototype (Wikidata cs: prototyp dodávkového automobilu)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12017919"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: automobilrevue.cz BAZ Furgonet: van prototypes built in Bratislava 1982–83, never series-produced (https://www.automobilrevue.cz/rubriky/presunuto-na-trucker-cz-truck-bus/historie/baz-furgonet-z-nouze-ctnost_42057.html)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "110-super-sport",
+      "reason": "one-off sports concept (Ferat)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q10403396"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: cs.wikipedia Škoda 110 Super Sport: one-off prototype (type 724), 1 built (https://cs.wikipedia.org/wiki/%C5%A0koda_110_Super_Sport)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "154",
+      "reason": "truck model (1930s)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q9396965"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: cs.wikipedia Škoda 154: užitkový automobil (truck/bus/fire engine), 1929–1931 (https://cs.wikipedia.org/wiki/%C5%A0koda_154)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "903",
+      "reason": "military vehicle (Wikidata cs: československý vojenský automobil)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q9396974"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: cs.wikipedia Škoda 903: three-axle military staff car, 45 built 1936–1942, not a civilian passenger model (https://cs.wikipedia.org/wiki/%C5%A0koda_903)"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Peaq",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.skoda-storyboard.com/en/press-releases/skoda-auto-launches-production-of-the-new-peaq-in-mlada-boleslav/"
+      ],
+      "note": "line exists in model-line-additions and card, but no models-auto entry"
+    },
+    {
+      "name": "Enyaq Coupé",
+      "from": 2022,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq"
+      ],
+      "note": "line exists in model-line-additions and card, but no models-auto entry"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "fabia",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2004",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Fabia"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Fabia I: facelift August 2004 for MY2005 (https://de.wikipedia.org/wiki/%C5%A0koda_Fabia_I)"
+    },
+    {
+      "lineSlug": "citigo",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2017",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Citigo"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Citigo: facelift shown Geneva March 2017, dealers May 2017 (https://de.wikipedia.org/wiki/%C5%A0koda_Citigo)"
+    },
+    {
+      "lineSlug": "roomster",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2010",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Roomster"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Roomster: Facelifting spring 2010 (https://de.wikipedia.org/wiki/%C5%A0koda_Roomster)"
+    },
+    {
+      "lineSlug": "praktik",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2010",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Roomster"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Roomster: Roomster/Praktik facelift spring 2010 (https://de.wikipedia.org/wiki/%C5%A0koda_Roomster); Praktik-specific date not separately stated"
+    },
+    {
+      "lineSlug": "yeti",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2013",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Yeti"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Yeti: facelift autumn 2013, cited source refers to IAA 2013 (https://de.wikipedia.org/wiki/%C5%A0koda_Yeti)"
+    },
+    {
+      "lineSlug": "enyaq",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2025",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Enyaq: revised version presented January 2025 (https://de.wikipedia.org/wiki/%C5%A0koda_Enyaq)"
+    },
+    {
+      "lineSlug": "enyaq-coupe",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": "+ facelift 2025",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda Enyaq: Enyaq/Coupé revision January 2025; Coupé presented 31 Jan 2022 (https://de.wikipedia.org/wiki/%C5%A0koda_Enyaq)"
+    },
+    {
+      "lineSlug": "octavia",
+      "path": "generations[3].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4689,
+        "width": 1829,
+        "height": 1470,
+        "wheelbase": 2686
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C5%A0koda_Octavia",
+        "https://autotijd.be/fr/dimensions/skoda/octavia-2020-2024"
+      ],
+      "verify": "confirmed: Škoda Storyboard Octavia IV press kit: 4,689 mm long, 1,829 mm wide, wheelbase 2,686 mm (https://www.skoda-storyboard.com/en/press-kits/skoda-octavia-press-kit/exterior-improved-proportions-and-even-more-space/); height 1470 within de.wikipedia range 1455–1505 (https://de.wikipedia.org/wiki/%C5%A0koda_Octavia_IV). Manufacturer figure settles the wheelbase conflict in favour of 2686."
+    },
+    {
+      "lineSlug": "octavia",
+      "path": "generations[1].photo.file",
+      "from": "Škoda Octavia Combi II 1.9 TDI (2005) (52074633672).jpg",
+      "to": "File:Škoda Octavia Combi II 1.9 TDI (2005) (52074633672).jpg",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Octavia_Combi_II_1.9_TDI_(2005)_(52074633672).jpg"
+      ],
+      "verify": "confirmed: format fix only; all other photo.file values in the card file carry the File: prefix, Commons page exists under that name"
+    },
+    {
+      "lineSlug": "130-135-136",
+      "path": "generations[0].from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        1984,
+        1990,
+        "ended"
+      ],
+      "sources": [
+        "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+      ],
+      "verify": "confirmed: de.wikipedia Škoda 130: 130 built from 9/1984, 130/135/136 family 1984–1990 (https://de.wikipedia.org/wiki/%C5%A0koda_130)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "octavia generations[3].dimensionsMm.wheelbase",
+      "values": {
+        "autotijd.be": 2686,
+        "en.wikipedia infobox": 2669,
+        "carexpert.com.au (2024 AU)": 2681
+      },
+      "kept": 2686
+    },
+    {
+      "where": "felicia-fun from/to",
+      "values": {
+        "cs.wikipedia": "1997–2000",
+        "Škoda Storyboard/brochures (card needsReview)": "1995/1996/1997 start"
+      },
+      "kept": null
+    },
+    {
+      "where": "vos from",
+      "values": {
+        "cs.wikipedia": 1948,
+        "en.wikipedia infobox": 1949,
+        "en.wikipedia text / manufacturer": 1950
+      },
+      "kept": null
+    },
+    {
+      "where": "860 to",
+      "values": {
+        "cs.wikipedia": 1932,
+        "official importer timeline": 1933
+      },
+      "kept": null
+    },
+    {
+      "where": "422 from",
+      "values": {
+        "cs.wikipedia": 1929,
+        "official importer timeline": 1930
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Classify unclear models-auto entries (no Wikidata description): 254, 304, 404, 406, 504, 506, 606, 6-st-6-l (likely 1930s trucks/buses), 720, 740 (prototypes?), 806, mtx-1-01, targa, element-azubi (apprentice one-off?), eltra (electric conversion?), laurin-klement-skoda-125 (bodyClass truck), 100-q10403322 vs 100-q391822 (possible duplicate).",
+    "Variant entries in models-auto (kodiaq-rs, octavia-rs, octavia-scout, rapid-sport, 1000-mb-combi, forman-plus, forman-praktik, 120-s, 120-gls, 1202-kamyonet) should map to their lines, not appear as standalone models.",
+    "Kodiaq GT (China): revealed 16 Nov 2018; production start/end years not sourced, card kept null.",
+    "Octavia II facelift: card year 2008 (Paris reveal), en.wikipedia says launched 2009 - productionYear could be set to 2009 once confirmed.",
+    "Wikimedia API rate-limited this run, so sources are plain article URLs, not oldid revisions."
+  ],
+  "summary": "Škoda card file reviewed against en/cs Wikipedia, Wikidata and autotijd: 10 card fixes (missing facelifts for Fabia I, Citigo, Roomster, Praktik, Yeti, Enyaq, Enyaq Coupé; Octavia IV dimensions; 130/135/136 years; photo file prefix). models-auto contains ~18 non-cars (trucks, rally cars, prototypes) proposed for removal."
+}

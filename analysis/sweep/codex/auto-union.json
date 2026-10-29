@@ -1,0 +1,87 @@
+{
+  "make": "auto-union",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1932,
+      "sources": [
+        "https://www.audi.com/en/press-releases/history-of-the-four-rings-4093"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "country",
+      "from": null,
+      "to": "Německo",
+      "sources": [
+        "https://www.audi.com/en/press-releases/history-of-the-four-rings-4093"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "countryQid",
+      "from": null,
+      "to": "Q183",
+      "sources": [
+        "https://www.audi.com/en/press-releases/history-of-the-four-rings-4093"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "1000-sp.generations[1].from",
+      "values": {
+        "cardCalendarProduction": 1961,
+        "AudiRoadsterMarketFrom": 1962
+      },
+      "kept": 1961,
+      "sources": [
+        "https://www.audi.com/en/the-era-of-the-economic-miracle-17340"
+      ],
+      "note": "Audi says roadster on market from1962; existing card says manufacturing1961. Market launch is not sufficient to replace a production boundary."
+    },
+    {
+      "where": "AutoUnion foundedYear entity scope",
+      "values": {
+        "AutoUnionAG": 1932,
+        "AutoUnionGmbH": 1949
+      },
+      "kept": 1932,
+      "sources": [
+        "https://www.audi.com/en/press-releases/history-of-the-four-rings-4093"
+      ],
+      "note": "Proposed1932 reflects umbrella history;1949 is separate postwar incorporation. If make is narrowed to GmbH, adopt1949 explicitly rather than blending companies."
+    }
+  ],
+  "openQuestions": [
+    "Partial breadth pass:3 selected cards/5 generation-family records and2 raw entities inventoried.",
+    "Audi heritage confirms AutoUnion1000 displaced by DKW F102 in autumn1963; existing German-family end1963 is consistent. Exact start year remains null rather than inferred from model introduction.",
+    "1000Sp coupe1958–1965 is consistent with OEM historical range; roadster chronology requires production-versus-commercial-date reconciliation.",
+    "Argentine1000S/Universal license end and1000SEFissore exact start remain unverified against a suitable primary Argentine source.",
+    "Preserve separately branded Audi/DKW/Horch/Wanderer models; corporate manufacturer relationship does not justify merging all models intoAutoUnion brand.",
+    "RacingSilverArrows should not become ordinary road-car models; no such raw entries present in the two-row inventory.",
+    "Exact technical trims/photos and all historical regional dates are not comprehensively certified."
+  ],
+  "summary": "Partial AutoUnion sweep proposed missing foundedYear1932 and German country metadata, corroborated German1000/1000Sp family endpoints, and preserved unresolved production-versus-launch and corporate-incorporation distinctions.",
+  "coverage": {
+    "cardsInventoried": 3,
+    "generationRecordsInventoried": 5,
+    "rawModelsInventoried": 2,
+    "fullyVerifiedModels": [],
+    "sourceIndependence": "Audi manufacturer heritage publications in English/German; same source family."
+  },
+  "reviewedSources": [
+    "https://www.audi.com/en/press-releases/history-of-the-four-rings-4093",
+    "https://www.audi.com/en/the-era-of-the-economic-miracle-17340",
+    "https://www.audi-mediacenter.com/en/publications/more/audi-tradition-anniversary-dates-2024-1484/download"
+  ]
+}

@@ -94,7 +94,8 @@
               "https://www.polestar.com/uk/manual/polestar-1/2021/article/33950b208961dfd1c0a801514530f1e1?gsc=2",
               "https://www.polestar.com/uk/manual/polestar-1/2021/article/ce7ec2d18a070d6cc0a8015106762933/",
               "https://www.polestar.com/global/news/the-golden-goodbye-to-polestar-1/"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
@@ -204,16 +205,26 @@
     "name": "2",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Polestar 2 je elektrický pětidveřový fastback. Jednomotorové verze původně poháněly přední kola; pozdější technická modernizace přešla u těchto verzí na pohon zadních kol.",
+    "summaryCs": "Polestar 2 je elektrický pětidveřový fastback. Jednomotorové verze původně poháněly přední kola; pozdější technická modernizace přešla u těchto verzí na pohon zadních kol. Výroba v Číně skončila v roce 2026 po více než 200 tisících kusů; nástupce je ohlášen na rok 2027.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Polestar 2 – první generace",
         "from": 2020,
-        "to": null,
-        "productionStatus": "current",
-        "facelift": null,
+        "to": 2026,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2023,
+            "to": null,
+            "productionYear": null,
+            "note": "Modernizace pro modelový rok 2024: přední část SmartZone, jednomotorové verze přešly na pohon zadních kol, vyšší výkon a dojezd.",
+            "sources": [
+              "https://www.yorkshirepost.co.uk/lifestyle/cars/polestar-2-update-improved-power-range-and-performance-4002682"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -571,8 +582,21 @@
           "https://investors.polestar.com/news-releases/news-release-details/polestar-reports-record-nine-month-retail-sales-and-its",
           "https://www.polestar.com/global/polestar-2/specifications/",
           "https://www.polestar.com/dato-assets/11286/1630409045-polestarlcarapportprintkorr11210831.pdf",
-          "https://www.polestar.com/dato-assets/11286/1739179180-general_polestar-2_brochure_my26_eu_250205.pdf"
-        ]
+          "https://www.polestar.com/dato-assets/11286/1739179180-general_polestar-2_brochure_my26_eu_250205.pdf",
+          "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/",
+          "https://www.yorkshirepost.co.uk/lifestyle/cars/polestar-2-update-improved-power-range-and-performance-4002682"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+          ],
+          "productionStatus": [
+            "https://driveteslacanada.ca/news/polestar-2-production-ends-china-2026/"
+          ],
+          "facelift": [
+            "https://www.yorkshirepost.co.uk/lifestyle/cars/polestar-2-update-improved-power-range-and-performance-4002682"
+          ]
+        }
       }
     ],
     "sources": [
@@ -589,14 +613,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1026,6 +1042,10 @@
       {
         "field": "coverage",
         "reason": "Dílčí technické snímky primárních pramenů; nulové fotografie a úplná historie aktualizací či limitovaných sérií nejsou dokončeny. Převodové poměry a počet stupňů elektrických reduktorů nebyly v použitých tabulkách ověřeny, proto převodovka null."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Konec výroby 10/2026 je doložen jen zprávou TV2 Broom převzatou driveteslacanada.ca; oficiální prohlášení Polestaru neověřeno."
       }
     ]
   },
@@ -2303,6 +2323,10 @@
       {
         "field": "generations[0].dimensionsMm.width",
         "reason": "Webová tabulka výrobce má podezřelou šířku shodnou se zadním rozchodem; nepřevzato. Nutný nezávislý OEM výkres nebo manuál."
+      },
+      {
+        "field": "generations[1].from",
+        "reason": "Výroba Polestar 4 SUV v Pusanu od 2. čtvrtletí 2026 podle just-auto.com."
       }
     ]
   },

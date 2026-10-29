@@ -1,0 +1,286 @@
+{
+  "make": "venturi",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": 1989,
+      "to": 1985,
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Venturi_(entreprise)"
+      ],
+      "confidence": "medium",
+      "note": "MVS (Manufacture de Voitures de Sport) založena v září 1985, prototyp Ventury 1984; 1989-07-13 ve Wikidata Q137177484 je datum značky Venturi.",
+      "verify": "confirmed with conflict: 1989 is the date of brand item Q137177484, not the company; https://en.wikipedia.org/wiki/Venturi_Automobiles gives founded 1984 (Poiraud and Godfroy, Ventury prototype 1984), https://fr.wikipedia.org/wiki/Venturi_(entreprise) gives MVS created Sept 1985. Either 1984 or 1985, not 1989"
+    },
+    {
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "MVS",
+        "MVS Venturi",
+        "Venturi Automobiles"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Venturi_(entreprise)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Venturi_Automobiles (former name MVS, Manufacture de Voitures de Sport)"
+    },
+    {
+      "field": "relatedQids",
+      "from": [],
+      "to": [
+        "Q1473418"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1473418"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Wikidata Q1473418 is \"Venturi Automobiles\", the company behind brand Q137177484"
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Coupé / Transcup (200, 210, 260)",
+      "from": 1987,
+      "to": 1995,
+      "bodyTypes": [
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Venturi_Coup%C3%A9",
+        "https://fr.wikipedia.org/wiki/Venturi_(entreprise)"
+      ],
+      "verify": "confirmed: model exists per https://fr.wikipedia.org/wiki/Venturi_(entreprise) and https://en.wikipedia.org/wiki/Venturi_Automobiles"
+    },
+    {
+      "name": "Atlantique (260, 300, 300 Biturbo)",
+      "from": 1991,
+      "to": 2000,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Venturi_Atlantique&oldid=1361653149",
+        "https://fr.wikipedia.org/wiki/Venturi_300_Atlantique"
+      ],
+      "verify": "confirmed: model exists per https://fr.wikipedia.org/wiki/Venturi_(entreprise) and https://en.wikipedia.org/wiki/Venturi_Automobiles"
+    },
+    {
+      "name": "400 GT",
+      "from": 1994,
+      "to": null,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Venturi_400_GT"
+      ],
+      "verify": "confirmed: model exists per https://fr.wikipedia.org/wiki/Venturi_(entreprise) and https://en.wikipedia.org/wiki/Venturi_Automobiles"
+    },
+    {
+      "name": "Fétish",
+      "from": 2004,
+      "to": null,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Venturi_F%C3%A9tish"
+      ],
+      "verify": "confirmed: model exists per https://fr.wikipedia.org/wiki/Venturi_(entreprise) and https://en.wikipedia.org/wiki/Venturi_Automobiles"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "generations[0].trims[5].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "coupe",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "atlantique",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "atlantique",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "atlantique",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "atlantique",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "400-gt",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "400-gt",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "fetish",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "fetish",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    },
+    {
+      "lineSlug": "fetish",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only technical-version|engine-version for trim kind and {field, reason} for needsReview"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "atlantique 300 Biturbo moment",
+      "values": {
+        "fr Wikipedie": 422,
+        "en Wikipedie": 394
+      },
+      "kept": null
+    },
+    {
+      "where": "make foundedYear",
+      "values": {
+        "fr Wikipedie (MVS)": 1985,
+        "Wikidata Q137177484 (značka)": 1989
+      },
+      "kept": "návrh 1985"
+    }
+  ],
+  "openQuestions": [
+    "Venturi nemá v models-auto žádný model – karty jsou isAddition; doplnit linky nebo models-auto při sloučení.",
+    "Venturi od roku 2015 nevyrábí sériové silniční vozy (fr Wikipedie) – status v makes.json je null; zvážit „defunct“ pro sekci auto.",
+    "Oprava kind version → technical-version a needsReview.noteCs → reason je převod na hodnoty z types.ts; stejný vzor (version/noteCs) mají i další soubory v src/data/model-cards/."
+  ],
+  "summary": "Karty Venturi převedeny na hodnoty types.ts (12 trimů kind, needsReview reason), doplněny poznámky ke konfliktům; navrženo foundedYear 1989 → 1985, aliasy MVS a 4 chybějící modely do models-auto."
+}

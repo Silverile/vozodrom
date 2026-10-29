@@ -1,0 +1,79 @@
+{
+  "make": "adler",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 12,
+    "rawModelsInventoried": 10,
+    "modelLinesInventoried": 12,
+    "additionsInventoried": 12,
+    "sourceCheckedModels": [
+      "standard-6",
+      "2-5-liter",
+      "favorit"
+    ],
+    "limitations": "Municipal archive/museum identity checks and selected chronology checks only. No complete model, technical or image verification."
+  },
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1880,
+      "sources": [
+        "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=12426",
+        "https://historisches-museum-frankfurt.de/de/ueber-das-museum/sammlung/technik"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "country",
+      "from": null,
+      "to": "Německo",
+      "sources": [
+        "https://www.kultur-frankfurt.de/portal/en/Design/Adlerwerke/600/0/28504/mod1085-details1/1428.aspx"
+      ],
+      "confidence": "high",
+      "note": "Modern normalized country for Frankfurt-based German manufacturer; preserve historic countries array."
+    },
+    {
+      "field": "countryQid",
+      "from": null,
+      "to": "Q183",
+      "sources": [
+        "https://www.kultur-frankfurt.de/portal/en/Design/Adlerwerke/600/0/28504/mod1085-details1/1428.aspx"
+      ],
+      "confidence": "high",
+      "note": "Matches normalized Německo country proposal; historic German Empire remains in countries array."
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "make dissolvedYear",
+      "values": {
+        "catalog dissolvedYear": 1992,
+        "Gallus site production ceased": 1992,
+        "Frankfurt city archive site closure": 1998
+      },
+      "kept": 1992,
+      "note": "Production/site closure is not legal dissolution; no replacement year proposed until entity identity established.",
+      "sources": [
+        "https://www.gallustheater.de/ges/adler.htm",
+        "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=12426"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "Adler corporate dissolution versus automobile production end must be separated; 1992 retained pending legal entity evidence.",
+    "Favorit sources disagree 1928 debut versus 1929 production; null start retained.",
+    "Municipal museum identifies 1937 streamlined Adler consistent with existing 2.5 Liter start; no date correction needed.",
+    "Municipal portal gives Standard6 marketed1927 consistent with card first-series start; no date correction needed.",
+    "Remaining generation details were inventoried locally but lack complete primary-source verification."
+  ],
+  "summary": "Partial Adler sweep: municipal archive confirms founding1880 and German identity, proposed three make fills. No evidence-backed card correction applied; unresolved production/entity dates retained."
+}

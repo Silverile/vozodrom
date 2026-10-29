@@ -1,0 +1,245 @@
+{
+  "make": "wiesmann",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1988,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en-wiki Wiesmann (Wiesmann GmbH founded 1988 by Martin and Friedhelm Wiesmann)"
+    },
+    {
+      "field": "status/dissolvedYear",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        "note: insolvency 2013–2014, revived as Wiesmann Automotive 2015; keep active",
+        null
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
+        "https://de.wikipedia.org/wiki/Wiesmann"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en-wiki Wiesmann: insolvency filed 2013-08-14, business closed 2014, bought by Roheen Berry; Project Thunderball revealed 2022"
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Roadster MF4",
+      "from": 2009,
+      "to": 2013,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ]
+    },
+    {
+      "name": "Roadster MF5",
+      "from": 2009,
+      "to": 2013,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ]
+    },
+    {
+      "name": "Project Thunderball",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://electrek.co/2023/02/13/wiesmanns-project-thunderball-roadster-ev-sells-out-production/"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 16,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "count": 28,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelLineReview.reason)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 48,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].transmission",
+      "from": "null",
+      "to": "{type:null,gears:null}",
+      "count": 6,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.transmission)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "roadster-mf3",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1995,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed with conflict: de-wiki Wiesmann_(Unternehmen) table MF3 1995-2011; de-wiki Wiesmann_Roadster_MF3 gives 1993-2011 (MF3.1 1993-2000)"
+    },
+    {
+      "lineSlug": "roadster-mf3",
+      "path": "generations[0].productionUnits",
+      "to": 826,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "unverified: only de-wiki Wiesmann_(Unternehmen) gives this count; en-wiki and de-wiki model pages give no totals"
+    },
+    {
+      "lineSlug": "roadster-mf3",
+      "path": "summaryCs",
+      "from": "Roadster MF3 vycházel z podvozku MF30 a dostal výkonné šestiválce z BMW M3. Do roku 2000 jezdil s motorem S50B32 a pětistupňovou převodovkou, od roku 2001 s motorem S54B32 a šestistupňovou převodovkou. Výroba skončila v roce 2011 limitovanými sériemi Sportiv a Final Edition.",
+      "to": "Roadster MF3 sdílel konstrukci s roadstery MF25 až MF35, vyráběl se v letech 1995–2011 a dostal výkonné šestiválce z BMW M3. Do roku 2000 jezdil s motorem S50B32 a pětistupňovou převodovkou, od roku 2001 s motorem S54B32 a šestistupňovou převodovkou. Výroba skončila v roce 2011 limitovanými sériemi Sportiv a Final Edition.",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed: en-wiki Wiesmann (insolvency Aug 2013) and de-wiki Wiesmann_Roadster_MF3 (S50B32 to 2000, S54B32 from 2001, Sportiv and Final Edition 2011)"
+    },
+    {
+      "lineSlug": "mf30",
+      "path": "generations[0].productionUnits",
+      "to": 84,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "unverified: only de-wiki Wiesmann_(Unternehmen) gives this count; en-wiki and de-wiki model pages give no totals"
+    },
+    {
+      "lineSlug": "gt",
+      "path": "generations[0].productionUnits",
+      "to": 256,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "unverified: only de-wiki Wiesmann_(Unternehmen) gives this count; en-wiki and de-wiki model pages give no totals"
+    },
+    {
+      "lineSlug": "roadster-mf4",
+      "path": "generations[0].productionUnits",
+      "to": 249,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "unverified: only de-wiki Wiesmann_(Unternehmen) gives this count; en-wiki and de-wiki model pages give no totals"
+    },
+    {
+      "lineSlug": "gt-mf5",
+      "path": "generations[0].to",
+      "from": 2014,
+      "to": 2013,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed: en-wiki Wiesmann: insolvency filed 2013-08-14, production ceased"
+    },
+    {
+      "lineSlug": "gt-mf5",
+      "path": "generations[0].productionUnits",
+      "to": 78,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed (weak): en-wiki Wiesmann says fewer than 200 MF5s in total, consistent with 78 GT + 106 Roadster"
+    },
+    {
+      "lineSlug": "gt-mf5",
+      "path": "summaryCs",
+      "from": "GT MF5 bylo nejvýkonnější kupé Wiesmannu. První verze měla atmosférický desetiválec BMW S85 z M5 a M6 s robotizovanou převodovkou SMG, od roku 2011 ji nahradil přeplňovaný osmiválec BMW S63. Výroba skončila v roce 2014 spolu s úpadkem firmy.",
+      "to": "GT MF5 bylo nejvýkonnější kupé Wiesmannu. První verze měla atmosférický desetiválec BMW S85 z M5 a M6 s robotizovanou převodovkou SMG, od roku 2011 ji nahradil přeplňovaný osmiválec BMW S63. Výroba skončila v roce 2013 insolvencí firmy.",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed: en-wiki Wiesmann (insolvency Aug 2013) and de-wiki Wiesmann_Roadster_MF3 (S50B32 to 2000, S54B32 from 2001, Sportiv and Final Edition 2011)"
+    },
+    {
+      "lineSlug": "roadster-mf5",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed: en-wiki Wiesmann: Roadster MF5 production ceased with the 2013 insolvency"
+    },
+    {
+      "lineSlug": "roadster-mf5",
+      "path": "generations[0].productionUnits",
+      "to": 106,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+      ],
+      "verify": "confirmed with note: en-wiki Wiesmann says only 43 Roadster MF5 (V10, limit 55) were made; 106 = 43 V10 + 63 V8 per de-wiki"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "GT MF5 end year",
+      "values": {
+        "card before": 2014,
+        "de-wiki (production up to 2013, insolvency 08/2013)": 2013
+      },
+      "kept": 2013
+    },
+    {
+      "where": "GT MF4 introduction",
+      "values": {
+        "de-wiki section A": 2003,
+        "de-wiki section B": 2005
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Project Thunderball: no source confirms customer deliveries by 2026-10; productionStatus stays unknown.",
+    "models-auto 'gt' and 'gt-mf5' both exist; 'gt' maps to GT MF4 card — consider renaming to gt-mf4."
+  ],
+  "summary": "Added production totals from de-wiki (MF3 826, GT MF4 256, Roadster MF4 249, GT MF5 78, Roadster MF5 106, MF2x/3x 84), MF3 start 1995, GT MF5/Roadster MF5 end 2013; fixed MF3 summary; proposed founding year 1988."
+}

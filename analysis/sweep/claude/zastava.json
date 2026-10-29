@@ -1,0 +1,300 @@
+{
+  "make": "zastava",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "yugo-q21205906",
+      "field": "productionStart",
+      "from": null,
+      "to": 1980,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381430641"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "yugo-q21205906",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381430641"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "101",
+      "field": "productionStart",
+      "from": null,
+      "to": 1971,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia.org/wiki/Fiat_128: Zastava 101 hatchback derivative built from 1971; production stopped in 2008"
+    },
+    {
+      "file": "models-auto",
+      "slug": "101",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia.org/wiki/Fiat_128: Zastava 101 hatchback derivative built from 1971; production stopped in 2008"
+    },
+    {
+      "file": "models-auto",
+      "slug": "101",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "hatchback",
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "101",
+      "field": "name",
+      "from": "101",
+      "to": "101 / Skala",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "yugo-q15781",
+      "reason": "duplicate of yugo-q21205906 (same Yugo/Koral hatchback; Q21205906 holds the enwiki/cswiki sitelinks)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q15781",
+        "https://www.wikidata.org/wiki/Q21205906",
+        "https://en.wikipedia.org/w/index.php?oldid=1381430641"
+      ],
+      "verify": "confirmed: Wikidata Q15781 'Zastava Yugo' has no en/cs/fr sitelinks; Q21205906 'Yugo' holds enwiki/cswiki/frwiki ('Zastava Koral'), so they are the same car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "yugo-koral",
+      "reason": "duplicate of yugo-q21205906 (Koral is a later name of the same Yugo hatchback; card yugo-koral covers both)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q22329333",
+        "https://en.wikipedia.org/w/index.php?oldid=1381430641"
+      ],
+      "verify": "confirmed: Wikidata Q22329333 'Zastava Yugo Koral' has no sitelinks, and the frwiki article for Q21205906 is titled 'Zastava Koral', so it is the same car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "620b",
+      "reason": "light utility truck (3.5 t GVW, Fiat 615 licence), not a passenger car",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1322402047"
+      ],
+      "verify": "confirmed: en.wikipedia Zastava_620B current summary: crew-cab light utility truck based on the Fiat 615"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "128",
+      "from": 1980,
+      "to": 2003,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://sr.wikipedia.org/w/index.php?oldid=31707785",
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Fiat_128 says Zastava built the notchback from the 1980s. Note: de gives 2008 as the Zastava 128 end (2003 here); the end year needs a second source"
+    },
+    {
+      "name": "1300 / 1500",
+      "from": 1961,
+      "to": 1979,
+      "bodyTypes": [
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zastava_1300"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "101",
+      "path": "generations[0].trims[0].bodyType",
+      "from": "liftback",
+      "to": "hatchback",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608",
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "101",
+      "path": "generations[0].trims[1].bodyType",
+      "from": "liftback",
+      "to": "hatchback",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608",
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "101",
+      "path": "generations[0].trims[2].bodyType",
+      "from": "liftback",
+      "to": "hatchback",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608",
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "101",
+      "path": "generations[0].trims[3].bodyType",
+      "from": "liftback",
+      "to": "hatchback",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608",
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "101",
+      "path": "generations[0].bodyTypes",
+      "from": [
+        "liftback",
+        "pickup"
+      ],
+      "to": [
+        "hatchback",
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608",
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "101",
+      "path": "generations[0].specificationScope.bodyType",
+      "from": "liftback",
+      "to": "hatchback",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts CatalogBody has no 'liftback' (hatchback|kombi|sedan|suv|mpv|kupe|kabriolet|pickup|dodavka); the 101 is a 3/5-door hatchback"
+    },
+    {
+      "lineSlug": "128",
+      "path": "generations[0].from",
+      "from": 1971,
+      "to": 1980,
+      "sources": [
+        "https://sr.wikipedia.org/w/index.php?oldid=31707785",
+        "https://en.wikipedia.org/w/index.php?oldid=1368573608"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Fiat_128: 'Ab den 1980er-Jahren wurde auch die Stufenheckversion ... bei Zastava gefertigt'. 1971 was the 101's start"
+    },
+    {
+      "lineSlug": "128",
+      "path": "generations[0].trims[0].from",
+      "from": 1971,
+      "to": 1980,
+      "sources": [
+        "https://sr.wikipedia.org/w/index.php?oldid=31707785"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Fiat_128: 'Ab den 1980er-Jahren wurde auch die Stufenheckversion ... bei Zastava gefertigt'. 1971 was the 101's start"
+    },
+    {
+      "lineSlug": "128",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 3840,
+        "width": 1590,
+        "height": 1420,
+        "wheelbase": 2449
+      },
+      "sources": [
+        "https://sr.wikipedia.org/w/index.php?oldid=31707785"
+      ],
+      "verify": "confirmed: consistent with the Fiat 128 saloon body (en.wikipedia Fiat_128: wheelbase 2448 mm); within 5 %"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 26,
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts: CatalogModelCardTrim.kind is 'technical-version'|'engine-version'; CatalogModelLineReview is {field, reason}"
+    },
+    {
+      "lineSlug": "*",
+      "path": "needsReview[*].noteCs",
+      "from": "noteCs",
+      "to": "reason",
+      "count": 39,
+      "sources": [
+        "src/data/catalog/types.ts"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts: CatalogModelCardTrim.kind is 'technical-version'|'engine-version'; CatalogModelLineReview is {field, reason}"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "128 generations[0].from",
+      "values": {
+        "sr.wikipedia oldid 31707785": 1980,
+        "en.wikipedia oldid 1368573608": 1979,
+        "zastavanacionale.com": 1971
+      },
+      "kept": 1980
+    },
+    {
+      "where": "101 generations[0].productionUnits",
+      "values": {
+        "card (existing)": 1045258,
+        "en.wikipedia oldid 1368573608 (since 1971)": 1273532
+      },
+      "kept": 1045258
+    }
+  ],
+  "openQuestions": [
+    "1100t (Fiat 1100 T van/pickup licence) is a light commercial; keep in auto as dodavka or move out?",
+    "Zastava 1400 (Fiat 1400 assembly, 1950s) and the AR-51/AR-55 (Campagnola licence) are not in models-auto; low relevance for Czech buyers, not proposed.",
+    "Make dissolvedYear 2008 is when Zastava Automobili passed to Fiat (FCA Srbija); the Zastava brand on cars ended Nov 2008 – kept."
+  ],
+  "summary": "Zastava cards fixed for schema (26 trim kinds, 39 needsReview keys, liftback body type on the 101) and the 128 sedan start year 1971 -> 1980; three duplicate/non-car models-auto entries proposed for removal and two card-only lines proposed as missing models."
+}

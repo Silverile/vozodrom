@@ -1,0 +1,217 @@
+{
+  "make": "santana-motor",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "status",
+      "from": "defunct",
+      "to": null,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845",
+        "https://www.eldebate.com/motor/industria/20251024/28-octubre-fabrica-santana-linares-vuelve-producir-coches_348173.html",
+        "https://www.motor.es/pruebas-coches/prueba-santana-400-2025111470.html"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Santana_Motor current text 'Production of the 400 officially began on October 30, 2025' (Linares), new incarnation founded 2025; es.wikipedia Santana_Motor lists Santana 400 and Cajal under 'Epoca reciente'. Note date: en.wikipedia says 30 Oct, sweeper sources say 28 Oct. de.wikipedia is out of date (still ends in 2011)"
+    },
+    {
+      "field": "dissolvedYear",
+      "from": 2011,
+      "to": null,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845",
+        "https://www.eldebate.com/motor/industria/20251024/28-octubre-fabrica-santana-linares-vuelve-producir-coches_348173.html"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Santana_Motor current text 'Production of the 400 officially began on October 30, 2025' (Linares), new incarnation founded 2025; es.wikipedia Santana_Motor lists Santana 400 and Cajal under 'Epoca reciente'. Note date: en.wikipedia says 30 Oct, sweeper sources say 28 Oct. de.wikipedia is out of date (still ends in 2011)"
+    },
+    {
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Santana Motors"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845",
+        "https://www.motor.es/pruebas-coches/prueba-santana-400-2025111470.html"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia Santana_Motor uses 'Santana Motors' for the 2025 incarnation"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "santana-anibal",
+      "field": "productionStart",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://es.wikipedia.org/w/index.php?oldid=157626465",
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: es.wikipedia Santana_Anibal 'sold 2004-2011'; de.wikipedia Santana_Motor and en text give PS-10 production start 2002 (conflict already logged)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "santana-anibal",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://es.wikipedia.org/w/index.php?oldid=157626465",
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: es.wikipedia Santana_Anibal 2004-2011 and en.wikipedia; de.wikipedia Santana_Motor says Anibal production stopped 2008 in favour of the Iveco Massif. Record 2008 as a conflict"
+    },
+    {
+      "file": "models-auto",
+      "slug": "santana-anibal",
+      "field": "bodyTypes",
+      "from": [
+        "suv"
+      ],
+      "to": [
+        "suv",
+        "pickup"
+      ],
+      "sources": [
+        "https://es.wikipedia.org/w/index.php?oldid=157626465"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: es.wikipedia Santana_Anibal: 3/5-door and single/double-cab pick-up"
+    },
+    {
+      "file": "models-auto",
+      "slug": "santana-300-350",
+      "field": "productionStart",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://es.wikipedia.org/w/index.php?oldid=164624135",
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: es.wikipedia Santana_Motor (presented 2005) and en.wikipedia Santana_Motor (2005-2009)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "santana-300-350",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://es.wikipedia.org/w/index.php?oldid=164624135",
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (medium): en.wikipedia Santana_Motor model list 2005-2009; es.wikipedia Santana_Motor gives no end year"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Santana 400",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://www.motor.es/pruebas-coches/prueba-santana-400-2025111470.html",
+        "https://www.eldebate.com/motor/industria/20251024/28-octubre-fabrica-santana-linares-vuelve-producir-coches_348173.html",
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "verify": "confirmed: en.wikipedia Santana_Motor (400D/400 PHEV, rebadged Dongfeng Z9, production from 30 Oct 2025)"
+    },
+    {
+      "name": "Santana Cajal",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.motor.es/santana/cajal/",
+        "https://www.motor.es/noticias/santana-nuevos-suv-4x4-2026113032.html"
+      ],
+      "verify": "confirmed as a model (en.wikipedia Santana_Motor: Cajal = rebadged Beijing BJ40, Europe sales from mid-2026 planned); production start 2026 not independently confirmed"
+    },
+    {
+      "name": "Santana Series II / IIA / III (88, 109, licensed Land Rover)",
+      "from": 1958,
+      "to": 1983,
+      "bodyTypes": [
+        "suv",
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "verify": "not independently checked (search budget exhausted); plausible per en.wikipedia Santana_Motor history"
+    },
+    {
+      "name": "Santana 2500 (Series IV) / Super / Cazorla",
+      "from": 1982,
+      "to": 1994,
+      "bodyTypes": [
+        "suv",
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379229845"
+      ],
+      "verify": "not independently checked (search budget exhausted); plausible per en.wikipedia Santana_Motor history"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "santana-anibal",
+    "santana-300-350",
+    "santana-400"
+  ],
+  "conflicts": [
+    {
+      "where": "make foundedYear",
+      "values": {
+        "makes.json/Wikidata": 1955,
+        "en Wikipedia infobox": 1954,
+        "en Wikipedia lead": 1956
+      },
+      "kept": 1955
+    },
+    {
+      "where": "santana-300-350 end of production",
+      "values": {
+        "es Wikipedia Santana 300 + en Santana Motor": 2009,
+        "es Wikipedia Suzuki Vitara": 2011
+      },
+      "kept": 2009
+    },
+    {
+      "where": "santana-anibal production start",
+      "values": {
+        "es/en Wikipedia (sales)": 2004,
+        "en Wikipedia text (PS-10 production)": 2002
+      },
+      "kept": 2004
+    },
+    {
+      "where": "santana-anibal mass",
+      "values": {
+        "es Wikipedia infobox": 2410,
+        "es Wikipedia technical section (running weight)": 2140
+      },
+      "kept": 2140
+    }
+  ],
+  "openQuestions": [
+    "Santana-built Suzuki SJ410/Samurai (1985-2003), Vitara (1992-2004) and Jimny canvas-top were sold mostly as Suzuki; they should stay under suzuki.",
+    "Santana 400 card added as isAddition line \"santana-400\"; needs a model-line-additions entry to be indexed.",
+    "Cajal (BAIC BJ40 based) launch planned for autumn 2026; production start not confirmed, so no card was created."
+  ],
+  "summary": "Make is wrongly marked defunct: Santana Motors restarted production in Linares on 28 Oct 2025 (Santana 400 pickup). Created cards for Anibal/PS-10, 300/350 and the new 400; proposed production years and missing classic and new models."
+}

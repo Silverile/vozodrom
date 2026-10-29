@@ -1,0 +1,122 @@
+{
+  "make": "rimac",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "concept-one",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375603023"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rimac_Concept_One current infobox (Jan 2013 - Nov 2014, 8 built, coupe, 913 kW, 4548x1854x1198, wb 2750); de.wikipedia Rimac_Concept_One gives 2013-2016 and 8 sold by Oct 2014 (the 2016 end includes Concept S), coupe"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-one",
+      "field": "productionStart",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375603023"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rimac_Concept_One current infobox (Jan 2013 - Nov 2014, 8 built, coupe, 913 kW, 4548x1854x1198, wb 2750); de.wikipedia Rimac_Concept_One gives 2013-2016 and 8 sold by Oct 2014 (the 2016 end includes Concept S), coupe"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-one",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375603023"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rimac_Concept_One current infobox (Jan 2013 - Nov 2014, 8 built, coupe, 913 kW, 4548x1854x1198, wb 2750); de.wikipedia Rimac_Concept_One gives 2013-2016 and 8 sold by Oct 2014 (the 2016 end includes Concept S), coupe"
+    },
+    {
+      "file": "models-auto",
+      "slug": "nevera",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380720703"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Rimac_Nevera infobox 'seit 2022', first series car delivered Aug 2022, Coupe; 150 units planned, production not reported as ended"
+    },
+    {
+      "file": "models-auto",
+      "slug": "nevera",
+      "field": "productionStart",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380720703"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia Rimac_Nevera infobox 'seit 2022', first series car delivered Aug 2022, Coupe; 150 units planned, production not reported as ended"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "concept-one",
+    "nevera"
+  ],
+  "conflicts": [
+    {
+      "where": "nevera dimensions",
+      "values": {
+        "rimac-automobili.com/nevera (2026)": "4745x2052x1240",
+        "en Wikipedia (2021 brochure)": "4750x1986x1208"
+      },
+      "kept": "4745x2052x1240"
+    },
+    {
+      "where": "nevera torque / WLTP range",
+      "values": {
+        "rimac-automobili.com": "2340 Nm / 489 km",
+        "en Wikipedia": "2360 Nm / 490 km"
+      },
+      "kept": "2340 Nm / 489 km"
+    },
+    {
+      "where": "nevera production start",
+      "values": {
+        "en Wikipedia": 2022,
+        "auto-data.net": 2021
+      },
+      "kept": 2022
+    },
+    {
+      "where": "concept-one power",
+      "values": {
+        "en Wikipedia (production)": "913 kW",
+        "Engadget 2011 (concept)": "1088 hp"
+      },
+      "kept": "913 kW"
+    }
+  ],
+  "openQuestions": [
+    "Nevera is capped at 150 units; no source found confirming end of production by 2026-10, so productionStatus stays current with needsReview.",
+    "en Wikipedia uses a Geneva 2016 photo for the Concept One article; Geneva 2016 was the Concept S debut, so a 2012 Salon Prive photo was used instead."
+  ],
+  "summary": "No card file existed; created Concept One (with Concept S trim) and Nevera (with Nevera R trim). Proposals: body types and production years are empty in models-auto.",
+  "verifyNotes": [
+    "Card nevera: Nevera R trim/engine max 1550 kW and summary '1,55 MW'; de.wikipedia Rimac_Nevera gives 1571 kW (2136 PS). Under 5 % difference, left unchanged; consider 1571.",
+    "Card nevera width 2052 mm vs de.wikipedia 1986 mm (3 %), already logged as a conflict."
+  ]
+}

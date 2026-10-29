@@ -138,15 +138,15 @@
     "name": "2101",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "2101 je původní sedan automobilky VAZ známý také jako Žiguli. Exportní jména Lada a označení odvozených verzí nejsou vedena jako další samostatné modelové rodiny.",
+    "summaryCs": "2101 je původní sedan automobilky VAZ známý také jako Žiguli. Exportní jména Lada a označení odvozených verzí nejsou vedena jako další samostatné modelové rodiny. Rodina včetně odvozených verzí se vyráběla v letech 1970–1988; konec výroby základního provedení 2101 je dřívější.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "2101",
         "from": 1970,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1988,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -164,7 +164,7 @@
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
-          "variant": null,
+          "variant": "2101 včetně odvozených verzí",
           "bodyType": null,
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
         },
@@ -193,13 +193,17 @@
         "trims": null,
         "sources": [
           "https://www.lada.ru/images/annuals/annual_2011.pdf",
-          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+          "https://www.lada-image.ru/about/for_press/news/lada_50_let_istorii_/",
+          "https://en.wikipedia.org/w/index.php?title=VAZ-2101&oldid=1380727946"
         ]
       }
     ],
     "sources": [
       "https://www.lada.ru/images/annuals/annual_2011.pdf",
-      "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+      "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+      "https://www.lada-image.ru/about/for_press/news/lada_50_let_istorii_/",
+      "https://en.wikipedia.org/w/index.php?title=VAZ-2101&oldid=1380727946"
     ],
     "needsReview": [
       {
@@ -208,10 +212,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1912,7 +1912,7 @@
     "name": "Niva / 4x4 / Niva Legend",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Původní Niva je terénní automobil se samonosnou karoserií a stálým pohonem všech kol. Pozdější názvy 4x4 a Niva Legend patří do stejné rodiny, nikoli k Nivě Travel.",
+    "summaryCs": "Původní Niva je terénní automobil se samonosnou karoserií a stálým pohonem všech kol. Pozdější názvy 4x4 a Niva Legend patří do stejné rodiny, nikoli k Nivě Travel. V červenci 2026 začala sériová výroba modernizované Nivy Legend s motorem 1,8 litru.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -1992,17 +1992,133 @@
               "https://www.lada.ru/price-info/niva-legend/bronto",
               "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf"
             ]
+          },
+          {
+            "name": "Niva Legend 1.7 5MT – třídveřová exportní technická verze",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1690,
+              "cylinders": 4,
+              "powerKw": 61,
+              "powerStandard": null,
+              "torqueNm": 129
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 5
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": null,
+              "width": 1680,
+              "height": 1640,
+              "wheelbase": null
+            },
+            "massKg": 1285,
+            "massBasis": "Pohotovostní hmotnost / curb weight podle exportní technické tabulky; započtení řidiče není uvedeno.",
+            "topSpeedKmh": 142,
+            "acceleration0to100s": 17,
+            "consumptionL100": 9.9,
+            "consumptionCycle": "GOST R 41.101–99 / UNECE R101, kombinovaný cyklus podle exportního technického listu.",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Export / Russia; conventional 3-door Legend 1.7",
+              "modelYear": null,
+              "noteCs": "Vybraná technická verze 1.7 z exportního listu ©2025, ověřená s nezávislým katalogem. Rok dokumentu není ověřený modelový rok. Nejde o Bronto ani modernizaci 1.8 z roku 2026. Délka 3640–3740 mm závisí na provedení; rozvor exportní list uvádí 2220 mm, nezávislý katalog a starší brožura 2200 mm, proto obojí zůstává null."
+            },
+            "sources": [
+              "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+              "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/",
+              "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf"
+            ],
+            "fieldSources": {
+              "engine.fuel": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "engine.displacementCc": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "engine.cylinders": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "engine.powerKw": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "engine.torqueNm": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "transmission.type": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "transmission.gears": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "drive": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "dimensionsMm.width": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "dimensionsMm.height": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "massKg": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "massBasis": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "topSpeedKmh": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "acceleration0to100s": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "consumptionL100": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ],
+              "consumptionCycle": [
+                "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+                "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
+              ]
+            }
           }
         ],
         "sources": [
           "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-          "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf"
+          "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf",
+          "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+          "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
         ]
       }
     ],
     "sources": [
       "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-      "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf"
+      "https://static.lada.ru/files/brochures/models_pdf/2022/LADA_Niva_Legend-brochures.pdf",
+      "https://mintrans.gov.ru/press-center/branch-news/9231",
+      "https://lada-export.com/wp-content/uploads/2025/12/niva-legend-th-1.pdf",
+      "https://auto.ru/catalog/cars/vaz/niva_legend/22796942/22797020/specifications/"
     ],
     "needsReview": [
       {
@@ -2124,6 +2240,30 @@
       {
         "field": "generations[0].trims[0].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].trims[1].from",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
+      },
+      {
+        "field": "generations[0].trims[1].to",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
+      },
+      {
+        "field": "generations[0].trims[1].engine.powerStandard",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
+      },
+      {
+        "field": "generations[0].trims[1].dimensionsMm.length",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
+      },
+      {
+        "field": "generations[0].trims[1].dimensionsMm.wheelbase",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
+      },
+      {
+        "field": "generations[0].trims[1].specificationScope.modelYear",
+        "reason": "Neov??en? nebo rozporn? ?daj pro tuto p?esnou exportn? technickou verzi; viz technick? rozsah a prameny."
       }
     ],
     "aliases": [

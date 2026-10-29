@@ -1,0 +1,3803 @@
+{
+  "make": "mercedes-benz",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "rady-107",
+      "field": "slug/name",
+      "from": "rady-107 / \"řady 107\"",
+      "to": "r107 / \"R107 / C107\"",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1547602"
+      ],
+      "confidence": "high",
+      "note": "Czech genitive label leaked into slug and name; Wikidata label is \"Mercedes-Benz R107 and C107\".",
+      "verify": "confirmed: Wikidata Q1547602 en label 'Mercedes-Benz R107 and C107', de 'Mercedes-Benz Baureihe 107'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "type-204",
+      "field": "slug/name",
+      "from": "type-204 / \"type 204\"",
+      "to": "w204 / \"W204\"",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q2008468"
+      ],
+      "confidence": "medium",
+      "note": "Same naming scheme as the other chassis entries (w203, w205).",
+      "verify": "confirmed: Wikidata Q2008468 de label 'Mercedes-Benz Baureihe 204', description 'C-Class III' (= W204); check overlap with the trida-c line when applying"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w-08",
+      "field": "slug",
+      "from": "w-08",
+      "to": "w08",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q869000"
+      ],
+      "confidence": "low",
+      "note": "Inconsistent slug spelling vs w02/w03/w10; same for w-113, w-463, w-154, w-165, w-25, x-164.",
+      "verify": "confirmed: Wikidata Q869000 label 'Mercedes-Benz W08' (de 'W 08'); cosmetic slug change only"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "w125",
+      "reason": "Grand Prix race car, not a road model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1680468"
+      ],
+      "verify": "confirmed: Wikidata item for 'w125' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w125-rekordwagen",
+      "reason": "land-speed record car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q3066488"
+      ],
+      "verify": "confirmed: Wikidata item for 'w125-rekordwagen' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w-154",
+      "reason": "Grand Prix race car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1784053"
+      ],
+      "verify": "confirmed: Wikidata item for 'w-154' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w-165",
+      "reason": "Grand Prix race car (voiturette)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q778799"
+      ],
+      "verify": "confirmed: Wikidata item for 'w-165' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w-25",
+      "reason": "Grand Prix race car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1700790"
+      ],
+      "verify": "confirmed: Wikidata item for 'w-25' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "w194",
+      "reason": "1952 racing sports car (300 SL race car); the road 300 SL is W198, already a line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q750076"
+      ],
+      "verify": "confirmed: Wikidata item for 'w194' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "300-slr",
+      "reason": "racing sports car (W196S); road 300 SL has its own line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q2303469"
+      ],
+      "verify": "confirmed: Wikidata item for '300-slr' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "c11",
+      "reason": "Group C race car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1736380"
+      ],
+      "verify": "confirmed: Wikidata item for 'c11' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "clk-lm",
+      "reason": "Le Mans race car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q9288407"
+      ],
+      "verify": "confirmed: Wikidata item for 'clk-lm' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "amg-c-class-dtm",
+      "reason": "DTM touring race car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1155910"
+      ],
+      "verify": "confirmed: Wikidata item for 'amg-c-class-dtm' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "mercedes-t80",
+      "reason": "land-speed record car, never driven",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1921335"
+      ],
+      "verify": "confirmed: Wikidata item for 'mercedes-t80' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "esf-2009-experimental-safety-vehicle",
+      "reason": "experimental safety concept vehicle",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q20875901"
+      ],
+      "verify": "confirmed: Wikidata item for 'esf-2009-experimental-safety-vehicle' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "f500-mind",
+      "reason": "concept car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q4044001"
+      ],
+      "verify": "confirmed: Wikidata item for 'f500-mind' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "f700",
+      "reason": "concept car (2007)",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1639428"
+      ],
+      "verify": "confirmed: Wikidata item for 'f700' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "necar-5",
+      "reason": "fuel-cell concept/research vehicle",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q948830"
+      ],
+      "verify": "confirmed: Wikidata item for 'necar-5' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vision-eqs",
+      "reason": "concept car; production EQS already a line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q67308635"
+      ],
+      "verify": "confirmed: Wikidata item for 'vision-eqs' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vario-research-car",
+      "reason": "research/concept vehicle",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q19581500"
+      ],
+      "verify": "confirmed: Wikidata item for 'vario-research-car' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "accelo",
+      "reason": "truck (Brazilian light truck), not a car",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12071646"
+      ],
+      "verify": "confirmed: Wikidata Q12071646 Mercedes-Benz Accelo, manufacturer Daimler Truck (Q36008); a light truck, not a car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "l-series-truck",
+      "reason": "truck",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q6818119"
+      ],
+      "verify": "confirmed: Wikidata Q6818119 (de 'Schwerer Kurzhauber') is also an instance of truck (Q21546143)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "la-911",
+      "reason": "truck",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q25387723"
+      ],
+      "verify": "confirmed: Wikidata Q25387723 (de 'Mercedes-Benz L 911'), manufacturer Daimler Truck (Q36008); a Kurzhauber truck"
+    },
+    {
+      "file": "models-auto",
+      "slug": "interim-fast-attack-vehicle",
+      "reason": "military vehicle",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q896319"
+      ],
+      "verify": "confirmed: Wikidata item for 'interim-fast-attack-vehicle' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "renntransporter",
+      "reason": "one-off racing car transporter",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q4044007"
+      ],
+      "verify": "confirmed: Wikidata item for 'renntransporter' is a race/record car, concept/research vehicle, military vehicle or one-off transporter (label and article checked), not a series road car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "lotec-c1000",
+      "reason": "belongs to make Lotec (tuner/coachbuilder), not Mercedes-Benz",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q11876246"
+      ],
+      "verify": "confirmed: Wikidata Q11876246 manufacturer (P176) is Lotec (Q470343), not Mercedes-Benz"
+    },
+    {
+      "file": "models-auto",
+      "slug": "carlsson-c25",
+      "reason": "belongs to tuner Carlsson, not a Mercedes-Benz model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1043398"
+      ],
+      "verify": "confirmed: Wikidata Q1043398 manufacturer (P176) is Carlsson (Q690124)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "gle-350",
+      "reason": "engine version of GLE, duplicate of gle",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q56358220"
+      ],
+      "verify": "confirmed: Wikidata Q56358220 'Mercedes-Benz GLE 350' is a single engine-version item; the GLE is already the gle line"
+    },
+    {
+      "file": "models-auto",
+      "slug": "gls-350",
+      "reason": "engine version of GLS, duplicate of gls-class",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q56358410"
+      ],
+      "verify": "confirmed: Wikidata Q56358410 'Mercedes-Benz GLS 350' is a single engine-version item; the GLS is already the gls-class line"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "EQT",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mercedes-Benz_T-Class"
+      ],
+      "note": "Electric twin of the T-Class (W420); no models-auto entry and no card line. Years not fetched in this sweep.",
+      "verify": "confirmed: de.wikipedia EQT: electric version of W 420, series production 05/2023-05/2026, Hochdachkombi https://de.wikipedia.org/wiki/Mercedes-Benz_EQT"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "170",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1931,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373721843"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1936,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373721843"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373721843"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1935,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363726423"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1955,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363726423"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363726423"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1949,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767662"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 1955,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767662"
+      ]
+    },
+    {
+      "lineSlug": "170",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767662"
+      ]
+    },
+    {
+      "lineSlug": "190",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1983,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365136039"
+      ]
+    },
+    {
+      "lineSlug": "190",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1993,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365136039"
+      ]
+    },
+    {
+      "lineSlug": "190",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365136039"
+      ]
+    },
+    {
+      "lineSlug": "200-w21",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1933,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301628659"
+      ]
+    },
+    {
+      "lineSlug": "200-w21",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1936,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301628659"
+      ]
+    },
+    {
+      "lineSlug": "200-w21",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301628659"
+      ]
+    },
+    {
+      "lineSlug": "219-w105",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1956,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1287360487"
+      ]
+    },
+    {
+      "lineSlug": "219-w105",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1959,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1287360487"
+      ]
+    },
+    {
+      "lineSlug": "219-w105",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1287360487"
+      ]
+    },
+    {
+      "lineSlug": "220-w187",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1951,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842175"
+      ]
+    },
+    {
+      "lineSlug": "220-w187",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1955,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842175"
+      ]
+    },
+    {
+      "lineSlug": "220-w187",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842175"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1937,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381730757"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1941,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381730757"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381730757"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1938,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767466"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1943,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767466"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1307767466"
+      ]
+    },
+    {
+      "lineSlug": "260-d",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1935,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382008540"
+      ]
+    },
+    {
+      "lineSlug": "260-d",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1940,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382008540"
+      ]
+    },
+    {
+      "lineSlug": "260-d",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382008540"
+      ]
+    },
+    {
+      "lineSlug": "290-w18",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1933,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1319985221"
+      ]
+    },
+    {
+      "lineSlug": "290-w18",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1937,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1319985221"
+      ]
+    },
+    {
+      "lineSlug": "290-w18",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1319985221"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1951,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371279937",
+        "https://en.wikipedia.org/w/index.php?oldid=1358006709"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1962,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371279937",
+        "https://en.wikipedia.org/w/index.php?oldid=1358006709"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371279937",
+        "https://en.wikipedia.org/w/index.php?oldid=1358006709"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1952,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364368302"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1958,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364368302"
+      ]
+    },
+    {
+      "lineSlug": "300",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364368302"
+      ]
+    },
+    {
+      "lineSlug": "300-350-predvalecne",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1926,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624164"
+      ]
+    },
+    {
+      "lineSlug": "300-350-predvalecne",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1930,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624164"
+      ]
+    },
+    {
+      "lineSlug": "300-350-predvalecne",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624164"
+      ]
+    },
+    {
+      "lineSlug": "320-w142",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1937,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370555609"
+      ]
+    },
+    {
+      "lineSlug": "320-w142",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1942,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370555609"
+      ]
+    },
+    {
+      "lineSlug": "320-w142",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370555609"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1933,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369448358"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1934,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369448358"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369448358"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1934,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369601921",
+        "https://en.wikipedia.org/w/index.php?oldid=1379787149"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1940,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369601921",
+        "https://en.wikipedia.org/w/index.php?oldid=1379787149"
+      ]
+    },
+    {
+      "lineSlug": "380-500k-540k",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369601921",
+        "https://en.wikipedia.org/w/index.php?oldid=1379787149"
+      ]
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1963,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378264852"
+      ]
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1981,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378264852"
+      ]
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378264852"
+      ]
+    },
+    {
+      "lineSlug": "630",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1924,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1344275086"
+      ]
+    },
+    {
+      "lineSlug": "630",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1929,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1344275086"
+      ]
+    },
+    {
+      "lineSlug": "630",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1344275086"
+      ]
+    },
+    {
+      "lineSlug": "amg-gt",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG GT: Baureihe 190 from 2014, ended. https://de.wikipedia.org/wiki/Mercedes-AMG_GT"
+    },
+    {
+      "lineSlug": "amg-gt",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377"
+      ],
+      "verify": "reverted: 2023 is only the Black Series tail; the cited en oldid itself gives main production 10/2014-09/2022, and de.wikipedia lists Baureihe 190 as 2014-2021. https://de.wikipedia.org/wiki/Mercedes-AMG_GT"
+    },
+    {
+      "lineSlug": "amg-gt",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG GT: Baureihe 190 from 2014, ended. https://de.wikipedia.org/wiki/Mercedes-AMG_GT"
+    },
+    {
+      "lineSlug": "amg-gt",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG GT: Baureihe 192 seit 2023. https://de.wikipedia.org/wiki/Mercedes-AMG_GT"
+    },
+    {
+      "lineSlug": "amg-gt",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG GT: Baureihe 192 seit 2023. https://de.wikipedia.org/wiki/Mercedes-AMG_GT"
+    },
+    {
+      "lineSlug": "amg-gt-4-door",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381172715"
+      ],
+      "verify": "confirmed: de.wikipedia AMG GT 4-Tuerer Coupe: 2018-2025, production ended autumn 2025. https://de.wikipedia.org/wiki/Mercedes-AMG_GT_4-T%C3%BCrer_Coup%C3%A9"
+    },
+    {
+      "lineSlug": "amg-gt-4-door",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381172715"
+      ],
+      "verify": "confirmed: de.wikipedia AMG GT 4-Tuerer Coupe: 2018-2025, production ended autumn 2025. https://de.wikipedia.org/wiki/Mercedes-AMG_GT_4-T%C3%BCrer_Coup%C3%A9"
+    },
+    {
+      "lineSlug": "amg-gt-4-door",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381172715"
+      ],
+      "verify": "confirmed: de.wikipedia AMG GT 4-Tuerer Coupe: 2018-2025, production ended autumn 2025. https://de.wikipedia.org/wiki/Mercedes-AMG_GT_4-T%C3%BCrer_Coup%C3%A9"
+    },
+    {
+      "lineSlug": "amg-one",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365340293"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG One: production 2022-2025. https://de.wikipedia.org/wiki/Mercedes-AMG_One"
+    },
+    {
+      "lineSlug": "amg-one",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365340293"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG One: production 2022-2025. https://de.wikipedia.org/wiki/Mercedes-AMG_One"
+    },
+    {
+      "lineSlug": "amg-one",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365340293"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG One: production 2022-2025. https://de.wikipedia.org/wiki/Mercedes-AMG_One"
+    },
+    {
+      "lineSlug": "citan",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2012,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380904683"
+      ]
+    },
+    {
+      "lineSlug": "citan",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380904683"
+      ]
+    },
+    {
+      "lineSlug": "citan",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380904683"
+      ]
+    },
+    {
+      "lineSlug": "citan",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380904683"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1992,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1998,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1998,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ]
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ],
+      "verify": "confirmed: de.wikipedia C 216: 06/2006-12/2013. https://de.wikipedia.org/wiki/Mercedes-Benz_C_216"
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ],
+      "verify": "confirmed: de.wikipedia C 216: 06/2006-12/2013. https://de.wikipedia.org/wiki/Mercedes-Benz_C_216"
+    },
+    {
+      "lineSlug": "cl",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381812888"
+      ],
+      "verify": "confirmed: de.wikipedia C 216: 06/2006-12/2013. https://de.wikipedia.org/wiki/Mercedes-Benz_C_216"
+    },
+    {
+      "lineSlug": "cla",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376100598"
+      ]
+    },
+    {
+      "lineSlug": "cle",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379919430"
+      ]
+    },
+    {
+      "lineSlug": "cle",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379919430"
+      ]
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1997,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374968663"
+      ]
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374968663"
+      ]
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374968663"
+      ]
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373811082"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 209 gives 2002-2010 (market launch summer 2002, earliest engine build dates 06/2002); en 'February 2001' is pre-series. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_209"
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373811082"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 209: coupe replaced 05/2009 but cabriolet built to 03/2010, so the generation ends 2010, not 2009. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_209"
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373811082"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 209: ended 2010. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_209"
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363927699",
+        "https://en.wikipedia.org/w/index.php?oldid=1380899390"
+      ],
+      "verify": "reverted: de.wikipedia C 219 gives production 10/2004-07/2010; 2003 was not a production year. https://de.wikipedia.org/wiki/Mercedes-Benz_C_219"
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363927699",
+        "https://en.wikipedia.org/w/index.php?oldid=1380899390"
+      ],
+      "verify": "confirmed: de.wikipedia C 219: ended 07/2010. https://de.wikipedia.org/wiki/Mercedes-Benz_C_219"
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380899390",
+        "https://en.wikipedia.org/w/index.php?oldid=1374412014"
+      ]
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380899390",
+        "https://en.wikipedia.org/w/index.php?oldid=1374412014"
+      ]
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374412014"
+      ]
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374412014"
+      ]
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374412014"
+      ]
+    },
+    {
+      "lineSlug": "eqa",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382189845"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqa",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2026,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382189845"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqa",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382189845"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqb",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357227700"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqb",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2026,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357227700"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqb",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1357227700"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "lineSlug": "eqc",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364224767"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia EQC: production 05/2019-05/2023. https://de.wikipedia.org/wiki/Mercedes-Benz_EQC"
+    },
+    {
+      "lineSlug": "eqc",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364224767"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia EQC: production 05/2019-05/2023. https://de.wikipedia.org/wiki/Mercedes-Benz_EQC"
+    },
+    {
+      "lineSlug": "eqc",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364224767"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia EQC: production 05/2019-05/2023. https://de.wikipedia.org/wiki/Mercedes-Benz_EQC"
+    },
+    {
+      "lineSlug": "eqe",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374340301"
+      ]
+    },
+    {
+      "lineSlug": "eqe",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374340301"
+      ]
+    },
+    {
+      "lineSlug": "eqe-suv",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378993015"
+      ]
+    },
+    {
+      "lineSlug": "eqe-suv",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378993015"
+      ]
+    },
+    {
+      "lineSlug": "eqs",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842160"
+      ]
+    },
+    {
+      "lineSlug": "eqs",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842160"
+      ]
+    },
+    {
+      "lineSlug": "eqs-suv",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372059803"
+      ]
+    },
+    {
+      "lineSlug": "eqs-suv",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372059803"
+      ]
+    },
+    {
+      "lineSlug": "gla",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382382541"
+      ]
+    },
+    {
+      "lineSlug": "glc",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2015,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+      ]
+    },
+    {
+      "lineSlug": "glc",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+      ]
+    },
+    {
+      "lineSlug": "glc",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+      ]
+    },
+    {
+      "lineSlug": "glc",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+      ]
+    },
+    {
+      "lineSlug": "glc",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1997,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[4].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "gle",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831618"
+      ]
+    },
+    {
+      "lineSlug": "glk",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1367247239"
+      ]
+    },
+    {
+      "lineSlug": "glk",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2015,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1367247239"
+      ]
+    },
+    {
+      "lineSlug": "glk",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1367247239"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364461462"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2012,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364461462"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364461462"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2012,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376918064"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376918064"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376918064"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831783"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831783"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1961,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364862023"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1968,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364862023"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364862023"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1959,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369445528",
+        "https://en.wikipedia.org/w/index.php?oldid=1364861510"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1971,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369445528",
+        "https://en.wikipedia.org/w/index.php?oldid=1364861510"
+      ]
+    },
+    {
+      "lineSlug": "heckflosse",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369445528",
+        "https://en.wikipedia.org/w/index.php?oldid=1364861510"
+      ]
+    },
+    {
+      "lineSlug": "l319",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1955,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301629688"
+      ]
+    },
+    {
+      "lineSlug": "l319",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1968,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301629688"
+      ]
+    },
+    {
+      "lineSlug": "l319",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301629688"
+      ]
+    },
+    {
+      "lineSlug": "mannheim",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1929,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624944"
+      ]
+    },
+    {
+      "lineSlug": "mannheim",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1934,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624944"
+      ]
+    },
+    {
+      "lineSlug": "mannheim",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624944"
+      ]
+    },
+    {
+      "lineSlug": "nurburg",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1928,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380489489"
+      ]
+    },
+    {
+      "lineSlug": "nurburg",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1939,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380489489"
+      ]
+    },
+    {
+      "lineSlug": "nurburg",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380489489"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1953,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373851635"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1962,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373851635"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373851635"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1954,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364858818",
+        "https://en.wikipedia.org/w/index.php?oldid=1364858728"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1960,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364858818",
+        "https://en.wikipedia.org/w/index.php?oldid=1364858728"
+      ]
+    },
+    {
+      "lineSlug": "ponton",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364858818",
+        "https://en.wikipedia.org/w/index.php?oldid=1364858728"
+      ]
+    },
+    {
+      "lineSlug": "s-ss-ssk",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1926,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356926245",
+        "https://en.wikipedia.org/w/index.php?oldid=1380902056"
+      ]
+    },
+    {
+      "lineSlug": "s-ss-ssk",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1933,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356926245",
+        "https://en.wikipedia.org/w/index.php?oldid=1380902056"
+      ]
+    },
+    {
+      "lineSlug": "s-ss-ssk",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356926245",
+        "https://en.wikipedia.org/w/index.php?oldid=1380902056"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1963,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365519494"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1971,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365519494"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365519494"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1971,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1989,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1988,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372425476"
+      ],
+      "verify": "reverted: de.wikipedia R 129 gives production 03/1989-07/2001, not 1988. https://de.wikipedia.org/wiki/Mercedes-Benz_R_129"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372425476"
+      ],
+      "verify": "confirmed: de.wikipedia R 129: ended 07/2001. https://de.wikipedia.org/wiki/Mercedes-Benz_R_129"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372425476"
+      ],
+      "verify": "confirmed: de.wikipedia R 129: ended 07/2001. https://de.wikipedia.org/wiki/Mercedes-Benz_R_129"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 2000,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1361999044"
+      ],
+      "verify": "reverted: de.wikipedia R 230 gives series production 10/2001 (start 13 Oct 2001, Bremen); en 'September 2000' is pre-series. https://de.wikipedia.org/wiki/Mercedes-Benz_R_230"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[3].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1361999044"
+      ],
+      "verify": "confirmed: de.wikipedia R 230: ended 11/2011. https://de.wikipedia.org/wiki/Mercedes-Benz_R_230"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1361999044"
+      ],
+      "verify": "confirmed: de.wikipedia R 230: ended 11/2011. https://de.wikipedia.org/wiki/Mercedes-Benz_R_230"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[4].from",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356325098"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[4].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356325098"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356325098"
+      ]
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[5].from",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363256421"
+      ],
+      "verify": "reverted: de.wikipedia Mercedes-AMG SL lists R 232 'seit 2021', not 2022. https://de.wikipedia.org/wiki/Mercedes-AMG_SL"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[5].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1363256421"
+      ],
+      "verify": "confirmed: de.wikipedia Mercedes-AMG SL: R 232 in production. https://de.wikipedia.org/wiki/Mercedes-AMG_SL"
+    },
+    {
+      "lineSlug": "slc-c107",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1971,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "slc-c107",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1981,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "slc-c107",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1996,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380885326",
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380885326",
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380885326",
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1317905041"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1347950208"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1347950208"
+      ]
+    },
+    {
+      "lineSlug": "slk",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1347950208"
+      ]
+    },
+    {
+      "lineSlug": "slr-mclaren",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381788326"
+      ],
+      "verify": "confirmed: de.wikipedia SLR McLaren: 2003-2009. https://de.wikipedia.org/wiki/Mercedes-Benz_SLR_McLaren"
+    },
+    {
+      "lineSlug": "slr-mclaren",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381788326"
+      ],
+      "verify": "reverted: de.wikipedia gives SLR production 2003-2009 (McLaren, Woking), not 2010. https://de.wikipedia.org/wiki/Mercedes-Benz_SLR_McLaren"
+    },
+    {
+      "lineSlug": "slr-mclaren",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381788326"
+      ],
+      "verify": "confirmed: de.wikipedia SLR McLaren: 2003-2009. https://de.wikipedia.org/wiki/Mercedes-Benz_SLR_McLaren"
+    },
+    {
+      "lineSlug": "sls-amg",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375300115"
+      ]
+    },
+    {
+      "lineSlug": "sls-amg",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375300115"
+      ]
+    },
+    {
+      "lineSlug": "sls-amg",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375300115"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1995,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "sprinter",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382071911"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1926,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356179439"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1933,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356179439"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356179439"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1929,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1327294142"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1934,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1327294142"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1327294142"
+      ]
+    },
+    {
+      "lineSlug": "tn-t1",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1977,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379168930"
+      ]
+    },
+    {
+      "lineSlug": "tn-t1",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1995,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379168930"
+      ]
+    },
+    {
+      "lineSlug": "tn-t1",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379168930"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1996,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380227981"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 168 gives series production 08/1997-09/2004; en 'October 1996' is pre-series. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_168"
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380227981"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 168: ended 09/2004. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_168"
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380227981"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 168: ended 09/2004. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_168"
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2012,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382306480"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382306480"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382306480"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1360924730"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2011,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606526"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606526"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606526"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia W 247: built 2018-2026, production ended 2026 without successor (last builds 08/2026). https://de.wikipedia.org/wiki/Mercedes-Benz_W_247"
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2026,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia W 247: built 2018-2026, production ended 2026 without successor (last builds 08/2026). https://de.wikipedia.org/wiki/Mercedes-Benz_W_247"
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de.wikipedia W 247: built 2018-2026, production ended 2026 without successor (last builds 08/2026). https://de.wikipedia.org/wiki/Mercedes-Benz_W_247"
+    },
+    {
+      "lineSlug": "trida-c",
+      "path": "generations[2].from",
+      "from": 2006,
+      "to": 2007,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380871711"
+      ]
+    },
+    {
+      "lineSlug": "trida-c",
+      "path": "generations[3].to",
+      "from": 2021,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1355148367"
+      ]
+    },
+    {
+      "lineSlug": "trida-c",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374230587"
+      ],
+      "verify": "confirmed: de.wikipedia W 206: production since 2021, Modellpflege 08/2026. https://de.wikipedia.org/wiki/Mercedes-Benz_W_206"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1985,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614480"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1997,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614480"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614480"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1994,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375236623"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 210: saloon 05/1995-03/2002, estate 06/1996-12/2002; 1994 is pre-series. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_210"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375236623"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 210: last estate built 12/2002, not 2003. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_210"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375236623"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 210: ended 2002. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_210"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2002,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377283159"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377283159"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377283159"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381437950"
+      ],
+      "verify": "reverted: de.wikipedia Baureihe 212: saloon built from early 2009 (to 01/2016, estate to 05/2016); 2008 is pre-series. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_212"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[3].to",
+      "from": null,
+      "to": 2016,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381437950"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 212: estate built to 05/2016. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_212"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381437950"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 212: estate built to 05/2016. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_212"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[5].from",
+      "from": null,
+      "to": 2016,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842158"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[5].to",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842158"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[5].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842158"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[7].from",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373831991"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[7].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373831991"
+      ]
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1979,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W460 from 1979, ended. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "reverted: de.wikipedia G-Klasse lists W 460 as 1979-1992, not 1991. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W460 from 1979, ended. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1990,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[3].to",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[4].from",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-g",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265"
+      ],
+      "verify": "confirmed: de.wikipedia G-Klasse: W463 1990-2018, W463 (2018) 2018-2024, W465 since 2024. https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse"
+    },
+    {
+      "lineSlug": "trida-r",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364468528"
+      ]
+    },
+    {
+      "lineSlug": "trida-r",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2017,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364468528"
+      ]
+    },
+    {
+      "lineSlug": "trida-r",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364468528"
+      ]
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1972,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381801183"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1980,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381801183"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381801183"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1979,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381802142"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381802142"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381802142"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381803549"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 1998,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381803549"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381803549"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 1998,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381804846"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[3].to",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381804846"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381804846"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[4].from",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381805757"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[4].to",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381805757"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381805757"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[5].from",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381806201"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[5].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381806201"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[5].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381806201"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[6].from",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381811032"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[6].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381811032"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W116 1972-1980, W126 1979-1991, W140 1991-1998, W220 1998-2005, W221 2005-2013, W222 2013-2020, W223 since 2020. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-v",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "trida-v",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "trida-v",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "trida-v",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "trida-x",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2017,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376622143"
+      ]
+    },
+    {
+      "lineSlug": "trida-x",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376622143"
+      ]
+    },
+    {
+      "lineSlug": "trida-x",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376622143"
+      ]
+    },
+    {
+      "lineSlug": "vaneo",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1366680487"
+      ]
+    },
+    {
+      "lineSlug": "vaneo",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1366680487"
+      ]
+    },
+    {
+      "lineSlug": "vaneo",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1366680487"
+      ]
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1995,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ],
+      "verify": "reverted: de.wikipedia W 638 gives Produktionszeitraum 1996-2003 (Vitoria), not 1995. https://de.wikipedia.org/wiki/Mercedes-Benz_W_638"
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ],
+      "verify": "reverted: de.wikipedia W 638 gives 1996-2003; successor W639 started 2003, so 2005 is doubtful. https://de.wikipedia.org/wiki/Mercedes-Benz_W_638"
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ],
+      "verify": "confirmed: de.wikipedia W 638: ended 2003. https://de.wikipedia.org/wiki/Mercedes-Benz_W_638"
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ]
+    },
+    {
+      "lineSlug": "w108-w109",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1965,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614859"
+      ]
+    },
+    {
+      "lineSlug": "w108-w109",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1972,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614859"
+      ]
+    },
+    {
+      "lineSlug": "w108-w109",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381614859"
+      ]
+    },
+    {
+      "lineSlug": "w114-w115",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1968,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375304369"
+      ]
+    },
+    {
+      "lineSlug": "w114-w115",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1976,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375304369"
+      ]
+    },
+    {
+      "lineSlug": "w114-w115",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375304369"
+      ]
+    },
+    {
+      "lineSlug": "w123",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1975,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379875129"
+      ]
+    },
+    {
+      "lineSlug": "w123",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1986,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379875129"
+      ]
+    },
+    {
+      "lineSlug": "w123",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379875129"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2015,
+          "productionYear": 2015
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382306480"
+      ]
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[3].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2022,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1360924730"
+      ]
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2014,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375606526"
+      ]
+    },
+    {
+      "lineSlug": "trida-c",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2011,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380871711"
+      ]
+    },
+    {
+      "lineSlug": "trida-c",
+      "path": "generations[4].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2026,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374230587"
+      ],
+      "verify": "confirmed: de.wikipedia W 206: production since 2021, Modellpflege 08/2026. https://de.wikipedia.org/wiki/Mercedes-Benz_W_206"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 1999,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375236623"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2006,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1377283159"
+      ]
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[3].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2013,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381437950"
+      ],
+      "verify": "confirmed: de.wikipedia Baureihe 212: facelift series production from 1 March 2013. https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_212"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[3].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2002,
+          "productionYear": 2002
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381804846"
+      ]
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[4].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2009,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381805757"
+      ],
+      "verify": "confirmed: de.wikipedia S-Klasse: W221 Modellpflege 06/2009. https://de.wikipedia.org/wiki/Mercedes-Benz_S-Klasse"
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[5].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2017,
+          "productionYear": 2017
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381806201"
+      ]
+    },
+    {
+      "lineSlug": "trida-s",
+      "path": "generations[6].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2026,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381811032"
+      ]
+    },
+    {
+      "lineSlug": "gls",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2023,
+          "productionYear": null
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378831783"
+      ]
+    },
+    {
+      "lineSlug": "gla",
+      "path": "generations[2]",
+      "from": null,
+      "to": "new generation, production from September 2026, current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1382382541"
+      ]
+    },
+    {
+      "lineSlug": "glb",
+      "path": "generations[1]",
+      "from": null,
+      "to": "new generation, production from January 2026, current",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378299737"
+      ],
+      "verify": "confirmed: de.wikipedia GLB: second generation (X 244 / X 248) in production since 2026. https://de.wikipedia.org/wiki/Mercedes-Benz_GLB"
+    },
+    {
+      "lineSlug": "170",
+      "path": "summaryCs",
+      "from": "Předválečná a poválečná řada malých Mercedes ů je rozdělena podle konstrukčních kódů. Jména nejsou zaměněna s pozdější třídou A.",
+      "to": "Předválečná a poválečná řada malých Mercedesů je rozdělena podle konstrukčních kódů. Jména nejsou zaměněna s pozdější třídou A.",
+      "sources": []
+    },
+    {
+      "lineSlug": "slr-mclaren",
+      "path": "summaryCs",
+      "from": "Sportovní model vznikl ve spolupráci s Mc Larenem. Parametry jednotlivých karoserií a zvláštních sérií zatím nejsou sjednoceny.",
+      "to": "Sportovní model vznikl ve spolupráci s McLarenem. Parametry jednotlivých karoserií a zvláštních sérií zatím nejsou sjednoceny.",
+      "sources": []
+    },
+    {
+      "lineSlug": "trida-b",
+      "path": "summaryCs",
+      "from": "Vyšší kompaktní rodinný vůz kombinuje víceúčelovou karoserii s technikou kompaktních Mercedes ů. Parametry se mezi generacemi nepřenášejí.",
+      "to": "Vyšší kompaktní rodinný vůz kombinuje víceúčelovou karoserii s technikou kompaktních Mercedesů. Parametry se mezi generacemi nepřenášejí.",
+      "sources": []
+    },
+    {
+      "lineSlug": "200-w21",
+      "path": "summaryCs",
+      "from": "200 – W21 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "200 – W21 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1933–1936 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301628659"
+      ]
+    },
+    {
+      "lineSlug": "219-w105",
+      "path": "summaryCs",
+      "from": "219 – W105 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "219 – W105 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1956–1959 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1287360487"
+      ]
+    },
+    {
+      "lineSlug": "220-w187",
+      "path": "summaryCs",
+      "from": "220 – W187 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "220 – W187 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1951–1955 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842175"
+      ]
+    },
+    {
+      "lineSlug": "230-w143-w153",
+      "path": "summaryCs",
+      "from": "230 – W143 / W153 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "230 – W143 / W153 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1937–1943 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381730757",
+        "https://en.wikipedia.org/w/index.php?oldid=1307767466"
+      ]
+    },
+    {
+      "lineSlug": "290-w18",
+      "path": "summaryCs",
+      "from": "290 – W18 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "290 – W18 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1933–1937 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1319985221"
+      ]
+    },
+    {
+      "lineSlug": "320-w142",
+      "path": "summaryCs",
+      "from": "320 – W142 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "320 – W142 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1937–1942 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1370555609"
+      ]
+    },
+    {
+      "lineSlug": "630",
+      "path": "summaryCs",
+      "from": "630 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "630 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1924–1929 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1344275086"
+      ]
+    },
+    {
+      "lineSlug": "amg-one",
+      "path": "summaryCs",
+      "from": "AMG ONE je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "AMG ONE je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 2022–2025 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1365340293"
+      ]
+    },
+    {
+      "lineSlug": "l319",
+      "path": "summaryCs",
+      "from": "L319 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "L319 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1955–1968 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301629688"
+      ]
+    },
+    {
+      "lineSlug": "mannheim",
+      "path": "summaryCs",
+      "from": "Mannheim 350 / 370 / 380 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "Mannheim 350 / 370 / 380 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1929–1934 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1301624944"
+      ]
+    },
+    {
+      "lineSlug": "nurburg",
+      "path": "summaryCs",
+      "from": "Nürburg 460 / 500 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "Nürburg 460 / 500 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1928–1939 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380489489"
+      ]
+    },
+    {
+      "lineSlug": "slc-c107",
+      "path": "summaryCs",
+      "from": "SLC – C107 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "SLC – C107 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1971–1981 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1371300878"
+      ]
+    },
+    {
+      "lineSlug": "stuttgart",
+      "path": "summaryCs",
+      "from": "Stuttgart 200 / 260 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Přesná výrobní období, karoserie a technické konfigurace vyžadují další ověření; tato dílčí karta je nerozšiřuje odhadem.",
+      "to": "Stuttgart 200 / 260 je samostatně označená silniční rodina v přehledu výrobních vozů značky. Vyráběla se v letech 1926–1934 (podle pramenů karty); karoserie a technické konfigurace zatím nejsou ověřeny.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356179439",
+        "https://en.wikipedia.org/w/index.php?oldid=1327294142"
+      ]
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2002,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271344746",
+        "https://en.wikipedia.org/w/index.php?oldid=1371686793",
+        "https://www.mercedes-benz-media.co.uk/en-gb/releases/396/"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "clk",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271344746",
+        "https://en.wikipedia.org/w/index.php?oldid=1371686793"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "cls",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=267807439",
+        "https://en.wikipedia.org/w/index.php?oldid=1361715541"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 1989,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271237128",
+        "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/300-SL--R-129-E-30-1989---1993.xhtml?oid=4721"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "sl",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=269306165",
+        "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/SL-500--R-230-E-50-2001---2006.xhtml?oid=4736"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "trida-a",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1997,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=270439963",
+        "https://en.wikipedia.org/w/index.php?oldid=1380227981"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 1995,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271659363",
+        "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/E-320--W-210-E-32-1995---1997.xhtml?oid=5334"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2002,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271659363",
+        "https://mercedes-benz-publicarchive.com/marsClassic/de/instance/ko/E-Klasse-Limousinen-der-Baureihe-210-1999---2002.xhtml?oid=5343"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "trida-e",
+      "path": "generations[3].from",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=271643249",
+        "https://en.wikipedia.org/w/index.php?oldid=1381437950",
+        "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/E-220-CDI-BlueEFFICIENCY-2009---2013.xhtml?oid=188539114"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1996,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=257481597",
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    },
+    {
+      "lineSlug": "vito",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://de.wikipedia.org/w/index.php?oldid=257481597",
+        "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "trida-c generations[2] W204 from",
+      "values": {
+        "card (before)": 2006,
+        "en.wikipedia W204 oldid 1380871711 (sedan Mar 2007, estate Feb 2007)": 2007
+      },
+      "kept": 2007
+    },
+    {
+      "where": "trida-c generations[3] W205 to",
+      "values": {
+        "card (before)": 2021,
+        "en.wikipedia W205 oldid 1355148367 (coupé/cabriolet built 2016–2023)": 2023
+      },
+      "kept": 2023
+    },
+    {
+      "where": "190 W201 from",
+      "values": {
+        "en.wikipedia oldid 1365136039": 1983,
+        "common German usage (Bauzeit 1982–1993)": 1982
+      },
+      "kept": 1983
+    },
+    {
+      "where": "trida-e W124 from",
+      "values": {
+        "en.wikipedia oldid 1381614480 (saloon production from Jan 1985)": 1985,
+        "common usage (presented Nov 1984)": 1984
+      },
+      "kept": 1985
+    },
+    {
+      "where": "eqc N293 to",
+      "values": {
+        "en.wikipedia oldid 1364224767": 2023,
+        "press reports of last EQC built in 2024 (not fetched)": 2024
+      },
+      "kept": 2023
+    },
+    {
+      "where": "amg-gt generations[0].to (series-production fill 2026-10-29)",
+      "values": {
+        "https://de.wikipedia.org/w/index.php?oldid=262607031 (Baureihe 190, production ended end of 2021)": 2021,
+        "https://en.wikipedia.org/w/index.php?oldid=1382046377 (10/2014-09/2022, Road & Track)": 2022
+      },
+      "kept": null
+    },
+    {
+      "where": "sl generations[5].from R232 (series-production fill 2026-10-29)",
+      "values": {
+        "https://de.wikipedia.org/w/index.php?oldid=267357955 (von 11/2021)": 2021,
+        "https://en.wikipedia.org/w/index.php?oldid=1363256421 (production March 2022, cites sales start)": 2022
+      },
+      "kept": null
+    },
+    {
+      "where": "slr-mclaren generations[0].to (series-production fill 2026-10-29)",
+      "values": {
+        "https://de.wikipedia.org/w/index.php?oldid=264472411": 2009,
+        "https://en.wikipedia.org/w/index.php?oldid=1381788326": 2010
+      },
+      "kept": null
+    },
+    {
+      "where": "trida-g generations[0].to W460 (series-production fill 2026-10-29)",
+      "values": {
+        "https://de.wikipedia.org/w/index.php?oldid=271260088": 1992,
+        "https://en.wikipedia.org/w/index.php?oldid=1380173265 (infobox/text 1991; engine table has 230 GE 1982-1992)": 1991
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Year convention: the card uses production start/end (incl. pre-series where Wikipedia gives it, e.g. W202 1992, W210 1994, W212 2008, R129 1988, R-Class 2004), not market launch. Decide whether Czech buyers should see launch years instead.",
+    "citan W420 and trida-t W420: en.wikipedia (oldid 1380904683) gives production 2021–2026. Left to=null/status unchanged; it is unclear whether production actually ended by 2026-10.",
+    "eqa, eqb, trida-b W247: en.wikipedia gives production ending 2026 (replaced by the new electric GLA/GLB, CLA family). Set to=2026, status ended, medium confidence: confirm with a Mercedes press release.",
+    "amg-gt-4-door: X290 production Sept 2018 – Nov 2025 per en.wikipedia oldid 1381172715; an all-electric successor starts in 2026 (MY2027). Not added as a generation until production is confirmed.",
+    "glb and gla: new generations (GLB from Jan 2026, GLA from Sept 2026) added with code null; chassis codes, bodies beyond SUV, engines and photos still to research.",
+    "trida-g W461: G-Class article infobox gives \"1985–2022 (military variant)\"; not applied because it is unclear whether it describes W461 (1992–2001 civilian) or the W460/W461 military family.",
+    "cls C219 and C218 end years, C207/A207, C238/A238, C292, C167, W210/W638/W639 V-Class split, MB100, 770 (W07/W150), 130H/170H (W23/W28), W04/W05, EQV, CLC: years not applied because the fetched infobox was truncated, ambiguous or missing.",
+    "w133-iii (Q871670) in models-auto: no description on Wikidata; check whether it is a road model.",
+    "gla generations[1] H247 stays current: en.wikipedia lists it as \"December 2019 – present\" alongside the new 2026 generation."
+  ],
+  "summary": "Mercedes-Benz card had almost all generation years null. Filled production years and status for about 120 generations from fixed-revision en.wikipedia infoboxes, corrected W204 start (2006→2007) and W205 end (2021→2023), added facelifts for 13 generations, added the new 2026 GLA and GLB generations, set B-Class W247/EQA/EQB as ended in 2026. Proposed removal of 26 non-car or foreign-make entries from models-auto (race and record cars, concepts, trucks, Lotec/Carlsson)."
+}

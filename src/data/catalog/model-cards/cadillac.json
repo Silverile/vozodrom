@@ -2046,7 +2046,7 @@
       {
         "code": null,
         "name": "LYRIQ – neúplně rozlišená rodina",
-        "from": null,
+        "from": 2022,
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
@@ -2121,13 +2121,15 @@
           }
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Cadillac_Lyriq"
+          "https://en.wikipedia.org/wiki/Cadillac_Lyriq",
+          "https://investor.gm.com/static-files/f1d52599-8aa1-4c33-a4c4-ca0b73fc7adc"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Cadillac_Lyriq",
-      "https://shop.cadillacanz.com/cms/models/Cadillac%20LYRIQ%20Specifications-2025.pdf"
+      "https://shop.cadillacanz.com/cms/models/Cadillac%20LYRIQ%20Specifications-2025.pdf",
+      "https://investor.gm.com/static-files/f1d52599-8aa1-4c33-a4c4-ca0b73fc7adc"
     ],
     "needsReview": [
       {
@@ -2136,10 +2138,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4061,23 +4059,7 @@
           "United States"
         ],
         "marketNotesCs": "Rozsah je omezen na uvedený trh a doloženou rodinu. Záznam nenahrazuje rozpis všech generací a modelových roků.",
-        "photo": {
-          "source": "commons",
-          "file": "1941 Cadillac Series 61 Deluxe Sedan (43490501350).jpg",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/1941_Cadillac_Series_61_Deluxe_Sedan_%2843490501350%29.jpg",
-          "filePageUrl": "https://commons.wikimedia.org/wiki/File:1941_Cadillac_Series_61_Deluxe_Sedan_(43490501350).jpg",
-          "author": "Sicnag",
-          "licence": "CC BY 2.0",
-          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-          "credit": "Sicnag / Wikimedia Commons / CC BY 2.0",
-          "depicts": "generation",
-          "visualReview": "reviewed",
-          "reviewedAt": "2026-10-27",
-          "reviewNoteCs": "Celý sedan 1941 s rezervou přibližně 6–9 % na všech stranách, přední tříčtvrtinový pohled, 3:2. Fotografie představuje konkrétní předválečnou karoserii rodiny.",
-          "sources": [
-            "https://commons.wikimedia.org/wiki/File:1941_Cadillac_Series_61_Deluxe_Sedan_(43490501350).jpg"
-          ]
-        },
+        "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Cadillac_Series_61"
@@ -5264,18 +5246,25 @@
         },
         "trunkL": null,
         "markets": [
-          "United States"
+          "United States",
+          "China"
         ],
-        "marketNotesCs": "Rozsah je omezen na uvedený trh a doloženou rodinu. Záznam nenahrazuje rozpis všech generací a modelových roků.",
+        "marketNotesCs": "Rodina zahrnuje americký STS i prodloužený čínský SLS. Údaj 2013 patří pokračování SLS; samotný STS se vyráběl v letech 2004–2011. Začátek sériové výroby SLS ani všechny exportní trhy zde nejsou samostatně ověřeny.",
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Cadillac_STS"
+          "https://en.wikipedia.org/wiki/Cadillac_STS",
+          "https://www.theautochannel.com/news/2006/11/10/028272.html",
+          "https://www.wardsauto.com/news/archive-wards-cadillac-unveils-stretched-sls-in-china/769758/",
+          "https://www.cadillac.com/legacy-vehicles"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Cadillac_STS"
+      "https://en.wikipedia.org/wiki/Cadillac_STS",
+      "https://www.theautochannel.com/news/2006/11/10/028272.html",
+      "https://www.wardsauto.com/news/archive-wards-cadillac-unveils-stretched-sls-in-china/769758/",
+      "https://www.cadillac.com/legacy-vehicles"
     ],
     "needsReview": [
       {
@@ -6013,28 +6002,40 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 4565,
+            "displacementLitresNominal": 4.6,
+            "powerKwMin": 240,
+            "powerKwMax": 240,
+            "variant": "4.6 V8; pouze evropský vzorek, bez XLR-V"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 1836,
           "height": null,
-          "wheelbase": null
+          "wheelbase": 2685
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe (selected Netherlands version)",
           "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "variant": "4.6 V8 / 5-speed automatic only; excludes XLR-V",
+          "bodyType": "kabriolet",
+          "noteCs": "Dílčí evropský technický vzorek. Generační roky 2003–2009 platí pro celou rodinu; technické hodnoty nejsou úplným evropským rozsahem všech let. Délka, výška, hmotnost a točivý moment nejsou sjednoceny při rozporech pramenů."
         },
         "trunkL": null,
         "markets": [
-          "United States"
+          "United States",
+          "Europe"
         ],
-        "marketNotesCs": "Rozsah je omezen na uvedený trh a doloženou rodinu. Záznam nenahrazuje rozpis všech generací a modelových roků.",
+        "marketNotesCs": "Rodinné roky zahrnují výrobu v USA. Technický vzorek popisuje evropské provedení 4.6 V8 s pětistupňovým automatem; XLR-V a změny v dalších letech nejsou technicky rozepsány.",
         "photo": {
           "source": "commons",
           "file": "Cadillac XLR 2006.jpg",
@@ -6052,14 +6053,110 @@
             "https://commons.wikimedia.org/wiki/File:Cadillac_XLR_2006.jpg"
           ]
         },
-        "trims": null,
+        "trims": [
+          {
+            "name": "4.6 V8 / 5st. automat (evropský vzorek)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "kabriolet",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 4565,
+              "cylinders": 8,
+              "powerKw": 240,
+              "torqueNm": null
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": 5
+            },
+            "drive": "rwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": 1836,
+              "height": null,
+              "wheelbase": 2685
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 250,
+            "acceleration0to100s": 5.9,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe (Netherlands road-test sample)",
+              "modelYear": null,
+              "noteCs": "Pouze evropské provedení 4.6 V8 s pětistupňovým automatem; nezahrnuje XLR-V ani pozdější převodovky. Výkon 240 kW potvrzuje evropský test a katalog výrobce dílů; americký GM list uvádí 239 kW. Točivý moment 420/423 Nm a hmotnost zůstávají nevyplněny kvůli rozporům pramenů. Rok publikace testu není považován za modelový rok ani hranici sériové výroby."
+            },
+            "fieldSources": {
+              "engine.fuel": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "engine.displacementCc": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "engine.cylinders": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "engine.powerKw": [
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+                "https://fr.stark-automotive.com/frontend/images/categories/pdf/en/260911.pdf"
+              ],
+              "transmission": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "drive": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "dimensionsMm.width": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.xlr-net.com/specs/2004/2004specs.html",
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/"
+              ],
+              "topSpeedKmh": [
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+                "https://www.automobile-sportive.com/guide/cadillac/xlr.php"
+              ],
+              "acceleration0to100s": [
+                "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+                "https://www.automobile-sportive.com/guide/cadillac/xlr.php"
+              ]
+            },
+            "sources": [
+              "https://www.xlr-net.com/specs/2004/2004specs.html",
+              "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+              "https://fr.stark-automotive.com/frontend/images/categories/pdf/en/260911.pdf",
+              "https://www.automobile-sportive.com/guide/cadillac/xlr.php"
+            ]
+          }
+        ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Cadillac_XLR"
+          "https://en.wikipedia.org/wiki/Cadillac_XLR",
+          "https://www.xlr-net.com/specs/2004/2004specs.html",
+          "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+          "https://fr.stark-automotive.com/frontend/images/categories/pdf/en/260911.pdf",
+          "https://www.automobile-sportive.com/guide/cadillac/xlr.php"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Cadillac_XLR"
+      "https://en.wikipedia.org/wiki/Cadillac_XLR",
+      "https://www.xlr-net.com/specs/2004/2004specs.html",
+      "https://www.autoweek.nl/autotests/artikel/cadillac-xlr-2004/",
+      "https://fr.stark-automotive.com/frontend/images/categories/pdf/en/260911.pdf",
+      "https://www.automobile-sportive.com/guide/cadillac/xlr.php"
     ],
     "needsReview": [
       {
@@ -6075,14 +6172,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6091,27 +6180,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].dimensionsMm.height",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6123,16 +6196,20 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "scope",
         "reason": "Dílčí rodinný záznam; chybí úplný rozpis generací, karoserií a motorizací. Null u konce neznamená potvrzenou současnou výrobu."
       },
       {
         "field": "generations[0].photo.licenceUrl",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].trims[0].engine.torqueNm",
+        "reason": "Evropský test uvádí 423 Nm, další původní test a americký list GM 420 Nm; rozdílné tržní specifikace nelze bez evropského homologačního listu sjednotit."
+      },
+      {
+        "field": "generations[0].trims[0].massKg",
+        "reason": "Prameny uvádějí odlišné hmotnosti a nejsou sjednoceny jejich metodiky; ponecháno null."
       }
     ]
   },

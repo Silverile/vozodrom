@@ -1,0 +1,103 @@
+{
+  "make": "willys",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "willys-overland-jeepster",
+      "field": "slug",
+      "from": "willys-overland-jeepster",
+      "to": "jeepster",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1686212"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Whippet",
+      "from": 1926,
+      "to": 1931,
+      "bodyTypes": [
+        "sedan",
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Whippet_(automobile)"
+      ]
+    },
+    {
+      "name": "MB (Jeep)",
+      "from": 1941,
+      "to": 1945,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Willys_MB"
+      ]
+    },
+    {
+      "name": "CJ",
+      "from": 1945,
+      "to": 1983,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jeep_CJ"
+      ],
+      "verify": "rejected: models-auto already has jeep/cj (Q1512553). en.wikipedia.org/wiki/Jeep_CJ says the maker was Willys only until 1963, then Kaiser Jeep and AMC, so Willys 1945-1983 is the wrong attribution"
+    },
+    {
+      "name": "Jeep Station Wagon",
+      "from": 1946,
+      "to": 1964,
+      "bodyTypes": [
+        "kombi",
+        "dodavka"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Willys_Jeep_Station_Wagon"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Willys_Jeep_Station_Wagon infobox gives 1946-1964 (US). It is not in models-auto under jeep"
+    },
+    {
+      "name": "Jeep Truck",
+      "from": 1947,
+      "to": 1965,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Willys_Jeep_Truck"
+      ]
+    },
+    {
+      "name": "FC (Forward Control)",
+      "from": 1956,
+      "to": 1965,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jeep_Forward_Control"
+      ],
+      "verify": "rejected: duplicate of models-auto jeep/forward-control (Q1686204). The Willys name ended in 1963 (en.wikipedia.org/wiki/Jeep_CJ), so a Willys row running to 1965 is the wrong attribution"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Willys has no model-lines-auto rows; 10 card lines are additions (incl. Brazilian Rural, Itamaraty, Interlagos, Dauphine/Gordini).",
+    "dissolvedYear 1953 = Kaiser takeover; the Willys name was used on vehicles until 1963 (US) and later in Brazil.",
+    "CJ-5/CJ-6 card generations run to 1983/1981 under the Jeep badge; decide whether to cap at the Willys era (1963)."
+  ],
+  "summary": "Spot checks (Willys-Knight, 77, Americar, MB, CJ series, Station Wagon 1946-1964, Jeepster, Aero, Interlagos) matched sources; no card fixes needed. Proposed missing models and a slug cleanup."
+}

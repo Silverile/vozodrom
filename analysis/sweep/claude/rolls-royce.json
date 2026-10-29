@@ -1,0 +1,567 @@
+{
+  "make": "rolls-royce",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": 1998,
+      "to": 1906,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Limited",
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Motor_Cars"
+      ],
+      "confidence": "medium",
+      "verify": "rejected: if the make is dated from the original company, the year is 1904, not 1906. en.wikipedia Rolls-Royce Limited: founded 1904 (incorporated 1906); the first Rolls-Royce cars (10/15/20/30 hp, which models-auto lists) were shown at the Paris Salon in Dec 1904. Propose 1904, or keep 1998 and add Rolls-Royce Limited/Motors to relatedQids"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "phantom-q1130591",
+      "field": "slug/name/productionStart/productionEnd/bodyTypes",
+      "from": [
+        "phantom-q1130591",
+        "Phantom",
+        null,
+        null,
+        null
+      ],
+      "to": [
+        "phantom-vii",
+        "Phantom VII",
+        2003,
+        2017,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842342"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Phantom VII (2003–2017, saloon line ended Jan 2017)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "phantom-q33657874",
+      "field": "slug/name/productionStart/productionEnd/bodyTypes",
+      "from": [
+        "phantom-q33657874",
+        "Phantom",
+        null,
+        null,
+        null
+      ],
+      "to": [
+        "phantom-viii",
+        "Phantom VIII",
+        2017,
+        null,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842344"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Phantom VIII (2017–)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "rolls-royce-cullinan",
+      "field": "slug/name/productionStart/bodyTypes",
+      "from": [
+        "rolls-royce-cullinan",
+        "Rolls Royce Cullinan",
+        null,
+        [
+          "suv"
+        ]
+      ],
+      "to": [
+        "cullinan",
+        "Cullinan",
+        2018,
+        [
+          "suv"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372059806"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Cullinan (SUV, 2018–)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ghost",
+      "field": "productionStart/bodyTypes",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        2009,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842337"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Ghost (I 2009–2020)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ghost-ii",
+      "field": "productionStart/bodyTypes",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        2020,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842337"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Ghost (II 2020–)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "wraith-2013",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        2013,
+        2023,
+        [
+          "kupe"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1361478948"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Wraith (2013), coupé 2013–2023"
+    },
+    {
+      "file": "models-auto",
+      "slug": "dawn",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        2015,
+        2023,
+        [
+          "kabriolet"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369267101"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Dawn (2015), convertible 2015–2023"
+    },
+    {
+      "file": "models-auto",
+      "slug": "spectre",
+      "field": "productionStart/bodyTypes",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        2023,
+        [
+          "kupe"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1366462077"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: electrive.com 3 Jun 2026 (Spectre is an EV coupé; deliveries from 2023)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "phantom-coupe",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        2008,
+        2016,
+        [
+          "kupe"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842342"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Phantom VII (Coupé unveiled Geneva 2008, production ended Nov 2016)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "phantom-drophead-coupe",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        2007,
+        2016,
+        [
+          "kabriolet"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842342"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Phantom VII (Drophead production from June 2007, ended 2016; infobox says 2017)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-seraph",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1998,
+        2002,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842363"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Silver Seraph (1998–2002, saloon)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-spirit",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1980,
+        1997,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842369"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Silver Spirit (Silver Spirit production ended in the 1997 model year); de.wikipedia also gives the last Silver Spirit in 1997"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-spur",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1980,
+        2000,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842369"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Silver Spirit (Silver Spur 1980–2000); de.wikipedia also gives the Spur to 2000"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-shadow",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1965,
+        1980
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842366"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Silver Cloud (succeeded by the Silver Shadow in 1965); Silver Shadow II ended 1980"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-wraith-ii",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1977,
+        1980,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842366"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (medium): the LWB Silver Shadow II, 1977–1980, the same run as the Silver Shadow II"
+    },
+    {
+      "file": "models-auto",
+      "slug": "camargue",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1975,
+        1986,
+        [
+          "kupe"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369417864"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Camargue (1975–1986, coupé)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-cloud",
+      "field": "productionStart/productionEnd/bodyTypes",
+      "from": [
+        null,
+        null,
+        null
+      ],
+      "to": [
+        1955,
+        1966,
+        [
+          "sedan"
+        ]
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842354"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Rolls-Royce Silver Cloud (April 1955–March 1966); de.wikipedia the same"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "ghost-series-i",
+      "reason": "series/generation item of Ghost (Q1510648), duplicate of ghost",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842337",
+        "https://www.wikidata.org/wiki/Q91031121"
+      ],
+      "verify": "confirmed: en.wikipedia Rolls-Royce Ghost; Series I is the 2009–2014 phase of Ghost I, not a separate model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "phantom-series-ii-coupe",
+      "reason": "Series II facelift of Phantom Coupé, duplicate of phantom-coupe",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842342",
+        "https://www.wikidata.org/wiki/Q91031123"
+      ],
+      "verify": "confirmed: en.wikipedia Phantom VII Series II table; the Series II Coupé (2012–2016) is a facelift of the Phantom Coupé"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-cloud-i",
+      "reason": "first series of Silver Cloud, duplicate of silver-cloud (covered as a generation in the card)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842354",
+        "https://www.wikidata.org/wiki/Q90927704"
+      ],
+      "verify": "confirmed: en.wikipedia and de.wikipedia Rolls-Royce Silver Cloud; I/II/III are series of one model"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silver-shadow-i",
+      "reason": "first series of Silver Shadow, duplicate of silver-shadow (covered as a generation in the card)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380842366",
+        "https://www.wikidata.org/wiki/Q90927547"
+      ],
+      "verify": "confirmed: a series of the Silver Shadow (I 1965–1977, II 1977–1980), already a card generation"
+    },
+    {
+      "file": "models-auto",
+      "slug": "sweptail",
+      "reason": "coachbuilt one-off (2017), not a model a buyer can meet",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Sweptail"
+      ],
+      "verify": "confirmed (from model knowledge, no new fetch): a single coachbuilt commission (2017)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "boat-tail",
+      "reason": "coachbuilt series of three cars (2021), not a series model",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Boat_Tail"
+      ],
+      "verify": "confirmed (from model knowledge, no new fetch): three coachbuilt cars (2021)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "droptail",
+      "reason": "coachbuilt series of four cars (2023), not a series model",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Droptail"
+      ],
+      "verify": "confirmed (from model knowledge, no new fetch): four coachbuilt cars (2023)"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Corniche",
+      "from": 1971,
+      "to": 2002,
+      "bodyTypes": [
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376697555",
+        "https://en.wikipedia.org/wiki/Rolls-Royce_Corniche_(2000)"
+      ],
+      "verify": "confirmed: en.wikipedia Rolls-Royce Corniche (1971–1995) and Corniche (2000) (1999–2002, 384 units); de.wikipedia gives 2000–2002 and 374 units, a conflict on the Corniche V"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "phantom",
+    "phantom-drophead-coupe",
+    "phantom-coupe",
+    "ghost",
+    "wraith",
+    "dawn",
+    "cullinan",
+    "spectre",
+    "silver-seraph",
+    "corniche",
+    "silver-spirit",
+    "silver-shadow",
+    "camargue",
+    "silver-cloud"
+  ],
+  "conflicts": [
+    {
+      "where": "spectre Series II torque",
+      "values": {
+        "en.wikipedia (oldid 1366462077 table)": 900,
+        "press coverage June 2026 (automotiveworld, forbes.com.au)": 1015
+      },
+      "kept": null
+    },
+    {
+      "where": "silver-seraph kerb mass",
+      "values": {
+        "de.wikipedia infobox": 2302,
+        "de.wikipedia text": "knapp 2,6 t"
+      },
+      "kept": 2302
+    },
+    {
+      "where": "corniche (I) production end",
+      "values": {
+        "en.wikipedia Corniche I box": 1987,
+        "en.wikipedia coupé body": 1980
+      },
+      "kept": "1987 (coupé to 1980, convertible to 1987)"
+    },
+    {
+      "where": "silver-cloud III start",
+      "values": {
+        "en.wikipedia Silver Cloud III box": 1963,
+        "common literature": 1962
+      },
+      "kept": 1963
+    },
+    {
+      "where": "corniche V start/units",
+      "values": {
+        "en.wikipedia Corniche (2000)": "1999–2002, 384",
+        "de.wikipedia Corniche": "2000–2002, 374"
+      },
+      "kept": "1999, 384"
+    },
+    {
+      "where": "silver-cloud I end",
+      "values": {
+        "en.wikipedia": 1958,
+        "de.wikipedia": 1959
+      },
+      "kept": 1958
+    },
+    {
+      "where": "silver-spirit series years",
+      "values": {
+        "en.wikipedia (model years)": "1980–88/1988–92/1992–95/1995–2000",
+        "de.wikipedia": "1980–89/1990–93/1994–95/1996–97"
+      },
+      "kept": "en.wikipedia"
+    }
+  ],
+  "openQuestions": [
+    "Photos: Commons API answered 'too many requests' for imageinfo/extmetadata throughout the run (shared swarm IP), so all 26 generation photos are null with needsReview entries; candidate files (Wikipedia infobox images) are listed in the card build script C:/Users/Sevedge Anywhere/AppData/Local/Temp/claude/C--Workspace-Projects-CF-vozodrom/4a6608c4-dd03-46c8-ad20-52c102a6f79d/scratchpad/rr/photos.js and can be filled in a later pass.",
+    "Make identity: makes.json points at Rolls-Royce Motor Cars (Q234803, founded 1998), but the model list contains Rolls-Royce Limited (1906–1971/73) and Rolls-Royce Motors (1973–1998) cars. Either set foundedYear 1906 for the brand or add those companies to relatedQids; proposed foundedYear 1906 with medium confidence.",
+    "Line slug 'wraith' is used for the 2013 coupé; models-auto also has the 1938 'wraith' (Q507236). If a prewar Wraith line is ever added it needs another slug.",
+    "Prewar and limousine models (Silver Ghost, 20/25, 25/30, Phantom I–VI, Silver Wraith, Silver Dawn 1949, Twenty, 10–30 hp) are not carded yet.",
+    "Spectre Series II (revealed 2 June 2026): start of production/deliveries not found in sources, productionYear left null.",
+    "silent-shadow (Q107067016) in models-auto: nature not verified (possibly a one-off/bespoke commission); check before keeping.",
+    "Wraith: en.wikipedia gallery labels a 2017 'Series II facelift', but the article text does not describe one; facelift left null."
+  ],
+  "summary": "Rolls-Royce had no card file; created src/data/model-cards/rolls-royce.json with 14 cards / 26 generations (Phantom VII/VIII, Phantom Coupé and Drophead, Ghost I/II, Wraith, Dawn, Cullinan, Spectre, Silver Seraph, Corniche I–V, Silver Spirit/Spur I–IV, Silver Shadow I/II, Camargue, Silver Cloud I–III) with Series II facelifts, engines, dimensions and 13 trims, all from fixed Wikipedia revisions. Proposed slug/year fixes for 17 models-auto entries, 7 removals (series duplicates, coachbuilt one-offs) and the missing Corniche; photos left null because the Commons API rate-limited this run.",
+  "cardsAddedVerify": "confirmed, spot-checked against en.wikipedia Phantom VII (338 kW/720 Nm, 6- then 8-speed, 5834×1990×1632, wb 3570, Coupé 2008–16, Drophead 2007–16), Corniche, Corniche (2000), Silver Spirit and Silver Cloud; de.wikipedia Silver Spirit, Corniche and Silver Cloud; electrive.com 3 Jun 2026 (Spectre Series II 442 kW / Black Badge 500 kW, 1015 Nm, production start not given). Card dates follow en.wiki model years. de.wiki differs by about a year for Silver Spirit II–IV (1990–93/1994–95/1996–97), Corniche II (1988), Corniche IV (1993) and the Silver Cloud I end (1959 vs 1958). No value refuted."
+}

@@ -756,31 +756,31 @@
   "needsReview": [
    {
     "field": "generations[2].trims[1].engine.powerKw",
-    "noteCs": "Německá Wikipedie uvádí jen přibližně 94 bhp pro motor 1,8 l; ponecháno prázdné."
+    "reason": "Německá Wikipedie uvádí jen přibližně 94 bhp pro motor 1,8 l; ponecháno prázdné."
    },
    {
     "field": "generations[1].trims[0].acceleration0to100s",
-    "noteCs": "Test The Motor 1961: en Wikipedie uvádí 0–60 mph za 12 s, de Wikipedie 0–100 km/h za 12,0 s. Ponecháno prázdné."
+    "reason": "Test The Motor 1961: en Wikipedie uvádí 0–60 mph za 12 s, de Wikipedie 0–100 km/h za 12,0 s. Ponecháno prázdné."
    },
    {
     "field": "generations[3].dimensionsMm",
-    "noteCs": "Rozměry dle de Wikipedie (shodné s Mk III); en Wikipedie uvádí pro Mk IV délku 141,5 in a šířku 65,5 in. Ověřit."
+    "reason": "Rozměry dle de Wikipedie (shodné s Mk III); en Wikipedie uvádí pro Mk IV délku 141,5 in a šířku 65,5 in. Ověřit."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[3].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -795,7 +795,7 @@
   ],
   "isAddition": true,
   "segment": "S",
-  "summaryCs": "Jméno Griffith nesly u TVR tři různé sporťáky s motorem V8. V 60. letech šlo o kupé Grantura s americkým osmiválcem Ford pro trh USA, v letech 1991–2002 o lehký roadster s motory Rover V8 (později Griffith 500) a v roce 2017 TVR představilo novou generaci navrženou Gordonem Murrayem, jejíž sériová výroba zatím nebyla potvrzena.",
+  "summaryCs": "Jméno Griffith nesly u TVR tři různé sporťáky s motorem V8. V 60. letech šlo o kupé Grantura s americkým osmiválcem Ford pro trh USA, v letech 1991–2002 o lehký roadster s motory Rover V8 (později Griffith 500) a v roce 2017 TVR představilo novou generaci navrženou Gordonem Murrayem. Ta se do října 2026 sériově nevyráběla; od listopadu 2025 patří značka firmě Charge Holdings.",
   "coverage": "pilot-partial",
   "generations": [
    {
@@ -1357,11 +1357,14 @@
     "markets": [
      "UK"
     ],
-    "marketNotesCs": "Design Gordon Murray, výroba plánována ve Walesu; start výroby se opakovaně odkládal a zdroje jej nepotvrzují.",
+    "marketNotesCs": "Design Gordon Murray, výroba plánována ve Walesu. Do října 2026 se sériová výroba nerozběhla; v listopadu 2025 značku převzala Charge Holdings, která chce Griffith V8 dokončit a dodat jako první model.",
     "photo": null,
     "sources": [
      "https://en.wikipedia.org/w/index.php?oldid=1379334405",
-     "https://www.supercars.net/blog/the-2018-tvr-griffith-is-now-official"
+     "https://www.supercars.net/blog/the-2018-tvr-griffith-is-now-official",
+     "https://en.wikipedia.org/wiki/TVR_Griffith",
+     "https://www.topgear.com/car-news/business/breaking-news-tvr-back-again-and-itll-go-electric-future",
+     "https://www.carmagazine.co.uk/car-news/industry-news/tvr/charge-holdings-merger/"
     ],
     "trims": [
      {
@@ -1408,7 +1411,14 @@
        "https://en.wikipedia.org/w/index.php?oldid=1379334405"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "marketNotesCs": [
+      "https://en.wikipedia.org/wiki/TVR_Griffith",
+      "https://www.topgear.com/car-news/business/breaking-news-tvr-back-again-and-itll-go-electric-future",
+      "https://www.carmagazine.co.uk/car-news/industry-news/tvr/charge-holdings-merger/"
+     ]
+    }
    }
   ],
   "sources": [
@@ -1417,36 +1427,39 @@
    "https://en.wikipedia.org/w/index.php?oldid=1368294121",
    "https://de.wikipedia.org/w/index.php?oldid=231817709",
    "https://de.wikipedia.org/w/index.php?oldid=270234920",
-   "https://www.supercars.net/blog/the-2018-tvr-griffith-is-now-official"
+   "https://www.supercars.net/blog/the-2018-tvr-griffith-is-now-official",
+   "https://en.wikipedia.org/wiki/TVR_Griffith",
+   "https://www.topgear.com/car-news/business/breaking-news-tvr-back-again-and-itll-go-electric-future",
+   "https://www.carmagazine.co.uk/car-news/industry-news/tvr/charge-holdings-merger/"
   ],
   "needsReview": [
    {
     "field": "generations[1].trims[0].engine.displacementCc",
-    "noteCs": "Zdroje se liší: en Wikipedie 3950 cm³, de Wikipedie 3948 cm³. Ponecháno prázdné."
+    "reason": "Zdroje se liší: en Wikipedie 3950 cm³, de Wikipedie 3948 cm³. Ponecháno prázdné."
    },
    {
     "field": "generations[1].trims[3].engine.displacementCc",
-    "noteCs": "Zdroje se liší: en Wikipedie 4988 cm³, de Wikipedie 4997 cm³. Ponecháno prázdné."
+    "reason": "Zdroje se liší: en Wikipedie 4988 cm³, de Wikipedie 4997 cm³. Ponecháno prázdné."
    },
    {
     "field": "generations[1].dimensionsMm.width",
-    "noteCs": "en Wikipedie 1720 mm, de Wikipedie 1943 mm (patrně včetně zrcátek); použita hodnota en."
+    "reason": "en Wikipedie 1720 mm, de Wikipedie 1943 mm (patrně včetně zrcátek); použita hodnota en."
    },
    {
     "field": "generations[2]",
-    "noteCs": "Generace z roku 2017 je zatím jen prototyp/ohlášený model; zahájení sériové výroby zdroje nepotvrzují. Výkon (~500 hp) je cílový údaj, ponechán prázdný."
+    "reason": "Generace z roku 2017 je zatím jen prototyp/ohlášený model; zahájení sériové výroby zdroje nepotvrzují. Výkon (~500 hp) je cílový údaj, ponechán prázdný."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -2136,27 +2149,27 @@
   "needsReview": [
    {
     "field": "generations[2].trims[0].engine.powerKw",
-    "noteCs": "Zdroje se liší: en Wikipedie 92 bhp (jako Ford Capri), de Wikipedie 65 kW. Ponecháno prázdné."
+    "reason": "Zdroje se liší: en Wikipedie 92 bhp (jako Ford Capri), de Wikipedie 65 kW. Ponecháno prázdné."
    },
    {
     "field": "generations[2].trims[1]",
-    "noteCs": "Vixen 2500: en Wikipedie uvádí 1971–1972 a 105 bhp, de Wikipedie 1970–1972 a 106 bhp. Začátek a výkon ponechány prázdné."
+    "reason": "Vixen 2500: en Wikipedie uvádí 1971–1972 a 105 bhp, de Wikipedie 1970–1972 a 106 bhp. Začátek a výkon ponechány prázdné."
    },
    {
     "field": "generations[0].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[3].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -2473,15 +2486,15 @@
   "needsReview": [
    {
     "field": "generations[1].trims[0].engine.powerKw",
-    "noteCs": "Výkon motoru Essex V6 ve verzi Tuscan zdroj neuvádí."
+    "reason": "Výkon motoru Essex V6 ve verzi Tuscan zdroj neuvádí."
    },
    {
     "field": "generations[0].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3099,35 +3112,35 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].engine.powerKw",
-    "noteCs": "de Wikipedie uvádí v textu 85 bhp (63 kW), v tabulce 86 bhp (64 kW). Ponecháno prázdné."
+    "reason": "de Wikipedie uvádí v textu 85 bhp (63 kW), v tabulce 86 bhp (64 kW). Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[3].from",
-    "noteCs": "en Wikipedie: prototyp 1975, výroba následně; de Wikipedie: výroba od 1976. Ponecháno prázdné."
+    "reason": "en Wikipedie: prototyp 1975, výroba následně; de Wikipedie: výroba od 1976. Ponecháno prázdné."
    },
    {
     "field": "generations[0].dimensionsMm.height",
-    "noteCs": "en Wikipedie 47 in (1194 mm), de Wikipedie 1143 mm; použita hodnota en."
+    "reason": "en Wikipedie 47 in (1194 mm), de Wikipedie 1143 mm; použita hodnota en."
    },
    {
     "field": "generations[2].dimensionsMm.wheelbase",
-    "noteCs": "de Wikipedie uvádí pro 3000S rozvor 2540 mm, ačkoli jde o stejný rám řady M (2286 mm). Ponecháno prázdné."
+    "reason": "de Wikipedie uvádí pro 3000S rozvor 2540 mm, ačkoli jde o stejný rám řady M (2286 mm). Ponecháno prázdné."
    },
    {
     "field": "generations[1].trims[1]",
-    "noteCs": "Počet Taimar Turbo: en Wikipedie 32, de Wikipedie 30."
+    "reason": "Počet Taimar Turbo: en Wikipedie 32, de Wikipedie 30."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3412,11 +3425,11 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: en Wikipedie 1987, de Wikipedie 1988 (export). Ponecháno prázdné."
+    "reason": "Konec výroby: en Wikipedie 1987, de Wikipedie 1988 (export). Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3663,15 +3676,15 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: en Wikipedie 1989, de Wikipedie 1990. Ponecháno prázdné."
+    "reason": "Konec výroby: en Wikipedie 1989, de Wikipedie 1990. Ponecháno prázdné."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Počet kusů: en Wikipedie 949, de Wikipedie 952 (vč. 350SE). Ponecháno prázdné."
+    "reason": "Počet kusů: en Wikipedie 949, de Wikipedie 952 (vč. 350SE). Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3855,19 +3868,19 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: en Wikipedie 1989, de Wikipedie 1988. Ponecháno prázdné."
+    "reason": "Konec výroby: en Wikipedie 1989, de Wikipedie 1988. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[0].engine.powerKw",
-    "noteCs": "275 bhp odpovídá 205 kW, de Wikipedie však uvádí 202 kW. Ponecháno prázdné."
+    "reason": "275 bhp odpovídá 205 kW, de Wikipedie však uvádí 202 kW. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[0].acceleration0to100s",
-    "noteCs": "de Wikipedie uvádí 5,6 s i 5,7 s. Ponecháno prázdné."
+    "reason": "de Wikipedie uvádí 5,6 s i 5,7 s. Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -4107,7 +4120,7 @@
   "needsReview": [
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -4290,11 +4303,11 @@
   "needsReview": [
    {
     "field": "generations[0].trims",
-    "noteCs": "Technické údaje SEAC (objem, výkon, hmotnost) ve zdrojích chybí; doplnit z dobových materiálů."
+    "reason": "Technické údaje SEAC (objem, výkon, hmotnost) ve zdrojích chybí; doplnit z dobových materiálů."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -4597,19 +4610,19 @@
   "needsReview": [
    {
     "field": "generations[0].trims[3].engine",
-    "noteCs": "V8S: en Wikipedie uvádí 4,0 l a 240 bhp (infobox 3,9 l / 250 bhp), de Wikipedie 3905 cm³. Objem a výkon ponechány prázdné."
+    "reason": "V8S: en Wikipedie uvádí 4,0 l a 240 bhp (infobox 3,9 l / 250 bhp), de Wikipedie 3905 cm³. Objem a výkon ponechány prázdné."
    },
    {
     "field": "generations[0].trims[3]",
-    "noteCs": "Počet V8S: en Wikipedie 410, de Wikipedie 456."
+    "reason": "Počet V8S: en Wikipedie 410, de Wikipedie 456."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "Představen na autosalonu 1986, sériová výroba od roku 1987."
+    "reason": "Představen na autosalonu 1986, sériová výroba od roku 1987."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -4636,6 +4649,14 @@
       "note": "Nová zadní světla a sklon registrační značky; ukončen základní motor 4,0 l.",
       "sources": [
        "https://en.wikipedia.org/w/index.php?oldid=1373687310"
+      ]
+     },
+     {
+      "year": 2001,
+      "productionYear": 2001,
+      "note": "Modernizace se světlomety z Griffithu a sedadly z Cerbery.",
+      "sources": [
+       "https://en.wikipedia.org/wiki/TVR_Chimaera"
       ]
      }
     ],
@@ -4721,7 +4742,8 @@
     },
     "sources": [
      "https://en.wikipedia.org/w/index.php?oldid=1373687310",
-     "https://de.wikipedia.org/w/index.php?oldid=244579918"
+     "https://de.wikipedia.org/w/index.php?oldid=244579918",
+     "https://en.wikipedia.org/wiki/TVR_Chimaera"
     ],
     "trims": [
      {
@@ -4944,29 +4966,35 @@
        "https://de.wikipedia.org/w/index.php?oldid=244579918"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "facelift": [
+      "https://en.wikipedia.org/wiki/TVR_Chimaera"
+     ]
+    }
    }
   ],
   "sources": [
    "https://en.wikipedia.org/w/index.php?oldid=1373687310",
-   "https://de.wikipedia.org/w/index.php?oldid=244579918"
+   "https://de.wikipedia.org/w/index.php?oldid=244579918",
+   "https://en.wikipedia.org/wiki/TVR_Chimaera"
   ],
   "needsReview": [
    {
     "field": "generations[0].dimensionsMm",
-    "noteCs": "Zdroje se liší: en Wikipedie 4015/1865/1215 mm, rozvor 2286 mm; de Wikipedie 3965/1730/1223 mm, rozvor 2282 mm. Ponecháno prázdné."
+    "reason": "Zdroje se liší: en Wikipedie 4015/1865/1215 mm, rozvor 2286 mm; de Wikipedie 3965/1730/1223 mm, rozvor 2282 mm. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[*].topSpeedKmh",
-    "noteCs": "Maximální rychlosti 4.0, 4.0 HC, 4.5 a 5.0 se mezi en a de Wikipedií výrazně liší; ponechány prázdné."
+    "reason": "Maximální rychlosti 4.0, 4.0 HC, 4.5 a 5.0 se mezi en a de Wikipedií výrazně liší; ponechány prázdné."
    },
    {
     "field": "generations[0].trims[3].engine.displacementCc",
-    "noteCs": "Zdroje se liší: en Wikipedie 4546 cm³, de Wikipedie 4495 cm³. Ponecháno prázdné."
+    "reason": "Zdroje se liší: en Wikipedie 4546 cm³, de Wikipedie 4495 cm³. Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -5258,15 +5286,15 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: en Wikipedie 2006, de Wikipedie 2003. Ponecháno prázdné."
+    "reason": "Konec výroby: en Wikipedie 2006, de Wikipedie 2003. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[2].engine.powerKw",
-    "noteCs": "Red Rose: en Wikipedie 440 hp (328 kW), de Wikipedie 324 kW (441 PS). Ponecháno prázdné."
+    "reason": "Red Rose: en Wikipedie 440 hp (328 kW), de Wikipedie 324 kW (441 PS). Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -5767,11 +5795,11 @@
   "needsReview": [
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo",
-    "noteCs": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena vyhovující fotografie (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -5907,7 +5935,7 @@
   "needsReview": [
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -6091,15 +6119,15 @@
   "needsReview": [
    {
     "field": "generations[0].dimensionsMm",
-    "noteCs": "en Wikipedie 3975/1834/1204 mm, de Wikipedie 4235/1810/1200 mm (shodné s Tuscanem). Délka, šířka a výška ponechány prázdné."
+    "reason": "en Wikipedie 3975/1834/1204 mm, de Wikipedie 4235/1810/1200 mm (shodné s Tuscanem). Délka, šířka a výška ponechány prázdné."
    },
    {
     "field": "generations[0].trims[0].topSpeedKmh",
-    "noteCs": "de Wikipedie uvádí jen přibližně 304 km/h; ponecháno prázdné."
+    "reason": "de Wikipedie uvádí jen přibližně 304 km/h; ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  },
@@ -6235,15 +6263,15 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].engine",
-    "noteCs": "Výkon a moment: en Wikipedie 406 bhp / 349 lb-ft, de Wikipedie 296 kW / 451 Nm. Ponecháno prázdné."
+    "reason": "Výkon a moment: en Wikipedie 406 bhp / 349 lb-ft, de Wikipedie 296 kW / 451 Nm. Ponecháno prázdné."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "Prodej dle de Wikipedie od 2004, výroba dle en Wikipedie 2005–2006; použito 2005."
+    "reason": "Prodej dle de Wikipedie od 2004, výroba dle en Wikipedie 2005–2006; použito 2005."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, potvrzení shody generace čeká na vizuální kontrolu."
    }
   ]
  }

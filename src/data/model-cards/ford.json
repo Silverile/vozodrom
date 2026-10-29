@@ -21,10 +21,10 @@
         "engines": [
           {
             "fuel": "petrol",
-            "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementCc": 998,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
-            "powerKwMax": 88,
+            "powerKwMax": 103,
             "variant": "1.0 EcoBoost"
           },
           {
@@ -45,7 +45,7 @@
           },
           {
             "fuel": "diesel",
-            "displacementCc": 1498,
+            "displacementCc": 1499,
             "displacementLitresNominal": 1.5,
             "powerKwMin": 55,
             "powerKwMax": 70,
@@ -55,8 +55,8 @@
             "fuel": "diesel",
             "displacementCc": 1560,
             "displacementLitresNominal": 1.6,
-            "powerKwMin": null,
-            "powerKwMax": null,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
             "variant": "1.6 TDCi Duratorq"
           }
         ],
@@ -108,12 +108,16 @@
           ]
         },
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381939654"
+          "https://en.wikipedia.org/w/index.php?oldid=1381939654",
+          "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+          "https://www.stark-automotive.com/frontend/images/categories/pdf/en/259685.pdf",
+          "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf",
+          "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
         ],
         "trims": [
           {
             "name": "1.0 EcoBoost (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2017,
             "bodyType": "mpv",
@@ -155,7 +159,7 @@
           },
           {
             "name": "1.0 EcoBoost (88 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": null,
             "bodyType": "mpv",
@@ -197,7 +201,7 @@
           },
           {
             "name": "1.4 Duratec (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2017,
             "bodyType": "mpv",
@@ -223,7 +227,7 @@
             "massKg": 1200,
             "topSpeedKmh": 171,
             "acceleration0to100s": 13.8,
-            "consumptionL100": 6.0,
+            "consumptionL100": 6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -239,7 +243,7 @@
           },
           {
             "name": "1.6 Duratec PowerShift (77 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2017,
             "bodyType": "mpv",
@@ -281,7 +285,7 @@
           },
           {
             "name": "1.5 TDCi (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2017,
             "bodyType": "mpv",
@@ -323,7 +327,7 @@
           },
           {
             "name": "1.5 TDCi (70 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2017,
             "bodyType": "mpv",
@@ -348,7 +352,7 @@
             },
             "massKg": 1241,
             "topSpeedKmh": null,
-            "acceleration0to100s": 13.0,
+            "acceleration0to100s": 13,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -365,7 +369,7 @@
           },
           {
             "name": "1.6 TDCi (70 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2015,
             "bodyType": "mpv",
@@ -373,7 +377,7 @@
               "fuel": "diesel",
               "displacementCc": 1560,
               "cylinders": 4,
-              "powerKw": null,
+              "powerKw": 70,
               "powerStandard": null,
               "torqueNm": 215
             },
@@ -405,11 +409,41 @@
               "https://en.wikipedia.org/w/index.php?oldid=1381939654"
             ]
           }
-        ]
+        ],
+        "fieldSources": {
+          "engines[0].powerKwMax": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.stark-automotive.com/frontend/images/categories/pdf/en/259685.pdf"
+          ],
+          "engines[4].powerKwMin": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+          ],
+          "engines[4].powerKwMax": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+          ],
+          "trims[6].engine.powerKw": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf"
+          ],
+          "engines[0].displacementCc": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
+          ],
+          "engines[3].displacementCc": [
+            "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+            "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/w/index.php?oldid=1381939654"
+      "https://en.wikipedia.org/w/index.php?oldid=1381939654",
+      "https://assets.adac.de/Autodatenbank/GWInfo/gw0315-ford-b-max-2012-2017-bericht.pdf",
+      "https://www.stark-automotive.com/frontend/images/categories/pdf/en/259685.pdf",
+      "https://www.ms-motorservice.com/MediaAssets/2486694_pg_50003569_web.pdf",
+      "https://www.sbricambi.it/ProductsResources/8694/ABS-ABS246R_it_sch.pdf?1751743470="
     ],
     "needsReview": []
   },
@@ -521,7 +555,7 @@
         "trims": [
           {
             "name": "170 I6 78 kW (105 hp) 3M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1965,
             "to": null,
             "bodyType": "suv",
@@ -562,7 +596,7 @@
           },
           {
             "name": "289 V8 149 kW (200 hp) 3M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1966,
             "to": null,
             "bodyType": "suv",
@@ -603,7 +637,7 @@
           },
           {
             "name": "302 V8 3AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1973,
             "to": 1977,
             "bodyType": "suv",
@@ -725,7 +759,7 @@
         "trims": [
           {
             "name": "351M V8 4M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1977,
             "to": 1979,
             "bodyType": "suv",
@@ -766,7 +800,7 @@
           },
           {
             "name": "400 V8 3AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1977,
             "to": 1979,
             "bodyType": "suv",
@@ -900,7 +934,7 @@
         "trims": [
           {
             "name": "300 I6 4M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1979,
             "to": 1986,
             "bodyType": "suv",
@@ -941,7 +975,7 @@
           },
           {
             "name": "302 V8 4AT (AOD) – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": 1986,
             "bodyType": "suv",
@@ -982,7 +1016,7 @@
           },
           {
             "name": "351 Windsor HO V8 157 kW (210 hp) 3AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1983,
             "to": 1986,
             "bodyType": "suv",
@@ -1120,7 +1154,7 @@
         "trims": [
           {
             "name": "300 I6 5M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1987,
             "to": 1991,
             "bodyType": "suv",
@@ -1161,7 +1195,7 @@
           },
           {
             "name": "302 V8 4AT (AOD) – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1991,
             "bodyType": "suv",
@@ -1202,7 +1236,7 @@
           },
           {
             "name": "351 Windsor V8 4AT (E4OD) – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1991,
             "bodyType": "suv",
@@ -1332,7 +1366,7 @@
         "trims": [
           {
             "name": "302 V8 5M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1991,
             "to": 1996,
             "bodyType": "suv",
@@ -1373,7 +1407,7 @@
           },
           {
             "name": "302 V8 4AT (AOD-E) – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1996,
             "bodyType": "suv",
@@ -1414,7 +1448,7 @@
           },
           {
             "name": "351 Windsor V8 4AT (E4OD) – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1991,
             "to": 1996,
             "bodyType": "suv",
@@ -1549,7 +1583,7 @@
         "trims": [
           {
             "name": "Outer Banks 2.7 EcoBoost V6 246 kW (335 k) 10AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "suv",
@@ -1592,7 +1626,7 @@
           },
           {
             "name": "Badlands 2.7 EcoBoost V6 246 kW (335 k) 10AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "suv",
@@ -1635,7 +1669,7 @@
           },
           {
             "name": "2.3 EcoBoost 224 kW (300 hp) 7M – 4x4, 2dv.",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": null,
             "bodyType": "suv",
@@ -1676,7 +1710,7 @@
           },
           {
             "name": "2.3 EcoBoost 224 kW (300 hp) 10AT – 4x4, 4dv.",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": null,
             "bodyType": "suv",
@@ -1717,7 +1751,7 @@
           },
           {
             "name": "Raptor 3.0 EcoBoost V6 312 kW (418 hp) 10AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": null,
             "bodyType": "suv",
@@ -1953,7 +1987,7 @@
         "trims": [
           {
             "name": "1.6 16V 74 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2007,
             "bodyType": "mpv",
@@ -1995,7 +2029,7 @@
           },
           {
             "name": "1.8 16V 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2007,
             "bodyType": "mpv",
@@ -2036,7 +2070,7 @@
           },
           {
             "name": "2.0 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2007,
             "bodyType": "mpv",
@@ -2078,7 +2112,7 @@
           },
           {
             "name": "1.6 TDCi 80 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2007,
             "bodyType": "mpv",
@@ -2120,7 +2154,7 @@
           },
           {
             "name": "2.0 TDCi 100 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2007,
             "bodyType": "mpv",
@@ -2162,7 +2196,7 @@
           },
           {
             "name": "1.8 16V 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2010,
             "bodyType": "mpv",
@@ -2204,7 +2238,7 @@
           },
           {
             "name": "1.8 TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2007,
             "bodyType": "mpv",
@@ -2246,7 +2280,7 @@
           },
           {
             "name": "2.0 TDCi 100 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2010,
             "bodyType": "mpv",
@@ -2448,7 +2482,7 @@
         "trims": [
           {
             "name": "1.0 EcoBoost 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2015,
             "bodyType": "mpv",
@@ -2490,7 +2524,7 @@
           },
           {
             "name": "1.6 Duratec Ti-VCT 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -2532,7 +2566,7 @@
           },
           {
             "name": "1.6 EcoBoost SCTi 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -2574,7 +2608,7 @@
           },
           {
             "name": "1.6 Duratorq TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -2616,7 +2650,7 @@
           },
           {
             "name": "2.0 Duratorq TDCi 120 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -2658,7 +2692,7 @@
           },
           {
             "name": "1.5 EcoBoost 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2019,
             "bodyType": "mpv",
@@ -2700,7 +2734,7 @@
           },
           {
             "name": "1.5 TDCi 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2019,
             "bodyType": "mpv",
@@ -2742,7 +2776,7 @@
           },
           {
             "name": "Grand C-Max 1.6 Duratorq TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -2784,7 +2818,7 @@
           },
           {
             "name": "Grand C-Max 1.0 EcoBoost 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -2826,7 +2860,7 @@
           },
           {
             "name": "Grand C-Max 1.5 TDCi 88 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2019,
             "bodyType": "mpv",
@@ -2867,7 +2901,7 @@
           },
           {
             "name": "Grand C-Max 2.0 TDCi 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2019,
             "bodyType": "mpv",
@@ -2972,7 +3006,7 @@
       {
         "code": "Mk I (Capri ’69)",
         "name": "Capri I",
-        "from": 1969,
+        "from": 1968,
         "to": 1973,
         "productionStatus": "ended",
         "facelift": [
@@ -3132,12 +3166,13 @@
         },
         "sources": [
           "https://de.wikipedia.org/w/index.php?oldid=271233106",
-          "https://en.wikipedia.org/w/index.php?oldid=1378466220"
+          "https://en.wikipedia.org/w/index.php?oldid=1378466220",
+          "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
         ],
         "trims": [
           {
             "name": "1300 V4 36,8 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1969,
             "to": 1972,
             "bodyType": "kupe",
@@ -3178,7 +3213,7 @@
           },
           {
             "name": "1700 GT V4 55,1 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1969,
             "to": 1972,
             "bodyType": "kupe",
@@ -3219,7 +3254,7 @@
           },
           {
             "name": "2600 GT V6 91,9 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1972,
             "bodyType": "kupe",
@@ -3260,7 +3295,7 @@
           },
           {
             "name": "RS 2600 110,3 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1973,
             "bodyType": "kupe",
@@ -3301,7 +3336,7 @@
           },
           {
             "name": "1600 GT 65 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1972,
             "to": 1973,
             "bodyType": "kupe",
@@ -3342,7 +3377,7 @@
           },
           {
             "name": "3000 GT 103 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1972,
             "to": 1973,
             "bodyType": "kupe",
@@ -3381,7 +3416,12 @@
               "https://de.wikipedia.org/w/index.php?oldid=271233106"
             ]
           }
-        ]
+        ],
+        "fieldSources": {
+          "from": [
+            "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
+          ]
+        }
       },
       {
         "code": "Mk II (Capri II ’74)",
@@ -3490,7 +3530,7 @@
         "trims": [
           {
             "name": "1300 40 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3531,7 +3571,7 @@
           },
           {
             "name": "1600 53 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3572,7 +3612,7 @@
           },
           {
             "name": "1600 GT 65 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3613,7 +3653,7 @@
           },
           {
             "name": "2000 V6 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3654,7 +3694,7 @@
           },
           {
             "name": "2300 V6 80 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3695,7 +3735,7 @@
           },
           {
             "name": "3000 V6 102 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1977,
             "bodyType": "kupe",
@@ -3854,7 +3894,7 @@
         "trims": [
           {
             "name": "1.6 51 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1978,
             "to": 1986,
             "bodyType": "kupe",
@@ -3895,7 +3935,7 @@
           },
           {
             "name": "2.0 74 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1978,
             "to": 1986,
             "bodyType": "kupe",
@@ -3936,7 +3976,7 @@
           },
           {
             "name": "2.3 V6 84 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1978,
             "to": 1986,
             "bodyType": "kupe",
@@ -3977,7 +4017,7 @@
           },
           {
             "name": "2.8 Injection 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1981,
             "to": 1986,
             "bodyType": "kupe",
@@ -4018,7 +4058,7 @@
           },
           {
             "name": "2.8 Turbo 138 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1981,
             "to": 1982,
             "bodyType": "kupe",
@@ -4146,7 +4186,7 @@
         "trims": [
           {
             "name": "Standard Range 125 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": 2026,
             "bodyType": "suv",
@@ -4187,7 +4227,7 @@
           },
           {
             "name": "Standard Range 140 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2026,
             "to": null,
             "bodyType": "suv",
@@ -4228,7 +4268,7 @@
           },
           {
             "name": "Extended Range RWD 210 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -4269,7 +4309,7 @@
           },
           {
             "name": "Extended Range AWD 250 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -4315,7 +4355,8 @@
       "https://de.wikipedia.org/w/index.php?oldid=271233106",
       "https://en.wikipedia.org/w/index.php?oldid=1378466220",
       "https://de.wikipedia.org/w/index.php?oldid=269942754",
-      "https://en.wikipedia.org/w/index.php?oldid=1371811549"
+      "https://en.wikipedia.org/w/index.php?oldid=1371811549",
+      "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
     ],
     "needsReview": [
       {
@@ -4445,7 +4486,7 @@
         "trims": [
           {
             "name": "2.0 16V 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2002,
             "bodyType": "kupe",
@@ -4486,7 +4527,7 @@
           },
           {
             "name": "2.5 V6 24V 125 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2002,
             "bodyType": "kupe",
@@ -4527,7 +4568,7 @@
           },
           {
             "name": "2.5 V6 24V 125 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2002,
             "bodyType": "kupe",
@@ -4626,7 +4667,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 1999,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 103,
             "powerKwMax": 107,
             "variant": "2.0 Duratec"
@@ -4686,7 +4727,7 @@
         "trims": [
           {
             "name": "2.0 Duratec (107 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2006,
             "bodyType": "suv",
@@ -4728,7 +4769,7 @@
           },
           {
             "name": "2.0 Duratec automat (103 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2007,
             "bodyType": "suv",
@@ -4803,7 +4844,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 92,
             "powerKwMax": 103,
             "variant": "1.0 EcoBoost"
@@ -4897,7 +4938,7 @@
         "trims": [
           {
             "name": "1.0 EcoBoost (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2017,
             "bodyType": "suv",
@@ -4939,7 +4980,7 @@
           },
           {
             "name": "1.5 Ti-VCT (82 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2017,
             "bodyType": "suv",
@@ -4981,7 +5022,7 @@
           },
           {
             "name": "1.5 TDCi (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2015,
             "bodyType": "suv",
@@ -5006,7 +5047,7 @@
             },
             "massKg": 1384,
             "topSpeedKmh": 160,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": 4.6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -5023,7 +5064,7 @@
           },
           {
             "name": "1.0 EcoBoost (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2022,
             "bodyType": "suv",
@@ -5065,7 +5106,7 @@
           },
           {
             "name": "1.0 EcoBoost (103 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2022,
             "bodyType": "suv",
@@ -5107,7 +5148,7 @@
           },
           {
             "name": "1.5 TDCi (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "suv",
@@ -5132,7 +5173,7 @@
             },
             "massKg": 1213,
             "topSpeedKmh": 160,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": 4.1,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -5149,7 +5190,7 @@
           },
           {
             "name": "1.5 EcoBlue (88 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2020,
             "bodyType": "suv",
@@ -5316,7 +5357,7 @@
         "trims": [
           {
             "name": "3.5 V6 198 kW (265 hp) 6AT – FWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "suv",
@@ -5358,7 +5399,7 @@
           },
           {
             "name": "3.5 V6 198 kW (265 hp) 6AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "suv",
@@ -5400,7 +5441,7 @@
           },
           {
             "name": "2.0 EcoBoost 179 kW (240 hp) 6AT – FWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2014,
             "bodyType": "suv",
@@ -5442,7 +5483,7 @@
           },
           {
             "name": "3.5 V6 213 kW (285 hp) 6AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2014,
             "bodyType": "suv",
@@ -5484,7 +5525,7 @@
           },
           {
             "name": "Sport 3.7 V6 227 kW (305 hp) 6AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2014,
             "bodyType": "suv",
@@ -5663,7 +5704,7 @@
         "trims": [
           {
             "name": "2.0 TDCi 132 kW (180 k) 6M – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "suv",
@@ -5706,7 +5747,7 @@
           },
           {
             "name": "2.0 TDCi Bi-Turbo 154 kW (210 k) PowerShift – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "suv",
@@ -5749,7 +5790,7 @@
           },
           {
             "name": "2.0 EcoBlue 140 kW (190 k) 6M – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2019,
             "bodyType": "suv",
@@ -5791,7 +5832,7 @@
           },
           {
             "name": "2.0 EcoBlue Bi-Turbo 175 kW (238 k) 8AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2020,
             "bodyType": "suv",
@@ -5833,7 +5874,7 @@
           },
           {
             "name": "2.0 EcoBoost 183 kW (245 hp) 6AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": "suv",
@@ -5875,7 +5916,7 @@
           },
           {
             "name": "ST 2.7 EcoBoost V6 250 kW (335 hp) 8AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2023,
             "bodyType": "suv",
@@ -5999,7 +6040,7 @@
         "trims": [
           {
             "name": "2.0 EcoBoost 8AT – FWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "suv",
@@ -6041,7 +6082,7 @@
           },
           {
             "name": "2.0 EcoBoost Hybrid eCVT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "suv",
@@ -6234,7 +6275,7 @@
         "trims": [
           {
             "name": "1.1 (1100) 36 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1974,
             "bodyType": "sedan",
@@ -6275,7 +6316,7 @@
           },
           {
             "name": "1.3 (1300) 42 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1974,
             "bodyType": "sedan",
@@ -6316,7 +6357,7 @@
           },
           {
             "name": "1.3 GT 53 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1974,
             "bodyType": "sedan",
@@ -6357,7 +6398,7 @@
           },
           {
             "name": "1.6 Mexico 63 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1974,
             "bodyType": "sedan",
@@ -6398,7 +6439,7 @@
           },
           {
             "name": "1.6 Twin Cam 78 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1968,
             "to": 1971,
             "bodyType": "sedan",
@@ -6439,7 +6480,7 @@
           },
           {
             "name": "1.6 RS 1600 86 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1970,
             "to": 1974,
             "bodyType": "sedan",
@@ -6480,7 +6521,7 @@
           },
           {
             "name": "2.0 RS 2000 75 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1972,
             "to": 1974,
             "bodyType": "sedan",
@@ -6617,7 +6658,7 @@
         "trims": [
           {
             "name": "1.1 35 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1980,
             "bodyType": "sedan",
@@ -6659,7 +6700,7 @@
           },
           {
             "name": "1.3 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1979,
             "to": 1980,
             "bodyType": "sedan",
@@ -6701,7 +6742,7 @@
           },
           {
             "name": "1.6 RS 62 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1980,
             "bodyType": "sedan",
@@ -6743,7 +6784,7 @@
           },
           {
             "name": "2.0 RS 81 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1975,
             "to": 1980,
             "bodyType": "sedan",
@@ -6906,7 +6947,7 @@
         "trims": [
           {
             "name": "1.1 40 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1980,
             "to": 1983,
             "bodyType": "hatchback",
@@ -6948,7 +6989,7 @@
           },
           {
             "name": "1.3 51 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1980,
             "to": 1985,
             "bodyType": "hatchback",
@@ -6990,7 +7031,7 @@
           },
           {
             "name": "1.6 58 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1980,
             "to": 1985,
             "bodyType": "hatchback",
@@ -7032,7 +7073,7 @@
           },
           {
             "name": "1.6 XR3i 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1982,
             "to": 1985,
             "bodyType": "hatchback",
@@ -7074,7 +7115,7 @@
           },
           {
             "name": "1.6 D 40 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1984,
             "to": 1985,
             "bodyType": "hatchback",
@@ -7116,7 +7157,7 @@
           },
           {
             "name": "1.6 RS Turbo 97 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1984,
             "to": 1989,
             "bodyType": "hatchback",
@@ -7283,7 +7324,7 @@
         "trims": [
           {
             "name": "1.3 (GAF) 46 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1988,
             "to": 1990,
             "bodyType": "hatchback",
@@ -7325,7 +7366,7 @@
           },
           {
             "name": "1.4 55 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1990,
             "bodyType": "hatchback",
@@ -7367,7 +7408,7 @@
           },
           {
             "name": "1.6 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1990,
             "bodyType": "hatchback",
@@ -7409,7 +7450,7 @@
           },
           {
             "name": "1.6 XR3i 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1989,
             "bodyType": "hatchback",
@@ -7451,7 +7492,7 @@
           },
           {
             "name": "1.6 Turbo RS 97 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1990,
             "bodyType": "hatchback",
@@ -7493,7 +7534,7 @@
           },
           {
             "name": "1.8 D 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1990,
             "bodyType": "hatchback",
@@ -7714,7 +7755,7 @@
         "trims": [
           {
             "name": "1.3 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7755,7 +7796,7 @@
           },
           {
             "name": "1.4 52 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7796,7 +7837,7 @@
           },
           {
             "name": "1.6 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7837,7 +7878,7 @@
           },
           {
             "name": "1.8 16V XR3i 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7878,7 +7919,7 @@
           },
           {
             "name": "1.8 16V XR3i 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7919,7 +7960,7 @@
           },
           {
             "name": "1.8 D 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "hatchback",
@@ -7960,7 +8001,7 @@
           },
           {
             "name": "1.3 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1995,
             "bodyType": "hatchback",
@@ -8001,7 +8042,7 @@
           },
           {
             "name": "1.4 54 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1995,
             "bodyType": "hatchback",
@@ -8042,7 +8083,7 @@
           },
           {
             "name": "1.6 i 16V 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1995,
             "bodyType": "hatchback",
@@ -8083,7 +8124,7 @@
           },
           {
             "name": "1.8 i 16V 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1995,
             "bodyType": "hatchback",
@@ -8124,7 +8165,7 @@
           },
           {
             "name": "1.8 TD 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1995,
             "bodyType": "hatchback",
@@ -8165,7 +8206,7 @@
           },
           {
             "name": "2.0 i 16V RS 2000 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1996,
             "bodyType": "hatchback",
@@ -8206,7 +8247,7 @@
           },
           {
             "name": "2.0 i 16V RS Cosworth 162 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1996,
             "bodyType": "hatchback",
@@ -8366,7 +8407,7 @@
         "trims": [
           {
             "name": "1.3 i 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8408,7 +8449,7 @@
           },
           {
             "name": "1.4 i 55 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8450,7 +8491,7 @@
           },
           {
             "name": "1.6 i 16V 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8492,7 +8533,7 @@
           },
           {
             "name": "1.8 i 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8534,7 +8575,7 @@
           },
           {
             "name": "1.8 D 44 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8576,7 +8617,7 @@
           },
           {
             "name": "1.8 TD 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": "hatchback",
@@ -8837,7 +8878,7 @@
         "trims": [
           {
             "name": "4.0 V6 116 kW (155 hp) 5M – 4x4, 5dv.",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "suv",
@@ -8878,7 +8919,7 @@
           },
           {
             "name": "4.0 V6 116 kW (155 hp) 4AT – 4x4, 5dv.",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "suv",
@@ -8919,7 +8960,7 @@
           },
           {
             "name": "4.0 V6 119 kW (160 hp) 4AT – 4x4, 5dv.",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1994,
             "bodyType": "suv",
@@ -8960,7 +9001,7 @@
           },
           {
             "name": "4.0 V6 119 kW (160 hp) 5M – 4x2, 3dv. (Sport)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1994,
             "bodyType": "suv",
@@ -9109,7 +9150,7 @@
         "trims": [
           {
             "name": "4.0 V6 OHV 119 kW (160 hp) 5M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 2001,
             "bodyType": "suv",
@@ -9150,7 +9191,7 @@
           },
           {
             "name": "4.0 V6 SOHC 157 kW (210 hp) 5AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 2001,
             "bodyType": "suv",
@@ -9191,7 +9232,7 @@
           },
           {
             "name": "5.0 V8 157 kW (210 hp) 4AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 2001,
             "bodyType": "suv",
@@ -9315,7 +9356,7 @@
         "trims": [
           {
             "name": "4.0 V6 157 kW (210 hp) 5AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2001,
             "to": 2005,
             "bodyType": "suv",
@@ -9356,7 +9397,7 @@
           },
           {
             "name": "4.0 V6 157 kW (210 hp) 5AT – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2001,
             "to": 2005,
             "bodyType": "suv",
@@ -9397,7 +9438,7 @@
           },
           {
             "name": "4.6 V8 178 kW (239 hp) 5AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2001,
             "to": 2005,
             "bodyType": "suv",
@@ -9520,7 +9561,7 @@
         "trims": [
           {
             "name": "4.0 V6 157 kW (210 hp) 5AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "suv",
@@ -9561,7 +9602,7 @@
           },
           {
             "name": "4.6 V8 218 kW (292 hp) 6AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "suv",
@@ -9717,7 +9758,7 @@
         "trims": [
           {
             "name": "3.5 V6 216 kW (290 hp) 6AT – FWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "suv",
@@ -9759,7 +9800,7 @@
           },
           {
             "name": "3.5 V6 216 kW (290 hp) 6AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "suv",
@@ -9801,7 +9842,7 @@
           },
           {
             "name": "2.0 EcoBoost 179 kW (240 hp) 6AT – FWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2015,
             "bodyType": "suv",
@@ -9952,7 +9993,7 @@
         "trims": [
           {
             "name": "3.0 EcoBoost V6 Plug-In Hybrid 336 kW (457 k) 10AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": null,
             "bodyType": "suv",
@@ -9995,7 +10036,7 @@
           },
           {
             "name": "2.3 EcoBoost 224 kW (300 hp) 10AT – RWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": null,
             "bodyType": "suv",
@@ -10037,7 +10078,7 @@
           },
           {
             "name": "ST 3.0 EcoBoost V6 298 kW (400 hp) 10AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": null,
             "bodyType": "suv",
@@ -10079,7 +10120,7 @@
           },
           {
             "name": "3.3 V6 Hybrid 237 kW (318 hp) 10AT – RWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "suv",
@@ -10192,7 +10233,7 @@
         "trims": [
           {
             "name": "Standard Range RWD 125 kW (170 k), 52 kWh",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": 2026,
             "bodyType": "suv",
@@ -10234,7 +10275,7 @@
           },
           {
             "name": "Extended Range RWD 210 kW (286 k), 77 kWh",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -10277,7 +10318,7 @@
           },
           {
             "name": "Extended Range AWD 250 kW (340 k), 79 kWh",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -10320,7 +10361,7 @@
           },
           {
             "name": "Standard Range RWD 140 kW (190 k) (2026)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2026,
             "to": null,
             "bodyType": "suv",
@@ -10507,7 +10548,7 @@
         "trims": [
           {
             "name": "950 (957 cm³)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1976,
             "to": 1983,
             "bodyType": "hatchback",
@@ -10549,7 +10590,7 @@
           },
           {
             "name": "1.1 (40 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1981,
             "to": 1983,
             "bodyType": "hatchback",
@@ -10591,7 +10632,7 @@
           },
           {
             "name": "1.3",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1977,
             "to": 1983,
             "bodyType": "hatchback",
@@ -10633,7 +10674,7 @@
           },
           {
             "name": "1.6 XR2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1981,
             "to": 1983,
             "bodyType": "hatchback",
@@ -10690,7 +10731,7 @@
           {
             "fuel": "petrol",
             "displacementCc": null,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "1.0 Valencia"
@@ -10785,7 +10826,7 @@
         "trims": [
           {
             "name": "1.0",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1983,
             "to": 1989,
             "bodyType": "hatchback",
@@ -10827,7 +10868,7 @@
           },
           {
             "name": "1.1 (37 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1983,
             "to": 1989,
             "bodyType": "hatchback",
@@ -10869,7 +10910,7 @@
           },
           {
             "name": "1.4 CVH",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1989,
             "bodyType": "hatchback",
@@ -10911,7 +10952,7 @@
           },
           {
             "name": "1.6 D",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1984,
             "to": 1989,
             "bodyType": "hatchback",
@@ -10953,7 +10994,7 @@
           },
           {
             "name": "1.6 XR2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1984,
             "to": 1989,
             "bodyType": "hatchback",
@@ -11113,7 +11154,7 @@
         "trims": [
           {
             "name": "1.1 (40 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1995,
             "bodyType": "hatchback",
@@ -11155,7 +11196,7 @@
           },
           {
             "name": "1.4 (54 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1995,
             "bodyType": "hatchback",
@@ -11197,7 +11238,7 @@
           },
           {
             "name": "1.6 XR2i",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1995,
             "bodyType": "hatchback",
@@ -11239,7 +11280,7 @@
           },
           {
             "name": "1.6 RS Turbo",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "hatchback",
@@ -11281,7 +11322,7 @@
           },
           {
             "name": "1.8 XR2i 16V",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1995,
             "bodyType": "hatchback",
@@ -11323,7 +11364,7 @@
           },
           {
             "name": "1.8 D",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1995,
             "bodyType": "hatchback",
@@ -11498,7 +11539,7 @@
         "trims": [
           {
             "name": "1.25 16V (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": "hatchback",
@@ -11540,7 +11581,7 @@
           },
           {
             "name": "1.3 (44 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": "hatchback",
@@ -11582,7 +11623,7 @@
           },
           {
             "name": "1.4 16V (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": "hatchback",
@@ -11624,7 +11665,7 @@
           },
           {
             "name": "1.25 16V CVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1997,
             "to": 1999,
             "bodyType": "hatchback",
@@ -11666,7 +11707,7 @@
           },
           {
             "name": "1.8 D",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 1999,
             "bodyType": "hatchback",
@@ -11708,7 +11749,7 @@
           },
           {
             "name": "1.8 DI (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2001,
             "bodyType": "hatchback",
@@ -11734,7 +11775,7 @@
             "massKg": 1057,
             "topSpeedKmh": 168,
             "acceleration0to100s": null,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -11750,7 +11791,7 @@
           },
           {
             "name": "1.6 16V Zetec S",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2002,
             "bodyType": "hatchback",
@@ -11775,7 +11816,7 @@
             },
             "massKg": null,
             "topSpeedKmh": 190,
-            "acceleration0to100s": 10.0,
+            "acceleration0to100s": 10,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -11857,7 +11898,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 1998,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 110,
             "powerKwMax": 110,
             "variant": "2.0 Duratec"
@@ -11936,7 +11977,7 @@
         "trims": [
           {
             "name": "1.25 Duratec (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -11978,7 +12019,7 @@
           },
           {
             "name": "1.3 Duratec (44 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -12020,7 +12061,7 @@
           },
           {
             "name": "1.4 Duratec (59 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -12062,7 +12103,7 @@
           },
           {
             "name": "1.4 Duratec Durashift EST",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -12104,7 +12145,7 @@
           },
           {
             "name": "1.6 Duratec (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -12146,7 +12187,7 @@
           },
           {
             "name": "2.0 Duratec ST (110 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2008,
             "bodyType": "hatchback",
@@ -12187,7 +12228,7 @@
           },
           {
             "name": "1.4 TDCi (50 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -12229,7 +12270,7 @@
           },
           {
             "name": "1.6 TDCi (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2008,
             "bodyType": "hatchback",
@@ -12337,7 +12378,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 92,
             "variant": "1.0 EcoBoost"
@@ -12420,7 +12461,7 @@
         "trims": [
           {
             "name": "1.25 Duratec (44 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2012,
             "bodyType": "hatchback",
@@ -12462,7 +12503,7 @@
           },
           {
             "name": "1.25 Duratec (60 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2012,
             "bodyType": "hatchback",
@@ -12504,7 +12545,7 @@
           },
           {
             "name": "1.4 Duratec automat (71 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2012,
             "bodyType": "hatchback",
@@ -12546,7 +12587,7 @@
           },
           {
             "name": "1.6 Ti-VCT (88 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2012,
             "bodyType": "hatchback",
@@ -12588,7 +12629,7 @@
           },
           {
             "name": "1.6 TDCi (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "hatchback",
@@ -12630,7 +12671,7 @@
           },
           {
             "name": "1.0 EcoBoost (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2017,
             "bodyType": "hatchback",
@@ -12672,7 +12713,7 @@
           },
           {
             "name": "1.0 EcoBoost PowerShift (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2017,
             "bodyType": "hatchback",
@@ -12714,7 +12755,7 @@
           },
           {
             "name": "1.0 EcoBoost (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2017,
             "bodyType": "hatchback",
@@ -12756,7 +12797,7 @@
           },
           {
             "name": "1.5 TDCi (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2017,
             "bodyType": "hatchback",
@@ -12798,7 +12839,7 @@
           },
           {
             "name": "ST 1.6 EcoBoost (134 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2017,
             "bodyType": "hatchback",
@@ -12881,7 +12922,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 103,
             "variant": "1.0 EcoBoost"
@@ -12889,7 +12930,7 @@
           {
             "fuel": "petrol-mhev",
             "displacementCc": null,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 114,
             "powerKwMax": 114,
             "variant": "1.0 EcoBoost Hybrid"
@@ -12972,7 +13013,7 @@
         "trims": [
           {
             "name": "1.1 Ti-VCT (51 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2019,
             "bodyType": "hatchback",
@@ -13014,7 +13055,7 @@
           },
           {
             "name": "1.1 Ti-VCT (63 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2019,
             "bodyType": "hatchback",
@@ -13039,7 +13080,7 @@
             },
             "massKg": 1130,
             "topSpeedKmh": 170,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": 4.7,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -13056,7 +13097,7 @@
           },
           {
             "name": "1.0 EcoBoost (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "hatchback",
@@ -13098,7 +13139,7 @@
           },
           {
             "name": "1.0 EcoBoost automat (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "hatchback",
@@ -13140,7 +13181,7 @@
           },
           {
             "name": "1.0 EcoBoost (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "hatchback",
@@ -13182,7 +13223,7 @@
           },
           {
             "name": "1.0 EcoBoost (103 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "hatchback",
@@ -13207,7 +13248,7 @@
             },
             "massKg": null,
             "topSpeedKmh": 202,
-            "acceleration0to100s": 9.0,
+            "acceleration0to100s": 9,
             "consumptionL100": 4.5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -13224,7 +13265,7 @@
           },
           {
             "name": "1.0 EcoBoost Hybrid (114 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2023,
             "bodyType": "hatchback",
@@ -13266,7 +13307,7 @@
           },
           {
             "name": "ST 1.5 EcoBoost (147 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2022,
             "bodyType": "hatchback",
@@ -13292,7 +13333,7 @@
             "massKg": 1208,
             "topSpeedKmh": 232,
             "acceleration0to100s": 6.5,
-            "consumptionL100": 6.0,
+            "consumptionL100": 6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -13308,7 +13349,7 @@
           },
           {
             "name": "1.5 TDCi (63 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "hatchback",
@@ -13350,7 +13391,7 @@
           },
           {
             "name": "1.5 TDCi (88 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2019,
             "bodyType": "hatchback",
@@ -13375,7 +13416,7 @@
             },
             "massKg": null,
             "topSpeedKmh": 195,
-            "acceleration0to100s": 9.0,
+            "acceleration0to100s": 9,
             "consumptionL100": 3.5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -13579,7 +13620,7 @@
         "trims": [
           {
             "name": "1.4 16V 55 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13621,7 +13662,7 @@
           },
           {
             "name": "1.6 16V 74 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13663,7 +13704,7 @@
           },
           {
             "name": "1.8 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13705,7 +13746,7 @@
           },
           {
             "name": "2.0 16V 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13747,7 +13788,7 @@
           },
           {
             "name": "1.8 Turbo DI 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13789,7 +13830,7 @@
           },
           {
             "name": "1.8 TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2001,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13831,7 +13872,7 @@
           },
           {
             "name": "2.0 16V ST170 127 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2005,
             "bodyType": "hatchback",
@@ -13873,7 +13914,7 @@
           },
           {
             "name": "2.0 i 16V RS 158 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2003,
             "bodyType": "hatchback",
@@ -14079,7 +14120,7 @@
         "trims": [
           {
             "name": "1.4 Duratec 16V 59 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14121,7 +14162,7 @@
           },
           {
             "name": "1.6 Duratec 16V 74 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14163,7 +14204,7 @@
           },
           {
             "name": "1.6 Duratec Ti-VCT 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14205,7 +14246,7 @@
           },
           {
             "name": "2.0 Duratec 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14247,7 +14288,7 @@
           },
           {
             "name": "1.6 TDCi 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14289,7 +14330,7 @@
           },
           {
             "name": "1.6 TDCi HP 80 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "hatchback",
@@ -14331,7 +14372,7 @@
           },
           {
             "name": "2.0 TDCi 100 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14373,7 +14414,7 @@
           },
           {
             "name": "ST 2.5 i 20V 165 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14415,7 +14456,7 @@
           },
           {
             "name": "RS 2.5 224 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2009,
             "to": 2010,
             "bodyType": "hatchback",
@@ -14638,7 +14679,7 @@
         "trims": [
           {
             "name": "1.0 EcoBoost 74 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14680,7 +14721,7 @@
           },
           {
             "name": "1.0 EcoBoost 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14722,7 +14763,7 @@
           },
           {
             "name": "1.6 Ti-VCT 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14764,7 +14805,7 @@
           },
           {
             "name": "1.6 EcoBoost 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14806,7 +14847,7 @@
           },
           {
             "name": "1.6 TDCi 70 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14848,7 +14889,7 @@
           },
           {
             "name": "1.6 TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14890,7 +14931,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14932,7 +14973,7 @@
           },
           {
             "name": "ST 2.0 EcoBoost 184 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2014,
             "bodyType": "hatchback",
@@ -14974,7 +15015,7 @@
           },
           {
             "name": "1.5 EcoBoost 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": "hatchback",
@@ -15015,7 +15056,7 @@
           },
           {
             "name": "1.5 TDCi 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": "hatchback",
@@ -15056,7 +15097,7 @@
           },
           {
             "name": "2.0 TDCi 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": "hatchback",
@@ -15097,7 +15138,7 @@
           },
           {
             "name": "RS 2.3 EcoBoost AWD 257 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "hatchback",
@@ -15138,7 +15179,7 @@
           },
           {
             "name": "33.5 kWh Electric 108 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2018,
             "bodyType": "hatchback",
@@ -15323,7 +15364,7 @@
         "trims": [
           {
             "name": "1.0 EcoBoost 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2021,
             "bodyType": "hatchback",
@@ -15365,7 +15406,7 @@
           },
           {
             "name": "1.5 EcoBoost 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2021,
             "bodyType": "hatchback",
@@ -15407,7 +15448,7 @@
           },
           {
             "name": "1.5 EcoBlue 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2021,
             "bodyType": "hatchback",
@@ -15449,7 +15490,7 @@
           },
           {
             "name": "2.0 EcoBlue 110 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2021,
             "bodyType": "hatchback",
@@ -15491,7 +15532,7 @@
           },
           {
             "name": "ST 2.3 EcoBoost 206 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2021,
             "bodyType": "hatchback",
@@ -15533,7 +15574,7 @@
           },
           {
             "name": "1.0 EcoBoost Mild Hybrid 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": null,
             "bodyType": "hatchback",
@@ -15575,7 +15616,7 @@
           },
           {
             "name": "1.0 EcoBoost Mild Hybrid 114 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": null,
             "bodyType": "hatchback",
@@ -15617,7 +15658,7 @@
           },
           {
             "name": "1.5 EcoBlue 88 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": null,
             "bodyType": "hatchback",
@@ -16002,7 +16043,7 @@
         "trims": [
           {
             "name": "1.25 (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16044,7 +16085,7 @@
           },
           {
             "name": "1.4 (59 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16069,7 +16110,7 @@
             },
             "massKg": 1085,
             "topSpeedKmh": 163,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": 6.5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -16086,7 +16127,7 @@
           },
           {
             "name": "1.4 Durashift EST (59 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16128,7 +16169,7 @@
           },
           {
             "name": "1.6 (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16170,7 +16211,7 @@
           },
           {
             "name": "1.6 automat (74 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16212,7 +16253,7 @@
           },
           {
             "name": "1.4 TDCi (50 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16254,7 +16295,7 @@
           },
           {
             "name": "1.6 TDCi (66 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2012,
             "bodyType": "mpv",
@@ -16442,7 +16483,7 @@
         "trims": [
           {
             "name": "2.0 i 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 2006,
             "bodyType": "mpv",
@@ -16483,7 +16524,7 @@
           },
           {
             "name": "2.3 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1997,
             "to": 2006,
             "bodyType": "mpv",
@@ -16524,7 +16565,7 @@
           },
           {
             "name": "2.8i V6 128 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 2000,
             "bodyType": "mpv",
@@ -16565,7 +16606,7 @@
           },
           {
             "name": "2.8 V6 150 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2006,
             "bodyType": "mpv",
@@ -16606,7 +16647,7 @@
           },
           {
             "name": "1.9 TDI 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 2006,
             "bodyType": "mpv",
@@ -16647,7 +16688,7 @@
           },
           {
             "name": "1.9 TDI 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2006,
             "bodyType": "mpv",
@@ -16688,7 +16729,7 @@
           },
           {
             "name": "1.9 TDI 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2006,
             "bodyType": "mpv",
@@ -16879,7 +16920,7 @@
         "trims": [
           {
             "name": "2.0 i 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -16920,7 +16961,7 @@
           },
           {
             "name": "2.3 i 16V 118 kW Durashift automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2010,
             "bodyType": "mpv",
@@ -16961,7 +17002,7 @@
           },
           {
             "name": "1.8 TDCi 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2007,
             "bodyType": "mpv",
@@ -17002,7 +17043,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -17043,7 +17084,7 @@
           },
           {
             "name": "2.2 TDCi 129 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "mpv",
@@ -17084,7 +17125,7 @@
           },
           {
             "name": "1.6 EcoBoost 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2015,
             "bodyType": "mpv",
@@ -17125,7 +17166,7 @@
           },
           {
             "name": "2.0 EcoBoost 149 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -17166,7 +17207,7 @@
           },
           {
             "name": "2.0 TDCi 120 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -17207,7 +17248,7 @@
           },
           {
             "name": "2.2 TDCi 147 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2015,
             "bodyType": "mpv",
@@ -17388,7 +17429,7 @@
         "trims": [
           {
             "name": "1.5 EcoBoost 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -17429,7 +17470,7 @@
           },
           {
             "name": "2.0 EcoBoost 177 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -17470,7 +17511,7 @@
           },
           {
             "name": "2.0 TDCi 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -17511,7 +17552,7 @@
           },
           {
             "name": "2.0 TDCi 132 kW PowerShift AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -17552,7 +17593,7 @@
           },
           {
             "name": "2.0 TDCi 154 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -17593,7 +17634,7 @@
           },
           {
             "name": "2.0 EcoBlue 140 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2019,
             "bodyType": "mpv",
@@ -17634,7 +17675,7 @@
           },
           {
             "name": "2.5 Duratec Hybrid 140 kW e-CVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2023,
             "bodyType": "mpv",
@@ -17806,7 +17847,7 @@
         "trims": [
           {
             "name": "5.4 V8 Kompressor 404 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2004,
             "to": 2006,
             "bodyType": "kupe",
@@ -17918,7 +17959,7 @@
         "trims": [
           {
             "name": "3.5 EcoBoost V6 483 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2023,
             "bodyType": "kupe",
@@ -18067,7 +18108,7 @@
         "trims": [
           {
             "name": "1.3 Endura-E (37 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1998,
             "bodyType": "hatchback",
@@ -18109,7 +18150,7 @@
           },
           {
             "name": "1.3 Endura-E (44 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 2002,
             "bodyType": "hatchback",
@@ -18151,7 +18192,7 @@
           },
           {
             "name": "1.3 Duratec (51 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2008,
             "bodyType": "hatchback",
@@ -18193,7 +18234,7 @@
           },
           {
             "name": "SportKa 1.6 (70 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2008,
             "bodyType": "hatchback",
@@ -18312,7 +18353,7 @@
         "trims": [
           {
             "name": "1.2 (51 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2016,
             "bodyType": "hatchback",
@@ -18354,7 +18395,7 @@
           },
           {
             "name": "1.3 TDCi (55 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2016,
             "bodyType": "hatchback",
@@ -18502,7 +18543,7 @@
         "trims": [
           {
             "name": "Ka+ 1.2 Ti-VCT (51 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "hatchback",
@@ -18528,7 +18569,7 @@
             "massKg": 934,
             "topSpeedKmh": 159,
             "acceleration0to100s": 15.3,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -18544,7 +18585,7 @@
           },
           {
             "name": "Ka+ 1.2 Ti-VCT (63 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "hatchback",
@@ -18570,7 +18611,7 @@
             "massKg": 934,
             "topSpeedKmh": 169,
             "acceleration0to100s": 13.3,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -18586,7 +18627,7 @@
           },
           {
             "name": "Ka+ 1.2 Ti-VCT (51 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": null,
             "bodyType": "hatchback",
@@ -18628,7 +18669,7 @@
           },
           {
             "name": "Ka+ 1.2 Ti-VCT (63 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": null,
             "bodyType": "hatchback",
@@ -18654,7 +18695,7 @@
             "massKg": null,
             "topSpeedKmh": 169,
             "acceleration0to100s": 13.5,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -18670,7 +18711,7 @@
           },
           {
             "name": "Ka+ 1.5 TDCi (70 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": null,
             "bodyType": "hatchback",
@@ -18831,7 +18872,7 @@
         "trims": [
           {
             "name": "2.0 TDCi 100 kW (136 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "suv",
@@ -18873,7 +18914,7 @@
           },
           {
             "name": "2.0 TDCi 100 kW (136 k) 6M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "suv",
@@ -18915,7 +18956,7 @@
           },
           {
             "name": "2.5 Duratec 147 kW (200 k) 6M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "suv",
@@ -18957,7 +18998,7 @@
           },
           {
             "name": "2.5 Duratec 147 kW (200 k) 5AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2008,
             "to": 2010,
             "bodyType": "suv",
@@ -18999,7 +19040,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW (140 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2012,
             "bodyType": "suv",
@@ -19040,7 +19081,7 @@
           },
           {
             "name": "2.0 TDCi 120 kW (163 k) PowerShift – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2012,
             "bodyType": "suv",
@@ -19216,7 +19257,7 @@
         "trims": [
           {
             "name": "1.6 EcoBoost 110 kW (150 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2014,
             "bodyType": "suv",
@@ -19257,7 +19298,7 @@
           },
           {
             "name": "1.6 EcoBoost 134 kW (182 k) 6AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2014,
             "bodyType": "suv",
@@ -19298,7 +19339,7 @@
           },
           {
             "name": "2.0 TDCi 120 kW (163 k) 6M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2014,
             "bodyType": "suv",
@@ -19339,7 +19380,7 @@
           },
           {
             "name": "1.5 EcoBoost 110 kW (150 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "suv",
@@ -19382,7 +19423,7 @@
           },
           {
             "name": "1.5 EcoBoost 134 kW (182 k) 6AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2018,
             "bodyType": "suv",
@@ -19425,7 +19466,7 @@
           },
           {
             "name": "1.5 TDCi 88 kW (120 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "suv",
@@ -19468,7 +19509,7 @@
           },
           {
             "name": "2.0 TDCi 110 kW (150 k) 6M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "suv",
@@ -19511,7 +19552,7 @@
           },
           {
             "name": "2.0 TDCi 132 kW (180 k) PowerShift – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "suv",
@@ -19694,7 +19735,7 @@
         "trims": [
           {
             "name": "1.5 EcoBoost 110 kW (150 k) 6M",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "suv",
@@ -19736,7 +19777,7 @@
           },
           {
             "name": "1.5 EcoBlue 88 kW (120 k) 6M",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2022,
             "bodyType": "suv",
@@ -19778,7 +19819,7 @@
           },
           {
             "name": "2.0 EcoBlue Hybrid 110 kW (150 k) 6M",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2021,
             "bodyType": "suv",
@@ -19820,7 +19861,7 @@
           },
           {
             "name": "2.0 EcoBlue 140 kW (190 k) 8AT – AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "suv",
@@ -19862,7 +19903,7 @@
           },
           {
             "name": "2.5 Hybrid (FHEV) 140 kW (190 k) eCVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2023,
             "bodyType": "suv",
@@ -19903,7 +19944,7 @@
           },
           {
             "name": "2.5 Plug-In Hybrid 165 kW (225 k) eCVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "suv",
@@ -19945,7 +19986,7 @@
           },
           {
             "name": "1.5 EcoBoost 110 kW (150 k) 6M (2024)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -19987,7 +20028,7 @@
           },
           {
             "name": "2.5 Hybrid (FHEV) 132 kW (180 k) eCVT (2024)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -20029,7 +20070,7 @@
           },
           {
             "name": "2.5 Hybrid (FHEV) 135 kW (183 k) eCVT – AWD (2024)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -20070,7 +20111,7 @@
           },
           {
             "name": "2.5 Plug-In Hybrid 179 kW (243 k) eCVT (2024)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -20273,7 +20314,7 @@
         "trims": [
           {
             "name": "1.6 16V 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1994,
             "bodyType": null,
@@ -20314,7 +20355,7 @@
           },
           {
             "name": "1.8 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1994,
             "bodyType": null,
@@ -20355,7 +20396,7 @@
           },
           {
             "name": "2.0 16V 100 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1996,
             "bodyType": null,
@@ -20396,7 +20437,7 @@
           },
           {
             "name": "2.0 16V 100 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1996,
             "bodyType": null,
@@ -20437,7 +20478,7 @@
           },
           {
             "name": "2.0 16V 97 kW 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1996,
             "bodyType": null,
@@ -20478,7 +20519,7 @@
           },
           {
             "name": "2.5 V6 24V 125 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1996,
             "bodyType": null,
@@ -20519,7 +20560,7 @@
           },
           {
             "name": "1.8 TD 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1996,
             "bodyType": null,
@@ -20560,7 +20601,7 @@
           },
           {
             "name": "2.0 16V 100 kW – kombi",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1996,
             "bodyType": "kombi",
@@ -20717,7 +20758,7 @@
         "trims": [
           {
             "name": "1.6 16V 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": null,
@@ -20758,7 +20799,7 @@
           },
           {
             "name": "1.8 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 2000,
             "bodyType": null,
@@ -20799,7 +20840,7 @@
           },
           {
             "name": "2.0 16V 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2000,
             "bodyType": null,
@@ -20840,7 +20881,7 @@
           },
           {
             "name": "2.0 16V 96 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2000,
             "bodyType": null,
@@ -20881,7 +20922,7 @@
           },
           {
             "name": "2.5 V6 24V 125 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1999,
             "bodyType": null,
@@ -20922,7 +20963,7 @@
           },
           {
             "name": "ST200 2.5 V6 151 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2000,
             "bodyType": null,
@@ -20963,7 +21004,7 @@
           },
           {
             "name": "1.8 TD 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 2000,
             "bodyType": null,
@@ -21004,7 +21045,7 @@
           },
           {
             "name": "2.0 16V 96 kW – kombi",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2000,
             "bodyType": "kombi",
@@ -21188,7 +21229,7 @@
         "trims": [
           {
             "name": "1.8 16V 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2007,
             "bodyType": null,
@@ -21229,7 +21270,7 @@
           },
           {
             "name": "2.0 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2007,
             "bodyType": null,
@@ -21270,7 +21311,7 @@
           },
           {
             "name": "2.5 V6 125 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2007,
             "bodyType": null,
@@ -21311,7 +21352,7 @@
           },
           {
             "name": "3.0 V6 150 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2004,
             "to": 2007,
             "bodyType": null,
@@ -21352,7 +21393,7 @@
           },
           {
             "name": "ST220 3.0 V6 166 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2007,
             "bodyType": null,
@@ -21393,7 +21434,7 @@
           },
           {
             "name": "2.0 TDCi 96 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2007,
             "bodyType": null,
@@ -21434,7 +21475,7 @@
           },
           {
             "name": "2.2 TDCi 114 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2004,
             "to": 2007,
             "bodyType": null,
@@ -21475,7 +21516,7 @@
           },
           {
             "name": "2.0 TDCi 96 kW – kombi",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2007,
             "bodyType": "kombi",
@@ -21691,7 +21732,7 @@
         "trims": [
           {
             "name": "1.6 Ti-VCT 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2010,
             "bodyType": null,
@@ -21732,7 +21773,7 @@
           },
           {
             "name": "2.0 EcoBoost 149 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": null,
@@ -21773,7 +21814,7 @@
           },
           {
             "name": "2.0 EcoBoost 177 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": null,
@@ -21814,7 +21855,7 @@
           },
           {
             "name": "2.5T 162 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2010,
             "bodyType": null,
@@ -21855,7 +21896,7 @@
           },
           {
             "name": "1.6 TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": null,
@@ -21896,7 +21937,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": null,
@@ -21937,7 +21978,7 @@
           },
           {
             "name": "2.2 TDCi 147 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": null,
@@ -21978,7 +22019,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW – kombi",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "kombi",
@@ -22183,7 +22224,7 @@
         "trims": [
           {
             "name": "1.0 EcoBoost 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": null,
@@ -22224,7 +22265,7 @@
           },
           {
             "name": "1.5 EcoBoost 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": null,
@@ -22265,7 +22306,7 @@
           },
           {
             "name": "2.0 EcoBoost 176 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2018,
             "bodyType": null,
@@ -22306,7 +22347,7 @@
           },
           {
             "name": "2.0 Hybrid 138 kW e-CVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2022,
             "bodyType": null,
@@ -22347,7 +22388,7 @@
           },
           {
             "name": "1.5 TDCi 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": null,
@@ -22388,7 +22429,7 @@
           },
           {
             "name": "2.0 TDCi 132 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2014,
             "to": 2019,
             "bodyType": null,
@@ -22429,7 +22470,7 @@
           },
           {
             "name": "2.0 TDCi Bi-Turbo 154 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": null,
@@ -22470,7 +22511,7 @@
           },
           {
             "name": "2.0 EcoBlue 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2021,
             "bodyType": null,
@@ -22511,7 +22552,7 @@
           },
           {
             "name": "2.0 EcoBlue 140 kW AWD automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2021,
             "bodyType": null,
@@ -22656,7 +22697,7 @@
         "trims": [
           {
             "name": "2.0T EcoBoost 175 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": 2023,
             "bodyType": "sedan",
@@ -22697,7 +22738,7 @@
           },
           {
             "name": "2.0T EcoBoost 187 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": 2025,
             "bodyType": "sedan",
@@ -22738,7 +22779,7 @@
           },
           {
             "name": "2.0T EcoBoost 192 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2025,
             "to": null,
             "bodyType": "sedan",
@@ -22779,7 +22820,7 @@
           },
           {
             "name": "1.5T EcoBoost 140 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": 2025,
             "bodyType": "sedan",
@@ -22820,7 +22861,7 @@
           },
           {
             "name": "1.5 EcoBoost E-Hybrid 153 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "sedan",
@@ -23084,7 +23125,7 @@
         "trims": [
           {
             "name": "170 R6 78 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1964,
             "to": 1964,
             "bodyType": null,
@@ -23125,7 +23166,7 @@
           },
           {
             "name": "200 R6 89 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1965,
             "to": 1966,
             "bodyType": null,
@@ -23166,7 +23207,7 @@
           },
           {
             "name": "260 V8 122 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1964,
             "to": 1964,
             "bodyType": null,
@@ -23207,7 +23248,7 @@
           },
           {
             "name": "289 V8 2V 149 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1965,
             "to": 1966,
             "bodyType": null,
@@ -23248,7 +23289,7 @@
           },
           {
             "name": "289 V8 4V 168 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1965,
             "to": 1966,
             "bodyType": null,
@@ -23289,7 +23330,7 @@
           },
           {
             "name": "289 V8 HiPo 202 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1964,
             "to": 1966,
             "bodyType": null,
@@ -23330,7 +23371,7 @@
           },
           {
             "name": "428 Cobra Jet 246 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1968,
             "to": 1970,
             "bodyType": null,
@@ -23371,7 +23412,7 @@
           },
           {
             "name": "Boss 351 243 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1971,
             "to": 1971,
             "bodyType": "kupe",
@@ -23502,7 +23543,7 @@
         "trims": [
           {
             "name": "2.3 R4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1978,
             "bodyType": null,
@@ -23543,7 +23584,7 @@
           },
           {
             "name": "2.8 V6",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1974,
             "to": 1978,
             "bodyType": null,
@@ -23584,7 +23625,7 @@
           },
           {
             "name": "5.0 V8 91 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1975,
             "to": 1975,
             "bodyType": null,
@@ -23625,7 +23666,7 @@
           },
           {
             "name": "5.0 V8 104 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1977,
             "to": 1978,
             "bodyType": null,
@@ -23827,7 +23868,7 @@
         "trims": [
           {
             "name": "2.3 R4 78 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1991,
             "to": 1993,
             "bodyType": null,
@@ -23868,7 +23909,7 @@
           },
           {
             "name": "SVO 2.3 Turbo 130 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1984,
             "to": 1985,
             "bodyType": "kupe",
@@ -23909,7 +23950,7 @@
           },
           {
             "name": "SVO 2.3 Turbo 149 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1986,
             "bodyType": "kupe",
@@ -23950,7 +23991,7 @@
           },
           {
             "name": "GT 5.0 V8 168 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1987,
             "to": 1993,
             "bodyType": null,
@@ -23992,7 +24033,7 @@
           },
           {
             "name": "SVT Cobra 5.0 V8 171 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1993,
             "bodyType": "kupe",
@@ -24147,7 +24188,7 @@
         "trims": [
           {
             "name": "3.8 V6 108 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1998,
             "bodyType": null,
@@ -24189,7 +24230,7 @@
           },
           {
             "name": "GT 5.0 V8 160 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1995,
             "bodyType": null,
@@ -24231,7 +24272,7 @@
           },
           {
             "name": "3.8 V6 142 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2004,
             "bodyType": null,
@@ -24272,7 +24313,7 @@
           },
           {
             "name": "GT 4.6 V8 194 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2004,
             "bodyType": null,
@@ -24314,7 +24355,7 @@
           },
           {
             "name": "SVT Cobra 4.6 V8 238 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2001,
             "bodyType": null,
@@ -24356,7 +24397,7 @@
           },
           {
             "name": "SVT Cobra 4.6 V8 Kompressor 290 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2002,
             "to": 2004,
             "bodyType": null,
@@ -24557,7 +24598,7 @@
         "trims": [
           {
             "name": "4.0 V6 157 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2010,
             "bodyType": null,
@@ -24598,7 +24639,7 @@
           },
           {
             "name": "GT 4.6 V8 228 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2005,
             "to": 2009,
             "bodyType": "kupe",
@@ -24639,7 +24680,7 @@
           },
           {
             "name": "Shelby GT500 5.4 V8 372 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2007,
             "to": 2009,
             "bodyType": "kupe",
@@ -24680,7 +24721,7 @@
           },
           {
             "name": "3.7 V6 227 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2014,
             "bodyType": null,
@@ -24721,7 +24762,7 @@
           },
           {
             "name": "GT 5.0 V8 307 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2012,
             "bodyType": null,
@@ -24762,7 +24803,7 @@
           },
           {
             "name": "Boss 302 331 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2012,
             "to": 2013,
             "bodyType": "kupe",
@@ -24803,7 +24844,7 @@
           },
           {
             "name": "Shelby GT500 5.8 V8 485 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2013,
             "to": 2014,
             "bodyType": null,
@@ -24988,7 +25029,7 @@
         "trims": [
           {
             "name": "2.3 EcoBoost 233 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2017,
             "bodyType": "kupe",
@@ -25029,7 +25070,7 @@
           },
           {
             "name": "2.3 EcoBoost 213 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2020,
             "bodyType": "kupe",
@@ -25070,7 +25111,7 @@
           },
           {
             "name": "GT 5.0 V8 310 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2017,
             "bodyType": "kupe",
@@ -25111,7 +25152,7 @@
           },
           {
             "name": "GT 5.0 V8 331 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2017,
             "to": 2023,
             "bodyType": "kupe",
@@ -25152,7 +25193,7 @@
           },
           {
             "name": "Bullitt 5.0 V8 338 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2018,
             "to": 2020,
             "bodyType": "kupe",
@@ -25193,7 +25234,7 @@
           },
           {
             "name": "Mach 1 5.0 V8 338 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2023,
             "bodyType": "kupe",
@@ -25234,7 +25275,7 @@
           },
           {
             "name": "Shelby GT500 5.2 V8 567 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "kupe",
@@ -25379,7 +25420,7 @@
         "trims": [
           {
             "name": "GT Fastback 5.0 V8 328 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "kupe",
@@ -25420,7 +25461,7 @@
           },
           {
             "name": "GT Convertible 5.0 V8 328 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "kabriolet",
@@ -25461,7 +25502,7 @@
           },
           {
             "name": "Dark Horse 5.0 V8 334 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "kupe",
@@ -25502,7 +25543,7 @@
           },
           {
             "name": "2.3 EcoBoost 235 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "kupe",
@@ -25543,7 +25584,7 @@
           },
           {
             "name": "GT 5.0 V8 362 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "kupe",
@@ -25584,7 +25625,7 @@
           },
           {
             "name": "GTD 5.2 V8 Kompressor 608 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "kupe",
@@ -25761,7 +25802,7 @@
         "trims": [
           {
             "name": "Standard Range RWD 198 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2023,
             "bodyType": "suv",
@@ -25802,7 +25843,7 @@
           },
           {
             "name": "Extended Range RWD 216 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": 2024,
             "bodyType": "suv",
@@ -25843,7 +25884,7 @@
           },
           {
             "name": "Extended Range RWD 216 kW (MY2025)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": 2025,
             "bodyType": "suv",
@@ -25884,7 +25925,7 @@
           },
           {
             "name": "Standard Range AWD 198 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2023,
             "bodyType": "suv",
@@ -25925,7 +25966,7 @@
           },
           {
             "name": "Extended Range AWD 258 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2024,
             "bodyType": "suv",
@@ -25966,7 +26007,7 @@
           },
           {
             "name": "Extended Range AWD 272 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": 2025,
             "bodyType": "suv",
@@ -26007,7 +26048,7 @@
           },
           {
             "name": "GT 358 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2024,
             "bodyType": "suv",
@@ -26048,7 +26089,7 @@
           },
           {
             "name": "GT 358 kW (MY2025)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -26089,7 +26130,7 @@
           },
           {
             "name": "Rally 358 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": 2025,
             "bodyType": "suv",
@@ -26246,7 +26287,7 @@
         "trims": [
           {
             "name": "2.2 GL 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1988,
             "to": 1992,
             "bodyType": "kupe",
@@ -26287,7 +26328,7 @@
           },
           {
             "name": "2.2 GT Turbo 108 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1988,
             "to": 1992,
             "bodyType": "kupe",
@@ -26328,7 +26369,7 @@
           },
           {
             "name": "3.0 V6 LX 104 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1992,
             "bodyType": "kupe",
@@ -26452,7 +26493,7 @@
         "trims": [
           {
             "name": "2.0 16V 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1997,
             "bodyType": "kupe",
@@ -26493,7 +26534,7 @@
           },
           {
             "name": "2.5 V6 24V 120 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1997,
             "bodyType": "kupe",
@@ -26552,14 +26593,14 @@
     "name": "Puma",
     "isAddition": false,
     "segment": "B",
-    "summaryCs": "Jméno Puma nesly dva odlišné vozy: malé kupé na technice Fiesty (1997–2001) a crossover SUV vyráběný od roku 2019 v rumunské Craiově. Crossover se nabízí s mild hybridem, jako sportovní ST a od roku 2024 i jako elektrická Puma Gen-E.",
+    "summaryCs": "Jméno Puma nesly dva odlišné vozy: malé kupé na technice Fiesty (1997–2001) a crossover SUV vyráběný od roku 2019 v rumunské Craiově. Elektrická Puma Gen-E byla představena v prosinci 2024; sériová výroba a první dodávky následovaly v roce 2025.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": "Kupé (1997)",
         "name": "Puma kupé",
         "from": 1997,
-        "to": null,
+        "to": 2001,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -26635,12 +26676,13 @@
           ]
         },
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381832581"
+          "https://en.wikipedia.org/w/index.php?oldid=1381832581",
+          "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
         ],
         "trims": [
           {
             "name": "1.4 16V",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kupe",
@@ -26682,7 +26724,7 @@
           },
           {
             "name": "1.6 16V (76 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kupe",
@@ -26724,7 +26766,7 @@
           },
           {
             "name": "1.7 16V VCT (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kupe",
@@ -26766,7 +26808,7 @@
           },
           {
             "name": "Ford Racing Puma 1.7 (114 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1999,
             "to": 2001,
             "bodyType": "kupe",
@@ -26805,7 +26847,12 @@
               "https://en.wikipedia.org/w/index.php?oldid=1381832581"
             ]
           }
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf"
+          ]
+        }
       },
       {
         "code": "Crossover (2019)",
@@ -26820,7 +26867,7 @@
             "name": "facelift",
             "code": null,
             "productionYear": 2024,
-            "note": "Modernizace v únoru 2024: nová světla a maska, větší displej; elektrická verze Gen-E od konce roku 2024.",
+            "note": "Modernizace v únoru 2024: nová světla a maska, větší displej. Elektrická Puma Gen-E byla představena v prosinci 2024; výroba a první dodávky od roku 2025.",
             "sources": [
               "https://en.wikipedia.org/w/index.php?oldid=1376974835"
             ],
@@ -26840,7 +26887,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 92,
             "powerKwMax": 92,
             "variant": "1.0 EcoBoost"
@@ -26848,7 +26895,7 @@
           {
             "fuel": "petrol-mhev",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 92,
             "powerKwMax": 125,
             "variant": "1.0 EcoBoost Hybrid"
@@ -26873,8 +26920,8 @@
             "fuel": "electric",
             "displacementCc": null,
             "displacementLitresNominal": null,
-            "powerKwMin": null,
-            "powerKwMax": null,
+            "powerKwMin": 123.5,
+            "powerKwMax": 123.5,
             "variant": "Gen-E elektromotor"
           }
         ],
@@ -26930,12 +26977,18 @@
           ]
         },
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1376974835"
+          "https://en.wikipedia.org/w/index.php?oldid=1376974835",
+          "https://www.fordotosan.com.tr/en/operations/production/plants",
+          "https://media.ford.com/content/dam/fordmedia/Europe/en/2024/12/Puma-Gen-E/PUMA_GEN-E_release_241202.pdf",
+          "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+          "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/",
+          "https://ford.sml.si/media/ford/pricelists/P-2ZE1-2025-2.0.pdf"
         ],
         "trims": [
           {
             "name": "1.0 EcoBoost (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2020,
             "bodyType": "suv",
@@ -26960,7 +27013,7 @@
             },
             "massKg": 1205,
             "topSpeedKmh": 191,
-            "acceleration0to100s": 10.0,
+            "acceleration0to100s": 10,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -26977,7 +27030,7 @@
           },
           {
             "name": "1.0 EcoBoost Hybrid (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2024,
             "bodyType": "suv",
@@ -27019,7 +27072,7 @@
           },
           {
             "name": "1.0 EcoBoost Hybrid (114 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2024,
             "bodyType": "suv",
@@ -27044,7 +27097,7 @@
             },
             "massKg": 1280,
             "topSpeedKmh": 205,
-            "acceleration0to100s": 9.0,
+            "acceleration0to100s": 9,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -27061,7 +27114,7 @@
           },
           {
             "name": "1.0 EcoBoost PowerShift (92 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2021,
             "bodyType": "suv",
@@ -27103,7 +27156,7 @@
           },
           {
             "name": "1.5 EcoBlue (88 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2021,
             "bodyType": "suv",
@@ -27145,7 +27198,7 @@
           },
           {
             "name": "ST 1.5 EcoBoost (147 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2020,
             "to": 2024,
             "bodyType": "suv",
@@ -27171,7 +27224,7 @@
             "massKg": 1358,
             "topSpeedKmh": 220,
             "acceleration0to100s": 6.7,
-            "consumptionL100": 6.0,
+            "consumptionL100": 6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -27187,7 +27240,7 @@
           },
           {
             "name": "ST 1.0 EcoBoost Hybrid PowerShift (125 kW)",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -27229,7 +27282,7 @@
           },
           {
             "name": "Gen-E",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2024,
             "to": null,
             "bodyType": "suv",
@@ -27237,7 +27290,7 @@
               "fuel": "electric",
               "displacementCc": null,
               "cylinders": null,
-              "powerKw": null,
+              "powerKw": 123.5,
               "powerStandard": null,
               "torqueNm": 290
             },
@@ -27247,14 +27300,14 @@
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
-              "width": null,
-              "height": null,
-              "wheelbase": null
+              "length": 4214,
+              "width": 1805,
+              "height": 1555,
+              "wheelbase": 2588
             },
             "massKg": 1488,
             "topSpeedKmh": 160,
-            "acceleration0to100s": 8.0,
+            "acceleration0to100s": 8,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": 13.1,
@@ -27262,21 +27315,75 @@
             "specificationScope": {
               "market": "Europe",
               "modelYear": null,
-              "noteCs": "Elektromobil; výkon 123/124 kW se ve zdrojích liší. Dojezd a spotřeba WLTP pro základní verzi."
+              "noteCs": "Elektromobil; Ford uvádí přesně 123,5 kW (168 PS), ADAC zaokrouhluje na 124 kW. Dojezd 376 km a spotřeba 13,1 kWh/100 km WLTP odpovídají základní verzi při uvedení v roce 2025; nejde o aktualizovanou verzi 2026."
             },
             "sources": [
               "https://www.auto-data.net/en/ford-puma-facelift-2024-gen-e-43-kwh-168hp-electric-53351",
               "https://en.wikipedia.org/w/index.php?oldid=1376974835",
               "https://paultan.org/2024/12/10/2025-ford-puma-gen-e-debuts",
               "https://autorai.nl/ford-puma-gen-e-eerste-kennismaking"
-            ]
+            ],
+            "rangeCycle": "WLTP"
           }
-        ]
+        ],
+        "fieldSources": {
+          "facelift[0].note": [
+            "https://www.fordotosan.com.tr/en/operations/production/plants",
+            "https://media.ford.com/content/dam/fordmedia/Europe/en/2024/12/Puma-Gen-E/PUMA_GEN-E_release_241202.pdf"
+          ],
+          "engines[4].powerKwMin": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "engines[4].powerKwMax": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].engine.powerKw": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].dimensionsMm.length": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].dimensionsMm.width": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].dimensionsMm.height": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].dimensionsMm.wheelbase": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].specificationScope.noteCs": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/"
+          ],
+          "trims[7].rangeCycle": [
+            "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+            "https://ford.sml.si/media/ford/pricelists/P-2ZE1-2025-2.0.pdf"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381832581",
-      "https://en.wikipedia.org/w/index.php?oldid=1376974835"
+      "https://en.wikipedia.org/w/index.php?oldid=1376974835",
+      "https://media.ford.com/content/dam/fordmedia/Europe/de/2020/09/90Jahre/PM-90-Jahre-Chronik-final1.pdf",
+      "https://www.fordotosan.com.tr/en/operations/production/plants",
+      "https://media.ford.com/content/dam/fordmedia/Europe/en/2024/12/Puma-Gen-E/PUMA_GEN-E_release_241202.pdf",
+      "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf",
+      "https://www.ford.ie/content/dam/guxeu/ie/Documents/Pricelists/Cars/PL-ford_puma_gen-e.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ford/puma/ii-facelift/349399/",
+      "https://ford.sml.si/media/ford/pricelists/P-2ZE1-2025-2.0.pdf"
     ],
     "needsReview": [
       {
@@ -27463,7 +27570,7 @@
         "trims": [
           {
             "name": "2.3 I4 5M – 4x2, Regular Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "pickup",
@@ -27504,7 +27611,7 @@
           },
           {
             "name": "2.9 V6 4AT – 4x4, SuperCab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1985,
             "to": null,
             "bodyType": "pickup",
@@ -27545,7 +27652,7 @@
           },
           {
             "name": "4.0 V6 119 kW (160 hp) 5M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1992,
             "bodyType": "pickup",
@@ -27693,7 +27800,7 @@
         "trims": [
           {
             "name": "2.3 I4 84 kW (112 hp) 5M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1997,
             "bodyType": "pickup",
@@ -27734,7 +27841,7 @@
           },
           {
             "name": "3.0 V6 108 kW (145 hp) 4AT – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1997,
             "bodyType": "pickup",
@@ -27775,7 +27882,7 @@
           },
           {
             "name": "4.0 V6 119 kW (160 hp) 5M – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1992,
             "to": 1997,
             "bodyType": "pickup",
@@ -27946,7 +28053,7 @@
         "trims": [
           {
             "name": "2.3 Duratec 107 kW (143 hp) 5M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2003,
             "to": 2011,
             "bodyType": "pickup",
@@ -27987,7 +28094,7 @@
           },
           {
             "name": "4.0 SOHC V6 154 kW (207 hp) 5AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": 2011,
             "bodyType": "pickup",
@@ -28152,7 +28259,7 @@
         "trims": [
           {
             "name": "2.5 TD 5M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2006,
             "bodyType": "pickup",
@@ -28194,7 +28301,7 @@
           },
           {
             "name": "2.5 D 60 kW (82 k) 5M – 4x2",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1998,
             "to": 2006,
             "bodyType": "pickup",
@@ -28340,7 +28447,7 @@
         "trims": [
           {
             "name": "2.5 TDCi 105 kW (143 k) 5M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2011,
             "bodyType": "pickup",
@@ -28382,7 +28489,7 @@
           },
           {
             "name": "3.0 TDCi 115 kW (156 k) 5M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2011,
             "bodyType": "pickup",
@@ -28424,7 +28531,7 @@
           },
           {
             "name": "3.0 TDCi 115 kW (156 k) 5AT – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2011,
             "bodyType": "pickup",
@@ -28594,7 +28701,7 @@
         "trims": [
           {
             "name": "2.2 TDCi 110 kW (150 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2015,
             "bodyType": "pickup",
@@ -28635,7 +28742,7 @@
           },
           {
             "name": "3.2 TDCi 147 kW (200 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2015,
             "bodyType": "pickup",
@@ -28677,7 +28784,7 @@
           },
           {
             "name": "2.2 TDCi 118 kW (160 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "pickup",
@@ -28718,7 +28825,7 @@
           },
           {
             "name": "2.2 TDCi 118 kW (160 k) 6AT – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "pickup",
@@ -28759,7 +28866,7 @@
           },
           {
             "name": "3.2 TDCi 147 kW (200 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2019,
             "bodyType": "pickup",
@@ -28800,7 +28907,7 @@
           },
           {
             "name": "3.2 TDCi 147 kW (200 k) 6AT – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2016,
             "to": 2022,
             "bodyType": "pickup",
@@ -28841,7 +28948,7 @@
           },
           {
             "name": "2.0 EcoBlue 125 kW (170 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2022,
             "bodyType": "pickup",
@@ -28882,7 +28989,7 @@
           },
           {
             "name": "2.0 EcoBlue Bi-Turbo 157 kW (213 k) 10AT – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2022,
             "bodyType": "pickup",
@@ -28923,7 +29030,7 @@
           },
           {
             "name": "Raptor 2.0 EcoBlue Bi-Turbo 157 kW (213 k) 10AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2022,
             "bodyType": "pickup",
@@ -29067,7 +29174,7 @@
         "trims": [
           {
             "name": "2.0 EcoBlue 125 kW (170 k) 6M – 4x4, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "pickup",
@@ -29108,7 +29215,7 @@
           },
           {
             "name": "2.0 EcoBlue Bi-Turbo 151 kW (205 k) 10AT – e-4WD, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "pickup",
@@ -29150,7 +29257,7 @@
           },
           {
             "name": "3.0 EcoBlue V6 177 kW (240 k) 10AT – e-4WD, Double Cab",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2023,
             "to": null,
             "bodyType": "pickup",
@@ -29192,7 +29299,7 @@
           },
           {
             "name": "Raptor 3.0 EcoBoost V6 215 kW (292 k) 10AT – 4x4",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2022,
             "to": null,
             "bodyType": "pickup",
@@ -29233,7 +29340,7 @@
           },
           {
             "name": "2.3 EcoBoost Plug-In Hybrid 207 kW (281 k) 10AT – e-4WD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2025,
             "to": null,
             "bodyType": "pickup",
@@ -29498,7 +29605,7 @@
         "trims": [
           {
             "name": "2.0 i 16V 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -29539,7 +29646,7 @@
           },
           {
             "name": "2.5 i 20V 162 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -29580,7 +29687,7 @@
           },
           {
             "name": "1.8 TDCi 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -29621,7 +29728,7 @@
           },
           {
             "name": "2.0 TDCi 103 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -29662,7 +29769,7 @@
           },
           {
             "name": "2.2 TDCi 129 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2006,
             "to": 2010,
             "bodyType": "mpv",
@@ -29703,7 +29810,7 @@
           },
           {
             "name": "1.6 EcoBoost SCTi 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -29744,7 +29851,7 @@
           },
           {
             "name": "2.0 EcoBoost 177 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -29785,7 +29892,7 @@
           },
           {
             "name": "1.6 Duratorq TDCi 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -29826,7 +29933,7 @@
           },
           {
             "name": "2.0 Duratorq TDCi 120 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -29867,7 +29974,7 @@
           },
           {
             "name": "2.2 Duratorq TDCi 147 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2014,
             "bodyType": "mpv",
@@ -30047,7 +30154,7 @@
         "trims": [
           {
             "name": "1.5 EcoBoost 118 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -30089,7 +30196,7 @@
           },
           {
             "name": "2.0 EcoBoost 177 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -30131,7 +30238,7 @@
           },
           {
             "name": "2.0 TDCi 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -30173,7 +30280,7 @@
           },
           {
             "name": "2.0 TDCi 132 kW PowerShift AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -30215,7 +30322,7 @@
           },
           {
             "name": "2.0 TDCi 154 kW PowerShift",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2015,
             "to": 2018,
             "bodyType": "mpv",
@@ -30257,7 +30364,7 @@
           },
           {
             "name": "2.0 EcoBlue 110 kW automat",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "mpv",
@@ -30298,7 +30405,7 @@
           },
           {
             "name": "2.0 EcoBlue 140 kW automat AWD",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2019,
             "to": 2023,
             "bodyType": "mpv",
@@ -30339,7 +30446,7 @@
           },
           {
             "name": "2.5 Hybrid 140 kW e-CVT",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2021,
             "to": 2023,
             "bodyType": "mpv",
@@ -30602,7 +30709,7 @@
         "trims": [
           {
             "name": "1.8 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1985,
             "to": 1987,
             "bodyType": "liftback",
@@ -30643,7 +30750,7 @@
           },
           {
             "name": "2.0i DOHC 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1994,
             "bodyType": null,
@@ -30684,7 +30791,7 @@
           },
           {
             "name": "2.4i V6 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1987,
             "to": 1994,
             "bodyType": null,
@@ -30725,7 +30832,7 @@
           },
           {
             "name": "2.8i V6 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1985,
             "to": 1986,
             "bodyType": "liftback",
@@ -30766,7 +30873,7 @@
           },
           {
             "name": "2.9i V6 107 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1994,
             "bodyType": null,
@@ -30807,7 +30914,7 @@
           },
           {
             "name": "2.9i 24V Cosworth 143 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1991,
             "to": 1994,
             "bodyType": null,
@@ -30848,7 +30955,7 @@
           },
           {
             "name": "2.5 D 51 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1986,
             "to": 1989,
             "bodyType": null,
@@ -30889,7 +30996,7 @@
           },
           {
             "name": "2.5 TD 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1993,
             "to": 1994,
             "bodyType": null,
@@ -31064,7 +31171,7 @@
         "trims": [
           {
             "name": "2.0i 8V",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1998,
             "bodyType": null,
@@ -31105,7 +31212,7 @@
           },
           {
             "name": "2.0i 16V 100 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1996,
             "bodyType": null,
@@ -31146,7 +31253,7 @@
           },
           {
             "name": "2.3i 16V 108 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1998,
             "bodyType": null,
@@ -31187,7 +31294,7 @@
           },
           {
             "name": "2.9i V6 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1995,
             "to": 1996,
             "bodyType": null,
@@ -31228,7 +31335,7 @@
           },
           {
             "name": "2.9i 24V Cosworth 152 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1998,
             "bodyType": null,
@@ -31269,7 +31376,7 @@
           },
           {
             "name": "2.5 TD 85 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1994,
             "to": 1996,
             "bodyType": null,
@@ -31310,7 +31417,7 @@
           },
           {
             "name": "2.5 TD 92 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1996,
             "to": 1998,
             "bodyType": null,
@@ -31566,7 +31673,7 @@
         "trims": [
           {
             "name": "1.6 55 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1982,
             "to": 1986,
             "bodyType": "hatchback",
@@ -31607,7 +31714,7 @@
           },
           {
             "name": "2.0 77 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1982,
             "to": 1986,
             "bodyType": "hatchback",
@@ -31648,7 +31755,7 @@
           },
           {
             "name": "2.3 D 49 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1982,
             "to": 1986,
             "bodyType": "hatchback",
@@ -31689,7 +31796,7 @@
           },
           {
             "name": "2.8 XR4i 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1982,
             "to": 1986,
             "bodyType": "hatchback",
@@ -31731,7 +31838,7 @@
           },
           {
             "name": "2.8 XR 4x4 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1985,
             "to": 1986,
             "bodyType": "hatchback",
@@ -31772,7 +31879,7 @@
           },
           {
             "name": "1.8 66 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1987,
             "to": 1988,
             "bodyType": "hatchback",
@@ -31813,7 +31920,7 @@
           },
           {
             "name": "1.8 TD 55 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1993,
             "bodyType": "hatchback",
@@ -31854,7 +31961,7 @@
           },
           {
             "name": "2.0i 88 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1989,
             "to": 1993,
             "bodyType": "hatchback",
@@ -31895,7 +32002,7 @@
           },
           {
             "name": "2.0 RS Cosworth 150 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1987,
             "to": 1990,
             "bodyType": "hatchback",
@@ -31936,7 +32043,7 @@
           },
           {
             "name": "2.9 i XR 4x4 110 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1988,
             "to": 1993,
             "bodyType": "hatchback",
@@ -31977,7 +32084,7 @@
           },
           {
             "name": "2.0 16V Cosworth 4x4 162 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 1990,
             "to": 1993,
             "bodyType": "hatchback",
@@ -32281,7 +32388,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 74,
             "variant": "1.0 EcoBoost"
@@ -32401,7 +32508,7 @@
             "massKg": 1420,
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva, základní výbava)",
             "topSpeedKmh": 165,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": 5.6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -32445,7 +32552,7 @@
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva, základní výbava)",
             "topSpeedKmh": 173,
             "acceleration0to100s": 10.9,
-            "consumptionL100": 8.0,
+            "consumptionL100": 8,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -32488,7 +32595,7 @@
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva, základní výbava)",
             "topSpeedKmh": 145,
             "acceleration0to100s": 17.8,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -32531,7 +32638,7 @@
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva, základní výbava)",
             "topSpeedKmh": 160,
             "acceleration0to100s": 14.7,
-            "consumptionL100": 5.0,
+            "consumptionL100": 5,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -32788,7 +32895,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1968,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 75,
             "powerKwMax": 90,
             "variant": "2.0 EcoBlue"
@@ -33262,7 +33369,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 74,
             "variant": "1.0 EcoBoost"
@@ -33409,7 +33516,7 @@
             "massKg": null,
             "massBasis": null,
             "topSpeedKmh": 157,
-            "acceleration0to100s": 16.0,
+            "acceleration0to100s": 16,
             "consumptionL100": 4.1,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -33453,8 +33560,8 @@
             "massKg": null,
             "massBasis": null,
             "topSpeedKmh": 170,
-            "acceleration0to100s": 14.0,
-            "consumptionL100": 4.0,
+            "acceleration0to100s": 14,
+            "consumptionL100": 4,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -33574,7 +33681,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 92,
             "powerKwMax": 92,
             "variant": "1.0 EcoBoost"
@@ -33865,7 +33972,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1995,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 77,
             "powerKwMax": 136,
             "variant": "2.0 EcoBlue"
@@ -33873,7 +33980,7 @@
           {
             "fuel": "diesel-mhev",
             "displacementCc": 1995,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "2.0 EcoBlue Hybrid (48 V)"
@@ -33881,7 +33988,7 @@
           {
             "fuel": "petrol-phev",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "1.0 EcoBoost PHEV (sériový hybrid)"
@@ -34316,7 +34423,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1996,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 100,
             "powerKwMax": 125,
             "variant": "2.0 EcoBlue"
@@ -34758,7 +34865,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 1996,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 63,
             "powerKwMax": 63,
             "variant": "2.0 V4 Essex"
@@ -34766,7 +34873,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 2994,
-            "displacementLitresNominal": 3.0,
+            "displacementLitresNominal": 3,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "3.0 V6 Essex"
@@ -34790,7 +34897,7 @@
           {
             "fuel": "petrol",
             "displacementCc": null,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "1.6/2.0 Pinto (Mk2)"
@@ -35069,7 +35176,7 @@
           {
             "fuel": "petrol",
             "displacementCc": null,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "2.0 Pinto / DOHC"
@@ -35301,7 +35408,7 @@
           {
             "fuel": "diesel",
             "displacementCc": null,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": 92,
             "variant": "2.0 Duratorq (do 2006)"
@@ -35703,7 +35810,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1996,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 77,
             "powerKwMax": 136,
             "variant": "2.0 EcoBlue"
@@ -35711,7 +35818,7 @@
           {
             "fuel": "diesel-mhev",
             "displacementCc": 1996,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "2.0 EcoBlue Hybrid"
@@ -36316,7 +36423,7 @@
           {
             "fuel": "petrol",
             "displacementCc": null,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "2.0 Duratec (Severní Amerika)"
@@ -36388,7 +36495,7 @@
             "massKg": null,
             "massBasis": null,
             "topSpeedKmh": 143,
-            "acceleration0to100s": 21.0,
+            "acceleration0to100s": 21,
             "consumptionL100": 6.1,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -36476,7 +36583,7 @@
             "massBasis": null,
             "topSpeedKmh": 167,
             "acceleration0to100s": 14.4,
-            "consumptionL100": 6.0,
+            "consumptionL100": 6,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -36527,7 +36634,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 74,
             "variant": "1.0 EcoBoost"
@@ -36939,7 +37046,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1968,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 75,
             "powerKwMax": 90,
             "variant": "2.0 EcoBlue"
@@ -37038,7 +37145,7 @@
             "massKg": null,
             "massBasis": null,
             "topSpeedKmh": 173,
-            "acceleration0to100s": 14.0,
+            "acceleration0to100s": 14,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -37271,7 +37378,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 999,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 74,
             "variant": "1.0 EcoBoost"
@@ -37403,7 +37510,7 @@
             "massKg": 1135,
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva; německý list uvádí EG-Leergewicht vč. řidiče 75 kg)",
             "topSpeedKmh": 157,
-            "acceleration0to100s": 16.0,
+            "acceleration0to100s": 16,
             "consumptionL100": 4.1,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
@@ -37446,8 +37553,8 @@
             "massKg": 1135,
             "massBasis": "nejnižší pohotovostní hmotnost dle Ford (90 % paliva; německý list uvádí EG-Leergewicht vč. řidiče 75 kg)",
             "topSpeedKmh": 170,
-            "acceleration0to100s": 14.0,
-            "consumptionL100": 4.0,
+            "acceleration0to100s": 14,
+            "consumptionL100": 4,
             "consumptionCycle": "NEDC",
             "consumptionKwh100": null,
             "rangeKm": null,
@@ -37607,7 +37714,7 @@
           {
             "fuel": "petrol",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 74,
             "powerKwMax": 92,
             "variant": "1.0 EcoBoost"
@@ -37988,7 +38095,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1995,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 77,
             "powerKwMax": 136,
             "variant": "2.0 EcoBlue (od 2016)"
@@ -37996,7 +38103,7 @@
           {
             "fuel": "diesel-mhev",
             "displacementCc": 1995,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "2.0 EcoBlue Hybrid (48 V, od 2019)"
@@ -38004,7 +38111,7 @@
           {
             "fuel": "petrol-phev",
             "displacementCc": 998,
-            "displacementLitresNominal": 1.0,
+            "displacementLitresNominal": 1,
             "powerKwMin": 92,
             "powerKwMax": 92,
             "variant": "1.0 EcoBoost PHEV (výkon elektromotoru)"
@@ -38390,7 +38497,7 @@
           {
             "fuel": "diesel",
             "displacementCc": 1996,
-            "displacementLitresNominal": 2.0,
+            "displacementLitresNominal": 2,
             "powerKwMin": 81,
             "powerKwMax": 125,
             "variant": "2.0 EcoBlue"

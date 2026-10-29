@@ -1,0 +1,239 @@
+{
+  "make": "wey",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Čína (Q148)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)",
+        "https://www.wikidata.org/wiki/Q31842448"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Wikidata Q31842448 described as 'chinesische Automobilmarke', HQ P159 = Q58584 (Baoding); zh.wikipedia 魏牌 https://www.wikidata.org/wiki/Q31842448"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "mocca",
+      "field": "name",
+      "from": "Mocca",
+      "to": "Mocha",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)",
+        "https://en.wikipedia.org/wiki/Wey_Mocha"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: zh.wikipedia 魏牌 lists 魏牌摩卡 (Mocha) https://zh.wikipedia.org/wiki/魏牌"
+    },
+    {
+      "file": "models-auto",
+      "slug": "p8",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_P8",
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "high",
+      "verify": "disputed: de.wikipedia Wey_P8 gives Bauzeitraum 2018-2019 (successor VV7 PHEV) vs en.wikipedia 2020; ended status not in doubt https://de.wikipedia.org/wiki/Wey_P8"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vv5",
+      "field": "productionStart",
+      "from": null,
+      "to": 2017,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vv5",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vv7",
+      "field": "productionStart",
+      "from": null,
+      "to": 2017,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "vv7",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "latte",
+      "field": "productionEnd",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia Wey_Latte infobox 'Production 2021-2025 (China), 2023-present (export)' https://en.wikipedia.org/wiki/Wey_Latte"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "VV6",
+      "from": 2018,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ]
+    },
+    {
+      "name": "VV7 GT",
+      "from": 2019,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ]
+    },
+    {
+      "name": "Macchiato",
+      "from": 2021,
+      "to": 2023,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "verify": "confirmed with correction: de.wikipedia Wey_Macchiato gives 2021-2022 (hybrid Aug 2021-Nov 2022, PHEV Nov 2021-Dec 2022), so 'to' should be 2022 not 2023 https://de.wikipedia.org/wiki/Wey_Macchiato"
+    },
+    {
+      "name": "Gaoshan",
+      "from": 2023,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ]
+    },
+    {
+      "name": "V9X",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ]
+    },
+    {
+      "name": "V8X",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "p8",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_P8",
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "verify": "disputed (kept): de.wikipedia Wey_P8 gives 2018-2019 vs en.wikipedia 2020; not reverted because ended status stands and the en.wikipedia article supports 2020 https://de.wikipedia.org/wiki/Wey_P8"
+    },
+    {
+      "lineSlug": "macchiato",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2023,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "verify": "reverted: de.wikipedia Wey_Macchiato gives production 2021-2022 with variant-level end dates Nov 2022 (HEV) and Dec 2022 (PHEV); 2023 came only from the marque list page. Restored null; suggested value 2022 https://de.wikipedia.org/wiki/Wey_Macchiato"
+    },
+    {
+      "lineSlug": "latte",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "verify": "confirmed: en.wikipedia Wey_Latte 'Production 2021-2025 (China)' https://en.wikipedia.org/wiki/Wey_Latte"
+    },
+    {
+      "lineSlug": "latte",
+      "path": "generations[0].productionStatus",
+      "from": "current",
+      "to": "unknown",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Wey_(marque)"
+      ],
+      "verify": "confirmed: en.wikipedia Wey_Latte lists export production 2023-present while China ended 2025, so 'unknown' is the honest value https://en.wikipedia.org/wiki/Wey_Latte"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "p8 production start",
+      "values": {
+        "en.wikipedia Wey P8": 2017,
+        "en.wikipedia Wey (marque)": 2018
+      },
+      "kept": 2018
+    },
+    {
+      "where": "macchiato generations[0].to (series-production fill 2026-10-29)",
+      "values": {
+        "https://de.wikipedia.org/w/index.php?oldid=262071222 (HEV 11/2022, PHEV 12/2022)": 2022,
+        "https://en.wikipedia.org/w/index.php?oldid=1346912833": 2023
+      },
+      "kept": null
+    }
+  ],
+  "openQuestions": [
+    "Latte/Wey 03: China production ended 2025 per en.wikipedia, but card lists Europe sales as GWM Wey 03; productionStatus set unknown pending a 2026 European price list.",
+    "No WEY rows in model-lines-auto.json; all 13 cards are additions."
+  ],
+  "summary": "Card was detailed; fixed P8 end (2020), Macchiato end (2023), Latte China end (2025). Make country missing (China) and six models missing from models-auto."
+}

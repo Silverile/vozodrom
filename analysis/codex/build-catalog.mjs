@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applySelectorExclusions} from '../sweep/selector-exclusions.mjs';
 import {readRaw,rawNames} from './raw-data.mjs';
 const root='analysis/codex', dest='src/data/catalog'; fs.mkdirSync(dest,{recursive:true});
 const read=n=>readRaw(n).results.bindings;
@@ -74,6 +75,9 @@ for(const section of ['auto','moto']) {
  // Keep same-name records distinct, using a QID suffix stable across later imports.
  const counts=new Map();for(const m of models){const key=m.makeSlug+'/'+m.slug;counts.set(key,(counts.get(key)||0)+1);}for(const m of models)if(counts.get(m.makeSlug+'/'+m.slug)>1)m.slug+='-'+m.qid.toLowerCase();
  const used=new Set();for(const m of models){m.slug=registry[section][m.qid]??m.slug;let key=m.makeSlug+'/'+m.slug;if(used.has(key)){m.slug+='-'+m.qid.toLowerCase();key=m.makeSlug+'/'+m.slug;}if(used.has(key))throw Error('model slug collision '+key);used.add(key);registry[section][m.qid]=m.slug;}
+ const retainedModels=applySelectorExclusions('models-'+section,models);
+ for(const model of models)if(!retainedModels.includes(model))rejected.push({qid:model.qid,reason:'reviewed-sweep-exclusion',makeSlug:model.makeSlug,slug:model.slug});
+ models.splice(0,models.length,...retainedModels);
  sorted(models);write('models-'+section,models);
  fs.writeFileSync(`${root}/excluded-models-${section}.json`,JSON.stringify(rejected,null,2)+'\n');
  audit.models[section]={sourceEntities:grouped.size,included:models.length,excluded:rejected.length,missingBody:models.filter(m=>m.body===null).length,missingProductionStart:models.filter(m=>m.productionStart===null).length,missingProductionEnd:models.filter(m=>m.productionEnd===null).length,missingGenerations:models.filter(m=>m.generations===null).length,withInception:models.filter(m=>m.inceptionYear!==null).length,byMake:Object.fromEntries(makes.filter(m=>m.sections.includes(section)).map(m=>[m.slug,models.filter(x=>x.makeSlug===m.slug).length]))};

@@ -1,0 +1,505 @@
+{
+  "make": "voyah",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Čína",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q107121376",
+        "https://en.wikipedia.org/w/index.php?oldid=1381447096"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Voyah is a Dongfeng brand, Wuhan, China (en.wikipedia Voyah Courage: built in Wuhan)"
+    },
+    {
+      "field": "countryQid",
+      "from": null,
+      "to": "Q148",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q107121376"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Voyah is a Dongfeng brand, Wuhan, China (en.wikipedia Voyah Courage: built in Wuhan)"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "free",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381447096"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "free",
+      "field": "productionStart",
+      "from": null,
+      "to": 2021,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381447096"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "passion",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Voyah_Passion"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "taishan",
+      "field": "productionStart",
+      "from": null,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378412345"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Courage (Zhiyin)",
+      "from": 2024,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381447543",
+        "https://carnewschina.com/2024/12/19/dongfeng-backed-voyah-courage-coming-to-europe-wvta-certification-finished/"
+      ],
+      "note": "EU WVTA, sold in Europe; card exists (isAddition)."
+    },
+    {
+      "name": "Passion S (Zhuiguang S)",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "card voyah.json passion-s sources"
+      ],
+      "note": "Card exists (isAddition); China only so far."
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[5].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[6].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[0].trims[7].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[1].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "free",
+      "path": "generations[1].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[5].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "dreamer",
+      "path": "generations[0].trims[6].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion",
+      "path": "generations[1].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[5].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[6].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[7].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].trims[8].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "taishan",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "taishan",
+      "path": "generations[1].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "taishan",
+      "path": "generations[1].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "taishan",
+      "path": "generations[1].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion-s",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "passion-s",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts line 166 trim kind union"
+    },
+    {
+      "lineSlug": "courage",
+      "path": "generations[0].dimensionsMm.height",
+      "from": null,
+      "to": 1636,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381447543",
+        "https://cnevpost.com/2025/08/29/voyah-launches-updated-zhiyin/"
+      ],
+      "verify": "confirmed (weak, same family of sources): en.wikipedia Voyah Courage current text 4725x1900x1636, wheelbase 2900; zh.wikipedia page not reachable"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "free generations[0].dimensionsMm",
+      "values": {
+        "fdrive.cz / auto-data.net (card)": "h 1645, wb 2960",
+        "en.wikipedia oldid 1381447096": "h 1690, wb 2955"
+      },
+      "kept": "h 1645, wb 2960 (European spec; already noted in specificationScope)"
+    }
+  ],
+  "openQuestions": [
+    "Free I fuel for EREV versions is stored as petrol-phev because types.ts has no range-extender fuel; consider an \"erev\" value.",
+    "Taishan / Passion S / Free+ / Passion L have no photo yet."
+  ],
+  "summary": "Voyah cards checked against Wikipedia (Free, Courage, Taishan) and CnEVPost: generations, launch years and statuses hold; fixed invalid trim kind \"version\" on 37 trims and filled the Courage height. Make entry lacks its country."
+}

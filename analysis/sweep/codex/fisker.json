@@ -1,0 +1,104 @@
+{
+  "make": "fisker",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "karma",
+      "field": "makeSlug",
+      "from": "fisker",
+      "to": "fisker-automotive",
+      "sources": [
+        "https://www.deb.uscourts.gov/sites/deb/files/opinions/fah-fisker-warn-act-combined_0.pdf",
+        "https://oversight.house.gov/wp-content/uploads/2013/04/FISKER-Testimony.pdf"
+      ],
+      "confidence": "high",
+      "reason": "Court findings and founder testimony assign the original 2011–2012 Karma to the company formed in 2007. Current fisker display identity is the 2016 Fisker Inc company. Curated Karma line/card already belongs to fisker-automotive; align the raw row without moving the correct card. Canonical Wikidata company-QID mapping also requires separate review."
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Bankruptcy filing is distinct from corporate dissolution; canonical make status requires final legal outcome.",
+    "Photos were inventoried by existing filename only; this pass performed no new visual verification."
+  ],
+  "summary": "Partial breadth pass: Contract manufacturer Q32024 filing verifies Ocean manufacturing agreement termination, corroborating existing2024/ended card. All local identities inventoried; remaining specifications, histories, generation codes, photos and current production are not certified. Root proposes moving the raw Karma attribution to Fisker Automotive, matching the correct curated card.",
+  "localIdentityInventory": {
+    "raw": [
+      {
+        "slug": "alaska",
+        "name": "Alaska"
+      },
+      {
+        "slug": "karma",
+        "name": "Karma"
+      },
+      {
+        "slug": "ocean",
+        "name": "Ocean"
+      },
+      {
+        "slug": "pear",
+        "name": "Pear"
+      }
+    ],
+    "lines": [
+      {
+        "slug": "ocean",
+        "name": "Ocean"
+      }
+    ],
+    "additions": [
+      {
+        "slug": "ocean",
+        "name": "Ocean"
+      }
+    ],
+    "cards": [
+      {
+        "lineSlug": "ocean",
+        "name": "Ocean",
+        "generations": [
+          {
+            "name": "Ocean – sériová rodina",
+            "code": null,
+            "from": 2022,
+            "to": 2024,
+            "productionStatus": "ended",
+            "photoFile": "2023 Fisker Ocean 1.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 4,
+    "modelLinesInventoried": 1,
+    "additionsInventoried": 1,
+    "catalogCardsInventoried": 1,
+    "generationRowsInventoried": 1,
+    "externalChecks": [
+      {
+        "scope": "Contract manufacturer Q32024 filing verifies Ocean manufacturing agreement termination, corroborating existing2024/ended card.",
+        "sources": [
+          "https://www.magna.com/docs/default-source/2024-news---press-releases/magna-2024-q3-pr-w-fs-mda.pdf?sfvrsn=6f5dbb0a_3"
+        ]
+      },
+      {
+        "scope": "Independent root Karma manufacturer attribution",
+        "sources": [
+          "https://www.deb.uscourts.gov/sites/deb/files/opinions/fah-fisker-warn-act-combined_0.pdf"
+        ],
+        "result": "Original Karma belongs to the 2007 Fisker Automotive entity; raw assignment disagrees with the already correct curated line/card."
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

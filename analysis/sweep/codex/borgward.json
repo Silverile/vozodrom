@@ -1,0 +1,156 @@
+{
+  "make": "borgward",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "isabella",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "confidence": "high",
+      "reason": "Completed historic production, exact aggregate endpoint unresolved."
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "isabella",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "confidence": "high",
+      "reason": "Completed historic production, exact aggregate endpoint unresolved."
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "isabella",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "confidence": "high",
+      "reason": "Match single historical model generation."
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "isabella",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "confidence": "high",
+      "reason": "Match single historical model generation."
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "isabella",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "reason": "Historical Isabella manufacturing is completed; no inference of modern Borgward continuity."
+    },
+    {
+      "lineSlug": "isabella",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Borgward_Isabella",
+        "https://www.borgwardclub.de/historie-c-f-w-borgward/",
+        "https://www.borgward.uk/brief_history_marques.htm"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Borgward_Isabella",
+        "https://www.borgwardclub.de/historie-c-f-w-borgward/",
+        "https://www.borgward.uk/brief_history_marques.htm",
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "reason": "Attach checked evidence."
+    },
+    {
+      "lineSlug": "isabella",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Borgward_Isabella",
+        "https://www.borgwardclub.de/historie-c-f-w-borgward/",
+        "https://www.borgward.uk/brief_history_marques.htm"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Borgward_Isabella",
+        "https://www.borgwardclub.de/historie-c-f-w-borgward/",
+        "https://www.borgward.uk/brief_history_marques.htm",
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "sources": [
+        "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf",
+        "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657"
+      ],
+      "reason": "Attach checked generation evidence."
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "1961 bankruptcy vs make dissolvedYear1963",
+      "values": {
+        "Bremen authority": 1961,
+        "Existing canonical entity dissolution": 1963
+      },
+      "kept": 1963,
+      "reason": "Bankruptcy does not itself establish legal dissolution; founder also died1963."
+    }
+  ],
+  "openQuestions": [
+    "Isabella exact end may include post-bankruptcy completions and overseas assembly; global end kept null rather than forced to German factory1961.",
+    "Canonical old-company QID and related modern Chinese-company QID must remain distinguished; no blanket defunct/status propagation.",
+    "Modern BXi7 unknown end requires Chinese production/legal sources; bankruptcy is not identical to last build date.",
+    "Raw Goliath brand attribution and historic truck B611 eligibility require explicit make/section policy review."
+  ],
+  "summary": "Partial Borgward breadth pass marks historical Isabella ended while preserving unknown aggregate end. Original-company bankruptcy, founder death, later brand revival and modern production are not conflated.",
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 11,
+    "modelLinesInventoried": 15,
+    "additionsInventoried": 15,
+    "catalogCardsInventoried": 15,
+    "generationRowsInventoried": 16,
+    "externalChecks": [
+      {
+        "scope": "1961 industrial bankruptcy from city authority and contemporary archive; historic Isabella1954 introduction/end context",
+        "sources": [
+          "https://www.ortsamt-hemelingen.bremen.de/stadtteil/geschichte-1657",
+          "https://www.ardmediathek.de/video/aktuelle-kamera/insolvenz-der-borgward-werke-in-bremen/ard/YnJpZDovL2RyYS5kZS9tZWRpYXRoZWsvcHVibGljYXRpb24vODI1NjI",
+          "https://www.verwaltungsschule.bremen.de/sixcms/media.php/13/Die%20Geschichte%20Bremens.pdf"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

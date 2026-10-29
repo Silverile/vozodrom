@@ -1,0 +1,106 @@
+{
+  "make": "austin-motor-company",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": "Maroko",
+      "to": "Spojené království",
+      "sources": [
+        "https://nationalmotormuseum.org.uk/wp-content/uploads/2017/11/Austin-Motor-Company.pdf"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "countryQid",
+      "from": "Q1028",
+      "to": "Q145",
+      "sources": [
+        "https://nationalmotormuseum.org.uk/wp-content/uploads/2017/11/Austin-Motor-Company.pdf"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "countries",
+      "from": [
+        {
+          "qid": "Q1028",
+          "name": "Maroko"
+        }
+      ],
+      "to": [
+        {
+          "qid": "Q145",
+          "name": "Spojené království"
+        }
+      ],
+      "sources": [
+        "https://nationalmotormuseum.org.uk/wp-content/uploads/2017/11/Austin-Motor-Company.pdf"
+      ],
+      "confidence": "high"
+    },
+    {
+      "field": "aliases",
+      "from": [
+        "Q781156"
+      ],
+      "to": [
+        "Austin"
+      ],
+      "sources": [
+        "https://nationalmotormuseum.org.uk/wp-content/uploads/2017/11/Austin-Motor-Company.pdf"
+      ],
+      "confidence": "high",
+      "reason": "A Wikidata identifier is not a human make alias; Austin is the evidenced brand name."
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Austin Seven / Mini (ADO15)",
+      "from": null,
+      "to": 1969,
+      "bodyTypes": null,
+      "sources": [
+        "https://www.britishmotormuseum.co.uk/explore/museum-blog/archive-news/archive-news-anniversaries?hs_amp=true"
+      ],
+      "note": "Missing selected Austin model/card, distinct from the existing interwar Seven and1909 7hp identities. Museum documents1959 introduction,1962 rename toAustinMini, Austin/Morris badge retirement1969. Production-start and full body range need exact primary evidence; do not duplicate full later Mini-brand history."
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Maestro earliest calendar production",
+      "values": {
+        "existingCardFrom": 1982,
+        "museumFirstOfLineObjectYear": 1983
+      },
+      "kept": 1982,
+      "sources": [
+        "https://www.britishmotormuseum.co.uk/online-collections/details-page?row_id=76417441829"
+      ],
+      "note": "First-of-line collection object labelled1983 versus existing1982 production boundary; resolve object dating/pre-series/serial production before changing."
+    }
+  ],
+  "openQuestions": [
+    "Partial breadth pass:30 cards/38 family-generation records and45 raw identities inventoried.",
+    "Make countryMorocco is an unequivocal attribution error; museum history locates manufacturer in Longbridge/Birmingham,England. Shared file proposals only.",
+    "Corporate1952 merger is notAustin badge retirement: card histories legitimately extend beyond1952. Do not cap models at corporate dissolution year.",
+    "No historic card dates changed without precise production evidence; most intervals remain supported only by preexisting sources, not newly certified.",
+    "AustinMini badge-period coverage should be added without merging originalSeven1922 or early7hp1909 identities.",
+    "Maestro/Montego exact end ofAustin badging remains unknown; did not copy full model-family end1994/1995 into badge-limited cards.",
+    "A30 start,3-Litre reveal versus SOP and early hp variants need production-specific follow-up.",
+    "All trims/photos/raw special-purpose classifications remain incomplete."
+  ],
+  "summary": "Partial Austin sweep identified a major wrong-country error(Morocco instead ofUK), a QID masquerading as an alias, and missing selected AustinMini badge-period coverage; all shared proposals, no card dates guessed.",
+  "coverage": {
+    "cardsInventoried": 30,
+    "generationRecordsInventoried": 38,
+    "rawModelsInventoried": 45,
+    "fullyVerifiedModels": [],
+    "sourceIndependence": "National Motor Museum history and separate British Motor Museum collection/archive publications."
+  }
+}

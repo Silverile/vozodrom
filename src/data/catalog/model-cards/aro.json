@@ -530,16 +530,95 @@
         "markets": [],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
-        "trims": null,
+        "trims": [
+          {
+            "name": "M461C M-207 - muzejni vuz 1971",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 2512,
+              "cylinders": 4,
+              "powerKw": null,
+              "powerStandard": null,
+              "torqueNm": null
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 4
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 100,
+            "acceleration0to100s": null,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Czechoslovakia; museum collection vehicle",
+              "modelYear": 1971,
+              "noteCs": "Technicky zaklad M-207 potvrzuji nezavisle rumunsky klub a dokumentace muzejniho vozu 1971. Prirazeni k M461C vychazi z roku vozu a dolozene vyroby C v letech 1969-1975. awd oznacuje pripojitelny pohon predni napravy (4x2/4x4). Vykon, tocivy moment, hmotnost a spotreba nebyly sjednoceny pres odlisne vykonove a merici udaje pramenu."
+            },
+            "sources": [
+              "https://arom461.ro/m461.html",
+              "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+            ],
+            "fieldSources": {
+              "engine.fuel": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "engine.displacementCc": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "engine.cylinders": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "transmission.type": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "transmission.gears": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "drive": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ],
+              "topSpeedKmh": [
+                "https://arom461.ro/m461.html",
+                "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
+              ]
+            }
+          }
+        ],
         "sources": [
-          "https://www.aro-m461.cz/?q=node/337"
+          "https://www.aro-m461.cz/?q=node/337",
+          "https://arom461.ro/m461.html",
+          "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
         ]
       }
     ],
     "sources": [
       "https://www.aro-m461.cz/?q=node/337",
       "https://www.bibliotecadeva.ro/periodice/tehnica/1971/sport_tehnica_1971_05_05.pdf",
-      "https://www.aro-m461.cz/?q=node/4"
+      "https://www.aro-m461.cz/?q=node/4",
+      "https://arom461.ro/m461.html",
+      "https://www.klub-vm.eu/clanky/technika/technika-clenu/osobni/aro-m461.html"
     ],
     "needsReview": [
       {
@@ -659,8 +738,8 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[1].trims[0].engine.powerKw",
+        "reason": "Muzejni list 1971 uvadi 56,7 kW (77 k), rumunsky prehled M461 70 CP. Vyrobni katalog rozlisuje maximalni a jmenovity vykon; bez prirazeni normy a roku zustava hodnota null."
       }
     ]
   },
@@ -677,7 +756,7 @@
         "code": "M59",
         "name": "M59 – souhrnná řada",
         "from": 1959,
-        "to": null,
+        "to": 1964,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -708,19 +787,19 @@
         "trims": null,
         "sources": [
           "https://www.aro-m461.cz/?q=node/337",
-          "https://en.wikipedia.org/wiki/ARO_M461"
+          "https://en.wikipedia.org/wiki/ARO_M461",
+          "https://arom461.ro/m59.html",
+          "https://www.bibliotecadeva.ro/periodice/tehnica/1970/sport_tehnica_1970_09_09.pdf"
         ]
       }
     ],
     "sources": [
       "https://www.aro-m461.cz/?q=node/337",
-      "https://en.wikipedia.org/wiki/ARO_M461"
+      "https://en.wikipedia.org/wiki/ARO_M461",
+      "https://arom461.ro/m59.html",
+      "https://www.bibliotecadeva.ro/periodice/tehnica/1970/sport_tehnica_1970_09_09.pdf"
     ],
     "needsReview": [
-      {
-        "field": "generations[0].to",
-        "reason": "Rozpor konce 1963/1964; potřeba původního výrobního záznamu a rozlišení M59A/M59B."
-      },
       {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."

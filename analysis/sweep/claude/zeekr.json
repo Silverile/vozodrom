@@ -1,0 +1,95 @@
+{
+  "make": "zeekr",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "001",
+      "field": "bodyTypes",
+      "from": [
+        "sedan"
+      ],
+      "to": [
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_001"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "007",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_007"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "x",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_X"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "7x",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_7X"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "rt",
+      "reason": "Waymo robotaxi, not sold to private buyers (low confidence; card exists)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_RT"
+      ],
+      "verify": "confirmed: en.wikipedia Waymo: the Zeekr-built Ojai is a robotaxi in Waymo's ride service, not sold to the public https://en.wikipedia.org/wiki/Waymo"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Mix",
+      "from": 2024,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zeekr_Mix"
+      ],
+      "verify": "confirmed: en.wikipedia Zeekr_Mix production from Oct 2024, five-door minivan https://en.wikipedia.org/wiki/Zeekr_Mix"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "7GT (Europe) vs 007 GT (China) dimensions differ (4817/2900 vs 4864/2925 mm); card keeps both correctly scoped."
+  ],
+  "summary": "Zeekr cards checked against Wikipedia and EU press data; no card errors found. Proposed body types and Mix for models-auto."
+}

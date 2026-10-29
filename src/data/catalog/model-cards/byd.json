@@ -139,9 +139,20 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "variant": "60.48 kWh FWD — evropská specifikace 10/2022"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": 4455,
@@ -272,13 +283,27 @@
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
-          "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf"
-        ]
+          "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf",
+          "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+          "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+        ],
+        "fieldSources": {
+          "engines": [
+            "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+            "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+          ],
+          "drivetrains": [
+            "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+            "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
-      "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf"
+      "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf",
+      "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+      "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
     ],
     "needsReview": [
       {
@@ -295,14 +320,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -482,9 +499,20 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "variant": "Comfort / Design 60.4 kWh — evropská specifikace 2025"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": 4290,
@@ -549,7 +577,7 @@
             },
             "massKg": null,
             "massBasis": null,
-            "topSpeedKmh": null,
+            "topSpeedKmh": 160,
             "acceleration0to100s": 7,
             "consumptionL100": null,
             "consumptionCycle": "WLTP combined",
@@ -563,7 +591,8 @@
             },
             "sources": [
               "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
-              "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+              "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+              "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
             ],
             "fieldSources": {
               "engine.powerKw": [
@@ -613,6 +642,10 @@
               "dimensionsMm.wheelbase": [
                 "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
                 "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+              ],
+              "topSpeedKmh": [
+                "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+                "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
               ]
             }
           },
@@ -643,7 +676,7 @@
             },
             "massKg": null,
             "massBasis": null,
-            "topSpeedKmh": null,
+            "topSpeedKmh": 160,
             "acceleration0to100s": 7,
             "consumptionL100": null,
             "consumptionCycle": "WLTP combined",
@@ -657,7 +690,8 @@
             },
             "sources": [
               "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
-              "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+              "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+              "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
             ],
             "fieldSources": {
               "engine.powerKw": [
@@ -707,6 +741,10 @@
               "dimensionsMm.wheelbase": [
                 "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
                 "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+              ],
+              "topSpeedKmh": [
+                "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+                "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
               ]
             }
           }
@@ -714,14 +752,26 @@
         "sources": [
           "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
           "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
-          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
-        ]
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ],
+        "fieldSources": {
+          "engines": [
+            "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+            "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+          ],
+          "drivetrains": [
+            "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+            "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
       "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
-      "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+      "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
     ],
     "needsReview": [
       {
@@ -738,14 +788,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -789,10 +831,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[0].consumptionL100",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -830,10 +868,6 @@
       },
       {
         "field": "generations[0].trims[1].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].topSpeedKmh",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

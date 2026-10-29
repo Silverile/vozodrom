@@ -1,0 +1,1634 @@
+{
+  "make": "alfa-romeo",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 38,
+    "rawModelsInventoried": 96,
+    "modelLinesInventoried": 38,
+    "additionsInventoried": 14,
+    "sourceCheckedModels": [
+      "alfasud",
+      "tonale-concept",
+      "racing-c41"
+    ],
+    "limitations": "All local model identities and chronology inventoried; selected external checks only. Not a complete make/model, specification or image validation."
+  },
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "alfasud",
+      "field": "generations[0].from",
+      "from": 1971,
+      "to": 1972,
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "alfasud",
+      "field": "generations[0].to",
+      "from": null,
+      "to": 1984,
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "alfasud",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "tonale-concept",
+      "reason": "2019 concept, separate from production Tonale.",
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/the-new-alfa-romeo-tonale-concept-car-electrification-meets-beauty-and-dynamism"
+      ]
+    },
+    {
+      "file": "models-auto",
+      "slug": "racing-c41",
+      "reason": "Formula One racing car, not production road-car model.",
+      "sources": [
+        "https://www.formula1.com/en/latest/article/watch-live-see-alfa-romeo-pull-the-covers-off-their-2021-car-the-c41.27rgcuifVYb4rg4Qt9kYQx"
+      ]
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "alfasud",
+      "path": "generations[0].from",
+      "from": 1971,
+      "to": 1972,
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "alfasud",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 1984,
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "alfasud",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "alfasud",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.media.stellantis.com/pl-pl/alfa-romeo/press/mediolan-gospodarzem-obchod%C3%B3w-100-lecia-alfy-romeo",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/100-jahre-alfa-romeo-die-unternehmensgeschichte"
+      ],
+      "to": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx",
+        "https://www.media.stellantis.com/pl-pl/alfa-romeo/press/mediolan-gospodarzem-obchod%C3%B3w-100-lecia-alfy-romeo",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/100-jahre-alfa-romeo-die-unternehmensgeschichte"
+      ],
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "alfasud",
+      "path": "sources",
+      "from": [
+        "https://www.media.stellantis.com/pl-pl/alfa-romeo/press/mediolan-gospodarzem-obchod%C3%B3w-100-lecia-alfy-romeo",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/100-jahre-alfa-romeo-die-unternehmensgeschichte"
+      ],
+      "to": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx",
+        "https://www.media.stellantis.com/pl-pl/alfa-romeo/press/mediolan-gospodarzem-obchod%C3%B3w-100-lecia-alfy-romeo",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/100-jahre-alfa-romeo-die-unternehmensgeschichte"
+      ],
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "alfasud",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "generations[0].from",
+          "reason": "Rok 1971 znamená veřejný debut v primární historii, nikoli nezávisle doložený počátek každé výrobní/karosářské varianty."
+        },
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.museoalfaromeo.com/en-us/collezione/Pages/Alfasud.aspx"
+      ]
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2004,
+          "productionYear": 2004,
+          "note": "Modernizace představená v Paříži, italský debut v říjnu 2004; upravená příď a světla. Netýká se vzhledu GTA.",
+          "sources": [
+            "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+            "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+      ],
+      "reason": "Fill checked visible exterior update; retain generation boundaries."
+    },
+    {
+      "lineSlug": "156",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2003,
+          "productionYear": 2003,
+          "note": "Výrazně přepracovaná příď od Italdesign Giugiaro pro sedan a Sportwagon; evropské uvedení v červnu 2003, britské v září. Nejde o aktualizaci interiéru z roku 2002 ani změnu GTA.",
+          "sources": [
+            "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+            "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "reason": "Fill checked visible exterior update; retain generation boundaries."
+    },
+    {
+      "lineSlug": "giulietta",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2013,
+          "productionYear": 2013,
+          "note": "Giulietta MY2014: nová mřížka a chromované rámečky mlhovek; představení Frankfurt 2013, prodej od října 2013. Modelový rok 2014 není rokem premiéry.",
+          "sources": [
+            "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+            "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html"
+          ]
+        },
+        {
+          "year": 2016,
+          "productionYear": 2016,
+          "note": "Nová voštinová mřížka, upravené nárazníkové detaily a loga; premiéra únor 2016, britský prodej od dubna 2016.",
+          "sources": [
+            "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+            "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "reason": "Distinguish the 2013 reveal of MY2014 and the second exterior update in 2016."
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 1.6,
+          "powerKwMin": 77,
+          "powerKwMax": 77,
+          "variant": "1.6 T.Spark ECO 105 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 1.6,
+          "powerKwMin": 88,
+          "powerKwMax": 88,
+          "variant": "1.6 T.Spark 120 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 2,
+          "powerKwMin": 110,
+          "powerKwMax": 110,
+          "variant": "2.0 T.Spark 150 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "petrol",
+          "displacementCc": null,
+          "displacementLitresNominal": 3.2,
+          "powerKwMin": 184,
+          "powerKwMax": 184,
+          "variant": "3.2 V6 GTA 250 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "diesel",
+          "displacementCc": null,
+          "displacementLitresNominal": 1.9,
+          "powerKwMin": 74,
+          "powerKwMax": 74,
+          "variant": "1.9 JTD 8V 100 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "diesel",
+          "displacementCc": null,
+          "displacementLitresNominal": 1.9,
+          "powerKwMin": 85,
+          "powerKwMax": 85,
+          "variant": "1.9 JTD 8V 115 PS – německá nabídka 15. 4. 2004"
+        },
+        {
+          "fuel": "diesel",
+          "displacementCc": null,
+          "displacementLitresNominal": 1.9,
+          "powerKwMin": 103,
+          "powerKwMax": 103,
+          "variant": "1.9 JTD 16V 140 PS – německá nabídka 15. 4. 2004"
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+      ],
+      "reason": "Selected German April 2004 engine range; exact displacement not inferred from marketing litres."
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].engineCoverage",
+      "from": "unknown",
+      "to": "partial",
+      "sources": [
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+      ],
+      "reason": "Selected dated market range does not cover all European years."
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+      "to": "Historická výroba neznamená potvrzenou současnou nabídku v Česku. Motory zde představují německou nabídku z 15. dubna 2004, nikoli úplný evropský rozsah všech let; pozdější diesely nejsou tímto výčtem vyloučeny.",
+      "sources": [
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+      ],
+      "reason": "Expose the dated engine-range scope."
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].code",
+      "from": null,
+      "to": "937",
+      "sources": [
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524"
+      ],
+      "reason": "Manufacturer-internal series designation explicitly published by ADAC and independently corroborated."
+    },
+    {
+      "lineSlug": "147",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378461524",
+        "https://www.wikidata.org/wiki/Q174366"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378461524",
+        "https://www.wikidata.org/wiki/Q174366",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "147",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378461524",
+        "https://www.wikidata.org/wiki/Q174366"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1378461524",
+        "https://www.wikidata.org/wiki/Q174366",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "147",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "generations",
+          "reason": "Základní identita převzata z dříve shromážděného katalogového snapshotu; úplné rozdělení karoserií, modernizací, trhů a technických verzí nebylo v tomto nočním průchodu znovu ověřeno."
+        },
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "generations",
+          "reason": "Základní identita převzata z dříve shromážděného katalogového snapshotu; úplné rozdělení karoserií, modernizací, trhů a technických verzí nebylo v tomto nočním průchodu znovu ověřeno."
+        },
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines[0].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[1].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[2].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[3].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[4].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[5].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        },
+        {
+          "field": "generations[0].engines[6].displacementCc",
+          "reason": "Přesný zdvihový objem nebyl ověřen pro tento datovaný rozsah; nominální litry nejsou převodem na cm³."
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/nuova-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.media.stellantis.com/de-de/alfa-romeo/press/text-alfa-147",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_147&oldid=1378461524",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/alfa-romeo/147/937/993522/"
+      ],
+      "reason": "Remove resolved unknown fields and record exact-displacement limitations."
+    },
+    {
+      "lineSlug": "156",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379532501",
+        "https://www.wikidata.org/wiki/Q926738",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/alfa-romeo-compie-100-anni-e-milano-ospita-quattro-giorni-di-eventi"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379532501",
+        "https://www.wikidata.org/wiki/Q926738",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/alfa-romeo-compie-100-anni-e-milano-ospita-quattro-giorni-di-eventi",
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "156",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379532501",
+        "https://www.wikidata.org/wiki/Q926738",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/alfa-romeo-compie-100-anni-e-milano-ospita-quattro-giorni-di-eventi"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379532501",
+        "https://www.wikidata.org/wiki/Q926738",
+        "https://www.media.stellantis.com/it-it/alfa-romeo/press/alfa-romeo-compie-100-anni-e-milano-ospita-quattro-giorni-di-eventi",
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "156",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "generations",
+          "reason": "Základní identita převzata z dříve shromážděného katalogového snapshotu; úplné rozdělení karoserií, modernizací, trhů a technických verzí nebylo v tomto nočním průchodu znovu ověřeno."
+        },
+        {
+          "field": "generations[0].from",
+          "reason": "Použito primární datum uvedení modelu; starší snapshot uvádí dřívější výrobní roky. Uvedení na trh není zárukou přesného počátku výroby."
+        },
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "generations",
+          "reason": "Základní identita převzata z dříve shromážděného katalogového snapshotu; úplné rozdělení karoserií, modernizací, trhů a technických verzí nebylo v tomto nočním průchodu znovu ověřeno."
+        },
+        {
+          "field": "generations[0].from",
+          "reason": "Použito primární datum uvedení modelu; starší snapshot uvádí dřívější výrobní roky. Uvedení na trh není zárukou přesného počátku výroby."
+        },
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/new-alfa-156-and-alfa-sportwagon",
+        "https://www.largus.fr/actualite-automobile/alfa-romeo-156-96958.html"
+      ],
+      "reason": "Remove resolved unknown fields and record exact-displacement limitations."
+    },
+    {
+      "lineSlug": "giulietta",
+      "path": "sources",
+      "from": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-sprint-a-tribute-to-the-legend",
+        "https://www.media.stellantis.com/uploads/at/AT/2014/Alfa_Romeo/20140611_AR_60_Jahre_Alfa_Romeo_Giulietta.pdf",
+        "https://en.wikipedia.org/w/index.php?oldid=1373436567",
+        "https://www.wikidata.org/wiki/Q1417241"
+      ],
+      "to": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-sprint-a-tribute-to-the-legend",
+        "https://www.media.stellantis.com/uploads/at/AT/2014/Alfa_Romeo/20140611_AR_60_Jahre_Alfa_Romeo_Giulietta.pdf",
+        "https://en.wikipedia.org/w/index.php?oldid=1373436567",
+        "https://www.wikidata.org/wiki/Q1417241",
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "giulietta",
+      "path": "generations[2].sources",
+      "from": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-sprint-a-tribute-to-the-legend",
+        "https://en.wikipedia.org/w/index.php?oldid=1373436567",
+        "https://www.wikidata.org/wiki/Q1417241"
+      ],
+      "to": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-sprint-a-tribute-to-the-legend",
+        "https://en.wikipedia.org/w/index.php?oldid=1373436567",
+        "https://www.wikidata.org/wiki/Q1417241",
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "reason": "Attach depth-pass evidence while retaining previous sources."
+    },
+    {
+      "lineSlug": "giulietta",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].engine.torqueNm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[2].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/alfa-romeo/press/alfa-romeo-giulietta-my-14-at-the-2013-frankfurt-international-motor-show",
+        "https://www.completecar.ie/car-reviews/article/Alfa_Romeo/Giulietta/Giulietta/376/3012/2013-Alfa-Romeo-Giulietta-review.html",
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/new-alfa-romeo-giulietta-unveiled",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
+      ],
+      "reason": "Remove resolved unknown fields and record exact-displacement limitations."
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "156.generations[0].to",
+      "values": {
+        "existingCard": 2007,
+        "manufacturer retrospective 2020": 2005
+      },
+      "kept": 2007,
+      "reason": "Manufacturer retrospective summarizes 1997–2005 sales; whole-family scope may include later Crosswagon/Sportwagon. Do not replace family endpoint with saloon date before body-specific reconciliation.",
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/alfa-romeo/press/storie-alfa-romeo-episode-8-design-sportiness-and-innovation-the-156-was-an-authentically-successful-alfa-romeo",
+        "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_156&oldid=1379532501"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "MiTo end varies between current Wikipedia and historic reporting; primary manufacturer end evidence not found, null retained.",
+    "Alfasud museum production chronology is 1972-1984, distinct from 1971 presentation; adopted production dates.",
+    "Other chronology unknowns including SZ, 90 and Spider remain pending primary evidence.",
+    "Make fields inventoried but not separately verified; remaining concepts, race cars and commercial models require item-level decisions.",
+    "DEPTH round 5: bounded work on 147, 156 and modern Giulietta. 159 chronology inspected but no change; its code/updates still need vehicle-manufacturer primary corroboration. No photo re-review or complete European engine/trim validation claimed. 156 family endpoint retained pending body-specific reconciliation."
+  ],
+  "summary": "Partial Alfa Romeo sweep: corrected Alfasud production interval/status from official museum and proposed excluding Tonale concept and C41 racer."
+}

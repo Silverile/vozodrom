@@ -1099,7 +1099,7 @@
         "code": null,
         "name": "Discovery 3 – L319",
         "from": 2004,
-        "to": 2010,
+        "to": 2009,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -1128,8 +1128,16 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Land_Rover_Discovery"
-        ]
+          "https://en.wikipedia.org/wiki/Land_Rover_Discovery",
+          "https://www.landrover.co.uk/vehicles/discovery-1-4.html",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery//"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://www.landrover.co.uk/vehicles/discovery-1-4.html",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery//"
+          ]
+        }
       },
       {
         "code": null,
@@ -1205,7 +1213,9 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Land_Rover_Discovery"
+      "https://en.wikipedia.org/wiki/Land_Rover_Discovery",
+      "https://www.landrover.co.uk/vehicles/discovery-1-4.html",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery//"
     ],
     "needsReview": [
       {
@@ -1528,12 +1538,24 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "L550",
         "name": "L550",
         "from": 2014,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2019,
+            "productionYear": null,
+            "name": "Modernizace 2019",
+            "code": null,
+            "note": "Představení v květnu 2019: změněná světla LED, maska a nárazníky, přechod na architekturu PTA. ADAC vymezuje německou nabídku modernizované řady od září 2019; začátek výroby není tímto potvrzen.",
+            "sources": [
+              "https://media.jlr.com/discovery/en-gb/news/2019/05/new-discovery-sport-enhanced-every-family-adventure",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery-sport/1generation-facelift/341879/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -1560,12 +1582,28 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Land_Rover_Discovery_Sport"
-        ]
+          "https://en.wikipedia.org/wiki/Land_Rover_Discovery_Sport",
+          "https://www.landrover.fr/ownership/vin-recall.html",
+          "https://media.jlr.com/discovery/en-gb/news/2019/05/new-discovery-sport-enhanced-every-family-adventure",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery-sport/1generation-facelift/341879/"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://www.landrover.fr/ownership/vin-recall.html",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery-sport/1generation-facelift/341879/"
+          ],
+          "facelift": [
+            "https://media.jlr.com/discovery/en-gb/news/2019/05/new-discovery-sport-enhanced-every-family-adventure",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery-sport/1generation-facelift/341879/"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Land_Rover_Discovery_Sport"
+      "https://en.wikipedia.org/wiki/Land_Rover_Discovery_Sport",
+      "https://www.landrover.fr/ownership/vin-recall.html",
+      "https://media.jlr.com/discovery/en-gb/news/2019/05/new-discovery-sport-enhanced-every-family-adventure",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery-sport/1generation-facelift/341879/"
     ],
     "needsReview": [
       {
@@ -1573,15 +1611,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1635,6 +1665,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].facelift",
+        "reason": "Zapsána jedna doložená vnější modernizace; úplnost dalších změn a jejich výrobních termínů není potvrzena."
       }
     ]
   },
@@ -2949,7 +2983,7 @@
       {
         "code": null,
         "name": "L538 – Convertible",
-        "from": null,
+        "from": 2016,
         "to": 2018,
         "productionStatus": "ended",
         "facelift": null,
@@ -2979,6 +3013,7 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://media.jlr.com/jaguar/news/2017/05/land-rover-celebrates-range-rover-evoque-landmark-special-edition",
           "https://en.wikipedia.org/wiki/Range_Rover_Evoque"
         ]
       },
@@ -3020,6 +3055,7 @@
       }
     ],
     "sources": [
+      "https://media.jlr.com/jaguar/news/2017/05/land-rover-celebrates-range-rover-evoque-landmark-special-edition",
       "https://en.wikipedia.org/wiki/Range_Rover_Evoque"
     ],
     "needsReview": [
@@ -3089,10 +3125,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3539,12 +3571,24 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "L560",
         "name": "L560",
         "from": 2017,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2023,
+            "productionYear": null,
+            "name": "Modernizace 2023",
+            "code": null,
+            "note": "Úprava masky, světel a zadního nárazníku představená v únoru 2023. ADAC od února 2023 odděluje modernizovanou řadu; přesný začátek výroby z těchto zdrojů nevyplývá.",
+            "sources": [
+              "https://media.jlr.com/range-rover/en-gb/news/2023/02/enhanced-range-rover-velar-sophisticated-elegance-and-exquisite-details",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/range-rover-velar/1generation-facelift/342208/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -3571,12 +3615,28 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Range_Rover_Velar"
-        ]
+          "https://en.wikipedia.org/wiki/Range_Rover_Velar",
+          "https://www.landroverusa.com/ownership/software-update/index.html",
+          "https://media.jlr.com/range-rover/en-gb/news/2023/02/enhanced-range-rover-velar-sophisticated-elegance-and-exquisite-details",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/range-rover-velar/1generation-facelift/342208/"
+        ],
+        "fieldSources": {
+          "code": [
+            "https://www.landroverusa.com/ownership/software-update/index.html",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/range-rover-velar/1generation-facelift/342208/"
+          ],
+          "facelift": [
+            "https://media.jlr.com/range-rover/en-gb/news/2023/02/enhanced-range-rover-velar-sophisticated-elegance-and-exquisite-details",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/range-rover-velar/1generation-facelift/342208/"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Range_Rover_Velar"
+      "https://en.wikipedia.org/wiki/Range_Rover_Velar",
+      "https://www.landroverusa.com/ownership/software-update/index.html",
+      "https://media.jlr.com/range-rover/en-gb/news/2023/02/enhanced-range-rover-velar-sophisticated-elegance-and-exquisite-details",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/range-rover-velar/1generation-facelift/342208/"
     ],
     "needsReview": [
       {
@@ -3584,15 +3644,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3646,6 +3698,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].facelift",
+        "reason": "Zapsána jedna doložená vnější modernizace; úplnost dalších změn a jejich výrobních termínů není potvrzena."
       }
     ]
   },

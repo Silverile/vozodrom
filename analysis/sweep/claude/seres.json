@@ -1,0 +1,157 @@
+{
+  "make": "seres",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Čína",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376572518",
+        "https://www.wikidata.org/wiki/Q43401513"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: Wikidata Q43401513 P495 lists both Q30 (USA, SF Motors origin in Santa Clara) and Q148 (China), HQ Q159260; the Seres brand is owned by Seres Group (Chongqing), so China is the right country"
+    },
+    {
+      "field": "countryQid",
+      "from": null,
+      "to": "Q148",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376572518"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: Wikidata Q43401513 P495 lists both Q30 (USA, SF Motors origin in Santa Clara) and Q148 (China), HQ Q159260; the Seres brand is owned by Seres Group (Chongqing), so China is the right country"
+    },
+    {
+      "field": "countries",
+      "from": [],
+      "to": [
+        {
+          "qid": "Q148",
+          "name": "Čína"
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376572518"
+      ],
+      "confidence": "high",
+      "verify": "confirmed with caveat: Wikidata Q43401513 P495 lists both Q30 (USA, SF Motors origin in Santa Clara) and Q148 (China), HQ Q159260; the Seres brand is owned by Seres Group (Chongqing), so China is the right country"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "sf5",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373444912"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Seres_SF5 current revision (2019-present, compact crossover SUV, 'Seres 5' in Europe)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "sf5",
+      "field": "productionStart",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373444912"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Seres_SF5 current revision (2019-present, compact crossover SUV, 'Seres 5' in Europe)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "sf5",
+      "field": "name",
+      "from": "SF5",
+      "to": "SF5 / Seres 5",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373444912",
+        "https://newmobility.news/2023/01/16/seres-5-for-europe-unveiled-at-brussels-motor-show/"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia Seres_SF5 current revision (2019-present, compact crossover SUV, 'Seres 5' in Europe)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "7",
+      "field": "name",
+      "from": "7",
+      "to": "Seres 7",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q122442751"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Wikidata Q122442751 English label 'Seres 7'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "7",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.automobile-propre.com/articles/iaa-munich-2023-seres-7-un-suv-7-places-a-prolongateur-dautonomie/"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (medium): Wikidata Q122442751 based on Q111660689 (Aito M7, an SUV); not independently fetched further"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "Seres 3",
+      "from": 2021,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://www.ceskenoviny.cz/zpravy/2090508",
+        "https://www.auto-data.net/en/seres-3-generation-9092",
+        "https://www.autohled.cz/a/seres"
+      ],
+      "verify": "confirmed with caveat: en.wikipedia Seres_3 (5-door compact crossover SUV, 53.6 kWh; built since 2019 as DFSK Fengguang E3); Czech sales from 2021 via Bidli not independently checked (search budget exhausted)"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "sf5",
+    "seres-3",
+    "7"
+  ],
+  "conflicts": [
+    {
+      "where": "seres-3 battery",
+      "values": {
+        "CTK 2021": "52.5 kWh",
+        "auto-data.net": "53.6 kWh"
+      },
+      "kept": "trim note only"
+    },
+    {
+      "where": "sf5 power figures",
+      "values": {
+        "en Wikipedia infobox": "165-405.5 kW",
+        "en Wikipedia text/table": "225 / 255 / 475 kW"
+      },
+      "kept": "165-405 kW range in engine entry, no kW on trims"
+    }
+  ],
+  "openQuestions": [
+    "Seres 7 European sales start and specs not confirmed (web search budget ran out); card has from null, productionStatus unknown.",
+    "AITO models (M5/M7/M9, Seres with Huawei) have no make in makes.json; decide whether they belong under seres or a new aito make.",
+    "Seres 3 is sold in CZ (importer Bidli since 2021): the most relevant Seres line for Czech buyers, yet missing from models-auto."
+  ],
+  "summary": "Make country was empty (should be China). Created cards for SF5/Seres 5, Seres 3 (missing from model list, sold in CZ since 2021) and Seres 7."
+}

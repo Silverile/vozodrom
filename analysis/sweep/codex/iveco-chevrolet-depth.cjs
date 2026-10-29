@@ -1,0 +1,54 @@
+const fs = require('fs');
+const read = p => JSON.parse(fs.readFileSync(p, 'utf8'));
+const write = (p,d) => fs.writeFileSync(p, JSON.stringify(d,null,2)+'\n','utf8');
+// One-shot migration; later evidence addendum attaches Caradisiac corroboration.
+const mass='https://www.iveco.com/en-us/press-room/kit/Documents/Modelli_attuali/Massif_pdf.pdf';
+const valeo='https://www.valeoservice.com/en-com/techassist/vehicle/P-30757?country=AL';
+const launch='https://www.iveco.com/france/Decouvrir-IVECO/Presse/Communiques-de-presse/2024/2024_Communique_de_presse_IVECO-IAA-eMoovy';
+const now='https://www.klimafreundliche-nutzfahrzeuge.de/fahrzeugdatenbank/iveco-emoovy/';
+const live='https://www.iveco.com/uk/eMoovy/eMoovy';
+const ip='src/data/catalog/model-cards/iveco.json', irp='analysis/sweep/codex/iveco.json';
+const d=read(ip), r=read(irp), fixes=[];
+function set(card,path,value,sources){const parts=path.replace(/\[(\d+)\]/g,'.$1').split('.'); let obj=card;for(const k of parts.slice(0,-1))obj=obj[k];const key=parts.at(-1); if(JSON.stringify(obj[key])===JSON.stringify(value))return;fixes.push({lineSlug:card.lineSlug,path,from:obj[key],to:value,sources});obj[key]=value;}
+const m=d.find(c=>c.lineSlug==='massif');
+set(m,'generations[0].from',2008,[mass,valeo]);
+for(let i=0;i<2;i++){
+ set(m,`generations[0].trims[${i}].engine.cylinders`,4,[mass,valeo]);
+ set(m,`generations[0].trims[${i}].engine.torqueNm`,i===0?350:400,[mass]);
+ set(m,`generations[0].trims[${i}].transmission.type`,'manual',[mass]);
+ set(m,`generations[0].trims[${i}].transmission.gears`,6,[mass]);
+ const t=m.generations[0].trims[i];t.sources=[...new Set([...t.sources,mass])];
+ t.specificationScope.noteCs+=' Čtyřválec, točivý moment a šestistupňový manuál ověřeny v tiskové sadě IVECO; dvanáct dopředných kombinací zahrnuje redukci. Pohon 4×4 je připojitelný, v režimu 4×2 jsou poháněna zadní kola.';
+}
+m.sources=[...new Set([...m.sources,mass,valeo])];m.generations[0].sources=[...new Set([...m.generations[0].sources,mass,valeo])];
+const e=d.find(c=>c.lineSlug==='emoovy');
+set(e,'generations[0].productionStatus','current',[live,now]);
+set(e,'summaryCs','eMoovy je elektrický podvozek s kabinou pro lehká užitková vozidla, vyvinutý s Hyundai. Představen byl v září 2024; oznámené dodávky začínaly v prvním čtvrtletí 2025. Tyto termíny nejsou přesným začátkem sériové výroby. Rozměry, hmotnost a dojezd závisejí na baterii a nástavbě.',[launch,live]);
+e.sources=[...new Set([...e.sources,launch,live,now])];e.generations[0].sources=[...new Set([...e.generations[0].sources,launch,live,now])];
+for(const c of [m,e])c.needsReview=c.needsReview.filter(n=>!fixes.some(f=>f.lineSlug===c.lineSlug&&f.path===n.field));
+r.cardFixesApplied.push(...fixes);r.conflicts.push({where:'massif.generations[0].to',values:{'Valeo supplier application dates':2011,'French Wikipedia and German market offer dates':2010},kept:null,reason:'Production end and local sales/application dates remain unresolved; no artificial consensus.'});
+r.openQuestions.push('DEPTH 2026-10-29: Massif torque/transmission sourced from original press kit; independent torque/gear corroboration not established by a second primary source. Campagnola end date and Daily complete engine ranges remain open. eMoovy launch 2024 and deliveries 2025 do not prove exact production start. Commons Massif description fetch failed; no new visual review claimed.');
+write(ip,d);write(irp,r);
+const cp='src/data/catalog/model-cards/chevrolet.json', crp='analysis/sweep/codex/chevrolet.json';
+const cd=read(cp), cr=read(crp), v=cd.find(c=>c.lineSlug==='volt');
+const annual='https://www.annualreports.com/HostedData/AnnualReportArchive/g/NYSE_GM_2015.pdf';
+const first='https://investor.gm.com/static-files/88226d16-cf33-4ba8-ba1c-f9930c4f2c0b';
+const wiki='https://en.wikipedia.org/wiki/Chevrolet_Volt_(second_generation)';
+const brochure='https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2016-volt.pdf';
+const inl='https://avt.inl.gov/sites/default/files/pdf/phev/fact2016chevroletvolt.pdf';
+const discontinued='https://www.chevrolet.com/discontinued-vehicles';
+const old=structuredClone(v.generations);const g1=structuredClone(v.generations[0]),g2=structuredClone(g1);
+Object.assign(g1,{name:'Volt – první generace',to:2015,sources:[...g1.sources,first,annual]});
+g1.specificationScope={market:'Europe / North America; technical versions require separate verification',modelYear:null,variant:'First generation',bodyType:'hatchback',noteCs:'Kalendářní výroba od roku 2010; modelový rok 2011 není začátek výroby. Přechod na druhou generaci v roce 2015.'};
+Object.assign(g2,{name:'Volt – druhá generace',from:2015,to:2019,photo:null,sources:[annual,brochure,inl,discontinued,wiki]});
+g2.specificationScope={market:'North America; imports to Europe',modelYear:null,variant:'Second generation',bodyType:'hatchback',noteCs:'Uvedení v kalendářním roce 2015 jako model 2016; nejde o potvrzenou oficiální evropskou nabídku.'};
+g2.trims=[{name:'Voltec 1.5 – MY2016, pohonná soustava',kind:'technical-version',from:null,to:null,bodyType:'hatchback',engine:{fuel:'petrol-phev',displacementCc:null,cylinders:null,powerKw:111,powerStandard:'Výkon elektrického pohonu podle prospektu; nejde o výkon samotného spalovacího motoru ani součet výkonů obou elektromotorů.',torqueNm:398},transmission:{type:null,gears:null},drive:'fwd',dimensionsMm:{length:null,width:null,height:null,wheelbase:null},massKg:null,massBasis:null,topSpeedKmh:null,acceleration0to100s:null,consumptionL100:null,consumptionCycle:null,consumptionKwh100:null,rangeKm:null,rangeCycle:null,specificationScope:{market:'USA; import',modelYear:2016,noteCs:'Původní prospekt Chevrolet a laboratorní list INL shodně uvádějí 111 kW a 398 Nm pohonu. Nezaměňovat s 75 kW spalovacího motoru. Hodnoty 0–60 mph nejsou 0–100 km/h. INL dostupný jako vyhledávací výňatek; přímé otevření vrací 403.'},sources:[brochure,inl]}];
+v.generations=[g1,g2];cr.cardFixesApplied.push({lineSlug:'volt',path:'generations',from:old,to:structuredClone(v.generations),sources:[first,annual,brochure,inl,discontinued,wiki],note:'Replace aggregate 2010–2019 row with two generations; retain original photo on first only; new second generation photo stays null.'});
+const vs=v.summaryCs;v.summaryCs='Volt je pětidveřový plug-in hybrid s pohonnou soustavou Voltec. První generace se vyráběla od roku 2010; druhá přišla v roce 2015 jako modelový rok 2016 a výroba modelu skončila v roce 2019. Údaje druhé generace na této kartě se týkají severoamerického vozu, který se v Evropě může objevit jako dovoz.';
+cr.cardFixesApplied.push({lineSlug:'volt',path:'summaryCs',from:vs,to:v.summaryCs,sources:[first,annual,brochure,discontinued,wiki]});
+v.sources=[...new Set([...v.sources,first,annual,brochure,inl,discontinued,wiki])];
+v.needsReview=v.needsReview.filter(n=>!n.field.startsWith('generations[0].specificationScope'));
+v.needsReview.push({field:'generations[1]',reason:'Druhá generace: úplná technická data, přesné výrobní měsíce, fotografie a evropská homologace dovozů nejsou ověřeny.'});
+cr.openQuestions.push('DEPTH 2026-10-29: selected Volt generation split only. Exact production-month boundaries and second-generation Europe/import homologation remain open. INL technical sheet corroboration is search-index evidence; direct fetch 403. No make-wide Chevrolet completion or photo verification claimed.');
+write(cp,cd);write(crp,cr);
+console.log(JSON.stringify({ivecoFixEntries:fixes.length,chevroletFixEntries:2,chevroletGenerationsBefore:old.length,chevroletGenerationsAfter:v.generations.length,voltTechnicalVersions:1}));

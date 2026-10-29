@@ -1,0 +1,601 @@
+{
+  "make": "zotye-auto",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "aliases",
+      "from": [
+        "Q11705500"
+      ],
+      "to": [],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q11705500"
+      ],
+      "confidence": "high",
+      "note": "the alias is the Wikidata QID, not a name",
+      "verify": "confirmed: Q11705500 is already the make qid in makes.json; it is not a name"
+    },
+    {
+      "field": "dissolvedYear",
+      "from": 2020,
+      "to": null,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ],
+      "confidence": "medium",
+      "note": "bankruptcy and liquidation 2021, production restarted Dec 2022, halted June 2025 for lack of liquidity; no clean dissolution year",
+      "verify": "rejected: zh.wikipedia Zotye (zhongtai qiche) infobox gives 2020 as the end and says the main business was halted from late 2020; de.wikipedia Zotye: parent Tieniu insolvent Dec 2020, sales 3,658 in 2020 - keep 2020 (make status is defunct) - https://zh.wikipedia.org/wiki/%E4%BC%97%E6%B3%B0%E6%B1%BD%E8%BD%A6 , https://de.wikipedia.org/wiki/Zotye"
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "hawtai-lusheng-e70",
+      "reason": "belongs to make Hawtai (Lusheng E70 sedan, Rongcheng 2013–2018), not Zotye; Hawtai is not in makes.json",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hawtai_Lusheng_E70",
+        "https://carnewschina.com/2013/03/18/hawtai-lu-sheng-e70-launched-on-the-chinese-car-market"
+      ],
+      "verify": "confirmed: Hawtai_Lusheng_E70 - produced by Hawtai, no Zotye involvement - https://en.wikipedia.org/wiki/Hawtai_Lusheng_E70"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "2008 / 5008 / T200",
+      "from": 2005,
+      "to": 2016,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card 2008 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Nomad",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "M300 (Langyue)",
+      "from": 2009,
+      "to": 2013,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card m300 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Fiat_Multipla",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "Z100 / Cloud 100",
+      "from": 2013,
+      "to": 2019,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "file": "model-lines-auto",
+      "note": "card z100 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Z100"
+      ]
+    },
+    {
+      "name": "Z200",
+      "from": 2011,
+      "to": 2014,
+      "bodyTypes": [
+        "sedan",
+        "hatchback"
+      ],
+      "file": "model-lines-auto",
+      "note": "card z200 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Fiat_Siena",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "Z300 / Z360",
+      "from": 2012,
+      "to": 2017,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "file": "model-lines-auto",
+      "note": "card z300 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Z300",
+        "https://www.auto-data.net/en/zotye-z300-facelift-2014-1.5-112hp-33298"
+      ]
+    },
+    {
+      "name": "Z500 / Z560",
+      "from": 2014,
+      "to": 2021,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "file": "model-lines-auto",
+      "note": "card z500 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Z500",
+        "https://www.auto-data.net/en/zotye-z560-generation-6300"
+      ]
+    },
+    {
+      "name": "Z700",
+      "from": 2015,
+      "to": 2021,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "file": "model-lines-auto",
+      "note": "card z700 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Z700"
+      ]
+    },
+    {
+      "name": "T300",
+      "from": 2016,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card t300 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_T300"
+      ]
+    },
+    {
+      "name": "T500",
+      "from": 2018,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card t500 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_T500"
+      ]
+    },
+    {
+      "name": "T600",
+      "from": 2013,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card t600 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_T600",
+        "https://www.auto-data.net/en/zotye-t600-generation-6411"
+      ]
+    },
+    {
+      "name": "T700",
+      "from": 2017,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card t700 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_T700",
+        "https://www.auto-data.net/en/zotye-t700-generation-6410"
+      ]
+    },
+    {
+      "name": "T800",
+      "from": 2018,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card t800 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_T800"
+      ]
+    },
+    {
+      "name": "SR7",
+      "from": 2015,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card sr7 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_SR7"
+      ]
+    },
+    {
+      "name": "SR9",
+      "from": 2016,
+      "to": 2019,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card sr9 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_SR9"
+      ]
+    },
+    {
+      "name": "Domy X5 (Damai X5)",
+      "from": 2015,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card domy-x5 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Domy_X5"
+      ]
+    },
+    {
+      "name": "Domy X7 (Damai X7)",
+      "from": 2016,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card domy-x7 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Damai_X7"
+      ]
+    },
+    {
+      "name": "E200",
+      "from": 2016,
+      "to": 2021,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "file": "model-lines-auto",
+      "note": "card e200 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_E200"
+      ]
+    },
+    {
+      "name": "E30 (Zhima)",
+      "from": 2015,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "file": "model-lines-auto",
+      "note": "card e30 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "V10",
+      "from": 2011,
+      "to": null,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card v10 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "Traum S70",
+      "from": 2017,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card traum-s70 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Traum_S70"
+      ]
+    },
+    {
+      "name": "Traum Meet 3",
+      "from": 2018,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card traum-meet3 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Traum_Meet3",
+        "https://en.wikipedia.org/wiki/Zotye_Auto"
+      ]
+    },
+    {
+      "name": "Traum SEEK 5",
+      "from": 2018,
+      "to": 2021,
+      "bodyTypes": [
+        "suv"
+      ],
+      "file": "model-lines-auto",
+      "note": "card traum-seek5 exists (isAddition), but zotye-auto has no model-lines-auto rows at all",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/wiki/Traum_SEEK5"
+      ]
+    },
+    {
+      "name": "Z100",
+      "from": null,
+      "to": null,
+      "bodyTypes": [],
+      "file": "models-auto",
+      "note": "card exists, models-auto row missing",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "name": "Z200",
+      "from": null,
+      "to": null,
+      "bodyTypes": [],
+      "file": "models-auto",
+      "note": "card exists, models-auto row missing",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "name": "M300 (Langyue)",
+      "from": null,
+      "to": null,
+      "bodyTypes": [],
+      "file": "models-auto",
+      "note": "card exists, models-auto row missing",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "name": "V10",
+      "from": null,
+      "to": null,
+      "bodyTypes": [],
+      "file": "models-auto",
+      "note": "card exists, models-auto row missing",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "name": "Z360 (alias of Z300)",
+      "from": null,
+      "to": null,
+      "bodyTypes": [],
+      "file": "models-auto",
+      "note": "card exists, models-auto row missing",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*].kind",
+      "from": "version",
+      "to": "technical-version",
+      "count": 16,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: types.ts trim kind allows only technical-version | engine-version (src/data/catalog/types.ts:166)"
+    },
+    {
+      "lineSlug": "*",
+      "path": "generations[*].transmissions[*].type / trims[*].transmission.type",
+      "from": "cvt",
+      "to": "automatic (gears null)",
+      "count": 7,
+      "sources": [
+        "src/data/catalog/types.ts (transmission type union has no cvt)"
+      ],
+      "verify": "confirmed with caveat: cvt is not in types.ts, but generation-level transmissions declare gears: number (types.ts:140), so the 6 generation entries now holding automatic/gears null (2008, z500, t300, sr7, domy-x5, traum-meet3) still do not conform; null gears are allowed only at trim level (types.ts:173)"
+    },
+    {
+      "lineSlug": "e200",
+      "path": "generations[0].trims[0].massKg",
+      "from": null,
+      "to": 1080,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_E200&oldid=1346761066"
+      ]
+    },
+    {
+      "lineSlug": "z700",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2018,
+          "to": null,
+          "name": "Z700H",
+          "code": null,
+          "productionYear": null,
+          "note": "Modernizace s drobnými úpravami exteriéru a interiéru, prodávaná jako Z700H.",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?title=Zotye_Z700&oldid=1327157319"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Z700&oldid=1327157319"
+      ]
+    },
+    {
+      "lineSlug": "m300",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ],
+      "verify": "confirmed with conflict: de.wikipedia Zotye dates the Multiplan (M300) to 2009; Zotye_M300 says CKD assembly began Dec 2008, production 2008-2013 - https://de.wikipedia.org/wiki/Zotye , https://en.wikipedia.org/wiki/Zotye_M300"
+    },
+    {
+      "lineSlug": "e30",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2015,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ],
+      "verify": "reverted: Zotye_E30 infobox gives production 2016-2019 (then Dorcen E20 2019-2021); 2015 is only the Shanghai show reveal, and this sweep used launch years elsewhere (T500 2018) - restored null, 2016 is the likely value - https://en.wikipedia.org/wiki/Zotye_E30"
+    },
+    {
+      "lineSlug": "e30",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ],
+      "verify": "confirmed: Zotye_E30 - Zotye production ended 2019, platform moved to Dorcen - https://en.wikipedia.org/wiki/Zotye_E30"
+    },
+    {
+      "lineSlug": "v10",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "lineSlug": "t600",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/w/index.php?title=Zotye_T600&oldid=1372066484"
+      ],
+      "verify": "not refuted, unconfirmed: Zotye_T600 infobox still says 2013-present; de/zh.wikipedia only confirm the 2020 parent bankruptcy and halted production; the June 2025 halt rests on the Zotye_Auto article alone - https://en.wikipedia.org/wiki/Zotye_T600"
+    },
+    {
+      "lineSlug": "t500",
+      "path": "generations[0].from",
+      "from": 2017,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "lineSlug": "t500",
+      "path": "summaryCs",
+      "from": "Zotye T500 je kompaktní SUV představené v roce 2017 a prodávané od roku 2018. Poháněl ho přeplňovaný motor 1,5 l s manuální nebo automatickou převodovkou.",
+      "to": "Zotye T500 je kompaktní SUV představené v roce 2017 a prodávané od března 2018. Poháněl ho přeplňovaný motor 1,5 l s manuální nebo automatickou převodovkou.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817"
+      ]
+    },
+    {
+      "lineSlug": "t600",
+      "path": "summaryCs",
+      "from": "Zotye T600 je středně velké SUV z roku 2013 a nejprodávanější model značky, vzhledem připomínající Audi Q5 a VW Touareg. Vznikly varianty Sport a Coupe; po modernizaci v roce 2018 zůstala jen verze Coupe pod názvem T600.",
+      "to": "Zotye T600 je středně velké SUV z roku 2013 a nejprodávanější model značky, vzhledem připomínající Audi Q5 a VW Touareg. Vznikly varianty Sport a Coupe; po modernizaci v roce 2018 zůstala jen verze Coupe pod názvem T600. Výroba skončila s útlumem automobilky (bankrot 2021, obnovení 2022, zastavení výroby v červnu 2025).",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Zotye_Auto&oldid=1376381817",
+        "https://en.wikipedia.org/w/index.php?title=Zotye_T600&oldid=1372066484"
+      ]
+    },
+    {
+      "lineSlug": "e30",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2016,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1369498338",
+        "https://carnewschina.com/2016/06/28/a-hip-little-zotye-zhima-e30-ev-in-china/"
+      ],
+      "verify": "series-production fill 2026-10-29"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "z300 trim 1.5 power",
+      "values": {
+        "card": "82 kW / 141 Nm",
+        "Zotye_Z300 oldid 1339202215": "120 hp / 143 Nm"
+      },
+      "kept": "82 kW"
+    },
+    {
+      "where": "z500 engine",
+      "values": {
+        "card": "1.5 turbo 106–110 kW",
+        "Zotye_Z500 oldid 1344966859": "120 hp, 143 Nm (likely the NA 1.5)"
+      },
+      "kept": "card"
+    },
+    {
+      "where": "t600 status",
+      "values": {
+        "Zotye_T600 infobox": "2013–present",
+        "Zotye_Auto": "production halted June 2025"
+      },
+      "kept": "ended"
+    },
+    {
+      "where": "traum-meet3 from",
+      "values": {
+        "card": 2018,
+        "Zotye_Auto": "introduced 2017"
+      },
+      "kept": 2018
+    }
+  ],
+  "openQuestions": [
+    "types.ts has no 'cvt' gearbox type, but src/lib/modelCards.ts renders 'cvt' and toyota/ford cards still use it. Zotye CVTs became 'automatic' with gears null. Should 'cvt' be added to types.ts and this change reverted?",
+    "Zotye is China-only; the only European link is the LUIS 4U (an electric 5008 sold in Germany). The cards stay as they are, at low priority."
+  ],
+  "summary": "Zotye cards largely match Wikipedia. Fixes: 16 trims of invalid kind 'version' and 7 CVT entries made type-conformant; T600, V10 and E30 marked ended (the company halted production in 2025); M300 2009 and T500 2018 start years; Z700H facelift; E200 kerb weight. Proposed: drop the Hawtai E70 (wrong make) and the QID alias, and add the 22 card lines to model-lines-auto."
+}

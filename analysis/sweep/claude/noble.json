@@ -1,0 +1,289 @@
+{
+  "make": "noble",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-line-additions",
+      "slug": "m12",
+      "field": "from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        2000,
+        2008,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed with conflict: start 2000, rwd, 6-speed Getrag manual per en-wiki Noble_M12 infobox (2000-2008); de-wiki Noble_Automotive gives M12 2000-2005, so the 2008 end is disputed"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "m400",
+      "field": "from",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (weak): de-wiki Noble_Automotive lists M400 as the last M12 version; en-wiki Noble_M12 cites a '2004 Noble M400' spec page"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "m600",
+      "field": "from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        2010,
+        2018,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en-wiki Noble_M600 infobox 2010-2018 (de-wiki Noble_Automotive: introduced 2009, no end date)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "m14",
+      "reason": "concept shown at the 2004 British Motor Show, never produced",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://www.wikidata.org/wiki/Q7045749"
+      ],
+      "verify": "confirmed: en-wiki Noble_M14: '2004 (Prototype)', never put into production"
+    },
+    {
+      "file": "models-auto",
+      "slug": "m15",
+      "reason": "prototype; planned 2006 production never happened",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://www.wikidata.org/wiki/Q634645"
+      ],
+      "verify": "rejected: en-wiki Noble_M15 lists production 2006-2011 (replaced by M600 in mid-2011) and de-wiki Noble_Automotive says the M15 was built from early 2006; only en-wiki Noble_M14 says it was never launched, so 'never produced' is not established"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "M500 (line entry; present in models-auto only)",
+      "from": 2022,
+      "to": null,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://www.motor1.com/news/560356/noble-m500-supercar-debut/",
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 3,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "m12",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2000,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "verify": "confirmed: en-wiki Noble_M12 (transverse rear mid-engine RWD, 6-speed Getrag manual); de-wiki Noble_Automotive also starts M12 in 2000"
+    },
+    {
+      "lineSlug": "m12",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "verify": "confirmed with conflict: en-wiki Noble_M12 infobox 2000-2008; de-wiki Noble_Automotive says 2000-2005"
+    },
+    {
+      "lineSlug": "m12",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "verify": "confirmed: en-wiki Noble_M12 (transverse rear mid-engine RWD, 6-speed Getrag manual); de-wiki Noble_Automotive also starts M12 in 2000"
+    },
+    {
+      "lineSlug": "m12",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "rwd"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "verify": "confirmed: en-wiki Noble_M12 (transverse rear mid-engine RWD, 6-speed Getrag manual); de-wiki Noble_Automotive also starts M12 in 2000"
+    },
+    {
+      "lineSlug": "m12",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 6
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Noble_M12"
+      ],
+      "verify": "confirmed: en-wiki Noble_M12 (transverse rear mid-engine RWD, 6-speed Getrag manual); de-wiki Noble_Automotive also starts M12 in 2000"
+    },
+    {
+      "lineSlug": "m400",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163"
+      ],
+      "verify": "confirmed (weak): en-wiki Noble_M12 cites '2004 Noble M400'"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600 infobox (2010-2018; 4360/1910/1120/2540 mm; longitudinal mid-engine RWD)"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600 infobox (2010-2018; 4360/1910/1120/2540 mm; longitudinal mid-engine RWD)"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1356960163",
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600 infobox (2010-2018; 4360/1910/1120/2540 mm; longitudinal mid-engine RWD)"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4360,
+        "width": 1910,
+        "height": 1120,
+        "wheelbase": 2540
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600 infobox (2010-2018; 4360/1910/1120/2540 mm; longitudinal mid-engine RWD)"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "rwd"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600 infobox (2010-2018; 4360/1910/1120/2540 mm; longitudinal mid-engine RWD)"
+    },
+    {
+      "lineSlug": "m600",
+      "path": "generations[0].transmissions",
+      "from": null,
+      "to": [
+        {
+          "type": "manual",
+          "gears": 6
+        },
+        {
+          "type": "automated-manual",
+          "gears": 6
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Noble_M600"
+      ],
+      "verify": "confirmed: en-wiki Noble_M600: 6-speed Graziano transaxle, manual and semi-automatic"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "M600 displacement",
+      "values": {
+        "noblecars.com (card)": 4439,
+        "en-wiki (Volvo B8444S)": 4414
+      },
+      "kept": 4439
+    },
+    {
+      "where": "M12 start/end",
+      "values": {
+        "en-wiki": "2000–2008",
+        "other sources (card review)": "2001 / 2007"
+      },
+      "kept": "2000–2008"
+    }
+  ],
+  "openQuestions": [
+    "M500 deliveries not confirmed by any 2025–2026 source; add a card once production is evidenced.",
+    "M600 status: wiki says production stopped 2018, but the maker still lists it."
+  ],
+  "summary": "Filled M12 (2000–2008), M400 (from 2004) and M600 (2010–2018) dates, M600 dimensions/drivetrain from en-wiki; proposed removing concepts M14 and M15."
+}

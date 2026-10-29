@@ -1,0 +1,129 @@
+{
+  "make": "brabus",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "rocket-gts",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "confidence": "high",
+      "reason": "Manufacturer built-to-order production."
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "rocket-gts",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "confidence": "high",
+      "reason": "Manufacturer built-to-order production."
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "rocket-gts",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "confidence": "high",
+      "reason": "Single selected Rocket GTS family."
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "rocket-gts",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "confidence": "high",
+      "reason": "Single selected Rocket GTS family."
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "rocket-gts",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "reason": "Manufacturer currently describes a limited-production built-to-order vehicle. Exact SOP remains unknown."
+    },
+    {
+      "lineSlug": "rocket-gts",
+      "path": "sources",
+      "from": [
+        "https://www.brabus.com/en-int/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "to": [
+        "https://www.brabus.com/en-int/cars/supercars/brabus-rocket-gts.html",
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "reason": "Attach checked evidence."
+    },
+    {
+      "lineSlug": "rocket-gts",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.brabus.com/en-int/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "to": [
+        "https://www.brabus.com/en-int/cars/supercars/brabus-rocket-gts.html",
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "sources": [
+        "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html"
+      ],
+      "reason": "Attach checked generation evidence."
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Rocket GTS October2024 unveiling and Collection2025 label are not exact manufacturing start evidence; from remains null.",
+    "BRABUS is a tuner and coachbuilder with bespoke vehicles; do not remove the whole make just because many models derive from Mercedes-Benz.",
+    "Shared body taxonomy needs a consistent shooting-brake classification; no forced coupe/kombi conversion here.",
+    "Historic donor generation code and kit availability do not establish start/end of a BRABUS-built vehicle series."
+  ],
+  "summary": "Partial BRABUS breadth pass confirms1977 identity and current built-to-order Rocket GTS production. Retains all unknown manufacturing bounds and avoids substituting Mercedes donor dates or model-year labels.",
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 2,
+    "modelLinesInventoried": 17,
+    "additionsInventoried": 17,
+    "catalogCardsInventoried": 17,
+    "generationRowsInventoried": 32,
+    "externalChecks": [
+      {
+        "scope": "1977 corporate foundation and Rocket GTS bespoke shooting-brake production",
+        "sources": [
+          "https://www.brabus.com/en-sk/brand/brabus-history/firstSteps.html",
+          "https://www.brabus.com/en-it/cars/supercars/brabus-rocket-gts.html",
+          "https://www.continental.com/en/press/press-releases/-20241028-brabus-supercar-rocket/"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

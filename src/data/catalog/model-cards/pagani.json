@@ -4,23 +4,25 @@
     "lineSlug": "huayra",
     "name": "Huayra",
     "isAddition": true,
-    "segment": null,
+    "segment": "S",
     "summaryCs": "Pagani Huayra navázala na Zondu a používá přeplňovaný dvanáctiválec vyvinutý ve spolupráci s Mercedes-AMG. Silniční kupé a roadster mají samostatné technické záznamy, oddělené od čistě okruhových verzí.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Huayra Coupé",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2011,
+        "to": 2018,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -74,7 +76,7 @@
               "type": "automated-manual",
               "gears": 7
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": 4605,
               "width": 2036,
@@ -93,30 +95,50 @@
             "specificationScope": {
               "market": "manufacturer-road-specification",
               "modelYear": null,
-              "noteCs": "Šířka karoserie bez zrcátek; rozvor zdroj neuvádí. Silniční Coupé, nikoli okruhové R či R Evo. Zadní pohon není v této konkrétní tabulce výslovně uveden, proto null."
+              "noteCs": "Šířka karoserie bez zrcátek; rozvor zdroj neuvádí. Silniční Coupé, nikoli okruhové R či R Evo. Zadní pohon (motor uprostřed vzadu) doplněn podle anglické Wikipedie."
             },
             "sources": [
-              "https://www.pagani.com/huayra/"
-            ]
+              "https://www.pagani.com/huayra/",
+              "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+            ],
+            "fieldSources": {
+              "drive": [
+                "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+              ]
+            }
           }
         ],
         "sources": [
-          "https://www.pagani.com/huayra/"
-        ]
+          "https://www.pagani.com/huayra/",
+          "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Huayra Roadster",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2017,
+        "to": 2020,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -197,29 +219,30 @@
           }
         ],
         "sources": [
-          "https://www.pagani.com/huayra-roadster/"
-        ]
+          "https://www.pagani.com/huayra-roadster/",
+          "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413343"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.pagani.com/huayra/",
-      "https://www.pagani.com/huayra-roadster/"
+      "https://www.pagani.com/huayra-roadster/",
+      "https://en.wikipedia.org/w/index.php?oldid=1369413343"
     ],
     "needsReview": [
       {
-        "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -228,10 +251,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -283,10 +302,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[0].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -327,23 +342,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -445,6 +448,10 @@
       {
         "field": "scope",
         "reason": "Tři hlavní silniční modelové rodiny; nikoli úplný soupis zakázkových kusů, speciálních sérií a verzí. Výrobní intervaly nedoloženy nezávisle na ročnících premiér."
+      },
+      {
+        "field": "generations[0].trims[0].engine.powerKw",
+        "reason": "Výrobce uvádí 544 kW (730 hp), anglická Wikipedie 740 PS; ponechán údaj výrobce."
       }
     ],
     "aliases": [
@@ -458,29 +465,31 @@
     "lineSlug": "utopia",
     "name": "Utopia",
     "isAddition": true,
-    "segment": null,
+    "segment": "S",
     "summaryCs": "Pagani Utopia pokračuje v tradici nízkých sportovních vozů s přeplňovaným motorem V12 a bez hybridní soustavy. Kupé nabízí klasickou manuální nebo robotizovanou převodovku; otevřené provedení je vedeno jako součást stejné modelové rodiny.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Utopia Coupé",
-        "from": null,
+        "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "kupe"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4597,
+          "width": 2037,
+          "height": 1169,
+          "wheelbase": 2794
         },
         "specificationScope": {
           "market": "source-production",
@@ -528,7 +537,7 @@
               "type": "manual",
               "gears": 7
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": null,
               "width": null,
@@ -550,8 +559,14 @@
               "noteCs": "Výrobce uvádí obě převodovky pro silniční Coupé. Údaje jsou jmenovitou specifikací bez samostatného vážení každé převodovky; neodhaduje se jejich rozdíl. Pohon, zrychlení a spotřeba zde nebyly z tabulky ověřeny."
             },
             "sources": [
-              "https://www.pagani.com/pagani-utopia/"
-            ]
+              "https://www.pagani.com/pagani-utopia/",
+              "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+            ],
+            "fieldSources": {
+              "drive": [
+                "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+              ]
+            }
           },
           {
             "name": "Utopia Coupé – 7AMT",
@@ -571,7 +586,7 @@
               "type": "automated-manual",
               "gears": 7
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": null,
               "width": null,
@@ -593,27 +608,50 @@
               "noteCs": "Výrobce uvádí obě převodovky pro silniční Coupé. Údaje jsou jmenovitou specifikací bez samostatného vážení každé převodovky; neodhaduje se jejich rozdíl. Pohon, zrychlení a spotřeba zde nebyly z tabulky ověřeny."
             },
             "sources": [
-              "https://www.pagani.com/pagani-utopia/"
-            ]
+              "https://www.pagani.com/pagani-utopia/",
+              "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+            ],
+            "fieldSources": {
+              "drive": [
+                "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+              ]
+            }
           }
         ],
         "sources": [
-          "https://www.pagani.com/pagani-utopia/"
-        ]
+          "https://www.pagani.com/pagani-utopia/",
+          "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ],
+          "dimensionsMm": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Utopia Roadster",
-        "from": null,
+        "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -667,7 +705,7 @@
               "type": "manual",
               "gears": 7
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": null,
               "width": null,
@@ -689,8 +727,14 @@
               "noteCs": "Samostatně zveřejněná homologovaná silniční specifikace Roadsteru; oba typy převodovky potvrzeny. Přesné zákaznické výrobní období ani rok konkrétní konfigurace nepotvrzeny."
             },
             "sources": [
-              "https://www.pagani.com/utopia-roadster/"
-            ]
+              "https://www.pagani.com/utopia-roadster/",
+              "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+            ],
+            "fieldSources": {
+              "drive": [
+                "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+              ]
+            }
           },
           {
             "name": "Utopia Roadster – 7AMT",
@@ -710,7 +754,7 @@
               "type": "automated-manual",
               "gears": 7
             },
-            "drive": null,
+            "drive": "rwd",
             "dimensionsMm": {
               "length": null,
               "width": null,
@@ -732,37 +776,44 @@
               "noteCs": "Samostatně zveřejněná homologovaná silniční specifikace Roadsteru; oba typy převodovky potvrzeny. Přesné zákaznické výrobní období ani rok konkrétní konfigurace nepotvrzeny."
             },
             "sources": [
-              "https://www.pagani.com/utopia-roadster/"
-            ]
+              "https://www.pagani.com/utopia-roadster/",
+              "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+            ],
+            "fieldSources": {
+              "drive": [
+                "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+              ]
+            }
           }
         ],
         "sources": [
           "https://www.pagani.com/utopia-roadster/",
-          "https://www.pagani.com/press/utopia-roadster/"
-        ]
+          "https://www.pagani.com/press/utopia-roadster/",
+          "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/w/index.php?oldid=1369413591"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.pagani.com/pagani-utopia/",
       "https://www.pagani.com/utopia-roadster/",
       "https://www.pagani.com/press/utopia-roadster/",
-      "https://www.carscoops.com/2024/05/all-carbon-pagani-utopia-is-the-first-delivered-in-u-s/"
+      "https://www.carscoops.com/2024/05/all-carbon-pagani-utopia-is-the-first-delivered-in-u-s/",
+      "https://en.wikipedia.org/w/index.php?oldid=1369413591"
     ],
     "needsReview": [
       {
-        "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -774,27 +825,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -823,10 +854,6 @@
       },
       {
         "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].drive",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -890,10 +917,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[1].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[1].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -946,23 +969,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1011,10 +1022,6 @@
       },
       {
         "field": "generations[1].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].drive",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1078,10 +1085,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[1].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].trims[1].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1132,10 +1135,6 @@
       {
         "field": "scope",
         "reason": "Tři hlavní silniční modelové rodiny; nikoli úplný soupis zakázkových kusů, speciálních sérií a verzí. Výrobní intervaly nedoloženy nezávisle na ročnících premiér."
-      },
-      {
-        "field": "generations[1].from",
-        "reason": "Roadster je výrobcem homologovaný silniční model a limitovaná obchodní série, ale přesný začátek zákaznické výroby nebyl potvrzen; žádný odhad z premiéry 2024."
       }
     ],
     "aliases": [
@@ -1148,16 +1147,16 @@
     "lineSlug": "zonda",
     "name": "Zonda",
     "isAddition": true,
-    "segment": null,
+    "segment": "S",
     "summaryCs": "Pagani Zonda je ručně vyráběný sportovní vůz s motorem V12 za sedadly. Jména C12, S, F a další silniční série zde patří do jedné modelové rodiny; individuální zakázky nejsou samostatnými řadami.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Zonda – silniční Coupé a Roadster",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1999,
+        "to": 2019,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe",
@@ -1165,13 +1164,15 @@
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 2055,
           "height": null,
-          "wheelbase": null
+          "wheelbase": 2730
         },
         "specificationScope": {
           "market": "source-production",
@@ -1248,30 +1249,34 @@
         "sources": [
           "https://www.pagani.com/zonda-c12/",
           "https://www.pagani.com/zonda-f/",
-          "https://www.pagani.com/press/pagani-at-gims-2019/"
-        ]
+          "https://www.pagani.com/press/pagani-at-gims-2019/",
+          "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+          ],
+          "drivetrains": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+          ],
+          "dimensionsMm": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.pagani.com/zonda-c12/",
       "https://www.pagani.com/zonda-f/",
-      "https://www.pagani.com/press/pagani-at-gims-2019/"
+      "https://www.pagani.com/press/pagani-at-gims-2019/",
+      "https://en.wikipedia.org/w/index.php?oldid=1374742244"
     ],
     "needsReview": [
       {
-        "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1283,10 +1288,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1295,15 +1296,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1369,6 +1362,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Oficiální stránka C12 si odporuje mezi úvodním údajem 394 hp/570 Nm a tabulkou 331 kW/590 Nm. C12 proto nemá číselnou verzi; ověřena pouze samostatná specifikace F."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Sériová výroba silničních verzí podle anglické Wikipedie 1999–2019; jednotlivé kusy na zakázku (one-off) Pagani vyrábí i později."
       }
     ],
     "aliases": [

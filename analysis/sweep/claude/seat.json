@@ -1,0 +1,978 @@
+{
+  "make": "seat",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Sociedad Española de Automóviles de Turismo"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195226",
+        "https://www.wikidata.org/wiki/Q188217"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: es.wikipedia.org/wiki/SEAT gives the expansion as \"Sociedad Española de Automóviles Turismo\" (without \"de\"); both spellings are in use, consider adding that one too"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "ibiza",
+      "field": "generations[0].from",
+      "from": null,
+      "to": 1984,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375247774",
+        "https://de.wikipedia.org/w/index.php?oldid=261081438"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_Ibiza (Gen I 1984–1993)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "ibiza",
+      "field": "generations[0].to",
+      "from": null,
+      "to": 1993,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375247774",
+        "https://de.wikipedia.org/w/index.php?oldid=261081438"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_Ibiza (Gen I 1984–1993)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "ibiza",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375247774"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_Ibiza"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "leon",
+      "field": "generations[0].bodyTypes",
+      "from": null,
+      "to": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_León (5-door hatchback only)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "leon",
+      "field": "generations[1].bodyTypes",
+      "from": null,
+      "to": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_León (5-door hatchback only)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "leon",
+      "field": "generations[2].bodyTypes",
+      "from": null,
+      "to": [
+        "hatchback",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_León (hatchback/SC + Sportstourer/ST estate)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "leon",
+      "field": "generations[3].bodyTypes",
+      "from": null,
+      "to": [
+        "hatchback",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://es.wikipedia.org/wiki/SEAT_León (hatchback/SC + Sportstourer/ST estate)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "terra",
+      "field": "from",
+      "from": null,
+      "to": 1987,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746632"
+      ],
+      "confidence": "high",
+      "verify": "confirmed (weak): es.wikipedia.org/wiki/SEAT_Terra says 1986, de.wikipedia.org/wiki/Seat_Terra gives no clear start; 1987 kept"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "terra",
+      "field": "to",
+      "from": null,
+      "to": 1996,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746632"
+      ],
+      "confidence": "high",
+      "verify": "rejected: should be 1995, not 1996. de.wikipedia.org/wiki/Seat_Terra (discontinued 1995, three years before the Marbella) and es.wikipedia.org/wiki/SEAT_Terra (production stopped in 1995); card terra changed to 1995"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "terra",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746632"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de/es-wiki Seat Terra"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "terra",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "dodavka"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746632"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: es.wikipedia.org/wiki/SEAT_Terra (furgoneta, code 024A); de-wiki also notes a 3-door estate variant"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "cordoba",
+      "field": "bodyTypes",
+      "from": [
+        "sedan",
+        "kombi"
+      ],
+      "to": [
+        "sedan",
+        "kupe",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364071934"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: es.wikipedia.org/wiki/SEAT_Córdoba (6K: 4-door sedan, 2-door Córdoba SX, Vario estate)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "alhambra",
+      "field": "generations[0].bodyTypes",
+      "from": null,
+      "to": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1337845368"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: MPV twin of VW Sharan; not disputed by any source checked"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "alhambra",
+      "field": "generations[1].bodyTypes",
+      "from": null,
+      "to": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1337845368"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: MPV twin of VW Sharan; not disputed by any source checked"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "altea-freetrack-concept",
+      "reason": "concept car (production Altea Freetrack is a variant of altea)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379549999"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ateca-x-perience-concept",
+      "reason": "concept car",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1373908463"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "el-born",
+      "reason": "concept car; production version is the Cupra Born (make cupra)",
+      "sources": [],
+      "verify": "confirmed: Wikidata Q61934112 is the 2019 concept; the production car is the Cupra Born"
+    },
+    {
+      "file": "models-auto",
+      "slug": "arosa-racer",
+      "reason": "race car, not a road model",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1309901542"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "cordoba-wrc",
+      "reason": "World Rally Car, not a road model",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1364071934"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fr-series",
+      "reason": "trim level (FR), not a model",
+      "sources": [],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "altea-fr",
+      "reason": "trim of altea",
+      "sources": [],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "arona-fr",
+      "reason": "trim of arona",
+      "sources": [],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ateca-fr",
+      "reason": "trim of ateca",
+      "sources": [],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ateca-styling-pack",
+      "reason": "accessory/trim pack of ateca",
+      "sources": [],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "altea-freetrack",
+      "reason": "variant of altea (covered in card marketNotes)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1379549999"
+      ],
+      "verify": "confirmed: variant of Altea XL (note: models-auto also has altea-xl-freetrack Q1521421, not in this list, which needs the same decision)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-st-fr-facelift-mk3",
+      "reason": "trim/body variant of leon generation 5F",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-x-perience",
+      "reason": "body variant of leon generation 5F (ST X-perience)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ibiza-021-facelift",
+      "reason": "facelift stage of ibiza 021A (card facelift)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375247774"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-i",
+      "reason": "duplicate of leon generation 1M",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-mk2",
+      "reason": "duplicate of leon generation 1P",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-iii",
+      "reason": "duplicate of leon generation 5F",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "leon-iv-cupra-leon",
+      "reason": "duplicate of leon generation KL1/KL8; Cupra León belongs to make cupra",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381195140"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "toledo-i",
+      "reason": "duplicate of toledo generation 1L",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "toledo-ii",
+      "reason": "duplicate of toledo generation 1M",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "toledo-iii",
+      "reason": "duplicate of toledo generation 5P",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "toledo-iv",
+      "reason": "duplicate of toledo generation KG",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "alhambra-mk1",
+      "reason": "duplicate of alhambra generation 7M",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1337845368"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "alhambra-mk2",
+      "reason": "duplicate of alhambra generation 7N",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1337845368"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "127-mk1",
+      "reason": "series of SEAT 127",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368558215"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "127-mk2",
+      "reason": "series of SEAT 127",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368558215"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1400-a",
+      "reason": "version of SEAT 1400",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374797865"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1400-b",
+      "reason": "version of SEAT 1400",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374797865"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1400-c",
+      "reason": "version of SEAT 1400",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374797865"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600-d",
+      "reason": "version of SEAT 600",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374474184"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600-e",
+      "reason": "version of SEAT 600",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374474184"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600-l",
+      "reason": "version of SEAT 600",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374474184"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600-n",
+      "reason": "version of SEAT 600",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374474184"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "850-4p",
+      "reason": "body version of SEAT 850",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1362555654"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "850-coupe",
+      "reason": "body version of SEAT 850",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1362555654"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "850-sport-coupe",
+      "reason": "body version of SEAT 850",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1362555654"
+      ],
+      "verify": "confirmed: Wikidata Q90698620 is a subclass of SEAT 850 (Q3315959); card 850 covers it (borderline: Fiat treated Sport Coupé/Spider as own bodies)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "850-spider",
+      "reason": "body version of SEAT 850",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1362555654"
+      ],
+      "verify": "confirmed: Wikidata Q90698617 is a subclass of SEAT 850 (Q3315959); card 850 covers it (borderline: Fiat treated Sport Coupé/Spider as own bodies)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "124-fl",
+      "reason": "facelift of SEAT 124",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368556079"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "124-familiar",
+      "reason": "estate body of SEAT 124",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368556079"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "124-sport",
+      "reason": "coupé body of SEAT 124",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368556079"
+      ],
+      "verify": "rejected: the SEAT 124 Sport (1971–1975, 1600/1800) had a completely different coupé body from the 124 saloon (= Fiat 124 Sport Coupé) and has its own Wikidata item Q7389554 with en/pt/fi wiki articles; es.wikipedia.org/wiki/SEAT_124_Sport. Keep it as its own model; card 124 no longer lists kupe"
+    },
+    {
+      "file": "models-auto",
+      "slug": "131-panorama",
+      "reason": "estate body of SEAT 131 (alias on card 131)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368555721"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "128-sport",
+      "reason": "duplicate of SEAT 128 (card 128, alias 128 Sport)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1334674721"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1430-sport",
+      "reason": "duplicate of 1200/1430 Sport line (card 1200-sport)",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1367421033"
+      ],
+      "verify": "confirmed: slug is a trim, concept, race car, version or generation duplicate of a line in model-lines-auto or the new card (checked against models-auto Wikidata items)"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Ronda",
+      "from": 1982,
+      "to": 1986,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368559449"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "Fura",
+      "from": 1981,
+      "to": 1986,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368311367"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "Panda",
+      "from": 1980,
+      "to": 1986,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374746632"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "Ritmo",
+      "from": 1979,
+      "to": 1982,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368559449"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "600",
+      "from": 1957,
+      "to": 1973,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374474184"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "127",
+      "from": 1972,
+      "to": 1982,
+      "bodyTypes": [
+        "hatchback",
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368558215"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "133",
+      "from": 1974,
+      "to": 1981,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380809008"
+      ],
+      "verify": "confirmed: es.wikipedia.org/wiki/SEAT_133 (1974–1981, 2-door, rear engine)"
+    },
+    {
+      "name": "124",
+      "from": 1968,
+      "to": 1980,
+      "bodyTypes": [
+        "sedan",
+        "kombi",
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368556079"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "131",
+      "from": 1975,
+      "to": 1984,
+      "bodyTypes": [
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368555721"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "132",
+      "from": 1973,
+      "to": 1982,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1376134183"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "850",
+      "from": 1966,
+      "to": 1974,
+      "bodyTypes": [
+        "sedan",
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1362555654"
+      ],
+      "verify": "rejected: not missing. models-auto already has seat/850 (Wikidata Q3315959); only its years/bodyTypes are null, so this is a modelFix, not a new model"
+    },
+    {
+      "name": "1430",
+      "from": 1969,
+      "to": 1975,
+      "bodyTypes": [
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1372171840"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "1400",
+      "from": 1953,
+      "to": 1963,
+      "bodyTypes": [
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1374797865"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "128",
+      "from": 1976,
+      "to": 1980,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1334674721"
+      ],
+      "verify": "confirmed (not independently re-sourced): Fiat-licence era model with no plain slug in models-auto"
+    },
+    {
+      "name": "1200 / 1430 Sport",
+      "from": 1976,
+      "to": 1979,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1367421033"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/SEAT_1200_Sport current (Feb 1976 to Sep 1979, FWD) and es.wikipedia.org/wiki/SEAT_1200_Sport (FWD; infobox 1975–1980 but text ends 1979). models-auto has 1430-sport, so this is effectively a rename, not a new slug"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "ibiza",
+    "leon",
+    "toledo",
+    "cordoba",
+    "arona",
+    "ateca",
+    "tarraco",
+    "alhambra",
+    "altea",
+    "mii",
+    "arosa",
+    "exeo",
+    "inca",
+    "malaga",
+    "marbella",
+    "terra",
+    "ronda",
+    "fura",
+    "600",
+    "127",
+    "133",
+    "124",
+    "131",
+    "132",
+    "850",
+    "1430",
+    "1400",
+    "128",
+    "1200-sport"
+  ],
+  "conflicts": [
+    {
+      "where": "ateca end of production",
+      "values": {
+        "de-wiki 268709917": "03/2026",
+        "motor.es": "30 April 2026",
+        "en-wiki 1373908463": "2026"
+      },
+      "kept": 2026
+    },
+    {
+      "where": "ibiza 021A facelift",
+      "values": {
+        "en-wiki": "light update 1989 + New Style 1991",
+        "de-wiki": "Facelift 1991"
+      },
+      "kept": 1991
+    },
+    {
+      "where": "alhambra 7N end",
+      "values": {
+        "en-wiki (Alhambra)": 2020,
+        "de-wiki (Sharan/Alhambra, refers to Sharan)": 2022
+      },
+      "kept": 2020
+    },
+    {
+      "where": "toledo KG end",
+      "values": {
+        "en-wiki": "February 2019",
+        "de-wiki lead": "autumn 2018 (table 2012–2019)"
+      },
+      "kept": 2019
+    },
+    {
+      "where": "ibiza/arona second facelift",
+      "values": {
+        "en-wiki/carscoops": "revealed October 2025",
+        "de-wiki gallery": "from 2026 (market)"
+      },
+      "kept": "year 2025, productionYear null"
+    },
+    {
+      "where": "exeo end of production",
+      "values": {
+        "en-wiki 1381601396": "May 2014",
+        "de-wiki": "May 2013",
+        "es-wiki": "2013",
+        "it-wiki": "summer 2013"
+      },
+      "kept": 2013
+    },
+    {
+      "where": "inca production",
+      "values": {
+        "en-wiki 1307112026": "1996–2004",
+        "de-wiki": "1995–2003",
+        "es-wiki": "1995–2003"
+      },
+      "kept": "1995–2003"
+    },
+    {
+      "where": "terra production",
+      "values": {
+        "en-wiki 1374746632": "1987–1996",
+        "de-wiki": "to 1995",
+        "es-wiki": "1986–1995"
+      },
+      "kept": "1987–1995"
+    }
+  ],
+  "openQuestions": [
+    "models-auto.json has no plain entries for leon, cordoba, mii, arosa, malaga, marbella, terra, 600, 124, 127, 131 — only variants; after the removals the generic lines should come from model-lines-auto / additions.",
+    "Card-only lines (isAddition true: ronda, fura, 600, 127, 133, 124, 131, 132, 850, 1430, 1400, 128, 1200-sport) need model-line-additions entries and an index rebuild (scripts/model-cards-index.mjs) before they show.",
+    "SEAT 133 card has no photo: the en-wiki infobox image shows a SEAT 127.",
+    "Facelift years for Alhambra 7M/7N, Mii (2016 NSF update), Córdoba 6L not sourced; left null.",
+    "Engine power figures and trims not filled (trims null); next pass could use ADAC / auto-data.net for current Ibiza, Arona, León.",
+    "SEAT Trans (Panda-based van, to 1986) and SEAT 800 not checked."
+  ],
+  "summary": "Created src/data/model-cards/seat.json: 29 lines / 41 generations (16 lines from model-lines-auto plus 13 classic Fiat-licence era lines), facelift stages incl. the Oct 2025 Ibiza/Arona refresh, Ateca end of production 2026 (Kvasiny) and Tarraco end 2024. Proposed Ibiza 021A and Terra years, León/Alhambra body types, 15 missing classic models, and removal of concept/race/trim/duplicate entries from models-auto.",
+  "verification": {
+    "by": "claude-verifier",
+    "at": "2026-10-29",
+    "cardsChecked": [
+      "ibiza",
+      "leon",
+      "cordoba",
+      "ateca",
+      "tarraco",
+      "exeo",
+      "inca",
+      "terra",
+      "124",
+      "133",
+      "1200-sport"
+    ],
+    "cardEdits": [
+      {
+        "lineSlug": "exeo",
+        "path": "generations[0].to (+facelift[0].to, summaryCs)",
+        "from": 2014,
+        "to": 2013,
+        "sources": [
+          "https://de.wikipedia.org/wiki/Seat_Exeo",
+          "https://es.wikipedia.org/wiki/SEAT_Exeo",
+          "https://it.wikipedia.org/wiki/SEAT_Exeo"
+        ],
+        "note": "en-wiki says May 2014; de (May 2013, 81,552 units), es and it all say 2013. model-lines-auto exeo.to=2014 should become 2013 too"
+      },
+      {
+        "lineSlug": "inca",
+        "path": "generations[0].from/to (+summaryCs)",
+        "from": [
+          1996,
+          2004
+        ],
+        "to": [
+          1995,
+          2003
+        ],
+        "sources": [
+          "https://de.wikipedia.org/wiki/Seat_Inca",
+          "https://es.wikipedia.org/wiki/SEAT_Inca"
+        ],
+        "note": "en-wiki infobox 1996–2004; de: late 1995 to mid-2003. model-lines-auto inca (1996–2004) should follow"
+      },
+      {
+        "lineSlug": "terra",
+        "path": "generations[0].to (+summaryCs)",
+        "from": 1996,
+        "to": 1995,
+        "sources": [
+          "https://de.wikipedia.org/wiki/Seat_Terra",
+          "https://es.wikipedia.org/wiki/SEAT_Terra"
+        ]
+      },
+      {
+        "lineSlug": "124",
+        "path": "generations[0].bodyTypes (+summaryCs)",
+        "from": [
+          "sedan",
+          "kombi",
+          "kupe"
+        ],
+        "to": [
+          "sedan",
+          "kombi"
+        ],
+        "sources": [
+          "https://es.wikipedia.org/wiki/SEAT_124_Sport"
+        ],
+        "note": "124 Sport coupé is a separate model"
+      }
+    ],
+    "confirmedCards": {
+      "133": "1974–1981 confirmed by es-wiki",
+      "tarraco": "end 2024 confirmed: es.wikipedia.org/wiki/SEAT_Tarraco lead (production cessation announced July 2024)",
+      "ateca": "not refuted: es.wikipedia.org/wiki/SEAT_Ateca still says 2016-presente (stale) and confirms the 2020 facelift; end 2026 rests on de-wiki/motor.es/autozeitung",
+      "ibiza": "2025 facelift supported by Commons file \"2026 SEAT Ibiza FR 6F\" at Auto Zürich, taken 29 Oct 2025; es-wiki does not mention it yet",
+      "leon": "1P from 2005 vs es-wiki 2006 (presented 2005): kept; body types confirmed",
+      "1200-sport": "FWD and Feb 1976 to Sep 1979 confirmed (en/es-wiki current)"
+    },
+    "limits": "Web search budget was exhausted; checks used direct fetches of es/de/it Wikipedia, Wikidata and Commons only."
+  }
+}

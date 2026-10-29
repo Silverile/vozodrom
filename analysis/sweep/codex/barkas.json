@@ -1,0 +1,155 @@
+{
+  "make": "barkas",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 2,
+    "rawModelsInventoried": 3,
+    "modelLinesInventoried": 2,
+    "additionsInventoried": 2,
+    "sourceCheckedModels": [
+      "b1000",
+      "v901-2",
+      "ifa-p2m"
+    ],
+    "limitations": "State archive identity/company chronology and secondary production chronology checked; exact two-stroke model end and raw military attribution remain unresolved. No technical/photo audit."
+  },
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "b1000",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375"
+      ]
+    },
+    {
+      "lineSlug": "b1000",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf",
+        "https://de.wikipedia.org/wiki/Barkas_B_1000"
+      ],
+      "to": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375",
+        "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf",
+        "https://de.wikipedia.org/wiki/Barkas_B_1000"
+      ],
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375"
+      ]
+    },
+    {
+      "lineSlug": "b1000",
+      "path": "sources",
+      "from": [
+        "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf",
+        "https://de.wikipedia.org/wiki/Barkas_B_1000",
+        "https://en.wikipedia.org/wiki/Barkas_B_1000-1",
+        "https://fahrzeugseiten.de/Nutzfahrzeuge/IFA/Barkas_B1000/barkas_b1000.html"
+      ],
+      "to": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375",
+        "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf",
+        "https://de.wikipedia.org/wiki/Barkas_B_1000",
+        "https://en.wikipedia.org/wiki/Barkas_B_1000-1",
+        "https://fahrzeugseiten.de/Nutzfahrzeuge/IFA/Barkas_B1000/barkas_b1000.html"
+      ],
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "make.dissolvedYear",
+      "values": {
+        "catalog": 1991,
+        "VEB commercial-register deletion": 1992,
+        "Barkas GmbH dissolution/liquidation": 1993
+      },
+      "kept": 1991,
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375"
+      ],
+      "note": "Catalog1991 appears vehicle production end. Legal entity selection must be settled before changing dissolution to1992 or1993."
+    }
+  ],
+  "verifiedExisting": [
+    {
+      "where": "make.foundedYear",
+      "value": 1958,
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31060&oid=09.09&syg_id=143324"
+      ],
+      "note": "State archive identifies consolidated Barkas enterprise effective1January1958."
+    }
+  ],
+  "openQuestions": [
+    "Two-stroke B1000 end1989/1990 varies across histories; null retained instead of copying1991 combined family endpoint.",
+    "B1000-1 autumn1989 reveal is distinct from1990 series manufacture; existing1990 start retained.",
+    "V901/2 predecessor history must distinguish Framo manufacturing from later Barkas badge.",
+    "IFA P2M raw make attribution and military-versus-civilian scope need primary vehicle-specific evidence.",
+    "Make dissolvedYear1991 is not substantiated as legal dissolution by archive; see1992 VEB/1993GmbH conflict."
+  ],
+  "summary": "Partial Barkas sweep: corrected historical two-stroke B1000 status to ended; state archive confirms1958 foundation and exposes production-end versus legal-dissolution mismatch.",
+  "generationProposals": [
+    {
+      "file": "model-lines-auto",
+      "slug": "b1000",
+      "match": {
+        "name": "B1000 two-stroke family",
+        "from": 1961
+      },
+      "changes": {
+        "productionStatus": "ended"
+      },
+      "sources": [
+        "https://www.archiv.sachsen.de/archiv/bestand.jsp?bestandid=31055&oid=9.9&syg_id=143375"
+      ],
+      "requirement": "Match original two-stroke generation by identity; do not apply to B1000-1 or derive exact end year."
+    }
+  ],
+  "photoReviews": [
+    {
+      "round": 8,
+      "lineSlug": "b1000",
+      "generations": [
+        0,
+        1
+      ],
+      "existingPhoto": null,
+      "candidate": "https://commons.wikimedia.org/wiki/File:Barkas_B_1000_Krankenwagen_(1).jpg",
+      "description": "Frontansicht eines Barkas B 1000 Krankenwagen",
+      "category": "Barkas B 1000 ambulances",
+      "author": "Fiver, der Hellseher",
+      "license": "CC BY-SA 4.0",
+      "result": "Description/category establish ambulance family only; no build year or two/four-stroke distinction. Not installed; all three Barkas generation photo slots remain null.",
+      "visualReview": "pending"
+    }
+  ],
+  "depthPasses": [
+    {
+      "round": 8,
+      "date": "2026-10-29",
+      "cardsInventoried": 2,
+      "generationsInventoried": 3,
+      "technicalVersionsAdded": 0,
+      "cardPatchEntries": 0,
+      "status": "partial",
+      "sources": [
+        "https://www.barkas-team.de/historie-b1000-und-b1000-1/",
+        "https://www-archiv.zivilundwehrtechnik.de/online-museum/zivil/barkas-feuerwehrwagen-b1000-kmklf.html",
+        "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf"
+      ],
+      "limitations": "Reconfirmed 1990-1991 B1000-1 series chronology. Two-stroke endpoint remains conflicted 1989/1990. Fire-engine museum technical data cannot be transferred to existing 1971 passenger-van or four-stroke pickup trim. V901/2 badge-date remains unresolved. No card fields changed; no exhaustive engine/facelift or visual audit."
+    }
+  ]
+}

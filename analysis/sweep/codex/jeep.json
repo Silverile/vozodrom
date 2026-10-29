@@ -1,0 +1,1394 @@
+{
+  "make": "jeep",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 22,
+    "rawModelsInventoried": 32,
+    "modelLinesInventoried": 22,
+    "additionsInventoried": 9,
+    "sourceCheckedModels": [
+      "jeepster",
+      "dispatcher",
+      "forward-control",
+      "gladiator",
+      "cj",
+      "wagoneer",
+      "commando"
+    ],
+    "limitations": "Local identity/chronology inventory and selective manufacturer history checks; no full specifications, images or contemporary status sweep.",
+    "depthRound5": {
+      "status": "partial",
+      "sourceCheckedModels": [
+        "renegade",
+        "compass"
+      ],
+      "substantiveFieldsChanged": 10,
+      "loggedChanges": 21,
+      "limitations": "Two exterior facelift records and selected eight technical null fills for one MY2020 trim. French OEM technical sheet retrieved as indexed text, not a fully rendered PDF."
+    }
+  },
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "jeepster",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1940s.html"
+      ],
+      "confidence": "high",
+      "note": "Historical generation has ended even though exact dates remain uncertain."
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "dispatcher",
+      "field": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ],
+      "confidence": "high",
+      "note": "Historical generation has ended even though exact dates remain uncertain."
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "dispatcher",
+      "field": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1970s.html"
+      ],
+      "confidence": "high",
+      "note": "Historical generation has ended even though exact dates remain uncertain."
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "forward-control",
+      "field": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ],
+      "confidence": "high",
+      "note": "Historical generation has ended even though exact dates remain uncertain."
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "jeepster",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1940s.html"
+      ]
+    },
+    {
+      "lineSlug": "jeepster",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.jeep.com/history/1940s.html",
+        "https://en.wikipedia.org/wiki/Willys-Overland_Jeepster"
+      ],
+      "to": [
+        "https://www.jeep.com/history/1940s.html",
+        "https://www.jeep.com/history/1940s.html",
+        "https://en.wikipedia.org/wiki/Willys-Overland_Jeepster"
+      ],
+      "sources": [
+        "https://www.jeep.com/history/1940s.html"
+      ]
+    },
+    {
+      "lineSlug": "dispatcher",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ]
+    },
+    {
+      "lineSlug": "dispatcher",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jeep_DJ"
+      ],
+      "to": [
+        "https://www.jeep.com/history/1950s.html",
+        "https://en.wikipedia.org/wiki/Jeep_DJ"
+      ],
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ]
+    },
+    {
+      "lineSlug": "dispatcher",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jeep_DJ",
+        "https://www.jeep.com/history/1970s.html"
+      ],
+      "to": [
+        "https://www.jeep.com/history/1950s.html",
+        "https://en.wikipedia.org/wiki/Jeep_DJ",
+        "https://www.jeep.com/history/1970s.html"
+      ],
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ]
+    },
+    {
+      "lineSlug": "dispatcher",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1970s.html"
+      ]
+    },
+    {
+      "lineSlug": "dispatcher",
+      "path": "generations[1].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jeep_DJ",
+        "https://www.jeep.com/history/1970s.html"
+      ],
+      "to": [
+        "https://www.jeep.com/history/1970s.html",
+        "https://en.wikipedia.org/wiki/Jeep_DJ",
+        "https://www.jeep.com/history/1970s.html"
+      ],
+      "sources": [
+        "https://www.jeep.com/history/1970s.html"
+      ]
+    },
+    {
+      "lineSlug": "forward-control",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ]
+    },
+    {
+      "lineSlug": "forward-control",
+      "path": "generations[1].sources",
+      "from": [
+        "https://www.jeep.com/history/1950s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Forward_Control"
+      ],
+      "to": [
+        "https://www.jeep.com/history/1950s.html",
+        "https://www.jeep.com/history/1950s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Forward_Control"
+      ],
+      "sources": [
+        "https://www.jeep.com/history/1950s.html"
+      ]
+    },
+    {
+      "lineSlug": "gladiator",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.media.stellantis.com/em-en/jeep/press/jeep-history"
+      ]
+    },
+    {
+      "lineSlug": "gladiator",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.jeep.com/history/1960s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(SJ)"
+      ],
+      "to": [
+        "https://www.media.stellantis.com/em-en/jeep/press/jeep-history",
+        "https://www.jeep.com/history/1960s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(SJ)"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/jeep/press/jeep-history"
+      ]
+    },
+    {
+      "lineSlug": "gladiator",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1380931236",
+        "https://www.wikidata.org/wiki/Q1686209",
+        "https://www.jeep.com/history/1960s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(SJ)",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(JT)"
+      ],
+      "to": [
+        "https://www.media.stellantis.com/em-en/jeep/press/jeep-history",
+        "https://en.wikipedia.org/w/index.php?oldid=1380931236",
+        "https://www.wikidata.org/wiki/Q1686209",
+        "https://www.jeep.com/history/1960s.html",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(SJ)",
+        "https://en.wikipedia.org/wiki/Jeep_Gladiator_(JT)"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/em-en/jeep/press/jeep-history"
+      ]
+    },
+    {
+      "lineSlug": "renegade",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2018,
+          "productionYear": null,
+          "name": "Modernizace pro modelový rok 2019",
+          "code": null,
+          "note": "Změněná přední část a dostupná světla LED. Tovární zpráva z 16. srpna 2018 uvádí britský příchod v září; ADAC modernizovanou evropskou řadu eviduje od září 2018. Termín prodeje neurčuje přesný začátek výroby.",
+          "sources": [
+            "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2021,
+          "productionYear": null,
+          "name": "Evropská modernizace 2021",
+          "code": null,
+          "note": "Přepracovaná příď, osvětlení a interiér; zdroje rozlišují modernizaci od původní druhé generace. Přesný výrobní termín není doložen.",
+          "sources": [
+            "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].engine.displacementCc",
+      "from": null,
+      "to": 1332,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].engine.cylinders",
+      "from": null,
+      "to": 4,
+      "sources": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].transmission.gears",
+      "from": null,
+      "to": 6,
+      "sources": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].dimensionsMm.length",
+      "from": null,
+      "to": 4394,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].dimensionsMm.height",
+      "from": null,
+      "to": 1629,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].dimensionsMm.wheelbase",
+      "from": null,
+      "to": 2636,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].topSpeedKmh",
+      "from": null,
+      "to": 192,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].acceleration0to100s",
+      "from": null,
+      "to": 10.3,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].fieldSources",
+      "from": null,
+      "to": {
+        "engine.displacementCc": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "engine.cylinders": [
+          "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "transmission.gears": [
+          "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "dimensionsMm.length": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "dimensionsMm.height": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "topSpeedKmh": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "acceleration0to100s": [
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ]
+      },
+      "sources": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].specificationScope.noteCs",
+      "from": "Tovární zpráva1.7.2020. Přesný objem ani počet převodů nejsou odvozeny z obchodního označení1.3 čiDDCT; neověřené údaje null.",
+      "to": "Evropská verze pro modelový rok 2020, 1.3 T-GDi 130 se šestistupňovou manuální převodovkou. Tovární německá zpráva a francouzský technický ceník jsou porovnány s německým ADAC. Šířka zůstává null: ADAC uvádí karoserii bez zrcátek, francouzský ceník šířku se sklopenými zrcátky. Hmotnost nebyla doplněna bez shody její konvence.",
+      "sources": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].trims[0].sources",
+      "from": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
+      ],
+      "to": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "renegade",
+      "path": "generations[0].fieldSources",
+      "from": null,
+      "to": {
+        "facelift": [
+          "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+        ]
+      },
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "renegade",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368986785",
+        "https://www.wikidata.org/wiki/Q15907271"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368986785",
+        "https://www.wikidata.org/wiki/Q15907271",
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "renegade",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368986785",
+        "https://www.wikidata.org/wiki/Q15907271"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1368986785",
+        "https://www.wikidata.org/wiki/Q15907271",
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "renegade",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Zapsána vybraná evropská modernizace; další trhy, výrobní termíny a úplnost změn zůstávají k ověření."
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].fieldSources",
+      "from": null,
+      "to": {
+        "facelift": [
+          "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/"
+        ]
+      },
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "generations[1].sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375207742",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375207742",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375207742",
+        "https://www.wikidata.org/wiki/Q1686208",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
+      ],
+      "to": [
+        "https://en.wikipedia.org/w/index.php?oldid=1375207742",
+        "https://www.wikidata.org/wiki/Q1686208",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    },
+    {
+      "lineSlug": "compass",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].acceleration0to100s",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Zapsána vybraná evropská modernizace; další trhy, výrobní termíny a úplnost změn zůstávají k ověření."
+        }
+      ],
+      "sources": [
+        "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+        "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "passType": "DEPTH",
+      "round": 5
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Compass MY2020 130 manual width",
+      "values": {
+        "ADAC body excluding mirrors": 1819,
+        "OEM French folded-mirror width": 1874
+      },
+      "kept": null,
+      "sources": [
+        "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+      ],
+      "note": "Different measurement conventions, not contradictory body widths. Do not copy folded-mirror width into body width."
+    }
+  ],
+  "openQuestions": [
+    "Manufacturer historic timelines often use model years, not calendar production dates: do not fill unknown start/end fields directly from headings.",
+    "Jeepster timeline 1948-1951 includes sales through 1951; exact production end retained null.",
+    "Gladiator/J-Series historical headings 1963-1987 differ from production chronology candidates 1962-1988; dates remain null.",
+    "FC-170 official heading says 1957-1965 but body mentions 1967 vehicles; dates remain null.",
+    "Current Cherokee/Compass generation timelines and all raw duplicate variants need further evidence.",
+    "Jeepster VJ and Jeepster Commando C-101 are different families; keep separate.",
+    "Shared Gladiator line has generations:null and begins2019; historical SJ generation requires a separate reviewed addition, not index0 status mutation.",
+    "DEPTH round5: Renegade Commons description/category identifies 2015 Italy-built US Latitude 2.4 / 9AT, credit Mr.choppers CC BY-SA3.0 matches. Same generation body; does not certify European trim. No pixels reviewed and no photo change.",
+    "DEPTH round5: Compass150 DDCT MY2020 remains without displacement/cylinders/gears pending exact independent MY2020 corroboration; facelift MY2021 evidence was not silently transferred. All complete generation/status/engine/photo checks remain open."
+  ],
+  "summary": "Partial Jeep sweep: marked five demonstrably historical generations ended while preserving uncertain production dates rather than copying model-year headings."
+}

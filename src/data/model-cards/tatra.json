@@ -86,7 +86,7 @@
     "trims": [
      {
       "name": "5,3 l šestiválec",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1915,
       "to": 1927,
       "bodyType": "sedan",
@@ -144,19 +144,19 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].engine.powerKw",
-    "noteCs": "Zdroje se liší: cs 65 k (47,8 kW), de 65–70 PS (NW U) a 68 PS (Tatra 10). Ponecháno prázdné."
+    "reason": "Zdroje se liší: cs 65 k (47,8 kW), de 65–70 PS (NW U) a 68 PS (Tatra 10). Ponecháno prázdné."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Počet 129 kusů uvádí jen česká Wikipedie; de Wikipedie uvádí konec výroby 1925, cs a en 1927."
+    "reason": "Počet 129 kusů uvádí jen česká Wikipedie; de Wikipedie uvádí konec výroby 1925, cs a en 1927."
    },
    {
     "field": "lineSlug",
-    "noteCs": "Model 10 v katalogu chybí (models-auto ani model-lines-auto ho neobsahují) – karta je doplněk (isAddition)."
+    "reason": "Model 10 v katalogu chybí (models-auto ani model-lines-auto ho neobsahují) – karta je doplněk (isAddition)."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -244,7 +244,7 @@
     "trims": [
      {
       "name": "1,1 dvouválec 8,8 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1923,
       "to": 1926,
       "bodyType": "kabriolet",
@@ -300,15 +300,15 @@
   "needsReview": [
    {
     "field": "generations[0].engines[0].displacementCc",
-    "noteCs": "cs a de Wikipedie 1056 cm³, tatraportal.sk 1057 cm³; použita shodná hodnota dvou zdrojů."
+    "reason": "cs a de Wikipedie 1056 cm³, tatraportal.sk 1057 cm³; použita shodná hodnota dvou zdrojů."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "de Wikipedie zmiňuje i jiný zdroj s 3450 kusy; cs, de a tatraportal uvádějí 3540."
+    "reason": "de Wikipedie zmiňuje i jiný zdroj s 3450 kusy; cs, de a tatraportal uvádějí 3540."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -398,7 +398,7 @@
     "trims": [
      {
       "name": "1,1 dvouválec",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1926,
       "to": 1933,
       "bodyType": "sedan",
@@ -454,15 +454,19 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "cs Wikipedie uvádí konec výroby 1934, en Wikipedie a tatraportal.sk 1933; použit rok 1933."
+    "reason": "cs Wikipedie uvádí konec výroby 1934, en Wikipedie a tatraportal.sk 1933; použit rok 1933."
    },
    {
     "field": "generations[0].trims[0].massKg",
-    "noteCs": "en Wikipedie uvádí 680–900 kg podle karoserie; tatraportal má údaje nekonzistentní. Ponecháno prázdné."
+    "reason": "en Wikipedie uvádí 680–900 kg podle karoserie; tatraportal má údaje nekonzistentní. Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+   },
+   {
+    "field": "generations[0].to",
+    "reason": "en Wikipedie a dosavadní karta uvádějí konec 1933, cs Wikipedie 1934. Ponecháno 1933."
    }
   ]
  },
@@ -556,7 +560,7 @@
     "trims": [
      {
       "name": "1,9 šestiválec 25,8 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1925,
       "to": null,
       "bodyType": "sedan",
@@ -602,7 +606,7 @@
      },
      {
       "name": "2,3 šestiválec 29,4 kW (17/31)",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1926,
       "to": 1929,
       "bodyType": "sedan",
@@ -658,23 +662,23 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "cs Wikipedie a tatraportal uvádějí 1925–1929, de Wikipedie konec 1926 (205 vozů do září 1926, pak větší motor). Použit rok 1929."
+    "reason": "cs Wikipedie a tatraportal uvádějí 1925–1929, de Wikipedie konec 1926 (205 vozů do září 1926, pak větší motor). Použit rok 1929."
    },
    {
     "field": "generations[0].dimensionsMm.wheelbase",
-    "noteCs": "Rozvor: de Wikipedie 3540 mm, tatraportal 3450 mm. Ponecháno prázdné."
+    "reason": "Rozvor: de Wikipedie 3540 mm, tatraportal 3450 mm. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[0].massKg",
-    "noteCs": "Hmotnost: de 1130 kg (resp. 1350 kg v infoboxu), tatraportal 1300–1500 kg. Ponecháno prázdné."
+    "reason": "Hmotnost: de 1130 kg (resp. 1350 kg v infoboxu), tatraportal 1300–1500 kg. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[1].from",
-    "noteCs": "Rok nasazení většího motoru je odvozen z de Wikipedie (po září 1926); ověřit."
+    "reason": "Rok nasazení většího motoru je odvozen z de Wikipedie (po září 1926); ověřit."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -771,7 +775,7 @@
     "trims": [
      {
       "name": "30 1,7 17,6 kW (krátký rozvor)",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1926,
       "to": 1931,
       "bodyType": "sedan",
@@ -821,7 +825,7 @@
      },
      {
       "name": "30 1,7 17,6 kW (dlouhý rozvor)",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1926,
       "to": 1931,
       "bodyType": "sedan",
@@ -871,7 +875,7 @@
      },
      {
       "name": "30 Sport 1,9",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1926,
       "to": null,
       "bodyType": "kabriolet",
@@ -917,7 +921,7 @@
      },
      {
       "name": "30/52 1,9 22 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1929,
       "to": 1931,
       "bodyType": "kabriolet",
@@ -973,15 +977,169 @@
   "needsReview": [
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "3785 kusů uvádí cs Wikipedie a tatraportal; de Wikipedie uvádí jen asi 900 vozů. Ověřit."
+    "reason": "3785 kusů uvádí cs Wikipedie a tatraportal; de Wikipedie uvádí jen asi 900 vozů. Ověřit."
    },
    {
     "field": "generations[0].engines[0].variant",
-    "noteCs": "de Wikipedie upozorňuje, že motor může být technicky V-motor s úhlem 180°, nikoli boxer."
+    "reason": "de Wikipedie upozorňuje, že motor může být technicky V-motor s úhlem 180°, nikoli boxer."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+   }
+  ]
+ },
+ {
+  "makeSlug": "tatra",
+  "lineSlug": "31",
+  "name": "31",
+  "isAddition": true,
+  "segment": "F",
+  "summaryCs": "Tatra 31 byla vůz vyšší třídy z let 1928–1930, který navázal na typ 17: páteřový rám a vodou chlazený řadový šestiválec OHC 2,3 l s výkonem 29 kW (40 k). Vyráběl se jako faeton, limuzína, kabriolet i hasičský vůz, celkem asi 450 kusů. Nástupci se staly typy 70 a 80.",
+  "coverage": "pilot-partial",
+  "generations": [
+   {
+    "code": "31",
+    "name": "Tatra 31",
+    "from": 1928,
+    "to": 1930,
+    "productionStatus": "ended",
+    "productionUnits": 450,
+    "facelift": null,
+    "bodyTypes": [
+     "kabriolet",
+     "sedan"
+    ],
+    "engines": [
+     {
+      "fuel": "petrol",
+      "displacementCc": 2310,
+      "displacementLitresNominal": 2.3,
+      "powerKwMin": 29,
+      "powerKwMax": 29,
+      "variant": "řadový šestiválec OHC, vodou chlazený"
+     }
+    ],
+    "engineCoverage": "partial",
+    "drivetrains": [
+     "rwd"
+    ],
+    "transmissions": null,
+    "dimensionsMm": {
+     "length": 4700,
+     "width": 1650,
+     "height": 1720,
+     "wheelbase": 3540
+    },
+    "specificationScope": {
+     "market": "Československo",
+     "modelYear": null,
+     "variant": null,
+     "bodyType": null,
+     "noteCs": "Rozměry, hmotnost a výkon podle infoboxu cs Wikipedie."
+    },
+    "trunkL": null,
+    "markets": [
+     "Československo"
+    ],
+    "marketNotesCs": "Historický vůz vyšší třídy; vznikly i hasičské vozy.",
+    "photo": {
+     "source": "commons",
+     "file": "File:Tatra 31, phaeton (1930).jpg",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tatra_31%2C_phaeton_%281930%29.jpg",
+     "filePageUrl": "https://commons.wikimedia.org/wiki/File:Tatra_31,_phaeton_(1930).jpg",
+     "author": "neznámý autor (Letem světem, 1930)",
+     "licence": "Public domain (PD-anon-70-EU)",
+     "licenceUrl": null,
+     "credit": "Neznámý autor / Letem světem 4 (1930), č. 31 / Wikimedia Commons / volné dílo",
+     "depicts": "generation",
+     "visualReview": "pending",
+     "sources": [
+      "https://commons.wikimedia.org/wiki/File:Tatra_31,_phaeton_(1930).jpg"
+     ]
+    },
+    "sources": [
+     "https://cs.wikipedia.org/w/index.php?oldid=26260106",
+     "https://en.wikipedia.org/wiki/Tatra_(company)"
+    ],
+    "fieldSources": {
+     "from": [
+      "https://cs.wikipedia.org/w/index.php?oldid=26260106",
+      "https://en.wikipedia.org/wiki/Tatra_(company)"
+     ],
+     "to": [
+      "https://cs.wikipedia.org/w/index.php?oldid=26260106",
+      "https://en.wikipedia.org/wiki/Tatra_(company)"
+     ],
+     "productionUnits": [
+      "https://cs.wikipedia.org/w/index.php?oldid=26260106"
+     ],
+     "engines": [
+      "https://cs.wikipedia.org/w/index.php?oldid=26260106"
+     ],
+     "dimensionsMm": [
+      "https://cs.wikipedia.org/w/index.php?oldid=26260106"
+     ]
+    },
+    "trims": [
+     {
+      "name": "2,3 šestiválec 29 kW",
+      "kind": "engine-version",
+      "from": 1928,
+      "to": 1930,
+      "bodyType": null,
+      "engine": {
+       "fuel": "petrol",
+       "displacementCc": 2310,
+       "cylinders": 6,
+       "powerKw": 29,
+       "torqueNm": null,
+       "powerStandard": null
+      },
+      "transmission": {
+       "type": null,
+       "gears": null
+      },
+      "drive": "rwd",
+      "dimensionsMm": {
+       "length": 4700,
+       "width": 1650,
+       "height": 1720,
+       "wheelbase": 3540
+      },
+      "massKg": 1480,
+      "massBasis": "pohotovostní hmotnost (cs Wikipedie)",
+      "topSpeedKmh": 110,
+      "acceleration0to100s": null,
+      "consumptionL100": null,
+      "consumptionCycle": null,
+      "consumptionKwh100": null,
+      "rangeKm": null,
+      "rangeCycle": null,
+      "specificationScope": {
+       "market": "Československo",
+       "modelYear": null,
+       "noteCs": "Údaje z infoboxu cs Wikipedie (40 k při 3000 ot/min)."
+      },
+      "sources": [
+       "https://cs.wikipedia.org/w/index.php?oldid=26260106"
+      ]
+     }
+    ]
+   }
+  ],
+  "sources": [
+   "https://cs.wikipedia.org/w/index.php?oldid=26260106",
+   "https://en.wikipedia.org/wiki/Tatra_(company)"
+  ],
+  "needsReview": [
+   {
+    "field": "generations[0].photo.visualReview",
+    "reason": "Dobová fotografie faetonu z časopisu Letem světem (1930); shoda s typem podle popisu na Commons, vizuální kontrola čeká."
+   },
+   {
+    "field": "generations[0].transmissions",
+    "reason": "Převodovka nebyla ze zdrojů ověřena."
    }
   ]
  },
@@ -997,8 +1155,8 @@
    {
     "code": "52",
     "name": "Tatra 52",
-    "from": 1930,
-    "to": null,
+    "from": 1931,
+    "to": 1939,
     "productionStatus": "ended",
     "facelift": [
      {
@@ -1080,12 +1238,15 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26086900",
      "https://de.wikipedia.org/w/index.php?oldid=234687410",
      "https://en.wikipedia.org/w/index.php?oldid=1345487202",
-     "https://web.archive.org/web/20250220144817/https://tatraportal.sk/index.php?ukaz=popisky/t52_en&lang=en"
+     "https://web.archive.org/web/20250220144817/https://tatraportal.sk/index.php?ukaz=popisky/t52_en&lang=en",
+     "https://cs.wikipedia.org/wiki/Tatra_52",
+     "https://en.wikipedia.org/wiki/Tatra_52",
+     "https://de.wikipedia.org/wiki/Tatra_52"
     ],
     "trims": [
      {
       "name": "1,9 22 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1930,
       "to": 1935,
       "bodyType": "sedan",
@@ -1131,7 +1292,7 @@
      },
      {
       "name": "1,9 23,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1935,
       "to": null,
       "bodyType": "sedan",
@@ -1177,7 +1338,7 @@
      },
      {
       "name": "52 Sport 2,0",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1930,
       "to": null,
       "bodyType": "kabriolet",
@@ -1218,7 +1379,21 @@
        "https://de.wikipedia.org/w/index.php?oldid=234687410"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "from": [
+      "https://cs.wikipedia.org/wiki/Tatra_52",
+      "https://en.wikipedia.org/wiki/Tatra_52"
+     ],
+     "to": [
+      "https://cs.wikipedia.org/wiki/Tatra_52",
+      "https://en.wikipedia.org/wiki/Tatra_52"
+     ],
+     "productionUnits": [
+      "https://de.wikipedia.org/wiki/Tatra_52"
+     ]
+    },
+    "productionUnits": 1687
    }
   ],
   "sources": [
@@ -1230,19 +1405,19 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: cs 1939, tatraportal 1938, de nástupce od 1937. Ponecháno prázdné."
+    "reason": "Konec výroby: cs 1939, tatraportal 1938, de nástupce od 1937. Ponecháno prázdné."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "cs Wikipedie uvádí představení 1931, de a tatraportal 1930; použit rok 1930."
+    "reason": "cs Wikipedie uvádí představení 1931, de a tatraportal 1930; použit rok 1930."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Počty se liší: cs asi 1700, de 1687, tatraportal 1717. Ponecháno prázdné."
+    "reason": "Počty se liší: cs asi 1700, de 1687, tatraportal 1717. Ponecháno prázdné."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -1336,7 +1511,7 @@
     "trims": [
      {
       "name": "1,5 16,1 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1931,
       "to": 1934,
       "bodyType": "sedan",
@@ -1386,7 +1561,7 @@
      },
      {
       "name": "54/30 1,7 17,6 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1931,
       "to": 1936,
       "bodyType": "sedan",
@@ -1440,11 +1615,11 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Tatra 54 se podle cs, en a tatraportal vyráběla do 1934, verze 54/30 až do 1936."
+    "reason": "Tatra 54 se podle cs, en a tatraportal vyráběla do 1934, verze 54/30 až do 1936."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -1535,7 +1710,7 @@
     "trims": [
      {
       "name": "1,2 13,2 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1932,
       "to": 1935,
       "bodyType": "sedan",
@@ -1656,7 +1831,7 @@
     "trims": [
      {
       "name": "57 A 1,2 14,7 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1935,
       "to": 1938,
       "bodyType": "sedan",
@@ -1775,7 +1950,7 @@
     "trims": [
      {
       "name": "57 B 1,3 18,4 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1938,
       "to": 1948,
       "bodyType": "sedan",
@@ -1820,7 +1995,7 @@
      },
      {
       "name": "57 K 1,3 17 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1941,
       "to": 1948,
       "bodyType": null,
@@ -1875,31 +2050,31 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].topSpeedKmh",
-    "noteCs": "cs 80 km/h, tatraportal 85 km/h, de obě hodnoty; použito 80 km/h."
+    "reason": "cs 80 km/h, tatraportal 85 km/h, de obě hodnoty; použito 80 km/h."
    },
    {
     "field": "generations[1].trims[0].topSpeedKmh",
-    "noteCs": "cs 80–90 km/h, de 85 km/h. Ponecháno prázdné."
+    "reason": "cs 80–90 km/h, de 85 km/h. Ponecháno prázdné."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Celkové počty se liší (cs 26 985, de 22 000 nebo 27 025); u 57 A uvádí de i 4000 + 515 kusů."
+    "reason": "Celkové počty se liší (cs 26 985, de 22 000 nebo 27 025); u 57 A uvádí de i 4000 + 515 kusů."
    },
    {
     "field": "lineSlug",
-    "noteCs": "Katalog obsahuje i samostatný slug 57a; karta pokrývá 57, 57 A, 57 B i 57 K v jedné řadě."
+    "reason": "Katalog obsahuje i samostatný slug 57a; karta pokrývá 57, 57 A, 57 B i 57 K v jedné řadě."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -1985,7 +2160,7 @@
     "trims": [
      {
       "name": "3,4 šestiválec 48 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1931,
       "to": 1932,
       "bodyType": "sedan",
@@ -2090,7 +2265,7 @@
     "trims": [
      {
       "name": "70 A 3,8 šestiválec 51 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1934,
       "to": 1936,
       "bodyType": "sedan",
@@ -2146,15 +2321,15 @@
   "needsReview": [
    {
     "field": "generations[1].productionUnits",
-    "noteCs": "cs a de uvádějí 70 kusů T70 A, tatraportal 71."
+    "reason": "cs a de uvádějí 70 kusů T70 A, tatraportal 71."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo",
-    "noteCs": "Na Commons nebyla nalezena fotografie splňující pravidla (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena fotografie splňující pravidla (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    }
   ]
  },
@@ -2242,7 +2417,7 @@
     "trims": [
      {
       "name": "1,7 22 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1934,
       "to": 1942,
       "bodyType": "sedan",
@@ -2298,19 +2473,19 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].topSpeedKmh",
-    "noteCs": "cs a de uvádějí 90–100 km/h, tatraportal 90 km/h. Ponecháno prázdné."
+    "reason": "cs a de uvádějí 90–100 km/h, tatraportal 90 km/h. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[0].massKg",
-    "noteCs": "de uvádí asi 1200 kg, tatraportal 900–1000 kg. Ponecháno prázdné."
+    "reason": "de uvádí asi 1200 kg, tatraportal 900–1000 kg. Ponecháno prázdné."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "cs a de 4501 kusů, tatraportal 4114 kusů (do 1939)."
+    "reason": "cs a de 4501 kusů, tatraportal 4114 kusů (do 1939)."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -2396,7 +2571,7 @@
     "trims": [
      {
       "name": "3,0 V8 44 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1934,
       "to": 1935,
       "bodyType": "sedan",
@@ -2515,7 +2690,7 @@
     "trims": [
      {
       "name": "77 A 3,4 V8",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1935,
       "to": 1938,
       "bodyType": "sedan",
@@ -2571,19 +2746,19 @@
   "needsReview": [
    {
     "field": "generations[1].trims[0].engine.powerKw",
-    "noteCs": "Zdroje se liší (51 kW de / 55 kW cs, en). Ponecháno prázdné."
+    "reason": "Zdroje se liší (51 kW de / 55 kW cs, en). Ponecháno prázdné."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "tatraportal uvádí začátek 1933 (předsériové vozy); cs, de a en 1934."
+    "reason": "tatraportal uvádí začátek 1933 (předsériové vozy); cs, de a en 1934."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -2593,14 +2768,14 @@
   "name": "80",
   "isAddition": false,
   "segment": "F",
-  "summaryCs": "Tatra 80 byla největší a nejdražší osobní vůz v historii značky – reprezentační limuzína s vodou chlazeným dvanáctiválcem 6 l na podvozku Tatry 70. Vznikla jen v několika desítkách kusů jako limuzína, landaulet či kabriolet. Landaulet používal prezident T. G. Masaryk a dnes je vystaven v Národním technickém muzeu.",
+  "summaryCs": "Tatra 80 byla největší a nejdražší osobní vůz v historii značky – reprezentační limuzína s vodou chlazeným dvanáctiválcem 6 l na podvozku Tatry 70. Vzniklo jen zhruba 22–25 vozů jako limuzína, landaulet či kabriolet. Landaulet používal prezident T. G. Masaryk a dnes je vystaven v Národním technickém muzeu.",
   "coverage": "pilot-partial",
   "generations": [
    {
     "code": "80",
     "name": "Tatra 80",
     "from": 1931,
-    "to": null,
+    "to": 1935,
     "productionStatus": "ended",
     "facelift": null,
     "bodyTypes": [
@@ -2664,12 +2839,14 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26169566",
      "https://de.wikipedia.org/w/index.php?oldid=238002953",
      "https://en.wikipedia.org/w/index.php?oldid=1356953044",
-     "https://web.archive.org/web/20250415054218/https://tatraportal.sk/index.php?ukaz=popisky/t80_en&lang=en"
+     "https://web.archive.org/web/20250415054218/https://tatraportal.sk/index.php?ukaz=popisky/t80_en&lang=en",
+     "https://en.wikipedia.org/wiki/Tatra_80",
+     "https://cs.wikipedia.org/wiki/Tatra_80"
     ],
     "trims": [
      {
       "name": "6,0 V12",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1931,
       "to": null,
       "bodyType": "sedan",
@@ -2713,7 +2890,13 @@
        "https://web.archive.org/web/20250415054218/https://tatraportal.sk/index.php?ukaz=popisky/t80_en&lang=en"
       ]
      }
-    ]
+    ],
+    "fieldSources": {
+     "to": [
+      "https://en.wikipedia.org/wiki/Tatra_80",
+      "https://cs.wikipedia.org/wiki/Tatra_80"
+     ]
+    }
    }
   ],
   "sources": [
@@ -2725,19 +2908,23 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Konec výroby: de 1935, cs 22 vozů do 1935 a poslední 1937, tatraportal 1938. Ponecháno prázdné."
+    "reason": "Konec výroby: de 1935, cs 22 vozů do 1935 a poslední 1937, tatraportal 1938. Ponecháno prázdné."
    },
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Počty se liší (cs 22–23, de 25, tatraportal 22 + 3). Ponecháno prázdné."
+    "reason": "Počty se liší (cs 22–23, de 25, tatraportal 22 + 3). Ponecháno prázdné."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "cs uvádí představení 1930, de a tatraportal 1931."
+    "reason": "cs uvádí představení 1930, de a tatraportal 1931."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+   },
+   {
+    "field": "generations[0].to",
+    "reason": "en Wikipedie uvádí výrobu 1931–1935 (22 vozů), cs Wikipedie 1930–1937 (23 vozů; poslední vůz s poloaerodynamickou karoserií dokončen 1937). Použit rok 1935."
    }
   ]
  },
@@ -2842,7 +3029,7 @@
     "trims": [
      {
       "name": "3,0 V8 55 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1937,
       "to": 1950,
       "bodyType": "sedan",
@@ -2888,7 +3075,7 @@
      },
      {
       "name": "87-603 2,5 V8",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1950,
       "to": 1953,
       "bodyType": "sedan",
@@ -2942,19 +3129,19 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].topSpeedKmh",
-    "noteCs": "Zdroje uvádějí 150–160 km/h (výrobce), tatraportal 160 km/h. Ponecháno prázdné."
+    "reason": "Zdroje uvádějí 150–160 km/h (výrobce), tatraportal 160 km/h. Ponecháno prázdné."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "cs a de 1937 (prototypy 1936), en a tatraportal 1936."
+    "reason": "cs a de 1937 (prototypy 1936), en a tatraportal 1936."
    },
    {
     "field": "generations[0].trims[0].engine.powerKw",
-    "noteCs": "en Wikipedie uvádí 85 hp; cs, de i tatraportal 55 kW (75 k)."
+    "reason": "en Wikipedie uvádí 85 hp; cs, de i tatraportal 55 kW (75 k)."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3040,7 +3227,7 @@
     "trims": [
      {
       "name": "1,75 29,4 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1937,
       "to": 1939,
       "bodyType": "sedan",
@@ -3096,15 +3283,15 @@
   "needsReview": [
    {
     "field": "generations[0].trims[0].massKg",
-    "noteCs": "cs Wikipedie uvádí 1510 kg, de, en a tatraportal 1150 kg; použito 1150 kg."
+    "reason": "cs Wikipedie uvádí 1510 kg, de, en a tatraportal 1150 kg; použito 1150 kg."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "en a tatraportal uvádějí začátek 1936, cs a de 1937."
+    "reason": "en a tatraportal uvádějí začátek 1936, cs a de 1937."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3195,7 +3382,7 @@
     "trims": [
      {
       "name": "2,0 38 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1948,
       "to": 1952,
       "bodyType": "sedan",
@@ -3251,11 +3438,11 @@
   "needsReview": [
    {
     "field": "generations[0].dimensionsMm",
-    "noteCs": "cs Wikipedie uvádí 4565 × 1680 × 1515 mm a rozvor 2700, de 4540 × 1670 × 1520 a rozvor 2743 mm."
+    "reason": "cs Wikipedie uvádí 4565 × 1680 × 1515 mm a rozvor 2700, de 4540 × 1670 × 1520 a rozvor 2743 mm."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3344,7 +3531,7 @@
     "trims": [
      {
       "name": "2,5 V8 73 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1956,
       "to": 1962,
       "bodyType": "sedan",
@@ -3470,7 +3657,7 @@
     "trims": [
      {
       "name": "2,5 V8 77 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1962,
       "to": 1968,
       "bodyType": "sedan",
@@ -3586,7 +3773,7 @@
     "trims": [
      {
       "name": "2,5 V8 77 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1968,
       "to": 1975,
       "bodyType": "sedan",
@@ -3640,35 +3827,35 @@
   "needsReview": [
    {
     "field": "generations[0].to",
-    "noteCs": "Přechod na 2-603: en 1962, cs konec 1963, de 1963 (motor 603 G už od 1962)."
+    "reason": "Přechod na 2-603: en 1962, cs konec 1963, de 1963 (motor 603 G už od 1962)."
    },
    {
     "field": "generations[0].trims[0].topSpeedKmh",
-    "noteCs": "cs 160 km/h, de 170 km/h pro první sérii. Ponecháno prázdné."
+    "reason": "cs 160 km/h, de 170 km/h pro první sérii. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trunkL",
-    "noteCs": "cs uvádí zavazadlový prostor 370 l, dobový přehled na tatra603.webpark.sk 0,361 m³. Ponecháno prázdné."
+    "reason": "cs uvádí zavazadlový prostor 370 l, dobový přehled na tatra603.webpark.sk 0,361 m³. Ponecháno prázdné."
    },
    {
     "field": "generations[2].facelift",
-    "noteCs": "Kotoučové brzdy: cs od konce 1968, de 1970."
+    "reason": "Kotoučové brzdy: cs od konce 1968, de 1970."
    },
    {
     "field": "generations[1].photo",
-    "noteCs": "Popis souboru uvádí rok 1960, vůz má však přední masku 2-603 (zřejmě modernizován); ověřit."
+    "reason": "Popis souboru uvádí rok 1960, vůz má však přední masku 2-603 (zřejmě modernizován); ověřit."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  },
@@ -3694,7 +3881,7 @@
     "engines": [
      {
       "fuel": "petrol",
-      "displacementCc": null,
+      "displacementCc": 3495,
       "displacementLitresNominal": 3.5,
       "powerKwMin": 121.4,
       "powerKwMax": 121.4,
@@ -3734,18 +3921,20 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26086903",
      "https://de.wikipedia.org/w/index.php?oldid=265794279",
      "https://en.wikipedia.org/w/index.php?oldid=1336829745",
-     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
+     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en",
+     "https://en.wikipedia.org/wiki/Tatra_613",
+     "https://cs.wikipedia.org/wiki/Tatra_613"
     ],
     "trims": [
      {
       "name": "3,5 V8 121,4 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1974,
       "to": 1980,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 121.4,
        "powerStandard": null,
@@ -3781,16 +3970,28 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      }
-    ]
+    ],
+    "fieldSources": {
+     "engines.displacementCc": [
+      "https://en.wikipedia.org/wiki/Tatra_613",
+      "https://cs.wikipedia.org/wiki/Tatra_613"
+     ]
+    }
    },
    {
     "productionUnits": 1045,
     "code": "613-2",
     "name": "Tatra 613-2",
     "from": 1980,
-    "to": 1985,
+    "to": 1984,
     "productionStatus": "ended",
     "facelift": null,
     "bodyTypes": [
@@ -3800,7 +4001,7 @@
     "engines": [
      {
       "fuel": "petrol",
-      "displacementCc": null,
+      "displacementCc": 3495,
       "displacementLitresNominal": 3.5,
       "powerKwMin": 123.5,
       "powerKwMax": 123.5,
@@ -3858,18 +4059,20 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26086903",
      "https://de.wikipedia.org/w/index.php?oldid=265794279",
      "https://en.wikipedia.org/w/index.php?oldid=1336829745",
-     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
+     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en",
+     "https://en.wikipedia.org/wiki/Tatra_613",
+     "https://cs.wikipedia.org/wiki/Tatra_613"
     ],
     "trims": [
      {
       "name": "613-2 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1980,
       "to": 1984,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -3905,17 +4108,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613-2/I 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1984,
       "to": 1985,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -3951,17 +4160,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613 S (Special) 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1980,
       "to": 1992,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -3997,17 +4212,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613 K 3,5 V8 automat",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1984,
       "to": 1984,
       "bodyType": "kabriolet",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -4043,9 +4264,25 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      }
-    ]
+    ],
+    "fieldSources": {
+     "to": [
+      "https://en.wikipedia.org/wiki/Tatra_613",
+      "https://cs.wikipedia.org/wiki/Tatra_613"
+     ],
+     "engines.displacementCc": [
+      "https://en.wikipedia.org/wiki/Tatra_613",
+      "https://cs.wikipedia.org/wiki/Tatra_613"
+     ]
+    }
    },
    {
     "productionUnits": 903,
@@ -4061,7 +4298,7 @@
     "engines": [
      {
       "fuel": "petrol",
-      "displacementCc": null,
+      "displacementCc": 3495,
       "displacementLitresNominal": 3.5,
       "powerKwMin": 123.5,
       "powerKwMax": 123.5,
@@ -4115,18 +4352,20 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26086903",
      "https://de.wikipedia.org/w/index.php?oldid=265794279",
      "https://en.wikipedia.org/w/index.php?oldid=1336829745",
-     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
+     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en",
+     "https://en.wikipedia.org/wiki/Tatra_613",
+     "https://cs.wikipedia.org/wiki/Tatra_613"
     ],
     "trims": [
      {
       "name": "613-3 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1985,
       "to": 1991,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -4162,9 +4401,21 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      }
-    ]
+    ],
+    "fieldSources": {
+     "engines.displacementCc": [
+      "https://en.wikipedia.org/wiki/Tatra_613",
+      "https://cs.wikipedia.org/wiki/Tatra_613"
+     ]
+    }
    },
    {
     "productionUnits": 191,
@@ -4190,7 +4441,7 @@
     "engines": [
      {
       "fuel": "petrol",
-      "displacementCc": null,
+      "displacementCc": 3495,
       "displacementLitresNominal": 3.5,
       "powerKwMin": 123.5,
       "powerKwMax": 123.5,
@@ -4198,7 +4449,7 @@
      },
      {
       "fuel": "petrol",
-      "displacementCc": null,
+      "displacementCc": 3495,
       "displacementLitresNominal": 3.5,
       "powerKwMin": 147.1,
       "powerKwMax": 147.1,
@@ -4256,18 +4507,20 @@
      "https://cs.wikipedia.org/w/index.php?oldid=26086903",
      "https://de.wikipedia.org/w/index.php?oldid=265794279",
      "https://en.wikipedia.org/w/index.php?oldid=1336829745",
-     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
+     "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en",
+     "https://en.wikipedia.org/wiki/Tatra_613",
+     "https://cs.wikipedia.org/wiki/Tatra_613"
     ],
     "trims": [
      {
       "name": "613-4 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1991,
       "to": 1996,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -4303,17 +4556,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613-4 Long 3,5 V8 123,5 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1991,
       "to": 1996,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 123.5,
        "powerStandard": null,
@@ -4353,17 +4612,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613-4 Mi 3,5 V8 147,1 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1993,
       "to": 1996,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 147.1,
        "powerStandard": null,
@@ -4399,17 +4664,23 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      },
      {
       "name": "613-4 Mi Long 3,5 V8 147,1 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1993,
       "to": 1996,
       "bodyType": "sedan",
       "engine": {
        "fuel": "petrol",
-       "displacementCc": null,
+       "displacementCc": 3495,
        "cylinders": 8,
        "powerKw": 147.1,
        "powerStandard": null,
@@ -4445,9 +4716,21 @@
        "https://de.wikipedia.org/w/index.php?oldid=265794279",
        "https://en.wikipedia.org/w/index.php?oldid=1336829745",
        "https://web.archive.org/web/20240802161547/https://www.tatraportal.sk/index.php?ukaz=popisky/t613_en&lang=en"
-      ]
+      ],
+      "fieldSources": {
+       "engine.displacementCc": [
+        "https://en.wikipedia.org/wiki/Tatra_613",
+        "https://cs.wikipedia.org/wiki/Tatra_613"
+       ]
+      }
      }
-    ]
+    ],
+    "fieldSources": {
+     "engines.displacementCc": [
+      "https://en.wikipedia.org/wiki/Tatra_613",
+      "https://cs.wikipedia.org/wiki/Tatra_613"
+     ]
+    }
    }
   ],
   "sources": [
@@ -4459,35 +4742,39 @@
   "needsReview": [
    {
     "field": "generations[3].from",
-    "noteCs": "cs uvádí 613-4 od 1989, de a en od 1991. Verze Mi: de 1991, cs a en 1993."
+    "reason": "cs uvádí 613-4 od 1989, de a en od 1991. Verze Mi: de 1991, cs a en 1993."
    },
    {
     "field": "generations",
-    "noteCs": "Verze 613-5 (1993–1994, čtyři prototypy podle en) do výroby nešla a navázala na ni Tatra 700; samostatná generace není uvedena."
+    "reason": "Verze 613-5 (1993–1994, čtyři prototypy podle en) do výroby nešla a navázala na ni Tatra 700; samostatná generace není uvedena."
    },
    {
     "field": "generations[0].photo",
-    "noteCs": "Pro první sérii (1974–1980) nebyla nalezena vhodná fotografie celého vozu; snímek 613-2 je u druhé generace."
+    "reason": "Pro první sérii (1974–1980) nebyla nalezena vhodná fotografie celého vozu; snímek 613-2 je u druhé generace."
    },
    {
     "field": "generations[0].from",
-    "noteCs": "cs uvádí výrobu od 1975 (první prototypy 1969), de a en 1974 (první 2 vozy 1973)."
+    "reason": "cs uvádí výrobu od 1975 (první prototypy 1969), de a en 1974 (první 2 vozy 1973)."
    },
    {
     "field": "generations[0].photo",
-    "noteCs": "Na Commons nebyla nalezena fotografie splňující pravidla (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
+    "reason": "Na Commons nebyla nalezena fotografie splňující pravidla (celý vůz, pohled 3/4 zepředu, poměr stran 1,4–1,7)."
    },
    {
     "field": "generations[1].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[2].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    },
    {
     "field": "generations[3].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+   },
+   {
+    "field": "generations[0].from",
+    "reason": "en Wikipedie: výroba od 1974; cs Wikipedie: sériová výroba v Příboře od 1975. Ponecháno 1974."
    }
   ]
  },
@@ -4588,7 +4875,7 @@
     "trims": [
      {
       "name": "3,5 V8 148 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": 1996,
       "to": 1999,
       "bodyType": "sedan",
@@ -4633,7 +4920,7 @@
      },
      {
       "name": "700-2 4,4 V8 172 kW",
-      "kind": "version",
+      "kind": "engine-version",
       "from": null,
       "to": 1999,
       "bodyType": "sedan",
@@ -4687,19 +4974,19 @@
   "needsReview": [
    {
     "field": "generations[0].productionUnits",
-    "noteCs": "Počty se liší: cs 62 i 75 kusů, de asi 65, en 75. Ponecháno prázdné."
+    "reason": "Počty se liší: cs 62 i 75 kusů, de asi 65, en 75. Ponecháno prázdné."
    },
    {
     "field": "generations[0].trims[1].from",
-    "noteCs": "Rok zahájení verze 700-2 zdroje neuvádějí."
+    "reason": "Rok zahájení verze 700-2 zdroje neuvádějí."
    },
    {
     "field": "generations[0].engines[1]",
-    "noteCs": "de Wikipedie uvádí pro 4,4 l motor 294 kW (400 PS), což odpovídá spíš sportovní T700 GT; cs a en 172 kW."
+    "reason": "de Wikipedie uvádí pro 4,4 l motor 294 kW (400 PS), což odpovídá spíš sportovní T700 GT; cs a en 172 kW."
    },
    {
     "field": "generations[0].photo.visualReview",
-    "noteCs": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
+    "reason": "Licence a autor ověřeny přes Commons API; kompozice prohlédnuta na náhledu, shoda s generací čeká na vizuální kontrolu."
    }
   ]
  }

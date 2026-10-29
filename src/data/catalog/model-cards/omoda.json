@@ -5,37 +5,84 @@
     "name": "5 / C5",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Omoda 5 je kompaktní crossover nabízený také jako C5. Elektrická E5 a hybridní SHS-H jsou zde vedeny jako pohonná provedení jedné modelové rodiny, se samostatnými technickými údaji.",
+    "summaryCs": "Omoda 5 je kompaktní crossover značky Omoda (skupina Chery) vyráběný od roku 2022, na některých trzích prodávaný jako C5. V Česku se nabízí s benzinovým motorem 1.6 TGDI, jako hybrid SHS-H a jako elektrická Omoda 5 EV (dříve E5) s baterií 61 kWh. Vzhled byl upraven modernizacemi představenými v letech 2024 a 2025.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "5 / C5 – benzin a SHS-H",
-        "from": null,
+        "from": 2022,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2024,
+            "to": 2025,
+            "name": "1. facelift",
+            "code": null,
+            "productionYear": 2025,
+            "note": "První modernizace pro exportní trhy představená v Rusku v září 2024 (upravená maska a světla, místo chromu prvky v barvě karoserie); v Evropě od modelového roku 2025.",
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457"
+            ]
+          },
+          {
+            "year": 2025,
+            "to": null,
+            "name": "2. facelift",
+            "code": null,
+            "productionYear": 2026,
+            "note": "Druhá modernizace představená v říjnu 2025 s novou přídí a světelným podpisem.",
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 108,
+            "powerKwMax": 108,
+            "variant": "1.6 TGDI"
+          },
+          {
+            "fuel": "petrol-hev",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "variant": "SHS-H (systémový výkon 165 kW)"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4447,
+          "width": 1824,
+          "height": 1588,
+          "wheelbase": 2610
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "CZ",
           "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "variant": "1.6 TGDI 7DCT",
+          "bodyType": "suv",
+          "noteCs": "Rozměry, kufr a technika dle aktuální stránky českého dovozce (2026)."
         },
-        "trunkL": null,
+        "trunkL": 360,
         "markets": [
           "Europe"
         ],
@@ -132,37 +179,69 @@
         "sources": [
           "https://omodaauto.co.uk/downloads/",
           "https://omoda-jaecoo.cz/pdf/cenik/model/omoda5-2026/",
-          "https://omoda-jaecoo.cz/pdf/cenik/model/omoda5shs-h/"
-        ]
+          "https://omoda-jaecoo.cz/pdf/cenik/model/omoda5shs-h/",
+          "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457",
+          "https://omoda-jaecoo.cz/omoda/omoda-5"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457"
+          ],
+          "facelift": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457"
+          ],
+          "dimensionsMm": [
+            "https://omoda-jaecoo.cz/omoda/omoda-5"
+          ],
+          "trunkL": [
+            "https://omoda-jaecoo.cz/omoda/omoda-5"
+          ]
+        }
       },
       {
         "code": null,
         "name": "E5 / 5EV – elektrické provedení",
-        "from": null,
+        "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 155,
+            "variant": "elektromotor, baterie 61 kWh LFP"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "single-speed",
+            "gears": 1
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4424,
+          "width": 1830,
+          "height": 1588,
+          "wheelbase": 2630
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "CZ",
           "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "variant": "Omoda5 EV",
+          "bodyType": "suv",
+          "noteCs": "Dle aktuální stránky českého dovozce (2026); nadpis stránky uvádí 150 kW, technická tabulka 155 kW."
         },
-        "trunkL": null,
+        "trunkL": 442,
         "markets": [
           "Europe"
         ],
@@ -197,11 +276,11 @@
               "cylinders": null,
               "powerKw": 155,
               "powerStandard": null,
-              "torqueNm": null
+              "torqueNm": 288
             },
             "transmission": {
               "type": "single-speed",
-              "gears": null
+              "gears": 1
             },
             "drive": "fwd",
             "dimensionsMm": {
@@ -210,29 +289,60 @@
               "height": 1588,
               "wheelbase": 2630
             },
-            "massKg": 1785,
-            "massBasis": "Pohotovostní hmotnost dle českého listu; definice řidiče neuvedena.",
+            "massKg": 1710,
+            "massBasis": "Pohotovostní hmotnost dle stránky českého dovozce (2026).",
             "topSpeedKmh": 171,
-            "acceleration0to100s": null,
+            "acceleration0to100s": 7.6,
             "consumptionL100": null,
             "consumptionCycle": "WLTP",
-            "consumptionKwh100": 16.9,
-            "rangeKm": 402,
+            "consumptionKwh100": 15.9,
+            "rangeKm": 430,
             "rangeCycle": "WLTP",
             "specificationScope": {
               "market": "CZ",
               "modelYear": null,
-              "noteCs": "Elektrická verze s baterií 61,06 kWh; samostatné rozměry a homologace, nepřeneseny z benzinové 5."
+              "noteCs": "Baterie 61 kWh LFP; hodnoty dle aktuální stránky českého dovozce (2026). Starší český ceník (srba.cz) uváděl 1 785 kg, 16,9 kWh/100 km a dojezd 402 km WLTP."
             },
             "sources": [
+              "https://omoda-jaecoo.cz/omoda/omoda-5-ev",
               "https://omodajaecoo.srba.cz/pdf/cenik/model/omoda5ev/"
-            ]
+            ],
+            "fieldSources": {
+              "massKg": [
+                "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+              ],
+              "rangeKm": [
+                "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+              ],
+              "consumptionKwh100": [
+                "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+              ],
+              "engine.torqueNm": [
+                "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+              ],
+              "acceleration0to100s": [
+                "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+              ]
+            }
           }
         ],
         "sources": [
           "https://omodaauto.co.uk/downloads/",
-          "https://omodajaecoo.srba.cz/pdf/cenik/model/omoda5ev/"
-        ]
+          "https://omodajaecoo.srba.cz/pdf/cenik/model/omoda5ev/",
+          "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457",
+          "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda_C5&oldid=1380556457"
+          ],
+          "dimensionsMm": [
+            "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+          ],
+          "trunkL": [
+            "https://omoda-jaecoo.cz/omoda/omoda-5-ev"
+          ]
+        }
       }
     ],
     "sources": [
@@ -252,59 +362,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -392,10 +454,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -404,47 +462,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trunkL",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -505,46 +523,177 @@
     "name": "7 / C7",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Omoda 7 je SUV nabízené v benzinovém a plug-in hybridním provedení. Dostupnost jednotlivých motorizací se liší podle trhu; tato karta neslučuje technické údaje evropských a čínských verzí.",
+    "summaryCs": "Omoda 7 je SUV střední velikosti (délka 4,66 m) vyráběné od roku 2025, na některých trzích jako C7. V Česku se nabízí s benzinovým motorem 1.6 TGDI a pohonem všech kol nebo jako plug-in hybrid SHS-P s pohonem předních kol a elektrickým dojezdem 90 km podle WLTP.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "7 / C7",
-        "from": null,
+        "from": 2025,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 108,
+            "powerKwMax": 108,
+            "variant": "1.6 TGDI"
+          },
+          {
+            "fuel": "petrol-phev",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 105,
+            "powerKwMax": 105,
+            "variant": "SHS-P (spalovací motor 105 kW, systémový výkon 205 kW)"
+          }
+        ],
+        "engineCoverage": "partial",
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          },
+          {
+            "type": "automatic",
+            "gears": 1
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4660,
+          "width": 1875,
+          "height": 1670,
+          "wheelbase": 2720
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "CZ",
           "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "variant": "1.6 TGDI AWD",
+          "bodyType": "suv",
+          "noteCs": "Dle stránek českého dovozce (2026); kufr verze SHS-P má 537 l."
         },
-        "trunkL": null,
+        "trunkL": 614,
         "markets": [
           "Europe"
         ],
         "marketNotesCs": "Aktuální nabídka doložena katalogem výrobce; rok zahájení a konec celosvětové výroby nejsou z nabídky odvozovány.",
         "photo": null,
-        "trims": null,
+        "trims": [
+          {
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "name": "7 1.6 TGDI 7DCT AWD – český technický list",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1598,
+              "cylinders": 4,
+              "powerKw": 108,
+              "torqueNm": 275,
+              "powerStandard": null
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": 4660,
+              "width": 1875,
+              "height": 1670,
+              "wheelbase": 2720
+            },
+            "massKg": 1660,
+            "massBasis": "Pohotovostní hmotnost dle stránky českého dovozce (2026).",
+            "topSpeedKmh": 189,
+            "acceleration0to100s": 11.4,
+            "consumptionL100": 8,
+            "consumptionCycle": "WLTP kombinovaný",
+            "specificationScope": {
+              "market": "CZ",
+              "modelYear": null,
+              "noteCs": "Výbava Premium dle stránky českého dovozce."
+            },
+            "sources": [
+              "https://omoda-jaecoo.cz/omoda/omoda-7"
+            ]
+          },
+          {
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "consumptionKwh100": 21.5,
+            "rangeKm": 90,
+            "rangeCycle": "WLTP – čistě elektrický dojezd",
+            "name": "7 SHS-P 1.5 TGDI PHEV – český technický list",
+            "engine": {
+              "fuel": "petrol-phev",
+              "displacementCc": 1499,
+              "cylinders": 4,
+              "powerKw": 205,
+              "torqueNm": 365,
+              "powerStandard": "Systémový výkon a moment; spalovací motor 105 kW / 215 Nm, trakční elektromotor 155 kW / 288 Nm."
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": 1
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": 4660,
+              "width": 1875,
+              "height": 1670,
+              "wheelbase": 2720
+            },
+            "massKg": 1870,
+            "massBasis": "Pohotovostní hmotnost dle stránky českého dovozce (2026).",
+            "topSpeedKmh": 180,
+            "acceleration0to100s": 8.4,
+            "consumptionL100": 2.3,
+            "consumptionCycle": "WLTP kombinovaný",
+            "specificationScope": {
+              "market": "CZ",
+              "modelYear": null,
+              "noteCs": "Baterie LFP 18,4 kWh, převodovka 1DHT; výbavy Luxury a Premium mají shodná technická data."
+            },
+            "sources": [
+              "https://omoda-jaecoo.cz/omoda/omoda-7-shs"
+            ]
+          }
+        ],
         "sources": [
-          "https://omodaauto.co.uk/downloads/"
-        ]
+          "https://omodaauto.co.uk/downloads/",
+          "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322",
+          "https://omoda-jaecoo.cz/omoda/omoda-7",
+          "https://omoda-jaecoo.cz/omoda/omoda-7-shs"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322"
+          ],
+          "dimensionsMm": [
+            "https://omoda-jaecoo.cz/omoda/omoda-7",
+            "https://omoda-jaecoo.cz/omoda/omoda-7-shs"
+          ],
+          "trunkL": [
+            "https://omoda-jaecoo.cz/omoda/omoda-7"
+          ]
+        }
       }
     ],
     "sources": [
@@ -561,10 +710,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -573,55 +718,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -646,22 +747,24 @@
       {
         "code": null,
         "name": "9 SHS-P / C9",
-        "from": null,
+        "from": 2024,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "awd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4775,
+          "width": 1920,
+          "height": 1671,
+          "wheelbase": 2800
         },
         "specificationScope": {
           "market": "source-production",
@@ -739,8 +842,17 @@
         ],
         "sources": [
           "https://omodaauto.co.uk/downloads/",
-          "https://omoda-jaecoo.cz/skladove-vozy/omoda9shs-mn2c9euecst/pdf/"
-        ]
+          "https://omoda-jaecoo.cz/skladove-vozy/omoda9shs-mn2c9euecst/pdf/",
+          "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322"
+          ],
+          "dimensionsMm": [
+            "https://omoda-jaecoo.cz/skladove-vozy/omoda9shs-mn2c9euecst/pdf/"
+          ]
+        }
       }
     ],
     "sources": [
@@ -759,10 +871,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -775,27 +883,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -862,15 +950,15 @@
     "name": "S5 / O5",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Omoda S5 je sedan nabízený na vybraných mimoevropských trzích také pod označením O5. Sportovněji zaměřené označení GT je variantou této řady, nikoli samostatnou evropskou modelovou rodinou.",
+    "summaryCs": "Omoda S5 (také O5) je sedan odvozený od Chery Arrizo 5 Plus, prodávaný od roku 2023 na vybraných mimoevropských trzích; sportovnější S5 GT vychází z Arrizo 5 GT. V Evropě ani v Česku oficiálně nabízen není.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "S5 / O5",
-        "from": null,
+        "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -900,8 +988,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Omoda"
-        ]
+          "https://en.wikipedia.org/wiki/Omoda",
+          "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322"
+          ]
+        }
       }
     ],
     "sources": [
@@ -914,10 +1008,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

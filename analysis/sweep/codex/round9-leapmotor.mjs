@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+const d='analysis/sweep/codex/',p='src/data/catalog/model-cards/leapmotor.json';
+const cards=JSON.parse(fs.readFileSync(p,'utf8')),r=JSON.parse(fs.readFileSync(d+'leapmotor.json','utf8'));
+const annual='https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042904102.pdf';
+const interim='https://cdn.financialreports.eu/financialreports/media/filings/51144/2026/RNS/51144_rns_2026-08-24_6c30bc06-ee7c-4754-8eec-f289d7ed0a77.pdf';
+const wiki10='https://de.wikipedia.org/w/index.php?title=Leapmotor_C10&oldid=271259262';
+const wiki16='https://en.wikipedia.org/w/index.php?title=Leapmotor_C16&oldid=1372782871';
+const malaysia='https://www.media.stellantis.com/as-en/leapmotor/press/stellantis-malaysia-reaches-full-local-assembly-milestone-for-leapmotor-lineup';
+const spain='https://www.media.stellantis.com/em-en/leapmotor/press/stellantis-and-leapmotor-officially-start-b10-production-in-zaragoza-turning-their-alliance-into-a-european-industrial-reality';
+const factory='https://www.automotivemanufacturingsolutions.com/strategy/stellantis-and-leapmotor-new-partnership-production-and-future/2756239';
+function set(slug,path,value,sources,note){const c=cards.find(c=>c.lineSlug===slug),keys=path.replace(/\[(\d+)\]/g,'.$1').split('.');let o=c;for(const k of keys.slice(0,-1))o=o[k];const k=keys.at(-1);if(JSON.stringify(o[k])===JSON.stringify(value))return;r.cardFixesApplied.push({lineSlug:slug,path,from:o[k]??null,to:value,sources,checkedAt:'2026-10-29',round:9,note});o[k]=value;}
+for(const [slug,wiki]of [['c10',wiki10],['c16',wiki16]]){
+ set(slug,'generations[0].from',2024,[annual,wiki],'Series-production year: manufacturer reports launch and substantial customer deliveries in 2024; independent production chronology starts 2024. A show vehicle is not series production.');
+ set(slug,'generations[0].productionStatus','current',[slug==='c10'?malaysia:interim,wiki],'Current family production supported by 2026 assembly/updated model sales and current independent production chronology; not a Czech availability claim.');
+ const sources=[interim,wiki];
+ set(slug,'generations[0].facelift',[{year:2026,productionYear:null,name:'Modernizace pro čínský trh',note:'Vnější modernizace čínské verze v roce 2026; firemní pololetní zpráva uvádí uvedení 16. června. Přesný začátek sériové výroby této podoby ani evropské načasování nebyly ověřeny.',sources}],sources,'Only year is reconciled. C10 EN article gives June 4 while issuer gives June 16 launch; do not equate reveal/launch with SOP.');
+ const c=cards.find(c=>c.lineSlug===slug);
+ set(slug,'generations[0].sources',[...new Set([...c.generations[0].sources,annual,interim,wiki,...(slug==='c10'?[malaysia]:[])])],[annual,wiki],'Evidence provenance; issuer report is primary even when served by a report mirror.');
+ const resolved=new Set(['generations[0].from','generations[0].facelift']);
+ set(slug,'needsReview',c.needsReview.filter(x=>!resolved.has(x.field)),[annual,wiki],'Remove generic unknown-start/facelift notices for populated fields; facelift productionYear remains explicitly null.');
+}
+set('b10','generations[0].productionStatus','current',[spain,factory],'OEM SOP announcement 16 October 2026 independently corroborated by a factory-attending industry reporter. Global family status, not variant status.');
+const b=cards.find(c=>c.lineSlug==='b10');set('b10','generations[0].sources',[...new Set([...b.generations[0].sources,spain,factory])],[spain,factory],'Add production status evidence.');
+r.conflicts.push({round:9,where:'c10.generations[0].facelift exact event date',values:{issuerInterim2026:'2026-06-16 launch',englishWikipedia:'2026-06-04 facelift'},kept:'Only common year 2026; productionYear stays null',sources:[interim,'https://en.wikipedia.org/w/index.php?title=Leapmotor_C10&oldid=1377973318']});
+r.openQuestions.push('Round9: A05/A10/B01/B05/C01/C11/D19/D99/S01/T03 production codes, exact series endpoints and exterior updates still need independent primary chronology. Current issuer on-sale list is not sufficient to close their production-status fields. No full Leapmotor make/model depth completion.','Round9: C10 June 2026 Chinese exterior facelift must not imply European timing. Existing November 2023 photo is a pre-series exhibition car; Commons identifies C10 EREV but does not establish production-body equivalence. Need actual visual comparison before recertification.');
+r.photoReviews??=[];
+for(const [slug,result]of [['a10','retrieved'],['b05','retrieved'],['b10','retrieved'],['c10','retrieved'],['c01','failed'],['t03','failed']]){const g=cards.find(c=>c.lineSlug===slug).generations[0];r.photoReviews.push({round:9,lineSlug:slug,generation:0,file:g.photo.file,sources:[g.photo.filePageUrl],metadataResult:result,decision:'Retained without new visual certification',note:result==='failed'?'File-page retrieval failed; identity/credits not reverified.':slug==='c10'?'Description C10 at Guangzhou 2023; category C10 EREV, Tim Wu, CC BY-SA 4.0. Exhibition predates series start, production appearance equivalence remains unresolved.':slug==='b10'?'Description B10, Auto Guangzhou 2024, JustAnotherCarDesigner CC0; show-car photograph predates series production, exact production appearance not recertified.':slug==='a10'?'Description/caption A10 Tianjin 16 April 2026, Navigator84. No fresh visual review.':'Description/caption B05 Poznan Motor Show 2026, Peżot. No fresh visual review.'});}
+r.depthReviews??=[];r.depthReviews.push({round:9,checkedAt:'2026-10-29',scope:'Selected C10/C16 chronology and facelift years; B10 production status; six existing photo metadata attempts',sources:[annual,interim,wiki10,wiki16,spain,factory],limitations:'No engine/trim technical fields populated; no new visual inspections. Ten other lines remain unresolved beyond local inventory.'});
+fs.writeFileSync(p,JSON.stringify(cards,null,2)+'\n');fs.writeFileSync(d+'leapmotor.json',JSON.stringify(r,null,2)+'\n');
+console.log('Leapmotor: 12 sourced audit operations; 3 selected lines; 6 photo metadata attempts, 4 retrieved, 2 failed.');

@@ -1,0 +1,320 @@
+{
+  "make": "ora",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Čína (Q148)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)",
+        "https://www.wikidata.org/wiki/Q97014020"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de-wiki Ora_(Automarke): Chinese brand of Great Wall Motor"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-line-additions",
+      "slug": "03",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "07",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "ballet-cat",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "5",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "iq",
+      "field": "to/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2020,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "r1",
+      "field": "from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        2019,
+        2022,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "r2",
+      "field": "to/productionStatus",
+      "from": [
+        null,
+        "unknown"
+      ],
+      "to": [
+        2022,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "big-cat",
+      "reason": "not listed as a production model in the Ora model list; likely a concept / renamed project — verify before removal",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q114764042",
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) lists Damao (Big Cat) as unveiled 2021 with no series production; Wikidata Q114764042 describes it as 'upcoming'"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Mecha Dragon (sedan, China only)",
+      "from": 2022,
+      "to": 2024,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "unverified: Mecha Dragon is not listed in de-wiki Ora_(Automarke); needs another source"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "*",
+      "path": "generations[*].trims[*] missing keys",
+      "from": "absent",
+      "to": "null",
+      "count": 5,
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts allows only kind technical-version|engine-version and needsReview.reason; skeptic re-validated the card file (parses, no disallowed values)"
+    },
+    {
+      "lineSlug": "03",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "07",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "ballet-cat",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "5",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "03",
+      "path": "generations[0].dimensionsMm",
+      "from": {
+        "length": null,
+        "width": null,
+        "height": null,
+        "wheelbase": null
+      },
+      "to": {
+        "length": 4235,
+        "width": 1825,
+        "height": 1596,
+        "wheelbase": 2650
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_Good_Cat"
+      ],
+      "verify": "confirmed: de-wiki GWM_Ora_03 infobox length 4235-4254, width 1825-1848, height 1596-1632, wheelbase 2650 mm"
+    },
+    {
+      "lineSlug": "03",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2025,
+          "to": null,
+          "productionYear": null,
+          "note": "Modernizace pro čínský trh v červnu 2025; evropská verze ORA 03 tímto nedoložena.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ora_Good_Cat"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_Good_Cat"
+      ],
+      "verify": "confirmed: de-wiki GWM_Ora_03: revised Haomao on sale in China since June 2025 (also notes European sales ended in 2026)"
+    },
+    {
+      "lineSlug": "iq",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "iq",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "r1",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "r1",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "r1",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "r2",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    },
+    {
+      "lineSlug": "r2",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ora_(marque)"
+      ],
+      "verify": "confirmed: de-wiki Ora_(Automarke) model list: iQ 2018-2020, R1 2019-2022, R2 2020-2022, Haomao/03 since 2020, Ballet Cat since 2022, Lightning Cat/07 since 2022, Ora 5 since 2025"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Since 2023 Europe sells the cars as 'GWM ORA 03/07'; GWM scaled back its European operation in 2024 — confirm whether ORA is still officially sold in CZ in 2026.",
+    "models-auto slugs good-cat / white-cat / lightning-cat duplicate the 03 / r2 / 07 lines under other slugs; map them rather than keep both."
+  ],
+  "summary": "Set production status from 'unknown' to current/ended for all 7 lines per en-wiki, added 03 dimensions and its 2025 China facelift; proposed country China for the make."
+}

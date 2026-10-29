@@ -1,6 +1,6 @@
 /** CC0 identity data. See SOURCES.md for scope and null semantics. */
 export type CatalogSection = "auto" | "moto" | "technika" | "pneu";
-export type CatalogBody = "hatchback" | "kombi" | "sedan" | "suv" | "mpv" | "kupe" | "kabriolet" | "pickup" | "dodavka";
+export type CatalogBody = "hatchback" | "liftback" | "kombi" | "sedan" | "suv" | "mpv" | "kupe" | "kabriolet" | "pickup" | "dodavka";
 export interface CatalogMake {
   slug: string;
   name: string;
@@ -78,7 +78,7 @@ export interface CatalogModelLine {
   needsReview: CatalogModelLineReview[];
 }
 
-export type CatalogFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-lpg" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "electric";
+export type CatalogFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-lpg" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "diesel-mhev" | "electric" | "hydrogen";
 export interface CatalogModelCardPhoto {
   source: "commons" | "press";
   file: string;
@@ -137,7 +137,7 @@ export interface CatalogModelCardGeneration {
   engines: CatalogModelCardEngine[] | null;
   engineCoverage: "partial" | "unknown";
   drivetrains: ("fwd" | "rwd" | "awd")[] | null;
-  transmissions: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed"; gears: number }[] | null;
+  transmissions: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed" | "cvt" | "e-cvt"; gears: number | null }[] | null;
   dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null };
   specificationScope: { market: string; modelYear: number | null; variant: string | null; bodyType: CatalogBody | null; noteCs: string };
   trunkL: number | null;
@@ -170,7 +170,7 @@ export interface CatalogModelCardTrim {
   bodyType: CatalogBody | null;
   engine: { fuel: CatalogFuel | null; displacementCc: number | null; cylinders: number | null; powerKw: number | null; torqueNm: number | null; powerStandard?: string | null };
   fieldSources?: Record<string, string[]>;
-  transmission: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed" | null; gears: number | null };
+  transmission: { type: "manual" | "automated-manual" | "automatic" | "dual-clutch" | "single-speed" | "cvt" | "e-cvt" | null; gears: number | null };
   /** rr = rear engine/rear-wheel drive; rwd does not specify engine position. */
   drive: "fwd" | "rwd" | "awd" | "rr" | null;
   dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null };

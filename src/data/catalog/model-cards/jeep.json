@@ -2180,7 +2180,19 @@
         "from": 2016,
         "to": 2026,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2021,
+            "productionYear": null,
+            "name": "Evropská modernizace 2021",
+            "code": null,
+            "note": "Přepracovaná příď, osvětlení a interiér; zdroje rozlišují modernizaci od původní druhé generace. Přesný výrobní termín není doložen.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -2232,27 +2244,27 @@
             "bodyType": "suv",
             "engine": {
               "fuel": "petrol",
-              "displacementCc": null,
-              "cylinders": null,
+              "displacementCc": 1332,
+              "cylinders": 4,
               "powerKw": 96,
               "powerStandard": null,
               "torqueNm": 270
             },
             "transmission": {
               "type": "manual",
-              "gears": null
+              "gears": 6
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
+              "length": 4394,
               "width": null,
-              "height": null,
-              "wheelbase": null
+              "height": 1629,
+              "wheelbase": 2636
             },
             "massKg": null,
             "massBasis": null,
-            "topSpeedKmh": null,
-            "acceleration0to100s": null,
+            "topSpeedKmh": 192,
+            "acceleration0to100s": 10.3,
             "consumptionL100": null,
             "consumptionCycle": null,
             "consumptionKwh100": null,
@@ -2261,11 +2273,47 @@
             "specificationScope": {
               "market": "Germany / European production Melfi",
               "modelYear": 2020,
-              "noteCs": "Tovární zpráva1.7.2020. Přesný objem ani počet převodů nejsou odvozeny z obchodního označení1.3 čiDDCT; neověřené údaje null."
+              "noteCs": "Evropská verze pro modelový rok 2020, 1.3 T-GDi 130 se šestistupňovou manuální převodovkou. Tovární německá zpráva a francouzský technický ceník jsou porovnány s německým ADAC. Šířka zůstává null: ADAC uvádí karoserii bez zrcátek, francouzský ceník šířku se sklopenými zrcátky. Hmotnost nebyla doplněna bez shody její konvence."
             },
             "sources": [
-              "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
-            ]
+              "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+              "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+            ],
+            "fieldSources": {
+              "engine.displacementCc": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "engine.cylinders": [
+                "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "transmission.gears": [
+                "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "dimensionsMm.length": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "dimensionsMm.height": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "dimensionsMm.wheelbase": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "topSpeedKmh": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ],
+              "acceleration0to100s": [
+                "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+                "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+              ]
+            }
           },
           {
             "name": "1.3 T-GDi 150 DDCT",
@@ -2313,8 +2361,18 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1375207742",
-          "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
-        ]
+          "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+          "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+          "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
+        ],
+        "fieldSources": {
+          "facelift": [
+            "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/"
+          ]
+        }
       },
       {
         "code": "J4U/J4D",
@@ -2358,7 +2416,11 @@
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1375207742",
       "https://www.wikidata.org/wiki/Q1686208",
-      "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation"
+      "https://www.media.stellantis.com/de-de/jeep/press/jeep-compass-made-in-europe-mit-neuer-benzinmotoren-generation",
+      "https://www.media.stellantis.com/uk-en/jeep/press/new-jeep-compass-press-kit",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/",
+      "https://www.media.stellantis.com/uploads/fr/model-document/tarifpublicjeeprcompassmy202021a4janvier2021-6006a2379eeaa.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/compass/mx/313860/"
     ],
     "needsReview": [
       {
@@ -2422,10 +2484,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2478,35 +2536,11 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].engine.displacementCc",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].engine.cylinders",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].trims[0].engine.powerStandard",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].transmission.gears",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].trims[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2515,14 +2549,6 @@
       },
       {
         "field": "generations[1].trims[0].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].trims[0].acceleration0to100s",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2680,6 +2706,10 @@
       {
         "field": "generations[2].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Zapsána vybraná evropská modernizace; další trhy, výrobní termíny a úplnost změn zůstávají k ověření."
       }
     ]
   },
@@ -2697,7 +2727,7 @@
         "name": "DJ-3A",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "dodavka",
@@ -2726,6 +2756,7 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://www.jeep.com/history/1950s.html",
           "https://en.wikipedia.org/wiki/Jeep_DJ"
         ]
       },
@@ -2734,7 +2765,7 @@
         "name": "DJ-5 / DJ-6",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "dodavka"
@@ -2762,12 +2793,14 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://www.jeep.com/history/1970s.html",
           "https://en.wikipedia.org/wiki/Jeep_DJ",
           "https://www.jeep.com/history/1970s.html"
         ]
       }
     ],
     "sources": [
+      "https://www.jeep.com/history/1950s.html",
       "https://en.wikipedia.org/wiki/Jeep_DJ",
       "https://www.jeep.com/history/1970s.html"
     ],
@@ -3076,7 +3109,7 @@
         "name": "FC-170",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -3104,6 +3137,7 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://www.jeep.com/history/1950s.html",
           "https://www.jeep.com/history/1950s.html",
           "https://en.wikipedia.org/wiki/Jeep_Forward_Control"
         ]
@@ -3254,7 +3288,7 @@
         "name": "SJ Gladiator / J-Series",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -3282,6 +3316,7 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://www.media.stellantis.com/em-en/jeep/press/jeep-history",
           "https://www.jeep.com/history/1960s.html",
           "https://en.wikipedia.org/wiki/Jeep_Gladiator_(SJ)"
         ]
@@ -3324,6 +3359,7 @@
       }
     ],
     "sources": [
+      "https://www.media.stellantis.com/em-en/jeep/press/jeep-history",
       "https://en.wikipedia.org/w/index.php?oldid=1380931236",
       "https://www.wikidata.org/wiki/Q1686209",
       "https://www.jeep.com/history/1960s.html",
@@ -4503,7 +4539,7 @@
         "name": "VJ",
         "from": 1948,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -4531,6 +4567,7 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://www.jeep.com/history/1940s.html",
           "https://www.jeep.com/history/1940s.html",
           "https://en.wikipedia.org/wiki/Willys-Overland_Jeepster"
         ]
@@ -4742,7 +4779,19 @@
         "from": 2014,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2018,
+            "productionYear": null,
+            "name": "Modernizace pro modelový rok 2019",
+            "code": null,
+            "note": "Změněná přední část a dostupná světla LED. Tovární zpráva z 16. srpna 2018 uvádí britský příchod v září; ADAC modernizovanou evropskou řadu eviduje od září 2018. Termín prodeje neurčuje přesný začátek výroby.",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -4788,13 +4837,23 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1368986785",
-          "https://www.wikidata.org/wiki/Q15907271"
-        ]
+          "https://www.wikidata.org/wiki/Q15907271",
+          "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+        ],
+        "fieldSources": {
+          "facelift": [
+            "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1368986785",
-      "https://www.wikidata.org/wiki/Q15907271"
+      "https://www.wikidata.org/wiki/Q15907271",
+      "https://www.media.stellantis.com/uk-en/jeep/press/uk-pricing-announced-for-new-jeep-renegade",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/jeep/renegade/bu-facelift/308431/"
     ],
     "needsReview": [
       {
@@ -4807,10 +4866,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4860,6 +4915,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].facelift",
+        "reason": "Zapsána vybraná evropská modernizace; další trhy, výrobní termíny a úplnost změn zůstávají k ověření."
       }
     ]
   },

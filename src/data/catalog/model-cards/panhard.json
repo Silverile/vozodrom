@@ -5,7 +5,7 @@
     "name": "24",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "Panhard 24 byla poslední osobní modelová rodina značky. Nabízela kratší kupé C a CT i delší dvoudveřové varianty B a BT.",
+    "summaryCs": "Panhard 24 byla poslední osobní modelová rodina značky (1963–1967). Nabízela kratší kupé 2+2 C a CT i delší dvoudveřové čtyř- až pětimístné vozy B a BT.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -16,7 +16,8 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
-          "kupe"
+          "kupe",
+          "sedan"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -67,7 +68,7 @@
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
+              "length": 4260,
               "width": null,
               "height": null,
               "wheelbase": null
@@ -88,8 +89,14 @@
             },
             "sources": [
               "https://www.panhardclub.nl/motortypen-pl17-24xx/",
-              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/"
-            ]
+              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
+              "https://fr.wikipedia.org/wiki/Panhard_24"
+            ],
+            "fieldSources": {
+              "dimensionsMm.length": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ]
+            }
           },
           {
             "name": "24 CT M8S",
@@ -111,7 +118,7 @@
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
+              "length": 4260,
               "width": null,
               "height": null,
               "wheelbase": null
@@ -132,15 +139,21 @@
             },
             "sources": [
               "https://www.panhardclub.nl/motortypen-pl17-24xx/",
-              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/"
-            ]
+              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
+              "https://fr.wikipedia.org/wiki/Panhard_24"
+            ],
+            "fieldSources": {
+              "dimensionsMm.length": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ]
+            }
           },
           {
             "name": "24 B M8N",
             "kind": "technical-version",
             "from": null,
             "to": null,
-            "bodyType": "kupe",
+            "bodyType": "sedan",
             "engine": {
               "fuel": "petrol",
               "displacementCc": 848,
@@ -155,7 +168,7 @@
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
+              "length": 4490,
               "width": null,
               "height": null,
               "wheelbase": null
@@ -176,15 +189,24 @@
             },
             "sources": [
               "https://www.panhardclub.nl/motortypen-pl17-24xx/",
-              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/"
-            ]
+              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
+              "https://fr.wikipedia.org/wiki/Panhard_24"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ],
+              "dimensionsMm.length": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ]
+            }
           },
           {
             "name": "24 BT M8S",
             "kind": "technical-version",
             "from": null,
             "to": null,
-            "bodyType": "kupe",
+            "bodyType": "sedan",
             "engine": {
               "fuel": "petrol",
               "displacementCc": 848,
@@ -199,7 +221,7 @@
             },
             "drive": "fwd",
             "dimensionsMm": {
-              "length": null,
+              "length": 4490,
               "width": null,
               "height": null,
               "wheelbase": null
@@ -220,21 +242,41 @@
             },
             "sources": [
               "https://www.panhardclub.nl/motortypen-pl17-24xx/",
-              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/"
-            ]
+              "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
+              "https://fr.wikipedia.org/wiki/Panhard_24"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ],
+              "dimensionsMm.length": [
+                "https://fr.wikipedia.org/wiki/Panhard_24"
+              ]
+            }
           }
         ],
         "sources": [
           "https://www.panhardclub.nl/productiejaren-panhard-typen/",
           "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
-          "https://www.panhardclub.nl/motortypen-pl17-24xx/"
-        ]
+          "https://www.panhardclub.nl/motortypen-pl17-24xx/",
+          "https://fr.wikipedia.org/wiki/Panhard_24"
+        ],
+        "fieldSources": {
+          "bodyTypes": [
+            "https://fr.wikipedia.org/wiki/Panhard_24"
+          ],
+          "productionUnits": [
+            "https://fr.wikipedia.org/wiki/Panhard_24"
+          ]
+        },
+        "productionUnits": 28651
       }
     ],
     "sources": [
       "https://www.panhardclub.nl/productiejaren-panhard-typen/",
       "https://www.lanemotormuseum.org/collection/cars/item/panhard-24bt-1966/",
-      "https://www.panhardclub.nl/motortypen-pl17-24xx/"
+      "https://www.panhardclub.nl/motortypen-pl17-24xx/",
+      "https://fr.wikipedia.org/wiki/Panhard_24"
     ],
     "needsReview": [
       {
@@ -314,10 +356,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[0].dimensionsMm.width",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -387,10 +425,6 @@
       },
       {
         "field": "generations[0].trims[1].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -466,10 +500,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims[2].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].trims[2].dimensionsMm.width",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -539,10 +569,6 @@
       },
       {
         "field": "generations[0].trims[3].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[3].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -853,7 +879,7 @@
       {
         "code": null,
         "name": "6 CS a 6 CS Spécial / Panoramique",
-        "from": null,
+        "from": 1930,
         "to": 1938,
         "productionStatus": "ended",
         "facelift": null,
@@ -884,13 +910,20 @@
         "trims": null,
         "sources": [
           "https://doyennes-panhard-levassor.fr/fr/les-modeles-des-annees-20-a-1940/",
-          "https://www.lanemotormuseum.org/collection/cars/item/panhard-et-le/"
-        ]
+          "https://www.lanemotormuseum.org/collection/cars/item/panhard-et-le/",
+          "https://en.wikipedia.org/wiki/Panhard_CS"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Panhard_CS"
+          ]
+        }
       }
     ],
     "sources": [
       "https://doyennes-panhard-levassor.fr/fr/les-modeles-des-annees-20-a-1940/",
-      "https://www.lanemotormuseum.org/collection/cars/item/panhard-et-le/"
+      "https://www.lanemotormuseum.org/collection/cars/item/panhard-et-le/",
+      "https://en.wikipedia.org/wiki/Panhard_CS"
     ],
     "needsReview": [
       {
@@ -907,10 +940,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -984,7 +1013,7 @@
       {
         "code": null,
         "name": "CD – silniční Tourisme / Rallye",
-        "from": null,
+        "from": 1962,
         "to": 1965,
         "productionStatus": "ended",
         "facelift": null,
@@ -996,9 +1025,9 @@
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
+          "length": 4000,
+          "width": 1600,
+          "height": 1190,
           "wheelbase": null
         },
         "specificationScope": {
@@ -1040,7 +1069,7 @@
             },
             "massKg": null,
             "massBasis": null,
-            "topSpeedKmh": null,
+            "topSpeedKmh": 165,
             "acceleration0to100s": null,
             "consumptionL100": null,
             "consumptionCycle": null,
@@ -1053,8 +1082,14 @@
               "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
             },
             "sources": [
-              "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf"
-            ]
+              "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf",
+              "https://fr.wikipedia.org/wiki/Panhard_CD"
+            ],
+            "fieldSources": {
+              "topSpeedKmh": [
+                "https://fr.wikipedia.org/wiki/Panhard_CD"
+              ]
+            }
           },
           {
             "name": "CD Rallye",
@@ -1083,7 +1118,7 @@
             },
             "massKg": null,
             "massBasis": null,
-            "topSpeedKmh": null,
+            "topSpeedKmh": 180,
             "acceleration0to100s": null,
             "consumptionL100": null,
             "consumptionCycle": null,
@@ -1096,25 +1131,50 @@
               "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
             },
             "sources": [
-              "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf"
-            ]
+              "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf",
+              "https://fr.wikipedia.org/wiki/Panhard_CD"
+            ],
+            "fieldSources": {
+              "topSpeedKmh": [
+                "https://fr.wikipedia.org/wiki/Panhard_CD"
+              ]
+            }
           }
         ],
         "sources": [
           "https://www.panhardclub.nl/productiejaren-panhard-typen/",
-          "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf"
-        ]
+          "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf",
+          "https://fr.wikipedia.org/wiki/Panhard_CD",
+          "https://en.wikipedia.org/wiki/Panhard"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://fr.wikipedia.org/wiki/Panhard_CD",
+            "https://en.wikipedia.org/wiki/Panhard"
+          ],
+          "productionUnits": [
+            "https://fr.wikipedia.org/wiki/Panhard_CD"
+          ],
+          "dimensionsMm.length": [
+            "https://fr.wikipedia.org/wiki/Panhard_CD"
+          ],
+          "dimensionsMm.width": [
+            "https://fr.wikipedia.org/wiki/Panhard_CD"
+          ],
+          "dimensionsMm.height": [
+            "https://fr.wikipedia.org/wiki/Panhard_CD"
+          ]
+        },
+        "productionUnits": null
       }
     ],
     "sources": [
       "https://www.panhardclub.nl/productiejaren-panhard-typen/",
-      "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf"
+      "https://www.panhardclub.nl/wp-content/uploads/Techniek/Motortechniek/Syllabus-motorrevisie-2019.pdf",
+      "https://fr.wikipedia.org/wiki/Panhard_CD",
+      "https://en.wikipedia.org/wiki/Panhard"
     ],
     "needsReview": [
-      {
-        "field": "generations[0].from",
-        "reason": "Přehled 1962–1965 nerozlišuje závodní původ a silniční sérii. Nutné ověřit skutečný počátek dodávek silničního modelu."
-      },
       {
         "field": "segment",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
@@ -1137,18 +1197,6 @@
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1229,10 +1277,6 @@
       },
       {
         "field": "generations[0].trims[0].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].topSpeedKmh",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1317,10 +1361,6 @@
       },
       {
         "field": "generations[0].trims[1].massBasis",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[1].topSpeedKmh",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

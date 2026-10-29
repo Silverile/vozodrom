@@ -885,7 +885,13 @@
         "name": "Bigster",
         "from": 2025,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.ro/news/dacia-isi-consolideaza-gama-de-produse-in-2026",
+            "https://www.renaultgroup.com/en/group/locations/mioveni-plant"
+          ]
+        },
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -1646,7 +1652,17 @@
         "from": 2010,
         "to": 2017,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2013,
+            "productionYear": null,
+            "note": "Modernizace přední části, světel, masky a střešních ližin představená na IAA 2013.",
+            "sources": [
+              "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -1692,8 +1708,16 @@
         "trims": null,
         "sources": [
           "https://www.dacia.ro/despre-dacia/istoric.html",
-          "https://en.wikipedia.org/wiki/Dacia_Duster"
-        ]
+          "https://en.wikipedia.org/wiki/Dacia_Duster",
+          "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+        ],
+        "fieldSources": {
+          "facelift": [
+            "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+          ]
+        }
       },
       {
         "code": "HM",
@@ -1701,7 +1725,17 @@
         "from": 2017,
         "to": 2024,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2021,
+            "productionYear": null,
+            "note": "Nová světelná grafika a maska, modernizovaný interiér a infotainment; evropské uvedení od září 2021.",
+            "sources": [
+              "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+            ]
+          }
+        ],
         "bodyTypes": [
           "suv"
         ],
@@ -2019,15 +2053,29 @@
         "sources": [
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Duster",
-          "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf"
-        ]
+          "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
+          "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+        ],
+        "fieldSources": {
+          "facelift": [
+            "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+          ]
+        }
       },
       {
         "code": "P1310",
         "name": "Duster III",
         "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.ro/news/dacia-isi-consolideaza-gama-de-produse-in-2026",
+            "https://www.renaultgroup.com/en/group/locations/mioveni-plant"
+          ]
+        },
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -2433,15 +2481,14 @@
       "https://en.wikipedia.org/wiki/Dacia_Duster",
       "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
       "https://media.dacia.com/more-duster-still-duster-2/?lang=eng",
-      "https://www.dacia.me/download/katalog/duster.pdf"
+      "https://www.dacia.me/download/katalog/duster.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog",
+      "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
+      "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2482,10 +2529,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2839,6 +2882,10 @@
       {
         "field": "scope",
         "reason": "Historie modelových identit je širší než původní evropská fronta, ale technické verze i členění faceliftů jsou výslovně dílčí."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Doložena modernizace 2021; změna firemní identity 2022 a další úpravy vyžadují doplnění. Přehled modernizací zůstává částečný."
       }
     ],
     "aliases": []
@@ -2857,7 +2904,13 @@
         "name": "Jogger",
         "from": 2021,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.ro/news/dacia-isi-consolideaza-gama-de-produse-in-2026",
+            "https://www.renaultgroup.com/en/group/locations/tangier-plant/"
+          ]
+        },
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -4046,7 +4099,13 @@
         "name": "Logan III",
         "from": 2020,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.com/new-sandero-sandero-stepway-jogger-and-logan-even-more-of-the-essentials-still-at-an-affordable-price/?lang=eng",
+            "https://www.renaultgroup.com/en/group/locations/casablanca-plant-somaca/"
+          ]
+        },
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -5339,7 +5398,13 @@
         "name": "Sandero III",
         "from": 2020,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.ro/news/dacia-isi-consolideaza-gama-de-produse-in-2026",
+            "https://www.renaultgroup.com/en/group/locations/tangier-plant/"
+          ]
+        },
         "facelift": null,
         "bodyTypes": [
           "hatchback"
@@ -6819,12 +6884,12 @@
     "name": "Spring",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Malý elektrický vůz vzniká v Číně pro evropskou nabídku Dacie. Rozsáhlá modernizace z roku 2024 není v této kartě automaticky označena za zcela novou konstrukční generaci.",
+    "summaryCs": "První Spring vznikal v Číně a prošel modernizací v roce 2024. Druhá generace, objednatelná od září 2026, používá platformu RG-EV small a vyrábí se ve slovinském Novém Městě.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
-        "name": "Spring",
+        "name": "Spring I",
         "from": 2020,
         "to": null,
         "productionStatus": "unknown",
@@ -7075,13 +7140,134 @@
           "https://media.dacia.com/dacia-spring-an-optimised-driving-experience-still-at-an-affordable-price/?lang=eng",
           "https://www.autoimage.ie/assets/1/brochures/dacia/spring-brochure.pdf"
         ]
+      },
+      {
+        "code": null,
+        "name": "Spring II",
+        "from": null,
+        "to": null,
+        "productionStatus": "current",
+        "fieldSources": {
+          "productionStatus": [
+            "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng"
+          ]
+        },
+        "facelift": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
+        "engines": null,
+        "engineCoverage": "partial",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe / France",
+          "modelYear": 2026,
+          "variant": "Electric 80",
+          "bodyType": "hatchback",
+          "noteCs": "Druhá generace představena 8. září 2026, objednávky ve Francii od stejného dne. Výrobce v této zprávě výslovně uvádí probíhající výrobu v Novo Mesto (Slovinsko); rok zahájení sériové výroby není ověřen. Platforma RG-EV small."
+        },
+        "trunkL": null,
+        "markets": [
+          "Europe"
+        ],
+        "marketNotesCs": "České uvedení neověřeno.",
+        "photo": null,
+        "trims": [
+          {
+            "name": "Electric 80 — FR 09/2026",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "electric",
+              "displacementCc": null,
+              "cylinders": null,
+              "powerKw": 60,
+              "powerStandard": null,
+              "torqueNm": 175
+            },
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
+            "drive": null,
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 130,
+            "acceleration0to100s": 12.1,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": 250,
+            "rangeCycle": "WLTP combined; published maximum",
+            "specificationScope": {
+              "market": "France",
+              "modelYear": 2026,
+              "noteCs": "Využitelná baterie LFP 27,5 kWh. Dojezd představuje nejvyšší deklarovanou hodnotu."
+            },
+            "sources": [
+              "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+              "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+            ],
+            "fieldSources": {
+              "engine.fuel": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "engine.powerKw": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "engine.torqueNm": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "topSpeedKmh": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "acceleration0to100s": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "rangeKm": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ],
+              "rangeCycle": [
+                "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+              ]
+            }
+          }
+        ],
+        "sources": [
+          "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+          "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
+        ]
       }
     ],
     "sources": [
       "https://www.dacia.ro/despre-dacia/istoric.html",
       "https://www.dacia.ro/noutati/corporate/10-milioane-de-vehicule-dacia.html",
       "https://media.dacia.com/dacia-spring-an-optimised-driving-experience-still-at-an-affordable-price/?lang=eng",
-      "https://www.autoimage.ie/assets/1/brochures/dacia/spring-brochure.pdf"
+      "https://www.autoimage.ie/assets/1/brochures/dacia/spring-brochure.pdf",
+      "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+      "https://media.dacia.com/nouvelle-dacia-spring-ouverture-des-commandes/?lang=fra"
     ],
     "needsReview": [
       {
@@ -7203,6 +7389,126 @@
       {
         "field": "scope",
         "reason": "Historie modelových identit je širší než původní evropská fronta, ale technické verze i členění faceliftů jsou výslovně dílčí."
+      },
+      {
+        "field": "generations[1].code",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].from",
+        "reason": "Rok premiéry 2026 není zaměněn za nedoložený začátek sériové výroby. Výrobce 8. září 2026 potvrzuje výrobu ve Slovinsku, nikoli datum jejího zahájení."
+      },
+      {
+        "field": "generations[1].to",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].engines",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].from",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].to",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].engine.displacementCc",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].engine.cylinders",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].engine.powerStandard",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].transmission.type",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].transmission.gears",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].drive",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].dimensionsMm.length",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].dimensionsMm.width",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].dimensionsMm.height",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].dimensionsMm.wheelbase",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].massKg",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].massBasis",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].consumptionL100",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].consumptionCycle",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
+      },
+      {
+        "field": "generations[1].trims[0].consumptionKwh100",
+        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
       }
     ],
     "aliases": []

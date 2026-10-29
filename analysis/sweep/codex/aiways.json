@@ -1,0 +1,119 @@
+{
+  "make": "aiways",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 2,
+    "rawModelsInventoried": 2,
+    "modelLinesInventoried": 2,
+    "additionsInventoried": 2,
+    "sourceCheckedModels": [
+      "u5",
+      "u6"
+    ],
+    "limitations": "Both model identities and date/status questions investigated. SEC filing available as indexed search excerpt; full opening exceeded web-tool size limit. No complete technical or photo audit."
+  },
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "u5",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+      "to": "Podle podani Aiways Europe u SEC v roce 2026 je vyroba vozu Aiways v Cine pozastavena od unora 2023; planovany restart v roce 2027 neni potvrzenim obnovene vyroby ani soucasne nabidky v Cesku.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    },
+    {
+      "lineSlug": "u5",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Aiways_U5",
+        "https://www.ai-ways.eu/wp-content/uploads/2020/11/Model-comparison.pdf",
+        "https://ai-ways.eu/"
+      ],
+      "to": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm",
+        "https://en.wikipedia.org/wiki/Aiways_U5",
+        "https://www.ai-ways.eu/wp-content/uploads/2020/11/Model-comparison.pdf",
+        "https://ai-ways.eu/"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    },
+    {
+      "lineSlug": "u5",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Aiways_U5",
+        "https://www.ai-ways.eu/wp-content/uploads/2020/11/Model-comparison.pdf",
+        "https://ai-ways.eu/"
+      ],
+      "to": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm",
+        "https://en.wikipedia.org/wiki/Aiways_U5",
+        "https://www.ai-ways.eu/wp-content/uploads/2020/11/Model-comparison.pdf",
+        "https://ai-ways.eu/"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    },
+    {
+      "lineSlug": "u6",
+      "path": "generations[0].marketNotesCs",
+      "from": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+      "to": "Podle podani Aiways Europe u SEC v roce 2026 je vyroba vozu Aiways v Cine pozastavena od unora 2023; planovany restart v roce 2027 neni potvrzenim obnovene vyroby ani soucasne nabidky v Cesku.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    },
+    {
+      "lineSlug": "u6",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Aiways_U6",
+        "https://ai-ways.eu/new-u6/"
+      ],
+      "to": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm",
+        "https://en.wikipedia.org/wiki/Aiways_U6",
+        "https://ai-ways.eu/new-u6/"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    },
+    {
+      "lineSlug": "u6",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Aiways_U6",
+        "https://ai-ways.eu/new-u6/"
+      ],
+      "to": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm",
+        "https://en.wikipedia.org/wiki/Aiways_U6",
+        "https://ai-ways.eu/new-u6/"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/2048740/000121390026092675/ea0227889-17.htm"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "2026 SEC filing says Aiways vehicle production suspended since February2023 and remains stopped, with restart planned2027. Suspension is not confirmed permanent production end; to:null and productionStatus:unknown retained.",
+    "U6 preproduction2021 and planned series manufacturing2022 must not be conflated; retrieved primary launch material did not conclusively establish actual series SOP, start remains null.",
+    "Manufacturer PR source on exports erroneously says five years U5 production in2022; not used to overwrite2019 start.",
+    "Make dissolution/status not inferred from financial difficulties or planned corporate merger.",
+    "Current Czech delivery availability not established."
+  ],
+  "summary": "Partial Aiways sweep: added sourced production-suspension caveat to both cards; retained unknown end/status because paused production is not confirmed permanent discontinuation."
+}

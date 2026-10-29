@@ -1,0 +1,164 @@
+{
+  "make": "spyker",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "c8",
+      "field": "productionStart",
+      "from": null,
+      "to": 2000,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_C8",
+        "https://de.wikipedia.org/wiki/Spyker_C8"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Spyker_C8 (C8 2000-present, Spyder 2000-2009); note de Spyker_Cars dates the small series from autumn 2005 (https://de.wikipedia.org/wiki/Spyker_Cars)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "c8",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_C8"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Spyker_C8 (Spyder/Preliator Spyder open, Laviolette/Aileron/Preliator coupe)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "c8-aileron",
+      "field": "productionStart",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_C8",
+        "https://de.wikipedia.org/wiki/Spyker_C8"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Spyker_C8 (Aileron 2009-2016); moot if c8-aileron is merged into c8"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "c12-la-turbie",
+      "reason": "Ohlášený model 2006, podle en Wikipedie všechny C12 zrušeny před výrobou – nevyráběný vůz.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_Cars"
+      ],
+      "verify": "confirmed: listed only as a prototype in https://de.wikipedia.org/wiki/Spyker_Cars; not among production models in https://nl.wikipedia.org/wiki/Spyker_Cars"
+    },
+    {
+      "file": "models-auto",
+      "slug": "c12-zagato",
+      "reason": "Podle sekce Models en Wikipedie zrušen před výrobou (článek je nekonzistentní – jinde uvádí 2007); nejde o běžně dostupný vůz.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_Cars"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Spyker_C12_Zagato says 24 were planned, production cancelled Oct 2007 and only one prototype built. Conflict: https://de.wikipedia.org/wiki/Spyker_Cars claims a 24-unit small series in 2008; the dedicated article is better sourced"
+    },
+    {
+      "file": "models-auto",
+      "slug": "d8",
+      "reason": "Koncept D8/D12 Peking-to-Paris (2006), do výroby nešel; Spyker v 8/2026 jen naznačil možný budoucí crossover D8.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_Cars",
+        "https://www.carscoops.com/2026/08/spyker-preliator-xxv/"
+      ],
+      "verify": "confirmed: D8/D12 Peking-to-Paris listed as prototypes in https://de.wikipedia.org/wiki/Spyker_Cars and https://nl.wikipedia.org/wiki/Spyker_Cars (a 2020 plan to produce it from 2021 is not shown to have happened)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "b6",
+      "reason": "B6 Venator – koncept z března 2013, nevyráběn.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_Cars"
+      ],
+      "verify": "confirmed: B6 Venator listed as a 2013 Geneva prototype in https://de.wikipedia.org/wiki/Spyker_Cars and https://nl.wikipedia.org/wiki/Spyker_Cars"
+    },
+    {
+      "file": "models-auto",
+      "slug": "silvestris-v8",
+      "reason": "Wikidata Q48815857 jej popisuje jako koncept (concept car developed by Spyker).",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q48815857"
+      ],
+      "verify": "confirmed: Wikidata Q48815857 P31 = concept car; no production car of that name in https://de.wikipedia.org/wiki/Spyker_Cars or https://nl.wikipedia.org/wiki/Spyker_Cars"
+    },
+    {
+      "file": "models-auto",
+      "slug": "c8-aileron",
+      "reason": "Generace modelu C8 (2009–2014/16), ne samostatná modelová řada; v kartě c8 vedena jako generations[1]. Sloučit pod c8 nebo ponechat jako alias.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Spyker_C8",
+        "https://de.wikipedia.org/wiki/Spyker_C8"
+      ],
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Spyker_Cars lists the Aileron as a C8 variant"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "c8"
+  ],
+  "conflicts": [
+    {
+      "where": "c8 Spyder/Laviolette výkon",
+      "values": {
+        "en Wikipedie": "294 kW (400 PS)",
+        "de Wikipedie": "298 kW (405 PS)"
+      },
+      "kept": "294 kW v trimu, rozsah 294–298 v engines"
+    },
+    {
+      "where": "c8 Aileron konec výroby",
+      "values": {
+        "de Wikipedie": 2014,
+        "en Wikipedie": 2016
+      },
+      "kept": null
+    },
+    {
+      "where": "c8 Aileron hmotnost",
+      "values": {
+        "archiv výrobce (spykercars.com)": 1560,
+        "en Wikipedie / autoblog (prototyp 2008)": 1425
+      },
+      "kept": 1560
+    },
+    {
+      "where": "c8 Preliator max. rychlost",
+      "values": {
+        "en Wikipedie text": 322,
+        "en Wikipedie tabulka": 324
+      },
+      "kept": null
+    },
+    {
+      "where": "C8 Preliator XXV výkon",
+      "values": {
+        "spykercars.com / Autocar India": "800 hp",
+        "Motor1": "789 hp"
+      },
+      "kept": "neuveden v kW"
+    }
+  ],
+  "openQuestions": [
+    "Status značky: bankrot 2021, prodej ochranné známky 8/2025 vs. dohoda Mullera se správcem 10/2025 a představení C8 Preliator XXV 8/2026 – makes.json status ponechán null (aktivní); ověřit, zda XXV skutečně jde do výroby.",
+    "Spyker C8 Double 12 S (2002–2007) a Spyder T vynechány jako samostatné trimy – zdroje mají nekonzistentní motor (Audi vs. Mader-BMW).",
+    "Commons API vracelo během sweepu chybu rate limit; nové karty mají photo null a needsReview – doplnit snímky s ověřenou licencí.",
+    "Nové soubory karet je třeba zapsat do src/data/model-cards-index.json přes scripts/model-cards-index.mjs (index jsme needitovali)."
+  ],
+  "summary": "Vytvořena karta c8 se 4 generacemi (Spyder/Laviolette 2000–2009, Aileron 2009–, Preliator 2016–, Preliator XXV ohlášen 8/2026); navrženo odstranit 5 konceptů/nevyráběných C12, D8, B6, Silvestris a sloučit c8-aileron pod c8.",
+  "verifyCardsAdded": {
+    "c8": "confirmed with caveats: years and Preliator 386 kW / 600 Nm supercharged 4.2 V8 match https://en.wikipedia.org/wiki/Spyker_C8; Preliator XXV (25 units, 4.0 V8 biturbo, 1000 Nm, 1525 kg dry, 0-100 2.7 s, 6-speed manual) matches https://spykercars.com/c8-preliator. Aileron massKg 1560 could NOT be re-verified: archive.spykercars.com/models/C8-Aileron now redirects to a page without specs, and https://en.wikipedia.org/wiki/Spyker_C8 gives 1425 kg (9 % lower); kept because the conflict is recorded in massBasis, but treat as unverified. XXV power is 597 kW per https://en.wikipedia.org/wiki/Spyker_C8 (card leaves powerKw null)."
+  }
+}

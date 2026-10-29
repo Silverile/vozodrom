@@ -262,7 +262,7 @@
         "name": "300 letter series",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe",
@@ -293,15 +293,21 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
-        ]
+          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+          "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+          ]
+        }
       },
       {
         "code": null,
         "name": "300 non-letter series",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -333,15 +339,21 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
-        ]
+          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+          "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+          ]
+        }
       },
       {
         "code": null,
         "name": "Moderní300 / 300C",
         "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2023,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -388,15 +400,24 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
-        ]
+          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+          "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+          ],
+          "to": [
+            "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+          ]
+        }
       },
       {
         "code": null,
         "name": "300C Walter P. Chrysler — evropská specifikace2010",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -493,13 +514,20 @@
           }
         ],
         "sources": [
-          "https://www.media.stellantis.com/de-de/lancia/press/lancia-auf-dem-internationalen-automobilsalon-paris-2010"
-        ]
+          "https://www.media.stellantis.com/de-de/lancia/press/lancia-auf-dem-internationalen-automobilsalon-paris-2010",
+          "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
-      "https://www.media.stellantis.com/de-de/lancia/press/lancia-auf-dem-internationalen-automobilsalon-paris-2010"
+      "https://www.media.stellantis.com/de-de/lancia/press/lancia-auf-dem-internationalen-automobilsalon-paris-2010",
+      "https://blog.stellantisnorthamerica.com/2023/12/09/last-legend-off-the-line-2023-chrysler-300c-ends-production/"
     ],
     "needsReview": [
       {
@@ -640,10 +668,6 @@
       },
       {
         "field": "generations[2].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2439,18 +2463,21 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "ZH",
         "name": "Crossfire — souhrnná výrobní rodina",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 2003,
+        "to": 2007,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
-          "kupe"
+          "kupe",
+          "kabriolet"
         ],
         "engines": null,
         "engineCoverage": "unknown",
-        "drivetrains": null,
+        "drivetrains": [
+          "rwd"
+        ],
         "transmissions": null,
         "dimensionsMm": {
           "length": null,
@@ -2471,30 +2498,71 @@
         ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
-        "trims": null,
+        "trims": [
+          {
+            "name": "Roadster 3.2 V6 160 kW Automatic — Germany 04/2007",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "kabriolet",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 3199,
+              "cylinders": 6,
+              "powerKw": 160,
+              "powerStandard": null,
+              "torqueNm": 310
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": 5
+            },
+            "drive": "rwd",
+            "dimensionsMm": {
+              "length": 4058,
+              "width": 1766,
+              "height": 1303,
+              "wheelbase": 2400
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 250,
+            "acceleration0to100s": 6.9,
+            "consumptionL100": 10.1,
+            "consumptionCycle": "NEDC combined",
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Germany",
+              "modelYear": null,
+              "noteCs": "Německý ceník platný od 04/2007 a ADAC: roadster s pětistupňovým automatem, nikoli kupé nebo SRT-6. Hmotnost zůstává null: výrobce uvádí rozsah 1495–1520 kg pro automat, ADAC 1495 kg; přesná shodná konfigurace nebyla stanovena."
+            },
+            "sources": [
+              "https://www.crossfire-garage.fr/documentation/commerciale/DE/AM_2007_-_Donnees_Techniques_Allemande.pdf",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/chrysler/crossfire/1generation/998483/"
+            ]
+          }
+        ],
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+          "https://www.crossfire-garage.fr/documentation/commerciale/DE/AM_2007_-_Donnees_Techniques_Allemande.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/chrysler/crossfire/1generation/998483/",
+          "https://www.autointell.com/News-2003/February-2003/Feb-2003-1/Feb-05-03-p9.htm",
+          "https://de.wikipedia.org/wiki/Chrysler_Crossfire"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+      "https://www.crossfire-garage.fr/documentation/commerciale/DE/AM_2007_-_Donnees_Techniques_Allemande.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/chrysler/crossfire/1generation/998483/",
+      "https://www.autointell.com/News-2003/February-2003/Feb-2003-1/Feb-05-03-p9.htm",
+      "https://de.wikipedia.org/wiki/Chrysler_Crossfire"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2503,10 +2571,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2539,10 +2603,6 @@
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4171,9 +4231,9 @@
       {
         "code": null,
         "name": "Pacifica — minivan",
-        "from": null,
+        "from": 2016,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "mpv"
@@ -4193,7 +4253,7 @@
           "modelYear": null,
           "variant": "Pacifica — minivan",
           "bodyType": "mpv",
-          "noteCs": "Minivan používající stejné jméno; modelové uvedení2017 není automaticky kalendářní začátek výroby."
+          "noteCs": "Výroba minivanu zahájena ve Windsoru 29. února 2016; hybridní provedení následovalo v prosinci 2016. Modelový rok 2017 se neztotožňuje s kalendářním zahájením výroby."
         },
         "trunkL": null,
         "markets": [
@@ -4203,12 +4263,24 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
-        ]
+          "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+          "https://blog.stellantisnorthamerica.com/2016/04/27/new-chrysler-pacifica-minivans-hit-the-road-to-dealerships/",
+          "https://blog.stellantisnorthamerica.com/2025/12/03/sixpack-powered-2026-dodge-charger-scat-pack-charges-off-the-line-at-stellantis-windsor-assembly-plant/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://blog.stellantisnorthamerica.com/2016/04/27/new-chrysler-pacifica-minivans-hit-the-road-to-dealerships/"
+          ],
+          "productionStatus": [
+            "https://blog.stellantisnorthamerica.com/2025/12/03/sixpack-powered-2026-dodge-charger-scat-pack-charges-off-the-line-at-stellantis-windsor-assembly-plant/"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Chrysler_vehicles",
+      "https://blog.stellantisnorthamerica.com/2016/04/27/new-chrysler-pacifica-minivans-hit-the-road-to-dealerships/",
+      "https://blog.stellantisnorthamerica.com/2025/12/03/sixpack-powered-2026-dodge-charger-scat-pack-charges-off-the-line-at-stellantis-windsor-assembly-plant/"
     ],
     "needsReview": [
       {
@@ -4277,10 +4349,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

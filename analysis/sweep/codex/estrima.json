@@ -1,0 +1,110 @@
+{
+  "make": "estrima",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [
+    {
+      "field": "country",
+      "from": null,
+      "to": "Itálie",
+      "sources": [
+        "https://www.estrima.com/"
+      ],
+      "confidence": "high",
+      "reason": "OEM Italian registered address and business identity."
+    },
+    {
+      "field": "countryQid",
+      "from": null,
+      "to": "Q38",
+      "sources": [
+        "https://www.estrima.com/"
+      ],
+      "confidence": "high",
+      "reason": "Italian country identifier."
+    },
+    {
+      "field": "countries",
+      "from": [],
+      "to": [
+        {
+          "qid": "Q38",
+          "name": "Itálie"
+        }
+      ],
+      "sources": [
+        "https://www.estrima.com/"
+      ],
+      "confidence": "high",
+      "reason": "Replace missing country list with verified Italian origin."
+    }
+  ],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [],
+  "openQuestions": [
+    "Individual Birò generation production dates and B2211 homologation still require evidence.",
+    "Photos were inventoried by existing filename only; this pass performed no new visual verification."
+  ],
+  "summary": "Partial breadth pass: OEM confirms Italian identity and continuing Birò design/manufacturing business after April2025 52% acquisition by Zetronic. All local identities inventoried; remaining specifications, histories, generation codes, photos and current production are not certified.",
+  "localIdentityInventory": {
+    "raw": [],
+    "lines": [
+      {
+        "slug": "biro",
+        "name": "Birò"
+      }
+    ],
+    "additions": [
+      {
+        "slug": "biro",
+        "name": "Birò"
+      }
+    ],
+    "cards": [
+      {
+        "lineSlug": "biro",
+        "name": "Birò",
+        "generations": [
+          {
+            "name": "Birò Classic / Re-Move / Maxi / Big / Box / Bolt",
+            "code": null,
+            "from": 2009,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "Estrima Biro (9137994026).jpg"
+          },
+          {
+            "name": "Birò B2211 — obnovená řada",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      }
+    ]
+  },
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 0,
+    "modelLinesInventoried": 1,
+    "additionsInventoried": 1,
+    "catalogCardsInventoried": 1,
+    "generationRowsInventoried": 2,
+    "externalChecks": [
+      {
+        "scope": "OEM confirms Italian identity and continuing Birò design/manufacturing business after April2025 52% acquisition by Zetronic.",
+        "sources": [
+          "https://www.estrima.com/"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

@@ -1,0 +1,3749 @@
+{
+  "make": "jaguar",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "e-type",
+      "field": "generations[2].from",
+      "from": null,
+      "to": 1965,
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "e-type",
+      "field": "generations[2].from",
+      "from": 1965,
+      "to": null,
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "confidence": "high",
+      "action": "supersede-prior-proposal",
+      "reason": "Withdraw the earlier null-to-1965 proposal: first numbered builds do not securely establish series production. If the shared proposal has not been applied, keep its original null; if applied, restore null. See TURN-6-YEAR-RECHECK.json.",
+      "pass": "TURN-6-DEPTH"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "xj13",
+      "reason": "Single non-road-legal racing prototype; never a series-production road model.",
+      "sources": [
+        "https://www.jaguarheritage.com/vehicle-collection/1966-jaguar-xj13/"
+      ]
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "e-type",
+      "path": "generations[2].from",
+      "to": 1965,
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "from": null
+    },
+    {
+      "lineSlug": "xf",
+      "path": "generations[3].from",
+      "to": 2017,
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake"
+      ],
+      "from": null
+    },
+    {
+      "lineSlug": "xf",
+      "path": "generations[4].from",
+      "to": 2016,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "from": null
+    },
+    {
+      "lineSlug": "xe",
+      "path": "generations[1].from",
+      "to": 2017,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "from": null
+    },
+    {
+      "lineSlug": "xj",
+      "path": "generations[2].to",
+      "to": 1977,
+      "sources": [
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "from": 1978
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "generations[2].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xe",
+      "path": "generations[1].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XE"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XE",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xe",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XE",
+        "https://media.jlr.com/archive-jaguar/news/2015/11/jaguar-xe-gains-all-wheel-drive-next-generation-infotainment-system-and-apple-watch"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XE",
+        "https://media.jlr.com/archive-jaguar/news/2015/11/jaguar-xe-gains-all-wheel-drive-next-generation-infotainment-system-and-apple-watch",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xe",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].drive",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].drive",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].drive",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].drive",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionKwh100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeKm",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].rangeCycle",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xf",
+      "path": "generations[3].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)",
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake"
+      ],
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xf",
+      "path": "generations[4].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xf",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X250)",
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X250)",
+        "https://en.wikipedia.org/wiki/Jaguar_XF_(X260)",
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xf",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xj",
+      "path": "generations[2].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XJ"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XJ",
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "xj",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_XJ",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ40",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X300)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X308)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X350)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X351)"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_XJ",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ40",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X300)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X308)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X350)",
+        "https://en.wikipedia.org/wiki/Jaguar_XJ_(X351)",
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "kind": "maintenance"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "generations[2].from",
+      "from": 1965,
+      "to": null,
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "reason": "1965 documents the first numbered builds, not an independently established start of series production; JCNA dates the 2+2 chassis sequence to March 1966. Null pending reconciliation under the human series-production convention.",
+      "pass": "TURN-6-DEPTH"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[1].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].dimensionsMm.wheelbase",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[3].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.length",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.width",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].dimensionsMm.height",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.modelYear",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.variant",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].specificationScope.bodyType",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trunkL",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].photo",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[4].trims",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[2].from",
+          "reason": "První číslované vozy 2+2 jsou doloženy v roce 1965, veřejné uvedení a údaj JCNA v roce 1966. Začátek sériové výroby není oddělen od prvních kusů; do vyřešení null."
+        }
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "reason": "Explicit unresolved series-production boundary.",
+      "pass": "TURN-6-DEPTH"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "generations[2].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "reason": "Sources checked in this depth pass.",
+      "pass": "TURN-6-DEPTH"
+    },
+    {
+      "lineSlug": "e-type",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/Jaguar_E-Type",
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ],
+      "reason": "Sources checked in this depth pass.",
+      "pass": "TURN-6-DEPTH"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "E-type Series1 2+2",
+      "values": {
+        "publicLaunch": 1966,
+        "firstFactoryChassis": 1965
+      },
+      "kept": 1965,
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf"
+      ],
+      "note": "Ledger explicitly dates first chassis Sep/Oct1965; source-production from is not public launch."
+    },
+    {
+      "where": "Jaguar canonical entity vs continuing marque",
+      "values": {
+        "canonicalQid": "Q30055",
+        "catalogueStatus": "defunct",
+        "catalogueDissolvedYear": 2012,
+        "continuingBrand": "Jaguar within JLR2026"
+      },
+      "kept": "Current company metadata preserved pending identity decision",
+      "sources": [
+        "https://media.jlr.com/corporate/news/2026/06/jlr-sets-out-path-double-digit-revenue-growth-through-greater-propulsion-flexibility"
+      ],
+      "note": "types.ts explicitly defines canonical-entity status and notes brand may outlive company."
+    },
+    {
+      "where": "e-type.generations[2].from",
+      "values": {
+        "JDHT first numbered builds": 1965,
+        "JCNA chassis sequence / public launch": 1966
+      },
+      "kept": null,
+      "reason": "First-build and series-production dates must not be conflated.",
+      "sources": [
+        "https://www.jaguarheritage.com/jdht/wp-content/uploads/RG001F-Jaguar-E-type-v.3-25-01-2023-1.pdf",
+        "https://www.jcna.com/sites/default/files/01_Draft_Series_1_E-Type_Judges_Guide_Intro-Exterior.pdf"
+      ]
+    }
+  ],
+  "openQuestions": [
+    "Partial external review only; remaining dates/current statuses/technical values/photos unverified.",
+    "Make founded1934 belongs corporate history; distinguish Swallow1922, SS Cars1934 and Jaguar name1935 before modifying foundation.",
+    "Type01 exists in raw list, officially revealed October2026 with orders2027; no claim it is currently in customer production. Source: https://www.jaguar.com/en-us/press-release.html",
+    "XJ SeriesII global end remains unresolved; do not impose UK1979 on overseas assembly without scope checks.",
+    "F-Type coupe reveal2013 differs from customer launch2014; factory start not established, null retained.",
+    "Indexed shared generation proposals were checked against identity. Unmatched body-variant layouts moved into generationProposals and must not be applied using card array indices."
+  ],
+  "coverage": {
+    "status": "partial",
+    "cards": 31,
+    "generations": 61,
+    "factualChanges": 5,
+    "externallyCheckedLines": [
+      "e-type",
+      "xf",
+      "xe",
+      "xj",
+      "f-type",
+      "type-01"
+    ]
+  },
+  "summary": "Partial Jaguar sweep: five card chronology corrections and one identity-matched shared-field proposal. Four unmatched shared variant changes require generation restructuring; marque/company metadata needs conditional identity review.",
+  "inventory": {
+    "makes": [
+      {
+        "slug": "jaguar",
+        "name": "Jaguar",
+        "country": "Spojené království",
+        "countryQid": "Q145",
+        "countries": [
+          {
+            "qid": "Q145",
+            "name": "Spojené království"
+          }
+        ],
+        "qid": "Q30055",
+        "relatedQids": [
+          "Q21170490"
+        ],
+        "status": "defunct",
+        "foundedYear": 1934,
+        "dissolvedYear": 2012,
+        "sections": [
+          "auto"
+        ],
+        "aliases": [
+          "Jaguar Cars"
+        ],
+        "sourceUrl": "https://www.wikidata.org/wiki/Q30055"
+      }
+    ],
+    "models-auto": [
+      {
+        "slug": "420",
+        "name": "420",
+        "qid": "Q1678495"
+      },
+      {
+        "slug": "daimler-sovereign",
+        "name": "Daimler Sovereign",
+        "qid": "Q4703012"
+      },
+      {
+        "slug": "e-pace",
+        "name": "E-Pace",
+        "qid": "Q33026750"
+      },
+      {
+        "slug": "e-type",
+        "name": "E-type",
+        "qid": "Q249303"
+      },
+      {
+        "slug": "e-type-roadster",
+        "name": "E-Type Roadster",
+        "qid": "Q90919690"
+      },
+      {
+        "slug": "f-pace",
+        "name": "F-Pace",
+        "qid": "Q18972506"
+      },
+      {
+        "slug": "i-pace",
+        "name": "I-Pace",
+        "qid": "Q27941336"
+      },
+      {
+        "slug": "mark-2",
+        "name": "Mark 2",
+        "qid": "Q1678503"
+      },
+      {
+        "slug": "mark-i",
+        "name": "Mark I",
+        "qid": "Q145575"
+      },
+      {
+        "slug": "mark-iv",
+        "name": "Mark IV",
+        "qid": "Q1678501"
+      },
+      {
+        "slug": "mark-ix",
+        "name": "Mark IX",
+        "qid": "Q1678506"
+      },
+      {
+        "slug": "mark-v",
+        "name": "Mark V",
+        "qid": "Q1678508"
+      },
+      {
+        "slug": "mark-vii",
+        "name": "Mark VII",
+        "qid": "Q1678512"
+      },
+      {
+        "slug": "mark-vii-m",
+        "name": "Mark VII M",
+        "qid": "Q65093889"
+      },
+      {
+        "slug": "mark-viii",
+        "name": "Mark VIII",
+        "qid": "Q975045"
+      },
+      {
+        "slug": "mark-x",
+        "name": "Mark X",
+        "qid": "Q1678520"
+      },
+      {
+        "slug": "prime-ministerial-car",
+        "name": "Prime Ministerial Car",
+        "qid": "Q7243313"
+      },
+      {
+        "slug": "r-and-svr-models",
+        "name": "R and SVR models",
+        "qid": "Q55614829"
+      },
+      {
+        "slug": "s-type-q1291757",
+        "name": "S-Type",
+        "qid": "Q1291757"
+      },
+      {
+        "slug": "s-type-q582111",
+        "name": "S-Type",
+        "qid": "Q582111"
+      },
+      {
+        "slug": "ss-1",
+        "name": "SS 1",
+        "qid": "Q1113453"
+      },
+      {
+        "slug": "ss-100",
+        "name": "SS 100",
+        "qid": "Q174345"
+      },
+      {
+        "slug": "ss-2",
+        "name": "SS 2",
+        "qid": "Q2204531"
+      },
+      {
+        "slug": "ss-90",
+        "name": "SS 90",
+        "qid": "Q657851"
+      },
+      {
+        "slug": "type-01",
+        "name": "Type 01",
+        "qid": "Q141662797"
+      },
+      {
+        "slug": "waymo-jaguar-i-pace",
+        "name": "Waymo Jaguar I-Pace",
+        "qid": "Q137636786"
+      },
+      {
+        "slug": "x-type",
+        "name": "X-Type",
+        "qid": "Q475753"
+      },
+      {
+        "slug": "x308",
+        "name": "X308",
+        "qid": "Q1678516"
+      },
+      {
+        "slug": "x350",
+        "name": "X350",
+        "qid": "Q1678522"
+      },
+      {
+        "slug": "x351",
+        "name": "X351",
+        "qid": "Q1678526"
+      },
+      {
+        "slug": "xe",
+        "name": "XE",
+        "qid": "Q15939056"
+      },
+      {
+        "slug": "xe-sv-project-8",
+        "name": "XE SV Project 8",
+        "qid": "Q90697819"
+      },
+      {
+        "slug": "xf",
+        "name": "XF",
+        "qid": "Q383827"
+      },
+      {
+        "slug": "xf-r",
+        "name": "XF-R",
+        "qid": "Q2054675"
+      },
+      {
+        "slug": "xf-x250",
+        "name": "XF (X250)",
+        "qid": "Q20825949"
+      },
+      {
+        "slug": "xf-x260",
+        "name": "XF (X260)",
+        "qid": "Q19787640"
+      },
+      {
+        "slug": "xf-x260-sportbrake",
+        "name": "XF (X260) Sportbrake",
+        "qid": "Q90919088"
+      },
+      {
+        "slug": "xfr-x260-sportbrake",
+        "name": "XFR (X260) Sportbrake",
+        "qid": "Q90919222"
+      },
+      {
+        "slug": "xj-mark-i",
+        "name": "XJ Mark I",
+        "qid": "Q14524056"
+      },
+      {
+        "slug": "xj-q1142339",
+        "name": "XJ",
+        "qid": "Q1142339"
+      },
+      {
+        "slug": "xj-q65087915",
+        "name": "XJ",
+        "qid": "Q65087915"
+      },
+      {
+        "slug": "xj-x300",
+        "name": "XJ X300",
+        "qid": "Q1299383"
+      },
+      {
+        "slug": "xj-x358",
+        "name": "XJ (X358)",
+        "qid": "Q59904932"
+      },
+      {
+        "slug": "xj13",
+        "name": "XJ13",
+        "qid": "Q1280758"
+      },
+      {
+        "slug": "xj220",
+        "name": "XJ220",
+        "qid": "Q521044"
+      },
+      {
+        "slug": "xj40",
+        "name": "XJ40",
+        "qid": "Q2712946"
+      },
+      {
+        "slug": "xjr-15",
+        "name": "XJR-15",
+        "qid": "Q1678533"
+      },
+      {
+        "slug": "xjr-6",
+        "name": "XJR-6",
+        "qid": "Q3160532"
+      },
+      {
+        "slug": "xjr-x350",
+        "name": "XJR (X350)",
+        "qid": "Q90919672"
+      },
+      {
+        "slug": "xjs",
+        "name": "XJS",
+        "qid": "Q554507"
+      },
+      {
+        "slug": "xk",
+        "name": "XK",
+        "qid": "Q965952"
+      },
+      {
+        "slug": "xk-120",
+        "name": "XK 120",
+        "qid": "Q1422337"
+      },
+      {
+        "slug": "xk-120c",
+        "name": "XK 120C",
+        "qid": "Q1484575"
+      },
+      {
+        "slug": "xk-140",
+        "name": "XK 140",
+        "qid": "Q1000013"
+      },
+      {
+        "slug": "xk-150",
+        "name": "XK 150",
+        "qid": "Q426771"
+      },
+      {
+        "slug": "xk-x100",
+        "name": "XK (X100)",
+        "qid": "Q1658078"
+      },
+      {
+        "slug": "xkr",
+        "name": "XKR",
+        "qid": "Q1474162"
+      },
+      {
+        "slug": "xkss",
+        "name": "XKSS",
+        "qid": "Q1486496"
+      }
+    ],
+    "model-lines-auto": [
+      {
+        "slug": "420",
+        "from": 1966,
+        "to": 1968,
+        "generations": [
+          {
+            "code": null,
+            "from": 1966,
+            "to": 1968,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_420"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "e-pace",
+        "from": 2017,
+        "to": 2024,
+        "generations": [
+          {
+            "code": "X540",
+            "from": 2017,
+            "to": 2024,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "suv"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1372078031",
+              "https://www.wikidata.org/wiki/Q33026750"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "e-type",
+        "from": null,
+        "to": 1974,
+        "generations": [
+          {
+            "code": null,
+            "from": 1961,
+            "to": 1968,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1961,
+            "to": 1968,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+            ]
+          },
+          {
+            "code": null,
+            "from": null,
+            "to": 1968,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1968,
+            "to": 1971,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1971,
+            "to": 1974,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_E-Type"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "f-pace",
+        "from": 2016,
+        "to": 2025,
+        "generations": [
+          {
+            "code": "X761",
+            "from": 2016,
+            "to": 2025,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "suv"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1372066911",
+              "https://www.wikidata.org/wiki/Q18972506"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "f-type",
+        "from": 2012,
+        "to": 2024,
+        "generations": [
+          {
+            "code": "X152",
+            "from": 2012,
+            "to": 2024,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1369280830",
+              "https://www.wikidata.org/wiki/Q1678497"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "i-pace",
+        "from": 2018,
+        "to": 2024,
+        "generations": null
+      },
+      {
+        "slug": "mark-i",
+        "from": 1955,
+        "to": 1959,
+        "generations": [
+          {
+            "code": null,
+            "from": 1955,
+            "to": 1959,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_I"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-iv",
+        "from": 1936,
+        "to": 1949,
+        "generations": [
+          {
+            "code": null,
+            "from": 1936,
+            "to": 1940,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1936,
+            "to": 1940,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1938,
+            "to": 1940,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1945,
+            "to": 1949,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1945,
+            "to": 1948,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1945,
+            "to": 1948,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IV",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-ix",
+        "from": 1958,
+        "to": 1961,
+        "generations": [
+          {
+            "code": null,
+            "from": 1958,
+            "to": 1961,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_IX"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-v",
+        "from": 1948,
+        "to": 1951,
+        "generations": [
+          {
+            "code": null,
+            "from": 1948,
+            "to": 1951,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_V",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-vii",
+        "from": 1950,
+        "to": 1956,
+        "generations": [
+          {
+            "code": null,
+            "from": 1950,
+            "to": 1956,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_VII"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-viii",
+        "from": 1956,
+        "to": 1958,
+        "generations": [
+          {
+            "code": null,
+            "from": 1956,
+            "to": 1958,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_VIII"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-x",
+        "from": 1961,
+        "to": 1970,
+        "generations": [
+          {
+            "code": null,
+            "from": 1961,
+            "to": 1970,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_X"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mark-2",
+        "from": 1959,
+        "to": 1969,
+        "generations": [
+          {
+            "code": null,
+            "from": 1959,
+            "to": 1967,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_2"
+            ]
+          },
+          {
+            "code": null,
+            "from": 1967,
+            "to": 1969,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_Mark_2"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "s-type",
+        "from": 1999,
+        "to": 2007,
+        "generations": null
+      },
+      {
+        "slug": "ss100",
+        "from": 1936,
+        "to": 1939,
+        "generations": [
+          {
+            "code": null,
+            "from": 1936,
+            "to": 1939,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/SS_Jaguar_100",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "ss1",
+        "from": null,
+        "to": 1936,
+        "generations": [
+          {
+            "code": null,
+            "from": null,
+            "to": 1936,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet",
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/SS_1",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "ss2",
+        "from": null,
+        "to": null,
+        "generations": [
+          {
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "bodyTypes": null,
+            "sources": [
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "ss90",
+        "from": 1935,
+        "to": null,
+        "generations": [
+          {
+            "code": null,
+            "from": 1935,
+            "to": null,
+            "productionStatus": "unknown",
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/SS_90",
+              "https://www.jagvic.org.au/jaguar-models"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "x-type",
+        "from": 2001,
+        "to": 2009,
+        "generations": [
+          {
+            "code": "X400",
+            "from": 2001,
+            "to": 2009,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan",
+              "kombi"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1377254110",
+              "https://www.wikidata.org/wiki/Q475753"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xe",
+        "from": 2015,
+        "to": 2024,
+        "generations": [
+          {
+            "code": "X760",
+            "from": 2015,
+            "to": 2024,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1381912436",
+              "https://www.wikidata.org/wiki/Q15939056"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xf",
+        "from": 2007,
+        "to": 2024,
+        "generations": [
+          {
+            "code": "X250",
+            "from": 2007,
+            "to": 2015,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kombi",
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1381439850"
+            ]
+          },
+          {
+            "code": "X260",
+            "from": 2015,
+            "to": 2024,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kombi",
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1343512539"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xj",
+        "from": 1968,
+        "to": 2019,
+        "generations": [
+          {
+            "code": null,
+            "from": 1979,
+            "to": 1992,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1380842058"
+            ]
+          },
+          {
+            "code": "XJ40",
+            "from": 1986,
+            "to": 1994,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1380842067"
+            ]
+          },
+          {
+            "code": "X300",
+            "from": 1994,
+            "to": 1997,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1380842059"
+            ]
+          },
+          {
+            "code": "X308",
+            "from": 1997,
+            "to": 2002,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1380842061"
+            ]
+          },
+          {
+            "code": "X350",
+            "from": 2002,
+            "to": 2009,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1381313931"
+            ]
+          },
+          {
+            "code": "X351",
+            "from": 2009,
+            "to": 2019,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "sedan"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1380842065"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xj220",
+        "from": 1992,
+        "to": 1994,
+        "generations": [
+          {
+            "code": null,
+            "from": 1992,
+            "to": 1994,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XJ220"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xjr-15",
+        "from": 1990,
+        "to": 1992,
+        "generations": [
+          {
+            "code": null,
+            "from": 1990,
+            "to": 1992,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XJR-15"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xjs",
+        "from": 1975,
+        "to": 1996,
+        "generations": null
+      },
+      {
+        "slug": "xk",
+        "from": 1996,
+        "to": 2014,
+        "generations": [
+          {
+            "code": "X100",
+            "from": 1996,
+            "to": 2005,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1375901981"
+            ]
+          },
+          {
+            "code": "X150",
+            "from": 2005,
+            "to": 2014,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/w/index.php?oldid=1381941318"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xk120",
+        "from": 1948,
+        "to": 1954,
+        "generations": [
+          {
+            "code": null,
+            "from": 1948,
+            "to": 1954,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XK120"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xk140",
+        "from": 1954,
+        "to": 1957,
+        "generations": [
+          {
+            "code": null,
+            "from": 1954,
+            "to": 1957,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XK140"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xk150",
+        "from": 1957,
+        "to": 1961,
+        "generations": [
+          {
+            "code": null,
+            "from": 1957,
+            "to": 1961,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe",
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XK150"
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "xkss",
+        "from": 1957,
+        "to": 1957,
+        "generations": [
+          {
+            "code": null,
+            "from": 1957,
+            "to": 1957,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "sources": [
+              "https://en.wikipedia.org/wiki/Jaguar_XKSS"
+            ]
+          }
+        ]
+      }
+    ],
+    "model-line-additions": [
+      {
+        "slug": "420",
+        "from": 1966,
+        "to": 1968
+      },
+      {
+        "slug": "e-type",
+        "from": null,
+        "to": 1974
+      },
+      {
+        "slug": "mark-2",
+        "from": 1959,
+        "to": 1969
+      },
+      {
+        "slug": "mark-i",
+        "from": 1955,
+        "to": 1959
+      },
+      {
+        "slug": "mark-iv",
+        "from": 1936,
+        "to": 1949
+      },
+      {
+        "slug": "mark-ix",
+        "from": 1958,
+        "to": 1961
+      },
+      {
+        "slug": "mark-v",
+        "from": 1948,
+        "to": 1951
+      },
+      {
+        "slug": "mark-vii",
+        "from": 1950,
+        "to": 1956
+      },
+      {
+        "slug": "mark-viii",
+        "from": 1956,
+        "to": 1958
+      },
+      {
+        "slug": "mark-x",
+        "from": 1961,
+        "to": 1970
+      },
+      {
+        "slug": "ss1",
+        "from": null,
+        "to": 1936
+      },
+      {
+        "slug": "ss100",
+        "from": 1936,
+        "to": 1939
+      },
+      {
+        "slug": "ss2",
+        "from": null,
+        "to": null
+      },
+      {
+        "slug": "ss90",
+        "from": 1935,
+        "to": null
+      },
+      {
+        "slug": "xj220",
+        "from": 1992,
+        "to": 1994
+      },
+      {
+        "slug": "xjr-15",
+        "from": 1990,
+        "to": 1992
+      },
+      {
+        "slug": "xk120",
+        "from": 1948,
+        "to": 1954
+      },
+      {
+        "slug": "xk140",
+        "from": 1954,
+        "to": 1957
+      },
+      {
+        "slug": "xk150",
+        "from": 1957,
+        "to": 1961
+      },
+      {
+        "slug": "xkss",
+        "from": 1957,
+        "to": 1957
+      }
+    ]
+  },
+  "generationProposals": [
+    {
+      "slug": "xf",
+      "cardPath": "generations[3].from",
+      "proposedCardValue": 2017,
+      "sources": [
+        "https://www.jaguar.com/content/dam/jdx/pdfs/de/Jaguar_XF-Sportbrake_2017.pdf",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake"
+      ],
+      "sharedGenerations": [
+        {
+          "code": "X250",
+          "from": 2007,
+          "to": 2015,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kombi",
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381439850"
+          ]
+        },
+        {
+          "code": "X260",
+          "from": 2015,
+          "to": 2024,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kombi",
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1343512539"
+          ]
+        }
+      ],
+      "prerequisite": "Shared line groups generations/body variants differently from the card. Match or split the named card variant before applying; this is not an indexed shared-file patch.",
+      "cardIdentity": {
+        "name": "X260 –Sportbrake",
+        "code": null,
+        "from": 2017,
+        "to": 2024,
+        "bodyTypes": [
+          "kombi"
+        ]
+      }
+    },
+    {
+      "slug": "xf",
+      "cardPath": "generations[4].from",
+      "proposedCardValue": 2016,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312517240716/d413912d20f.htm"
+      ],
+      "sharedGenerations": [
+        {
+          "code": "X250",
+          "from": 2007,
+          "to": 2015,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kombi",
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381439850"
+          ]
+        },
+        {
+          "code": "X260",
+          "from": 2015,
+          "to": 2024,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kombi",
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1343512539"
+          ]
+        }
+      ],
+      "prerequisite": "Shared line groups generations/body variants differently from the card. Match or split the named card variant before applying; this is not an indexed shared-file patch.",
+      "cardIdentity": {
+        "name": "XFL – dlouhý rozvor",
+        "code": null,
+        "from": 2016,
+        "to": null,
+        "bodyTypes": [
+          "sedan"
+        ]
+      }
+    },
+    {
+      "slug": "xe",
+      "cardPath": "generations[1].from",
+      "proposedCardValue": 2017,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm"
+      ],
+      "sharedGenerations": [
+        {
+          "code": "X760",
+          "from": 2015,
+          "to": 2024,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381912436",
+            "https://www.wikidata.org/wiki/Q15939056"
+          ]
+        }
+      ],
+      "prerequisite": "Shared line groups generations/body variants differently from the card. Match or split the named card variant before applying; this is not an indexed shared-file patch.",
+      "cardIdentity": {
+        "name": "XEL – prodloužené provedení",
+        "code": null,
+        "from": 2017,
+        "to": null,
+        "bodyTypes": [
+          "sedan"
+        ]
+      }
+    },
+    {
+      "slug": "xj",
+      "cardPath": "generations[2].to",
+      "proposedCardValue": 1977,
+      "sources": [
+        "https://www.jaguarheritage.com/uploads/RG001L-Jaguar-XJ-and-Daimler-Series-2-v.2-31-03-2020.pdf"
+      ],
+      "sharedGenerations": [
+        {
+          "code": null,
+          "from": 1979,
+          "to": 1992,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380842058"
+          ]
+        },
+        {
+          "code": "XJ40",
+          "from": 1986,
+          "to": 1994,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380842067"
+          ]
+        },
+        {
+          "code": "X300",
+          "from": 1994,
+          "to": 1997,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380842059"
+          ]
+        },
+        {
+          "code": "X308",
+          "from": 1997,
+          "to": 2002,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380842061"
+          ]
+        },
+        {
+          "code": "X350",
+          "from": 2002,
+          "to": 2009,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381313931"
+          ]
+        },
+        {
+          "code": "X351",
+          "from": 2009,
+          "to": 2019,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380842065"
+          ]
+        }
+      ],
+      "prerequisite": "Shared line groups generations/body variants differently from the card. Match or split the named card variant before applying; this is not an indexed shared-file patch.",
+      "cardIdentity": {
+        "name": "XJ-C – kupé",
+        "code": null,
+        "from": 1975,
+        "to": 1977,
+        "bodyTypes": [
+          "kupe"
+        ]
+      }
+    }
+  ],
+  "identityProposals": [
+    {
+      "field": "status",
+      "from": "defunct",
+      "to": null,
+      "sources": [
+        "https://media.jlr.com/corporate/news/2026/06/jlr-sets-out-path-double-digit-revenue-growth-through-greater-propulsion-flexibility"
+      ],
+      "confidence": "high",
+      "note": "Brand is active within JLR; old corporate-entity status must not imply make ceased.",
+      "condition": "Only if make identity is migrated from historical company Q30055 to continuing Jaguar marque. Current types.ts assigns status/dissolution to canonical source entity; do not clear those fields solely from brand activity."
+    },
+    {
+      "field": "dissolvedYear",
+      "from": 2012,
+      "to": null,
+      "sources": [
+        "https://media.jlr.com/corporate/news/2026/06/jlr-sets-out-path-double-digit-revenue-growth-through-greater-propulsion-flexibility"
+      ],
+      "confidence": "high",
+      "note": "2012 legal-company history does not date dissolution of Jaguar marque.",
+      "condition": "Only if make identity is migrated from historical company Q30055 to continuing Jaguar marque. Current types.ts assigns status/dissolution to canonical source entity; do not clear those fields solely from brand activity."
+    }
+  ],
+  "sharedGenerationIdentityAudit": "Indexed proposals compared with pre-edit card identity and shared generation code/date/body/row count; unmatched edits require explicit restructuring.",
+  "depthAudits": [
+    {
+      "pass": "TURN-6-DEPTH",
+      "lineSlug": "xe",
+      "result": "Rechecked XEL from=2017: manufacturer regulatory filing confirms actual production and December 2017 sales, not just a reveal. Retained. Calendar end/status remain unresolved.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm",
+        "https://www.cheryjaguarlandrover.com/en/2338/"
+      ]
+    },
+    {
+      "pass": "TURN-6-DEPTH",
+      "lineSlug": "xf",
+      "result": "Rechecked X260 Sportbrake from=2017 and XFL from=2016: actual sales in those calendar years corroborate series manufacture. Retained. This does not verify current XFL end/status.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/926042/000119312518271030/d619010d6k.htm",
+        "https://media.jlr.com/corporate/news/2017/06/new-jaguar-xf-sportbrake",
+        "https://media.jlr.com/archive-jaguar/news/2016/04/all-new-jaguar-xfl-good-be-driven-it-drive"
+      ]
+    },
+    {
+      "pass": "TURN-6-DEPTH",
+      "lineSlug": "xk",
+      "result": "Potential unresolved first-build/series distinction: Heritage identifies first official X150 production convertible completed 20 December 2005, while annual report calls XK launched in 2006. Existing 2005 retained pending evidence specifically separating series production from first car.",
+      "sources": [
+        "https://www.jaguarheritage.com/vehicle-collection/2006-jaguar-xk-convertble-first-production-xk-convertible-x150/",
+        "https://media.production.jlrms.com/alf/docs/2019-06/b8e31c59-896e-4180-92a1-f1ee60740627/20102011annualreport.pdf"
+      ]
+    }
+  ]
+}

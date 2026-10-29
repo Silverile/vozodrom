@@ -1,0 +1,176 @@
+{
+  "make": "salmson",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "s4",
+      "field": "productionStart",
+      "from": null,
+      "to": 1932,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson_S4&oldid=1375305485"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Salmson_S4 (infobox 1932-1942, 1946-1951, last cars April 1952; saloon, cabriolet, coupe, roadster). Note: the en Salmson article dates an earlier S4 from 1929"
+    },
+    {
+      "file": "models-auto",
+      "slug": "s4",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1951,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson_S4&oldid=1375305485"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Salmson_S4 (infobox 1932-1942, 1946-1951, last cars April 1952; saloon, cabriolet, coupe, roadster). Note: the en Salmson article dates an earlier S4 from 1929"
+    },
+    {
+      "file": "models-auto",
+      "slug": "s4",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan",
+        "kupe",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson_S4&oldid=1375305485"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Salmson_S4 (infobox 1932-1942, 1946-1951, last cars April 1952; saloon, cabriolet, coupe, roadster). Note: the en Salmson article dates an earlier S4 from 1929"
+    },
+    {
+      "file": "models-auto",
+      "slug": "randonnee",
+      "field": "productionStart",
+      "from": null,
+      "to": 1950,
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e (autumn 1950 to 1954, 507 built, saloon)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "randonnee",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1954,
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e (autumn 1950 to 1954, 507 built, saloon)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "randonnee",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "sedan"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e (autumn 1950 to 1954, 507 built, saloon)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "val-3",
+      "field": "productionStart",
+      "from": null,
+      "to": 1922,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson&oldid=1378518237"
+      ],
+      "confidence": "low",
+      "verify": "unverified (low confidence, single source)"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "2300 S",
+      "from": 1953,
+      "to": 1957,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson&oldid=1378518237"
+      ]
+    },
+    {
+      "name": "Grand Sport (GS)",
+      "from": 1924,
+      "to": 1930,
+      "bodyTypes": [
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson&oldid=1378518237"
+      ],
+      "note": "Sportovní dvoumístný vůz; karoserie dle zdroje neuvedena – ověřit."
+    },
+    {
+      "name": "AL",
+      "from": 1921,
+      "to": null,
+      "bodyTypes": null,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Salmson&oldid=1378518237"
+      ],
+      "note": "Cyklekára; zdroj uvádí 1920 i 1921."
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "s4",
+    "randonnee"
+  ],
+  "conflicts": [
+    {
+      "where": "s4 začátek výroby",
+      "values": {
+        "en Salmson (S4 1929–1932)": 1929,
+        "en Salmson S4 infobox": 1932
+      },
+      "kept": 1932
+    },
+    {
+      "where": "s4 konec výroby",
+      "values": {
+        "en Salmson S4 infobox": 1951,
+        "en Salmson S4 text (duben)": 1952
+      },
+      "kept": 1951
+    },
+    {
+      "where": "randonnee konec výroby",
+      "values": {
+        "fr Wikipedie": 1954,
+        "en Salmson (jen E-72 1950)": 1950
+      },
+      "kept": 1954
+    }
+  ],
+  "openQuestions": [
+    "Salmson: makes.json foundedYear 1890 je rok založení firmy (čerpadla/motory), automobily 1919/1921–1957 – v pořádku, jen pro informaci.",
+    "VAL-3 karta nevytvořena – zdroj má jen rok 1922.",
+    "Commons API vracelo během sweepu chybu rate limit; nové karty mají photo null a needsReview – doplnit snímky s ověřenou licencí.",
+    "Nové soubory karet je třeba zapsat do src/data/model-cards-index.json přes scripts/model-cards-index.mjs (index jsme needitovali)."
+  ],
+  "summary": "Vytvořeny karty S4 (S4-C až S4-61, 1932–1951) a Randonnée (1950–1954, 507 ks); navrženy roky a karoserie do models-auto a 3 chybějící modely (2300 S, Grand Sport, AL).",
+  "verifyCardsAdded": {
+    "s4": "confirmed: variants and displacements match https://en.wikipedia.org/wiki/Salmson_S4",
+    "randonnee": "confirmed: 2218 cc, 70 hp, 1350 kg, 130 km/h, 4610x1710x1570 mm match https://fr.wikipedia.org/wiki/Salmson_Randonn%C3%A9e"
+  }
+}

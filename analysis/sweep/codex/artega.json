@@ -1,0 +1,130 @@
+{
+  "make": "artega",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "GT production start",
+      "values": {
+        "CarAndDriverFactoryStart": 2008,
+        "AutoWeekReportedProductionStart": 2009,
+        "ManufacturerDealerPrototypeStage": 2008,
+        "DelayedSeriesRelaunch": 2010
+      },
+      "kept": null,
+      "sources": [
+        "https://www.caranddriver.com/reviews/a16580663/2009-artega-gt-review/",
+        "https://www.autoweek.nl/autonieuws/artikel/artega-nu-echt-van-start/",
+        "https://www.bloch-autotechnik.ch/bloch_content/03_neuwagen/artega_story.php",
+        "https://www.kfz-betrieb.vogel.de/sportwagenmanufaktur-artega-steht-vor-neustart-a-253578/"
+      ],
+      "note": "Prototype builds, customer deliveries, type approval and restarted series output must not be collapsed into an invented single start."
+    }
+  ],
+  "openQuestions": [
+    "Primary/dealer identity and end-year checks only; exact production start, current company status, specifications and photo remain incomplete.",
+    "Make founded2006 versus Paragon spin-off2007 requires legal-entity registry confirmation before changing.",
+    "Later electric SE/Scalo/Karo projects require project-specific customer-production evidence before adding to catalogue.",
+    "Existing single GT card remains partial; no claim its technical trim was fully reverified."
+  ],
+  "coverage": {
+    "status": "partial",
+    "cards": 1,
+    "generations": 1,
+    "factualChanges": 0,
+    "externallyCheckedLines": [
+      "gt"
+    ]
+  },
+  "checkedWithoutChange": [
+    {
+      "where": "GT production ceased30 September2012;2007 was first prototype",
+      "sources": [
+        "https://european-aluminium.eu/wp-content/uploads/2022/11/1_aam_body-structures.pdf"
+      ]
+    },
+    {
+      "where": "2007 design study,2008 registered prototype/demonstrator,2011 manufacturer-series operation",
+      "sources": [
+        "https://www.bloch-autotechnik.ch/bloch_content/03_neuwagen/artega_story.php"
+      ]
+    },
+    {
+      "where": "Paragon dates initiation of Artega spin-off2007; not necessarily legal incorporation",
+      "sources": [
+        "https://paragon.ag/en/company/history"
+      ]
+    }
+  ],
+  "summary": "Partial Artega sweep: GT end2012 and prototype/series distinction checked; no supported correction applied. Production-start conflict retained as null.",
+  "inventory": {
+    "makes": [
+      {
+        "slug": "artega",
+        "name": "Artega",
+        "country": "Německo",
+        "countryQid": "Q183",
+        "countries": [
+          {
+            "qid": "Q183",
+            "name": "Německo"
+          }
+        ],
+        "qid": "Q706453",
+        "relatedQids": [],
+        "status": null,
+        "foundedYear": 2006,
+        "dissolvedYear": null,
+        "sections": [
+          "auto"
+        ],
+        "aliases": [
+          "Artega Automobile"
+        ],
+        "sourceUrl": "https://www.wikidata.org/wiki/Q706453"
+      }
+    ],
+    "models-auto": [
+      {
+        "slug": "gt",
+        "name": "GT",
+        "qid": "Q706458"
+      }
+    ],
+    "model-lines-auto": [
+      {
+        "slug": "gt",
+        "from": null,
+        "to": 2012,
+        "generations": [
+          {
+            "code": null,
+            "from": null,
+            "to": 2012,
+            "productionStatus": "ended",
+            "bodyTypes": [
+              "kupe"
+            ],
+            "sources": [
+              "https://www.artega.de/fileadmin/images/Presse/Artega_IAA_2015_Pressetext_E.pdf",
+              "https://en.wikipedia.org/wiki/Artega_GT"
+            ]
+          }
+        ]
+      }
+    ],
+    "model-line-additions": [
+      {
+        "slug": "gt",
+        "from": null,
+        "to": 2012
+      }
+    ]
+  }
+}

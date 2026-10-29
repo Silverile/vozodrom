@@ -1,0 +1,326 @@
+{
+  "make": "trabant",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "status",
+      "from": null,
+      "to": "defunct",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Trabant 601 (production to 1990/1991, brand from P50 1957); Trabant production ended April 1991"
+    },
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1957,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Trabant 601 (production to 1990/1991, brand from P50 1957); Trabant production ended April 1991"
+    },
+    {
+      "field": "dissolvedYear",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia Trabant 601 (production to 1990/1991, brand from P50 1957); Trabant production ended April 1991"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "p50",
+      "field": "productionStart",
+      "from": null,
+      "to": 1957,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "file": "models-auto",
+      "slug": "p50",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1962,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600",
+      "field": "productionStart",
+      "from": null,
+      "to": 1962,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "600",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1965,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1-1",
+      "field": "productionStart",
+      "from": null,
+      "to": 1990,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "1-1",
+      "field": "productionEnd",
+      "from": null,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "601-s",
+      "reason": "601 S is a trim level (Sonderwunsch) of the Trabant 601, not a separate model; duplicate of 601 (the 601 card already covers it).",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381929784",
+        "https://www.wikidata.org/wiki/Q90500385"
+      ],
+      "verify": "confirmed: de.wikipedia Trabant 601 treats S / S de Luxe as equipment lines of the 601, not a separate model"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "p50",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "p50",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "p50",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "p50",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "p50",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "600",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[3].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[4].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[5].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[6].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "601",
+      "path": "generations[0].trims[7].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "1-1",
+      "path": "generations[0].trims[0].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "1-1",
+      "path": "generations[0].trims[1].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    },
+    {
+      "lineSlug": "1-1",
+      "path": "generations[0].trims[2].kind",
+      "from": "version",
+      "to": "technical-version",
+      "sources": [
+        "src/data/catalog/types.ts (CatalogModelCardTrim.kind)"
+      ],
+      "verify": "confirmed: src/data/catalog/types.ts line 166 allows only \"technical-version\" | \"engine-version\""
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "p50 generations[0].from",
+      "values": {
+        "en.wikipedia (oldid 1381929784)": 1957,
+        "card (series production per de.wikipedia)": 1958
+      },
+      "kept": 1958
+    }
+  ],
+  "openQuestions": [
+    "Make has no Wikidata inception/dissolution (Q153681 is a brand item); years above come from en.wikipedia.",
+    "needsReview entries use \"noteCs\" instead of types.ts \"reason\"; same in most card files, not normalised here."
+  ],
+  "summary": "Trabant cards were already well sourced; only fix was the trim kind \"version\" (not a types.ts value) → \"technical-version\" on 19 trims. Make entry lacks status/years and 601 S is a duplicate model entry."
+}

@@ -1,0 +1,156 @@
+{
+  "make": "marussia-motors",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "b1",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "b2",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "b1",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    },
+    {
+      "file": "model-line-additions",
+      "slug": "b2",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "f2",
+      "reason": "Crossover F2 byl jen koncept (Moskva, květen 2010), postaven v jediném exempláři.",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors describes F2 as a prototype shown 2 May 2010; the planned Valmet run of 300 is not confirmed"
+    },
+    {
+      "file": "models-auto",
+      "slug": "b-series",
+      "reason": "Souhrnná položka řady B (B1 + B2) – duplicita k b1 a k řadě b2.",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Marussia_B-Series&oldid=1380054080"
+      ],
+      "verify": "confirmed: umbrella for B1+B2, which are separate entries; https://en.wikipedia.org/wiki/Marussia_Motors treats B1 and B2 as the two models"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "B2",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "kupe"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Marussia_B-Series&oldid=1380054080"
+      ],
+      "note": "Je v model-lines-auto, ale chybí v models-auto (tam jen b-series a b1).",
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (B2 shown at Frankfurt 2009, about 28 built)"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "b1",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    },
+    {
+      "lineSlug": "b2",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q647737",
+        "https://ru.wikipedia.org/wiki/Marussia_Motors"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (company disbanded April 2014, infobox defunct 2014); Wikidata Q647737 P576 2014"
+    },
+    {
+      "lineSlug": "b1",
+      "path": "summaryCs",
+      "from": "B1 je dvoumístné sportovní kupé představené Marussií v roce2008. Dochované vozy a dobové zprávy dokládají stavbu automobilů, ale přesný rozsah zákaznické sériové výroby zůstává nejasný.",
+      "to": "B1 je dvoumístné sportovní kupé ruské značky Marussia představené v roce 2008. Dochované vozy a dobové zprávy dokládají stavbu automobilů, ale rozsah zákaznické výroby zůstává nejasný: podle ruské Wikipedie vznikly jen jednotky sériových vozů a značka zanikla bankrotem v dubnu 2014.",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Marussia_Motors",
+        "https://www.wikidata.org/wiki/Q647737"
+      ],
+      "verify": "confirmed (attributed claim): end April 2014 per https://en.wikipedia.org/wiki/Marussia_Motors. Note en Wikipedia gives 48 cars built in total, about 20 of them B1, so \"only a handful of series cars\" is the low ru-Wikipedia figure; the text attributes it to ru Wikipedia"
+    },
+    {
+      "lineSlug": "b2",
+      "path": "summaryCs",
+      "from": "B2 je jinak karosované sportovní kupé příbuzné modelu B1. Plánovaná výroba ve finském Valmetu není v této kartě vydávána za potvrzené uskutečněné dodávky.",
+      "to": "B2 je jinak karosované sportovní kupé příbuzné modelu B1. Plánovaná výroba ve finském Valmetu není v této kartě vydávána za potvrzené dodávky; značka Marussia zanikla bankrotem v dubnu 2014.",
+      "sources": [
+        "https://ru.wikipedia.org/wiki/Marussia_Motors",
+        "https://www.wikidata.org/wiki/Q647737"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Marussia_Motors (500 units only scheduled, about 28 B2 by subtraction; disbanded April 2014)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "B1/B2 výroba a počet kusů",
+      "values": {
+        "en Wikipedie": "B1 2008–2015, B2 2009–2015, B2 500 kusů",
+        "ru Wikipedie": "4–5 sériových vozů, 3 registrované, bankrot 8. 4. 2014"
+      },
+      "kept": "from/to null, status ended"
+    }
+  ],
+  "openQuestions": [
+    "Výkon a typ motoru sériových vozů (Nissan VQ35 3.5 V6 vs. Cosworth 2.8 turbo) nejsou spolehlivě doloženy; trim B2 v kartě (technická prezentace 2012) ponechán beze změny."
+  ],
+  "summary": "Karty B1 a B2: productionStatus unknown → ended (značka zanikla bankrotem v dubnu 2014), opraveny souhrny; navrženo odstranit koncept F2 a duplicitní b-series."
+}

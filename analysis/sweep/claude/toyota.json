@@ -1,0 +1,649 @@
+{
+  "make": "toyota",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "aygo",
+      "field": "from",
+      "from": null,
+      "to": 2005,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Toyota_Aygo&oldid=1381912445"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Toyota_Aygo (Bauzeit ab 2005)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "aygo",
+      "field": "to",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Toyota_Aygo&oldid=1381912445"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia oldid 1381912445 infobox 'May 2014 - February 2022'; de.wikipedia Toyota_Aygo gives Bauzeit 2014-2021 (engine table to 11/2021), conflict logged"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "aygo",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Toyota_Aygo&oldid=1381912445"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: replaced by Aygo X in 2022, https://de.wikipedia.org/wiki/Toyota_Aygo"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "auris",
+      "field": "to",
+      "from": 2020,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Auris"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: en.wikipedia Toyota_Auris E180 infobox 'August 2012 - December 2018'; the line's own generations end at 2018. The en top infobox run to July 2020 comes from the Auris name on E210 outside Europe, which this line does not cover"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "avensis",
+      "field": "bodyTypes",
+      "from": [
+        "hatchback",
+        "sedan",
+        "kombi"
+      ],
+      "to": [
+        "liftback",
+        "sedan",
+        "kombi"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Avensis"
+      ],
+      "confidence": "high",
+      "verify": "rejected: model-lines-auto bodyTypes are CatalogBody (src/data/catalog/types.ts line 3), which has no 'liftback'; the value would fail the type. Keep ['hatchback','sedan','kombi'] (hatchback is the CatalogBody used for liftbacks)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "celica",
+      "field": "bodyTypes",
+      "from": [
+        "kupe"
+      ],
+      "to": [
+        "kupe",
+        "liftback",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Celica"
+      ],
+      "confidence": "high",
+      "verify": "rejected as stated: model-lines-auto bodyTypes are CatalogBody (src/data/catalog/types.ts line 3), which has no 'liftback'; the value would fail the type. Use ['kupe','hatchback','kabriolet'] instead (kabriolet is right: Celica convertibles in gen 3-6, https://de.wikipedia.org/wiki/Toyota_Celica)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "prius",
+      "field": "bodyTypes",
+      "from": [
+        "hatchback"
+      ],
+      "to": [
+        "liftback",
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Prius"
+      ],
+      "confidence": "high",
+      "verify": "rejected as stated: model-lines-auto bodyTypes are CatalogBody (src/data/catalog/types.ts line 3), which has no 'liftback'; the value would fail the type. Use ['hatchback','sedan'] (gen 1 NHW10/11 was a sedan, https://de.wikipedia.org/wiki/Toyota_Prius)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "picnic",
+      "field": "from",
+      "from": null,
+      "to": 1996,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Picnic"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "picnic",
+      "field": "to",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Picnic"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "picnic",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Picnic"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace",
+      "field": "from",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace-city",
+      "field": "from",
+      "from": null,
+      "to": 2019,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce_City"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace-city",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce_City"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace-city",
+      "field": "bodyTypes",
+      "from": [],
+      "to": [
+        "dodavka",
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce_City"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace-max",
+      "field": "from",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce_Max"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "proace-max",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_ProAce_Max"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "urban-cruiser",
+      "field": "from",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Urban_Cruiser"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "urban-cruiser",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Urban_Cruiser"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "verso-s",
+      "field": "from",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381891947"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Toyota_Verso-S (Bauzeit ab Herbst 2010)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "verso-s",
+      "field": "to",
+      "from": null,
+      "to": 2017,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381891947"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed with doubt, confidence lowered to medium: en oldid 1381891947 gives European production to December 2017, but https://de.wikipedia.org/wiki/Toyota_Verso-S says Toyota withdrew it from the market at the end of 2015 and cars-data.com gives 2010-2016; conflict logged"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "verso-s",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381891947"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: https://de.wikipedia.org/wiki/Toyota_Verso-S"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "yaris-cross",
+      "field": "from",
+      "from": null,
+      "to": 2020,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "yaris-cross",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross",
+        "https://www.carscoops.com/2026/04/toyota-yaris-cross-facelift/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "starlet",
+      "field": "to",
+      "from": 1999,
+      "to": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Starlet"
+      ],
+      "confidence": "low",
+      "verify": "rejected: the line has productionStatus 'ended' and to=null would contradict types.ts ('null means current only if productionStatus=current'). The only later Starlet (2020-) is a Suzuki Baleno rebadge sold in Africa, not the European P60-P90 line; keep 1999 (https://de.wikipedia.org/wiki/Toyota_Starlet)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "concept-vehicles-1935-1969",
+      "reason": "Wikidata list of concept vehicles, not a model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12217486"
+      ],
+      "verify": "confirmed: list article, not a model; note the cited source is wrong for most of them, the entry's own qid is Q7830918 (models-auto.json)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-vehicles-1970-1979",
+      "reason": "Wikidata list of concept vehicles, not a model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12217486"
+      ],
+      "verify": "confirmed: list article, not a model; note the cited source is wrong for most of them, the entry's own qid is Q12217486 (models-auto.json)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-vehicles-1980-1989",
+      "reason": "Wikidata list of concept vehicles, not a model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12217486"
+      ],
+      "verify": "confirmed: list article, not a model; note the cited source is wrong for most of them, the entry's own qid is Q7830915 (models-auto.json)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-vehicles-1990-1999",
+      "reason": "Wikidata list of concept vehicles, not a model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12217486"
+      ],
+      "verify": "confirmed: list article, not a model; note the cited source is wrong for most of them, the entry's own qid is Q7830917 (models-auto.json)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "concept-vehicles-2000-2009-a-bat",
+      "reason": "Wikidata list of concept vehicles, not a model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12217486"
+      ],
+      "verify": "confirmed: list article, not a model; note the cited source is wrong for most of them, the entry's own qid is Q2352340 (models-auto.json)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "gr-hv-sports-concept",
+      "reason": "concept car (Tokyo Motor Show 2017), never produced",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q42850356"
+      ],
+      "verify": "confirmed (not independently re-sourced): name marks it a concept, Wikidata Q42850356"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tj-cruiser-concept",
+      "reason": "concept car (Tokyo Motor Show 2017), never produced",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q42850342"
+      ],
+      "verify": "confirmed (not independently re-sourced): name marks it a concept, Wikidata Q42850342"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fine-n",
+      "reason": "fuel-cell concept car, never produced",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q1564920"
+      ],
+      "verify": "confirmed (not independently re-sourced): fuel-cell concept, Wikidata Q1564920"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tmg-ev-p001",
+      "reason": "TMG electric record/race prototype, not a road model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7670733"
+      ],
+      "verify": "confirmed (not independently re-sourced): TMG electric race prototype, Wikidata Q7670733"
+    },
+    {
+      "file": "models-auto",
+      "slug": "sportivo-coupe",
+      "reason": "one-off concept, not a production model",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7830872"
+      ],
+      "verify": "confirmed: 2004 Melbourne Motor Show one-off concept, https://en.wikipedia.org/wiki/Toyota_Sportivo_Coupe and https://autotrader.co.nz/car-reviews/2004-toyota-sportivo-concept (Wikidata only says 'car model')"
+    },
+    {
+      "file": "models-auto",
+      "slug": "bx",
+      "reason": "Toyota BX is a truck, not a passenger car for the auto section",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7830751"
+      ],
+      "verify": "confirmed: https://www.wikidata.org/wiki/Q7830751 image is a 1951 Toyota Model BX truck"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fa",
+      "reason": "Toyota FA is a truck, not a passenger car for the auto section",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q24869868"
+      ],
+      "verify": "confirmed: https://www.wikidata.org/wiki/Q24869868 Commons category Toyota DA/FA100, image a flatbed truck; ja.wikipedia title is the DA truck article"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Avensis Verso",
+      "from": 2001,
+      "to": 2009,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Ipsum",
+        "https://www.wikidata.org/wiki/Q14552566"
+      ],
+      "note": "in models-auto (avensis-verso) but no line in model-lines-auto; common used car in CZ"
+    },
+    {
+      "name": "Yaris Verso",
+      "from": 1999,
+      "to": 2005,
+      "bodyTypes": [
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Yaris_Verso",
+        "https://www.wikidata.org/wiki/Q2064620"
+      ],
+      "note": "in models-auto but no line"
+    },
+    {
+      "name": "GR Yaris",
+      "from": 2020,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_GR_Yaris",
+        "https://www.wikidata.org/wiki/Q96335350"
+      ],
+      "note": "sold in Europe; in models-auto but no line",
+      "verify": "confirmed: in models-auto (gr-yaris, Q96335350) with no line; sold in Europe since 2020"
+    },
+    {
+      "name": "Corolla Cross",
+      "from": 2020,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Corolla_Cross",
+        "https://www.wikidata.org/wiki/Q97094785"
+      ],
+      "note": "sold in Europe since 2022; in models-auto but no line",
+      "verify": "confirmed: in models-auto (corolla-cross, Q97094785) with no line"
+    },
+    {
+      "name": "Hiace",
+      "from": 1967,
+      "to": null,
+      "bodyTypes": [
+        "dodavka",
+        "mpv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_HiAce"
+      ],
+      "note": "European HiAce (H100/H200) common used import; in models-auto but no line",
+      "verify": "confirmed: in models-auto (hiace, Q981209) with no line"
+    },
+    {
+      "name": "C-HR+",
+      "from": 2025,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://evfleetworld.co.uk/toyota-c-hr-debuted-as-all-new-fully-electric-suv",
+        "https://ecomento.de/2025/10/15/toyota-c-hr-startet-anfang-2026-in-deutschland/"
+      ],
+      "note": "BEV revealed March 2025, European deliveries from Q1 2026; not in models-auto at all",
+      "verify": "confirmed: not in models-auto (no c-hr-plus slug); European BEV, https://ecomento.de/2025/10/15/toyota-c-hr-startet-anfang-2026-in-deutschland/"
+    },
+    {
+      "name": "Land Cruiser FJ",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Toyota_Land_Cruiser_FJ"
+      ],
+      "note": "revealed Oct 2025; check European availability before adding",
+      "verify": "rejected as a missing model: it is already in models-auto (slug land-cruiser-fj, Q136545775); only a line could be added, and the sweeper's own note says European availability is unconfirmed, so no line yet"
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "aygo",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2022,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Toyota_Aygo&oldid=1381912445"
+      ],
+      "verify": "confirmed: en.wikipedia oldid 1381912445 infobox 'May 2014 - February 2022'; de.wikipedia Toyota_Aygo gives Bauzeit 2014-2021 (engine table to 11/2021), conflict logged"
+    },
+    {
+      "lineSlug": "corolla-verso",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2009,
+      "sources": [
+        "https://de.wikipedia.org/wiki/Toyota_Corolla_Verso",
+        "https://en.wikipedia.org/wiki/Toyota_Corolla_Verso"
+      ],
+      "verify": "confirmed: en.wikipedia Toyota_Corolla_Verso header infobox gives 2001-2009 and the 'February 2010' lead claim is marked citation needed; successor Toyota Verso launched 2009 (https://en.wikipedia.org/wiki/Toyota_Verso)"
+    },
+    {
+      "lineSlug": "corolla-verso",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": "[2007/2007]",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Toyota_Corolla_Verso",
+        "https://en.wikipedia.org/wiki/Toyota_Corolla_Verso"
+      ],
+      "verify": "confirmed: en.wikipedia Toyota_Corolla_Verso cites 'Toyota Corolla Verso Facelift Revealed' dated 2 May 2007 and shows facelift photos"
+    },
+    {
+      "lineSlug": "land-cruiser",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 1997,
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381034072",
+        "https://en.wikipedia.org/wiki/Toyota_Land_Cruiser_(J80)"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Toyota_Land_Cruiser_(J80) history: Japanese production ended 1997, J100 introduced January 1998; Venezuela to 2007 is in marketNotesCs"
+    },
+    {
+      "lineSlug": "iq",
+      "path": "generations[0].code",
+      "from": null,
+      "to": "AJ10",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?title=Toyota_iQ&oldid=1373272855"
+      ],
+      "verify": "confirmed: https://en.wikipedia.org/wiki/Toyota_iQ infobox 'Model code AJ10' (chassis KGJ10/NGJ10/NUJ10)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "src/data/model-cards/toyota.json land-cruiser generations[1] (J80).to",
+      "values": {
+        "en.wikipedia (Japan production)": 1997,
+        "en.wikipedia (Venezuela assembly)": 2007
+      },
+      "kept": 1997
+    },
+    {
+      "where": "src/data/model-cards/toyota.json corolla-verso generations[1] (AR10).to",
+      "values": {
+        "de.wikipedia (production end March 2009)": 2009,
+        "en.wikipedia body text (February 2010, citation needed)": 2010
+      },
+      "kept": 2009
+    },
+    {
+      "where": "corolla-verso generation split",
+      "values": {
+        "de.wikipedia (2004 car = facelift of E120N, one generation)": 1,
+        "en.wikipedia and card (separate AR10 generation)": 2
+      },
+      "kept": 2
+    },
+    {
+      "where": "auris end year",
+      "values": {
+        "model-lines-auto": 2020,
+        "card E180": 2018
+      },
+      "kept": 2018
+    },
+    {
+      "where": "src/data/catalog/model-cards/toyota.json (older copy) vs src/data/model-cards/toyota.json",
+      "values": {
+        "older copy lines": "2000gt aa ab ac ae ba corona cressida crown master masterline publica sa sb sd sf sh sports-800 super-rh",
+        "site copy lines": "36 other lines"
+      },
+      "kept": "no overlapping lines, so no value conflicts; older copy left unedited"
+    },
+    {
+      "where": "src/data/model-cards/toyota.json aygo generations[1] (AB40).to",
+      "values": {
+        "en.wikipedia oldid 1381912445 (February 2022)": 2022,
+        "de.wikipedia Toyota_Aygo (Bauzeit to 2021, 11/2021)": 2021
+      },
+      "kept": 2022
+    },
+    {
+      "where": "model-lines-auto verso-s.to",
+      "values": {
+        "en.wikipedia Ractis oldid 1381891947 (EU production to Dec 2017)": 2017,
+        "de.wikipedia Toyota_Verso-S (withdrawn end 2015)": 2015,
+        "cars-data.com": 2016
+      },
+      "kept": 2017
+    }
+  ],
+  "openQuestions": [
+    "hilux gen VIII (AN110/AN120/AN130): kept productionStatus unknown, to null. Gen IX launched in Thailand Nov 2025, but no source dates the end of gen VIII production in all markets.",
+    "highlander XU70: kept current; US build runs to December 2026. An all-electric 2027 Highlander was revealed Feb 2026 with production delayed into 2027. Add it as gen V once it is built.",
+    "gr86 ZN8: kept current (still built for non-EU markets). EU sales ended in 2024 because of GSR2, and marketNotesCs already says so.",
+    "verso-s facelift 2015 rests only on auto-data.net; the Japanese Ractis facelift was in 2014. Not changed.",
+    "Older copy src/data/catalog/model-cards/toyota.json: cressida gen 2 to=null (European X60 ended 1984), publica UP10 to=null and corona RT56 to=null could be filled. Not changed because the task says to leave that copy.",
+    "models-auto holds about 70 generation-level entries (camry-xv10..xv80, corolla-e10..e210, yaris-xp10..xp210, mr2-w10..w30 etc.) that duplicate line plus generation. Decide globally whether such entries belong in models-auto.",
+    "Commons photos: 120 generation photos are all visualReview pending. Spot-checked 5 ambiguous file names (2g Camry = XV10, Land Cruiser 2012 = J100, Corolla Sedan = E150 Europe, Camry Front = XV40, Supra 31450712828 = A60) and all match. The rest were not reviewed because the Commons API rate-limited this run."
+  ],
+  "summary": "Toyota site cards (36 lines, 489 trims) were largely accurate. Fixed 3 ended generations that had no end year (Aygo II to 2022, Corolla Verso II to 2009, Land Cruiser J80 to 1997), added the 2007 Corolla Verso facelift and the iQ code AJ10. Proposed 25 line fixes, 12 removals and 7 missing lines (Avensis Verso, Yaris Verso, GR Yaris, Corolla Cross, Hiace, C-HR+, Land Cruiser FJ)."
+}

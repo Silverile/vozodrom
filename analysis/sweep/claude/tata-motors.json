@@ -1,0 +1,306 @@
+{
+  "make": "tata-motors",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "qid",
+      "from": "Q188514",
+      "to": "Q7687819",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q188514",
+        "https://www.wikidata.org/wiki/Q7687819",
+        "https://en.wikipedia.org/wiki/Tata_Motors"
+      ],
+      "confidence": "high",
+      "note": "Since the demerger of 1 Oct 2025, Q188514 is the commercial-vehicle company (ex TML Commercial Vehicles, incorporated 23 Jun 2024). The car business is Tata Motors Passenger Vehicles (Q7687819). Q188514 could move to relatedQids.",
+      "verify": "confirmed: Wikidata Q188514 is now 'Tata Motors Limited, Indian multinational commercial vehicle manufacturer', inception 23 Jun 2024, P155 follows Q7687819; Q7687819 = Tata Motors Passenger Vehicles, automobile manufacturer (wikidata Special:EntityData both)"
+    },
+    {
+      "field": "foundedYear",
+      "from": 2024,
+      "to": 1945,
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7687819",
+        "https://en.wikipedia.org/wiki/Tata_Motors_Passenger_Vehicles"
+      ],
+      "confidence": "high",
+      "note": "2024 is the inception of the demerged truck company. The car maker (TELCO) dates from 1 Sep 1945; its first passenger car was the Sierra in 1991.",
+      "verify": "confirmed: Q7687819 P571 = 1 Sep 1945; en.wikipedia Tata_Motors_Passenger_Vehicles infobox founded 1 September 1945"
+    },
+    {
+      "field": "aliases",
+      "from": [
+        "Tata Motors Limited"
+      ],
+      "to": [
+        "Tata",
+        "Tata Motors Passenger Vehicles",
+        "TELCO",
+        "Tata Motors Limited"
+      ],
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7687819"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (medium): Q7687819 official name 'Tata Motors Passenger Vehicles'; en.wikipedia TMPV says the firm was Tata Motors Limited 2003-2025 and TELCO earlier"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "tata-indica",
+      "field": "productionStart/productionEnd",
+      "from": [
+        null,
+        null
+      ],
+      "to": [
+        1998,
+        2018
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Indica"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia Tata_Motors_Passenger_Vehicles former-models table 1998-2018; Tata_Indica lead 'discontinued in April 2018'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-sierra",
+      "field": "inceptionYear",
+      "from": 1979,
+      "to": 1991,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Sierra"
+      ],
+      "confidence": "medium",
+      "note": "The model was launched in 1991. The 1979 date is not supported by any source found.",
+      "verify": "confirmed: en.wikipedia Tata_Sierra 'The first-generation Sierra was launched in 1991', no 1979 date anywhere; TMPV history caption 1991-2000"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-tigor",
+      "field": "aliases",
+      "from": [],
+      "to": [
+        "Aeris"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Tigor",
+        "https://www.autocarpro.in/news/tata-tigor-facelift-to-debut-as-aeris-on-september-25-134824"
+      ],
+      "confidence": "high",
+      "note": "The third facelift was launched as the Tata Aeris on 25 Sep 2026, retiring the Tigor name.",
+      "verify": "confirmed: en.wikipedia Tata_Tigor 'launched the third facelift of the Tigor as the Tata Aeris in India on 25 September 2026'"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "tamo-racemo",
+      "reason": "Concept car from the TaMo sub-brand (Geneva 2017). Never sold.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q29578335"
+      ],
+      "verify": "confirmed: en.wikipedia TaMo_Racemo infobox 'Production 2017 (Cancelled)', TaMo project cancelled"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-pixel",
+      "reason": "Concept car (Geneva 2011). Never produced.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q4112838"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Motors_Passenger_Vehicles lists Pixel (2011) only among concepts, no production model linked"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-onecat",
+      "reason": "Compressed-air car prototype (MDI licence). Never produced.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q959547"
+      ],
+      "verify": "confirmed: appears only in the concept-models list of en.wikipedia Tata_Motors_Passenger_Vehicles; never produced"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-xover",
+      "reason": "Concept car (Geneva 2005).",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q2395402"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Motors_Passenger_Vehicles concept list (Xover, 2005), no production"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-cliffrider",
+      "reason": "Concept car. No series production found.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7687798"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Cliffrider describes it only as a concept car (Geneva 2006); TMPV concept list"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-407",
+      "reason": "Light truck, not a car.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7687786"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_407 'light commercial vehicle ... pickup truck body style'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-lpt-613",
+      "reason": "Medium truck, not a car.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q12072602"
+      ],
+      "verify": "confirmed: LPT is Tata's truck range (Wikidata Q12072602 truck model); belongs to the CV company after the demerger"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-lpta",
+      "reason": "Military/off-road truck series, not a car.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q55634725"
+      ],
+      "verify": "confirmed: LPTA is the military/off-road truck range (Wikidata Q55634725); not a car"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-ace-zip",
+      "reason": "Mini truck (Ace family). This belongs in a commercial section, not 'auto'.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q7687788"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Ace 'micro truck', 600 kg payload; passenger derivative is the separately listed Magic Iris"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-super-ace",
+      "reason": "Mini truck (Ace family). This belongs in a commercial section, not 'auto'.",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q16058028"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Ace '1-ton diesel mini truck'"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-sierra-ev",
+      "reason": "Duplicate of tata-sierra. The Sierra.ev (launched 30 Jun 2026) is a powertrain of the second-generation Sierra and is covered in the sierra card.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Sierra"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Sierra describes the EV as 'the electric variant of the Sierra' in the second-generation section"
+    },
+    {
+      "file": "models-auto",
+      "slug": "tata-indica-vista",
+      "reason": "Duplicate of tata-indica. The Vista is the second Indica generation in the indica card.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Indica"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Indica labels the Vista as the second generation (infobox 2008-2015); the indica card holds it as generations[1]"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Tata Spacio",
+      "from": 2000,
+      "to": 2011,
+      "bodyTypes": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Motors_Passenger_Vehicles"
+      ],
+      "verify": "confirmed: en.wikipedia Tata_Motors_Passenger_Vehicles former-models table 2000-2011"
+    },
+    {
+      "name": "Tata Aeris (alias of Tigor)",
+      "from": 2026,
+      "to": null,
+      "bodyTypes": [
+        "sedan"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Tigor"
+      ],
+      "note": "Better handled as an alias of tata-tigor than as a new line."
+    },
+    {
+      "name": "Tata Yodha (alias of Xenon)",
+      "from": 2017,
+      "to": null,
+      "bodyTypes": [
+        "pickup"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Xenon"
+      ],
+      "note": "Covered as a facelift in the xenon card. Needs only an alias."
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "indica",
+      "path": "generations[0].to",
+      "from": 2008,
+      "to": 2018,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tata_Indica",
+        "https://en.wikipedia.org/wiki/Tata_Motors_Passenger_Vehicles"
+      ],
+      "note": "Indica eV2 stayed in production alongside the Vista until April 2018.",
+      "verify": "confirmed: de.wikipedia Tata_Indica heading 'Indica (V1/V2, 1998-2018)' and infobox 1998-2018; en.wikipedia Tata_Indica lead 'discontinued in April 2018' (en infobox still says 2008, internal inconsistency)"
+    },
+    {
+      "lineSlug": "nano",
+      "path": "generations[0].photo",
+      "from": "File:Durgapur Expressway 24.jpg",
+      "to": "File:2016 Mongol Rally Indian-reg Tata Nano, Barcelona, Spain (front).jpg",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Durgapur_Expressway_24.jpg",
+        "https://commons.wikimedia.org/wiki/File:2016_Mongol_Rally_Indian-reg_Tata_Nano,_Barcelona,_Spain_(front).jpg"
+      ],
+      "note": "The old file is a road scene whose description names only the expressway. The new file is a clear front view of a Nano. visualReview stays pending.",
+      "verify": "confirmed (with caveat): old file's description is only 'taken on Durgapur Expressway' though it is categorised Tata Nano, so a car-specific photo is better; new file is CC BY-SA 2.0 by Vasconium (Flickr-reviewed), category Tata Nano, front view per title. Keep visualReview pending (rally car may be modified/decorated)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "sierra generations[0].to",
+      "values": {
+        "en.wikipedia infobox": 2001,
+        "en.wikipedia body text": 2003
+      },
+      "kept": 2003
+    },
+    {
+      "where": "indica generations[1].to (Vista)",
+      "values": {
+        "en.wikipedia Tata Indica": 2015,
+        "en.wikipedia Tata Motors Passenger Vehicles": 2016
+      },
+      "kept": 2015
+    },
+    {
+      "where": "xenon productionStatus",
+      "values": {
+        "en.wikipedia Tata Xenon (unsourced 'production continues'; Yodha 2.0 2022)": "current",
+        "en.wikipedia Tata Motors Passenger Vehicles list": "2007-2018"
+      },
+      "kept": "current"
+    }
+  ],
+  "openQuestions": [
+    "Should the make be renamed from 'Tata Motors' to 'Tata', the badge on the cars? The legal company is now Tata Motors Passenger Vehicles Ltd.",
+    "The safari photo for generation II is the 2019 Geneva Buzzard show car, the European preview of the Safari II. It is not a production Safari. Is that acceptable?",
+    "Should tata-magic, tata-magic-iris and tata-winger (passenger microvans/vans) and tata-tl (Telcoline pickup, sold in Europe) stay in the 'auto' section? They were kept for now.",
+    "Has the Xenon/Yodha really ended in export markets? No dated 2026 source was found."
+  ],
+  "summary": "The make entry points at the post-demerger truck company (Q188514, founded 2024) instead of the car maker (Q7687819, founded 1945). The model list has 12 non-car or duplicate entries. In the cards, the Indica first-generation end year was fixed (2008 -> 2018) and a non-specific Nano photo was replaced. The 2026 events checked (Punch facelift Jan 2026, Tiago facelift May 2026, Tigor -> Aeris Sep 2026, Sierra.ev Jun 2026, Harrier shown in Geneva 2019 as Buzzard Sport) were already correct."
+}

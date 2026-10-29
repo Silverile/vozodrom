@@ -17,7 +17,8 @@
         "facelift": null,
         "bodyTypes": [
           "sedan",
-          "kombi"
+          "kombi",
+          "kupe"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -45,13 +46,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1380582641",
-          "https://www.wikidata.org/wiki/Q898118"
+          "https://www.wikidata.org/wiki/Q898118",
+          "https://www.audi-mediacenter.com/en/publications/more/audi-tradition-anniversary-dates-2024-1484/download"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380582641",
-      "https://www.wikidata.org/wiki/Q898118"
+      "https://www.wikidata.org/wiki/Q898118",
+      "https://www.audi-mediacenter.com/en/publications/more/audi-tradition-anniversary-dates-2024-1484/download"
     ],
     "needsReview": [
       {
@@ -141,7 +144,8 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": [
-          "sedan"
+          "sedan",
+          "kombi"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -169,13 +173,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1380582641",
-          "https://www.wikidata.org/wiki/Q758720"
+          "https://www.wikidata.org/wiki/Q758720",
+          "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380582641",
-      "https://www.wikidata.org/wiki/Q758720"
+      "https://www.wikidata.org/wiki/Q758720",
+      "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf"
     ],
     "needsReview": [
       {
@@ -1162,7 +1168,7 @@
     "name": "A3",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "A3 zahrnuje kompaktní modely několika generací. Hatchback, sedan a otevřené karoserie nejsou považovány za jednu shodnou konfiguraci.",
+    "summaryCs": "Audi A3 má čtyři konstrukční generace: 8L (1996–2003 v Evropě), 8P (2003–2013), 8V (2012–2020) a 8Y od roku 2020. Jednotlivé karoserie byly uváděny postupně; jejich technické údaje nejsou zaměnitelné.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -1277,10 +1283,20 @@
       {
         "code": "8V",
         "name": "A3 — konstrukční etapa 3",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "from": 2012,
+        "to": 2020,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2016,
+            "productionYear": 2016,
+            "note": "Modernizace světel a infotainmentu, volitelný Audi virtual cockpit; evropské uvedení v roce 2016.",
+            "sources": [
+              "https://audi.hu/en/news/details/460_audi_hungaria_the_most_popular_gyor_models_audi_a3_limousine_and/",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback",
           "sedan",
@@ -1327,16 +1343,42 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381780546"
-        ]
+          "https://en.wikipedia.org/w/index.php?oldid=1381780546",
+          "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+          ],
+          "to": [
+            "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+          ],
+          "productionStatus": [
+            "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+          ]
+        }
       },
       {
         "code": "8Y",
         "name": "A3 — konstrukční etapa 4",
         "from": 2020,
         "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "productionStatus": "current",
+        "facelift": [
+          {
+            "year": 2024,
+            "productionYear": 2024,
+            "note": "Modernizace designu, denního svícení a výbavy; přibyla varianta allstreet.",
+            "sources": [
+              "https://www.audi.com/en/press-releases/in-top-form-the-audi-a3-and-new-a3-allstreet-15917",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback",
           "sedan"
@@ -1382,13 +1424,23 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381780546"
-        ]
+          "https://en.wikipedia.org/w/index.php?oldid=1381780546",
+          "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381780546",
-      "https://www.wikidata.org/wiki/Q161880"
+      "https://www.wikidata.org/wiki/Q161880",
+      "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/"
     ],
     "needsReview": [
       {
@@ -1500,18 +1552,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1561,10 +1601,6 @@
       },
       {
         "field": "generations[3].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1800,7 +1836,7 @@
       {
         "code": "8K",
         "name": "A4 — konstrukční etapa 4",
-        "from": 2008,
+        "from": 2007,
         "to": 2016,
         "productionStatus": "ended",
         "facelift": null,
@@ -1849,8 +1885,16 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1371883197"
-        ]
+          "https://en.wikipedia.org/w/index.php?oldid=1371883197",
+          "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
+            "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE"
+          ]
+        }
       },
       {
         "code": "8W",
@@ -1910,7 +1954,9 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1371883197",
-      "https://www.wikidata.org/wiki/Q758729"
+      "https://www.wikidata.org/wiki/Q758729",
+      "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE"
     ],
     "needsReview": [
       {
@@ -3962,11 +4008,11 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "8G",
         "name": "Cabriolet",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1991,
+        "to": 2000,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -3997,29 +4043,21 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1361602428",
-          "https://www.wikidata.org/wiki/Q209235"
+          "https://www.wikidata.org/wiki/Q209235",
+          "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/cabriolet/?filter=NONE"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1361602428",
-      "https://www.wikidata.org/wiki/Q209235"
+      "https://www.wikidata.org/wiki/Q209235",
+      "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/cabriolet/?filter=NONE"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4097,7 +4135,7 @@
         "code": null,
         "name": "Coupé",
         "from": 1980,
-        "to": 2000,
+        "to": 1996,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -4129,13 +4167,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1361602428",
-          "https://www.wikidata.org/wiki/Q758760"
+          "https://www.wikidata.org/wiki/Q758760",
+          "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1361602428",
-      "https://www.wikidata.org/wiki/Q758760"
+      "https://www.wikidata.org/wiki/Q758760",
+      "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A0b71b57b-3010-4e70-b08f-745cea343727/original/as/Audi_Modells_upto_2006_EN.pdf"
     ],
     "needsReview": [
       {
@@ -5806,7 +5846,7 @@
     "name": "Q6 e-tron",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Q6 e-tron je modelovou rodinou SUV značkyAudi. Jednotlivé konstrukční etapy a příbuzné karoserie nejsou automaticky technicky shodné.",
+    "summaryCs": "Audi Q6 e-tron je elektrické SUV na platformě PPE, vyráběné v Ingolstadtu od konce roku 2023. Evropské uvedení následovalo v roce 2024. Zde je technicky rozpracována pouze vybraná zadokolka performance; její hodnoty nelze přenášet na quattro, SQ6 ani Sportback.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -5819,8 +5859,17 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 225,
+            "powerKwMax": 225,
+            "variant": "Q6 e-tron performance; bez Launch Control, krátkodobě 240 kW s Launch Control."
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5830,11 +5879,11 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "Existing source-backed catalogue",
+          "market": "Europe / Germany",
           "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Převzata konkrétní fakta z již kurátorované modelové řady a jejích uvedených zdrojů; motorizace tím nejsou nezávisle ověřeny."
+          "variant": "Q6 e-tron performance (selected technical version)",
+          "bodyType": "suv",
+          "noteCs": "Ověřena jedna technická varianta podle výrobce a testu ADAC. Souhrn motorizací je částečný; celá modelová řada není jednou shodnou specifikací."
         },
         "trunkL": null,
         "markets": [
@@ -5842,16 +5891,114 @@
         ],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": null,
-        "trims": null,
+        "trims": [
+          {
+            "name": "Q6 e-tron performance — 225 kW (bez Launch Control)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "electric",
+              "displacementCc": null,
+              "cylinders": null,
+              "powerKw": 225,
+              "torqueNm": 485,
+              "powerStandard": "Maximální výkon bez Launch Control; krátkodobě 240 kW s Launch Control."
+            },
+            "transmission": {
+              "type": "single-speed",
+              "gears": 1
+            },
+            "drive": "rwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 210,
+            "acceleration0to100s": 6.7,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe / Germany; manufacturer technical sheet cross-checked with ADAC April 2025 test",
+              "modelYear": null,
+              "noteCs": "Technická varianta bez Launch Control: 225 kW a 0–100 km/h za 6,7 s. Launch Control zvyšuje výkon na 240 kW a zkracuje čas na 6,6 s; nejde o druhý motor. Hmotnost a spotřeba ponechány null kvůli odlišné metodice či specifikaci. Datace konkrétní varianty není stanovena."
+            },
+            "sources": [
+              "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+              "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+            ],
+            "fieldSources": {
+              "engine.fuel": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "engine.powerKw": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "engine.torqueNm": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "transmission.type": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "transmission.gears": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "drive": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "topSpeedKmh": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ],
+              "acceleration0to100s": [
+                "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+                "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+              ]
+            }
+          }
+        ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1368394406",
-          "https://www.wikidata.org/wiki/Q106620903"
-        ]
+          "https://www.wikidata.org/wiki/Q106620903",
+          "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+          "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf",
+          "https://www.audi-mediacenter.com/en/press-releases/sustainable-and-flexible-production-of-the-audi-q6-e-tron-series-in-ingolstadt-15928/download"
+        ],
+        "fieldSources": {
+          "trims": [
+            "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+            "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+          ],
+          "engines": [
+            "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+            "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf"
+          ],
+          "from": [
+            "https://www.audi-mediacenter.com/en/press-releases/sustainable-and-flexible-production-of-the-audi-q6-e-tron-series-in-ingolstadt-15928/download"
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1368394406",
-      "https://www.wikidata.org/wiki/Q106620903"
+      "https://www.wikidata.org/wiki/Q106620903",
+      "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A9c01dbf7-acf4-4a26-a96a-63e986a650f4/original/as/Q6-e-tron.pdf",
+      "https://assets.adac.de/image/upload/Autodatenbank/Autotest/at6477-audi-q6-e-tron-performance/audi-q6-e-tron-performance.pdf",
+      "https://www.audi-mediacenter.com/en/press-releases/sustainable-and-flexible-production-of-the-audi-q6-e-tron-series-in-ingolstadt-15928/download"
     ],
     "needsReview": [
       {
@@ -5868,10 +6015,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5919,12 +6062,12 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "scope",
         "reason": "Částečný historický přehled; všechny motory, zvláštní série a regionální názvy nejsou rozpracovány. Null konec neznamená potvrzenou současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims",
+        "reason": "Ověřena pouze varianta performance bez Launch Control; další varianty, motory a výbavy zůstávají otevřené."
       }
     ]
   },
@@ -6936,13 +7079,16 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": "Mk1",
+        "code": "8N",
         "name": "TT — konstrukční etapa 1",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1998,
+        "to": 2006,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -6984,7 +7130,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381547063"
+          "https://en.wikipedia.org/w/index.php?oldid=1381547063",
+          "https://www.audi.com/en/press-releases/a-timeless-design-icon-the-audi-tt-turns-25-15317"
         ]
       },
       {
@@ -6994,7 +7141,10 @@
         "to": 2014,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -7036,7 +7186,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381547063"
+          "https://en.wikipedia.org/w/index.php?oldid=1381547063",
+          "https://www.audi.com/en/press-releases/a-timeless-design-icon-the-audi-tt-turns-25-15317"
         ]
       },
       {
@@ -7046,7 +7197,10 @@
         "to": 2023,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -7088,13 +7242,15 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381547063"
+          "https://en.wikipedia.org/w/index.php?oldid=1381547063",
+          "https://www.audi.com/en/press-releases/a-timeless-design-icon-the-audi-tt-turns-25-15317"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381547063",
-      "https://www.wikidata.org/wiki/Q531690"
+      "https://www.wikidata.org/wiki/Q531690",
+      "https://www.audi.com/en/press-releases/a-timeless-design-icon-the-audi-tt-turns-25-15317"
     ],
     "needsReview": [
       {
@@ -7102,19 +7258,7 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7170,10 +7314,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -7223,10 +7363,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

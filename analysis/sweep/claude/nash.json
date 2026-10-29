@@ -1,0 +1,209 @@
+{
+  "make": "nash",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "foundedYear",
+      "from": null,
+      "to": 1916,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia.org/wiki/Nash_Motors gives Gründung 1916, and the en-wiki infobox gives 11 Apr 1916"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "nash-healey",
+      "field": "from",
+      "from": null,
+      "to": 1951,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash-Healey"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: de.wikipedia.org/wiki/Nash-Healey says production began Dec 1950, with 104 cars of the 1951 first series. 1951 as model year is consistent with the other Nash lines"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "model-671",
+      "field": "from/to/productionStatus",
+      "from": [
+        null,
+        null,
+        "unknown"
+      ],
+      "to": [
+        1917,
+        1917,
+        "ended"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed (medium): en-wiki says '1917 Nash Model 671'. The de.wikipedia.org/wiki/Nash_Motors model timeline begins with the 680 in 1918, consistent with the 671 ending in 1917"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "single-six",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Nash production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "twin-ignition-six",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Nash production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "twin-ignition-eight",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Nash production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "advanced-six",
+      "field": "productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: Nash production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "ajax",
+      "reason": "Ajax was a separate Nash-built marque (1925-1926), renamed Nash Light Six; already the origin of light-standard-six line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q412232"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Nash_Motors says Ajax was introduced for MY1925 and renamed Nash Light Six in Jun 1926. It is covered as the origin of light-standard-six"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "advanced-six",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "advanced-six",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "single-six",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "twin-ignition-six",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "twin-ignition-eight",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "model-671",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash_Metropolitan"
+      ],
+      "verify": "confirmed: all Nash car production ended 25 Jun 1957 (de.wikipedia.org/wiki/Nash_Motors)"
+    },
+    {
+      "lineSlug": "nash-healey",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 1951,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nash_Motors",
+        "https://en.wikipedia.org/wiki/Nash-Healey"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Nash-Healey says production began Dec 1950 and the first series was the 1951 model year (104 built). The card's gen[0] to=1951 matches. Note that the removed null-reason recorded the Oct/Dec 1950 vs MY1951 ambiguity"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "LaFayette start",
+      "values": {
+        "LaFayette as separate Nash-built marque": 1934,
+        "Nash LaFayette (Nash badge)": 1937
+      },
+      "kept": 1934
+    }
+  ],
+  "openQuestions": [
+    "All 20 Nash lines appear identically in both model-lines-auto and model-line-additions; deduplicate.",
+    "Nash brand ended 1957 (AMC, Sept 1957) while makes.json dissolvedYear is 1954 (merger into AMC); decide which the catalogue means.",
+    "Exact end years of Single Six, Twin Ignition Six/Eight and Advanced Six (both periods) not established; left null.",
+    "Nash cards have almost no body types, engines or dimensions."
+  ],
+  "summary": "Nash cards are thin but dates check out; set 6 unknown statuses to ended and Nash-Healey start to 1951; proposed foundedYear 1916 and removing the Ajax duplicate."
+}

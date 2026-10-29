@@ -1,0 +1,405 @@
+{
+  "make": "microcar",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [
+    {
+      "field": "dissolvedYear",
+      "from": 2008,
+      "to": 2025,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)",
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: fr.wikipedia Microcar: Ligier announced end of brand in 2024, Montaigu factory closed 2025, brand discontinued 2025 https://fr.wikipedia.org/wiki/Microcar"
+    },
+    {
+      "field": "country",
+      "from": null,
+      "to": "Francie (Q142)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: fr.wikipedia Microcar 'constructeur français' https://fr.wikipedia.org/wiki/Microcar"
+    }
+  ],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "mc1",
+      "field": "from",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "virgo",
+      "field": "to",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "m-go",
+      "field": "from",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "zenn",
+      "field": "from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia ZENN production 2006-2010 (LSV ended March 2010) https://en.wikipedia.org/wiki/ZENN"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "zenn",
+      "field": "to",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "confidence": "high",
+      "verify": "confirmed: en.wikipedia ZENN 2006-2010 https://en.wikipedia.org/wiki/ZENN"
+    }
+  ],
+  "removeModels": [],
+  "missingModels": [
+    {
+      "name": "M.Go (models-auto has 0 Microcar rows)",
+      "from": 2008,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/",
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "name": "MC1",
+      "from": 2003,
+      "to": 2008,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/",
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/"
+      ]
+    },
+    {
+      "name": "MC2",
+      "from": null,
+      "to": 2008,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/",
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "name": "Virgo",
+      "from": null,
+      "to": 2004,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ]
+    },
+    {
+      "name": "Dué",
+      "from": null,
+      "to": null,
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    }
+  ],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "mc1",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2003,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ],
+      "verify": "unverified: no independent source found for MC1 start 2003 (fr.wikipedia gives no years)"
+    },
+    {
+      "lineSlug": "mc1",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/",
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "mc1",
+      "path": "summaryCs",
+      "from": "Řada MC1 patří k novějším malým vozům s vlastní karoserií. Dílčí výbavy a modernizace jsou zatím součástí stejné modelové rodiny.",
+      "to": "MC1 byla malá uzavřená voiturette (bezřidičákové vozítko) Microcar uvedená na francouzský trh v září 2003 jako nástupce modelu Virgo. Spolu s delší MC2 tvořila řadu MC, kterou od konce roku 2008 nahradil model M.Go.",
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/",
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/"
+      ]
+    },
+    {
+      "lineSlug": "mc2",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/",
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "virgo",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2004,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ],
+      "verify": "unverified: no independent source for Virgo end 2004"
+    },
+    {
+      "lineSlug": "virgo",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-muscle-la-mc1/"
+      ]
+    },
+    {
+      "lineSlug": "m-go",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://journalauto.com/constructeurs/microcar-m-go-nouveau-depart-nouvelles-ambitions/"
+      ],
+      "verify": "unverified: no independent source for M.Go start 2008"
+    },
+    {
+      "lineSlug": "zenn",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: en.wikipedia ZENN 2006-2010, based on Microcar MC2 https://en.wikipedia.org/wiki/ZENN"
+    },
+    {
+      "lineSlug": "zenn",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2010,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: en.wikipedia ZENN 2006-2010 https://en.wikipedia.org/wiki/ZENN"
+    },
+    {
+      "lineSlug": "zenn",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: en.wikipedia ZENN production ended March 2010 https://en.wikipedia.org/wiki/ZENN"
+    },
+    {
+      "lineSlug": "rj49",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "dx49",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "50",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "solea",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "spid",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "lyra",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "newstreet",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "f8c",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "m8",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "flex",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "m-go",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar"
+      ]
+    },
+    {
+      "lineSlug": "m-go",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar",
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: brand discontinued 2025 per fr.wikipedia Microcar (M.Go listed as former model) https://fr.wikipedia.org/wiki/Microcar"
+    },
+    {
+      "lineSlug": "due",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar",
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: brand and Montaigu plant ended 2025 per fr.wikipedia Microcar; Dué still listed there as current, so 'ended' applies to the Microcar-badged car https://fr.wikipedia.org/wiki/Microcar"
+    },
+    {
+      "lineSlug": "m-cross",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Microcar",
+        "https://en.wikipedia.org/wiki/Microcar_(brand)"
+      ],
+      "verify": "confirmed: as Dué; fr.wikipedia lists M.Cross as current but brand ended 2025 https://fr.wikipedia.org/wiki/Microcar"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "Ligier takeover year",
+      "values": {
+        "en.wikipedia text": 2008,
+        "en.wikipedia infobox merger": 2014
+      },
+      "kept": "2008 acquisition, 2014 absorption"
+    },
+    {
+      "where": "M8 years",
+      "values": {
+        "French listing": "2013-2016",
+        "card photo": "Paris 2012 show car"
+      },
+      "kept": "not set"
+    }
+  ],
+  "openQuestions": [
+    "Exact production years for 50, DX49, Soléa, Spid, Lyra, Newstreet, F8C, Flex, Sherpa, M8 not found in a reliable source; left null.",
+    "Sherpa is not listed on fr.wikipedia Microcar model list; may be a Ligier model."
+  ],
+  "summary": "Make dissolvedYear is wrong (brand ran under Ligier until 2025). Card lines all had status unknown; set ended for the defunct brand and dated MC1, Virgo, M.Go and ZENN."
+}

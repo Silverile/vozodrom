@@ -1822,7 +1822,7 @@
     "name": "F",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG F patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MGF byl dvoumístný roadster s motorem uprostřed a odpružením Hydragas, vyráběný firmou Rover v letech 1995 až 2002 s motory řady K 1,6 a 1,8 l. V roce 2002 jej nahradil modernizovaný MG TF.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -1830,7 +1830,7 @@
         "name": "F – výrobní rodina",
         "from": 1995,
         "to": 2002,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -1876,7 +1876,12 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373994500",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3821,7 +3826,7 @@
     "name": "Maestro",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG Maestro patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG Maestro byla sportovní verze hatchbacku Austin Maestro, vyráběná v letech 1983 až 1991 s motory 1,6 a 2,0 l, na konci výroby i jako Maestro Turbo.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -3829,7 +3834,7 @@
         "name": "Maestro – výrobní rodina",
         "from": 1983,
         "to": 1991,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
@@ -3858,7 +3863,12 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381527904"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381527904"
+          ]
+        }
       }
     ],
     "sources": [
@@ -4053,8 +4063,8 @@
         "code": "Mark IV",
         "name": "Mark IV",
         "from": 1961,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1968,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -4083,7 +4093,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/MG_Magnette"
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/wiki/MG_Magnette"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/MG_Magnette"
+          ]
+        }
       }
     ],
     "sources": [
@@ -4331,7 +4349,7 @@
     "name": "Marvel R",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG Marvel R patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG Marvel R Electric bylo elektrické SUV příbuzné Roewe Marvel X, prodávané v Evropě od roku 2021 se zadním pohonem nebo jako Performance s pohonem všech kol.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -4339,7 +4357,7 @@
         "name": "Marvel R – výrobní rodina",
         "from": 2021,
         "to": 2026,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -4369,7 +4387,12 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373871620",
           "https://www.wikidata.org/wiki/Q112180436"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373871620"
+          ]
+        }
       }
     ],
     "sources": [
@@ -4452,21 +4475,30 @@
     "name": "Metro",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG Metro patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG Metro byl sportovnější verze malého hatchbacku Austin Metro, vyráběná v letech 1982 až 1990 s motorem 1,3 l (54 kW) a od roku 1983 i jako Metro Turbo (69 kW). V roce 1990 byl vůz přejmenován na Rover Metro a označení MG z něj zmizelo.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": null,
         "name": "Metro – výrobní rodina",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1982,
+        "to": 1990,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1275,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 54,
+            "powerKwMax": 69,
+            "variant": "1.3 R4 (MG 1300 a MG Turbo)"
+          }
+        ],
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4488,12 +4520,38 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1380371501"
-        ]
+          "https://en.wikipedia.org/w/index.php?oldid=1380371501",
+          "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+          "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+          "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+            "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+            "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+          ],
+          "to": [
+            "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+            "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+            "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+            "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+            "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
+          ],
+          "engines": [
+            "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501"
+          ]
+        }
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/w/index.php?oldid=1380371501"
+      "https://en.wikipedia.org/w/index.php?oldid=1380371501",
+      "https://en.wikipedia.org/w/index.php?title=Austin_Metro&oldid=1380371501",
+      "https://classics.honestjohn.co.uk/reviews/mg/metrometro-turbo/",
+      "https://www.mgcc.co.uk/articles/the-mg-metro-is-25-this-year"
     ],
     "needsReview": [
       {
@@ -7532,7 +7590,7 @@
     "name": "Montego",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG Montego patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG Montego byla sportovní verze sedanu Austin Montego, vyráběná v letech 1985 až 1991 s dvoulitrovým motorem se vstřikováním a také jako Montego Turbo.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -7540,7 +7598,7 @@
         "name": "Montego – výrobní rodina",
         "from": 1985,
         "to": 1991,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -7569,7 +7627,12 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373434632"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373434632"
+          ]
+        }
       }
     ],
     "sources": [
@@ -8008,7 +8071,7 @@
     "name": "RV8",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG RV8 patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG RV8 byl roadster z let 1992 až 1995 s upravenou karoserií MGB a hliníkovým osmiválcem Rover 3,9 l. Vznikl v malé sérii a velká část produkce šla do Japonska.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -8016,7 +8079,7 @@
         "name": "RV8 – výrobní rodina",
         "from": 1992,
         "to": 1995,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -8046,7 +8109,12 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373823043",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373823043"
+          ]
+        }
       }
     ],
     "sources": [
@@ -8771,7 +8839,7 @@
         "name": "TF – výrobní rodina",
         "from": 2002,
         "to": 2005,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -8992,14 +9060,19 @@
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
           "https://www.wikidata.org/wiki/Q1816606",
           "https://www.mgfcar.de/mgtf/index1.htm"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+          ]
+        }
       },
       {
         "code": null,
         "name": "TF – výrobní rodina",
         "from": 2007,
         "to": 2011,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kabriolet"
@@ -9030,7 +9103,12 @@
           "https://en.wikipedia.org/w/index.php?oldid=1373994500",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
           "https://www.wikidata.org/wiki/Q1816606"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373994500"
+          ]
+        }
       }
     ],
     "sources": [
@@ -9773,7 +9851,7 @@
     "name": "XPower SV",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG XPower SV patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG XPower SV bylo sportovní kupé z let 2003 až 2005 vycházející z italského Qvale Mangusta, s karbonovou karoserií a osmiválcem Ford. Vzniklo jen malé množství kusů.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -9781,7 +9859,7 @@
         "name": "XPower SV – výrobní rodina",
         "from": 2003,
         "to": 2005,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -9811,7 +9889,12 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372238452",
           "https://www.wikidata.org/wiki/Q1881472"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1372238452"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10011,7 +10094,7 @@
     "name": "ZR",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG ZR patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG ZR byl sportovně laděný hatchback odvozený od Roveru 25, vyráběný v Longbridge v letech 2001 až 2005 do krachu MG Rover. Nabízel se se zážehovými motory řady K i se vznětovým dvoulitrem.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -10019,7 +10102,7 @@
         "name": "ZR – výrobní rodina",
         "from": 2001,
         "to": 2005,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback"
@@ -10066,7 +10149,12 @@
           "https://en.wikipedia.org/w/index.php?oldid=1372258843",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
           "https://www.wikidata.org/wiki/Q1476139"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1372258843"
+          ]
+        }
       }
     ],
     "sources": [
@@ -10925,7 +11013,7 @@
         "name": "ZS (2001–2005) – výrobní rodina",
         "from": 2001,
         "to": 2005,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "hatchback",
@@ -10957,7 +11045,12 @@
           "https://en.wikipedia.org/w/index.php?oldid=1377593992",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
           "https://www.wikidata.org/wiki/Q1543944"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377593992"
+          ]
+        }
       }
     ],
     "sources": [
@@ -11039,7 +11132,7 @@
     "name": "ZT",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "MG ZT patří do katalogu vozů značky MG. Záznam odděluje doložené výrobní rodiny a nepovažuje regionální označení za automatické potvrzení české nabídky.",
+    "summaryCs": "MG ZT byl sportovní sedan a kombi (ZT-T) odvozený od Roveru 75, vyráběný v letech 2001 až 2005. Vrcholem nabídky byla verze ZT 260 s osmiválcem Ford 4,6 l a pohonem zadních kol.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -11047,7 +11140,7 @@
         "name": "ZT – výrobní rodina",
         "from": 2001,
         "to": 2005,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan",
@@ -11095,7 +11188,12 @@
           "https://en.wikipedia.org/w/index.php?oldid=1372237327",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
           "https://www.wikidata.org/wiki/Q41859"
-        ]
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1372237327"
+          ]
+        }
       }
     ],
     "sources": [

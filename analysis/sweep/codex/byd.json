@@ -1,0 +1,2422 @@
+{
+  "make": "byd",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "atto-3",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "electric",
+          "displacementCc": null,
+          "displacementLitresNominal": null,
+          "powerKwMin": 150,
+          "powerKwMax": 150,
+          "variant": "60.48 kWh FWD — evropská specifikace 10/2022"
+        }
+      ],
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Selected European technical version only; not a worldwide engine inventory.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "generations[0].engineCoverage",
+      "from": "unknown",
+      "to": "partial",
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "One scoped European motor version is now documented.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "coverage"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "fwd"
+      ],
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Both publishers specify front-wheel drive for the scoped European versions.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "generations[0].fieldSources",
+      "from": null,
+      "to": {
+        "engines": [
+          "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+          "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+        ],
+        "drivetrains": [
+          "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+          "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+        ]
+      },
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Field-level provenance; manufacturer and independent publisher.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf",
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.byd.com/content/dam/byd-site/en-be/product/atto3/BYD%20ATTO%203.pdf",
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "atto-3",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "scope",
+          "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "scope",
+          "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+        }
+      ],
+      "sources": [
+        "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+        "https://ev-database.org/de/pkw/1782/BYD-ATTO-3"
+      ],
+      "reason": "Remove only review placeholders resolved by this pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].engines",
+      "from": null,
+      "to": [
+        {
+          "fuel": "electric",
+          "displacementCc": null,
+          "displacementLitresNominal": null,
+          "powerKwMin": 150,
+          "powerKwMax": 150,
+          "variant": "Comfort / Design 60.4 kWh — evropská specifikace 2025"
+        }
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Selected European technical version only; not a worldwide engine inventory.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].engineCoverage",
+      "from": "unknown",
+      "to": "partial",
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "One scoped European motor version is now documented.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "coverage"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].drivetrains",
+      "from": null,
+      "to": [
+        "fwd"
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Both publishers specify front-wheel drive for the scoped European versions.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].fieldSources",
+      "from": null,
+      "to": {
+        "engines": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ],
+        "drivetrains": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ]
+      },
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Field-level provenance; manufacturer and independent publisher.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[0].topSpeedKmh",
+      "from": null,
+      "to": 160,
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "MY25 Irish manufacturer guide and EV Database MY25 both state 160 km/h.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[0].fieldSources",
+      "from": {
+        "engine.powerKw": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "engine.torqueNm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "drive": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "acceleration0to100s": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeKm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionKwh100": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.length": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.width": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.height": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ]
+      },
+      "to": {
+        "engine.powerKw": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "engine.torqueNm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "drive": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "acceleration0to100s": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeKm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionKwh100": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.length": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.width": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.height": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "topSpeedKmh": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ]
+      },
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Field-level provenance; manufacturer and independent publisher.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[0].sources",
+      "from": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      ],
+      "to": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[1].topSpeedKmh",
+      "from": null,
+      "to": 160,
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "MY25 Irish manufacturer guide and EV Database MY25 both state 160 km/h.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "specification"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[1].fieldSources",
+      "from": {
+        "engine.powerKw": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "engine.torqueNm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "drive": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "acceleration0to100s": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeKm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionKwh100": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.length": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.width": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.height": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ]
+      },
+      "to": {
+        "engine.powerKw": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "engine.torqueNm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "drive": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "acceleration0to100s": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeKm": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "rangeCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionKwh100": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "consumptionCycle": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.length": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.width": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.height": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "dimensionsMm.wheelbase": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+        ],
+        "topSpeedKmh": [
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ]
+      },
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Field-level provenance; manufacturer and independent publisher.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].trims[1].sources",
+      "from": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      ],
+      "to": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "generations[0].sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "sources",
+      "from": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      ],
+      "to": [
+        "https://en.wikipedia.org/wiki/List_of_BYD_Auto_vehicles",
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Attach independently corroborated sources for this depth pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    },
+    {
+      "lineSlug": "dolphin",
+      "path": "needsReview",
+      "from": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].engines",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].drivetrains",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].topSpeedKmh",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "scope",
+          "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+        }
+      ],
+      "to": [
+        {
+          "field": "segment",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].code",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].facelift",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].transmissions",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[0].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].from",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].to",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.displacementCc",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.cylinders",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].engine.powerStandard",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].transmission.type",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].transmission.gears",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massKg",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].massBasis",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "generations[0].trims[1].consumptionL100",
+          "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        },
+        {
+          "field": "scope",
+          "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+        }
+      ],
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+      ],
+      "reason": "Remove only review placeholders resolved by this pass.",
+      "confidence": "high",
+      "pass": "DEPTH round 7",
+      "category": "metadata"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "dolphin generations[0].trunkL; EU 2025 scope",
+      "values": {
+        "Irish MY25 Q3 manufacturer guide, seats up/down": "364/1329 L",
+        "EV Database MY25 and UK manufacturer media, seats up/down": "345/1310 L"
+      },
+      "kept": 345,
+      "sources": [
+        "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+        "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh",
+        "https://bydukmedia.com/en/models/byd-dolphin.html?highlight=2025"
+      ],
+      "reason": "Unchanged prior value remains supported by independent publisher plus UK manufacturer; Irish regional specification conflicts. Regional or measurement-basis reconciliation unresolved."
+    }
+  ],
+  "openQuestions": [
+    "Manufacturer e6 taxi milestone2010 conflicts with current from2009 and distributor commercial debut2011; exact SOP remains unresolved.",
+    "Song Max/M6 EV and original M6 aggregation need distinct platform review.",
+    "Round 7: Dolphin mass remains null: manufacturer kerb mass and EV Database EU unladen mass use different conventions; no arithmetic reconciliation applied. Worldwide motor ranges, all facelift/SOP boundaries and photos remain incomplete."
+  ],
+  "summary": "Partial byd breadth pass: Automotive subsidiary founded2003; parent1995; F3 introduction2005 and F3DM2008. All local identities inventoried; only listed external checks verified, with unresolved scope and date questions retained.",
+  "localInventory": {
+    "make": {
+      "slug": "byd",
+      "name": "BYD",
+      "country": "Čína",
+      "countryQid": "Q148",
+      "countries": [
+        {
+          "qid": "Q148",
+          "name": "Čína"
+        }
+      ],
+      "qid": "Q27423",
+      "relatedQids": [],
+      "status": null,
+      "foundedYear": 2003,
+      "dissolvedYear": null,
+      "sections": [
+        "auto"
+      ],
+      "aliases": [
+        "BYD Auto"
+      ],
+      "sourceUrl": "https://www.wikidata.org/wiki/Q27423"
+    },
+    "raw": [
+      {
+        "slug": "8tt",
+        "name": "8TT"
+      },
+      {
+        "slug": "atto-2",
+        "name": "Atto 2"
+      },
+      {
+        "slug": "atto-3",
+        "name": "Atto 3"
+      },
+      {
+        "slug": "d1",
+        "name": "D1"
+      },
+      {
+        "slug": "datang",
+        "name": "Datang"
+      },
+      {
+        "slug": "destroyer-05",
+        "name": "Destroyer 05"
+      },
+      {
+        "slug": "dolphin",
+        "name": "Dolphin"
+      },
+      {
+        "slug": "dolphin-g",
+        "name": "Dolphin G"
+      },
+      {
+        "slug": "e1",
+        "name": "e1"
+      },
+      {
+        "slug": "e2",
+        "name": "e2"
+      },
+      {
+        "slug": "e3",
+        "name": "e3"
+      },
+      {
+        "slug": "e5",
+        "name": "e5"
+      },
+      {
+        "slug": "e6",
+        "name": "e6"
+      },
+      {
+        "slug": "e7",
+        "name": "e7"
+      },
+      {
+        "slug": "f0",
+        "name": "F0"
+      },
+      {
+        "slug": "f3",
+        "name": "F3"
+      },
+      {
+        "slug": "f3dm",
+        "name": "F3DM"
+      },
+      {
+        "slug": "f3r",
+        "name": "F3R"
+      },
+      {
+        "slug": "f6",
+        "name": "F6"
+      },
+      {
+        "slug": "f6dm",
+        "name": "F6DM"
+      },
+      {
+        "slug": "flyer",
+        "name": "Flyer"
+      },
+      {
+        "slug": "frigate-07",
+        "name": "Frigate 07"
+      },
+      {
+        "slug": "g3",
+        "name": "G3"
+      },
+      {
+        "slug": "g5",
+        "name": "G5"
+      },
+      {
+        "slug": "g6",
+        "name": "G6"
+      },
+      {
+        "slug": "han",
+        "name": "Han"
+      },
+      {
+        "slug": "k10mr",
+        "name": "K10MR"
+      },
+      {
+        "slug": "l3",
+        "name": "L3"
+      },
+      {
+        "slug": "m3-dm",
+        "name": "M3 DM"
+      },
+      {
+        "slug": "m6-2010",
+        "name": "M6 (2010)"
+      },
+      {
+        "slug": "qin",
+        "name": "Qin"
+      },
+      {
+        "slug": "racco",
+        "name": "Racco"
+      },
+      {
+        "slug": "s6",
+        "name": "S6"
+      },
+      {
+        "slug": "s7",
+        "name": "S7"
+      },
+      {
+        "slug": "s8",
+        "name": "S8"
+      },
+      {
+        "slug": "seagull",
+        "name": "Seagull"
+      },
+      {
+        "slug": "seal-05-dm-i",
+        "name": "Seal 05 DM-i"
+      },
+      {
+        "slug": "seal-06-dm-i",
+        "name": "Seal 06 DM-i"
+      },
+      {
+        "slug": "seal-06-ev",
+        "name": "Seal 06 EV"
+      },
+      {
+        "slug": "seal-06-gt",
+        "name": "Seal 06 GT"
+      },
+      {
+        "slug": "seal-q114414285",
+        "name": "Seal"
+      },
+      {
+        "slug": "seal-q131521697",
+        "name": "Seal"
+      },
+      {
+        "slug": "seal-u",
+        "name": "Seal U"
+      },
+      {
+        "slug": "sealion-05",
+        "name": "Sealion 05"
+      },
+      {
+        "slug": "sealion-06",
+        "name": "Sealion 06"
+      },
+      {
+        "slug": "sealion-07",
+        "name": "Sealion 07"
+      },
+      {
+        "slug": "sealion-07-dm-i",
+        "name": "Sealion 07 DM-i"
+      },
+      {
+        "slug": "shark",
+        "name": "Shark"
+      },
+      {
+        "slug": "song",
+        "name": "Song"
+      },
+      {
+        "slug": "song-l-dm-i",
+        "name": "Song L DM-i"
+      },
+      {
+        "slug": "song-max",
+        "name": "Song Max"
+      },
+      {
+        "slug": "song-pro",
+        "name": "Song Pro"
+      },
+      {
+        "slug": "su-rui",
+        "name": "Su Rui"
+      },
+      {
+        "slug": "tang",
+        "name": "Tang"
+      },
+      {
+        "slug": "xia",
+        "name": "Xia"
+      },
+      {
+        "slug": "yuan",
+        "name": "Yuan"
+      }
+    ],
+    "lines": [
+      {
+        "slug": "atto-2",
+        "name": "Atto 2 / Yuan Up"
+      },
+      {
+        "slug": "atto-3",
+        "name": "Atto 3 / Yuan Plus"
+      },
+      {
+        "slug": "d1",
+        "name": "D1"
+      },
+      {
+        "slug": "seal-5",
+        "name": "Destroyer 05 / Seal 5 DM-i"
+      },
+      {
+        "slug": "dolphin",
+        "name": "Dolphin"
+      },
+      {
+        "slug": "e1",
+        "name": "e1"
+      },
+      {
+        "slug": "e2",
+        "name": "e2"
+      },
+      {
+        "slug": "e3",
+        "name": "e3"
+      },
+      {
+        "slug": "e5",
+        "name": "e5"
+      },
+      {
+        "slug": "e6",
+        "name": "e6"
+      },
+      {
+        "slug": "f0",
+        "name": "F0"
+      },
+      {
+        "slug": "f3",
+        "name": "F3"
+      },
+      {
+        "slug": "f3dm",
+        "name": "F3DM"
+      },
+      {
+        "slug": "f3r",
+        "name": "F3R"
+      },
+      {
+        "slug": "f6",
+        "name": "F6"
+      },
+      {
+        "slug": "flyer",
+        "name": "Flyer"
+      },
+      {
+        "slug": "frigate-07",
+        "name": "Frigate 07"
+      },
+      {
+        "slug": "g3",
+        "name": "G3"
+      },
+      {
+        "slug": "g3r",
+        "name": "G3R"
+      },
+      {
+        "slug": "g5",
+        "name": "G5"
+      },
+      {
+        "slug": "g6",
+        "name": "G6 / Sirui"
+      },
+      {
+        "slug": "han",
+        "name": "Han"
+      },
+      {
+        "slug": "han-l",
+        "name": "Han L"
+      },
+      {
+        "slug": "l3",
+        "name": "L3"
+      },
+      {
+        "slug": "m6",
+        "name": "M6"
+      },
+      {
+        "slug": "qin",
+        "name": "Qin"
+      },
+      {
+        "slug": "qin-l",
+        "name": "Qin L"
+      },
+      {
+        "slug": "qin-plus",
+        "name": "Qin Plus"
+      },
+      {
+        "slug": "qin-pro",
+        "name": "Qin Pro"
+      },
+      {
+        "slug": "s2",
+        "name": "S2"
+      },
+      {
+        "slug": "s6",
+        "name": "S6"
+      },
+      {
+        "slug": "s7",
+        "name": "S7"
+      },
+      {
+        "slug": "s8",
+        "name": "S8"
+      },
+      {
+        "slug": "seagull",
+        "name": "Seagull / Dolphin Surf"
+      },
+      {
+        "slug": "seal",
+        "name": "Seal"
+      },
+      {
+        "slug": "seal-06",
+        "name": "Seal 06 DM-i"
+      },
+      {
+        "slug": "seal-06-gt",
+        "name": "Seal 06 GT"
+      },
+      {
+        "slug": "seal-07-dm-i",
+        "name": "Seal 07 DM-i"
+      },
+      {
+        "slug": "seal-u",
+        "name": "Seal U / Song Plus"
+      },
+      {
+        "slug": "sealion-7",
+        "name": "Sealion 7 / Sealion 07 EV"
+      },
+      {
+        "slug": "shark",
+        "name": "Shark / Shark 6"
+      },
+      {
+        "slug": "song",
+        "name": "Song"
+      },
+      {
+        "slug": "song-l-dm-i",
+        "name": "Song L DM-i"
+      },
+      {
+        "slug": "song-l",
+        "name": "Song L EV"
+      },
+      {
+        "slug": "song-max",
+        "name": "Song Max / M6 EV"
+      },
+      {
+        "slug": "song-pro",
+        "name": "Song Pro"
+      },
+      {
+        "slug": "surui",
+        "name": "Surui"
+      },
+      {
+        "slug": "tang",
+        "name": "Tang"
+      },
+      {
+        "slug": "tang-l",
+        "name": "Tang L"
+      },
+      {
+        "slug": "xia",
+        "name": "Xia"
+      },
+      {
+        "slug": "yuan",
+        "name": "Yuan"
+      }
+    ],
+    "additions": [
+      {
+        "slug": "atto-2",
+        "name": "Atto 2 / Yuan Up"
+      },
+      {
+        "slug": "atto-3",
+        "name": "Atto 3 / Yuan Plus"
+      },
+      {
+        "slug": "d1",
+        "name": "D1"
+      },
+      {
+        "slug": "dolphin",
+        "name": "Dolphin"
+      },
+      {
+        "slug": "e1",
+        "name": "e1"
+      },
+      {
+        "slug": "e2",
+        "name": "e2"
+      },
+      {
+        "slug": "e3",
+        "name": "e3"
+      },
+      {
+        "slug": "e5",
+        "name": "e5"
+      },
+      {
+        "slug": "e6",
+        "name": "e6"
+      },
+      {
+        "slug": "f0",
+        "name": "F0"
+      },
+      {
+        "slug": "f3",
+        "name": "F3"
+      },
+      {
+        "slug": "f3dm",
+        "name": "F3DM"
+      },
+      {
+        "slug": "f3r",
+        "name": "F3R"
+      },
+      {
+        "slug": "f6",
+        "name": "F6"
+      },
+      {
+        "slug": "flyer",
+        "name": "Flyer"
+      },
+      {
+        "slug": "frigate-07",
+        "name": "Frigate 07"
+      },
+      {
+        "slug": "g3",
+        "name": "G3"
+      },
+      {
+        "slug": "g3r",
+        "name": "G3R"
+      },
+      {
+        "slug": "g5",
+        "name": "G5"
+      },
+      {
+        "slug": "g6",
+        "name": "G6 / Sirui"
+      },
+      {
+        "slug": "han",
+        "name": "Han"
+      },
+      {
+        "slug": "han-l",
+        "name": "Han L"
+      },
+      {
+        "slug": "l3",
+        "name": "L3"
+      },
+      {
+        "slug": "m6",
+        "name": "M6"
+      },
+      {
+        "slug": "qin",
+        "name": "Qin"
+      },
+      {
+        "slug": "qin-l",
+        "name": "Qin L"
+      },
+      {
+        "slug": "qin-plus",
+        "name": "Qin Plus"
+      },
+      {
+        "slug": "qin-pro",
+        "name": "Qin Pro"
+      },
+      {
+        "slug": "s2",
+        "name": "S2"
+      },
+      {
+        "slug": "s6",
+        "name": "S6"
+      },
+      {
+        "slug": "s7",
+        "name": "S7"
+      },
+      {
+        "slug": "s8",
+        "name": "S8"
+      },
+      {
+        "slug": "seagull",
+        "name": "Seagull / Dolphin Surf"
+      },
+      {
+        "slug": "seal",
+        "name": "Seal"
+      },
+      {
+        "slug": "seal-06",
+        "name": "Seal 06 DM-i"
+      },
+      {
+        "slug": "seal-06-gt",
+        "name": "Seal 06 GT"
+      },
+      {
+        "slug": "seal-07-dm-i",
+        "name": "Seal 07 DM-i"
+      },
+      {
+        "slug": "seal-5",
+        "name": "Destroyer 05 / Seal 5 DM-i"
+      },
+      {
+        "slug": "seal-u",
+        "name": "Seal U / Song Plus"
+      },
+      {
+        "slug": "sealion-7",
+        "name": "Sealion 7 / Sealion 07 EV"
+      },
+      {
+        "slug": "shark",
+        "name": "Shark / Shark 6"
+      },
+      {
+        "slug": "song",
+        "name": "Song"
+      },
+      {
+        "slug": "song-l",
+        "name": "Song L EV"
+      },
+      {
+        "slug": "song-l-dm-i",
+        "name": "Song L DM-i"
+      },
+      {
+        "slug": "song-max",
+        "name": "Song Max / M6 EV"
+      },
+      {
+        "slug": "song-pro",
+        "name": "Song Pro"
+      },
+      {
+        "slug": "surui",
+        "name": "Surui"
+      },
+      {
+        "slug": "tang",
+        "name": "Tang"
+      },
+      {
+        "slug": "tang-l",
+        "name": "Tang L"
+      },
+      {
+        "slug": "xia",
+        "name": "Xia"
+      },
+      {
+        "slug": "yuan",
+        "name": "Yuan"
+      }
+    ],
+    "cards": [
+      {
+        "lineSlug": "atto-2",
+        "name": "Atto 2 / Yuan Up",
+        "summaryCs": "Atto2 je exportní jméno maléhoSUVYuanUp. Regionální přejmenování nevytváří samostatné duplicitní karty.",
+        "generations": [
+          {
+            "name": "Atto 2 / Yuan Up — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "atto-3",
+        "name": "Atto 3 / Yuan Plus",
+        "summaryCs": "Atto3 je evropské jméno elektrickéhoSUVYuanPlus. NovějšíEVO má odlišnou techniku pohonu a zůstává samostatně popsanou etapou.",
+        "generations": [
+          {
+            "name": "Atto3 — evropský technický list10/2022",
+            "code": null,
+            "from": 2022,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "BYD Yuan Plus CRI 08 2022 7429.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "d1",
+        "name": "D1",
+        "summaryCs": "D1 vznikl jako elektrický vůz pro sdílenou přepravu a taxislužby. Karta používá kategoriiMPV pro jeho víceúčelovou kabinu.",
+        "generations": [
+          {
+            "name": "D1 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2020,
+            "to": 2023,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "dolphin",
+        "name": "Dolphin",
+        "summaryCs": "Dolphin je elektrický pětidveřový vůz zřadyOcean. Evropské provedení má vlastní rozměrový a technický rozsah.",
+        "generations": [
+          {
+            "name": "Dolphin — vybrané evropské verze2025",
+            "code": null,
+            "from": 2021,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "2026-09-27 Hofer Herbstmarkt 2026 HOF7101 RAW-Export.png"
+          }
+        ]
+      },
+      {
+        "lineSlug": "e1",
+        "name": "e1",
+        "summaryCs": "e1 byl elektrický městský vůz konstrukčně navazující naF0. Benzinový motorF0 se na tuto verzi nevztahuje.",
+        "generations": [
+          {
+            "name": "e1 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2019,
+            "to": 2020,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "e2",
+        "name": "e2",
+        "summaryCs": "e2 tvoří elektrickou pětidveřovou řadu. Podobně znějící exportní jména jiných vozů nejsou automaticky stejným modelem.",
+        "generations": [
+          {
+            "name": "e2 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2019,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "e3",
+        "name": "e3",
+        "summaryCs": "e3 byl elektrický kompaktní sedan příbuzný hatchbackue2. Karosářské a hmotnostní údaje se proto mezi nimi nepřenášejí.",
+        "generations": [
+          {
+            "name": "e3 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2019,
+            "to": 2022,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "e5",
+        "name": "e5",
+        "summaryCs": "e5 představoval elektrický sedan původní řadye. Pozdější využití stejného čísla jinou značkou skupiny není pokračováním této karty.",
+        "generations": [
+          {
+            "name": "e5 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2015,
+            "to": 2020,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "e6",
+        "name": "e6",
+        "summaryCs": "e6 označuje elektrické víceúčelové vozy užívané také jako taxi. Souhrnná karta zatím nerozepisuje obě konstrukčně odlišné výrobní etapy.",
+        "generations": [
+          {
+            "name": "e6 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2009,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "f0",
+        "name": "F0",
+        "summaryCs": "F0 byl malý městský hatchback se spalovacím motorem. Elektrický odvozenýe1 má samostatnou modelovou identitu a časové období.",
+        "generations": [
+          {
+            "name": "F0 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2008,
+            "to": 2015,
+            "productionStatus": "ended",
+            "photoFile": "BYD F0 facelift -- Auto China -- 2014-04-23.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "f3",
+        "name": "F3",
+        "summaryCs": "F3 patřil k původním velkosériovým sedanůmBYD. Modernizovaný původní model se prodával souběžně s novějšímSurui, proto není rok jeho uvedení automaticky koncemF3.",
+        "generations": [
+          {
+            "name": "F3 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2005,
+            "to": 2021,
+            "productionStatus": "ended",
+            "photoFile": "BYD F3 3 China 2012-07-29.JPG"
+          }
+        ]
+      },
+      {
+        "lineSlug": "f3dm",
+        "name": "F3DM",
+        "summaryCs": "F3DM byl plug-in hybridní sedan odvozený odF3. Jeho hybridní soustava se neslučuje s technickými údaji běžných benzinovýchF3.",
+        "generations": [
+          {
+            "name": "F3DM — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2008,
+            "to": 2013,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "f3r",
+        "name": "F3R",
+        "summaryCs": "F3R představoval pětidveřovou karosářskou větev rodinyF3. Samostatné jméno umožňuje odlišit hatchback od sedanu v katalogu.",
+        "generations": [
+          {
+            "name": "F3R — souhrnná výrobní rodina",
+            "code": null,
+            "from": null,
+            "to": 2014,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "f6",
+        "name": "F6",
+        "summaryCs": "F6 rozšířil původní nabídkuBYD o větší sedan. PozdějšíG6 není pouhým přejmenováním každého provedeníF6.",
+        "generations": [
+          {
+            "name": "F6 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2008,
+            "to": 2012,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "flyer",
+        "name": "Flyer",
+        "summaryCs": "Flyer byl malý pětidveřový vůz převzatý po akvizici automobilky Qinchuan. Karta nezaměňuje původní Qinchuan z roku2001 s pozdějším označenímBYD.",
+        "generations": [
+          {
+            "name": "Flyer — souhrnná výrobní rodina",
+            "code": null,
+            "from": null,
+            "to": 2008,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "frigate-07",
+        "name": "Frigate 07",
+        "summaryCs": "Frigate07 byl plug-in hybridníSUV řadyOcean. Není totožný s elektrickýmSealion7.",
+        "generations": [
+          {
+            "name": "Frigate 07 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2022,
+            "to": 2025,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "g3",
+        "name": "G3",
+        "summaryCs": "G3 byl kompaktní sedan příbuznýF3. Jeho pětidveřová karoserieG3R je v katalogu oddělena.",
+        "generations": [
+          {
+            "name": "G3 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2009,
+            "to": 2014,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "g3r",
+        "name": "G3R",
+        "summaryCs": "G3R byl hatchback příbuzný sedanuG3. Výrobní začátek konkrétní karoserie není odvozen od společné souhrnné tabulky.",
+        "generations": [
+          {
+            "name": "G3R — souhrnná výrobní rodina",
+            "code": null,
+            "from": null,
+            "to": 2014,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "g5",
+        "name": "G5",
+        "summaryCs": "G5 byl kompaktní sedan z období před úplným přechodem značky k elektrifikovaným vozům. Jeho název neoznačuje generaciG3.",
+        "generations": [
+          {
+            "name": "G5 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2014,
+            "to": 2017,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "g6",
+        "name": "G6 / Sirui",
+        "summaryCs": "G6 tvořil větší sedanovou rodinuBYD. Příbuzné označeníSirui je zahrnuto zde, nikoli vedeno jako druhá kopie stejné rodiny.",
+        "generations": [
+          {
+            "name": "G6 / Sirui — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2011,
+            "to": 2018,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "han",
+        "name": "Han",
+        "summaryCs": "Han je velký sedan nabízený s různými elektrifikovanými pohony. Evropská elektrická specifikace nepokrývá všechny čínské hybridní verze.",
+        "generations": [
+          {
+            "name": "Han EV — evropské uvedení2022",
+            "code": null,
+            "from": 2020,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "2024 BYD Han EV, front left, 07-19-2024.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "han-l",
+        "name": "Han L",
+        "summaryCs": "HanL je samostatná novější sedanová řada. Nejde pouze o delší výbavu každého staršíhoHanu.",
+        "generations": [
+          {
+            "name": "Han L — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2025,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "l3",
+        "name": "L3",
+        "summaryCs": "L3 byl příbuzný kompaktním sedanůmF3. Exportní použití jmenF3Plus čiF5 se liší podle trhu.",
+        "generations": [
+          {
+            "name": "L3 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2010,
+            "to": 2015,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "m6",
+        "name": "M6",
+        "summaryCs": "PůvodníM6 byl víceúčelový vůz se spalovacím motorem. Moderní elektrickéM6 je odlišná rodina zahrnutá podSongMax, nikoli pokračování této původní konstrukce.",
+        "generations": [
+          {
+            "name": "M6 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2010,
+            "to": 2017,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qin",
+        "name": "Qin",
+        "summaryCs": "Qin zahájil dynastickou řadu sedanů značky. Tato karta odděluje původní rodinu odQinPro, QinPlus a novějšíhoQinL.",
+        "generations": [
+          {
+            "name": "Qin — souhrnná výrobní rodina",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qin-l",
+        "name": "Qin L",
+        "summaryCs": "QinL je novější sedanová rodina dynastické nabídky. Podobná exportní číselná jména nevytvářejí další identické karty.",
+        "generations": [
+          {
+            "name": "Qin L — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qin-plus",
+        "name": "Qin Plus",
+        "summaryCs": "QinPlus rozšířil kompaktní sedanovou nabídkuBYD. Elektrické a plug-in hybridní verze potřebují vlastní technické specifikace.",
+        "generations": [
+          {
+            "name": "Qin Plus — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2021,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "qin-pro",
+        "name": "Qin Pro",
+        "summaryCs": "QinPro byl samostatně pojmenovaný sedan v nabídce dynastické řady. Jeho varianty pohonu nejsou zaměněny za původníQin.",
+        "generations": [
+          {
+            "name": "Qin Pro — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2018,
+            "to": 2021,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "s2",
+        "name": "S2",
+        "summaryCs": "S2 byl malý elektrický crossover. Není to jiný název pro většíAtto3.",
+        "generations": [
+          {
+            "name": "S2 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2019,
+            "to": 2022,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "s6",
+        "name": "S6",
+        "summaryCs": "S6 představoval ranou nabídkuSUV značkyBYD. PříbuznýS7 měl odlišný motorový a výbavový rozsah.",
+        "generations": [
+          {
+            "name": "S6 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2011,
+            "to": 2016,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "s7",
+        "name": "S7",
+        "summaryCs": "S7 byl příbuzný většímuSUVS6. Jeho technické údaje nejsou přeneseny na celou dobu výrobyS6.",
+        "generations": [
+          {
+            "name": "S7 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2014,
+            "to": 2018,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "s8",
+        "name": "S8",
+        "summaryCs": "S8 byl malosériový otevřený vůz se skládací pevnou střechou. Dřívější jménoF8 označovalo jeho předprodukční podobu.",
+        "generations": [
+          {
+            "name": "S8 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2009,
+            "to": 2010,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seagull",
+        "name": "Seagull / Dolphin Surf",
+        "summaryCs": "Seagull je malý elektrický hatchback. ExportníDolphinSurf, DolphinMini aAtto1 jsou regionální jména této rodiny, nikoli většíDolphin.",
+        "generations": [
+          {
+            "name": "Seagull / Dolphin Surf — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2023,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal",
+        "name": "Seal",
+        "summaryCs": "Seal je elektrický sedan zřadyOcean. SealU je odlišnéSUV a není jeho karosářskou verzí.",
+        "generations": [
+          {
+            "name": "Seal — evropské uvedení2023",
+            "code": null,
+            "from": 2022,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "BYD SEAL WHITE, BRAZIL (front right view) 20240313 150525.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal-06",
+        "name": "Seal 06 DM-i",
+        "summaryCs": "Seal06DM-i je plug-in hybridní sedan. Příbuzná exportní jména se zaznamenávají bez násobení totožných modelových řad.",
+        "generations": [
+          {
+            "name": "Seal 06 DM-i — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal-06-gt",
+        "name": "Seal 06 GT",
+        "summaryCs": "Seal06GT je elektrický hatchback. Číslo06 zde neznamená stejnou karoserii jako u hybridního sedanu.",
+        "generations": [
+          {
+            "name": "Seal 06 GT — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal-07-dm-i",
+        "name": "Seal 07 DM-i",
+        "summaryCs": "Seal07DM-i je větší plug-in hybridní sedan. Dřívější označeníSealDM-i se nezaměňuje s elektrickýmSealem.",
+        "generations": [
+          {
+            "name": "Seal 07 DM-i — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2023,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal-5",
+        "name": "Destroyer 05 / Seal 5 DM-i",
+        "summaryCs": "Destroyer05 se na exportních trzích prodával také jakoSeal5DM-i, King čiChazor. Samostatný novějšíSeal05DM-i vyžaduje odlišení podle trhu a roku.",
+        "generations": [
+          {
+            "name": "Destroyer 05 / Seal 5 DM-i — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2022,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "seal-u",
+        "name": "Seal U / Song Plus",
+        "summaryCs": "SealU je evropské jménoSUVSongPlus. Elektrická a plug-in hybridní provedení mají vlastní rozměry a technické tabulky.",
+        "generations": [
+          {
+            "name": "SealU EV — evropské uvedení2024",
+            "code": null,
+            "from": 2020,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          },
+          {
+            "name": "SealU DM-i ? UK technick? specifikace2024",
+            "code": null,
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "BYD Seal U DM-i GIMS 2024 1X7A2192.jpg"
+          }
+        ]
+      },
+      {
+        "lineSlug": "sealion-7",
+        "name": "Sealion 7 / Sealion 07 EV",
+        "summaryCs": "Sealion7 je elektrickéSUV známé vČíně jakoSealion07EV. Evropské verze se liší baterií a pohonem.",
+        "generations": [
+          {
+            "name": "Sealion7 — evropské uvedení2024",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": "2024 BYD Sealion 7 Performance AWD (Thailand) front view.png"
+          }
+        ]
+      },
+      {
+        "lineSlug": "shark",
+        "name": "Shark / Shark 6",
+        "summaryCs": "Shark je plug-in hybridní pickup. Karta zachovává samostatnou užitkově-osobní modelovou identitu.",
+        "generations": [
+          {
+            "name": "Shark / Shark 6 — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "song",
+        "name": "Song",
+        "summaryCs": "PůvodníSong tvořil kompaktníSUV rodinu. SongPro aSongPlus jsou zde rozlišeny samostatnými kartami podle modelové identity.",
+        "generations": [
+          {
+            "name": "Song — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2015,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "song-l",
+        "name": "Song L EV",
+        "summaryCs": "ElektrickýSongL tvoří osobitouSUV řadu. Konstrukčně odlišnýSongLDM-i není pouhým výbavovým stupněm tohoto elektromobilu.",
+        "generations": [
+          {
+            "name": "Song L EV — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2023,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "song-l-dm-i",
+        "name": "Song L DM-i",
+        "summaryCs": "SongLDM-i je plug-in hybridníSUV odlišné od elektrickéhoSongL. Název pohonu se proto zachovává v modelové identitě.",
+        "generations": [
+          {
+            "name": "Song L DM-i — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "song-max",
+        "name": "Song Max / M6 EV",
+        "summaryCs": "SongMax byl víceúčelovou rodinou s několika druhy pohonu. Novější elektrickéM6 či exportníeMax7 je příbuzná větev, nikoli totožný původníM6 zroku2010.",
+        "generations": [
+          {
+            "name": "Song Max / M6 EV — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2017,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "song-pro",
+        "name": "Song Pro",
+        "summaryCs": "SongPro je samostatně pojmenovanáSUV rodina. Exportní označeníSealion5DM-i je doloženo pro vybrané trhy.",
+        "generations": [
+          {
+            "name": "Song Pro — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2019,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "surui",
+        "name": "Surui",
+        "summaryCs": "Surui byl samostatně pojmenovaný kompaktní sedan nabízený vedle původníhoF3. Označení druhá generaceF3 v některých pramenech je zde uvedeno jako příbuzná identita, nikoli duplicitní karta.",
+        "generations": [
+          {
+            "name": "Surui — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2012,
+            "to": 2019,
+            "productionStatus": "ended",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tang",
+        "name": "Tang",
+        "summaryCs": "Tang je většíSUV s více výrobními a pohonnými etapami. Elektrické evropské provedení má vlastní rozsah a nelze jeho parametry přenést na původní hybridy.",
+        "generations": [
+          {
+            "name": "Tang EV — evropské uvedení2022",
+            "code": null,
+            "from": 2015,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "tang-l",
+        "name": "Tang L",
+        "summaryCs": "TangL tvoří novější velkou řaduSUV. Samostatné označení není synonymem všech předchozíchTangů.",
+        "generations": [
+          {
+            "name": "Tang L — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2025,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "xia",
+        "name": "Xia",
+        "summaryCs": "Xia představuje velký plug-in hybridníMPV. Exportní pojmenování se liší podle země.",
+        "generations": [
+          {
+            "name": "Xia — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2024,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      },
+      {
+        "lineSlug": "yuan",
+        "name": "Yuan",
+        "summaryCs": "PůvodníYuan byl malý crossover včetně elektrických provedení. YuanPlus neboliAtto3 je veden samostatně.",
+        "generations": [
+          {
+            "name": "Yuan — souhrnná výrobní rodina",
+            "code": null,
+            "from": 2016,
+            "to": null,
+            "productionStatus": "unknown",
+            "photoFile": null
+          }
+        ]
+      }
+    ],
+    "photoScope": "Filename metadata inventoried only; no new visual image review performed."
+  },
+  "reviewScope": {
+    "status": "partial",
+    "makeEntryInspected": true,
+    "rawModelsInventoried": 56,
+    "modelLinesInventoried": 51,
+    "additionsInventoried": 51,
+    "catalogCardsInventoried": 51,
+    "generationRowsInventoried": 52,
+    "externalChecks": [
+      {
+        "scope": "Automotive subsidiary founded2003; parent1995; F3 introduction2005 and F3DM2008",
+        "sources": [
+          "https://www.byd.com/eu/blog/Hello-we-are-BYD",
+          "https://denzaukmedia.com/en/news-articles/born-to-perform,-built-to-win-denza-launches-the-z-supercar.html"
+        ]
+      },
+      {
+        "scope": "DEPTH round 7: selected Atto 3 EU 2022 and Dolphin EU 2025 technical versions; no worldwide completeness claim.",
+        "sources": [
+          "https://www.byd.com/content/dam/byd-site/eu/product/atto3/BYD%20ATTO%203%20Leaflet.pdf",
+          "https://ev-database.org/de/pkw/1782/BYD-ATTO-3",
+          "https://www.bydauto.ie/assets/1/product-guides/my25/my25q3_dolphin.pdf",
+          "https://ev-database.org/car/3297/BYD-DOLPHIN-604-kWh"
+        ]
+      }
+    ],
+    "limitations": "Breadth-first evidence pass. All local identities and generation rows inventoried; only listed checks externally verified. Remaining histories, specs, photos, duplicate attribution and current statuses are unresolved."
+  }
+}

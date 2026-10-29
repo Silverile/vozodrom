@@ -102,7 +102,7 @@
         "trims": [
           {
             "name": "MF28 2.8",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kabriolet",
@@ -114,7 +114,10 @@
               "powerStandard": null,
               "torqueNm": null
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": null,
@@ -136,11 +139,14 @@
             },
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "MF30 3.0 170 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2000,
             "to": null,
             "bodyType": "kabriolet",
@@ -178,9 +184,18 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "productionUnits": 84,
+        "fieldSources": {
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -190,15 +205,15 @@
     "needsReview": [
       {
         "field": "generations[0].to",
-        "noteCs": "Konec výroby MF30 zdroje neuvádějí."
+        "reason": "Konec výroby MF30 zdroje neuvádějí."
       },
       {
         "field": "generations[0].trims[1].acceleration0to100s",
-        "noteCs": "Rozpor: en Wikipedie uvádí 5,0 s (0–100 km/h) i 5,9 s (0–60 mph), de Wikipedie 5,9 s."
+        "reason": "Rozpor: en Wikipedie uvádí 5,0 s (0–100 km/h) i 5,9 s (0–60 mph), de Wikipedie 5,9 s."
       },
       {
         "field": "generations[0].trims",
-        "noteCs": "MF25 a MF35 bez ověřených technických údajů; počty: 11 vozů v prvních dvou letech, 47 MF28, 26 dalších MF30."
+        "reason": "MF25 a MF35 bez ověřených technických údajů; počty: 11 vozů v prvních dvou letech, 47 MF28, 26 dalších MF30."
       }
     ]
   },
@@ -208,13 +223,13 @@
     "name": "Roadster MF3",
     "isAddition": false,
     "segment": "S",
-    "summaryCs": "Roadster MF3 vycházel z podvozku MF30 a dostal výkonné šestiválce z BMW M3. Do roku 2000 jezdil s motorem S50B32 a pětistupňovou převodovkou, od roku 2001 s motorem S54B32 a šestistupňovou převodovkou. Výroba skončila v roce 2011 limitovanými sériemi Sportiv a Final Edition.",
+    "summaryCs": "Roadster MF3 sdílel konstrukci s roadstery MF25 až MF35, vyráběl se v letech 1995–2011 a dostal výkonné šestiválce z BMW M3. Do roku 2000 jezdil s motorem S50B32 a pětistupňovou převodovkou, od roku 2001 s motorem S54B32 a šestistupňovou převodovkou. Výroba skončila v roce 2011 limitovanými sériemi Sportiv a Final Edition.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": "MF3",
         "name": "Roadster MF3",
-        "from": null,
+        "from": 1995,
         "to": 2011,
         "productionStatus": "ended",
         "facelift": null,
@@ -293,7 +308,7 @@
         "trims": [
           {
             "name": "MF3.1 3.2 236 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": 2000,
             "bodyType": "kabriolet",
@@ -331,11 +346,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_Roadster_MF3",
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "MF3.2 3.2 252 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2001,
             "to": 2011,
             "bodyType": "kabriolet",
@@ -374,9 +392,21 @@
               "https://de.wikipedia.org/wiki/Wiesmann_Roadster_MF3",
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "fieldSources": {
+          "from": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ],
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        },
+        "productionUnits": 826
       }
     ],
     "sources": [
@@ -387,15 +417,15 @@
     "needsReview": [
       {
         "field": "generations[0].from",
-        "noteCs": "Rozpor: článek o MF3 uvádí začátek 1993, článek o firmě 1995."
+        "reason": "Rozpor: článek o MF3 uvádí začátek 1993, článek o firmě 1995."
       },
       {
         "field": "generations[0].trims[0].from",
-        "noteCs": "Začátek výroby MF3.1 sporný (1993/1995)."
+        "reason": "Začátek výroby MF3.1 sporný (1993/1995)."
       },
       {
         "field": "generations[0].trims[1].acceleration0to100s",
-        "noteCs": "Rozpor: de Wikipedie 4,9 s, en Wikipedie 5,0 s."
+        "reason": "Rozpor: de Wikipedie 4,9 s, en Wikipedie 5,0 s."
       }
     ]
   },
@@ -498,7 +528,7 @@
         "trims": [
           {
             "name": "GT MF4 4.8 V8 270 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kupe",
@@ -536,11 +566,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "GT MF4 V8 biturbo 300 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2013,
             "bodyType": "kupe",
@@ -552,7 +585,10 @@
               "powerStandard": null,
               "torqueNm": null
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": 4230,
@@ -574,11 +610,14 @@
             },
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "GT MF4-S 4.0 V8 309 kW DKG",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2013,
             "bodyType": "kupe",
@@ -616,11 +655,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "GT MF4-CS 4.0 V8 309 kW DKG",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": 2013,
             "bodyType": "kupe",
@@ -658,9 +700,18 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "productionUnits": 256,
+        "fieldSources": {
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -670,23 +721,27 @@
     "needsReview": [
       {
         "field": "generations[0].from",
-        "noteCs": "Rozpor: de Wikipedie uvádí představení 2003 i 2005; en Wikipedie výrobu první edice 2003–2009."
+        "reason": "Rozpor: de Wikipedie uvádí představení 2003 i 2005; en Wikipedie výrobu první edice 2003–2009."
       },
       {
         "field": "generations[0].trims[0].topSpeedKmh",
-        "noteCs": "Rozpor: de Wikipedie 290 km/h, en Wikipedie 291 km/h (bez rozlišení verze)."
+        "reason": "Rozpor: de Wikipedie 290 km/h, en Wikipedie 291 km/h (bez rozlišení verze)."
       },
       {
         "field": "generations[0].trims[0].massKg",
-        "noteCs": "en Wikipedie uvádí 1390 kg bez rozlišení verze."
+        "reason": "en Wikipedie uvádí 1390 kg bez rozlišení verze."
       },
       {
         "field": "generations[0].trims[3].massKg",
-        "noteCs": "de Wikipedie 1320 kg; en Wikipedie jen „o 40 kg lehčí“."
+        "reason": "de Wikipedie 1320 kg; en Wikipedie jen „o 40 kg lehčí“."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "noteCs": "Rozvor nebyl nalezen."
+        "reason": "Rozvor nebyl nalezen."
+      },
+      {
+        "field": "generations[0].from",
+        "reason": "de Wikipedie uvádí představení GT MF4 jednou 2003, jednou 2005; ponecháno prázdné."
       }
     ]
   },
@@ -785,7 +840,7 @@
         "trims": [
           {
             "name": "Roadster MF4 4.8 V8 270 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2009,
             "to": 2010,
             "bodyType": "kabriolet",
@@ -797,7 +852,10 @@
               "powerStandard": null,
               "torqueNm": 490
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": 4240,
@@ -820,11 +878,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "Roadster MF4 V8 biturbo 300 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2010,
             "to": 2013,
             "bodyType": "kabriolet",
@@ -836,7 +897,10 @@
               "powerStandard": null,
               "torqueNm": null
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": 4240,
@@ -858,11 +922,14 @@
             },
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "Roadster MF4-S 4.0 V8 309 kW DKG",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": 2013,
             "bodyType": "kabriolet",
@@ -900,9 +967,18 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "productionUnits": 249,
+        "fieldSources": {
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        }
       }
     ],
     "sources": [
@@ -912,15 +988,15 @@
     "needsReview": [
       {
         "field": "lineSlug",
-        "noteCs": "Řada chybí v katalogu (model-lines-auto, models-auto)."
+        "reason": "Řada chybí v katalogu (model-lines-auto, models-auto)."
       },
       {
         "field": "generations[0].transmissions",
-        "noteCs": "Převodovka verzí s V8 4,8 l a biturbo nebyla pro roadster ověřena; en Wikipedie souhrnně uvádí 6st. automat."
+        "reason": "Převodovka verzí s V8 4,8 l a biturbo nebyla pro roadster ověřena; en Wikipedie souhrnně uvádí 6st. automat."
       },
       {
         "field": "generations[0].trims[2].from",
-        "noteCs": "Začátek prodeje MF4-S neověřen."
+        "reason": "Začátek prodeje MF4-S neověřen."
       }
     ]
   },
@@ -930,14 +1006,14 @@
     "name": "GT MF5",
     "isAddition": false,
     "segment": "S",
-    "summaryCs": "GT MF5 bylo nejvýkonnější kupé Wiesmannu. První verze měla atmosférický desetiválec BMW S85 z M5 a M6 s robotizovanou převodovkou SMG, od roku 2011 ji nahradil přeplňovaný osmiválec BMW S63. Výroba skončila v roce 2014 spolu s úpadkem firmy.",
+    "summaryCs": "GT MF5 bylo nejvýkonnější kupé Wiesmannu. První verze měla atmosférický desetiválec BMW S85 z M5 a M6 s robotizovanou převodovkou SMG, od roku 2011 ji nahradil přeplňovaný osmiválec BMW S63. Výroba skončila v roce 2013 insolvencí firmy.",
     "coverage": "pilot-partial",
     "generations": [
       {
         "code": "MF5",
         "name": "GT MF5",
         "from": 2009,
-        "to": 2014,
+        "to": 2013,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -1002,7 +1078,7 @@
         "trims": [
           {
             "name": "GT MF5 5.0 V10 373 kW SMG",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2009,
             "to": 2011,
             "bodyType": "kupe",
@@ -1040,11 +1116,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_GT_MF5",
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "GT MF5 4.4 V8 biturbo 408 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": 2014,
             "bodyType": "kupe",
@@ -1082,9 +1161,21 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_GT_MF5",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ],
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        },
+        "productionUnits": 78
       }
     ],
     "sources": [
@@ -1095,19 +1186,23 @@
     "needsReview": [
       {
         "field": "generations[0].dimensionsMm",
-        "noteCs": "Rozpor: de Wikipedie 4300 × 1940 × 1170 mm, en Wikipedie 4220 × 1950 × 1180 mm."
+        "reason": "Rozpor: de Wikipedie 4300 × 1940 × 1170 mm, en Wikipedie 4220 × 1950 × 1180 mm."
       },
       {
         "field": "generations[0].trims[0].transmission",
-        "noteCs": "de Wikipedie 7st. SMG, en Wikipedie souhrnně 6st. automat."
+        "reason": "de Wikipedie 7st. SMG, en Wikipedie souhrnně 6st. automat."
       },
       {
         "field": "generations[0].from",
-        "noteCs": "Představení 2008 (en), výroba V10 od 08/2009 (de)."
+        "reason": "Představení 2008 (en), výroba V10 od 08/2009 (de)."
       },
       {
         "field": "generations[0].photo",
-        "noteCs": "Na Commons nebyla nalezena fotografie GT MF5 v pohledu 3/4 zepředu s celým vozem."
+        "reason": "Na Commons nebyla nalezena fotografie GT MF5 v pohledu 3/4 zepředu s celým vozem."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "de Wikipedie: výroba do 2013 (insolvence 08/2013, likvidace 01/2014); dřívější karta uváděla 2014."
       }
     ]
   },
@@ -1124,7 +1219,7 @@
         "code": "MF5",
         "name": "Roadster MF5",
         "from": 2009,
-        "to": null,
+        "to": 2013,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
@@ -1199,7 +1294,7 @@
         "trims": [
           {
             "name": "Roadster MF5 5.0 V10 373 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2009,
             "to": 2011,
             "bodyType": "kabriolet",
@@ -1211,7 +1306,10 @@
               "powerStandard": null,
               "torqueNm": 520
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": null,
@@ -1234,11 +1332,14 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)",
               "https://en.wikipedia.org/wiki/Wiesmann"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           },
           {
             "name": "Roadster MF5 4.4 V8 biturbo 408 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": 2011,
             "to": null,
             "bodyType": "kabriolet",
@@ -1276,9 +1377,21 @@
             "sources": [
               "https://de.wikipedia.org/wiki/Wiesmann_GT_MF5",
               "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
-        ]
+        ],
+        "fieldSources": {
+          "to": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ],
+          "productionUnits": [
+            "https://de.wikipedia.org/wiki/Wiesmann_(Unternehmen)"
+          ]
+        },
+        "productionUnits": 106
       }
     ],
     "sources": [
@@ -1289,23 +1402,23 @@
     "needsReview": [
       {
         "field": "lineSlug",
-        "noteCs": "Řada chybí v katalogu (model-lines-auto, models-auto)."
+        "reason": "Řada chybí v katalogu (model-lines-auto, models-auto)."
       },
       {
         "field": "generations[0].to",
-        "noteCs": "Rozpor: konec výroby 2013 (de, článek o firmě) nebo 2014 (de, článek o GT MF5)."
+        "reason": "Rozpor: konec výroby 2013 (de, článek o firmě) nebo 2014 (de, článek o GT MF5)."
       },
       {
         "field": "generations[0].from",
-        "noteCs": "2009 je rok představení na IAA; začátek dodávek neověřen."
+        "reason": "2009 je rok představení na IAA; začátek dodávek neověřen."
       },
       {
         "field": "generations[0].dimensionsMm",
-        "noteCs": "Rozměry roadsteru nebyly nalezeny."
+        "reason": "Rozměry roadsteru nebyly nalezeny."
       },
       {
         "field": "generations[0].trims[0].transmission",
-        "noteCs": "Převodovka roadsteru V10 neověřena."
+        "reason": "Převodovka roadsteru V10 neověřena."
       }
     ]
   },
@@ -1370,7 +1483,7 @@
         "trims": [
           {
             "name": "Thunderball 500 kW",
-            "kind": "version",
+            "kind": "technical-version",
             "from": null,
             "to": null,
             "bodyType": "kabriolet",
@@ -1382,7 +1495,10 @@
               "powerStandard": null,
               "torqueNm": 1100
             },
-            "transmission": null,
+            "transmission": {
+              "type": null,
+              "gears": null
+            },
             "drive": "rwd",
             "dimensionsMm": {
               "length": null,
@@ -1406,7 +1522,10 @@
               "https://www.motor1.com/news/582313/wiesmann-project-thunderball-electric-cabrio/",
               "https://en.wikipedia.org/wiki/Wiesmann",
               "https://de.wikipedia.org/wiki/Wiesmann_Automotive"
-            ]
+            ],
+            "massBasis": null,
+            "massRangeKg": null,
+            "rangeCycle": null
           }
         ]
       }
@@ -1420,23 +1539,23 @@
     "needsReview": [
       {
         "field": "lineSlug",
-        "noteCs": "Řada chybí v katalogu (model-lines-auto, models-auto)."
+        "reason": "Řada chybí v katalogu (model-lines-auto, models-auto)."
       },
       {
         "field": "generations[0].from",
-        "noteCs": "Zahájení dodávek ohlášeno na 2024 (en Wikipedie); skutečný začátek výroby neověřen."
+        "reason": "Zahájení dodávek ohlášeno na 2024 (en Wikipedie); skutečný začátek výroby neověřen."
       },
       {
         "field": "generations[0].trims[0].massKg",
-        "noteCs": "Rozpor: 1775 kg (en Wikipedie) vs. asi 1700 kg (Motor1)."
+        "reason": "Rozpor: 1775 kg (en Wikipedie) vs. asi 1700 kg (Motor1)."
       },
       {
         "field": "generations[0].engines",
-        "noteCs": "Kapacita baterie: 83 kWh čistá (Motor1) vs. 93 kWh (CAR Magazine, patrně hrubá)."
+        "reason": "Kapacita baterie: 83 kWh čistá (Motor1) vs. 93 kWh (CAR Magazine, patrně hrubá)."
       },
       {
         "field": "generations[0].photo",
-        "noteCs": "Na Commons nebyla nalezena fotografie."
+        "reason": "Na Commons nebyla nalezena fotografie."
       }
     ]
   }

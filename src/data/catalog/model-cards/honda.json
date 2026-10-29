@@ -3990,7 +3990,9 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
-          "hatchback"
+          "hatchback",
+          "sedan",
+          "kombi"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -4034,7 +4036,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_Civic",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+          "https://hondanews.com/en-US/releases/2016-honda-civic-sedan-press-kit-civic-history"
         ]
       },
       {
@@ -4103,7 +4106,8 @@
         "facelift": null,
         "bodyTypes": [
           "hatchback",
-          "sedan"
+          "sedan",
+          "kombi"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -4147,7 +4151,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_Civic",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+          "https://hondanews.com/en-US/releases/2016-honda-civic-sedan-press-kit-civic-history"
         ]
       },
       {
@@ -4820,7 +4825,18 @@
         "from": 2021,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2025,
+            "productionYear": 2025,
+            "name": "Evropská modernizace 2025",
+            "note": "Evropská modernizace e:HEV: upravená maska a nárazník, změny výbavy; datum není začátkem celé světové generace.",
+            "sources": [
+              "https://hondanews.eu/gb/en/cars/media/pressreleases/541358/dynamic-exterior-upgrade-headlines-refreshed-honda-civic-ehev",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/civic/?filter=NONE"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback",
           "sedan"
@@ -4998,7 +5014,9 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_Civic",
           "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
-          "https://hondanews.eu/eu/lt/cars/media/pressreleases/371298/2022-honda-civic-ehev"
+          "https://hondanews.eu/eu/lt/cars/media/pressreleases/371298/2022-honda-civic-ehev",
+          "https://hondanews.eu/gb/en/cars/media/pressreleases/541358/dynamic-exterior-upgrade-headlines-refreshed-honda-civic-ehev",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/civic/?filter=NONE"
         ]
       }
     ],
@@ -5009,7 +5027,8 @@
       "https://www.wikidata.org/wiki/Q216747",
       "https://hondanews.eu/eu/en/cars/media/pressreleases/34647/2012-honda-civic-5-door",
       "https://hondanews.eu/eu/lv/cars/media/pressreleases/78085/all-new-2017-civic-hatchback",
-      "https://hondanews.eu/eu/lt/cars/media/pressreleases/371298/2022-honda-civic-ehev"
+      "https://hondanews.eu/eu/lt/cars/media/pressreleases/371298/2022-honda-civic-ehev",
+      "https://hondanews.com/en-US/releases/2016-honda-civic-sedan-press-kit-civic-history"
     ],
     "needsReview": [
       {
@@ -6105,10 +6124,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[10].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[10].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6947,7 +6962,7 @@
           "suv"
         ],
         "engines": null,
-        "engineCoverage": "unknown",
+        "engineCoverage": "partial",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6985,11 +7000,146 @@
             "https://commons.wikimedia.org/wiki/File:Honda_CR-V_(RS)_Washington_DC_Metro_Area,_USA_(3).jpg"
           ]
         },
-        "trims": null,
+        "trims": [
+          {
+            "name": "2.0 e:HEV Elegance 2WD",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol-hev",
+              "displacementCc": 1993,
+              "cylinders": 4,
+              "powerKw": 135,
+              "powerStandard": "Electric traction motor output and torque; separate petrol engine 109 kW / 189 Nm. Outputs are not added.",
+              "torqueNm": 335
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": null
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 194,
+            "acceleration0to100s": 9,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe (Austrian launch specification, corroborated by German ADAC)",
+              "modelYear": 2023,
+              "noteCs": "Vybraná evropská verze při uvedení v roce 2023; nejde o kompletní nabídku ani ověření celé doby výroby. Výkon 135 kW a moment 335 Nm patří trakčnímu elektromotoru, nikoli samotnému benzinovému motoru. Počet fyzických převodových stupňů není zjednodušen na hodnotu CVT. Hmotnost a rozměry zůstávají null kvůli rozdílům mezi prameny nebo chybějícímu potvrzení přesné verze."
+            },
+            "sources": [
+              "https://hondanews.eu/at/de/cars/media/pressreleases/446805/2023-honda-cr-v-pressemappe",
+              "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6399_honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt/honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt.pdf"
+            ]
+          },
+          {
+            "name": "2.0 e:HEV Advance AWD",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol-hev",
+              "displacementCc": 1993,
+              "cylinders": 4,
+              "powerKw": 135,
+              "powerStandard": "Electric traction motor output and torque; separate petrol engine 109 kW / 189 Nm. Outputs are not added.",
+              "torqueNm": 335
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": null
+            },
+            "drive": "awd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 187,
+            "acceleration0to100s": 9.5,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe (Austrian launch specification, corroborated by German ADAC)",
+              "modelYear": 2023,
+              "noteCs": "Vybraná evropská verze při uvedení v roce 2023; nejde o kompletní nabídku ani ověření celé doby výroby. Výkon 135 kW a moment 335 Nm patří trakčnímu elektromotoru, nikoli samotnému benzinovému motoru. Počet fyzických převodových stupňů není zjednodušen na hodnotu CVT. Hmotnost a rozměry zůstávají null kvůli rozdílům mezi prameny nebo chybějícímu potvrzení přesné verze."
+            },
+            "sources": [
+              "https://hondanews.eu/at/de/cars/media/pressreleases/446805/2023-honda-cr-v-pressemappe",
+              "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6399_honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt/honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt.pdf"
+            ]
+          },
+          {
+            "name": "2.0 e:PHEV Advance Tech 2WD",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol-phev",
+              "displacementCc": 1993,
+              "cylinders": 4,
+              "powerKw": 135,
+              "powerStandard": "Electric traction motor output and torque; separate petrol engine 109 kW / 189 Nm. Outputs are not added.",
+              "torqueNm": 335
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": null
+            },
+            "drive": "fwd",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "massKg": null,
+            "massBasis": null,
+            "topSpeedKmh": 195,
+            "acceleration0to100s": 9.4,
+            "consumptionL100": null,
+            "consumptionCycle": null,
+            "consumptionKwh100": null,
+            "rangeKm": null,
+            "rangeCycle": null,
+            "specificationScope": {
+              "market": "Europe (Austrian launch specification, corroborated by German ADAC)",
+              "modelYear": 2023,
+              "noteCs": "Vybraná evropská verze při uvedení v roce 2023; nejde o kompletní nabídku ani ověření celé doby výroby. Výkon 135 kW a moment 335 Nm patří trakčnímu elektromotoru, nikoli samotnému benzinovému motoru. Počet fyzických převodových stupňů není zjednodušen na hodnotu CVT. Hmotnost a rozměry zůstávají null kvůli rozdílům mezi prameny nebo chybějícímu potvrzení přesné verze."
+            },
+            "sources": [
+              "https://hondanews.eu/at/de/cars/media/pressreleases/446805/2023-honda-cr-v-pressemappe",
+              "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6399_honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt/honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt.pdf"
+            ]
+          }
+        ],
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_CR-V",
           "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
-          "https://en.wikipedia.org/w/index.php?oldid=1380996480"
+          "https://en.wikipedia.org/w/index.php?oldid=1380996480",
+          "https://hondanews.eu/at/de/cars/media/pressreleases/446805/2023-honda-cr-v-pressemappe",
+          "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT6399_honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt/honda-cr-v-20-i-mmd-ehev-advance-awd-e-cvt.pdf"
         ]
       }
     ],
@@ -7628,10 +7778,6 @@
       {
         "field": "generations[5].trunkL",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[5].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       }
     ]
   },
@@ -7651,7 +7797,9 @@
         "to": 2016,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -7694,7 +7842,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_CR-Z",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+          "https://global.honda/en/newsroom/worldnews/2010/4100111CR-Z.html"
         ]
       }
     ],
@@ -7702,7 +7851,8 @@
       "https://en.wikipedia.org/wiki/Honda_CR-Z",
       "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
       "https://en.wikipedia.org/w/index.php?oldid=1364444344",
-      "https://www.wikidata.org/wiki/Q1421529"
+      "https://www.wikidata.org/wiki/Q1421529",
+      "https://global.honda/en/newsroom/worldnews/2010/4100111CR-Z.html"
     ],
     "needsReview": [
       {
@@ -7715,10 +7865,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10381,7 +10527,18 @@
         "from": 2020,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2023,
+            "productionYear": 2023,
+            "name": "Evropská modernizace 2023",
+            "note": "Evropská modernizace Jazz a Crosstar: upravené nárazníky, výbava Advance Sport a výkonnější hybridní pohon.",
+            "sources": [
+              "https://hondanews.eu/gb/en/cars/media/pressreleases/434833/2023-honda-jazz-and-jazz-crosstar-facelift-full-press-kit",
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/jazz/?filter=NONE"
+            ]
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -10590,7 +10747,9 @@
           "https://en.wikipedia.org/wiki/Honda_Jazz",
           "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
           "https://hondanews.eu/ch/de/cars/media/pressreleases/439812/presskit-neuer-honda-jazz-ehev-und-jazz-crosstar-ehev-2023",
-          "https://en.wikipedia.org/w/index.php?oldid=1380069362"
+          "https://en.wikipedia.org/w/index.php?oldid=1380069362",
+          "https://hondanews.eu/gb/en/cars/media/pressreleases/434833/2023-honda-jazz-and-jazz-crosstar-facelift-full-press-kit",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/honda/jazz/?filter=NONE"
         ]
       }
     ],
@@ -10879,10 +11038,6 @@
       },
       {
         "field": "generations[3].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

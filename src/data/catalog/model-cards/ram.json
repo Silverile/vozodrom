@@ -11,9 +11,9 @@
       {
         "code": null,
         "name": "1000 – regionální rodina",
-        "from": null,
+        "from": 2018,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -83,7 +83,8 @@
             },
             "sources": [
               "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/fichas-tecnicas/FICHA_TECNICA_NUEVA_RAM_1000.pdf"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Rebel 2.0 MultiJet",
@@ -126,12 +127,22 @@
             },
             "sources": [
               "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/fichas-tecnicas/FICHA_TECNICA_NUEVA_RAM_1000.pdf"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
-          "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/fichas-tecnicas/FICHA_TECNICA_NUEVA_RAM_1000.pdf"
-        ]
+          "https://www.ram.com/content/dam/cross-regional/stellantis/ramtrucks/latam-rol/chile/es_cl/fichas-tecnicas/FICHA_TECNICA_NUEVA_RAM_1000.pdf",
+          "https://en.wikipedia.org/wiki/Ram_Trucks"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ]
+        }
       }
     ],
     "sources": [
@@ -145,10 +156,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -375,7 +382,7 @@
         "name": "1200 – mexická rodina podle dokumentace 2024–2026",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -445,7 +452,8 @@
             },
             "sources": [
               "https://www.ram.com/content/dam/cross-regional/nafta/ramtrucks/es_mx/archivos-descargables/RAM-1200-2025/FT_RAM1200_2024_26AGO2025_V4.pdf"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Big Horn Crew Cab 2.4 Turbo 6AT",
@@ -488,7 +496,8 @@
             },
             "sources": [
               "https://www.ram.com/content/dam/cross-regional/nafta/ramtrucks/es_mx/archivos-descargables/RAM-1200-2025/FT_RAM1200_2024_26AGO2025_V4.pdf"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie Crew Cab 2.4 Turbo 4WD",
@@ -531,7 +540,8 @@
             },
             "sources": [
               "https://www.ram.com/content/dam/cross-regional/nafta/ramtrucks/es_mx/archivos-descargables/RAM-1200-2025/FT_RAM1200_2024_26AGO2025_V4.pdf"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Tradesman 2.0 Turbo 6MT",
@@ -574,7 +584,8 @@
             },
             "sources": [
               "https://www.ram.com/mx/ram-1200/capacidad.html"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Big Horn 2.0 Turbo 8AT",
@@ -617,7 +628,8 @@
             },
             "sources": [
               "https://www.ram.com/mx/ram-1200/capacidad.html"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 2.0 Turbo 8AT",
@@ -660,13 +672,20 @@
             },
             "sources": [
               "https://www.ram.com/mx/ram-1200/capacidad.html"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.ram.com/content/dam/cross-regional/nafta/ramtrucks/es_mx/archivos-descargables/RAM-1200-2025/FT_RAM1200_2024_26AGO2025_V4.pdf",
-          "https://www.ram.com/mx/ram-1200/capacidad.html"
-        ]
+          "https://www.ram.com/mx/ram-1200/capacidad.html",
+          "https://en.wikipedia.org/wiki/Ram_Trucks"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1250,6 +1269,10 @@
       {
         "field": "coverage",
         "reason": "Částečný soupis osobně využitelných pick-upů značky Ram; nejde o vyčerpávající seznam všech kabin, trhů, modelových roků ani homologací."
+      },
+      {
+        "field": "generations[0].from",
+        "reason": "Wikipedie: mexický Ram 1200 (Changan/Peugeot Landtrek) 2025–; karta cituje dokumentaci 2024–2026."
       }
     ]
   },
@@ -1266,8 +1289,8 @@
         "code": null,
         "name": "1500 – starší rodina v období značky Ram / Classic",
         "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2024,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -1339,21 +1362,31 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/ram-lanca-serie-especial-para-os-amantes-do-v8-a-classic-r-t"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/me-en/ram-archive/press/ram-truck-celebrates-10-year-anniversary-of-becoming-stand-alone-brand",
           "https://www.media.stellantis.com/br-pt/ram/press/ram-lanca-serie-especial-para-os-amantes-do-v8-a-classic-r-t",
-          "https://www.media.stellantis.com/em-en/fiat-professional/press/ram-at-the-2018-international-motor-show-in-hanover"
-        ]
+          "https://www.media.stellantis.com/em-en/fiat-professional/press/ram-at-the-2018-international-motor-show-in-hanover",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       },
       {
         "code": null,
         "name": "1500 – nová rodina, výroba od března 2018",
         "from": 2018,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": [
           {
             "year": 2024,
@@ -1435,7 +1468,8 @@
             "sources": [
               "https://www.ramtrucks.com.au/news-and-updates/april-ram-newsletter/2431/",
               "https://www.ramtrucks.com.au/news-and-updates/hurricane-turbo-six-cylinder-power-arrives-down-under/2402/"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Limited 3.0 Hurricane HO",
@@ -1479,7 +1513,8 @@
             "sources": [
               "https://www.ramtrucks.com.au/news-and-updates/april-ram-newsletter/2431/",
               "https://www.ramtrucks.com.au/news-and-updates/hurricane-turbo-six-cylinder-power-arrives-down-under/2402/"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "3.0 Hurricane SO",
@@ -1522,7 +1557,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/em-en/ram/press/ram-trucks-introduces-the-new-ram-1500-in-europe"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "3.0 Hurricane HO",
@@ -1565,7 +1601,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/em-en/ram/press/ram-trucks-introduces-the-new-ram-1500-in-europe"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "3.6 Pentastar eTorque",
@@ -1608,7 +1645,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/em-en/ram/press/ram-trucks-introduces-the-new-ram-1500-in-europe"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "TRX Havoc Edition 6.2 Supercharged V8",
@@ -1652,15 +1690,22 @@
             "sources": [
               "https://www.media.stellantis.com/de-de/ram/press/erstmalig-in-europa-ram-praesentiert-die-ram-1500-trx-havoc-edition-beim-mxgp-in-pietramurata",
               "https://www.media.stellantis.com/de-de/ram/press/ram-erneuert-seine-partnerschaft-mit-red-bull-ktm-factory-racing-fuer-die-saison-2023"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/em-en/fca-archive/press/fca-to-expand-production-capacity-in-michigan-to-grow-core-brands-electrify-jeep-vehicles",
           "https://www.media.stellantis.com/em-en/ram/press/ram-trucks-introduces-the-new-ram-1500-in-europe",
           "https://www.ramtrucks.com.au/news-and-updates/april-ram-newsletter/2431/",
-          "https://www.media.stellantis.com/de-de/ram/press/erstmalig-in-europa-ram-praesentiert-die-ram-1500-trx-havoc-edition-beim-mxgp-in-pietramurata"
-        ]
+          "https://www.media.stellantis.com/de-de/ram/press/erstmalig-in-europa-ram-praesentiert-die-ram-1500-trx-havoc-edition-beim-mxgp-in-pietramurata",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       }
     ],
     "sources": [
@@ -1685,10 +1730,6 @@
       },
       {
         "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2350,8 +2391,8 @@
         "code": null,
         "name": "2500 – starší rodina období Ram",
         "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2018,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -2422,20 +2463,30 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/ram-atinge-10-mil-emplacamentos-no-brasil"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/me-en/ram-archive/press/ram-truck-celebrates-10-year-anniversary-of-becoming-stand-alone-brand",
-          "https://www.media.stellantis.com/br-pt/ram/press/ram-atinge-10-mil-emplacamentos-no-brasil"
-        ]
+          "https://www.media.stellantis.com/br-pt/ram/press/ram-atinge-10-mil-emplacamentos-no-brasil",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       },
       {
         "code": null,
         "name": "2500 – novější Heavy Duty, regionální specifikace",
-        "from": null,
+        "from": 2019,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": [
           {
             "year": 2025,
@@ -2515,7 +2566,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/novas-ram-2500-e-3500-chegam-ao-mercado-para-elevar-a-referencia-entre-as-picapes"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 6.7 Cummins – Australia official listing",
@@ -2558,7 +2610,8 @@
             },
             "sources": [
               "https://www.ramtrucks.com.au/ram-lineup/"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie Crew Cab 6.7 Cummins High Output 8AT – Australia",
@@ -2601,14 +2654,24 @@
             },
             "sources": [
               "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/br-pt/ram/press/novas-ram-2500-e-3500-chegam-ao-mercado-para-elevar-a-referencia-entre-as-picapes",
           "https://www.ramtrucks.com.au/ram-lineup/",
-          "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/"
-        ]
+          "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       }
     ],
     "sources": [
@@ -2629,10 +2692,6 @@
       },
       {
         "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2693,10 +2752,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3094,8 +3149,8 @@
         "code": null,
         "name": "3500 – starší rodina období Ram",
         "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2018,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -3127,15 +3182,24 @@
         "trims": null,
         "sources": [
           "https://www.media.stellantis.com/me-en/ram-archive/press/ram-truck-celebrates-10-year-anniversary-of-becoming-stand-alone-brand",
-          "https://www.media.stellantis.com/em-en/fiat-professional/press/ram-at-the-2018-international-motor-show-in-hanover"
-        ]
+          "https://www.media.stellantis.com/em-en/fiat-professional/press/ram-at-the-2018-international-motor-show-in-hanover",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "to": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       },
       {
         "code": null,
         "name": "3500 – novější Heavy Duty, regionální specifikace",
-        "from": null,
+        "from": 2019,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": [
           {
             "year": 2025,
@@ -3215,7 +3279,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/novas-ram-2500-e-3500-chegam-ao-mercado-para-elevar-a-referencia-entre-as-picapes"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 6.7 Cummins – Australia official listing",
@@ -3258,7 +3323,8 @@
             },
             "sources": [
               "https://www.ramtrucks.com.au/ram-lineup/"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie Crew Cab 6.7 Cummins High Output 8AT – Australia",
@@ -3301,14 +3367,24 @@
             },
             "sources": [
               "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/br-pt/ram/press/novas-ram-2500-e-3500-chegam-ao-mercado-para-elevar-a-referencia-entre-as-picapes",
           "https://www.ramtrucks.com.au/ram-lineup/",
-          "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/"
-        ]
+          "https://www.ramtrucks.com.au/vehicles/3500-laramie-crew-cab-high-output/",
+          "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380790759"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3329,10 +3405,6 @@
       },
       {
         "field": "generations[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3393,10 +3465,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3713,9 +3781,9 @@
       {
         "code": null,
         "name": "700 I – předchůdce uvedený v tovární retrospektivě",
-        "from": null,
+        "from": 2014,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -3745,15 +3813,24 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.media.stellantis.com/br-es/ram/press/con-la-nueva-700-ram-reinventa-el-segmento-de-las-pickups-pequenas"
-        ]
+          "https://www.media.stellantis.com/br-es/ram/press/con-la-nueva-700-ram-reinventa-el-segmento-de-las-pickups-pequenas",
+          "https://en.wikipedia.org/wiki/Ram_Trucks"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ]
+        }
       },
       {
         "code": null,
         "name": "700 II – rodina představená 2020",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -3824,7 +3901,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/download-model-document/155"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "SLT 1.4 Fire EVO Cabina Doble 5MT",
@@ -3867,7 +3945,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/download-model-document/155"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Big Horn 1.4 Fire EVO Cabina Doble 5MT",
@@ -3910,7 +3989,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/download-model-document/155"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 1.3 Firefly Cabina Doble 5MT",
@@ -3953,13 +4033,20 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/download-model-document/155"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/br-es/ram/press/con-la-nueva-700-ram-reinventa-el-segmento-de-las-pickups-pequenas",
-          "https://www.media.stellantis.com/br-pt/download-model-document/155"
-        ]
+          "https://www.media.stellantis.com/br-pt/download-model-document/155",
+          "https://en.wikipedia.org/wiki/Ram_Trucks"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ]
+        }
       }
     ],
     "sources": [
@@ -3974,10 +4061,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4335,6 +4418,10 @@
       {
         "field": "coverage",
         "reason": "Částečný soupis osobně využitelných pick-upů značky Ram; nejde o vyčerpávající seznam všech kabin, trhů, modelových roků ani homologací."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Konec první rodiny (Fiat Strada I) pod značkou Ram nebyl doložen; druhá rodina od 2020/2021 podle trhu."
       }
     ]
   },
@@ -4350,9 +4437,9 @@
       {
         "code": null,
         "name": "Dakota – novodobá rodina Ram",
-        "from": null,
+        "from": 2025,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -4422,7 +4509,8 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/ram-dakota-chega-ao-mercado-com-amplo-pacote-de-equipamentos-e-promove-estreia-da-marca-no-segmento-de-picapes-medias"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 2.2 Turbodiesel",
@@ -4465,12 +4553,25 @@
             },
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/ram-dakota-chega-ao-mercado-com-amplo-pacote-de-equipamentos-e-promove-estreia-da-marca-no-segmento-de-picapes-medias"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
-          "https://www.media.stellantis.com/br-pt/ram/press/ram-dakota-chega-ao-mercado-com-amplo-pacote-de-equipamentos-e-promove-estreia-da-marca-no-segmento-de-picapes-medias"
-        ]
+          "https://www.media.stellantis.com/br-pt/ram/press/ram-dakota-chega-ao-mercado-com-amplo-pacote-de-equipamentos-e-promove-estreia-da-marca-no-segmento-de-picapes-medias",
+          "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina",
+          "https://news.agrofy.com.ar/noticia/214438/ram-dakota-nueva-pick-que-ya-se-fabrica-argentina"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina",
+            "https://news.agrofy.com.ar/noticia/214438/ram-dakota-nueva-pick-que-ya-se-fabrica-argentina"
+          ],
+          "productionStatus": [
+            "https://www.media.stellantis.com/ar-es/ram/press/la-nueva-pick-up-de-ram-se-llamara-dakota-y-se-producira-en-argentina",
+            "https://news.agrofy.com.ar/noticia/214438/ram-dakota-nueva-pick-que-ya-se-fabrica-argentina"
+          ]
+        }
       }
     ],
     "sources": [
@@ -4484,10 +4585,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4712,9 +4809,9 @@
       {
         "code": null,
         "name": "Rampage – brazilská rodina",
-        "from": null,
+        "from": 2023,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "current",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -4785,7 +4882,8 @@
             "sources": [
               "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 2.0 Turbo Diesel",
@@ -4829,7 +4927,8 @@
             "sources": [
               "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Rebel 2.0 Hurricane 4",
@@ -4873,7 +4972,8 @@
             "sources": [
               "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 2.0 Hurricane 4",
@@ -4917,7 +5017,8 @@
             "sources": [
               "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "R/T 2.0 Hurricane 4",
@@ -4961,7 +5062,8 @@
             "sources": [
               "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Rebel 2.2 Turbodiesel",
@@ -5005,7 +5107,8 @@
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-2025-fica-ainda-mais-moderna-e-segura-com-adas-nivel-2",
               "https://www.media.stellantis.com/uploads/br/model-document/fichatecnicaramrampage22turbodiesellaramie-69d4fd1942256.pdf"
-            ]
+            ],
+            "massRangeKg": null
           },
           {
             "name": "Laramie 2.2 Turbodiesel",
@@ -5049,14 +5152,24 @@
             "sources": [
               "https://www.media.stellantis.com/br-pt/ram/press/rampage-2025-fica-ainda-mais-moderna-e-segura-com-adas-nivel-2",
               "https://www.media.stellantis.com/uploads/br/model-document/fichatecnicaramrampage22turbodiesellaramie-69d4fd1942256.pdf"
-            ]
+            ],
+            "massRangeKg": null
           }
         ],
         "sources": [
           "https://www.media.stellantis.com/br-pt/ram/press/rampage-uma-legitima-ram-criada-sob-medida-para-o-brasil",
           "https://www.media.stellantis.com/uploads/br/attachment/4660/rampage_ficha_tecnica-6491dfa6894eb.pdf",
-          "https://www.media.stellantis.com/br-pt/ram/press/rampage-2025-fica-ainda-mais-moderna-e-segura-com-adas-nivel-2"
-        ]
+          "https://www.media.stellantis.com/br-pt/ram/press/rampage-2025-fica-ainda-mais-moderna-e-segura-com-adas-nivel-2",
+          "https://en.wikipedia.org/wiki/Ram_Trucks"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Ram_Trucks"
+          ]
+        }
       }
     ],
     "sources": [
@@ -5073,10 +5186,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

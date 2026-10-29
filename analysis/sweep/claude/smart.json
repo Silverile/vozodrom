@@ -1,0 +1,176 @@
+{
+  "make": "smart",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "model-lines-auto",
+      "slug": "forfour",
+      "field": "from / generations[0].from",
+      "from": 2003,
+      "to": 2004,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Smart_Forfour"
+      ],
+      "confidence": "medium",
+      "verify": "confirmed: de-wiki Smart_Forfour gives W454 production 01/2004-06/2006, sales from 24 Apr 2004"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "fortwo",
+      "field": "generations[0].code",
+      "from": "450 series",
+      "to": "W450",
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381789335",
+        "https://www.wikidata.org/wiki/Q3962967"
+      ],
+      "confidence": "low",
+      "verify": "confirmed (naming only): de-wiki Smart_Fortwo calls it Typ 450; W450 is the common chassis code"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "453-fortwo-ed-4-eq",
+      "reason": "powertrain variant of Fortwo W453 (EQ), duplicate of fortwo line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q90145158"
+      ],
+      "verify": "confirmed: EQ fortwo is the electric W453, covered by fortwo gen W453 (en-wiki Smart_Fortwo: EQ Fortwo 2017-2024)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "ed",
+      "reason": "electric-drive variant of Fortwo, duplicate of fortwo line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q3321341"
+      ],
+      "verify": "confirmed: Wikidata Q3321341 is 'Smart electric drive' / de 'Smart EQ' (electric version / sub-brand), not a separate model line"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fortwo-ii",
+      "reason": "generation item (W451), duplicate of fortwo line / fortwo-w451",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q834494"
+      ],
+      "verify": "rejected: Wikidata Q834494 is the MAIN Smart Fortwo item (en-wiki and de-wiki sitelink 'Smart Fortwo'; only the cs label says 'ForTwo II'). Removing it deletes the only plain Fortwo entry; rename slug/name to fortwo / Fortwo instead"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fortwo-w450",
+      "reason": "generation item, duplicate of fortwo line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q3962967"
+      ],
+      "verify": "confirmed: generation item; main Fortwo item is Q834494 (models-auto slug fortwo-ii); de-wiki Smart_Fortwo Typ 450"
+    },
+    {
+      "file": "models-auto",
+      "slug": "fortwo-w451",
+      "reason": "generation item, duplicate of fortwo line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q3962969"
+      ],
+      "verify": "confirmed: generation item; main Fortwo item is Q834494 (models-auto slug fortwo-ii); de-wiki Smart_Fortwo Typ 451"
+    },
+    {
+      "file": "models-auto",
+      "slug": "forfour-w453",
+      "reason": "generation item, duplicate of forfour line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q24195994"
+      ],
+      "verify": "confirmed: generation item of forfour (Q1328950 present as slug forfour); de-wiki Smart_Forfour"
+    },
+    {
+      "file": "models-auto",
+      "slug": "forfour-w454",
+      "reason": "generation item, duplicate of forfour line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q21208869"
+      ],
+      "verify": "confirmed: generation item of forfour (Q1328950 present as slug forfour); de-wiki Smart_Forfour"
+    },
+    {
+      "file": "models-auto",
+      "slug": "formore",
+      "reason": "planned SUV cancelled in 2005 before production; never sold",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q4347988",
+        "https://en.wikipedia.org/wiki/Smart_Formore"
+      ],
+      "verify": "confirmed: en-wiki Smart_Formore infobox 'Not produced', development halted April 2005"
+    }
+  ],
+  "missingModels": [
+    {
+      "name": "Fortwo (line entry in models-auto; only generation items exist there)",
+      "from": 1998,
+      "to": 2024,
+      "bodyTypes": [
+        "hatchback",
+        "kabriolet"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/w/index.php?oldid=1381789335"
+      ],
+      "verify": "rejected: the plain Fortwo already exists in models-auto as slug fortwo-ii (Wikidata Q834494 = en/de-wiki 'Smart Fortwo'); fix its slug/name rather than add a new entry"
+    }
+  ],
+  "cardFixesApplied": [],
+  "cardsAdded": [
+    "fortwo",
+    "forfour",
+    "roadster",
+    "1",
+    "3",
+    "5"
+  ],
+  "conflicts": [
+    {
+      "where": "fortwo W450 end year",
+      "values": {
+        "en-wiki header": 2006,
+        "en-wiki infobox": 2007
+      },
+      "kept": 2007
+    },
+    {
+      "where": "forfour W454 start",
+      "values": {
+        "en-wiki infobox / model-lines-auto": 2003,
+        "en-wiki section header (sales from 2004)": 2004
+      },
+      "kept": 2004
+    },
+    {
+      "where": "forfour W453 end",
+      "values": {
+        "en-wiki table": 2021,
+        "en-wiki text (discontinued early 2022)": 2022
+      },
+      "kept": 2021
+    },
+    {
+      "where": "Brabus 0.9 turbo power (453)",
+      "values": {
+        "en-wiki Forfour": 79,
+        "Smart press (109 PS)": 80
+      },
+      "kept": 79
+    }
+  ],
+  "openQuestions": [
+    "Smart #2 (two-seat EV, fortwo successor) is due for a late-2026 reveal (Paris); add a line once series production is confirmed.",
+    "Crossblade (2002, limited fortwo-based roadster, about 2,000 units) stays in models-auto; no card written — decide whether it deserves a line.",
+    "Make entry: country Německo (Q183) — since 2020 smart is a Mercedes-Benz/Geely joint venture with HQ in Ningbo (China) and Böblingen; consider countries [Německo, Čína].",
+    "Fortwo W451 facelift year (2010/2011 vs 2012/2013) not reconciled; card facelift left null.",
+    "Photos: Commons search API was rate-limited (shared IP); only 3 of 9 generations have photos (W451 Brabus, W454, #3). Fortwo W450/W453, Roadster, #1 and #5 photos still to add.",
+    "Smart #1 and #5 European trim tables (Pro, Pro+, Premium) not filled; sources disagreed on #5 Pro+/Premium power (200 vs 267 kW)."
+  ],
+  "summary": "Created src/data/model-cards/smart.json with 6 lines (fortwo 3 gens, forfour 2 gens, roadster, #1, #3, #5). models-auto holds 8 generation/variant/concept duplicates proposed for removal and lacks a plain Fortwo line.",
+  "cardsAddedVerify": "confirmed with notes: W450 1998-2007, W453 2014-2024 (de-wiki Smart_Fortwo: 453 ended 03/2024), forfour W454 2004-2006 / W453 2014-2021 (de-wiki Smart_Forfour), roadster 43,091 built and Aug 2002-Nov 2005 (en-wiki Smart_Roadster), #5 from 2024 built in Huzhou with Brabus 475 kW (en-wiki Smart_5). Conflicts left unchanged: de-wiki Smart_Fortwo gives W451 03/2007-08/2015 (card 2006-2014; en-wiki Nov 2006 start) and W451 facelifts 2010 and 2012; de-wiki Smart_Roadster gives 2003-2005 and about 43,000 units"
+}

@@ -5,7 +5,7 @@
     "name": "B1",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "B1 je dvoumístné sportovní kupé představené Marussií v roce2008. Dochované vozy a dobové zprávy dokládají stavbu automobilů, ale přesný rozsah zákaznické sériové výroby zůstává nejasný.",
+    "summaryCs": "B1 je dvoumístné sportovní kupé ruské značky Marussia představené v roce 2008. Dochované vozy a dobové zprávy dokládají stavbu automobilů, ale rozsah zákaznické výroby zůstává nejasný: podle ruské Wikipedie vznikly jen jednotky sériových vozů a značka zanikla bankrotem v dubnu 2014.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -13,7 +13,7 @@
         "name": "B1 / doložená stavba, sériový rozsah neurčen",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -46,15 +46,26 @@
           "https://www.allcarcentral.com/Marussia_pdf/Marussia_2009.pdf",
           "https://eng.autostat.ru/news/1736/",
           "https://www.wardsauto.com/news/archive-wards-valmet-to-build-russian-marussia-sports-car/780340/",
-          "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html"
-        ]
+          "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html",
+          "https://www.wikidata.org/wiki/Q647737",
+          "https://ru.wikipedia.org/wiki/Marussia_Motors",
+          "https://en.wikipedia.org/w/index.php?title=Marussia_B-Series&oldid=1380054080"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://www.wikidata.org/wiki/Q647737",
+            "https://ru.wikipedia.org/wiki/Marussia_Motors"
+          ]
+        }
       }
     ],
     "sources": [
       "https://www.allcarcentral.com/Marussia_pdf/Marussia_2009.pdf",
       "https://eng.autostat.ru/news/1736/",
       "https://www.wardsauto.com/news/archive-wards-valmet-to-build-russian-marussia-sports-car/780340/",
-      "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html"
+      "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html",
+      "https://www.wikidata.org/wiki/Q647737",
+      "https://ru.wikipedia.org/wiki/Marussia_Motors"
     ],
     "needsReview": [
       {
@@ -124,6 +135,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Výroba skončila nejpozději bankrotem Marussia Motors (duben 2014); en Wikipedie uvádí 2015 a 500 kusů B2, ru Wikipedie jen 4–5 sériových vozů a 3 registrované – rok konce a objem nejsou spolehlivě doloženy."
       }
     ]
   },
@@ -133,7 +148,7 @@
     "name": "B2",
     "isAddition": true,
     "segment": null,
-    "summaryCs": "B2 je jinak karosované sportovní kupé příbuzné modelu B1. Plánovaná výroba ve finském Valmetu není v této kartě vydávána za potvrzené uskutečněné dodávky.",
+    "summaryCs": "B2 je jinak karosované sportovní kupé příbuzné modelu B1. Plánovaná výroba ve finském Valmetu není v této kartě vydávána za potvrzené dodávky; značka Marussia zanikla bankrotem v dubnu 2014.",
     "coverage": "pilot-partial",
     "generations": [
       {
@@ -141,7 +156,7 @@
         "name": "B2 / doložená stavba, sériový rozsah neurčen",
         "from": null,
         "to": null,
-        "productionStatus": "unknown",
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -234,8 +249,17 @@
           "https://www.allcarcentral.com/Marussia_pdf/Marussia_2009.pdf",
           "https://eng.autostat.ru/news/1736/",
           "https://www.wardsauto.com/news/archive-wards-valmet-to-build-russian-marussia-sports-car/780340/",
-          "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html"
-        ]
+          "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html",
+          "https://www.wikidata.org/wiki/Q647737",
+          "https://ru.wikipedia.org/wiki/Marussia_Motors",
+          "https://en.wikipedia.org/w/index.php?title=Marussia_B-Series&oldid=1380054080"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://www.wikidata.org/wiki/Q647737",
+            "https://ru.wikipedia.org/wiki/Marussia_Motors"
+          ]
+        }
       }
     ],
     "sources": [
@@ -243,7 +267,9 @@
       "https://eng.autostat.ru/news/1736/",
       "https://www.wardsauto.com/news/archive-wards-valmet-to-build-russian-marussia-sports-car/780340/",
       "https://www.automobilrevue.cz/rubriky/testy/predstavujeme/marussia-b2-kdy-bude_42816.html",
-      "https://www.carbodydesign.com/2012/03/valmet-to-produce-the-marussia-b2-supercar/comment-page-1/?theme=handheld"
+      "https://www.carbodydesign.com/2012/03/valmet-to-produce-the-marussia-b2-supercar/comment-page-1/?theme=handheld",
+      "https://www.wikidata.org/wiki/Q647737",
+      "https://ru.wikipedia.org/wiki/Marussia_Motors"
     ],
     "needsReview": [
       {
@@ -389,6 +415,10 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].to",
+        "reason": "Výroba skončila nejpozději bankrotem Marussia Motors (duben 2014); en Wikipedie uvádí 2015 a 500 kusů B2, ru Wikipedie jen 4–5 sériových vozů a 3 registrované – rok konce a objem nejsou spolehlivě doloženy."
       }
     ]
   }

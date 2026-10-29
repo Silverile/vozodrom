@@ -1,0 +1,503 @@
+{
+  "make": "mini",
+  "checkedAt": "2026-10-29",
+  "by": "claude",
+  "makeFixes": [],
+  "modelFixes": [
+    {
+      "file": "models-auto",
+      "slug": "mini",
+      "field": "mapping",
+      "from": "mini (Q36024)",
+      "to": "classic line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q36024"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "hatch",
+      "field": "mapping",
+      "from": "hatch (Q11781425)",
+      "to": "cooper line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q11781425"
+      ],
+      "confidence": "high"
+    },
+    {
+      "file": "models-auto",
+      "slug": "clubman-q2342984",
+      "field": "mapping",
+      "from": "two Clubman items (Q2342984, Q27639038)",
+      "to": "one historical (classic) and one BMW (clubman line); verify which QID is which",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q2342984",
+        "https://www.wikidata.org/wiki/Q27639038"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "file": "model-lines-auto",
+      "slug": "aceman",
+      "field": "bodyTypes",
+      "from": null,
+      "to": [
+        "suv"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Aceman"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "removeModels": [
+    {
+      "file": "models-auto",
+      "slug": "hatch-f56",
+      "reason": "generation item (F56), duplicate of cooper line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q17635143",
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: generation or combined item already covered by a card line (cooper F56 / classic Mk I / coupe+roadster / classic Clubman gen); checked against models-auto rows Q17635143, Q6865001, Q3858405, Q27639009"
+    },
+    {
+      "file": "models-auto",
+      "slug": "mki",
+      "reason": "generation item (classic Mini Mk I), duplicate of classic line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q6865001"
+      ],
+      "verify": "confirmed: generation or combined item already covered by a card line (cooper F56 / classic Mk I / coupe+roadster / classic Clubman gen); checked against models-auto rows Q17635143, Q6865001, Q3858405, Q27639009"
+    },
+    {
+      "file": "models-auto",
+      "slug": "coupe-and-roadster",
+      "reason": "combined item, duplicate of coupe and roadster lines",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q3858405"
+      ],
+      "verify": "confirmed: generation or combined item already covered by a card line (cooper F56 / classic Mk I / coupe+roadster / classic Clubman gen); checked against models-auto rows Q17635143, Q6865001, Q3858405, Q27639009"
+    },
+    {
+      "file": "models-auto",
+      "slug": "e",
+      "reason": "Mini E 2008-2010 lease field-trial fleet, not a retail model; electric Cooper is in cooper line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q6865039"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_E says it was available only as a three-year limited lease with the cars returned to BMW (field trials in US/DE/UK/FR/CN/JP)"
+    },
+    {
+      "file": "models-auto",
+      "slug": "clubman-1275-gt",
+      "reason": "classic Clubman/1275 GT branch, already a generation of classic line",
+      "sources": [
+        "https://www.wikidata.org/wiki/Q27639009",
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: generation or combined item already covered by a card line (cooper F56 / classic Mk I / coupe+roadster / classic Clubman gen); checked against models-auto rows Q17635143, Q6865001, Q3858405, Q27639009"
+    }
+  ],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "cooper",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2001,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2008,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2006,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2015,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[2].from",
+      "from": null,
+      "to": 2013,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[2].to",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[3].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[4].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[0].from",
+      "from": null,
+      "to": 2007,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[0].to",
+      "from": null,
+      "to": 2014,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[1].from",
+      "from": null,
+      "to": 2015,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[1].to",
+      "from": null,
+      "to": 2024,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[1].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    },
+    {
+      "lineSlug": "countryman",
+      "path": "generations[2].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Countryman"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_(BMW): F60 ended Oct 2023, U25 successor in production; R60 LCI 2014 and F60 LCI 2020 per en-wiki"
+    },
+    {
+      "lineSlug": "aceman",
+      "path": "generations[0].productionStatus",
+      "from": "unknown",
+      "to": "current",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Aceman"
+      ],
+      "verify": "confirmed: Aceman J05 on sale since 2024 (BMW press T0441184EN, already cited in card)"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[8].from",
+      "from": null,
+      "to": 1969,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[8].to",
+      "from": null,
+      "to": 1980,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[8].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[10].from",
+      "from": null,
+      "to": 1961,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[10].to",
+      "from": null,
+      "to": 1983,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "classic",
+      "path": "generations[10].productionStatus",
+      "from": "unknown",
+      "to": "ended",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman gives historic Clubman 1969-1980 (estate to 1981, 1-year variance); Pick-up 1961-1983 per en-wiki Mini"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2010,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "Modernizace (LCI) v srpnu 2010 pro modelový rok 2011.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Hatch"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "cooper",
+      "path": "generations[2].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2018,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "První modernizace (LCI-1) 2018.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Hatch"
+          ]
+        },
+        {
+          "year": 2021,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "Druhá modernizace (LCI-2) 2021.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Hatch"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Hatch"
+      ],
+      "verify": "confirmed: en.wikipedia.org/wiki/Mini_Hatch infobox: R50/53 Apr 2001-Aug 2006, R52 2004-2008; R56 Jul 2006-Nov 2013, R57 2009-2015; F55/56 Nov 2013-2024, F57 2015-2024; LCI Aug 2010, LCI-1 2018, LCI-2 2021. Cross-check de.wikipedia.org/wiki/Mini_(BMW): R52 to Aug 2008, F54/F55/F56/F57 to Feb 2024; it gives R57 to 2016, a 1-year conflict on gen[1].to that was kept"
+    },
+    {
+      "lineSlug": "countryman",
+      "path": "generations[0].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2014,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "Modernizace R60 LCI 2014.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Countryman"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Countryman"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_(BMW): F60 ended Oct 2023, U25 successor in production; R60 LCI 2014 and F60 LCI 2020 per en-wiki"
+    },
+    {
+      "lineSlug": "countryman",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2020,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "Modernizace F60 LCI 2020.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Countryman"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Countryman"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_(BMW): F60 ended Oct 2023, U25 successor in production; R60 LCI 2014 and F60 LCI 2020 per en-wiki"
+    },
+    {
+      "lineSlug": "clubman",
+      "path": "generations[1].facelift",
+      "from": null,
+      "to": [
+        {
+          "year": 2019,
+          "to": null,
+          "name": "LCI",
+          "code": "LCI",
+          "productionYear": null,
+          "note": "Modernizace 2019 s novou maskou a světlomety.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mini_Clubman_(2007)"
+      ],
+      "verify": "confirmed: de.wikipedia.org/wiki/Mini_Clubman: R55 2007-2014, F54 2015-2024, facelift shown at Shanghai Apr 2019 (also de.wikipedia.org/wiki/Mini_(BMW): F54 Oct 2015-Feb 2024)"
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [
+    {
+      "where": "cooper gen R50/52/53 end",
+      "values": {
+        "hatch R50/R53 (en-wiki)": 2006,
+        "convertible R52 (en-wiki)": 2008
+      },
+      "kept": 2008
+    },
+    {
+      "where": "cooper gen R56/57 end",
+      "values": {
+        "hatch R56": 2013,
+        "convertible R57": 2015
+      },
+      "kept": 2015
+    }
+  ],
+  "openQuestions": [
+    "Clubvan is listed in both model-lines-auto and model-line-additions; keep one.",
+    "Cooper J01 (EV, China, from Oct 2023) and F65/F66/F67 (ICE, Oxford, from Mar 2024) are separate generation entries; consider merging into one 4th generation with two codes.",
+    "Engines, dimensions and trims of most Mini generations are still null; only years, status and facelifts were filled."
+  ],
+  "summary": "Filled null generation years/status for Cooper (R50 to F65), Clubman R55/F54, classic Clubman/1275 GT and pick-up; Countryman U25, Aceman, J01, F65 marked current; facelifts added. Proposed removing 5 duplicate/non-retail model items."
+}
