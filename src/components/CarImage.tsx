@@ -96,7 +96,7 @@ function Wheel({ cx, r }: { cx: number; r: number }) {
 
 export function CarImage({ body, color, className = "" }: { body: Body; color: string; className?: string }) {
   const paint = PAINT[color] ?? "#8a919c";
-  const s = SHAPES[body];
+  const s = SHAPES[body] ?? SHAPES.hatchback; // catalogue body types without a pictogram of their own
   const [rear, front] = s.wheels;
   return (
     <svg viewBox="0 0 240 150" className={className} role="img" aria-label={`Ilustrace vozu (${color})`}>

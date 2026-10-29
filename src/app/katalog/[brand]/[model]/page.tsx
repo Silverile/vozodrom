@@ -5,7 +5,6 @@ import { Bar } from "@/components/Bar";
 import { CarImage } from "@/components/CarImage";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
-import { CarPhoto } from "@/components/CarPhoto";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
 import { RealStats } from "@/components/RealStats";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
@@ -21,7 +20,6 @@ import {
   type CardGeneration,
   type CardTrim,
   cardOf,
-  coverOf,
   stagesOf,
   yearsSpan,
 } from "@/lib/modelCards";
@@ -29,7 +27,8 @@ import { type StatsEntry, lineStats } from "@/lib/stats";
 import type { Body } from "@/lib/types";
 
 // One page per model line. Every curated line has one; demo models add owner ratings, STK data,
-// prices and listings. Model cards (generations, engines, trims, photos) come from Codex's catalogue.
+// prices and listings. Model cards (generations, engines, trims) come from Codex's catalogue;
+// pictures are front-view drawings only (FrontDrawing), not photos.
 
 type Params = Promise<{ brand: string; model: string }>;
 
@@ -153,26 +152,6 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
   { label: "Dojezd", value: (t) => (t.rangeKm ? `${num(t.rangeKm)} km` : null), tip: (t) => t.rangeCycle ?? t.consumptionCycle },
 ];
 
-function Photo({ gen, alt, drawing, className = "", eager = false }: { gen: CardGeneration; alt: string; drawing?: string | null; className?: string; eager?: boolean }) {
-  if (!gen.photo) {
-    if (!drawing) return null;
-    return (
-      <figure className={`min-w-0 ${className}`}>
-        <FrontDrawing id={drawing} alt={alt} className="rounded-xl" />
-        <figcaption className="mt-1 text-[11px] text-[var(--color-muted)]">Ilustrační nákres, fotografie zatím chybí</figcaption>
-      </figure>
-    );
-  }
-  return (
-    <figure className={`min-w-0 ${className}`}>
-      {/* 16:10 frame without empty bars (CarPhoto) */}
-      <CarPhoto photo={gen.photo} alt={alt} width={960} eager={eager} className="rounded-xl" />
-      <figcaption className="mt-1 text-[11px] text-[var(--color-muted)] truncate">
-        Foto: <a href={gen.photo.page} rel="noopener" className="underline hover:text-[var(--color-ink)]">{gen.photo.credit}</a>
-      </figcaption>
-    </figure>
-  );
-}
 
 function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null }) {
   const facts: [string, string | null][] = [
@@ -191,8 +170,6 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
     ["Zavazadelník", gen.trunkL ? `${num(gen.trunkL)} l` : null],
   ];
   const shown = facts.filter(([, v]) => v);
-  // facelifts with their own photo get a picture next to the original look
-  const faceliftPhotos = stagesOf(gen).slice(1).filter((st) => st.photo);
   const columns = TRIM_COLUMNS.filter((c) => gen.trims.some((t) => c.value(t)));
 
   return (
@@ -210,8 +187,8 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
           )}
         </ul>
       )}
-      <div className={`mt-4 grid gap-5 ${gen.photo || drawing ? "md:grid-cols-[minmax(0,22rem)_1fr]" : ""}`}>
-        <Photo gen={gen} alt={title} drawing={drawing} />
+      <div className={`mt-4 grid gap-5 ${drawing ? "md:grid-cols-[minmax(0,22rem)_1fr]" : ""}`}>
+        {drawing && <FrontDrawing id={drawing} alt={title} className="rounded-xl" />}
         <div className="min-w-0">
           {shown.length > 0 && (
             <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
@@ -249,21 +226,6 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
           )}
         </div>
       </div>
-      {faceliftPhotos.length > 0 && (
-        <div className="mt-5 grid gap-3 grid-cols-2 sm:grid-cols-3">
-          {faceliftPhotos.map((st) => (
-            <figure key={st.label} className="min-w-0">
-              <CarPhoto photo={st.photo!} alt={`${title} ${st.label}`} className="rounded-xl" />
-              <figcaption className="mt-1 text-xs">
-                <b>{st.label}</b> <span className="text-[var(--color-muted)]">{yearsSpan(st.from, st.to, st.current)}</span>
-                <span className="block truncate text-[11px] text-[var(--color-muted)]">
-                  Foto: <a href={st.photo!.page} rel="noopener" className="underline hover:text-[var(--color-ink)]">{st.photo!.credit}</a>
-                </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
       {gen.trims.length > 0 && (
         <div className="mt-5 overflow-x-auto">
           <h4 className="font-semibold text-sm mb-2">Verze a technické údaje</h4>
@@ -317,8 +279,6 @@ export default async function ModelPage({ params }: { params: Params }) {
   const name = card?.name ?? line?.name ?? model!.name;
   const title = `${make.name} ${name}`;
   const gens = card?.generations ?? [];
-  const cover = coverOf(card);
-  const coverGen = gens.find((g) => g.photo === cover);
   const coverDrawing = newestFrontDrawing(brandSlug, modelSlug);
   const bodies = [...new Set([...(line?.bodyTypes ?? []), ...gens.flatMap((g) => g.bodyTypes)])];
   const years = line ? yearsOf(line) : "";
@@ -396,9 +356,7 @@ export default async function ModelPage({ params }: { params: Params }) {
             />
           </div>
         </div>
-        {cover && coverGen ? (
-          <Photo gen={coverGen} alt={title} eager />
-        ) : coverDrawing ? (
+        {coverDrawing ? (
           <FrontDrawing id={coverDrawing} alt={title} className="rounded-2xl" />
         ) : (
           <CarImage body={demo?.body ?? PICTOGRAM[bodies[0]] ?? ((bodies[0] as Body) || "hatchback")} color="modrá" className="w-full rounded-2xl" />
@@ -410,16 +368,13 @@ export default async function ModelPage({ params }: { params: Params }) {
           <h2 className="text-xl font-bold mt-10 mb-3">Generace <span className="text-base font-normal text-[var(--color-muted)]">· {gens.length}</span></h2>
           <ol className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {gens.flatMap((g, i) => {
-              // the original look, then each facelift that has its own photo, as on Drom
-              const stages = stagesOf(g);
-              const shown = [stages[0], ...stages.slice(1).filter((st) => st.photo)];
+              // one card per generation: there is one drawing per generation (facelifts are listed in its details)
+              const shown = stagesOf(g).slice(0, 1);
               const base = g.name ?? g.code ?? `${i + 1}. generace`;
               return shown.map((st, k) => (
                 <li key={`${i}-${k}`} className="min-w-0">
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-                    {st.photo ? (
-                      <CarPhoto photo={st.photo} alt={`${title} ${base} ${st.label}`.trim()} />
-                    ) : frontDrawingId(brandSlug, modelSlug, i) ? (
+                    {frontDrawingId(brandSlug, modelSlug, i) ? (
                       <FrontDrawing id={frontDrawingId(brandSlug, modelSlug, i)!} alt={`${title} ${base}`} />
                     ) : (
                       <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />

@@ -16,14 +16,14 @@ import { PriceMeter, VerdictBadge } from "./VerdictBadge";
  * rating on the right. The title link stretches over the whole card so the
  * shortlist button can stay a separate, focusable control.
  */
-export function ListingRow({ listing }: { listing: Listing }) {
+export function ListingRow({ listing, drawing: given }: { listing: Listing; drawing?: string | null }) {
   const brand = getBrand(listing.brandSlug);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
   // Makes outside the demo catalogue carry the model name the seller typed in modelSlug.
   const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${model?.name ?? listing.modelSlug}, ${listing.year}`;
   // no seller photos yet: the generation's front drawing, else the body-type pictogram
-  const drawing = frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
+  const drawing = given !== undefined ? given : frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
   return (
     <article className="card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[200px_minmax(0,1fr)_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
       <div className="self-start overflow-hidden rounded-[10px]">

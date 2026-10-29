@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
+import { frontDrawingFor, newestFrontDrawing } from "@/components/FrontDrawing";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, generationMatch, getModel, models } from "@/lib/catalog";
 import { makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { citiesIn, getCity } from "@/lib/geo";
@@ -60,6 +61,10 @@ export function AddListingForm() {
     ...(vinProblem(draft.vin) ? [vinProblem(draft.vin)!] : []),
   ];
   const model = getModel(draft.brand, draft.model);
+  // catalogue makes store the model's slug, other makes the line's name; drawings are keyed by the
+  // line's slug. A year outside the line's generations (still being typed) shows the newest drawing.
+  const lineSlug = lines.find((l) => l.slug === draft.model || l.name === draft.model)?.slug;
+  const drawing = lineSlug ? (frontDrawingFor(draft.brand, lineSlug, draft.year) ?? newestFrontDrawing(draft.brand, lineSlug)) : null;
   const preview: Listing | null = model || (draft.brand && draft.model.trim())
     ? {
         id: "nahled",
@@ -212,7 +217,7 @@ export function AddListingForm() {
           <h2 className="font-bold mb-2">Náhled ve výsledcích</h2>
           {preview ? (
             // inert: the preview's link and ☆ button must not be focusable or clickable.
-            <div inert><ListingRow listing={preview} /></div>
+            <div inert><ListingRow listing={preview} drawing={drawing} /></div>
           ) : (
             <p className="card p-4 text-sm text-[var(--color-muted)]">Vyberte značku a model.</p>
           )}
