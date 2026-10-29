@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applySlugMigrations} from './slug-migrations.mjs';
 import {applySelectorExclusions} from '../sweep/selector-exclusions.mjs';
 import {readRaw,rawNames} from './raw-data.mjs';
 const root='analysis/codex', dest='src/data/catalog'; fs.mkdirSync(dest,{recursive:true});
@@ -75,6 +76,8 @@ for(const section of ['auto','moto']) {
  // Keep same-name records distinct, using a QID suffix stable across later imports.
  const counts=new Map();for(const m of models){const key=m.makeSlug+'/'+m.slug;counts.set(key,(counts.get(key)||0)+1);}for(const m of models)if(counts.get(m.makeSlug+'/'+m.slug)>1)m.slug+='-'+m.qid.toLowerCase();
  const used=new Set();for(const m of models){m.slug=registry[section][m.qid]??m.slug;let key=m.makeSlug+'/'+m.slug;if(used.has(key)){m.slug+='-'+m.qid.toLowerCase();key=m.makeSlug+'/'+m.slug;}if(used.has(key))throw Error('model slug collision '+key);used.add(key);registry[section][m.qid]=m.slug;}
+ applySlugMigrations(models);
+ for(const model of models)registry[section][model.qid]=model.slug;
  const retainedModels=applySelectorExclusions('models-'+section,models);
  for(const model of models)if(!retainedModels.includes(model))rejected.push({qid:model.qid,reason:'reviewed-sweep-exclusion',makeSlug:model.makeSlug,slug:model.slug});
  models.splice(0,models.length,...retainedModels);

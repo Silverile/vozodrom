@@ -22,6 +22,7 @@ export interface CatalogModel {
   /** Unique with makeSlug; use qid for durable identity. */
   slug: string;
   name: string;
+  aliases?: string[];
   makeSlug: string;
   qid: string;
   kind: "model" | "series";

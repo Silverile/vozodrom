@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {applySlugMigrations} from './slug-migrations.mjs';
 import {applySelectorExclusions} from '../sweep/selector-exclusions.mjs';
 import {createHash} from 'node:crypto';
 import {batchOrder,batchGenerationSkip} from './model-line-batch-1.mjs';
@@ -154,6 +155,7 @@ if(fs.existsSync('src/data/catalog/model-line-additions.json')){
  }
  lines.sort(sort);
 }
+applySlugMigrations(lines);
 fs.writeFileSync('src/data/catalog/model-lines-auto.json',JSON.stringify(applySelectorExclusions('model-lines-auto',lines),null,2)+'\n');
 fs.writeFileSync('analysis/codex/model-line-decisions.json',JSON.stringify(audit,null,2)+'\n');
 const exclusions={scope:'Editorial decisions; not a claim that grey imports never occur.',byMake:Object.fromEntries(order.map(m=>[m,manualExclusions[m].map(([name,reason])=>({name,decision:/merged|under .*famil|derivative|facelift|retained as.*alias/i.test(reason)?'merged':/deferred|not admitted|verification|needsReview|not.*corroborat|not.*confirmed|without.*evidence/i.test(reason)?'deferred':'excluded',reason}))]))};

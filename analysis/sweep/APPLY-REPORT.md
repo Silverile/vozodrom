@@ -58,9 +58,15 @@ model-lines-index.mjs now consumes model-line-additions.json directly as well as
 
 The complete machine-readable queue is [integration-decisions.json](integration-decisions.json), including every excluded/mismatched proposal, 82 conflicts whose recorded kept value is null, all 871 open research questions, and the remaining new-card exception. Unknown values were retained; no numeric resolution was invented.
 
-### Slug migrations deferred
+### Slug migrations: 5 applied, 10 stopped on occupied targets
 
-No slug changes were applied. A complete URL/registry migration was outside this guarded field-edit pass; these require a reference/redirect decision. The report does not claim every rename would break an existing URL.
+The human approved pre-launch renames without redirect stubs on 2026-10-29. The collision check covered models-auto, model-lines-auto, model-line-additions and both card folders. Five unused targets were migrated: Mercedes-Benz rady-107 to r107 (R107 / C107), type-204 to w204 (W204), Rolls-Royce phantom-q1130591 to phantom-vii (Phantom VII, 2003–2017, sedan), phantom-q33657874 to phantom-viii (Phantom VIII, 2017–unknown end, sedan), and Willys willys-overland-jeepster to jeepster. Old slugs are retained in raw-model aliases and the Willys card aliases. Both builders import analysis/codex/slug-migrations.mjs; the raw slug registry is updated. The migration script is idempotent.
+
+The following ten renames were **not applied**, following the explicit stop-on-collision instruction: Mahindra Electric mahindra-e2o to e2o, mahindra-e2o-plus to e2o-plus, revai to reva; Morgan 4-q6911571 to plus-4 and 4-q6911573 to plus-4-plus; Moskvič moskvich-8 to 8; Neta neta-gt to gt; Rolls-Royce rolls-royce-cullinan to cullinan; XPeng p7-q65064122 to p7 and p7-q130527663 to p7-plus. Mahindra/Morgan/Moskvič/Neta targets already exist in both line files and their catalog cards; Cullinan exists in additions and its runtime card; both XPeng targets exist in runtime cards. No target identities were merged, and Cullinan field changes remain deferred with its rename.
+
+Verification: all three index scripts completed, TypeScript passed, and npm run build exported 5,638 pages successfully. All five applied old routes are absent from out/. The new Willys jeepster page exists. The two Mercedes and two Phantom identities have no model-line/card records, so neither old nor new routes are generated for those four; this migration does not add researched model lines or pages. No matching old front-drawing files or source references outside aliases remained for the five applied migrations. Full raw source rebuilds were not run; isolated override checks pass for old and registry-preserved slugs. Run node analysis/codex/verify-slug-migrations.mjs after a build to repeat these checks.
+
+Original requested migration list (the five applied entries above are complete; the other ten remain deferred):
 
 - mahindra-electric/mahindra-e2o: slug → "e2o"
 - mahindra-electric/mahindra-e2o-plus: slug → "e2o-plus"
@@ -289,3 +295,36 @@ Sono Sion was explicitly removed from the raw selector because the sweep documen
 The initial validation caught a helper matching duplicate removals by QID alone. It was fixed to match the reviewed slug as well, then the validator passed. No current validation failures. This was an integration of existing reviewed evidence, not a fresh independent fact-check of every cited page. Full source rebuilds, browser visual review and URL/redirect migration remain unverified. Ignore .next build churn.
 
 Changed-file manifest: [changed-files.json](changed-files.json). Detailed first-pass audit: [apply-log-90dd9c8c7d5e.json](apply-log-90dd9c8c7d5e.json). Final idempotence audit: [apply-log-4c3809d4c189.json](apply-log-4c3809d4c189.json).
+
+## Supplemental merge of ten occupied slug targets (2026-10-29)
+
+Confirmed all ten raw entries as duplicate identities of existing sourced lines/cards. All target line QIDs were null; no conflicting QID existed. All ten raw production bounds were null and their code arrays empty, so there were no additional production dates or codes to transfer. Existing target chronology and generation data remain intact. The Cullinan raw SUV body type was already present on its canonical line. QIDs and their source links were retained on the canonical lines, and each old slug is now an alias on both line and card. Raw metadata is retained in the exclusion snapshots.
+
+| Make | Removed raw slug | Canonical slug | Retained QID / source identity |
+| --- | --- | --- | --- |
+| mahindra-electric | mahindra-e2o | e2o | [Q12061442](https://www.wikidata.org/wiki/Q12061442) |
+| mahindra-electric | mahindra-e2o-plus | e2o-plus | [Q65122328](https://www.wikidata.org/wiki/Q65122328) |
+| mahindra-electric | revai | reva | [REVAi / Q2092926](https://en.wikipedia.org/wiki/REVAi) |
+| morgan | 4-q6911571 | plus-4 | [Q6911571](https://www.wikidata.org/wiki/Q6911571) |
+| morgan | 4-q6911573 | plus-4-plus | [Morgan +4+ / Q6911573](https://en.wikipedia.org/wiki/Morgan_%2B4%2B) |
+| moskvic | moskvich-8 | 8 | [Q135642307](https://www.wikidata.org/wiki/Q135642307) |
+| neta-auto | neta-gt | gt | [Q115852634](https://www.wikidata.org/wiki/Q115852634) |
+| rolls-royce | rolls-royce-cullinan | cullinan | [Q30972583](https://www.wikidata.org/wiki/Q30972583) |
+| xpeng | p7-q65064122 | p7 | [Q65064122](https://www.wikidata.org/wiki/Q65064122) |
+| xpeng | p7-q130527663 | p7-plus | [XPeng P7+ / Q130527663](https://en.wikipedia.org/wiki/XPeng_P7%2B) |
+
+Wikidata labels, descriptions and sitelinks were checked online; three direct entity fetches failed (REVAi, Morgan +4+, P7+), so their Wikipedia pages and Wikidata item-link destinations established the matching QIDs. REVA/REVAi is already one canonical family. The classic Morgan +4 and +4+ remain distinct, as do XPeng P7 and P7+. No different-car exception was found. This identity merge does not revalidate every historical date or specification on the existing cards.
+
+Ten durable `models-auto` selector exclusions were added with exact make/slug/QID matching. P7 and P7+ were promoted from existing cards to model-line additions. Cullinan's existing addition and these two additions were materialized into model-lines-auto, replacing card-only fallback without creating new card identities. The totals are now 4,377 explicit lines plus 402 card-only lines; 4,616 cards; 432 makes. Three indexes rebuilt successfully. No old card identity, front-drawing key/asset, index identity or exported catalog route points to the removed slugs. All ten canonical catalog routes exist after the build.
+
+Validation:
+
+- `node analysis/codex/merge-slug-collisions.mjs`: ten merges; repeat returned `changed: []`.
+- `node scripts/model-cards-index.mjs`, `node scripts/model-lines-index.mjs`, `node scripts/makes-index.mjs`: passed.
+- `node analysis/sweep/validate-integration.mjs`: zero issues; pre-existing Sion exception unchanged.
+- `node analysis/codex/verify-slug-collisions.mjs --routes`: passed canonical QIDs/aliases, indexes, cards, drawings, 20 exclusion-helper boundary cases and ten canonical/removed route pairs.
+- `node analysis/codex/verify-slug-migrations.mjs`: passed the previous five migrations.
+- `npx tsc --noEmit --incremental false`: passed.
+- `npm run build`: passed, all 5,638 static pages generated.
+
+Audit snapshots and target generation bounds: [slug-collision-merges.json](codex/slug-collision-merges.json). Full source rebuilds and browser visual review were not run. No commit or push was performed.
