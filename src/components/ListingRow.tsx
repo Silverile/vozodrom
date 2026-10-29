@@ -5,6 +5,7 @@ import { formatAgo, formatKm, formatPrice } from "@/lib/format";
 import { marketEstimate } from "@/lib/market";
 import type { Listing } from "@/lib/types";
 import { CarImage } from "./CarImage";
+import { FrontDrawing, frontDrawingFor } from "./FrontDrawing";
 import { FavoriteButton } from "./FavoriteButton";
 import { Place } from "./Place";
 import { StkBadge } from "./StkBadge";
@@ -21,10 +22,16 @@ export function ListingRow({ listing }: { listing: Listing }) {
   const estimate = marketEstimate(listing);
   // Makes outside the demo catalogue carry the model name the seller typed in modelSlug.
   const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${model?.name ?? listing.modelSlug}, ${listing.year}`;
+  // no seller photos yet: the generation's front drawing, else the body-type pictogram
+  const drawing = frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
   return (
     <article className="card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[200px_minmax(0,1fr)_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
       <div className="self-start overflow-hidden rounded-[10px]">
-        <CarImage body={listing.body} color={listing.color} className="w-full aspect-[4/3]" />
+        {drawing ? (
+          <FrontDrawing id={drawing} alt={name} aspect="aspect-[4/3]" />
+        ) : (
+          <CarImage body={listing.body} color={listing.color} className="w-full aspect-[4/3]" />
+        )}
       </div>
       <div className="min-w-0">
         <h3 className="font-bold leading-tight">

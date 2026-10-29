@@ -11,6 +11,7 @@ import { factsOf, historyOf, hostOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
 import { BODY_GROUPS, cardOf, coverOf } from "@/lib/modelCards";
 import { CarPhoto } from "@/components/CarPhoto";
+import { FrontDrawing, newestFrontDrawing } from "@/components/FrontDrawing";
 import type { Body } from "@/lib/types";
 
 // Every make has a page. Makes with curated model lines show the whole range as photo cards,
@@ -29,11 +30,15 @@ function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: Mo
         const card = cardOf(slug, l.slug);
         const cover = coverOf(card);
         const gens = card?.generations.length || l.generations.length;
+        // without a photo: the newest generation that has a drawing
+        const drawing = cover ? null : newestFrontDrawing(slug, l.slug);
         return (
           <li key={l.slug} className="min-w-0">
             <Link href={`/katalog/${slug}/${l.slug}/`} className="card block overflow-hidden hover:shadow-lg transition h-full">
               {cover ? (
                 <CarPhoto photo={cover} alt={`${make} ${l.name}`} />
+              ) : drawing ? (
+                <FrontDrawing id={drawing} alt={`${make} ${l.name}`} />
               ) : (
                 <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
               )}

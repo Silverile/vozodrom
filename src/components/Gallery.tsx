@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Body } from "@/lib/types";
 import { CarImage } from "./CarImage";
+import { FrontDrawing } from "./FrontDrawing";
 
 const VIEWS = [
   { label: "Bok vozu", icon: "" },
@@ -13,10 +14,10 @@ const VIEWS = [
 ];
 
 /** Photo gallery with thumbnails and arrow-key navigation. The prototype has no real photos, only labelled placeholders. */
-export function Gallery({ body, color, title }: { body: Body; color: string; title: string }) {
+export function Gallery({ body, color, title, drawing }: { body: Body; color: string; title: string; drawing?: string | null }) {
   const [index, setIndex] = useState(0);
   const go = (delta: number) => setIndex((i) => (i + delta + VIEWS.length) % VIEWS.length);
-  const view = VIEWS[index];
+  const view = index === 0 && drawing ? { label: "Nákres zepředu", icon: "" } : VIEWS[index];
 
   return (
     <div
@@ -30,7 +31,9 @@ export function Gallery({ body, color, title }: { body: Body; color: string; tit
       }}
     >
       <div className="relative">
-        {index === 0 ? (
+        {index === 0 && drawing ? (
+          <FrontDrawing id={drawing} alt={title} />
+        ) : index === 0 ? (
           <CarImage body={body} color={color} className="w-full aspect-[16/10]" />
         ) : (
           <div className="w-full aspect-[16/10] grid place-items-center bg-[var(--color-photo)] text-center">
@@ -51,11 +54,17 @@ export function Gallery({ body, color, title }: { body: Body; color: string; tit
           <button
             key={v.label}
             onClick={() => setIndex(i)}
-            aria-label={`Fotografie ${i + 1}: ${v.label}`}
+            aria-label={`Fotografie ${i + 1}: ${i === 0 && drawing ? "Nákres zepředu" : v.label}`}
             aria-current={i === index}
             className={`aspect-[4/3] rounded-md bg-[var(--color-field)] grid place-items-center text-lg border-2 ${i === index ? "border-[var(--color-brand)]" : "border-transparent"}`}
           >
-            {i === 0 ? <CarImage body={body} color={color} className="w-full h-full rounded-sm" /> : <span aria-hidden="true">{v.icon}</span>}
+            {i === 0 && drawing ? (
+              <FrontDrawing id={drawing} alt={title} aspect="h-full" className="rounded-sm" />
+            ) : i === 0 ? (
+              <CarImage body={body} color={color} className="w-full h-full rounded-sm" />
+            ) : (
+              <span aria-hidden="true">{v.icon}</span>
+            )}
           </button>
         ))}
       </div>

@@ -6,6 +6,7 @@ import { CarImage } from "@/components/CarImage";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { CarPhoto } from "@/components/CarPhoto";
+import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
 import { RealStats } from "@/components/RealStats";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
@@ -152,8 +153,16 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
   { label: "Dojezd", value: (t) => (t.rangeKm ? `${num(t.rangeKm)} km` : null), tip: (t) => t.rangeCycle ?? t.consumptionCycle },
 ];
 
-function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneration; alt: string; className?: string; eager?: boolean }) {
-  if (!gen.photo) return null;
+function Photo({ gen, alt, drawing, className = "", eager = false }: { gen: CardGeneration; alt: string; drawing?: string | null; className?: string; eager?: boolean }) {
+  if (!gen.photo) {
+    if (!drawing) return null;
+    return (
+      <figure className={`min-w-0 ${className}`}>
+        <FrontDrawing id={drawing} alt={alt} className="rounded-xl" />
+        <figcaption className="mt-1 text-[11px] text-[var(--color-muted)]">Ilustrační nákres, fotografie zatím chybí</figcaption>
+      </figure>
+    );
+  }
   return (
     <figure className={`min-w-0 ${className}`}>
       {/* 16:10 frame without empty bars (CarPhoto) */}
@@ -165,7 +174,7 @@ function Photo({ gen, alt, className = "", eager = false }: { gen: CardGeneratio
   );
 }
 
-function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry }) {
+function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null }) {
   const facts: [string, string | null][] = [
     ["Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
     ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => (f.name ? `${f.year} (${f.name})` : f.year)).join(", ") : null],
@@ -201,8 +210,8 @@ function GenerationDetail({ gen, title, id, stats }: { gen: CardGeneration; titl
           )}
         </ul>
       )}
-      <div className={`mt-4 grid gap-5 ${gen.photo ? "md:grid-cols-[minmax(0,22rem)_1fr]" : ""}`}>
-        <Photo gen={gen} alt={title} />
+      <div className={`mt-4 grid gap-5 ${gen.photo || drawing ? "md:grid-cols-[minmax(0,22rem)_1fr]" : ""}`}>
+        <Photo gen={gen} alt={title} drawing={drawing} />
         <div className="min-w-0">
           {shown.length > 0 && (
             <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
@@ -310,6 +319,7 @@ export default async function ModelPage({ params }: { params: Params }) {
   const gens = card?.generations ?? [];
   const cover = coverOf(card);
   const coverGen = gens.find((g) => g.photo === cover);
+  const coverDrawing = newestFrontDrawing(brandSlug, modelSlug);
   const bodies = [...new Set([...(line?.bodyTypes ?? []), ...gens.flatMap((g) => g.bodyTypes)])];
   const years = line ? yearsOf(line) : "";
   const powers = powerRange(gens);
@@ -388,6 +398,8 @@ export default async function ModelPage({ params }: { params: Params }) {
         </div>
         {cover && coverGen ? (
           <Photo gen={coverGen} alt={title} eager />
+        ) : coverDrawing ? (
+          <FrontDrawing id={coverDrawing} alt={title} className="rounded-2xl" />
         ) : (
           <CarImage body={demo?.body ?? PICTOGRAM[bodies[0]] ?? ((bodies[0] as Body) || "hatchback")} color="modrá" className="w-full rounded-2xl" />
         )}
@@ -407,6 +419,8 @@ export default async function ModelPage({ params }: { params: Params }) {
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
                     {st.photo ? (
                       <CarPhoto photo={st.photo} alt={`${title} ${base} ${st.label}`.trim()} />
+                    ) : frontDrawingId(brandSlug, modelSlug, i) ? (
+                      <FrontDrawing id={frontDrawingId(brandSlug, modelSlug, i)!} alt={`${title} ${base}`} />
                     ) : (
                       <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
                     )}
@@ -432,7 +446,7 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
               const i = gens.length - 1 - r;
-              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} stats={real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
+              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
             })}
           </div>
         </>

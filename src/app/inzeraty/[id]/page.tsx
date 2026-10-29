@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BatteryPanel } from "@/components/BatteryPanel";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { Gallery } from "@/components/Gallery";
+import { frontDrawingFor } from "@/components/FrontDrawing";
 import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { Place } from "@/components/Place";
@@ -87,7 +88,12 @@ export default async function ListingPage({ params }: { params: Params }) {
       <div className="grid gap-5 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_340px_300px] mt-5 items-start">
         {/* photos + details */}
         <div className="space-y-4 min-w-0">
-          <Gallery body={listing.body} color={listing.color} title={`${brand.name} ${model.name}, ${listing.year}`} />
+          <Gallery
+            body={listing.body}
+            color={listing.color}
+            title={`${brand.name} ${model.name}, ${listing.year}`}
+            drawing={frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year)}
+          />
           {listing.battery && <BatteryPanel battery={listing.battery} />}
           <section className="card p-4">
             <h2 className="font-bold">Výbava</h2>
