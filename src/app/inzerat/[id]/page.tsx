@@ -124,7 +124,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
                 <div className="text-xs text-[var(--color-muted)]">Soukromý prodejce · vloženo {formatDate(listing.postedAt)}</div>
               </div>
             </div>
-            {row.phone ? <PhoneReveal phone={row.phone} /> : <p className="text-sm text-[var(--color-muted)]">Prodejce neuvedl telefon.</p>}
+            {row.phone ? <PhoneReveal phone={row.phone} messengers={row.messengers} /> : <p className="text-sm text-[var(--color-muted)]">Prodejce neuvedl telefon.</p>}
             <div className="flex items-center justify-between gap-3">
               <span className="text-sm">Přidat do výběru</span>
               <FavoriteButton id={listing.id} label={title} />

@@ -1,0 +1,1 @@
+ALTER TABLE "listing" ADD COLUMN "messengers" jsonb DEFAULT '[]'::jsonb NOT NULL;

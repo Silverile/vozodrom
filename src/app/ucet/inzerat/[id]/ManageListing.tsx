@@ -9,14 +9,14 @@ import { formatKm, formatPrice } from "@/lib/format";
 import { getCity } from "@/lib/geo";
 import { BODY_KEYS } from "@/lib/listing-catalog";
 import type { Draft } from "@/lib/listing-draft";
-import { STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
+import { MESSENGERS, MESSENGER_LABEL, type Messenger, STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
 import { resizePhoto } from "@/lib/photo-resize";
 import { draftStore } from "../../../pridat/AddListingForm";
 
 const MAX_PHOTOS = 20;
 
 interface Props {
-  listing: { id: string; title: string; status: ListingStatus; data: Draft; photos: ListingPhoto[]; phone: string; rejectReason: string | null };
+  listing: { id: string; title: string; status: ListingStatus; data: Draft; photos: ListingPhoto[]; phone: string; messengers: Messenger[]; rejectReason: string | null };
 }
 
 async function call(url: string, method: string, body?: unknown): Promise<string | null> {
@@ -34,6 +34,8 @@ export function ManageListing({ listing }: Props) {
   const base = `/api/inzeraty/${listing.id}/`;
   const [photos, setPhotos] = useState(listing.photos);
   const [phone, setPhone] = useState(listing.phone);
+  const [messengers, setMessengers] = useState<Messenger[]>(listing.messengers);
+  const contactChanged = phone !== listing.phone || messengers.join() !== listing.messengers.join();
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState("");
   const [error, setError] = useState("");
@@ -199,14 +201,28 @@ export function ManageListing({ listing }: Props) {
         <h2 className="font-bold">Kontakt</h2>
         <p className="text-sm text-[var(--color-muted)]">Telefon se zobrazí v inzerátu. E-mail kupujícím neukazujeme.</p>
         <form
-          className="mt-2 flex flex-wrap gap-2"
+          className="mt-2 space-y-2"
           onSubmit={(e) => {
             e.preventDefault();
-            run(() => call(base, "PATCH", { phone }), "Telefon uložen.");
+            run(() => call(base, "PATCH", { phone, messengers: phone.trim() ? MESSENGERS.filter((m) => messengers.includes(m)) : [] }), "Kontakt uložen.");
           }}
         >
           <input className="input w-auto" type="tel" autoComplete="tel" placeholder="+420 123 456 789" value={phone} disabled={!editable} onChange={(e) => setPhone(e.target.value)} aria-label="Telefon" />
-          {editable && <button type="submit" className="pill" disabled={busy || phone === listing.phone}>Uložit</button>}
+          <fieldset className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm" disabled={!editable || !phone.trim()}>
+            <legend className="sr-only">Komunikátory na tomto čísle</legend>
+            <span className="text-[var(--color-muted)]">Na tomto čísle také:</span>
+            {MESSENGERS.map((m) => (
+              <label key={m} className="flex items-center gap-1.5">
+                <input
+                  type="checkbox"
+                  checked={messengers.includes(m)}
+                  onChange={(e) => setMessengers((current) => (e.target.checked ? [...current, m] : current.filter((x) => x !== m)))}
+                />
+                {MESSENGER_LABEL[m]}
+              </label>
+            ))}
+          </fieldset>
+          {editable && <button type="submit" className="pill" disabled={busy || !contactChanged}>Uložit</button>}
         </form>
       </section>
 

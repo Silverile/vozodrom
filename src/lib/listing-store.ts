@@ -6,6 +6,7 @@ import { and, asc, count, desc, eq, isNotNull, ne, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { type ListingPhoto, type ListingStatus, listing, user } from "@/db/schema";
 import { STAFF_ROLES, type Session, hasRole } from "./auth";
+import { MESSENGERS, type Messenger } from "./listing-status";
 import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
 import { sendMail } from "./mail";
 import { marketEstimate, roughMarketPrice } from "./market";
@@ -65,6 +66,11 @@ export function parsePhone(value: unknown): string | null {
   return phone;
 }
 
+export function parseMessengers(value: unknown): Messenger[] {
+  if (!Array.isArray(value) || !value.every((m) => MESSENGERS.includes(m))) throw new ListingError(400, "Neplatné komunikátory.");
+  return MESSENGERS.filter((m) => value.includes(m));
+}
+
 export async function createListing(session: Session, data: Draft): Promise<string> {
   // Short, unguessable, URL-safe; the u- prefix keeps user listings apart from test and feed ids.
   const id = `u-${generateRandomString(12, "a-z", "0-9")}`;
@@ -72,7 +78,11 @@ export async function createListing(session: Session, data: Draft): Promise<stri
   return id;
 }
 
-export async function updateListing(session: Session, id: string, changes: { data?: Draft; phone?: string | null; order?: string[] }) {
+export async function updateListing(
+  session: Session,
+  id: string,
+  changes: { data?: Draft; phone?: string | null; messengers?: Messenger[]; order?: string[] },
+) {
   const row = await listingFor(session, id);
   if (row.status === "withdrawn") throw new ListingError(409, "Stažený inzerát už nelze upravit.");
   let photos = row.photos;
@@ -82,7 +92,7 @@ export async function updateListing(session: Session, id: string, changes: { dat
     photos = changes.order.map((k) => byKey.get(k)!);
   }
   // Changed content of a live listing is reviewed again; a rejected listing becomes an editable draft.
-  const contentChanged = changes.data !== undefined || changes.phone !== undefined;
+  const contentChanged = changes.data !== undefined || changes.phone !== undefined || changes.messengers !== undefined;
   const live = row.status === "pending" || row.status === "published";
   const flags = contentChanged && live ? await autoReview(row, changes.data ?? row.data) : row.moderationFlags;
   const status: ListingStatus =
@@ -92,6 +102,7 @@ export async function updateListing(session: Session, id: string, changes: { dat
     .set({
       ...(changes.data && { data: changes.data }),
       ...(changes.phone !== undefined && { phone: changes.phone }),
+      ...(changes.messengers !== undefined && { messengers: changes.phone === null ? [] : changes.messengers }),
       photos,
       status,
       moderationFlags: flags,

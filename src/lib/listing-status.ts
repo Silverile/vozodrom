@@ -16,5 +16,10 @@ export const STATUS_STYLE: Record<ListingStatus, string> = {
   withdrawn: "bg-[var(--color-field)] text-[var(--color-muted)]",
 };
 
+/** Messengers a seller can offer on the listing phone number. */
+export const MESSENGERS = ["whatsapp", "telegram", "viber"] as const;
+export type Messenger = (typeof MESSENGERS)[number];
+export const MESSENGER_LABEL: Record<Messenger, string> = { whatsapp: "WhatsApp", telegram: "Telegram", viber: "Viber" };
+
 /** Public URL of a stored listing photo (served by /foto/[...key]). */
 export const photoUrl = (key: string) => `/foto/${key}`;

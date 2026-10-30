@@ -1,5 +1,6 @@
 import { boolean, index, jsonb, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
 import type { Draft } from "@/lib/listing-draft";
+import type { Messenger } from "@/lib/listing-status";
 
 // Tables and columns used by Better Auth (core + admin plugin). Names follow its defaults,
 // so the adapter needs no field mapping.
@@ -111,6 +112,8 @@ export const listing = pgTable(
     data: jsonb("data").$type<Draft>().notNull(),
     photos: jsonb("photos").$type<ListingPhoto[]>().notNull().default([]),
     phone: text("phone"),
+    /** messengers reachable on the same phone number: whatsapp | telegram | viber */
+    messengers: jsonb("messengers").$type<Messenger[]>().notNull().default([]),
     rejectReason: text("reject_reason"),
     /** reasons the automatic review sent the listing to a moderator (lib/moderation) */
     moderationFlags: jsonb("moderation_flags").$type<string[]>().notNull().default([]),

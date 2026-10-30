@@ -4,7 +4,7 @@ import type { Draft } from "./listing-draft";
 
 // Automatic first pass over a listing before it goes live. Clean listings are published at once;
 // anything matching a rule waits for a moderator, who sees the reasons. The rules aim at the
-// usual car-ad fraud (advance payment, contact moved off the site, price far below the market)
+// usual car-ad fraud (advance payment, a car abroad, price far below the market)
 // and at content that must not be published. They flag, they never reject on their own.
 
 export interface ReviewContext {
@@ -25,7 +25,6 @@ const PHRASES: Record<string, string[]> = {
     "kauce", "kauci", "paysafecard", "bitcoin", "kryptomen",
   ],
   "dodání bez prohlídky": ["doruceni kuryrem", "doruceni dpd", "dovezu az domu bez", "auto je v zahranici", "jsem v zahranici", "jsem momentalne v zahranici"],
-  "kontakt mimo web": ["whatsapp", "telegram", "viber", "signal app"],
   "vůz bez dokladů nebo s pochybnou historií": ["kradene", "kradeny", "bez dokladu", "bez tp", "bez technickeho prukazu", "stoceny tachometr", "stocene km", "padelek"],
   "vulgarismy": ["kurva", "kokot", "zmrd", "debil", "pica", "curak"],
 };

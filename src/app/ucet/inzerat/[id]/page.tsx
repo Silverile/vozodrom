@@ -27,6 +27,7 @@ export default async function ManageListingPage({ params }: { params: Promise<{ 
           data: row.data,
           photos: row.photos,
           phone: row.phone ?? "",
+          messengers: row.messengers,
           rejectReason: row.rejectReason,
         }}
       />
