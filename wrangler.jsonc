@@ -24,9 +24,9 @@
   ],
   // BETTER_AUTH_URL is public; secrets (BETTER_AUTH_SECRET, GOOGLE_CLIENT_SECRET, …) come from
   // `wrangler secret put` in production and from .dev.vars locally.
-  // SIGNUP_OPEN stays "false" until verification e-mails can be sent (src/lib/mail.ts).
+  // SIGNUP_OPEN: "false" closes registration (e.g. if e-mail sending breaks; see src/lib/mail.ts).
   // MAIL_FROM switches sending on; without it (locally) mail is only logged.
-  "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz", "SIGNUP_OPEN": "false", "MAIL_FROM": "Vozodrom <noreply@vozodrom.cz>" },
+  "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz", "SIGNUP_OPEN": "true", "MAIL_FROM": "Vozodrom <noreply@vozodrom.cz>" },
   // Cloudflare Email Service; vozodrom.cz is onboarded for sending (SPF/DKIM on cf-bounce, DMARC).
   "send_email": [{ "name": "EMAIL" }]
 }

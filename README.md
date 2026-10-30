@@ -28,8 +28,8 @@ npm run admin:create -- e-mail@example.com "Jméno"   # administrátor bez regis
 npm run admin:grant -- e-mail@example.com            # existujícímu účtu přidá roli admin
 ```
 
-Registrace je v produkci vypnutá (`SIGNUP_OPEN` ve `wrangler.jsonc`), dokud nepůjde posílat e-maily.
-Bez poskytovatele e-mailů se ověřovací odkazy a odkazy pro reset hesla jen vypisují do konzole
+Registraci lze vypnout proměnnou `SIGNUP_OPEN` ve `wrangler.jsonc`. E-maily posílá Cloudflare Email Service (`noreply@vozodrom.cz`).
+Lokálně (prázdné `MAIL_FROM`) se ověřovací odkazy a odkazy pro reset hesla jen vypisují do konzole
 dev serveru (`src/lib/mail.ts`). Změna schématu: upravit `src/db/schema.ts`, pak `npm run db:generate`.
 
 ## Struktura
