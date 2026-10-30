@@ -61,6 +61,7 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 | `reports.ts` | hlášení podle DSA: příjem, skrytí po 3 hlášeních, rozhodnutí, vyrozumění |
 | `chat.ts` | konverzace, zprávy, nepřečtené, oznámení (`notify`, `notifyStaff`), push do Inboxu |
 | `watchdog.ts` | hlídací pes: shoda uložených hledání s novými inzeráty |
+| `listing-context.ts` | k inzerátu uživatele najde generaci v katalogu, odpovídající motor a verzi a data z registru/STK |
 | `account-lists.ts` | oblíbené a uložená hledání uživatele |
 | `mail.ts` | odeslání e-mailu (Cloudflare Email Service; lokálně jen výpis) |
 

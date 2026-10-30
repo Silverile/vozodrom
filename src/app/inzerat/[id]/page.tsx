@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { CarImage } from "@/components/CarImage";
 import { FavoriteButton } from "@/components/FavoriteButton";
+import { FrontDrawing } from "@/components/FrontDrawing";
+import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { Place } from "@/components/Place";
@@ -14,10 +16,14 @@ import { formatDate, formatKm, formatPrice } from "@/lib/format";
 import { regionLabel } from "@/lib/geo";
 import { BODY_KEYS } from "@/lib/listing-catalog";
 import { draftTitle } from "@/lib/listing-draft";
+import { listingContext } from "@/lib/listing-context";
+import { listings as testListings } from "@/lib/listings";
 import { getMake } from "@/lib/makes";
 import { STATUS_LABEL } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
-import { userListingPage } from "@/lib/user-listings";
+import type { Listing } from "@/lib/types";
+import { publishedUserListings, userListingPage } from "@/lib/user-listings";
+import { CzechData, GenerationCard } from "./CatalogContext";
 import { PhoneReveal } from "./PhoneReveal";
 import { ReportListing } from "./ReportListing";
 import { WriteSeller } from "./WriteSeller";
@@ -38,6 +44,14 @@ async function load(id: string) {
   return allowed ? { ...found, preview: true } : null;
 }
 
+/** Up to three other cars of the same model (then make), closest in year and price first. */
+async function similarTo(listing: Listing): Promise<Listing[]> {
+  const pool = [...(await publishedUserListings()), ...testListings].filter((l) => l.id !== listing.id && l.brandSlug === listing.brandSlug);
+  const distance = (l: Listing) =>
+    (l.modelSlug === listing.modelSlug ? 0 : 100) + Math.abs(l.year - listing.year) + Math.abs(l.price - listing.price) / Math.max(listing.price, 1) * 5;
+  return pool.sort((a, b) => distance(a) - distance(b)).slice(0, 3);
+}
+
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const found = await load((await params).id);
   if (!found) return { title: "Inzerát" };
@@ -52,6 +66,10 @@ export default async function UserListingPage({ params }: { params: Params }) {
   const title = draftTitle(row.data);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
+  const context = listingContext(listing, row.data);
+  const makeName = getMake(listing.brandSlug)?.name ?? listing.brandSlug;
+  const similar = preview ? [] : await similarTo(listing);
+  const generationName = context ? context.gen.name ?? context.gen.code : model ? listing.generation : null;
 
   const specs: [string, React.ReactNode][] = [
     ["Rok výroby", listing.year],
@@ -62,7 +80,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
     ["Převodovka", listing.transmission],
     ["Karoserie", BODY_KEYS[row.data.body] ?? BODY_LABEL[listing.body]],
     ["Barva", listing.color],
-    ...(model ? [["Generace", listing.generation] as [string, React.ReactNode]] : []),
+    ...(generationName ? [["Generace", generationName] as [string, React.ReactNode]] : []),
     ["VIN", listing.vin],
     ["Místo", <Place key="m" city={listing.city} fallback={listing.region} region={listing.region === "Praha" ? undefined : regionLabel(listing.region)} />],
   ];
@@ -77,14 +95,16 @@ export default async function UserListingPage({ params }: { params: Params }) {
       )}
       <nav className="text-sm text-[var(--color-muted)]">
         <Link href="/inzeraty/" className="hover:text-[var(--color-ink)]">Inzeráty</Link> /{" "}
-        <Link href={`/inzeraty/?znacka=${listing.brandSlug}`} className="hover:text-[var(--color-ink)]">{getMake(listing.brandSlug)?.name ?? listing.brandSlug}</Link>
+        <Link href={`/inzeraty/?znacka=${listing.brandSlug}`} className="hover:text-[var(--color-ink)]">{makeName}</Link>
       </nav>
       <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">{title}</h1>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_340px_300px] mt-5 items-start">
+      <div className={`grid gap-5 lg:grid-cols-[1fr_340px] ${model ? "xl:grid-cols-[1fr_340px_300px]" : ""} mt-5 items-start`}>
         <div className="space-y-4 min-w-0">
           {listing.photos?.length ? (
             <PhotoGallery photos={listing.photos} title={title} />
+          ) : context?.drawing ? (
+            <div className="card overflow-hidden"><FrontDrawing id={context.drawing} alt={title} /></div>
           ) : (
             <div className="card overflow-hidden"><CarImage body={listing.body} color={listing.color} className="w-full aspect-[16/10]" /></div>
           )}
@@ -94,6 +114,8 @@ export default async function UserListingPage({ params }: { params: Params }) {
               <p className="mt-1 text-[var(--color-muted)] whitespace-pre-line">{listing.description}</p>
             </section>
           )}
+          {context && <GenerationCard context={context} makeName={makeName} brandSlug={listing.brandSlug} />}
+          {context && <CzechData context={context} listing={listing} makeName={makeName} />}
         </div>
 
         <div className="space-y-4 lg:sticky lg:top-20 order-first lg:order-none">
@@ -148,6 +170,20 @@ export default async function UserListingPage({ params }: { params: Params }) {
           </aside>
         )}
       </div>
+
+      {similar.length > 0 && (
+        <section className="mt-10">
+          <div className="flex items-end justify-between gap-3 mb-4">
+            <h2 className="text-xl font-bold">Podobná auta</h2>
+            <Link href={`/inzeraty/?znacka=${listing.brandSlug}`} className="text-sm font-semibold text-[var(--color-brand)]">
+              Všechny {makeName} →
+            </Link>
+          </div>
+          <div className="grid gap-3 grid-cols-2 lg:grid-cols-3">
+            {similar.map((l) => <ListingCard key={l.id} listing={l} />)}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

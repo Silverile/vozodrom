@@ -8,6 +8,10 @@ export function PhotoGallery({ photos, title }: { photos: { key: string; width: 
   const [index, setIndex] = useState(0);
   const go = (delta: number) => setIndex((i) => (i + delta + photos.length) % photos.length);
   const current = photos[index];
+  // The frame takes the first photo's shape (within 4:3 to 16:9), so a gallery of landscape shots has
+  // no bars and the frame does not jump between photos.
+  const first = photos[0];
+  const aspect = Math.min(16 / 9, Math.max(4 / 3, first.width / first.height || 4 / 3));
 
   return (
     <div
@@ -21,7 +25,7 @@ export function PhotoGallery({ photos, title }: { photos: { key: string; width: 
       }}
     >
       <div className="relative bg-[var(--color-photo)]">
-        <img src={photoUrl(current.key)} alt={`${title}, fotka ${index + 1} z ${photos.length}`} width={current.width} height={current.height} className="w-full aspect-[4/3] object-contain" />
+        <img src={photoUrl(current.key)} alt={`${title}, fotka ${index + 1} z ${photos.length}`} width={current.width} height={current.height} className="w-full object-contain" style={{ aspectRatio: aspect }} />
         {photos.length > 1 && (
           <>
             <button type="button" onClick={() => go(-1)} aria-label="Předchozí fotka" className="absolute left-2 top-1/2 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full bg-black/50 text-white">‹</button>

@@ -80,6 +80,9 @@ převodovka, nájezd, cena ≥ 1 000 Kč, místo, VIN (17 znaků bez I/O/Q).
 - `src/data/*-index.json` — malé indexy pro web, generované skripty `scripts/makes-index.mjs`,
   `scripts/model-lines-index.mjs`, `scripts/model-cards-index.mjs` (spustit po změně zdrojů).
 - Nákresy zepředu: `src/data/front-drawings.json` + soubory v `public/`, pipeline `scripts/lineart.py`.
+- Skutečná data z registru a STK: `src/data/stats/<značka>.json` (statické stránky modelů) a z nich výtah
+  `src/data/listing-stats.json` pro dynamické stránky inzerátů uživatelů (`node scripts/listing-stats-index.mjs`,
+  spustit po změně statistik). Worker nemůže číst soubory z disku, výtah je proto součástí bundlu (~140 kB gzip).
 - Formulář inzerátu bere generace, karoserie, motory a převodovky z karet modelů přes
   `/api/katalog/[značka]/[řada]/` (data se nestahují celá do prohlížeče).
 - `src/lib/catalog.ts` je starší ukázkový katalog (pár modelů s testovacími statistikami STK, recenzí a cen);
