@@ -28,6 +28,7 @@ jobs:
       # Settings → Pages (Actions deployments ignore a CNAME file).
       - run: npm run build
         env:
+          STATIC_EXPORT: "1"
           NEXT_PUBLIC_BASE_PATH: ""
           # GA4 Measurement ID of the "vozodrom web" stream. It is public (visible in the page);
           # an empty value means no analytics and no consent banner.

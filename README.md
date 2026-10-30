@@ -4,7 +4,7 @@ Prototyp českého autoportálu: inzeráty, katalog modelů, data z technických
 na jednom místě. **Všechna data v prototypu jsou smyšlená.**
 
 ## Stack
-- Next.js (App Router) se statickým exportem (`output: "export"`) pro GitHub Pages
+- Next.js (App Router) na Cloudflare Workers přes OpenNext; statický export (`STATIC_EXPORT=1`) pro GitHub Pages
 - React, TypeScript, Tailwind CSS 4
 - MiniSearch pro fulltextové hledání v prohlížeči
 
@@ -28,4 +28,17 @@ na doméně **vozodrom.cz**. V nastavení repozitáře: **Settings → Pages →
 Custom domain `vozodrom.cz`.
 
 GitHub Pages je jen pro prototyp: jeho podmínky nepovolují komerční provoz. Před spuštěním pro veřejnost
-přejdeme na hosting s backendem.
+přecházíme na Cloudflare Workers.
+
+### Cloudflare Workers
+Web běží přes adaptér OpenNext (`@opennextjs/cloudflare`). Předrenderované stránky se servírují
+ze statických assetů Workeru (`open-next.config.ts`). Vyžaduje tarif Workers Paid — worker má ~3,2 MiB gzip.
+
+```bash
+npm run cf:preview   # build + lokální běh ve workerd
+npm run cf:deploy    # build + nasazení (po `npx wrangler login`)
+```
+
+Workflow `.github/workflows/deploy-cloudflare.yml` nasazuje při každém pushi do `main`. Potřebuje
+secrets repozitáře `CLOUDFLARE_API_TOKEN` (šablona „Edit Cloudflare Workers“) a `CLOUDFLARE_ACCOUNT_ID`.
+Build pro GitHub Pages zapíná statický export proměnnou `STATIC_EXPORT=1`.
