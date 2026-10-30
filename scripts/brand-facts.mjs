@@ -4,6 +4,9 @@
 // Values that fail review are listed in OVERRIDES (null = hide); see the review notes there.
 //
 // Run when the makes change: node scripts/brand-facts.mjs   (network; ~1 minute)
+// Reviewed passenger-car/motorcycle bounds: src/data/catalog/brand-production-periods.json.
+// Reapply only these: node scripts/brand-facts.mjs --periods-only (offline).
+// Validate provenance and generated parity: node scripts/brand-facts.mjs --check-periods.
 
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -12,6 +15,45 @@ const UA = { "User-Agent": "vozodrom-prototype/0.1 (https://vozodrom.cz; brand f
 
 // Hand review of Wikidata values that describe a later legal entity, not the brand.
 const OVERRIDES = JSON.parse(readFileSync(new URL("./brand-facts-overrides.json", import.meta.url), "utf8"));
+
+// Curated production bounds are independent of corporate incorporation/dissolution.
+// A missing endpoint is unknown, not an assertion that production continues.
+const periods = JSON.parse(readFileSync(new URL("../src/data/catalog/brand-production-periods.json", import.meta.url), "utf8"));
+const periodFields = ["carsFrom", "carsTo", "motorcyclesFrom", "motorcyclesTo", "periodSources", "periodNoteCs", "periodVerifiedAt"];
+for (const [slug, p] of Object.entries(periods)) {
+  if (!makes.some((m) => m.slug === slug)) throw new Error(`Unknown production-period make: ${slug}`);
+  if (Object.keys(p).some((key) => !periodFields.includes(key))) throw new Error(`Unknown production-period field: ${slug}`);
+  for (const key of periodFields.slice(0, 4)) {
+    if (key in p && (!Number.isInteger(p[key]) || p[key] < 1800 || p[key] > new Date().getUTCFullYear())) throw new Error(`Invalid ${slug}.${key}`);
+  }
+  for (const kind of ["cars", "motorcycles"]) {
+    if (p[`${kind}From`] > p[`${kind}To`]) throw new Error(`Reversed ${slug}.${kind} period`);
+  }
+  if (!periodFields.slice(0, 4).some((key) => key in p) || !p.periodSources?.length || !p.periodSources.every((url) => /^https:\/\//.test(url)) || !/^\d{4}-\d{2}-\d{2}$/.test(p.periodVerifiedAt)) throw new Error(`Missing production provenance: ${slug}`);
+}
+function withPeriods(facts) {
+  for (const [slug, factsForMake] of Object.entries(facts)) {
+    for (const key of periodFields) delete factsForMake[key];
+    Object.assign(factsForMake, periods[slug] ?? {});
+  }
+  for (const slug of Object.keys(periods)) if (!facts[slug]) throw new Error(`Missing brand facts: ${slug}`);
+  return facts;
+}
+const output = new URL("../src/data/brand-facts.json", import.meta.url);
+// Reapply reviewed periods without refreshing unrelated Wikidata facts.
+// --check-periods validates the same contract without writing any files.
+if (process.argv.includes("--periods-only") || process.argv.includes("--check-periods")) {
+  const original = readFileSync(output, "utf8");
+  const expected = `${JSON.stringify(withPeriods(JSON.parse(original)), null, 1)}\n`;
+  if (process.argv.includes("--check-periods")) {
+    if (original !== expected) throw new Error("Brand production periods are stale; run --periods-only");
+  } else writeFileSync(output, expected);
+  const scope = makes.filter((m) => m.defunct && m.sections.includes("auto"));
+  const complete = scope.filter((m) => periods[m.slug]?.carsFrom != null && periods[m.slug]?.carsTo != null).length;
+  const partial = scope.filter((m) => periods[m.slug] && !(periods[m.slug].carsFrom != null && periods[m.slug].carsTo != null)).length;
+  console.log(`Defunct auto production periods: ${complete} complete, ${partial} partial, ${scope.length - complete - partial} unknown / ${scope.length}; ${Object.keys(periods).length} makes with reviewed bounds overall`);
+  process.exit(0);
+}
 
 async function api(params) {
   const url = `https://www.wikidata.org/w/api.php?${new URLSearchParams({ ...params, format: "json" })}`;
@@ -78,6 +120,6 @@ for (const m of makes) {
   };
 }
 
-writeFileSync(new URL("../src/data/brand-facts.json", import.meta.url), `${JSON.stringify(facts, null, 1)}\n`);
+writeFileSync(output, `${JSON.stringify(withPeriods(facts), null, 1)}\n`);
 const n = (k) => Object.values(facts).filter((f) => f[k] != null && !(Array.isArray(f[k]) && !f[k].length)).length;
 console.log(`${Object.keys(facts).length} makes; founded ${n("founded")}, founders ${n("founders")}, hq ${n("hq")}, parent ${n("parent")}, website ${n("website")}, employees ${n("employees")}, cs description ${n("description")}`);

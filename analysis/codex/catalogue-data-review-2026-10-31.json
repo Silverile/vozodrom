@@ -1,0 +1,57 @@
+{
+  "reviewedAt": "2026-10-31",
+  "scope": "Catalogue pages data handoff; no image generation or drawing format changes",
+  "repositoryMapping": {
+    "manufacturer": "src/app/katalog/[brand]/page.tsx; src/lib/brandFacts.ts; src/data/brand-facts.json",
+    "modelAndGeneration": "src/app/katalog/[brand]/[model]/page.tsx; src/lib/modelCards.ts; src/data/model-cards-index.json",
+    "curatedCards": "src/data/catalog/model-cards/*.json -> scripts/model-cards-index.mjs",
+    "drawingPublication": "src/data/front-drawings.json; public/front/<make>--<line>--<generation index>.webp",
+    "drawingHolds": "src/data/front-drawing-review.json; src/components/FrontDrawing.tsx",
+    "productionPeriods": "src/data/catalog/brand-production-periods.json -> scripts/brand-facts.mjs -> src/data/brand-facts.json"
+  },
+  "periodContract": {
+    "yearFields": ["carsFrom", "carsTo", "motorcyclesFrom", "motorcyclesTo"],
+    "metadataFields": ["periodSources", "periodNoteCs", "periodVerifiedAt"],
+    "meaning": "First and last documented production bounds, not necessarily uninterrupted production. cars means passenger cars, including documented predecessors where the note explicitly says so. Endpoints absent when unknown or disputed. Missing carsTo must never render as an assertion of ongoing production.",
+    "coverageFile": "analysis/codex/brand-production-period-coverage.json",
+    "limits": "This is a conservative sourced first pass, not a completed historical audit of all 67 makes. Unknown coverage entries mean no period published in this pass, not proof that no historical evidence exists. Sources were checked via web text/search extraction; PDFs were not visually verified. No unrelated Wikidata facts were refreshed.",
+    "disputed": [
+      "Adler passenger-car endpoint: marque-club history says 1940, Adlerwerke model table has Trumpf Junior through 1941. carsTo omitted pending resolution. Corporate dissolved 1992 remains separate.",
+      "Adler motorcycle serial production ends 1957, but assembly from remaining parts continued into 1958. Note preserves the distinction.",
+      "NSU motorcycle beginning: Audi sources themselves disagree between 1900 and 1901. motorcyclesFrom omitted.",
+      "Maybach original production endpoint 1940 vs 1941; revived standalone cars 2012 vs 2013; Mercedes-Maybach is another context. carsTo omitted.",
+      "DKW German endpoint cannot represent global licensed production; final worldwide endpoint left unknown.",
+      "Scion launch/sales in 2003 do not independently establish first assembly year. carsFrom omitted; 2016 endpoint is supported by Toyota's published production schedule rather than a retrospective factory record."
+    ]
+  },
+  "favorit": {
+    "decision": "Keep the card and its generated index unchanged. No numerics gained a fully checked independent source in this pass; preserve existing provenance and unknown early start year.",
+    "series": "8J / 2S / 2A versus 2U is a sensible historical series grouping, not an official numbered generation claim. The 1933 replacement is supported by independent historical accounts; manufacturer material advertises the revised Favorit 8/40 in 1933.",
+    "earlyYears": "1928 introduction versus 1929 production remains unresolved. Existing generations[0].from=null and needsReview correctly preserve the discrepancy.",
+    "earlyBodies": "The existing sedan/kabriolet/kombi/dodavka list is not exhaustive: the model article also lists roadster, tourer, landaulet and military bodies, without a clean assignment of every body to a precise series. Do not expand generation body lists from that model-level list alone.",
+    "twoUBodiesAndPower": "A contemporary Adler advertisement in the 17 September 1933 Schleiz programme lists Favorit 8/40 PS in Limousine and Cabriolet forms. This independently supports two offered body forms and 40 metric PS (29.41995 kW, rounded to 29.4); it does not establish the power measurement standard. Search-index transcription checked, original PDF not visually checked because web fetch rejected its 20 MB size. Treat as a research lead until visual inspection.",
+    "twoUEndYear": "Adler Club Nederland describes the Favorit series ending in 1934, with revised coachwork in its last two years; this is consistent with 1933–1934, but does not independently tabulate the 2U code.",
+    "twoUSpecifications": {
+      "displacementCc": "1943 remains single-source in the published card; other web tables were found, but independent source lineage was not established.",
+      "powerKw": "29.4 is mathematically consistent with 40 PS; the period-advertisement lead above has not been visually verified.",
+      "topSpeedKmh": "90 remains uncorroborated against an independently checked source in this pass.",
+      "consumptionL100": "13 remains uncorroborated against an independently checked source in this pass; historical test protocol remains unspecified. This is l/100 km, not tank volume."
+    },
+    "sources": [
+      "https://de.wikipedia.org/wiki/Adler_Favorit",
+      "https://de.wikipedia.org/wiki/Adlerwerke",
+      "https://adlerclub.nl/geschiedenis/",
+      "https://daveriley.weebly.com/uploads/4/8/4/5/4845046/schleiz17sep1933wd_kg.pdf",
+      "https://www.archiv-axel-oskar-mathieu.de/pdfs/Adler.pdf"
+    ],
+    "furtherLead": "The independent commercial-vehicle archive describes a 1933 common low-frame chassis for Favorit 2U (8/40 PS) and Standard 6 3U, including delivery bodies. Its 12 MB PDF also exceeded web fetch limits; do not use its search text to expand the 2U body list yet."
+  },
+  "drawingRecommendation": {
+    "publicPolicy": "Approved generation asset -> drawing; all other workflow states -> intentional labelled placeholder. Keep technical-data verification independent.",
+    "pipelinePolicy": "missing/queued/generated/needs_review/verified/rejected belong in analysis; publication manifest and holdback file remain the public decision inputs. Existing published entries are legacy publication decisions, not fresh proof of historical fidelity.",
+    "generationHolds": "Needed for a pipeline reviewing generations independently: a single rejected generation should not suppress its verified siblings. Future generation holds can use existing make--line--index asset keys, with a line hold overriding every generation. Do not implement until UI and pipeline readers agree on the format.",
+    "identityCaveat": "Generation indexes are current pipeline identity, not stable canonical IDs across reordering. Keep existing order stable and migrate drawing references together when generations are split/reordered.",
+    "formatChanged": false
+  },
+  "handoffOpinion": "Agree with preserving build-time JSON and current hierarchy. Scope these changes as incremental UI/data work; canonical variant IDs, seller override rules, complete variants-based listing integration and source/license review are separate acceptance work and cannot be claimed complete from the current page edits alone."
+}
