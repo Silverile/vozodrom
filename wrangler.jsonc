@@ -13,12 +13,12 @@
     { "pattern": "www.vozodrom.cz", "custom_domain": true }
   ],
   "observability": { "enabled": true },
-  // Postgres (Neon, Frankfurt) through Hyperdrive. Locally `npm run db:local` serves PGlite on 5433.
-  // TODO before the first deploy: replace the id with the Hyperdrive config created in the dashboard.
+  // Postgres (Neon project vozodrom, Frankfurt) through Hyperdrive config vozodrom-db, query caching off
+  // so session and ban changes apply at once. Locally `npm run db:local` serves PGlite on 5433.
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
-      "id": "00000000000000000000000000000000",
+      "id": "55126eac3b8e460fa44063226499de43",
       "localConnectionString": "postgres://postgres:postgres@127.0.0.1:5433/postgres"
     }
   ],
