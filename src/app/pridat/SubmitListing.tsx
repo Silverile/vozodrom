@@ -9,13 +9,16 @@ import { draftStore } from "./AddListingForm";
 
 // Saves the browser draft to the account: a new listing goes on to photos and submission,
 // an edited one (serverId set) is updated in place. The local draft is cleared afterwards.
-export function SubmitListing({ draft, complete }: { draft: LocalDraft; complete: boolean }) {
+// While something is missing the button stays active and onIncomplete shows what.
+export function SubmitListing({ draft, complete, onIncomplete }: { draft: LocalDraft; complete: boolean; onIncomplete: () => void }) {
   const router = useRouter();
   const signedIn = Boolean(authClient.useSession().data?.user);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
   if (!signedIn) {
+    // Show what is missing first; signing in only makes sense for a complete listing.
+    if (!complete) return <button type="button" className="btn-cta text-sm" onClick={onIncomplete}>Pokračovat k fotkám</button>;
     return (
       <SignInLink next="/pridat/" className="btn-cta text-sm">
         Přihlásit se a pokračovat
@@ -24,6 +27,7 @@ export function SubmitListing({ draft, complete }: { draft: LocalDraft; complete
   }
 
   async function save() {
+    if (!complete) return onIncomplete();
     setBusy(true);
     setError("");
     const { serverId, ...data } = draft;
@@ -39,10 +43,9 @@ export function SubmitListing({ draft, complete }: { draft: LocalDraft; complete
 
   return (
     <span className="flex flex-col items-end gap-1">
-      <button type="button" className="btn-cta text-sm disabled:opacity-60" disabled={!complete || busy} onClick={save}>
-        {draft.serverId ? "Uložit změny" : "Pokračovat k fotkám"}
+      <button type="button" className="btn-cta text-sm disabled:opacity-60" disabled={busy} onClick={save}>
+        {busy ? "Ukládám…" : draft.serverId ? "Uložit změny" : "Pokračovat k fotkám"}
       </button>
-      {!complete && <span className="text-xs text-[var(--color-muted)]">Nejdřív doplňte údaje podle kontroly vpravo.</span>}
       {error && <span role="alert" className="text-xs text-[var(--color-warn)]">{error}</span>}
     </span>
   );

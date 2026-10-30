@@ -82,30 +82,40 @@ export function vinProblem(vin: string): string | null {
   return null;
 }
 
-export function draftProblems(draft: Draft): string[] {
-  const problems: string[] = [];
+/** Form fields a problem can belong to; "place" covers the region and the city. */
+export type DraftField =
+  | "brand" | "model" | "year" | "generation" | "body" | "engine" | "fuel" | "powerKw" | "transmission"
+  | "mileageKm" | "price" | "place" | "vin";
+
+/** Problems by field, in form order, so the form can show each one next to its field. */
+export function draftFieldProblems(draft: Draft): Partial<Record<DraftField, string>> {
+  const problems: Partial<Record<DraftField, string>> = {};
   const whole = (n: number, min: number, max: number) => Number.isInteger(n) && n >= min && n <= max;
-  if (!makesIn("auto").some((m) => m.slug === draft.brand)) problems.push("vyberte značku");
-  if (!draft.model.trim()) problems.push("vyberte model");
-  if (!whole(draft.year, 1950, CURRENT_YEAR + 1)) problems.push("vyplňte rok výroby");
+  if (!makesIn("auto").some((m) => m.slug === draft.brand)) problems.brand = "vyberte značku";
+  if (!draft.model.trim()) problems.model = "vyberte model";
+  if (!whole(draft.year, 1950, CURRENT_YEAR + 1)) problems.year = "vyplňte rok výroby";
   else if (lineOf(draft)) {
     const { dated, matching } = generationsForYear(draft);
-    if (dated.length && !matching.length) problems.push(`model se v roce ${draft.year} nevyráběl`);
-    else if (draft.generation && matching.length && !matching.some((g) => generationId(g) === draft.generation)) problems.push("generace nesedí s rokem výroby");
-    else if (!draft.generation && matching.length > 1) problems.push("vyberte generaci");
+    if (dated.length && !matching.length) problems.year = `model se v roce ${draft.year} nevyráběl`;
+    else if (draft.generation && matching.length && !matching.some((g) => generationId(g) === draft.generation)) problems.generation = "generace nesedí s rokem výroby";
+    else if (!draft.generation && matching.length > 1) problems.generation = "vyberte generaci";
   }
-  if (!(draft.body in BODY_KEYS)) problems.push("vyberte karoserii");
-  if (!draft.engine.trim()) problems.push("vyberte nebo napište motor");
-  if (!FUELS.includes(draft.fuel as ListingFuel)) problems.push("vyberte palivo");
-  if (!whole(draft.powerKw, 1, 1500)) problems.push("vyplňte výkon (kW)");
-  if (draft.transmission !== "manuál" && draft.transmission !== "automat") problems.push("vyberte převodovku");
-  if (!whole(draft.mileageKm, 0, 1_500_000)) problems.push("neplatný nájezd");
-  if (!whole(draft.price, 1000, 100_000_000)) problems.push("vyplňte cenu (Kč, při platbě najednou)");
-  if (!REGIONS.includes(draft.region)) problems.push("vyberte místo");
-  else if (draft.city && getCity(draft.city)?.region !== draft.region) problems.push("město nepatří do kraje");
+  if (!(draft.body in BODY_KEYS)) problems.body = "vyberte karoserii";
+  if (!draft.engine.trim()) problems.engine = "vyberte nebo napište motor";
+  if (!FUELS.includes(draft.fuel as ListingFuel)) problems.fuel = "vyberte palivo";
+  if (!whole(draft.powerKw, 1, 1500)) problems.powerKw = "vyplňte výkon (kW)";
+  if (draft.transmission !== "manuál" && draft.transmission !== "automat") problems.transmission = "vyberte převodovku";
+  if (!whole(draft.mileageKm, 0, 1_500_000)) problems.mileageKm = "neplatný nájezd";
+  if (!whole(draft.price, 1000, 100_000_000)) problems.price = "vyplňte cenu (Kč, při platbě najednou)";
+  if (!REGIONS.includes(draft.region)) problems.place = "vyberte místo";
+  else if (draft.city && getCity(draft.city)?.region !== draft.region) problems.place = "město nepatří do kraje";
   const vin = vinProblem(draft.vin);
-  if (vin) problems.push(vin);
+  if (vin) problems.vin = vin;
   return problems;
+}
+
+export function draftProblems(draft: Draft): string[] {
+  return Object.values(draftFieldProblems(draft));
 }
 
 /** "Škoda Octavia, 2019" */
