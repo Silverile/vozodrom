@@ -6,6 +6,10 @@ export const formatKm = (value: number) => `${num.format(value)} km`;
 export const formatNumber = (value: number) => num.format(value);
 export const formatPercent = (value: number) => `${Math.round(value * 100)} %`;
 
+/** User listings are rendered on request at /inzerat/; test and feed listings are prerendered at /inzeraty/. */
+export const listingHref = (listing: { id: string; source: { kind: string } }) =>
+  listing.source.kind === "user" ? `/inzerat/${listing.id}/` : `/inzeraty/${listing.id}/`;
+
 export function formatDate(iso: string): string {
   const [y, m, d] = iso.split("-").map(Number);
   return `${d}. ${m}. ${y}`;

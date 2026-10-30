@@ -2,7 +2,7 @@
 
 import MiniSearch from "minisearch";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, getBrand, getModel, models } from "@/lib/catalog";
@@ -48,14 +48,14 @@ const FEATURES = [...new Set(listings.flatMap((l) => l.features))].sort((a, b) =
 const ADVANCED_KEYS = ["cenaOd", "rokDo", "najezdOd", "vykonOd", "vykonDo", "barva", "prodejce", "vybava", ...FLAGS.map((f) => f.key)];
 const list = (value: string | null) => (value ?? "").split(",").filter(Boolean);
 
-function buildIndex() {
+function buildIndex(items: Listing[]) {
   const index = new MiniSearch<Listing & { text: string }>({
     fields: ["text"],
     storeFields: ["id"],
     searchOptions: { prefix: true, fuzzy: 0.2, combineWith: "AND" },
   });
   index.addAll(
-    listings.map((l) => ({
+    items.map((l) => ({
       ...l,
       text: [
         getBrand(l.brandSlug)?.name,
@@ -84,11 +84,24 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
+/** Test and feed listings ship with the page; published user listings are fetched and put first. */
+function useAllListings(): Listing[] {
+  const [userListings, setUserListings] = useState<Listing[]>([]);
+  useEffect(() => {
+    fetch("/api/inzeraty/verejne/")
+      .then((r): Promise<Listing[]> | Listing[] => (r.ok ? r.json() : []))
+      .then(setUserListings)
+      .catch(() => {});
+  }, []);
+  return useMemo(() => [...userListings, ...listings], [userListings]);
+}
+
 export function SearchClient() {
   const params = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const index = useMemo(buildIndex, []);
+  const all = useAllListings();
+  const index = useMemo(() => buildIndex(all), [all]);
   const saved = savedSearches.useValue();
   const { centers, radius } = useSearchLocation();
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -128,7 +141,7 @@ export function SearchClient() {
 
   const results = useMemo(() => {
     const textIds = q.trim() ? new Set(index.search(q).map((r) => r.id as string)) : null;
-    return listings
+    return all
       .filter((l) => (textIds ? textIds.has(l.id) : true))
       .filter((l) => !brand || l.brandSlug === brand)
       .filter((l) => !model || l.modelSlug === model)

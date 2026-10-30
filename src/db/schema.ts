@@ -1,4 +1,5 @@
-import { boolean, index, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
+import { boolean, index, jsonb, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
+import type { Draft } from "@/lib/listing-draft";
 
 // Tables and columns used by Better Auth (core + admin plugin). Names follow its defaults,
 // so the adapter needs no field mapping.
@@ -88,4 +89,34 @@ export const savedSearch = pgTable(
     savedAt: timestamp("saved_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.query] })],
+);
+
+/** A photo stored in R2 under key; width and height after the browser resized it. */
+export interface ListingPhoto {
+  key: string;
+  width: number;
+  height: number;
+}
+
+export const LISTING_STATUSES = ["draft", "pending", "published", "rejected", "withdrawn"] as const;
+export type ListingStatus = (typeof LISTING_STATUSES)[number];
+
+/** Car listings placed by users. The vehicle fields stay one JSON object, checked by draftProblems. */
+export const listing = pgTable(
+  "listing",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    status: text("status").$type<ListingStatus>().notNull().default("draft"),
+    data: jsonb("data").$type<Draft>().notNull(),
+    photos: jsonb("photos").$type<ListingPhoto[]>().notNull().default([]),
+    phone: text("phone"),
+    rejectReason: text("reject_reason"),
+    moderatedBy: text("moderated_by").references(() => user.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+    submittedAt: timestamp("submitted_at", { withTimezone: true }),
+    publishedAt: timestamp("published_at", { withTimezone: true }),
+  },
+  (t) => [index("listing_user_idx").on(t.userId), index("listing_status_idx").on(t.status, t.submittedAt)],
 );

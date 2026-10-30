@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { FUEL_LABEL, getBrand, getModel } from "@/lib/catalog";
 import { getMake } from "@/lib/makes";
-import { formatAgo, formatKm, formatPrice } from "@/lib/format";
+import { formatAgo, formatKm, formatPrice, listingHref } from "@/lib/format";
+import { photoUrl } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
 import type { Listing } from "@/lib/types";
 import { CarImage } from "./CarImage";
@@ -27,7 +28,9 @@ export function ListingRow({ listing, drawing: given }: { listing: Listing; draw
   return (
     <article className="card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[200px_minmax(0,1fr)_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
       <div className="self-start overflow-hidden rounded-[10px]">
-        {drawing ? (
+        {listing.photos?.[0] ? (
+          <img src={photoUrl(listing.photos[0].key)} alt={name} className="w-full aspect-[4/3] object-cover bg-[var(--color-photo)]" loading="lazy" />
+        ) : drawing ? (
           <FrontDrawing id={drawing} alt={name} aspect="aspect-[4/3]" />
         ) : (
           <CarImage body={listing.body} color={listing.color} className="w-full aspect-[4/3]" />
@@ -35,7 +38,7 @@ export function ListingRow({ listing, drawing: given }: { listing: Listing; draw
       </div>
       <div className="min-w-0">
         <h3 className="font-bold leading-tight">
-          <Link href={`/inzeraty/${listing.id}/`} className="after:absolute after:inset-0 after:rounded-[14px] focus:outline-none">
+          <Link href={listingHref(listing)} className="after:absolute after:inset-0 after:rounded-[14px] focus:outline-none">
             {name}
           </Link>
         </h3>

@@ -22,6 +22,8 @@
       "localConnectionString": "postgres://postgres:postgres@127.0.0.1:5433/postgres"
     }
   ],
+  // Listing photos (resized in the browser), EU jurisdiction. Served by /foto/[...key].
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "vozodrom-photos", "jurisdiction": "eu" }],
   // BETTER_AUTH_URL is public; secrets (BETTER_AUTH_SECRET, GOOGLE_CLIENT_SECRET, …) come from
   // `wrangler secret put` in production and from .dev.vars locally.
   // SIGNUP_OPEN: "false" closes registration (e.g. if e-mail sending breaks; see src/lib/mail.ts).

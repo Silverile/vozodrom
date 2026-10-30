@@ -6,14 +6,25 @@ import { authClient } from "@/lib/auth-client";
 import { ListingRow } from "@/components/ListingRow";
 import { getBrand, getModel } from "@/lib/catalog";
 import { formatDate, formatPrice } from "@/lib/format";
+import { STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
 import { getListing } from "@/lib/listings";
 import { getMake } from "@/lib/makes";
 import { savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
+import type { ListingStatus } from "@/db/schema";
 import { draftStore } from "../pridat/AddListingForm";
 
-// Account area modelled on Drom's. Favourites and saved searches follow the account (AccountSync);
-// the listing draft is still per browser, and the remaining sections explain what they will do.
+// Account area modelled on Drom's. Listings and favourites/saved searches (AccountSync) live in the
+// account; an unsaved form draft stays in this browser. The remaining sections explain what they will do.
+
+export interface MyListing {
+  id: string;
+  title: string;
+  status: ListingStatus;
+  price: number;
+  photo: string | null;
+  updatedAt: string;
+}
 
 const SECTIONS = [
   { key: "inzeraty", label: "Moje inzeráty", icon: "＋" },
@@ -35,20 +46,40 @@ function Empty({ title, text, action }: { title: string; text: string; action?: 
   );
 }
 
-function MyListings() {
+function MyListings({ listings }: { listings: MyListing[] }) {
   const draft = draftStore.useValue();
   const model = getModel(draft.brand, draft.model);
-  if (!draft.brand || !draft.model.trim()) {
-    return <Empty title="Zatím žádné inzeráty" text="Inzerát můžete připravit už teď; zveřejňování inzerátů spustíme v dalším kroku." action={{ href: "/pridat/", label: "+ Přidat inzerát zdarma" }} />;
+  const hasDraft = Boolean(draft.brand && draft.model.trim());
+  if (!hasDraft && listings.length === 0) {
+    return <Empty title="Zatím žádné inzeráty" text="Vyplňte údaje o voze, přidejte fotky a po kontrole moderátorem se inzerát zveřejní." action={{ href: "/pridat/", label: "+ Přidat inzerát zdarma" }} />;
   }
   return (
-    <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
-      <div>
-        <span className="chip bg-[var(--color-warn-soft)] text-[var(--color-warn)]">rozpracováno</span>
-        <p className="font-bold mt-2">{getBrand(draft.brand)?.name ?? getMake(draft.brand)?.name} {model?.name ?? draft.model}, {draft.year}</p>
-        <p className="text-sm text-[var(--color-muted)]">{draft.price ? formatPrice(draft.price) : "cena zatím nevyplněna"} · uloženo jen v tomto prohlížeči</p>
-      </div>
-      <Link href="/pridat/" className="pill">Pokračovat v úpravách</Link>
+    <div className="space-y-3">
+      {hasDraft && (
+        <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span className="chip bg-[var(--color-warn-soft)] text-[var(--color-warn)]">{draft.serverId ? "neuložené změny" : "rozpracováno"}</span>
+            <p className="font-bold mt-2">{getBrand(draft.brand)?.name ?? getMake(draft.brand)?.name} {model?.name ?? draft.model}, {draft.year}</p>
+            <p className="text-sm text-[var(--color-muted)]">{draft.price ? formatPrice(draft.price) : "cena zatím nevyplněna"} · zatím jen v tomto prohlížeči</p>
+          </div>
+          <Link href="/pridat/" className="pill">Pokračovat v úpravách</Link>
+        </div>
+      )}
+      {listings.map((l) => (
+        <Link key={l.id} href={`/ucet/inzerat/${l.id}/`} className="card p-3 flex items-center gap-4 hover:border-[var(--color-brand)]">
+          {l.photo ? (
+            <img src={photoUrl(l.photo)} alt="" className="w-24 aspect-[4/3] object-cover rounded-[8px] bg-[var(--color-photo)]" loading="lazy" />
+          ) : (
+            <span className="w-24 aspect-[4/3] grid place-items-center rounded-[8px] bg-[var(--color-field)] text-xs text-[var(--color-muted)]">bez fotky</span>
+          )}
+          <span className="min-w-0">
+            <span className={`chip ${STATUS_STYLE[l.status]}`}>{STATUS_LABEL[l.status]}</span>
+            <span className="block font-bold mt-1 truncate">{l.title}</span>
+            <span className="block text-sm text-[var(--color-muted)]">{formatPrice(l.price)} · upraveno {formatDate(l.updatedAt)}</span>
+          </span>
+        </Link>
+      ))}
+      <div className="flex justify-end"><Link href="/pridat/" className="pill">+ Přidat další inzerát</Link></div>
     </div>
   );
 }
@@ -89,10 +120,10 @@ function Watchdog() {
   );
 }
 
-function Section({ name }: { name: SectionKey }) {
+function Section({ name, listings }: { name: SectionKey; listings: MyListing[] }) {
   switch (name) {
     case "inzeraty":
-      return <MyListings />;
+      return <MyListings listings={listings} />;
     case "oblibene":
       return <Favourites />;
     case "hlidaci-pes":
@@ -106,7 +137,7 @@ function Section({ name }: { name: SectionKey }) {
   }
 }
 
-export function AccountClient({ user, staff }: { user: { name: string; email: string }; staff: boolean }) {
+export function AccountClient({ user, staff, listings }: { user: { name: string; email: string }; staff: boolean; listings: MyListing[] }) {
   const params = useSearchParams();
   const router = useRouter();
   const requested = params.get("sekce");
@@ -138,7 +169,7 @@ export function AccountClient({ user, staff }: { user: { name: string; email: st
       <div className="grid gap-6 grid-cols-1 md:grid-cols-[minmax(0,1fr)_240px] mt-6 items-start">
         <section aria-labelledby="section-title" className="min-w-0">
           <h1 id="section-title" className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">{current.label}</h1>
-          <Section name={active} />
+          <Section name={active} listings={listings} />
         </section>
         <nav aria-label="Můj účet" className="md:order-last order-first min-w-0">
           <ul className="flex md:flex-col gap-1 overflow-x-auto">

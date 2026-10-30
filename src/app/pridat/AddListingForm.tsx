@@ -6,37 +6,20 @@ import { frontDrawingFor, newestFrontDrawing } from "@/components/FrontDrawing";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, generationMatch, getModel, models } from "@/lib/catalog";
 import { makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { citiesIn, getCity } from "@/lib/geo";
-import { type FeedVehicle, validateVehicle } from "@/lib/feed";
+import { EMPTY_LOCAL_DRAFT, type LocalDraft, draftProblems, isDraft } from "@/lib/listing-draft";
 import { createStore } from "@/lib/storage";
+import { SubmitListing } from "./SubmitListing";
 import type { Body, Listing } from "@/lib/types";
-
-/** For makes without catalogue models, `model` holds the typed model name and `body` is chosen by hand. */
-export type Draft = Omit<FeedVehicle, "externalId" | "status" | "updatedAt" | "features" | "city"> & { city: string; vin: string; body: string };
 
 const CAR_MAKES = makesIn("auto");
 const CUSTOM = "__jiny";
 
-const EMPTY: Draft = {
-  brand: "", model: "", year: 2020, mileageKm: 0, price: 0, engine: "", fuel: "benzin", transmission: "manuál",
-  powerKw: 0, color: "", region: "", city: "", description: "", vin: "", body: "",
-};
-
-const isDraft = (v: unknown): v is Draft =>
-  !!v &&
-  typeof v === "object" &&
-  (Object.keys(EMPTY) as (keyof Draft)[]).every((k) => typeof (v as Record<string, unknown>)[k] === typeof EMPTY[k]);
-
-export const draftStore = createStore<Draft>("vozodrom.listingDraft", EMPTY, isDraft);
-
-function vinProblem(vin: string): string | null {
-  if (!vin) return null;
-  if (!/^[A-HJ-NPR-Z0-9]{17}$/i.test(vin)) return "VIN má 17 znaků a neobsahuje písmena I, O, Q";
-  return null;
-}
+// Drafts saved before serverId existed are still accepted; a missing serverId reads as a new listing.
+export const draftStore = createStore<LocalDraft>("vozodrom.listingDraft", EMPTY_LOCAL_DRAFT, (v): v is LocalDraft => isDraft(v));
 
 export function AddListingForm() {
   const draft = draftStore.useValue();
-  const set = <K extends keyof Draft>(key: K, value: Draft[K]) => {
+  const set = <K extends keyof LocalDraft>(key: K, value: LocalDraft[K]) => {
     if (key === "brand") setCustomModel(false);
     draftStore.write({ ...draft, [key]: value, ...(key === "brand" ? { model: "", body: "" } : {}) });
   };
@@ -47,19 +30,7 @@ export function AddListingForm() {
   // A typed model name that is not one of the make's lines keeps the free-text field open.
   const [customModel, setCustomModel] = useState(false);
   const showCustom = customModel || (draft.model !== "" && lines.length > 0 && !lines.some((l) => l.name === draft.model));
-  // Catalogue makes are checked exactly like dealer feeds; other makes cannot be checked
-  // against model data yet, so model and generation checks are replaced by plain presence checks.
-  const vehicleProblems = validateVehicle({ ...draft, city: draft.city || undefined, features: [] });
-  const problems = [
-    ...(inCatalog || !draft.brand
-      ? vehicleProblems
-      : [
-          ...vehicleProblems.filter((p) => p !== "neznámá značka nebo model" && !p.includes("generace")),
-          ...(draft.model.trim() ? [] : ["chybí model"]),
-          ...(draft.body ? [] : ["vyberte karoserii"]),
-        ]),
-    ...(vinProblem(draft.vin) ? [vinProblem(draft.vin)!] : []),
-  ];
+  const problems = draftProblems(draft);
   const model = getModel(draft.brand, draft.model);
   // catalogue makes store the model's slug, other makes the line's name; drawings are keyed by the
   // line's slug. A year outside the line's generations (still being typed) shows the newest drawing.
@@ -195,10 +166,10 @@ export function AddListingForm() {
           <textarea className={`${input} min-h-28`} value={draft.description} onChange={(e) => set("description", e.target.value)} />
         </label>
         <div className="sm:col-span-2 flex flex-wrap items-center justify-between gap-3">
-          <button type="button" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => draftStore.write(EMPTY)}>
-            Smazat rozpracovaný inzerát
+          <button type="button" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => draftStore.write(EMPTY_LOCAL_DRAFT)}>
+            {draft.serverId ? "Zahodit změny" : "Smazat rozpracovaný inzerát"}
           </button>
-          <span className="text-sm text-[var(--color-muted)]">Odeslání bude dostupné s účty.</span>
+          <SubmitListing draft={draft} complete={problems.length === 0} />
         </div>
       </form>
 

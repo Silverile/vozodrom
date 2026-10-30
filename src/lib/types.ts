@@ -75,8 +75,8 @@ export interface Battery {
 
 export interface Listing {
   id: string;
-  /** where the listing came from: generated test data or a dealer feed */
-  source: { kind: "test" } | { kind: "feed"; feed: string; externalId: string; updatedAt: string };
+  /** where the listing came from: generated test data, a dealer feed or a user of the site */
+  source: { kind: "test" } | { kind: "feed"; feed: string; externalId: string; updatedAt: string } | { kind: "user" };
   brandSlug: string;
   modelSlug: string;
   generation: string;
@@ -100,4 +100,6 @@ export interface Listing {
   features: string[];
   description: string;
   battery?: Battery;
+  /** seller photos in R2 (user listings); others show the front drawing or a pictogram */
+  photos?: { key: string; width: number; height: number }[];
 }
