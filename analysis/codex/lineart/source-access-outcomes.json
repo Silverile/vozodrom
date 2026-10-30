@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-28",
+  "scope": "Observed during this research turn; no denial was bypassed.",
+  "outcomes": [
+    {
+      "source": "carsized",
+      "url": "https://www.carsized.com/en/legal/",
+      "status": 403,
+      "action": "Stopped direct acquisition; no photo requests or alternate access route."
+    },
+    {
+      "source": "netcarshow",
+      "url": "https://www.netcarshow.com/robots.txt",
+      "result": "UND_ERR_CONNECT_TIMEOUT",
+      "additionalEvidence": "Research-browser robots copy explicitly denied GPTBot, ChatGPT-User, ClaudeBot, Claude-User and claude-code.",
+      "action": "No content acquisition."
+    },
+    {
+      "source": "wheelsage",
+      "url": "https://en.wheelsage.org/goautowp.Pictures/GetPictures",
+      "method": "POST, public read-only PicturesRequest per published spec.proto",
+      "httpStatus": 200,
+      "grpcStatus": 7,
+      "grpcMessage": "permission denied",
+      "responseBodyBytes": 0,
+      "action": "Stopped API acquisition; no credential, endpoint, proxy or identity workaround."
+    },
+    {
+      "source": "openverse-api",
+      "url": "https://api.openverse.org/robots.txt",
+      "result": "Image endpoint and executing AI-agent families disallowed.",
+      "action": "No image endpoint request made."
+    }
+  ]
+}

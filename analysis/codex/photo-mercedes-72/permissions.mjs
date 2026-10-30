@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+const d='analysis/codex/photo-mercedes-72',title='File:Mercedes.c220.thornbury.arp.750pix.jpg',u='https://commons.wikimedia.org/w/api.php?'+new URLSearchParams({action:'query',format:'json',maxlag:'5',prop:'revisions',rvprop:'ids|content',rvslots:'main',titles:title});
+const r=await fetch(u,{headers:{'User-Agent':'VozodromCatalogResearch/1.0 (+https://vozodrom.cz; file permission verification)'}});if(!r.ok)throw Error(r.status);const j=await r.json(),p=Object.values(j.query.pages)[0],rev=p.revisions[0],text=rev.slots.main['*'];fs.writeFileSync(d+'/permission-evidence.json',JSON.stringify({title,url:u,revision:rev.revid,text},null,2)+'\n');console.log(text);

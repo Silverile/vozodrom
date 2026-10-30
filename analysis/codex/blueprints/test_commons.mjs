@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {licence,candidate,advanceCategory,CommonsClient,source,run} from './crawl_commons.mjs';
+const meta=(label,author='Example',url='https://creativecommons.org/licenses/by-sa/4.0/')=>({LicenseShortName:{value:label},Artist:{value:author},LicenseUrl:{value:url}});
+for(const label of ['Public domain','PD-old','CC0','CC BY-SA 4.0'])assert.ok(licence(meta(label)),label);
+assert.ok(licence(meta('CC BY 2.5','Example','https://creativecommons.org/licenses/by/2.5/')));
+assert.equal(licence(meta('CC BY 2.5')),null,'licence URL must match its label and version');
+for(const label of ['CC BY-NC 4.0','CC BY-ND 4.0','GFDL','All rights reserved','Creative Commons',''])assert.equal(licence(meta(label)),null,label);
+assert.equal(licence(meta('CC BY-SA 4.0','')),null);
+assert.equal(licence(meta('CC BY-SA 4.0','Someone','https://example.test/')),null);
+const page={pageid:1,title:'File:Ford side.svg',imageinfo:[{url:'https://upload.wikimedia.org/wikipedia/commons/a/a1/Ford.svg',thumburl:'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ford.svg/3840px-Ford.svg.png?utm_source=api',extmetadata:meta('CC BY-SA 4.0')}]};
+assert.equal(candidate(page,'Category:Line drawings of automobiles').item.url,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ford.svg/3840px-Ford.svg.png');
+assert.equal(candidate({...page,title:'File:Truck side.svg'},'Category:Blueprints of vehicles').reason,'non-passenger-or-component');
+assert.equal(candidate({...page,imageinfo:[{...page.imageinfo[0],extmetadata:{...meta('CC0'),ImageDescription:{value:'Photograph of the car'}}}]},'Category:Blueprints of vehicles').reason,'photograph-or-render');
+assert.equal(candidate({...page,imageinfo:[{...page.imageinfo[0],thumburl:null}]},'Category:Blueprints of vehicles').reason,'missing-permitted-image-url');
+const cat={title:'Category:Car drawings',depth:3},state={categories:[cat],seenCategories:[],files:[]};
+const query={query:{categorymembers:[{ns:14,title:'Category:Ford drawings'},{ns:6,title:'File:Ford blueprint.jpg',pageid:1},{ns:6,title:'File:Ship blueprint.jpg',pageid:2}]},continue:{cmcontinue:'next',continue:'-||'}};
+advanceCategory(state,cat,query);assert.equal(state.categories.length,1);assert.equal(state.files.length,1);assert.equal(cat.continue.cmcontinue,'next');
+advanceCategory(state,cat,{query:query.query});assert.equal(state.categories.length,0);assert.equal(state.files.length,1);assert.deepEqual(state.seenCategories,['Category:Car drawings']);
+const root={title:'Category:Car drawings',depth:0},s={categories:[root],seenCategories:[],files:[]};advanceCategory(s,root,query);assert.equal(s.categories[1].depth,1);
+const client=new CommonsClient(source,{dryRun:true,pages:5,maxMinutes:1});client.policy=async origin=>assert.equal(origin,source.origin);
+client.raw=async url=>{const u=new URL(url);assert.equal(u.pathname,'/w/api.php');assert.equal(u.searchParams.get('action'),'query');assert.equal(u.searchParams.get('maxlag'),'5');return {body:JSON.stringify({query:{pages:[]}})};};
+await client.query({prop:'imageinfo',action:'delete',maxlag:'0'});client.raw=async()=>({body:JSON.stringify({error:{code:'maxlag',info:'lagged'}})});await assert.rejects(()=>client.query({}),/MediaWiki maxlag/);
+// A dry run must neither acquire original bytes nor mutate any filesystem.
+const originalFetch=globalThis.fetch,originalLog=console.log,mutators=['writeFileSync','appendFileSync','mkdirSync','openSync','renameSync'],saved=Object.fromEntries(mutators.map(k=>[k,fs[k]]));
+let queries=0;const logs=[];
+try{
+ for(const k of mutators)fs[k]=()=>{throw Error('Unexpected dry-run mutation: '+k);};
+ console.log=line=>logs.push(JSON.parse(line));
+ globalThis.fetch=async input=>{const u=new URL(input);
+  if(u.pathname==='/robots.txt')return new Response('User-agent: *\nAllow: /',{headers:{'content-type':'text/plain'}});
+  if(u.hostname==='commons.wikimedia.org'&&u.pathname.startsWith('/wiki/Commons:'))return new Response('<html>Public documentation</html>',{headers:{'content-type':'text/html'}});
+  assert.equal(u.hostname,'commons.wikimedia.org','dry run must not fetch original image bytes');assert.equal(u.pathname,'/w/api.php');queries++;
+  const result=u.searchParams.get('prop')==='imageinfo'?{query:{pages:[page]}}:{query:{categorymembers:queries===1?[{pageid:1,ns:6,title:page.title}]:[]}};
+  return new Response(JSON.stringify(result),{headers:{'content-type':'application/json'}});
+ };
+ await run({dryRun:true,pages:3,maxMinutes:1,limit:100,dataDir:'C:/Workspace/Projects/CF/vozodrom-data/blueprints-commons-dry-unit'});
+ assert.equal(logs.filter(r=>r.type==='would-save').length,1);assert.equal(logs.at(-1).queries,3);assert.equal(logs.at(-1).indexed,0);
+}finally{globalThis.fetch=originalFetch;console.log=originalLog;for(const k of mutators)fs[k]=saved[k];}
+console.log('Commons tests PASS: licences, attribution, SVG PNG route, passenger/photo filters, continuation, deduplication, depth cap, forced query/maxlag, API errors, write-free dry run and no original downloads');

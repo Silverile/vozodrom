@@ -1,0 +1,1 @@
+﻿import {execFileSync} from'node:child_process';for(const p of ['analysis/codex/merge-photo-patches-84.mjs','analysis/codex/facelift-86/apply-mx5.mjs','analysis/codex/facelift-skoda-86/apply.mjs'])execFileSync(process.execPath,[p],{stdio:'inherit'});

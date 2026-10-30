@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {markUnknowns,proposedLine} from './night-card-helpers.mjs';
+const file='src/data/catalog/model-cards/ferrari.json',cards=JSON.parse(fs.readFileSync(file));
+for(const p of JSON.parse(fs.readFileSync('analysis/codex/ferrari-photos/batch-001.json'))){const c=cards.find(c=>c.lineSlug===p.lineSlug),g=c.generations[p.generationIndex];assert.equal(g.name,p.expectedGenerationName);g.photo=p.photo;}
+cards.find(c=>c.lineSlug==='250').summaryCs='Označení 250 zahrnuje několik cestovních a sportovních dvanáctiválcových Ferrari. Tato souhrnná karta zatím nerozepisuje jednotlivé silniční karosářské větve; závodní GTO a LM nejsou vydávány za běžné cestovní provedení.';
+for(const c of cards){for(const [gi,g]of c.generations.entries()){
+  if(['849-testarossa','f80'].includes(c.lineSlug)){g.from=null;g.to=null;g.productionStatus='unknown';for(const t of g.trims){t.from=null;t.to=null;}c.needsReview.push({field:`generations[${gi}].from`,reason:'Rok prezentace nebo plánovaného zahájení nebyl zaměněn za potvrzenou skutečnou sériovou výrobu.'});}
+  for(const[ti,t]of g.trims.entries())if(t.massKg!==null){t.massBasis=`Zdroj uvádí ${t.massBasis}; přesná metodika vážení a zahrnutí řidiče či provozních náplní nejsou nezávisle ověřeny.`;c.needsReview.push({field:`generations[${gi}].trims[${ti}].massBasis`,reason:'Přesná metodika vážení zůstává k ověření; nepřevádí se automaticky na pohotovostní hmotnost.'});}
+}}
+const f40=cards.find(c=>c.lineSlug==='f40'),g=f40.generations[0],t=g.trims[0],moma='https://www.moma.org/documents/moma_catalogue_411_300063104.pdf';
+g.from=t.from=1987;g.to=t.to=1992;g.sources.push(moma);t.sources.push(moma);f40.sources.push(moma);
+g.specificationScope.noteCs+=' Silniční výrobní meze 1987–1992 ověřeny v katalogu MoMA 1993, s. 23–25; technické hodnoty v jiných jednotkách zde nejsou odhadovány.';
+for(const c of cards){c.needsReview=c.needsReview.filter(r=>{if(r.field.endsWith('.photo'))return !c.generations[Number(r.field.match(/generations\[(\d+)\]/)?.[1])]?.photo;if(c.lineSlug==='f40'&&/^generations\[0\](?:\.trims\[0\])?\.(from|to)$/.test(r.field))return false;return true;});markUnknowns(c);}
+fs.writeFileSync(file,JSON.stringify(cards,null,2)+'\n');
+const rp='analysis/codex/night-ferrari-report.json',r=JSON.parse(fs.readFileSync(rp));r.photos=cards.reduce((n,c)=>n+c.generations.filter(g=>g.photo).length,0);r.proposedLines=cards.map(proposedLine);r.gaps=r.gaps.replace('Photos pending targeted Commons pass.','Pět fotografií Commons vizuálně prohlédnuto, včetně úplného vozu s odstupem. Další cílené metadatové požadavky blokovaly HTTP 429; 65 prázdných fotografií neznamená prokázanou neexistenci vhodných snímků.');r.photoPass={categories:27,inspectedCandidates:24,selected:5,remaining:65,blocker:'Exact imageinfo API HTTP429 after first35-title batch; additional photo coverage incomplete, not exhausted.'};r.primaryCheck={moma:{url:moma,settled:'F40 road production1987–1992; pages23–25'},ferrariArchive:'Direct page still JavaScript/bot challenge; parent has cached manufacturer facts not independently read here.'};r.finishedAt=new Date().toISOString();fs.writeFileSync(rp,JSON.stringify(r,null,2)+'\n');console.log({cards:r.cards,generations:r.generations,versions:r.versions,photos:r.photos});

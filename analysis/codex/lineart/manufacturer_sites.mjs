@@ -1,0 +1,21 @@
+export const sites={
+ skoda:{make:'skoda',home:'https://www.skoda-auto.cz/',modelPath:/\/modely\//,terms:[]},
+ 'skoda-storyboard':{make:'skoda',home:'https://www.skoda-storyboard.com/en/',modelPath:/\/tag\/model\//,terms:['https://www.skoda-storyboard.com/en/copyright/'],archive:true},
+ volkswagen:{make:'volkswagen',home:'https://www.volkswagen-newsroom.com/en/models-3493',modelPath:/\/en\/.+-\d+/,terms:['https://www.volkswagen-newsroom.com/en/terms-of-service-35'],archive:true,currentModelPaths:['/en/polo-7427','/en/golf-18415','/en/golf-variant-18449','/en/touran-3529','/en/tiguan-17320','/en/passat-17451']},
+ hyundai:{make:'hyundai',home:'https://www.hyundai.news/cz/',modelPath:/\/modely\//i,terms:[],archive:true},
+ kia:{make:'kia',home:'https://www.kia.com/cz/',modelPath:/model|sportage|ceed|sorento|stonic|niro|picanto|stinger|ev[369]/i,terms:[]},
+ toyota:{make:'toyota',home:'https://www.toyota.cz/',modelPath:/new-cars|model|corolla|yaris|rav4|camry|aygo/i,terms:[]},
+ ford:{make:'ford',home:'https://www.ford.cz/',modelPath:/osobni|uzitkove|model|focus|kuga|puma|transit|tourneo|mustang/i,terms:[]},
+ dacia:{make:'dacia',home:'https://www.dacia.cz/',modelPath:/vozy|model|duster|sandero|jogger|logan|spring|bigster/i,terms:[]},
+ renault:{make:'renault',home:'https://www.renault.cz/',modelPath:/vozy|model|clio|captur|megane|arkana|austral|scenic|espace|trafic/i,terms:[]},
+ peugeot:{make:'peugeot',home:'https://www.peugeot.cz/',modelPath:/model|nase-vozy|208|308|408|2008|3008|5008|rifter|partner|traveller/i,terms:[]},
+ citroen:{make:'citroen',home:'https://www.citroen.cz/',modelPath:/model|vozy|c3|c4|c5|berlingo|spacetourer/i,terms:[]},
+ opel:{make:'opel',home:'https://www.opel.cz/',modelPath:/vozy|model|astra|corsa|mokka|frontera|grandland|combo|zafira/i,terms:[]},
+ seat:{make:'seat',home:'https://www.seat.cz/',modelPath:/model|leon|ibiza|arona|ateca|tarraco/i,terms:[]},
+ cupra:{make:'cupra',home:'https://www.cupraofficial.cz/',modelPath:/model|formentor|leon|born|terramar|tavascan/i,terms:[]},
+ bmw:{make:'bmw',home:'https://www.bmw.cz/cs/index.html',modelPath:/all-models|modely|bmw-m|bmw-i|bmw-x/i,terms:[]},
+ 'mercedes-benz':{make:'mercedes-benz',home:'https://www.mercedes-benz.cz/',modelPath:/passengercars\/models/i,terms:[]},
+ audi:{make:'audi',home:'https://www.audi.cz/',modelPath:/model|a[134568]|q[234578]|e-tron|tt/i,terms:[]},
+ mg:{make:'mg',home:'https://www.mgmotor-czech.cz/',modelPath:/model|mg3|mg4|mg5|zs|hs|cyberster/i,terms:[]},
+ byd:{make:'byd',home:'https://www.byd.com/cz',modelPath:/car|model|seal|dolphin|atto|tang|sealion/i,terms:[]}
+};

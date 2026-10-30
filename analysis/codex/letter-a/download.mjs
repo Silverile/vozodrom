@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const [page,folder]=process.argv.slice(2);
+fs.mkdirSync(folder,{recursive:true});
+const response=await fetch(page);
+if(!response.ok) throw Error(response.status);
+const html=await response.text();
+fs.writeFileSync(path.join(folder,'source-page.html'),html);
+const url=html.match(/class="fullImageLink"[^>]*>\s*<a href="([^"]+)"/)[1].replaceAll('&amp;','&');
+const image=await fetch(url);
+if(!image.ok) throw Error(image.status);
+fs.writeFileSync(path.join(folder,'reference.jpg'),Buffer.from(await image.arrayBuffer()));
+console.log(url);

@@ -1,0 +1,14 @@
+﻿# Matra: delivery70 additional short pass, 2026-10-27
+
+Five road-production families: Djet/Jet,530,Bagheera,Murena,Rancho. Primarymanufacturerhistory https://matra.com/marque and officialmuseum2021presskit https://www.museematra.com/wp-content/uploads/2021/07/dossier_de_presse_2021.pdf provide familyproductionperiods. Text is originalCzech; numbers of cars produced were intentionally not copied as supposed live-market statistics.
+
+EspaceIвЂ“III andAvantime were designed/manufactured withMatra but sold asRenault. They are historical cross-references/exclusions in the report, not falseMatra-badged cards. EarlierRenГ©Bonnet Djet production is not backdated intoMatra's1964takeover. Museum/manufacturer endDjet1968 is distinguished from a club's1967statement. Rancho production1983 versus availability1984 is explicitly scoped. Racecars, conceptcars and unproven one-offs are excluded.
+
+Nine selected technical rows are partial. Djet5/5S/Jet6 engine/transmission identities use the specialistclub FAQ. M530A1969 power is55kW as printed in the secondary article, not converted from an earlier70DINhp version. LX/SX masses are specifically labelled curb by that source; loading definition remains unknown. Targa is approximated by the available kabriolet enum with an explicitnote, while SX has a fixedroof. Murena1.6/2.2/S power/torque/0вЂ“100 are direct metric entries in the secondary technicaltable.2.2displacement conflicts2155 versus2156cmВі and remainsnull. Published familydimensions are shared only withinMurena's singlebody, not across othermodels. No hp, imperial speed,0вЂ“60 or consumption conversions were performed. Unknowns are indexed.
+
+Photo candidates were individually inspected and exactCommonscredits retained. Search results that depict the wrong model or only a rear view are not silently promoted to a preferredfront3/4shot. If selected imageaspect falls outside1.4вЂ“1.7, the finalizer explicitly records it as a fallback. Remainingnulls mean incomplete short-pass research, not no suitablephotoexists.
+
+Final selection has four photos for five family records. Djet aspect1.379 is an explicit aspect fallback. Parent review rejected BagheeraVanDijk.jpg: rear margin about1%, bottom about2%, below the required approximately5%. Its selected photo is null with a specific review note; the patch no longer selects it. The existing finalizer invokes `night-matra-photo-correction.mjs`, making this rejection part of the offline rebuild. The mixed filename MatraMurenaBagheera depicts a Murena2.2 in front of BagheeraSeries2, as its Commons description explicitly confirms; it is assigned to Murena.
+
+Exactoffline rebuild: `node analysis/codex/night-matra-build.mjs`, then `node analysis/codex/night-matra-photos/finalize.mjs`, then `node analysis/codex/night-matra-validate.mjs`. ResearchAPI/search scripts are not required for rebuild. No commits or sharedregistry writes. Temporaryimagebinaries removed beforehandoff.
+

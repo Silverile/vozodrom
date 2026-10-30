@@ -1,0 +1,5 @@
+import fs from'node:fs';
+const data=JSON.parse(fs.readFileSync('analysis/codex/dkw-photo-categories-48.json'));
+const chosen={f1:['DKW Front F1.jpg','DKW F1.jpg'],f4:['DKW Front F4 Meisterklasse.jpg'],f5:['DKW F5 Sedan 1935.jpg','1936 DKW F5K Automuseum Melle 2025-08.jpg'],f7:['DKW Sedan 1938.jpg','1937 DKW F7 Reichsklasse pic1.JPG'],f8:['1938 DKW F8 Sonderklasse.JPG','1940 DKW F8 foto-4.JPG'],f89:['DKW Meisterklasse 1952.JPG','DKW F89 Universal Meisterklasse Front 1951.jpg'],'3-6':['MHV DKW F91 Convertible 01.jpg','1954 DKW F 91 Sonderklasse Cabriolet Karmann, pic01.JPG'],f102:['MHV DKW F102 01.jpg','DKW F 102 at Nederlands Transport Museum.jpg'],junior:['DKW Junior, vorn (museum mobile 2013-09-03).JPG','1961 DKW Junior Deluxe.jpg'],monza:['DKWMonza-12.jpg','1956-1959 DKW Auto Union, 3-6 Monza pic01.JPG'],schnellaster:['DKW Schnellaster 1.jpg']};
+const out=[];for(const row of data)for(const file of chosen[row.lineSlug]||[])if(row.files.includes('File:'+file))out.push({lineSlug:row.lineSlug,generationIndex:0,file});
+fs.writeFileSync('analysis/codex/dkw-photo-requests.json',JSON.stringify(out,null,2)+'\n');

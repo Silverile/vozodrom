@@ -1,0 +1,93 @@
+{
+  "make": "gumpert",
+  "retrievedAt": "2026-10-27",
+  "cards": 1,
+  "generations": 1,
+  "versions": 2,
+  "photos": 1,
+  "proposedLines": [
+    {
+      "slug": "apollo",
+      "name": "Apollo",
+      "makeSlug": "gumpert",
+      "aliases": [],
+      "bodyTypes": [
+        "kupe"
+      ],
+      "from": 2005,
+      "to": null,
+      "productionStatus": "unknown",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2005,
+          "to": null,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kupe"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Gumpert_Apollo",
+            "https://www.evo.co.uk/features/features/290542/az_supercars_gumpert_apollo_s.html",
+            "https://acdac.wordpress.com/wp-content/uploads/2010/01/gumpert.pdf"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gumpert_Apollo",
+        "https://www.evo.co.uk/features/features/290542/az_supercars_gumpert_apollo_s.html",
+        "https://acdac.wordpress.com/wp-content/uploads/2010/01/gumpert.pdf",
+        "https://www.traumautoarchiv.de/html/F1353.html",
+        "https://www.ultimatecarpage.com/spec/2588/Gumpert-Apollo.html"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        },
+        {
+          "field": "to",
+          "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gumpert_Apollo",
+    "https://www.evo.co.uk/features/features/290542/az_supercars_gumpert_apollo_s.html",
+    "https://acdac.wordpress.com/wp-content/uploads/2010/01/gumpert.pdf",
+    "https://www.traumautoarchiv.de/html/F1353.html",
+    "https://www.ultimatecarpage.com/spec/2588/Gumpert-Apollo.html"
+  ],
+  "scope": "Původní malosériová silniční rodinaGumpertApollo; Sport/Speed/Enraged nejsou vydány za nezávislé základní modely.",
+  "deferred": [
+    "Tornante a Explosion jsou návrhy/prototypy bez ověřeného sériového zahájení; žádné produkční karty.",
+    "ApolloN představený2016 není potvrzená pokračující výroba původníhoGumpertu; žádný odhad roku2016 jako konecApollo.",
+    "PozdějšíApolloIntensaEmozione a projektyRGNathalie vyžadují vlastní identitu značky a důkaz zahájení výroby.",
+    "ApolloRace/R a další ryze okruhová provedení vyřazena ze silničního katalogu."
+  ],
+  "gaps": "Rok ukončení, přesné výkony/objemy, hmotnostní metodika a rozměrové změny vyžadují primární verzované listiny. Fotografie čekajíCommons.",
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Strict TypeScript CatalogModelCard[] and CatalogModelLine[] assignment",
+      "Unique slugs, source URLs, chronological bounds, all null fields indexed in needsReview"
+    ],
+    "command": "node analysis/codex/night-gumpert-validate.mjs"
+  },
+  "photoCoverage": {
+    "selected": 1,
+    "searchedCommonsCategories": [
+      "Gumpert Apollo",
+      "Gumpert Apollo at the Geneva Motor Show 2013"
+    ],
+    "note": "Partial search: 68 aspect-filtered Commons candidates inspected in contact sheets; selected images individually inspected. Tight crops, prototypes, irrelevant police cars and Spykstaal rebadges rejected. Remaining nulls are incomplete search coverage, not evidence that no suitable image exists."
+  }
+}

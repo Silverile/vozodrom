@@ -1,0 +1,30 @@
+{
+  "retrievedAt": "2026-10-27",
+  "sources": [
+    {
+      "url": "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/C-180--W-202-E-18-1993---1997.xhtml?oid=5531",
+      "settled": "C180 standard production 03.1993–06.1997 versus preproduction09.1992; 1799cc/4cyl/90kW/170Nm; gearbox-specific 0–100/top speed, dimensions and dated heights; standard kerb1350kg EC92/21."
+    },
+    {
+      "url": "https://mercedes-benz-publicarchive.com/marsClassic/en/instance/ko/C-200--W-202-E-20-1994---1997.xhtml?oid=5523",
+      "settled": "C200 standard production01.1994–06.1997 versus preproduction03.1993; 1998cc/4cyl/100kW/190Nm; gearbox-specific performance, dimensions and dated heights; standard kerb1365kg EC92/21."
+    }
+  ],
+  "scope": "Six selected combinations of two mainstream petrol engines, not all W202 engines. Source pages independently read in full. No third-party mirror figures used.",
+  "gaps": [
+    "Other engines including C220/C280/diesels not covered",
+    "Optional automatic mass unknown",
+    "Power standard and combined consumption unknown; three-point protocol not averaged",
+    "No wagon, sport suspension, facelift1997+ or emission-market extensions"
+  ],
+  "validation": {
+    "status": "PASS",
+    "command": "node analysis/codex/mercedes-legacy-72/validate.mjs",
+    "checks": [
+      "Six strict CatalogModelCardTrim rows",
+      "W202 target identity",
+      "Null indexing, unique names, source host, chronological bounds",
+      "No inferred combined consumption or optional-automatic mass"
+    ]
+  }
+}

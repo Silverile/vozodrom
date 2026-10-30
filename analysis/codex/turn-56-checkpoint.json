@@ -1,0 +1,437 @@
+{
+  "startedAt": "2026-10-27T02:50:50Z",
+  "finishedAt": "2026-10-27T03:05:50.581Z",
+  "elapsedMinutes": 15,
+  "before": {
+    "makes": 83,
+    "cards": 1786,
+    "generations": 2285,
+    "versions": 690,
+    "photos": 462
+  },
+  "after": {
+    "makes": 89,
+    "cards": 1910,
+    "generations": 2440,
+    "versions": 722,
+    "photos": 505
+  },
+  "done": [
+    {
+      "make": "geely",
+      "lines": 45,
+      "generations": 61,
+      "versions": 13,
+      "photos": 10,
+      "gaps": [
+        "Version coverage is partial: EX5 UK3, Starray EM-i UK3, Emgrand Philippines1, Starray Chile2, Coolray Philippines1 and Chile3. Other eras need sourced engine/gearbox tables.",
+        "Early MR and Beauty Leopard endpoints conflict across summaries and the2008 manufacturer investor presentation; uncertain dates remain null.",
+        "UK Starray EM-i source labels51/84 as kilometres in its table but miles in prose; rangeKm is null. UK0–62mph is not silently relabelled0–100km/h.",
+        "Chile Coolray publishes acceleration less than7.6seconds, HP rather than kW, fuel economy in km/L and gross mass; unsupported exact0–100/kW/L100/kerb values remain null.",
+        "Geely Emgrand1.5D label is not interpreted as proof of diesel fuel. Exact cc, fuel, cylinder counts and gearboxes remain null where absent in the selected source.",
+        "Galaxy TT, Starshine7, M7, Cruiser700, V900 and recent2027-model-year EX5 refresh need confirmed production/badge/date review. Their announcement is not counted as a verified production line here.",
+        "Photo search is incomplete, not exhausted. EX2 disguised Proton candidate rejected as wrong badge; CK candidate tight or rear view; Borui tight showroom candidates and EX5 interior rejected.",
+        "Photos illustrate production families, not the exact technical variant. Emgrand2021facelift photograph belongs to FE-3 era; MK Cross photograph belongs to hatchback record.",
+        "Geometry and Galaxy direct Geely subbrands are included with badge/market notes; separate holding-company marques are excluded.",
+        "Rebuild order: night-geely-build, night-geely-versions, night-geely-finish, night-geely-validate. Earlier builders alone overwrite later enrichment.",
+        "Haoqing endpoint left null:2006 summary endpoint versus inclusion in2008 OEMproductlineup. MK hatchback start not copied from family2006 introduction.",
+        "UK EX5 boot table reverses down/up wording relative to461/1877figures; generation trunkLnull pending unambiguous source.",
+        "Rebuild quality step: run night-geely-quality after finish and before validator."
+      ],
+      "report": "night-geely-report.json"
+    },
+    {
+      "make": "ginetta",
+      "lines": 19,
+      "generations": 20,
+      "versions": 3,
+      "photos": 3,
+      "gaps": [
+        "Mnoho konců malých výrobních sérií není v otevřeném primárním podkladu vymezeno; null neznamená současnou výrobu.",
+        "Technické tabulky představují vybrané zdrojově omezené konfigurace, nikoli všechny zákaznické stavebnice.",
+        "Akula: výrobce doložil výrobní specifikaci v roce 2024, nikoli datum skutečně dokončeného prvního zákaznického kusu.",
+        "Photo search included category/subcategory and exact-file metadata batches for G15, G32, G4, G21, G27, G33, G60, G26 and G40. Three inspected images accepted. Remaining images are pending research, not claimed unavailable.",
+        "G10 a případné pozdější obnovení silniční výroby vyžadují samostatné doložení; původní G10 zdroj označuje za závodní. G5/G6 jsou příbuzné speciály, nikoli automaticky oddělené silniční řady."
+      ],
+      "report": "night-ginetta-report.json"
+    },
+    {
+      "make": "gmc",
+      "lines": 35,
+      "generations": 42,
+      "versions": 6,
+      "photos": 5,
+      "gaps": [
+        "Historické T/F, AC, C/E a nosnostní řady jsou omezené rodinné záznamy, nikoli kompletní výčet předválečných podtypů.",
+        "Sierra, Yukon, Suburban a další mají více generací než současný stručný záznam; nelze označovat tuto dávku za plné světové pokrytí.",
+        "Souhrnná tabulka rozlišuje modelové uvedení a kalendářní výrobu; neurčené výrobní hranice zůstávají null.",
+        "Terrain odvozený od Antary na Blízkém východě, Envoy XL/XUV a exportní Suburbany vyžadují podrobnější následné zpracování.",
+        "GMC Chevette: rozpor 0–100 17,3 vs18,3 s uvnitř jednoho dobového testu; pole null. Období do1995 může být tržní, nikoli výrobní.",
+        "Pouze vybrané doložené technické konfigurace; americké hp/lb-ft nejsou odhadovány na kW/Nm.",
+        "Five inspected whole-car images selected with exact Commons credits. Typhoon has an open bonnet; Hummer SUV photograph depicts the generation at an exhibition. Safari candidates rejected for tight framing. Unsearched families remain pending, not claimed unavailable."
+      ],
+      "report": "night-gmc-report.json"
+    },
+    {
+      "make": "great-wall",
+      "lines": 22,
+      "generations": 28,
+      "versions": 5,
+      "photos": 8,
+      "gaps": "Široký první průchod, nikoli úplná globální historie. Neověřené motorizace, konce značkových variant a exportní odlišnosti zůstávají null. U části rodin byly nalezeny jen příliš těsné fotografie.",
+      "report": "night-great-wall-report.json"
+    },
+    {
+      "make": "grecav",
+      "lines": 2,
+      "generations": 3,
+      "versions": 3,
+      "photos": 1,
+      "gaps": "Dílčí technické verze a evropské katalogy; ne úplný soupis výbav. Fotografie čekajíCommons.",
+      "report": "night-grecav-report.json"
+    },
+    {
+      "make": "gumpert",
+      "lines": 1,
+      "generations": 1,
+      "versions": 2,
+      "photos": 1,
+      "gaps": "Rok ukončení, přesné výkony/objemy, hmotnostní metodika a rozměrové změny vyžadují primární verzované listiny. Fotografie čekajíCommons.",
+      "report": "night-gumpert-report.json"
+    }
+  ],
+  "fiat": {
+    "make": "fiat",
+    "lines": 115,
+    "generations": 142,
+    "versions": 34,
+    "photos": 24,
+    "gaps": [
+      "Partial version checkpoint: PuntoII4/PuntoIII6/PandaIII3/TipoII4/BravoII6/PandaII4/500(2007)3. Other generations still need sourced tables.",
+      "Individual Wikipedia fetches encounteredHTTP429 mid-batch; affected dates remain null and list identity evidence is explicitly recorded.",
+      "Many body types remainnull; no unknown bodyclass inferred from name. Exact mass conventions retained; noHP-to-kW conversions.",
+      "Missing Grande Panda,500electric,500hybrid and recentLCVtechnicalversions require nextturn; no current production inferred fromnull end.",
+      "Historic identity summaries are intentionally limited and need model-specific editorial enrichment.",
+      "Abarth treated as own make; racecars, concepts and aftermarket coachbuilder-onlylines excluded. Globalrebadges/Indianlicensedderivatives andparticularbodycoachwork notexhaustive.",
+      "PRIORITY FOLLOW-UP: PuntoI and remainingII variants; PandaI; other500eras/currentHybrid/electric; Uno; Seicento; Cinquecento; Doblo; Ducato; Stilo; BravoI; all37existing identities require engine/gearbox expansion. Only9 of142era records have versions.",
+      "Photo research incomplete, not exhausted. 24 selectedreferences only; PandaI candidate tight, PuntoII tightroof, classic500sideview/tightrear rejected; manycarfamilies remainunsearched.",
+      "509 startyear conflicted1924/1925 in checkedhistoricalsources: null. Museum508specifically1932specimen;8Vengine variants notfullcoachworkspecs.",
+      "Rebuild order: night-fiat-build, night-fiat-enrich, night-fiat-more-versions, night-fiat-finish, night-fiat-conflicts, night-fiat-punto-ii, night-fiat-validate. Early builders alone overwrite later enrichment.",
+      "PandaII UK2008: base-bodywidth conflicts1578table/1589drawing; bothbase1.1/1.2 widths leftnull. Otherbodyspecific4x4/100HPdimensions retained.",
+      "Photoexceptions: PuntoI andBravoI cleanwhole-car4:3 references; otherselectedphotos approximately1.4–1.7. Photo search notcomplete.",
+      "PuntoII added4 May2003 launch configurations:1.2MT3d/5d and1.4MT5d/Sporting6MT3d. Diesel,1.2 16V,1.8HGT,Dualogic andSpeedgear stillneedownrows. Sportinglengthandmassnull duevariant-footnoteambiguity."
+    ],
+    "report": "night-fiat-report.json"
+  },
+  "photoBackfill": {
+    "retrievedAt": "2026-10-27T03:03:23.223Z",
+    "makeCounts": {
+      "fiat": 15
+    },
+    "metadataCandidates": 173,
+    "selected": [
+      {
+        "lineSlug": "panda",
+        "generationIndex": 0,
+        "file": "1984 Fiat Panda 45 S front.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:1984_Fiat_Panda_45_S_front.jpg",
+        "aspect": 1.4828544949026876
+      },
+      {
+        "lineSlug": "uno",
+        "generationIndex": 0,
+        "file": "2011 NEC Classic Car Show DSC 2168 - Flickr - tonylanciabeta.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:2011_NEC_Classic_Car_Show_DSC_2168_-_Flickr_-_tonylanciabeta.jpg",
+        "aspect": 1.5056179775280898
+      },
+      {
+        "lineSlug": "freemont",
+        "generationIndex": 0,
+        "file": "Fiat Freemont 2.0 16V Multijet Urban – Frontansicht, 25. Februar 2012, Düsseldorf.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_Freemont_2.0_16V_Multijet_Urban_%E2%80%93_Frontansicht,_25._Februar_2012,_D%C3%BCsseldorf.jpg",
+        "aspect": 1.5682281059063137
+      },
+      {
+        "lineSlug": "croma",
+        "generationIndex": 0,
+        "file": "1989 Fiat Croma i.e. (11822029275).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:1989_Fiat_Croma_i.e._(11822029275).jpg",
+        "aspect": 1.5026014568158168
+      },
+      {
+        "lineSlug": "132",
+        "generationIndex": 0,
+        "file": "Fiat 132 GLS 1600.JPG",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_132_GLS_1600.JPG",
+        "aspect": 1.5766871165644172
+      },
+      {
+        "lineSlug": "doblo",
+        "generationIndex": 0,
+        "file": "2006 FIAT Doblò Cargo SWB 1.3 JTD (Front).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:2006_FIAT_Dobl%C3%B2_Cargo_SWB_1.3_JTD_(Front).jpg",
+        "aspect": 1.5685649202733485
+      },
+      {
+        "lineSlug": "ulysse",
+        "generationIndex": 0,
+        "file": "Fiat Ulysse 2.1 TD ES.JPG",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_Ulysse_2.1_TD_ES.JPG",
+        "aspect": 1.6074626865671642
+      },
+      {
+        "lineSlug": "ulysse",
+        "generationIndex": 1,
+        "file": "Fiat Ulysse 20090801 front.JPG",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_Ulysse_20090801_front.JPG",
+        "aspect": 1.4350086655112653
+      },
+      {
+        "lineSlug": "124",
+        "generationIndex": 0,
+        "file": "1974 Fiat 124 front.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:1974_Fiat_124_front.jpg",
+        "aspect": 1.4787190920145927
+      },
+      {
+        "lineSlug": "850",
+        "generationIndex": 0,
+        "file": "Fiat 850 (4663252127).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_850_(4663252127).jpg",
+        "aspect": 1.441358024691358
+      },
+      {
+        "lineSlug": "ducato",
+        "generationIndex": 2,
+        "file": "2022 Fiat Ducato facelift.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:2022_Fiat_Ducato_facelift.jpg",
+        "aspect": 1.4133885438233265
+      },
+      {
+        "lineSlug": "600",
+        "generationIndex": 1,
+        "file": "Fiat 600 (2023) IMG 2357.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_600_(2023)_IMG_2357.jpg",
+        "aspect": 1.5023696682464456
+      },
+      {
+        "lineSlug": "600",
+        "generationIndex": 0,
+        "file": "1972 Fiat 600 L (6301678220).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:1972_Fiat_600_L_(6301678220).jpg",
+        "aspect": 1.5247395833333333
+      },
+      {
+        "lineSlug": "cinquecento",
+        "generationIndex": 0,
+        "file": "1993 Fiat Cinquecento 900.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:1993_Fiat_Cinquecento_900.jpg",
+        "aspect": 1.5047759000734753
+      },
+      {
+        "lineSlug": "stilo",
+        "generationIndex": 0,
+        "file": "Fiat Stilo LF.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Fiat_Stilo_LF.jpg",
+        "aspect": 1.5162364696086594
+      }
+    ],
+    "method": "Commons API descriptive User-Agent, maxlag5, 50-file category imageinfo batches and >=1.1-second request pacing. Metadata reused for additional thumbnail selections. Full contact-sheet and individual-thumbnail review.",
+    "rateLimited": false,
+    "coverage": "Incomplete search, generally first50category members per request; generation-specific child categories explicitly discovered. Empty or wrong category names are not proof of photo absence.",
+    "framingExceptions": [
+      "600(2023) and Stilo: whole vehicle visible with closest lateral margin approximately4%, slightly below preferredapproximately5%; explicitly recorded in photo.reviewNoteCs."
+    ],
+    "creditExceptions": [
+      "UlysseII: Attribution custom file-specific permission verified via cached exact Commons file page; filepage retained as licenceUrl. No CC licence inferred."
+    ],
+    "rejected": [
+      "Scenery andstreetphotos, interior/dashboard/engine closeups, damagedvehicles, racing/tuning shots, rear-onlyviews andtight source crops rejected.",
+      "124SportSpider candidate rejected for sedan-family target because its own line identity differs.",
+      "127yellowcandidate122 rearcorner obscured by anothercar; 850abandoned118 incompletebody; 128historicalpressaward43?45 contains no usablemodelphoto.",
+      "Doblomk2 andBravoII manycandidates too tightlyframed; photograph searches are not exhausted."
+    ],
+    "remainingPriority": [
+      "PuntoII",
+      "BravoII",
+      "DobloIII",
+      "DucatoII",
+      "Seicento",
+      "Nuova500",
+      "New500electric",
+      "Multipla"
+    ],
+    "cleanup": "Review JPEG/contactsheet binaries removed at handoff; only structured metadata, sources and patches retained."
+  },
+  "next": "haval",
+  "remainingMakes": 118,
+  "externallyCovered": [
+    {
+      "make": "wiesmann",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "willys",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wolseley-motors",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wuling-motors",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "xpeng",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zastava",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zaz",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zeekr",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zotye-auto",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    }
+  ],
+  "notes": [
+    "Three concurrent make researchers plus root Fiat-photo/review/integration work; all files frozen at handoff. No commits, publishing or application-index generation.",
+    "Coverage is partial, not full production histories or full generation/version tables. Geely own-badge/direct historic Galaxy/Geometry families are separated from other holding-company brands; independent Haval/Ora/Tank are not folded into GreatWall.",
+    "Root Fiat photos increased9to24:15 reviewed generation references,173 metadata candidates. Descriptive User-Agent, maxlag5 and50-file imageinfo batches restored HTTP200 responses. Requests paced at approximately1.1seconds in each helper; metadata reused for extra thumbnails.",
+    "Fiat600(2023) andStilo have approximately4% nearestside margins, explicit small framing exceptions; the full vehicle remains visible. No image crop/padding/editing applied. OriginalFiat4:3 exceptions remain documented.",
+    "UlysseII uses exact file-specific Attribution permission, with filepage as licenceUrl; commercial use/derivatives permitted with author attribution. GMC HummerEV SUV is PD-self by Bull-Doser, not falsely calledCC0.",
+    "Ginetta Akula rows describe announced production specifications; firstcustomerbuild dates remain unknown. GMC Chevette conflicting17.3/18.3second acceleration remainsnull. Geely EM-i range km/miles source conflict remainsnull.",
+    "Fiat still needs technical versions for133of142era records, and118era photos are missing. This turn prioritized photographs, not additional Fiattechnicalrows.",
+    "Renamed the auxiliary GMCcleanup report to night-gmc-cleanup-evidence.json and corrected its writer, so generic make-report discovery does not misclassify a cleanup log as a make. Rebuilt progress and source indexes after the correction.",
+    "Temporary review binaries removed; structured sources, exact imageinfo metadata and numbered patches retained. Original883line objects and protectedSkoda/Claude files guarded by validation."
+  ],
+  "changedFiles": [
+    "analysis/codex/checkpoint-night-56.mjs",
+    "analysis/codex/geely-evidence/photos/api-log.json",
+    "analysis/codex/geely-evidence/photos/candidates.json",
+    "analysis/codex/geely-evidence/photos/selected.json",
+    "analysis/codex/geely-evidence/photos/targets-001.json",
+    "analysis/codex/geely-evidence/photos/targets-002.json",
+    "analysis/codex/geely-evidence/photos/targets-003.json",
+    "analysis/codex/geely-evidence/photos/targets-004.json",
+    "analysis/codex/ginetta-photos/candidates.json",
+    "analysis/codex/ginetta-photos/candidates2.json",
+    "analysis/codex/ginetta-photos/more/api-log-targets-001.json",
+    "analysis/codex/ginetta-photos/more/api-log-targets-002.json",
+    "analysis/codex/ginetta-photos/more/candidates.json",
+    "analysis/codex/ginetta-photos/more/metadata-groups.json",
+    "analysis/codex/ginetta-photos/more/targets-001.json",
+    "analysis/codex/ginetta-photos/more/targets-002.json",
+    "analysis/codex/ginetta-photos/selected.json",
+    "analysis/codex/gmc-photos/api-log.json",
+    "analysis/codex/gmc-photos/candidates.json",
+    "analysis/codex/gmc-photos/category-scout.json",
+    "analysis/codex/gmc-photos/selected.json",
+    "analysis/codex/gmc-photos/targets-001.json",
+    "analysis/codex/gmc-photos/targets-002.json",
+    "analysis/codex/gmc-photos/targets-003.json",
+    "analysis/codex/gmc-photos/targets-004.json",
+    "analysis/codex/merge-photo-patches-56.mjs",
+    "analysis/codex/model-line-primary-facts.json",
+    "analysis/codex/model-lines-review.md",
+    "analysis/codex/night-checkpoint-56.md",
+    "analysis/codex/night-fiat-report.json",
+    "analysis/codex/night-fiat-validate.mjs",
+    "analysis/codex/night-geely-build.mjs",
+    "analysis/codex/night-geely-finish.mjs",
+    "analysis/codex/night-geely-photos.mjs",
+    "analysis/codex/night-geely-quality.mjs",
+    "analysis/codex/night-geely-report.json",
+    "analysis/codex/night-geely-sheet.mjs",
+    "analysis/codex/night-geely-validate.mjs",
+    "analysis/codex/night-geely-versions.mjs",
+    "analysis/codex/night-ginetta-build.mjs",
+    "analysis/codex/night-ginetta-more-photo.mjs",
+    "analysis/codex/night-ginetta-photo.mjs",
+    "analysis/codex/night-ginetta-photo2.mjs",
+    "analysis/codex/night-ginetta-report.json",
+    "analysis/codex/night-ginetta-validate.mjs",
+    "analysis/codex/night-gmc-build.mjs",
+    "analysis/codex/night-gmc-cleanup-evidence.json",
+    "analysis/codex/night-gmc-cleanup.mjs",
+    "analysis/codex/night-gmc-photo-audit.json",
+    "analysis/codex/night-gmc-photo-audit.mjs",
+    "analysis/codex/night-gmc-photo-search.mjs",
+    "analysis/codex/night-gmc-photo.mjs",
+    "analysis/codex/night-gmc-report.json",
+    "analysis/codex/night-gmc-validate.mjs",
+    "analysis/codex/night-great-wall-build.mjs",
+    "analysis/codex/night-great-wall-finalize.mjs",
+    "analysis/codex/night-great-wall-photos/api-log.json",
+    "analysis/codex/night-great-wall-photos/api.mjs",
+    "analysis/codex/night-great-wall-photos/batch-001.json",
+    "analysis/codex/night-great-wall-photos/batch-002.json",
+    "analysis/codex/night-great-wall-photos/candidates.json",
+    "analysis/codex/night-great-wall-photos/choose.mjs",
+    "analysis/codex/night-great-wall-photos/sheet.mjs",
+    "analysis/codex/night-great-wall-photos/targets-001.json",
+    "analysis/codex/night-great-wall-photos/targets-002.json",
+    "analysis/codex/night-great-wall-photos/targets-003.json",
+    "analysis/codex/night-great-wall-photos/targets-004.json",
+    "analysis/codex/night-great-wall-report.json",
+    "analysis/codex/night-great-wall-seeds.json",
+    "analysis/codex/night-great-wall-validate.mjs",
+    "analysis/codex/night-grecav-build.mjs",
+    "analysis/codex/night-grecav-report.json",
+    "analysis/codex/night-grecav-validate.mjs",
+    "analysis/codex/night-gumpert-build.mjs",
+    "analysis/codex/night-gumpert-report.json",
+    "analysis/codex/night-gumpert-validate.mjs",
+    "analysis/codex/night-progress.json",
+    "analysis/codex/night-progress.md",
+    "analysis/codex/night-progress.mjs",
+    "analysis/codex/photo-backfill-56/README.md",
+    "analysis/codex/photo-backfill-56/api-log-targets-002.json",
+    "analysis/codex/photo-backfill-56/api-log-targets-003.json",
+    "analysis/codex/photo-backfill-56/api-log-targets-004.json",
+    "analysis/codex/photo-backfill-56/api-log-targets-005.json",
+    "analysis/codex/photo-backfill-56/api-log.json",
+    "analysis/codex/photo-backfill-56/api.mjs",
+    "analysis/codex/photo-backfill-56/batch-001.json",
+    "analysis/codex/photo-backfill-56/batch-002.json",
+    "analysis/codex/photo-backfill-56/batch-003.json",
+    "analysis/codex/photo-backfill-56/batch-004.json",
+    "analysis/codex/photo-backfill-56/batch-005.json",
+    "analysis/codex/photo-backfill-56/candidates.json",
+    "analysis/codex/photo-backfill-56/choose.mjs",
+    "analysis/codex/photo-backfill-56/collect.mjs",
+    "analysis/codex/photo-backfill-56/discover.mjs",
+    "analysis/codex/photo-backfill-56/discovery.json",
+    "analysis/codex/photo-backfill-56/metadata-groups.json",
+    "analysis/codex/photo-backfill-56/more.mjs",
+    "analysis/codex/photo-backfill-56/report.json",
+    "analysis/codex/photo-backfill-56/sheet.mjs",
+    "analysis/codex/photo-backfill-56/targets-001.json",
+    "analysis/codex/photo-backfill-56/targets-002.json",
+    "analysis/codex/photo-backfill-56/targets-003.json",
+    "analysis/codex/photo-backfill-56/targets-004.json",
+    "analysis/codex/photo-backfill-56/targets-005.json",
+    "analysis/codex/photo-backfill-56/validate.mjs",
+    "analysis/codex/turn-56-baseline.json",
+    "analysis/codex/turn-56-checkpoint.json",
+    "src/data/catalog/SOURCES.md",
+    "src/data/catalog/model-cards/fiat.json",
+    "src/data/catalog/model-cards/geely.json",
+    "src/data/catalog/model-cards/ginetta.json",
+    "src/data/catalog/model-cards/gmc.json",
+    "src/data/catalog/model-cards/great-wall.json",
+    "src/data/catalog/model-cards/grecav.json",
+    "src/data/catalog/model-cards/gumpert.json",
+    "src/data/catalog/model-line-additions.json",
+    "src/data/catalog/model-lines-auto.json"
+  ]
+}

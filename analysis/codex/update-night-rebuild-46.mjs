@@ -1,0 +1,1 @@
+﻿import fs from 'node:fs';for(const p of ['analysis/codex/night-progress.mjs','analysis/codex/write-night-review.mjs']){let s=fs.readFileSync(p,'utf8').replaceAll('merge-photo-patches-44.mjs','merge-photo-patches-46.mjs').replace('photo-root-42 and photo-backfill-44.','photo-root-42, photo-backfill-44 and photo-backfill-46.');fs.writeFileSync(p,s);}

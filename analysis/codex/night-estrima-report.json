@@ -1,0 +1,110 @@
+{
+  "makeSlug": "estrima",
+  "retrievedAt": "2026-10-27T02:18:33.232Z",
+  "counts": {
+    "cards": 1,
+    "generationRecords": 2,
+    "versions": 7,
+    "photos": 1
+  },
+  "proposedLines": [
+    {
+      "slug": "biro",
+      "name": "Birò",
+      "makeSlug": "estrima",
+      "aliases": [
+        "Biro",
+        "Birò Small",
+        "Birò Big",
+        "Birò Box",
+        "Birò Bolt"
+      ],
+      "bodyTypes": null,
+      "from": null,
+      "to": null,
+      "productionStatus": "unknown",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2009,
+          "to": null,
+          "productionStatus": "unknown",
+          "bodyTypes": null,
+          "sources": [
+            "https://it.wikipedia.org/wiki/Estrima_Bir%C3%B2",
+            "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf",
+            "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf"
+          ]
+        },
+        {
+          "code": null,
+          "from": null,
+          "to": null,
+          "productionStatus": "unknown",
+          "bodyTypes": null,
+          "sources": [
+            "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf",
+            "https://www.trankvile.com/wp-content/uploads/2023/12/TRANKVILE.COM-BIRO-E-PKW-TECHNICAL-SHEET.pdf",
+            "https://biro.nl/wp-content/uploads/2023/09/prijslijst-2023.pdf",
+            "https://www.eicma.it/en/estrima-presents-the-renewed-bir%C3%B2-en/"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://it.wikipedia.org/wiki/Estrima_Bir%C3%B2",
+        "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf",
+        "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf",
+        "https://www.trankvile.com/wp-content/uploads/2023/12/TRANKVILE.COM-BIRO-E-PKW-TECHNICAL-SHEET.pdf",
+        "https://biro.nl/wp-content/uploads/2023/09/prijslijst-2023.pdf",
+        "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf",
+        "https://www.eicma.it/en/estrima-presents-the-renewed-bir%C3%B2-en/"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        },
+        {
+          "field": "from",
+          "reason": "Začátek výroby není úplně ověřen."
+        },
+        {
+          "field": "to",
+          "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://it.wikipedia.org/wiki/Estrima_Bir%C3%B2",
+    "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf",
+    "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf",
+    "https://www.trankvile.com/wp-content/uploads/2023/12/TRANKVILE.COM-BIRO-E-PKW-TECHNICAL-SHEET.pdf",
+    "https://biro.nl/wp-content/uploads/2023/09/prijslijst-2023.pdf",
+    "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf",
+    "https://www.eicma.it/en/estrima-presents-the-renewed-bir%C3%B2-en/"
+  ],
+  "gaps": [
+    "Model end and actual B2211 production start not inferred from2022presentation.",
+    "B2211moment reference ambiguous; consumption cycle labels Euro4/Euro5 disagree, bothfieldsnull.",
+    "Legacy Bolt brochure unit errors not silently corrected; estimated range not treated as homologated.",
+    "Classic photo4:3 explicit framing exception; renewed B2211 photo remains missing after limitedCommonssearch."
+  ],
+  "excluded": [
+    "Autonomous/remote-control trial prototypes are not extra production lines.",
+    "Big/Small/Box/Bolt grouped as related road variants, not duplicates."
+  ],
+  "validation": {
+    "status": "passed",
+    "command": "node analysis/codex/night-estrima-validate.mjs",
+    "checks": "One related family/two production-era records/seven scoped technical versions; allnullsindexed; body-class gap explicit; masswithoutdoors and cycle conflicts retained; exact fullcar Commons photo credit,4:3 exception."
+  },
+  "elapsedMinutesApprox": 3
+}

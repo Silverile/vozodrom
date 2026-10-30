@@ -1,0 +1,93 @@
+{
+  "makeSlug": "delorean",
+  "retrievedAt": "2026-10-27T01:55:26.885Z",
+  "scope": "Původní zanikláDeLoreanMotorCompany(Q1241608), jediná doložená produkční řadaDMC-12. Novodobé firmy a prototypy nejsou automaticky pokračující výrobou této značky.",
+  "counts": {
+    "cards": 1,
+    "generationRecords": 1,
+    "technicalVersions": 2
+  },
+  "sources": [
+    "https://www.classicdmc.com/about-the-classic-dmc-automobile.html",
+    "https://www.ulstermuseum.org/digital-exhibitions/delorean-manufacture",
+    "https://dokumen.pub/delorean-owners-handbook.html",
+    "https://support.delorean.com/kb/a35/repair-service-manuals-new.aspx"
+  ],
+  "proposedLines": [
+    {
+      "slug": "dmc-12",
+      "name": "DMC-12",
+      "makeSlug": "delorean",
+      "aliases": [
+        "DMC DeLorean",
+        "DeLorean"
+      ],
+      "bodyTypes": [
+        "kupe"
+      ],
+      "from": 1981,
+      "to": 1982,
+      "productionStatus": "ended",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 1981,
+          "to": 1982,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "kupe"
+          ],
+          "sources": [
+            "https://www.classicdmc.com/about-the-classic-dmc-automobile.html",
+            "https://www.ulstermuseum.org/digital-exhibitions/delorean-manufacture",
+            "https://dokumen.pub/delorean-owners-handbook.html",
+            "https://support.delorean.com/kb/a35/repair-service-manuals-new.aspx"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://www.classicdmc.com/about-the-classic-dmc-automobile.html",
+        "https://www.ulstermuseum.org/digital-exhibitions/delorean-manufacture",
+        "https://dokumen.pub/delorean-owners-handbook.html",
+        "https://support.delorean.com/kb/a35/repair-service-manuals-new.aspx"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "Originální papírová příručka pro ověření metrické délky/rozvoru; dostupná digitální verze přiznává zachované tiskové chyby.",
+    "Pohotovostní hmotnosti zvlášť5MT/3AT; handbookuvádí obecně1290kg s plnou nádrží.",
+    "Výrobcem uvedenýkW, metrické0–100 a spotřeba dle přesného cyklu; hodnoty různých testů nebyly sloučeny.",
+    "Přesné hranice průběžných změn kapoty, kol, interiéru a prodejních modelovýchroků nejsou úplně rozpracovány."
+  ],
+  "excludedModels": [
+    {
+      "name": "DSV/ESV prototypy, DMC-24, filmový TimeMachine",
+      "reason": "Prototypy, projekty nebo zakázkové úpravy; nejsou další původní produkční modelové řady."
+    },
+    {
+      "name": "Alpha5, ModelJZD a novodobé elektrické/replica projekty",
+      "reason": "Odlišné novodobé subjekty; výroba pod původním zaniklýmQID nebyla prokázána."
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Strict TypeScript CatalogModelCard[] and CatalogModelLine[] assignment",
+      "Unique slugs, source URLs, chronological bounds, all null fields indexed in needsReview"
+    ],
+    "command": "node analysis/codex/night-delorean-validate.mjs"
+  }
+}

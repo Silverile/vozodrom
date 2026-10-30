@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+const cats=['Citroën C4 (2010)','Citroën C4 (2020)','Citroën C5 (1st generation - 2001-2008)','BMW E30','BMW E36','BMW E46','BMW E90','BMW F30','BMW G20','BMW F10','Chevrolet Captiva','Chevrolet Cruze'];let rows=[];
+for(const cat of cats){const p=new URLSearchParams({action:'query',format:'json',list:'categorymembers',cmtitle:'Category:'+cat,cmtype:'subcat',cmlimit:'50'});const r=await fetch('https://commons.wikimedia.org/w/api.php?'+p);if(!r.ok){console.log(r.status,cat);continue;}const d=await r.json();rows.push({cat,subcats:d.query?.categorymembers?.map(x=>x.title)||[]});await new Promise(r=>setTimeout(r,750));}fs.writeFileSync('analysis/codex/photo-backfill-46/category-evidence.json',JSON.stringify(rows,null,2));console.log(rows);

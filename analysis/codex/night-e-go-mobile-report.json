@@ -1,0 +1,113 @@
+{
+  "makeSlug": "e-go-mobile",
+  "retrievedAt": "2026-10-27T02:11:19.842Z",
+  "counts": {
+    "cards": 1,
+    "generationRecords": 1,
+    "versions": 2,
+    "photos": 1
+  },
+  "proposedLines": [
+    {
+      "slug": "life",
+      "name": "Life",
+      "makeSlug": "e-go-mobile",
+      "aliases": [
+        "e.GO Life",
+        "Life Next",
+        "Life60"
+      ],
+      "bodyTypes": [
+        "hatchback"
+      ],
+      "from": 2019,
+      "to": null,
+      "productionStatus": "unknown",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2019,
+          "to": null,
+          "productionStatus": "unknown",
+          "bodyTypes": [
+            "hatchback"
+          ],
+          "sources": [
+            "https://en.wikipedia.org/wiki/E.GO_Life",
+            "https://www.mezger.de/wp-content/uploads/2020/02/ego_life_produktinformationen_de_01_2020.pdf",
+            "https://egowebsitestorage.blob.core.windows.net/strapi/assets/e_go_life_next_produktbroschuere_21_09_eng_3abbb4304e.pdf",
+            "https://www.sec.gov/Archives/edgar/data/1942808/000121390023019620/ff42023_nextegobv.htm"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/E.GO_Life",
+        "https://www.mezger.de/wp-content/uploads/2020/02/ego_life_produktinformationen_de_01_2020.pdf",
+        "https://egowebsitestorage.blob.core.windows.net/strapi/assets/e_go_life_next_produktbroschuere_21_09_eng_3abbb4304e.pdf",
+        "https://www.sec.gov/Archives/edgar/data/1942808/000121390023019620/ff42023_nextegobv.htm"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        },
+        {
+          "field": "to",
+          "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/E.GO_Life",
+    "https://www.mezger.de/wp-content/uploads/2020/02/ego_life_produktinformationen_de_01_2020.pdf",
+    "https://egowebsitestorage.blob.core.windows.net/strapi/assets/e_go_life_next_produktbroschuere_21_09_eng_3abbb4304e.pdf",
+    "https://www.sec.gov/Archives/edgar/data/1942808/000121390023019620/ff42023_nextegobv.htm",
+    "https://www.sec.gov/Archives/edgar/data/1942808/000121390023097110/f424b31223_nextego.htm",
+    "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ego-mobile/e-go-life/"
+  ],
+  "gaps": [
+    "Life precise production end and pause periods unverified; insolvency2024 is not model end date.",
+    "Torque, gearbox,0–100 remainnull;2021height interval has no single adopted value.",
+    "2021 OEM brochure currently502 in web opener; manufacturer PDF search index supplied technical facts, marked separately from direct2020PDF access."
+  ],
+  "excluded": [
+    {
+      "name": "e.wave X",
+      "reason": "Announced2022 successor, not established series production. Primary SEC2023/January2024 material describes future production; ADAC retrospective and insolvency administrator reporting confirm production readiness financing failed.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1942808/000121390023097110/f424b31223_nextego.htm",
+        "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/ego-mobile/e-go-life/",
+        "https://www.electrive.net/2024/05/29/e-go-wird-endgueltig-liquidiert/"
+      ]
+    },
+    {
+      "name": "e.wave / e.Xpress / Mover / Life Sport",
+      "reason": "Announced derivatives, shuttle programme or concepts; customer series production not verified. No forecast capacity/reservations treated as actual production.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1942808/000121390023087021/ff12023_nextegonv.htm"
+      ]
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "command": "node analysis/codex/night-e-go-mobile-validate.mjs",
+    "checks": "One production family, two dated OEM technical versions, exact Commons photo credit, null production end, no0–50to0–100 substitution, announced e.waveX excluded with primary/retrospective evidence."
+  },
+  "elapsedMinutesApprox": 4,
+  "photoReview": {
+    "searchedCategory": "https://commons.wikimedia.org/wiki/Category:E.GO_Life",
+    "candidatesInspected": 3,
+    "selected": "E.GO Life 2020.jpg",
+    "exception": "Retained clean full-car side view as an explicit fallback: preferred front three-quarter view was not met. Other inspected options were a tighter mostly-side view and a group of several cars. Selected image meets aspect/margin requirements; Commons search is not claimed exhaustive.",
+    "reviewedAt": "2026-10-27",
+    "replacementNeededForPreferredAngle": true
+  }
+}

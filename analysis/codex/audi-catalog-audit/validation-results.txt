@@ -1,0 +1,21 @@
+2026-10-30
+PASS node analysis/codex/audi-catalog-audit/validate.mjs
+  76 unique Audi identities; 46 previous slugs preserved.
+  Required S/RS/SQ/TTS/TT RS identities present in public indexes.
+  102 generation records, including 21 model-specific performance generation rows.
+  RS5 2026 included; RS3 facelifts do not increment generations.
+  Unknown derivative end dates do not imply current production or inherit historical ends.
+  Audi 920 ends in 1940; e-tron alias resolves to Q8 e-tron, not e-tron GT.
+  Actual TypeScript resolver executed: RS6 / RS 6 / RS6 Avant aliases;
+  no S line -> S or RS6 e-tron -> RS e-tron GT conflation.
+  Year ranges and quarantine registry validated.
+PASS npm run typecheck
+PASS npm run build (5668 static pages; TypeScript check included)
+PASS static route smoke check: all 76 Audi model pages exported.
+PASS generated HTML: RS5 2026, model-date scope note and S2 dates rendered.
+PASS migration idempotency: second application leaves source hashes unchanged.
+PASS unrelated make preservation: both generated indexes unchanged outside Audi.
+PASS git diff --check (only Windows LF/CRLF advisories)
+
+No production deployment performed. No browser visual or interactive E2E test performed.
+The former 46-card historical validator was not used as the new acceptance test.

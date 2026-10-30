@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';let u='https://xr793.com/wp-content/uploads/2018/01/1969-AMC-Family-Album.pdf';let r=await fetch(u);console.log(r.status);if(r.ok)fs.writeFileSync('analysis/codex/nash-evidence/family.pdf',Buffer.from(await r.arrayBuffer()));fs.writeFileSync('analysis/codex/nash-evidence/documents.json',JSON.stringify({familyAlbum:u},null,2));

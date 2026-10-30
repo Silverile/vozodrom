@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+const root='analysis/codex/letter-a',db=root+'/a-11-results.json',a=JSON.parse(fs.readFileSync(db)),s=JSON.parse(fs.readFileSync(root+'/a11-sources.json'));
+for(const [id,file,lic,ev] of [['alfa-romeo--24-hp--0','Arese Museo Storico Alfa Romeo 1910 A.L.F.A. 24 HP 2.jpg','by-sa/4.0','https://www.museoalfaromeo.com/it-it/collezione/Pages/A.L.F.A%2024-HP.aspx'],['alfa-romeo--alfasud--0','1974 Alfa Romeo Alfasud 4-door sedan (2015-07-15) 01.jpg','PD','https://www.museoalfaromeo.com/it-it/collezione/Pages/Alfasud.aspx']]){
+const r=a.find(x=>x.id===id),t=s.find(x=>x.file===file);if(r.status==='done')continue;r.folder=root+'/staged/alfa-romeo/'+id+' '+r.generation;fs.mkdirSync(r.folder,{recursive:true});Object.assign(r,{referencePage:t.referencePage,image:t.image,credit:t.credit,licence:lic==='PD'?'Public domain':'CC BY-SA 4.0',licenceUrl:lic==='PD'?'https://commons.wikimedia.org/wiki/Commons:Public_domain':'https://creativecommons.org/licenses/by-sa/4.0/',evidence:[t.referencePage,ev]});fs.copyFileSync(t.local,r.folder+'/reference.jpg');}
+fs.writeFileSync(db,JSON.stringify(a,null,2));

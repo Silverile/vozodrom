@@ -1,0 +1,4 @@
+import fs from 'node:fs';
+const requests=[['f1','DKW F1'],['f4','DKW F4'],['f5','DKW F5'],['f7','DKW F7'],['f8','DKW F8'],['f89','DKW F89'],['3-6','DKW F91'],['f102','DKW F102'],['f12','DKW F12'],['junior','DKW Junior'],['monza','DKW Monza'],['munga','DKW Munga'],['schnellaster','DKW Schnellaster']];
+const rows=await Promise.all(requests.map(async([lineSlug,cat])=>{const url='https://commons.wikimedia.org/wiki/Category:'+cat.replaceAll(' ','_');try{const r=await fetch(url);const html=await r.text();return{lineSlug,url,status:r.status,files:[...new Set([...html.matchAll(/href="\/wiki\/(File:[^"]+)"/g)].map(x=>decodeURIComponent(x[1]).replaceAll('_',' ').replaceAll('&amp;','&')))].filter(x=>/[.](jpg|jpeg|png)$/i.test(x))};}catch(e){return{lineSlug,url,error:String(e),files:[]};}}));
+fs.writeFileSync('analysis/codex/dkw-photo-categories-48.json',JSON.stringify(rows,null,2)+'\n');console.log(rows.map(r=>({slug:r.lineSlug,status:r.status,files:r.files.slice(0,8)})));

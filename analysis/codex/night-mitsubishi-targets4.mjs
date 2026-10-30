@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';const d='analysis/codex/mitsubishi-evidence/photos';fs.writeFileSync(d+'/targets-004.json',JSON.stringify([['mitsubishi','3000-gt',0,'Mitsubishi 3000GT coupe'],['mitsubishi','outlander',3,'Mitsubishi Outlander (fourth generation)'],['mitsubishi','lancer',8,'Mitsubishi Lancer CY0'],['mitsubishi','colt',5,'Mitsubishi Colt (2004)']],null,2));

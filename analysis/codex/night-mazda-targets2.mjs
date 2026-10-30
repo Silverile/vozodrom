@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';let t=[['mazda','3',0,'Mazda3 (BK)'],['mazda','3',1,'Mazda3 (BL)'],['mazda','6',0,'Mazda6 (GG)'],['mazda','6',1,'Mazda6 (GH)'],['mazda','mx-5',1,'Mazda MX-5 (NB)'],['mazda','mx-5',2,'Mazda MX-5 (NC)'],['mazda','mx-5',3,'Mazda MX-5 (ND)']];fs.writeFileSync('analysis/codex/mazda-evidence/photos/targets-002.json',JSON.stringify(t));

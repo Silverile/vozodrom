@@ -1,0 +1,138 @@
+{
+  "make": "baic",
+  "checkedAt": "2026-10-29",
+  "by": "codex",
+  "coverage": {
+    "status": "partial",
+    "cardsInventoried": 16,
+    "rawModelsInventoried": 5,
+    "modelLinesInventoried": 16,
+    "additionsInventoried": 16,
+    "sourceCheckedModels": [
+      "bj60",
+      "bj80",
+      "bj40",
+      "d20",
+      "d70",
+      "x55",
+      "bj30"
+    ],
+    "limitations": "Selected official corporate/investor chronology and model-identity checks; full production intervals, badges, specifications and photos remain unverified."
+  },
+  "makeFixes": [],
+  "modelFixes": [],
+  "removeModels": [],
+  "missingModels": [],
+  "cardFixesApplied": [
+    {
+      "lineSlug": "bj60",
+      "path": "generations[0].marketNotesCs",
+      "from": "Čínská nebo exportní řada prodávaná v rámci BAIC/Beijing. Přítomnost na webu není automaticky potvrzením současné výroby; česká dostupnost je ověřena pouze u výslovně označené české verze.",
+      "to": "BJ60 byl na cinskem trhu oficialne uveden 12. listopadu 2022. Jde o prodejni milnik, nikoli dolozeni presneho pocatku vyroby nebo ceske dostupnosti.",
+      "sources": [
+        "https://www.baicgroup.com.cn/baicgroup-en/About/Milestones/A161002004Gone1.html"
+      ]
+    },
+    {
+      "lineSlug": "bj60",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.baicglobal.com/about/aboutUs"
+      ],
+      "to": [
+        "https://www.baicgroup.com.cn/baicgroup-en/About/Milestones/A161002004Gone1.html",
+        "https://www.baicglobal.com/about/aboutUs"
+      ],
+      "sources": [
+        "https://www.baicgroup.com.cn/baicgroup-en/About/Milestones/A161002004Gone1.html"
+      ]
+    },
+    {
+      "lineSlug": "bj60",
+      "path": "sources",
+      "from": [
+        "https://www.baicglobal.com/about/aboutUs"
+      ],
+      "to": [
+        "https://www.baicgroup.com.cn/baicgroup-en/About/Milestones/A161002004Gone1.html",
+        "https://www.baicglobal.com/about/aboutUs"
+      ],
+      "sources": [
+        "https://www.baicgroup.com.cn/baicgroup-en/About/Milestones/A161002004Gone1.html"
+      ]
+    },
+    {
+      "lineSlug": "d70",
+      "path": "generations[0].marketNotesCs",
+      "from": "Čínská nebo exportní řada prodávaná v rámci BAIC/Beijing. Přítomnost na webu není automaticky potvrzením současné výroby; česká dostupnost je ověřena pouze u výslovně označené české verze.",
+      "to": "Senova D70 byl podle doboveho dokumentu BAIC uveden v kvetnu 2013. Prodejni uvedeni samo nedoklada presny pocatek ani konec tovarni vyroby.",
+      "sources": [
+        "https://www.baicmotor.com/Uploads/file/20170717/20170717101236_58191.pdf"
+      ]
+    },
+    {
+      "lineSlug": "d70",
+      "path": "generations[0].sources",
+      "from": [
+        "https://www.baicmotor.com/Uploads/file/20170801/20170801111256_87367.pdf"
+      ],
+      "to": [
+        "https://www.baicmotor.com/Uploads/file/20170717/20170717101236_58191.pdf",
+        "https://www.baicmotor.com/Uploads/file/20170801/20170801111256_87367.pdf"
+      ],
+      "sources": [
+        "https://www.baicmotor.com/Uploads/file/20170717/20170717101236_58191.pdf"
+      ]
+    },
+    {
+      "lineSlug": "d70",
+      "path": "sources",
+      "from": [
+        "https://www.baicmotor.com/Uploads/file/20170801/20170801111256_87367.pdf"
+      ],
+      "to": [
+        "https://www.baicmotor.com/Uploads/file/20170717/20170717101236_58191.pdf",
+        "https://www.baicmotor.com/Uploads/file/20170801/20170801111256_87367.pdf"
+      ],
+      "sources": [
+        "https://www.baicmotor.com/Uploads/file/20170717/20170717101236_58191.pdf"
+      ]
+    }
+  ],
+  "cardsAdded": [],
+  "conflicts": [],
+  "verifiedExisting": [
+    {
+      "where": "make.foundedYear",
+      "value": 2010,
+      "sources": [
+        "https://baicmotor.com/en/about/gsjj.html"
+      ],
+      "note": "Correct for BAIC Motor; do not replace with parent BAIC Group1958."
+    },
+    {
+      "where": "d20 identity",
+      "value": "BJ E-series renamed Senova D20 with facelift in November2014",
+      "sources": [
+        "https://www.baicmotor.com/Uploads/file/20170801/20170801111443_12571.pdf"
+      ],
+      "note": "Existing combined card identity and market note agree."
+    },
+    {
+      "where": "x55 identity",
+      "value": "Mofang exported as BEIJING X55, South Africa launch2022",
+      "sources": [
+        "https://www.baicgroup.com.cn/baicgroup/ComeIn/Develop/A160002005Gone1.html"
+      ],
+      "note": "Keep separate from earlier Senova X55 / Zhixing / Beijing X5."
+    }
+  ],
+  "openQuestions": [
+    "Make BAIC Motor2010 differs from parent group1958 and distinct BAW marque; retain current entity scope.",
+    "BJ60 launch2022 and D70 launch2013 do not independently establish exact manufacturing SOP; null production starts retained.",
+    "BJ30 older and newer bodies require separate generation research before applying2024 Saudi launch to whole family.",
+    "BJ80 military improved Warrior delivery2016 does not alone establish civilian BJ80 calendar SOP.",
+    "Remaining missing raw/line identity reconciliation requires independent primary evidence."
+  ],
+  "summary": "Partial BAIC sweep: corroborated corporate and badge identities and added sourced BJ60/D70 market-introduction notes while preserving unknown manufacturing dates."
+}

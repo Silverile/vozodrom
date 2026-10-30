@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+const cards=JSON.parse(fs.readFileSync('src/data/catalog/model-cards/ds-automobiles.json','utf8')),out=[];
+for(const p of cards.flatMap(c=>c.generations).map(g=>g.photo).filter(Boolean)){let r=await fetch(p.filePageUrl),h=await r.text();let author=h.match(/id="fileinfotpl(?:_|&#95;)aut"[^>]*>Author<\/td>\s*<td[^>]*>([^]*?)<\/td>/)?.[1]?.replace(/<[^>]*>/g,'').trim();let licensing=h.split('id="Licensing"')[1]?.split('id="filehistory"')[0]||'';let licenceUrls=[...new Set([...licensing.matchAll(/https?:\/\/creativecommons.org\/licenses\/[a-z-]+\/\d\.\d\/?/g)].map(x=>x[0].replace(/\/$/,'')))];let x={file:p.file,filePageUrl:p.filePageUrl,status:r.status,author,expectedAuthor:p.author,licenceUrls,expectedLicenceUrl:p.licenceUrl,authorMatch:author===p.author,licenceMatch:licenceUrls.includes(p.licenceUrl.replace(/\/$/,''))};out.push(x);}
+fs.writeFileSync('analysis/codex/night-ds-automobiles-photo-audit.json',JSON.stringify(out,null,2)+'\n');console.log(out.map(x=>[x.file,x.authorMatch,x.licenceMatch]));
+if(out.some(x=>!x.authorMatch||!x.licenceMatch))process.exitCode=1;

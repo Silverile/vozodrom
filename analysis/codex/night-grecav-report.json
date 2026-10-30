@@ -1,0 +1,143 @@
+{
+  "make": "grecav",
+  "retrievedAt": "2026-10-27",
+  "cards": 2,
+  "generations": 3,
+  "versions": 3,
+  "photos": 1,
+  "proposedLines": [
+    {
+      "slug": "eke",
+      "name": "EKE",
+      "makeSlug": "grecav",
+      "aliases": [],
+      "bodyTypes": null,
+      "from": 2000,
+      "to": 2009,
+      "productionStatus": "ended",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2000,
+          "to": 2009,
+          "productionStatus": "ended",
+          "bodyTypes": null,
+          "sources": [
+            "https://it.wikipedia.org/wiki/Grecav_Sonique",
+            "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://it.wikipedia.org/wiki/Grecav_Sonique",
+        "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        }
+      ]
+    },
+    {
+      "slug": "sonique",
+      "name": "Sonique",
+      "makeSlug": "grecav",
+      "aliases": [],
+      "bodyTypes": null,
+      "from": null,
+      "to": null,
+      "productionStatus": "unknown",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": null,
+          "to": null,
+          "productionStatus": "ended",
+          "bodyTypes": null,
+          "sources": [
+            "https://it.wikipedia.org/wiki/Grecav_Sonique",
+            "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf",
+            "https://www.recambiosrevolucionarios.es/img/cms/pdf/grecav/GRECAV%20Sonique%201%20Version.pdf"
+          ]
+        },
+        {
+          "code": null,
+          "from": 2010,
+          "to": null,
+          "productionStatus": "ended",
+          "bodyTypes": null,
+          "sources": [
+            "https://gsanspermis.com/grecav-sonique-dci/"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://it.wikipedia.org/wiki/Grecav_Sonique",
+        "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf",
+        "https://www.recambiosrevolucionarios.es/img/cms/pdf/grecav/GRECAV%20Sonique%201%20Version.pdf",
+        "https://gsanspermis.com/grecav-sonique-dci/"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        },
+        {
+          "field": "from",
+          "reason": "Začátek výroby není úplně ověřen."
+        },
+        {
+          "field": "to",
+          "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://it.wikipedia.org/wiki/Grecav_Sonique",
+    "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf",
+    "https://www.recambiosrevolucionarios.es/img/cms/pdf/grecav/GRECAV%20Sonique%201%20Version.pdf",
+    "https://gsanspermis.com/grecav-sonique-dci/"
+  ],
+  "scope": "Dvě doložené vlastní rodiny lehkých čtyřkolek; DCI uvnitřSonique je motorová větev, nikoli automaticky nová konstrukční generace.",
+  "deferred": [
+    "Přesné rozměry, hmotnosti a rychlosti podle homologace nebyly odvozeny z legislativních limitů čtyřkolek.",
+    "Karosářské enumy zůstávají null místo nuceného označení sedan/hatchback; EKE užitkové karoserie potřebují vlastní výrobní dokument.",
+    "PiaggioPK500 a jiné zakázkové karoserie nejsou vydávány za samostatné zákaznické řadyGrecav.",
+    "Přesný začátekSonique2009/2010 a konce jednotlivých modelů nevyřešen; zánik společnosti2013 není automaticky rok posledního vyrobeného kusu.",
+    "Commons obsahuje kategorii Grecav Amica; vlastnictví BMA od roku 1991/1992 není samo důkazem, že celá řada Amica nesla značku Grecav. Potřebné ověření konkrétního výrobního štítku a období."
+  ],
+  "gaps": "Dílčí technické verze a evropské katalogy; ne úplný soupis výbav. Fotografie čekajíCommons.",
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Strict TypeScript CatalogModelCard[] and CatalogModelLine[] assignment",
+      "Unique slugs, source URLs, chronological bounds, all null fields indexed in needsReview"
+    ],
+    "command": "node analysis/codex/night-grecav-validate.mjs"
+  },
+  "photoCoverage": {
+    "selected": 1,
+    "searchedCommonsCategories": [
+      "Grecav EKE",
+      "Grecav Sonique",
+      "Grecav vehicles"
+    ],
+    "note": "Partial search: 68 aspect-filtered Commons candidates inspected in contact sheets; selected images individually inspected. Tight crops, prototypes, irrelevant police cars and Spykstaal rebadges rejected. Remaining nulls are incomplete search coverage, not evidence that no suitable image exists."
+  }
+}

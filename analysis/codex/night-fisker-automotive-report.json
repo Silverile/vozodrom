@@ -1,0 +1,96 @@
+{
+  "makeSlug": "fisker-automotive",
+  "retrievedAt": "2026-10-27",
+  "scope": "Jedna sériová rodina původní Fisker Automotive: Karma. Tři úrovně výbavy mají podle tovární brožury společnou techniku.",
+  "counts": {
+    "cards": 1,
+    "generationRecords": 1,
+    "technicalVersions": 3,
+    "photos": 0
+  },
+  "proposedLines": [
+    {
+      "slug": "karma",
+      "name": "Karma",
+      "makeSlug": "fisker-automotive",
+      "aliases": [],
+      "bodyTypes": [
+        "sedan"
+      ],
+      "from": 2011,
+      "to": 2012,
+      "productionStatus": "ended",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2011,
+          "to": 2012,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "sedan"
+          ],
+          "sources": [
+            "https://ieahev.org/wp-content/uploads/2024/09/2011_HEVTCP-annual_report.pdf",
+            "https://www.valmet-automotive.com/media/valmet-automotive-to-disassemble-fisker-karma-production-facilities/",
+            "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://ieahev.org/wp-content/uploads/2024/09/2011_HEVTCP-annual_report.pdf",
+        "https://www.valmet-automotive.com/media/valmet-automotive-to-disassemble-fisker-karma-production-facilities/",
+        "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf",
+        "https://www.manualslib.com/manual/748967/Fisker-Karma-2012.html",
+        "https://cleancities.energy.gov/files/u/projects_and_partnerships/project_material/supporting_material/255/drive-electric-florida-part-i.pdf?3cdbd8f9b5="
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://ieahev.org/wp-content/uploads/2024/09/2011_HEVTCP-annual_report.pdf",
+    "https://www.valmet-automotive.com/media/valmet-automotive-to-disassemble-fisker-karma-production-facilities/",
+    "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf",
+    "https://www.manualslib.com/manual/748967/Fisker-Karma-2012.html",
+    "https://cleancities.energy.gov/files/u/projects_and_partnerships/project_material/supporting_material/255/drive-electric-florida-part-i.pdf?3cdbd8f9b5="
+  ],
+  "gaps": [
+    "Hmotnost 2404 vs 2405 kg je nevyřešený rozdíl mezi dvěma původními publikacemi; ponecháno null.",
+    "Chybí přímé metrické hodnoty pro evropské homologované kombinace a kompletní údaje o cyklech spotřeby.",
+    "Karma foto: výstavní záběr 2012 NYIAS byl prohlédnut a odmítnut kvůli velmi těsným bočním okrajům; další hledání omezuje HTTP 429."
+  ],
+  "excluded": [
+    {
+      "name": "Atlantic / Nina, Surf, Sunset",
+      "reason": "Studie a plánované deriváty; nedoložena sériová výroba."
+    },
+    {
+      "name": "Tramonto / Latigo",
+      "reason": "Jiný podnik Fisker Coachbuild a přestavby dárcovských vozů; nepatří automaticky této společnosti."
+    },
+    {
+      "name": "Karma Revero / GS-6",
+      "reason": "Následná samostatná značka Karma Automotive."
+    }
+  ],
+  "registryNotes": [],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Strict TypeScript CatalogModelCard[] and CatalogModelLine[] assignment",
+      "Unique slugs, source URLs, chronological bounds, all null fields indexed in needsReview"
+    ],
+    "command": "node analysis/codex/night-fisker-automotive-validate.mjs"
+  }
+}

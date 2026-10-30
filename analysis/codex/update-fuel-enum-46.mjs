@@ -1,0 +1,1 @@
+﻿import fs from 'node:fs';const p='analysis/codex/validate-night-cards.mjs';let s=fs.readFileSync(p,'utf8').replace("'petrol-cng','petrol-mhev'","'petrol-cng','petrol-lpg','petrol-hev','petrol-mhev'");fs.writeFileSync(p,s);

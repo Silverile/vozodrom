@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';let t=[['mg','mga',0,'MG A Roadster'],['mg','mgb',0,'MG B Roadster'],['mg','mgc',0,'MG C Roadster'],['mg','mg3',0,'MG 3 (1st generation)'],['mg','mg3',1,'MG 3 (2nd generation)'],['mg','mg3',2,'MG 3 (3rd generation)'],['mg','magnette',0,'MG Magnette ZA']];fs.writeFileSync('analysis/codex/mg-evidence/photos/targets-002.json',JSON.stringify(t));

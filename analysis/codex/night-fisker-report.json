@@ -1,0 +1,96 @@
+{
+  "makeSlug": "fisker",
+  "retrievedAt": "2026-10-27",
+  "scope": "Jedna skutečně vyráběná rodina Fisker Inc.: Ocean. Evropské a americké technické konfigurace jsou odděleny; šest řádků není šest modelů.",
+  "counts": {
+    "cards": 1,
+    "generationRecords": 1,
+    "technicalVersions": 6,
+    "photos": 1
+  },
+  "proposedLines": [
+    {
+      "slug": "ocean",
+      "name": "Ocean",
+      "makeSlug": "fisker",
+      "aliases": [],
+      "bodyTypes": [
+        "suv"
+      ],
+      "from": 2022,
+      "to": 2024,
+      "productionStatus": "ended",
+      "dateScope": "source-production",
+      "productionPeriods": null,
+      "generations": [
+        {
+          "code": null,
+          "from": 2022,
+          "to": 2024,
+          "productionStatus": "ended",
+          "bodyTypes": [
+            "suv"
+          ],
+          "sources": [
+            "https://www.sec.gov/Archives/edgar/data/1720990/000172099023000020/fsr-20221231.htm",
+            "https://www.magna.com/docs/default-source/corporate-governance/disclosure-documents---2025/2024-annual-report---magna---aoda.pdf?sfvrsn=fb32aabb_11",
+            "https://evrider.tv/wp-content/uploads/2024/01/Fisker_Ocean_Press_Kit_Dec_2023_US_V10.4_n5ebbv.pdf"
+          ]
+        }
+      ],
+      "wikidataQid": null,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1720990/000172099023000020/fsr-20221231.htm",
+        "https://www.magna.com/docs/default-source/corporate-governance/disclosure-documents---2025/2024-annual-report---magna---aoda.pdf?sfvrsn=fb32aabb_11",
+        "https://evrider.tv/wp-content/uploads/2024/01/Fisker_Ocean_Press_Kit_Dec_2023_US_V10.4_n5ebbv.pdf",
+        "https://markets.financialcontent.com/buffnews/article/bizwire-2023-12-29-fisker-provides-december-2023-business-update-as-deliveries-grow-over-300-from-q3-to-q4"
+      ],
+      "needsReview": [
+        {
+          "field": "scope",
+          "reason": "Historická řada přidaná během nočního průzkumu; dílčí zdroje nejsou zárukou úplného globálního výrobního období."
+        },
+        {
+          "field": "wikidataQid",
+          "reason": "Identifikátor nebyl nezávisle ověřen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1720990/000172099023000020/fsr-20221231.htm",
+    "https://www.magna.com/docs/default-source/corporate-governance/disclosure-documents---2025/2024-annual-report---magna---aoda.pdf?sfvrsn=fb32aabb_11",
+    "https://evrider.tv/wp-content/uploads/2024/01/Fisker_Ocean_Press_Kit_Dec_2023_US_V10.4_n5ebbv.pdf",
+    "https://markets.financialcontent.com/buffnews/article/bizwire-2023-12-29-fisker-provides-december-2023-business-update-as-deliveries-grow-over-300-from-q3-to-q4"
+  ],
+  "gaps": [
+    "Výkon v kW nebyl jednoznačně doložen v použitých původních podkladech; hp nejsou odhadem převáděny.",
+    "Chybí přesný místní rozpis převodových stupňů a evropské konfigurační hmotnosti.",
+    "One je úvodní edice Extreme, nikoli další model; samostatná tabulka One a všech disků není úplná."
+  ],
+  "excluded": [
+    {
+      "name": "PEAR, Alaska, Ronin, Orbit, EMotion",
+      "reason": "Ohlášené nebo prototypové projekty; sériová výroba nebyla doložena."
+    },
+    {
+      "name": "Ocean Force E",
+      "reason": "Terénní derivát/paket, nikoli další základní sériová modelová řada."
+    },
+    {
+      "name": "Karma",
+      "reason": "Sériový model jiné společnosti Fisker Automotive."
+    }
+  ],
+  "registryNotes": [
+    "makes-index má defunct:false; výrobce v roce 2024 vstoupil do insolvence a výrobní smlouva byla ukončena. Registry ani QID v této úloze neměněny."
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "Strict TypeScript CatalogModelCard[] and CatalogModelLine[] assignment",
+      "Unique slugs, source URLs, chronological bounds, all null fields indexed in needsReview"
+    ],
+    "command": "node analysis/codex/night-fisker-validate.mjs"
+  }
+}

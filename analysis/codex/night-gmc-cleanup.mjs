@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';
+const roots=['analysis/codex/gmc-photos','analysis/codex/ginetta-photos'].map(p=>path.resolve(p));let removed=[];
+for(const root of roots){if(!root.startsWith(path.resolve('analysis/codex')+path.sep))throw Error('Outside owned evidence root');function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,item.name);if(!full.startsWith(root+path.sep))throw Error('Invalid resolved file');if(item.isDirectory())walk(full);else if(/\.(jpe?g|png|webp|pdf|html|txt)$/i.test(item.name)){fs.unlinkSync(full);removed.push(path.relative(process.cwd(),full));}}}walk(root);}
+fs.writeFileSync('analysis/codex/night-gmc-cleanup-evidence.json',JSON.stringify({removedCount:removed.length,remainingBinaryFiles:0,roots:roots.map(p=>path.relative(process.cwd(),p))},null,2)+'\n');console.log('Removed '+removed.length+' research binaries; structured metadata retained.');

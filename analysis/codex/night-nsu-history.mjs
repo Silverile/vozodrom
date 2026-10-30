@@ -1,0 +1,1 @@
+﻿let u='https://audi-touchscreen-150-jahre-nsu.timm4.de/touchscreen-2/en/automobil-typen',r=await fetch(u),s=await r.text();console.log(r.status,s.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<style[\s\S]*?<\/style>/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').slice(0,20000));

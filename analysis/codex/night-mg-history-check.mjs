@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';for(const n of['MG_6','MG_7','MG_5','MG_SA','MG_VA','MG_Magnette','MG_T-type']){const r=await fetch('https://en.wikipedia.org/wiki/'+n);let h=await r.text();let t=h.replace(/<style[\s\S]*?<\/style>/g,'').replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');console.log(n,t.match(/Production.{0,140}/g)?.slice(0,7));}

@@ -1,0 +1,2 @@
+import {spawnSync} from 'node:child_process';
+spawnSync(process.execPath,['analysis/codex/letter-a/a11-tools.mjs','fetch','Alfa Romeo Alfa 24 HP.jpg','Alfa romeo 4c front right.jpg','1933 Alfa Romeo 6C 1900 GT Cabriolet by Castagna, front left.jpg','Alfa Romeo 6C 2300 B GT Corto berlina carr. Alfa 1935 Museo Storico OCT 2015.jpg',"Alfa-Romeo 6C 2500 Freccia d'Oro (Golden Arrow) (25913846634).jpg"],{stdio:'inherit'});

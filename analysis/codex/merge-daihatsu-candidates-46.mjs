@@ -1,0 +1,1 @@
+﻿import fs from 'node:fs';const d='analysis/codex/daihatsu-photos';const a=JSON.parse(fs.readFileSync(d+'/candidates.json')),b=JSON.parse(fs.readFileSync(d+'/candidates-wave1.json'));fs.writeFileSync(d+'/candidates.json',JSON.stringify([...a,...b],null,2));

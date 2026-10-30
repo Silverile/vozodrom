@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+const root='analysis/codex/letter-a',db=root+'/a-11-results.json',s=JSON.parse(fs.readFileSync(root+'/a11-sources.json'));
+const specs=[
+['24-hp',0,'24 HP','24 HP','1910–?','Alfa Romeo Alfa 24 HP.jpg','Castagna Torpedo, museum car','https://www.museoalfaromeo.com/it-it/collezione/Pages/A.L.F.A%2024-HP.aspx','by/2.0'],
+['4c',0,'4C','4C','2013–2020','Alfa romeo 4c front right.jpg','Production coupe, original multi-element headlamps','https://www.media.stellantis.com/uploads/ch/CH/2011/ALFA_ROMEO/PRESS/20130212/20130212_Comunicato_4C.pdf','by-sa/4.0'],
+['6c',0,'6C','6C 1500','1927–1929','Alfa Romeo 6C 1500 Normale front Maastricht 2010.jpg','Normale closed saloon, flat rectangular radiator','https://www.camet.org/wp-content/uploads/2011/01/Mostra_Alfa-_Catalogo_finale.pdf','by-sa/2.0'],
+['6c',1,'6C','6C 1750','1929–1933','1929 Alfa Romeo 6C 1750 Super Sport Zagato Spider.jpg','1929 Super Sport Zagato Spider, typical open sporting body','https://www.esercito.difesa.it/assets/allegati/184272/alfa_romeo_6c_1750_ss__zagato_.pdf','by-sa/4.0'],
+['6c',2,'6C','6C 1900','1933–1933','1933 Alfa Romeo 6C 1900 GT Cabriolet by Castagna, front left.jpg','Gran Turismo Castagna cabriolet','https://www.registroalfaromeo.com/realalfa-2024-la-categoria-a-6c-1500-6c-1750-6c-1900/','by-sa/4.0'],
+['6c',3,'6C','6C 2300','1934–1938','Alfa Romeo 6C 2300 B GT Corto berlina carr. Alfa 1935 Museo Storico OCT 2015.jpg','1935 2300 B GT Corto factory Berlina','https://www.museoalfaromeo.com/it-it/collezione/Pages/6C-2300-B-Corto.aspx','by-sa/4.0'],
+['6c',4,'6C','6C 2500','1938–1952',"Alfa-Romeo 6C 2500 Freccia d'Oro (Golden Arrow) (25913846634).jpg",'Postwar Freccia d’Oro factory saloon, common production body','https://astebolaffi.it/pdf/auctions/101.pdf','by-sa/2.0'],
+['8c-competizione',0,'8C Competizione','8C Competizione','2007–2010','The frontview of Alfa Romeo 8C Competizione.JPG','Production coupe','https://www.media.stellantis.com/uploads/ch/CH/2010/OTHERS/12E7F844-C29F-7F28-C9F5633BB506BAA5.pdf','CC0'],
+['8c-historic',0,'8C (historické)','8C 2300','1931–?','1933 Alfa Romeo 8C Touring Spider (Chassis 2311234) 2.3 Front.jpg','1933 Touring Spider, chassis 2311234; road-going open body','https://www.press.bmwgroup.com/global/article/attachment/T0079714EN/119300','by-sa/4.0'],
+['8c-historic',1,'8C (historické)','8C 2900 – silniční rodina','?–1939','1938 Alfa Romeo 2900 8c - black - fvr.jpg','1938 2900B Touring Spider, road-going open body','https://www.classicdriver.com/en/car/alfa-romeo/8c/1938/1020543','by-sa/2.0'],
+['alfasud',0,'Alfasud','Alfasud','1972–1984','The frontview of Alfa Romeo Alfasud Berlina.JPG','Early Berlina, rectangular headlamps and chrome bumper','https://www.museoalfaromeo.com/it-it/collezione/Pages/Alfasud.aspx','CC0'],
+['alfetta',0,'Alfetta','Alfetta Berlina','1972–1984','Alfa Romeo Alfetta Berlina 1X7A2523.jpg','Berlina sedan','https://www.museoalfaromeo.com/it-it/collezione/Pages/Alfetta.aspx','by-sa/4.0']
+];
+const old=fs.existsSync(db)?JSON.parse(fs.readFileSync(db)):[];
+const rows=specs.map(([slug,n,model,generation,years,file,variant,ev,lic])=>{
+const id=`alfa-romeo--${slug}--${n}`,prev=old.find(x=>x.id===id);if(prev?.status==='done')return prev;
+const t=s.find(x=>x.file===file),folder=root+'/staged/alfa-romeo/'+id+' '+generation.replace(/[<>:"/\\|?*]/g,'-');
+const r={id,make:'Alfa Romeo',model,generation,years,status:'failed',folder:t?.local?folder:null,referencePage:t?.referencePage||null,image:t?.image,credit:t?.credit,licence:lic==='CC0'?'CC0 1.0':'CC '+lic.toUpperCase().replace('/',' '),licenceUrl:lic==='CC0'?'https://creativecommons.org/publicdomain/zero/1.0/':`https://creativecommons.org/licenses/${lic}/`,evidence:t?[t.referencePage,ev]:[],variant,view:'Front three-quarter; complete front with both headlamps and front corners visible. Omit plates, wipers, antenna and event accessories.',genSeconds:0,notes:'Reference pending visual gate.',promptSuffix:`Alfa Romeo ${generation} (${years}). Remember: no wipers, no antenna, empty glass, no letters, both mirrors, no accessories.`};
+if(r.folder){fs.mkdirSync(folder,{recursive:true});fs.copyFileSync(t.local,folder+'/reference.jpg');fs.writeFileSync(folder+'/info.txt',`ID: ${id}\nZnačka: Alfa Romeo\nModel: ${model}\nGenerace: ${generation}\nRoky: ${years}\nPage: ${r.referencePage}\nImage: ${r.image}\nCredit: ${r.credit}\nLicence: ${r.licence}\nLicence URL: ${r.licenceUrl}\n${r.evidence.map(x=>'Evidence: '+x).join('\n')}\nView: ${r.view}\nVariant: ${variant}\n`);}return r;
+});fs.writeFileSync(db,JSON.stringify(rows,null,2));console.log(rows.map(x=>({id:x.id,folder:x.folder})));

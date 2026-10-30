@@ -1,0 +1,1 @@
+import fs from 'node:fs';const p='analysis/codex/photo-backfill-46/';let s=fs.readFileSync(p+'bmw-final.mjs','utf8');s=s.replace(/const rows=\[.*?\];let targets=\[\];/,"const rows=[['ix3','BMW iX3 G08']];let targets=[];").replace('.slice(0,7)','.slice(0,35)').replace('bmw-final-titles.json','ix3-final-titles.json');fs.writeFileSync(p+'ix3-final.mjs',s);

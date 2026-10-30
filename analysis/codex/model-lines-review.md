@@ -4081,3 +4081,185 @@ Claude must merge **analysis/codex/skoda-wide-photo-size-additions.json** into i
 
 Evidence: skoda-wide-photos-review.json, skoda-step10-photo-review.json, worker-wide-*.json. Rebuild: merge-skoda-wide-photos.mjs then build-skoda-cards.mjs; validate-skoda-wide-photos.mjs and validate-model-cards.mjs. Do not rerun the baseline audit on the updated catalogue when reproducing this pass.
 <!-- skoda-wide-photos:end -->
+
+<!-- night-cards:start -->
+## Night shift — historic backfill and alphabetical car makes, 26–27 October 2026
+
+The user authorized a long unattended car-only pass, starting with historic Ford/Toyota/Volkswagen/Hyundai, then remaining auto-section makes A–Z. Runtime concurrency is three workers plus root. Completed/saved means partial researched coverage, **not** complete production histories or all generations and versions. A family record is labelled where detailed generation boundaries remain unverified. Exact omissions and conflicts are in each night-<make>-report.json. All unknowns remain explicit nulls and indexed review entries.
+
+| Make | Saved lines | Generation/family records | Selected versions | Generation photos |
+| --- | ---: | ---: | ---: | ---: |
+| abarth | 18 | 22 | 8 | 3 |
+| ac-cars | 15 | 21 | 3 | 1 |
+| acura | 20 | 39 | 11 | 4 |
+| adler | 12 | 25 | 7 | 0 |
+| aiways | 2 | 2 | 3 | 1 |
+| aixam | 19 | 19 | 2 | 0 |
+| alfa-romeo | 38 | 47 | 7 | 24 |
+| alpina | 23 | 52 | 19 | 0 |
+| alpine | 8 | 10 | 2 | 9 |
+| amc | 14 | 23 | 2 | 1 |
+| arcfox | 9 | 13 | 5 | 0 |
+| ariel | 5 | 9 | 3 | 0 |
+| aro | 6 | 7 | 1 | 0 |
+| artega | 1 | 1 | 1 | 0 |
+| aston-martin | 42 | 49 | 1 | 16 |
+| audi | 46 | 72 | 3 | 36 |
+| austin-motor-company | 30 | 38 | 1 | 0 |
+| auto-union | 3 | 5 | 3 | 0 |
+| autobianchi | 7 | 8 | 3 | 0 |
+| automobili-pininfarina | 1 | 1 | 1 | 0 |
+| avatr-technology | 6 | 6 | 1 | 0 |
+| avions-voisin | 20 | 20 | 2 | 0 |
+| bac | 1 | 5 | 1 | 0 |
+| baic | 16 | 19 | 2 | 0 |
+| baojun | 26 | 26 | 3 | 0 |
+| barkas | 2 | 3 | 2 | 0 |
+| bellier | 10 | 10 | 1 | 0 |
+| bentley | 24 | 38 | 1 | 8 |
+| bertone | 3 | 4 | 4 | 0 |
+| bmw | 59 | 73 | 31 | 34 |
+| borgward | 15 | 16 | 10 | 2 |
+| brabus | 17 | 32 | 32 | 1 |
+| brilliance | 12 | 17 | 1 | 1 |
+| bristol-cars | 21 | 24 | 8 | 3 |
+| bugatti-automobiles | 20 | 20 | 15 | 1 |
+| buick | 43 | 52 | 2 | 2 |
+| byd | 51 | 52 | 14 | 8 |
+| cadillac | 49 | 52 | 1 | 3 |
+| casalini | 12 | 14 | 2 | 2 |
+| caterham | 2 | 8 | 4 | 3 |
+| changan | 30 | 30 | 5 | 3 |
+| chery | 29 | 39 | 6 | 3 |
+| chevrolet | 76 | 84 | 29 | 21 |
+| chrysler | 45 | 52 | 2 | 4 |
+| citroen | 64 | 75 | 32 | 31 |
+| cupra | 7 | 7 | 20 | 7 |
+| dacia | 20 | 27 | 32 | 21 |
+| daewoo | 31 | 35 | 14 | 25 |
+| daihatsu | 58 | 66 | 2 | 24 |
+| daimler-company | 43 | 52 | 2 | 5 |
+| dangel | 13 | 13 | 12 | 3 |
+| datsun | 38 | 54 | 11 | 11 |
+| de-tomaso | 7 | 7 | 3 | 5 |
+| deepal | 6 | 6 | 5 | 5 |
+| delage | 39 | 64 | 14 | 8 |
+| delahaye | 67 | 67 | 2 | 6 |
+| delorean | 1 | 1 | 2 | 1 |
+| denza | 13 | 14 | 7 | 6 |
+| derways | 6 | 6 | 1 | 0 |
+| dkw | 24 | 38 | 4 | 5 |
+| dodge | 82 | 132 | 14 | 15 |
+| dongfeng | 23 | 24 | 8 | 3 |
+| donkervoort | 8 | 13 | 20 | 6 |
+| ds-automobiles | 9 | 11 | 3 | 3 |
+| duesenberg | 3 | 3 | 7 | 3 |
+| e-go-mobile | 1 | 1 | 2 | 1 |
+| estrima | 1 | 2 | 7 | 1 |
+| exeed | 7 | 10 | 12 | 8 |
+| facel-vega | 7 | 7 | 3 | 3 |
+| faw | 29 | 29 | 9 | 5 |
+| ferrari | 49 | 73 | 70 | 8 |
+| fiat | 115 | 142 | 34 | 47 |
+| fisker-automotive | 1 | 1 | 3 | 0 |
+| fisker | 1 | 1 | 6 | 1 |
+| force-motors | 8 | 10 | 1 | 0 |
+| ford | 19 | 33 | 3 | 13 |
+| forthing | 13 | 17 | 6 | 1 |
+| fsm | 4 | 7 | 8 | 1 |
+| fso | 6 | 9 | 2 | 1 |
+| gaz | 21 | 21 | 6 | 1 |
+| geely | 45 | 61 | 13 | 10 |
+| ginetta | 19 | 20 | 3 | 3 |
+| gmc | 35 | 42 | 6 | 5 |
+| great-wall | 22 | 28 | 5 | 8 |
+| grecav | 2 | 3 | 3 | 1 |
+| gumpert | 1 | 1 | 2 | 1 |
+| haval | 21 | 32 | 4 | 7 |
+| hillman | 24 | 33 | 2 | 3 |
+| hindustan-motors | 12 | 17 | 6 | 3 |
+| honda | 72 | 117 | 33 | 57 |
+| hongqi | 28 | 35 | 9 | 8 |
+| horch | 29 | 39 | 3 | 4 |
+| hotchkiss | 36 | 36 | 6 | 2 |
+| hudson | 21 | 29 | 1 | 4 |
+| hummer | 4 | 4 | 11 | 4 |
+| hyundai | 4 | 6 | 3 | 1 |
+| infiniti | 23 | 45 | 7 | 7 |
+| innocenti | 14 | 22 | 2 | 5 |
+| international-harvester | 14 | 21 | 7 | 5 |
+| isuzu | 32 | 48 | 9 | 4 |
+| iveco | 4 | 6 | 8 | 4 |
+| izh | 7 | 11 | 0 | 4 |
+| jac | 34 | 36 | 5 | 7 |
+| jaecoo | 4 | 4 | 4 | 3 |
+| jaguar | 31 | 61 | 2 | 8 |
+| jeep | 22 | 51 | 8 | 11 |
+| jensen-motors | 11 | 21 | 2 | 4 |
+| jetour | 8 | 15 | 3 | 5 |
+| kia | 55 | 108 | 27 | 57 |
+| koenigsegg | 9 | 14 | 9 | 10 |
+| lada | 19 | 19 | 3 | 1 |
+| lamborghini | 24 | 25 | 5 | 23 |
+| lancia | 48 | 54 | 8 | 7 |
+| land-rover | 10 | 37 | 3 | 6 |
+| landwind | 10 | 10 | 4 | 9 |
+| leapmotor | 13 | 13 | 3 | 6 |
+| lexus | 19 | 52 | 13 | 8 |
+| li-auto | 8 | 8 | 10 | 7 |
+| lifan | 15 | 18 | 2 | 5 |
+| ligier | 14 | 17 | 6 | 9 |
+| lincoln | 24 | 41 | 4 | 29 |
+| lotus | 19 | 46 | 20 | 10 |
+| luaz | 4 | 6 | 1 | 2 |
+| lucid-motors | 2 | 2 | 8 | 2 |
+| lynk-co | 12 | 14 | 4 | 5 |
+| mahindra-electric | 5 | 5 | 16 | 3 |
+| mahindra | 31 | 49 | 5 | 6 |
+| marussia-motors | 2 | 2 | 1 | 1 |
+| maruti-suzuki | 30 | 47 | 3 | 19 |
+| maserati | 35 | 55 | 9 | 21 |
+| matra | 5 | 5 | 9 | 4 |
+| maxus | 15 | 15 | 1 | 3 |
+| maybach | 10 | 13 | 2 | 3 |
+| mazda | 53 | 84 | 71 | 34 |
+| mclaren | 21 | 30 | 2 | 15 |
+| mercedes-benz | 72 | 141 | 87 | 79 |
+| mercury | 34 | 42 | 7 | 21 |
+| mg | 63 | 79 | 25 | 17 |
+| microcar | 18 | 21 | 7 | 5 |
+| mini | 9 | 26 | 28 | 24 |
+| mitsubishi | 58 | 105 | 28 | 12 |
+| morgan | 21 | 27 | 4 | 10 |
+| morris | 24 | 49 | 9 | 19 |
+| moskvic | 30 | 32 | 6 | 7 |
+| nash | 20 | 33 | 4 | 7 |
+| neta-auto | 6 | 8 | 4 | 4 |
+| nio | 10 | 14 | 8 | 13 |
+| nissan | 55 | 71 | 27 | 22 |
+| noble | 4 | 4 | 3 | 3 |
+| nsu | 20 | 27 | 4 | 9 |
+| oldsmobile | 51 | 76 | 10 | 6 |
+| omoda | 4 | 5 | 4 | 2 |
+| opel | 52 | 98 | 27 | 27 |
+| ora | 7 | 7 | 5 | 5 |
+| packard | 23 | 28 | 2 | 2 |
+| pagani | 3 | 5 | 7 | 5 |
+| panhard | 9 | 9 | 16 | 3 |
+| perodua | 15 | 19 | 23 | 0 |
+| peugeot | 52 | 62 | 34 | 43 |
+| plymouth | 25 | 28 | 138 | 0 |
+| polestar | 5 | 6 | 20 | 0 |
+| pontiac | 41 | 44 | 22 | 0 |
+| porsche | 18 | 40 | 41 | 7 |
+| proton | 25 | 32 | 19 | 0 |
+| ram | 8 | 12 | 35 | 0 |
+| toyota | 19 | 24 | 25 | 3 |
+| volkswagen | 11 | 18 | 10 | 18 |
+
+Primary manufacturer heritage, museum, original technical documents and selected Wikipedia factual records were used; no marketplace tables or source prose copied. Dates of introduction, model years and production periods are distinguished; conflicts remain null. Existing modern snapshots reused for new cards are explicitly identified in reports and are not presented as freshly researched technical specifications. Photos require visual verification under the full-car/margin/aspect rule and either Commons attribution or permitted public official editorial press terms; gaps remain null. Press permissions are recorded in press-photo-permissions.json.
+
+Original line objects are hash-protected by night-baseline.json. Authorized Skoda facelift/photo edits are checked against a preserved full snapshot by facelift-skoda-86/guard.mjs; technical facts remain protected. Peer-owned card baseline changes from the parallel facelift pass are reported explicitly with --allow-peer-updates and are not certified by Codex. New identities are appended in model-line-additions.json and merged into model-lines-auto.json. Existing line slugs are reused. Card aliases are an optional typed field for evidenced regional names and renames, not extra trim cards. Night-card validation checks shape, null reviews, enums, units, cycles, mass basis, overlap and protected data; historical source verification remains a research activity, not something JSON validation proves.
+
+NEXT: renault. Remaining queue and gaps: analysis/codex/night-progress.md. Source URLs and per-model evidence: night-abarth-report.json, night-ac-cars-report.json, night-acura-report.json, night-adler-report.json, night-aiways-report.json, night-aixam-report.json, night-alfa-romeo-report.json, night-alpina-report.json, night-alpine-report.json, night-amc-report.json, night-arcfox-report.json, night-ariel-report.json, night-aro-report.json, night-artega-report.json, night-aston-martin-report.json, night-audi-report.json, night-austin-motor-company-report.json, night-auto-union-report.json, night-autobianchi-report.json, night-automobili-pininfarina-report.json, night-avatr-technology-report.json, night-avions-voisin-report.json, night-bac-report.json, night-baic-report.json, night-baojun-report.json, night-barkas-report.json, night-bellier-report.json, night-bentley-report.json, night-bertone-report.json, night-bmw-report.json, night-borgward-report.json, night-brabus-report.json, night-brilliance-report.json, night-bristol-cars-report.json, night-bugatti-automobiles-report.json, night-buick-report.json, night-byd-report.json, night-cadillac-report.json, night-casalini-report.json, night-caterham-report.json, night-changan-report.json, night-chery-report.json, night-chevrolet-report.json, night-chrysler-report.json, night-citroen-report.json, night-cupra-report.json, night-dacia-report.json, night-daewoo-report.json, night-daihatsu-report.json, night-daimler-company-report.json, night-dangel-report.json, night-datsun-report.json, night-de-tomaso-report.json, night-deepal-report.json, night-delage-report.json, night-delahaye-report.json, night-delorean-report.json, night-denza-report.json, night-derways-report.json, night-dkw-report.json, night-dodge-report.json, night-dongfeng-report.json, night-donkervoort-report.json, night-ds-automobiles-report.json, night-duesenberg-report.json, night-e-go-mobile-report.json, night-estrima-report.json, night-exeed-report.json, night-facel-vega-report.json, night-faw-report.json, night-ferrari-report.json, night-fiat-report.json, night-fisker-automotive-report.json, night-fisker-report.json, night-force-motors-report.json, night-ford-report.json, night-forthing-report.json, night-fsm-report.json, night-fso-report.json, night-gaz-report.json, night-geely-report.json, night-ginetta-report.json, night-gmc-report.json, night-great-wall-report.json, night-grecav-report.json, night-gumpert-report.json, night-haval-report.json, night-hillman-report.json, night-hindustan-motors-report.json, night-honda-report.json, night-hongqi-report.json, night-horch-report.json, night-hotchkiss-report.json, night-hudson-report.json, night-hummer-report.json, night-hyundai-report.json, night-infiniti-report.json, night-innocenti-report.json, night-international-harvester-report.json, night-isuzu-report.json, night-iveco-report.json, night-izh-report.json, night-jac-report.json, night-jaecoo-report.json, night-jaguar-report.json, night-jeep-report.json, night-jensen-motors-report.json, night-jetour-report.json, night-kia-report.json, night-koenigsegg-report.json, night-lada-report.json, night-lamborghini-report.json, night-lancia-report.json, night-land-rover-report.json, night-landwind-report.json, night-leapmotor-report.json, night-lexus-report.json, night-li-auto-report.json, night-lifan-report.json, night-ligier-report.json, night-lincoln-report.json, night-lotus-report.json, night-luaz-report.json, night-lucid-motors-report.json, night-lynk-co-report.json, night-mahindra-electric-report.json, night-mahindra-report.json, night-marussia-motors-report.json, night-maruti-suzuki-report.json, night-maserati-report.json, night-matra-report.json, night-maxus-report.json, night-maybach-report.json, night-mazda-report.json, night-mclaren-report.json, night-mercedes-benz-report.json, night-mercury-report.json, night-mg-report.json, night-microcar-report.json, night-mini-report.json, night-mitsubishi-report.json, night-morgan-report.json, night-morris-report.json, night-moskvic-report.json, night-nash-report.json, night-neta-auto-report.json, night-nio-report.json, night-nissan-report.json, night-noble-report.json, night-nsu-report.json, night-oldsmobile-report.json, night-omoda-report.json, night-opel-report.json, night-ora-report.json, night-packard-report.json, night-pagani-report.json, night-panhard-report.json, night-perodua-report.json, night-peugeot-report.json, night-plymouth-report.json, night-polestar-report.json, night-pontiac-report.json, night-porsche-report.json, night-proton-report.json, night-ram-report.json, night-toyota-report.json, night-volkswagen-report.json. No application index generated and no commits performed. Claude must run scripts/model-cards-index.mjs after review; folders are merged by make/line without duplicates. Future build-model-lines runs must keep all additions, and the original40-make validator now permits additional makes only through registered additions.
+<!-- night-cards:end -->

@@ -1,0 +1,7 @@
+﻿import fs from 'node:fs';import assert from 'node:assert/strict';import{markUnknowns}from'./night-card-helpers.mjs';
+const dirs=['analysis/codex/photo-backfill-42','analysis/codex/photo-root-42','analysis/codex/photo-audi-42','analysis/codex/photo-backfill-44','analysis/codex/photo-backfill-46','analysis/codex/photo-backfill-48','analysis/codex/photo-backfill-50'];let changed=0;
+for(const dir of dirs){if(!fs.existsSync(dir))continue;for(const file of fs.readdirSync(dir).filter(f=>/^batch-\d+\.json$/.test(f))){for(const p of JSON.parse(fs.readFileSync(dir+'/'+file,'utf8'))){const path=`src/data/catalog/model-cards/${p.makeSlug}.json`;assert(p.makeSlug!=='skoda','Protected existing Skoda');const cards=JSON.parse(fs.readFileSync(path,'utf8')),c=cards.find(c=>c.lineSlug===p.lineSlug),g=c?.generations[p.generationIndex];assert(g&&g.name===p.expectedGenerationName,'Stale generation '+path);assert(p.photo.source==='commons'&&p.photo.visualReview==='reviewed'&&p.photo.author&&p.photo.licence&&p.photo.filePageUrl);if(g.photo?.url===p.photo.url)continue;assert(!g.photo,'Do not silently replace a prior photo');g.photo=p.photo;const key=`generations[${p.generationIndex}].photo`;c.needsReview=c.needsReview.filter(r=>r.field!==key&&!r.field.startsWith(key+'.'));markUnknowns(c);fs.writeFileSync(path,JSON.stringify(cards,null,2)+'\n');changed++;}}}
+console.log(changed+' generation photos filled from reviewed patches.');
+
+
+

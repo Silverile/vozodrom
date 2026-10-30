@@ -1,0 +1,929 @@
+[
+  {
+    "site": "skoda-visualizer",
+    "url": "https://visualizer.skoda-auto.com/visualizer-feature-app.umd.js",
+    "publishedBy": "https://www.skoda-auto.cz/modely/fabia/fabia",
+    "redirects": [],
+    "finalUrl": "https://visualizer.skoda-auto.com/visualizer-feature-app.umd.js",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\skoda-visualizer.txt",
+    "bytes": 1592289,
+    "sha256": "f6fced0d96a634c3c0216545a20a54470fa90b3a72a161bee532578968d60b5f",
+    "contexts": [
+      "/*! For license information please see visualizer-feature-app.umd.js.LICENSE.txt */",
+      "e&&define.amd?define([\"react\",\"react-dom\",\"@feature-hub/react\"],t):\"object\"==typeof exports?exports.visualizerFA=t(require(\"react\"),require(\"react-dom\"),require(\"@feature-hub/react\")):e.visualizerFA=t(e.React,e.ReactDOM,e.FeatureHubReact)}(self,(e,t,n)=>(()=>{var r={14:e=>{e.exports=function(e,t){for(var n=-1,r=null==e?0:e.lengt",
+      ":\"#ffffff\"},\"&::selection\":{background:e.palette.primary.main,color:\"#ffffff\"}}}}),(0,Ji.n9)({name:\"ConfiguratorBanner\"})(function(e){return{root:{position:\"relative\"},\"layer-0\":{position:\"absolute\",right:0,top:0,bottom:0,left:0},\"layer-1\":{position:\"absolute\",display:\"none\"},\"layer-2\":{position:\"absolute\"},content:{position:\"rela",
+      "tive\"}}}),(0,Ji.n9)({name:\"ConfiguratorBannerMobile\"})(function(e){var t=e.Skoda.settings.bannerConfigurator.colors;return{\"layer-0\":{background:\"radial-gradient(232.98% 73.64% at 94.97% 26.36%, \"+t[0]+\" 0%, \"+t[1]+\" 100%)\"},\"layer-1\":{left:\"0\",right:\"0\",bottom:\"0\",top:\"50%\",background:\"radial-gradient(50% 196.85% at 50% 24.41",
+      "ckground:\"linear-gradient(0deg, \"+t[2]+\" 49.78%, rgba(217, 217, 217, 0) 100%)\"}}}),(0,Ji.n9)({name:\"ConfiguratorBannerDesktop\"})(function(e){var t,n=e.Skoda.settings.bannerConfigurator.colors;return{\"layer-0\":{background:\"radial-gradient(50% 196.85% at 50% 24.41%, \"+n[0]+\" 0%, \"+n[1]+\" 100%)\"},\"layer-1\":(t={right:\"0\",top:\"0\",botto",
+      "anner:{color:\"#232526\"},skodaSlider:{colors:[e.secondary.main,\"#84B5A6\",\"#3A6558\",\"#2A5548\"]},bannerConfigurator:{colors:\"light\"===e.mode?[e.skodaColors[\"neutrals-white\"],\"#DBDBDB\",\"#D9D9D9\"]:[e.skodaColors[\"neutrals-chrome900\"],e.skodaColors[\"neutrals-chrome800\"],e.skodaColors[\"neutrals-chrome900\"]]}}}}}(function(e){var t=\"dark\"=",
+      "s.twitterUtmParameters}get copyUrlUtmParameters(){return this._appSettings.copyUrlUtmParameters}get visualizerToolUrl(){return this._appSettings.visualizerToolUrl}}function _d(e,t,n){return(t=function(e){var t=function(e){if(\"object\"!=typeof e||!e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var n=t.call(e,\"string\");if(\"o",
+      " n().reduce(e,(e,t,r)=>n().isNil(t)?e:Ad(Ad({},e),{},{[r]:t}),{})}var Od=function(e){return e.CODE=\"Visualizer\",e}({}),Pd=function(e){return e.DEFAULT=\"SkodaAuto.K2NGTools.VisualizerApp.Resources\",e.COMMON=\"SkodaAuto.Marvin.K2Tools.Common\",e}({}),kd=function(e){return e.RESOURCES=\"resources\",e.IMPORTER_PUBLICATION=\"importer\",e}(",
+      "OpenFullViewport\",e.CLOSE_FULLSCREEN=\"CloseFullViewport\",e}({}),Id=function(e){return e.PAGE_GROUP=\"Visualizer\",e.PAGE_GROUP_WIDGET=\"Website\",e.WIDGET=\"Visualizer\",e}({}),Nd=function(e){return e[e.PAGE_VIEW=1]=\"PAGE_VIEW\",e[e.VIRTUAL_PAGE_VIEW=2]=\"VIRTUAL_PAGE_VIEW\",e[e.PAGE_SCROLL=4]=\"PAGE_SCROLL\",e[e.BUTTON_CLICK=5]=\"BUTTON_CL",
+      "RACK_VP=\"trackVP\",e.TRACK_EVENT=\"trackEvent\",e}({}),zd=function(e){return e.ALL_PAGES=\"All pages\",e.VISUALIZER=\"Visualizer\",e.CTA=\"CTA\",e}({}),Ud=function(e){return e.PAGE_SCROLL=\"Scroll down\",e.BUTTON_CLICK=\"Button Click\",e.ORIENTATION_CHANGE=\"Orientation change\",e.CTA_CLICK=\"Visualizer\",e}({}),jd=function(e){return e.PAGE_VIEW",
+      ",(e,t)=>{var n;return this.track(Hd({matrixId:Nd.VIRTUAL_PAGE_VIEW,event:Dd.TRACK_VP,documentPath:\"/Visualizer/\".concat(e),documentTitle:e,widget:this.widget,\"appweb.Name\":jd.PAGE_VIEW,\"importer.BID\":this.config.bid,\"page.Group\":this.pageGroup,\"page.Name\":document.title,\"page.LanguageVersion\":this.config.culture,\"page.Context\":E",
+      "=>{var t;return this.track(Hd({matrixId:Nd.ORIENTATION_CHANGE,event:Dd.TRACK_EVENT,eventCategory:zd.VISUALIZER,eventAction:Ud.ORIENTATION_CHANGE,eventLabel:this.device.orientationFullName(),widget:this.widget,\"appweb.Name\":jd.ORIENTATION_CHANGE,\"page.Group\":this.pageGroup,\"page.Context\":Ed.TrackingUtils.pageContext(null!==(t=thi",
+      "e,t,n)=>{var r;return this.track(Hd({matrixId:Nd.BUTTON_CLICK,event:Dd.TRACK_EVENT,eventCategory:zd.VISUALIZER,eventAction:Ud.BUTTON_CLICK,eventLabel:e,widget:this.widget,\"appweb.Name\":jd.BUTTON_CLICK,\"page.Group\":this.pageGroup,\"page.Context\":Ed.TrackingUtils.pageContext(null!==(r=this.config.dealerId)&&void 0!==r?r:\"\"),\"hit.Cl",
+      ",t,n)=>{var r;return this.track(Hd(Hd({matrixId:Nd.ITEM_CLICK,event:Dd.TRACK_EVENT,eventCategory:zd.VISUALIZER,eventAction:e,eventLabel:\"Item Clicked: \".concat(t),widget:this.widget,\"appweb.Name\":jd.ITEM_CLICK,\"page.Group\":this.pageGroup,\"page.Context\":Ed.TrackingUtils.pageContext(null!==(r=this.config.dealerId)&&void 0!==r?r:\"\"",
+      ",this._translate=void 0,this._config={locale:cf.getLocaleFromCulture(e),projectId:\"K2NGTools\",tags:\"visualizer\",url:t,showOnlyVerified:!0}}static getLocaleFromCulture(e){return\"en-com\"===n().toLower(e)?\"default-default\":e}get config(){return this._config}get isReady(){return this.initialized&&void 0!==this._translate}}function u",
+      "uper(...arguments),df(this,\"loadModelData\",e=>this.callApi(\"get\",uf(\"data\",{slug:e}))),df(this,\"loadExteriorImages\",e=>this.callApi(\"get\",uf(\"exteriorImages\",e))),df(this,\"loadInteriorImage\",e=>this.callApi(\"get\",uf(\"interiorImage\",e))),df(this,\"loadSummaryExteriorImage\",e=>this.callApi(\"get\",uf(\"exteriorPreview\",e))),df(this,\"load",
+      ",onTouchEnd:p,onTouchCancel:p,onMouseDown:d,onMouseMove:h,onMouseUp:p,onMouseLeave:p,\"data-testid\":\"visualizer-dragoverlay\"},i().createElement(vg,{ref:u}))};function xg(e){var{clientX:t}=wg(e)?e.changedTouches[0]:e,{offsetLeft:n}=e.currentTarget;return t-n}function wg(e){return n().startsWith(e.type,\"touch\")}function _g(e,t){var",
+      "or:m,setSelectedColor:T,selectedWheel:v,setSelectedWheel:y,selectedInterior:b,setSelectedInterior:x,exteriorFrame:w,setExteriorFrame:_}),[p,l,c,w,f,h,m,b,v,M,E,T,S]);return i().createElement(Ag.Provider,{value:C},u)};function Cg(){var e=(0,r.useContext)(Ag);if(null===e)throw new Error('\"useVisualizerData\" called outside \"Visualizer",
+      "c.bid,culture:c.culture,dealerId:c.dealerId,params:g});return{type:\"link\",label:l,trackingType:\"Car configurator\",link:e};case\"FORM\":return{type:\"action\",label:l,trackingType:\"Contact us\",action:{type:\"CarSummary\",formId:null!=a?a:\"\"}};default:return}},[m,c.bid,c.clgEndpoint,c.culture,c.dealerId,g,l,a,o,s])}function kg(e){return e",
+      "{config:n}=Ff();return i().createElement(Gg,{style:{display:e.visible?void 0:\"none\"},\"data-testid\":\"visualizer-error-overlay\"},i().createElement(\"div\",{className:\"overlay-image\"},i().createElement(\"img\",{src:\"\".concat(n.imgPath,\"/image-error.png\")})),i().createElement(\"div\",{className:\"overlay-title\"},null!==(t=e.text)&&void 0!=",
+      "2-5-3,2))),[n]);return i().createElement(Zg,{style:{display:e.visible?void 0:\"none\"},\"data-testid\":\"visualizer-loader\"},i().createElement(\"div\",{className:\"loader\",ref:a},i().createElement(\"svg\",{className:\"loader-canvas\",viewBox:\"0 0 \".concat(n,\" \").concat(n)},i().createElement(\"circle\",{cx:s,cy:s,r:s,fill:qg}),i().createElemen",
+      "49%, #efefef 66%, #dfdfdf 82%, #bfbfbf 100%);\\n\\t}\\n\"]))),ev=(0,r.forwardRef)((e,t)=>{var o,a=Vf(),{exteriorFrame:s,setExteriorFrame:l}=Cg(),{images:c,progress:u,loadStatus:d}=function(e){var[t,i]=(0,r.useState)(0),[o,a]=(0,r.useState)(\"NotLoaded\"),[s,l]=(0,r.useState)();return(0,r.useEffect)(()=>{var t=!0;i(0),a(\"Loading\");var r=n",
+      "RL.createObjectURL(e),r=document.createElement(\"a\"),i=n.substring(n.lastIndexOf(\".\")+1);r.download=\"exterior-image.\".concat(i),r.href=t,r.click(),URL.revokeObjectURL(t)}).catch(console.error)}}}),[s,e.imagesPath]);var h=\"\".concat(Math.round(u),\" %\");return i().createElement(Qg,null,i().createElement(\"canvas\",{ref:p,\"data-testid\":\"vi",
+      "&&\"Error\"!==d,text:h}),i().createElement($g,{visible:\"Error\"===d||\"Error\"===e.loadingStatus,text:a(\"Exterior.ImageNotLoaded\")}))});function tv(){var{trackingService:e}=Ff(),{selectionMode:t}=Cg(),n=Rg();(0,r.useEffect)(()=>{e.trackVirtualPageView(function(e){switch(e){case\"Color\":return\"Colors\";case\"Wheel\":return\"Wheels\";case\"Interi",
+      "ize(){return this.divideScalar(this.length()||1)}angle(){return Math.atan2(-this.y,-this.x)+Math.PI}angleTo(e){const t=Math.sqrt(this.lengthSq()*e.lengthSq());if(0===t)return Math.PI/2;const n=this.dot(e)/t;return Math.acos(wy(n,-1,1))}distanceTo(e){return Math.sqrt(this.distanceToSquared(e))}distanceToSquared(e){const t=thi",
+      "*i,this.w=o[3]*t+o[7]*n+o[11]*r+o[15]*i,this}divideScalar(e){return this.multiplyScalar(1/e)}setAxisAngleFromQuaternion(e){this.w=2*Math.acos(e.w);const t=Math.sqrt(1-e.w*e.w);return t<1e-4?(this.x=1,this.y=0,this.z=0):(this.x=e.x/t,this.y=e.y/t,this.z=e.z/t),this}setAxisAngleFromRotationMatrix(e){let t,n,r,i;const o=.01,a=.",
+      "this._x=e.y*t.z-e.z*t.y,this._y=e.z*t.x-e.x*t.z,this._z=e.x*t.y-e.y*t.x,this._w=n),this.normalize()}angleTo(e){return 2*Math.acos(Math.abs(wy(this.dot(e),-1,1)))}rotateTowards(e,t){const n=this.angleTo(e);if(0===n)return this;const r=Math.min(1,t/n);return this.slerp(e,r),this}identity(){return this.set(0,0,0,1)}invert(){ret",
+      "rojectOnVector(e),this.sub(nb)}reflect(e){return this.sub(nb.copy(e).multiplyScalar(2*this.dot(e)))}angleTo(e){const t=Math.sqrt(this.lengthSq()*e.lengthSq());if(0===t)return Math.PI/2;const n=this.dot(e)/t;return Math.acos(wy(n,-1,1))}distanceTo(e){return Math.sqrt(this.distanceToSquared(e))}distanceToSquared(e){const t=thi",
+      "nfloat getSpotAttenuation( const in float coneCosine, const in float penumbraCosine, const in float angleCosine ) {\\n\\treturn smoothstep( coneCosine, penumbraCosine, angleCosine );\\n}\\n#if NUM_DIR_LIGHTS > 0\\n\\tstruct DirectionalLight {\\n\\t\\tvec3 direction;\\n\\t\\tvec3 color;\\n\\t};\\n\\tuniform DirectionalLight directionalLights",
+      "r = spotLight.position - geometry.position;\\n\\t\\tlight.direction = normalize( lVector );\\n\\t\\tfloat angleCos = dot( light.direction, spotLight.direction );\\n\\t\\tfloat spotAttenuation = getSpotAttenuation( spotLight.coneCos, spotLight.penumbraCos, angleCos );\\n\\t\\tif ( spotAttenuation > 0.0 ) {\\n\\t\\t\\tfloat lightDistance = le",
+      "E_instanced_arrays.\");u[d](o,l,a,r*s,c),n.update(l,o,c)}}function Jw(e){const t={frame:0,calls:0,triangles:0,points:0,lines:0};return{memory:{geometries:0,textures:0},render:t,programs:null,autoReset:!0,reset:function(){t.calls=0,t.triangles=0,t.points=0,t.lines=0},update:function(n,r,i){switch(t.calls++,r){case e.TRIANGLES:",
+      "t.triangles+=i*(n/3);break;case e.LINES:t.lines+=i*(n/2);break;case e.LINE_STRIP:t.lines+=i*(n-1);break;case e.LINE_LOOP:t.lines+=i*n;break;case e.POINTS:t.points+=i*n;break;default:console.error(\"THREE.WebGLInfo: Unknown draw mode",
+      "esh)!0===r.wireframe?(q.setLineWidth(r.wireframeLinewidth*$()),v.setMode(ve.LINES)):v.setMode(ve.TRIANGLES);else if(i.isLine){let e=r.linewidth;void 0===e&&(e=1),q.setLineWidth(e*$()),i.isLineSegments?v.setMode(ve.LINES):i.isLineLoop?v.setMode(ve.LINE_LOOP):v.setMode(ve.LINE_STRIP)}else i.isPoints?v.setMode(ve.POINTS):i.isSp",
+      "rite&&v.setMode(ve.TRIANGLES);if(i.isInstancedMesh)v.renderInstances(p,f,i.count);else if(n.isInstancedBufferGeometry){const e=void 0!==n._maxInstanceCount?n._maxInstanceCount:1/0,t=Math.min(n.instanceCount,e);v.renderInstances(p,f,t)}else v.render",
+      "ateElement(dC,null,i().createElement(\"div\",{ref:d,style:{width:\"100%\",height:\"100%\"},\"data-testid\":\"visualizer-interior\"}),i().createElement(vg,{ref:u}))};function hC(){}var fC,mC,gC,vC,yC=\"$max_res$\",bC=e=>{var t;tv();var n=(0,r.useMemo)(()=>{var t,n=null===(t=e.data)||void 0===t?void 0:t.src;return n&&null!==n?iv()(n,\"?\")?n+\"&",
+      "h-car\",\".svg\"),a=r(t?\"NoData.Error\":\"NoData.StageMode\");return i().createElement(PC,{\"data-testid\":\"visualizer-no-data-panel\"},i().createElement(\"img\",{src:o,alt:\"\"}),i().createElement(kC,null,a))},LC=(0,r.forwardRef)((e,t)=>{var{hasData:n,modelData:o,modelStatus:a,selectionMode:s,selectedColor:l,selectedWheel:c,selectedInterior",
+      ":u}=Cg(),d=(0,r.useRef)(null),{apiClient:p}=Ff(),{data:h,status:f,fetch:m}=Hf(p.loadExteriorImages),{data:g,status:v,fetch:y}=Hf(p.loadInteriorImage);return(0,r.useEffect)(()=>{n&&o&&l&&c&&m({device:\"desktop\",scene:o.scene,salesGroup:o.salesgroup,mbvCode:o.mbvCode,colorPrCode:l.id,wheelPrCode:c.id})},[m,n,o,l,c]),(0",
+      "(sk,null,\"Color\"===s&&n().map(l,e=>i().createElement(JP,{key:\"color-item-\".concat(e.id),datatestid:\"visualizer-color-item-\".concat(e.id),iconComponent:e.roofColor?i().createElement($C,{id:e.id,bodyColor:e.bodyColor,roofColor:e.roofColor}):i().createElement(qC,{id:e.id,bodyColor:e.bodyColor}),name:a(\"\".concat(s,\".\").concat(e.id))",
+      ".id)}})),\"Wheel\"===s&&n().map(c,e=>i().createElement(JP,{key:\"wheel-item-\".concat(e.id),datatestid:\"visualizer-wheel-item-\".concat(e.id),iconUrl:e.imgUrl,name:a(\"\".concat(s,\".\").concat(e.id)),active:(null==h?void 0:h.id)===e.id,disableTooltip:t,onClick:()=>{f(e),y(\"Wheels\",e.id)}})),\"Interior\"===s&&n().map(u,e=>i().createElement",
+      "(JP,{key:\"interior-item-\".concat(e.id),datatestid:\"visualizer-interior-item-\".concat(e.id),iconUrl:e.imgUrl,name:a(\"\".concat(s,\".\").concat(e.id)),active:(null==m?void 0:m.id)===e.id,disableTooltip:t,onClick:()=>{g(e),y(\"Interior\",e.id)}})))};function yk(e,t){return t||(t=e.slice(0",
+      "turn o.length<2?null:i().createElement(Mk,null,n().map(o,e=>i().createElement(Sk,{key:e,datatestid:\"visualizer-modeselection-\".concat(e),iconUrl:c[e],label:u[e],active:a===e,onClick:()=>(e=>{s(e),t.trackButtonClick(d[e],void 0,l)})(e)})))};const Tk=(0,Vn.A)((0,C.jsx)(\"path\",{d:\"M5 20h14v-2H5zM19 9h-4V3H9v6H5l7 7z\"}),\"Download\");",
+      "(),o=Vf(),{modelData:a,hasData:s,selectionMode:l}=Cg(),c=Rg(),u=function(){var e,t,{config:r}=Ff(),{exteriorFrame:i,selectedColor:o,selectedWheel:a,modelData:s}=Cg(),l=new URL(null!==(e=r.visualizerToolUrl)&&void 0!==e?e:window.location.href);if(n().forEach(Array.from(l.searchParams.keys()),e=>{n().startsWith(e,\"utm_\")&&l.searchPar",
+      "et(\"color\",o.id),a&&l.searchParams.set(\"wheels\",a.id),l.searchParams.set(\"rotation\",i.toString()),r.visualizerToolUrl&&r.visualizerToolUrl!==window.location.origin+window.location.pathname){var c=new URL(window.location.href);r.anchorId&&(c.hash=r.anchorId),l.searchParams.set(\"redirectURL\",c.toString())}return l.toString()}();if",
+      "n,r)=>{t.trackCtaClick(e,n,r,p)},[p,t]);return\"Success\"===o&&a?i().createElement(Bk,{\"data-testid\":\"visualizer-control-panel\"},i().createElement(Hk,null,i().createElement(Wk,{\"data-testid\":\"visualizer-selecteditem-label\"},s.length>0&&\"Color\"===l&&c?n(\"\".concat(l,\".\").concat(c.id)):void 0,s.length>0&&\"Wheel\"===l&&u?n(\"\".concat(l,",
+      "}=Ff(),{modelData:t,selectedColor:n,selectedWheel:o}=Cg(),{data:a,status:s,fetch:l}=Hf(e.loadSummaryExteriorImage);return(0,r.useEffect)(()=>{t&&n&&o&&l({salesGroup:t.salesgroup,mbvCode:t.mbvCode,colorPrCode:n.id,wheelPrCode:o.id})},[l,t,n,o]),\"NotLoaded\"===s||\"Loading\"===s?i().createElement(aR,null):\"Error\"!==s&&null!=a&&a.src?i()",
+      "-feature-app.umd.js\",baseUrl:t,config:{formCode:n,formContext:r,externalTrackingData:{\"page.Group\":\"Visualizer\",\"page.Context\":\"Importer\",\"page.Section\":\"Visualizer - Car Summary\"},actions:{onLoad:o,onSubmitSuccess:a,onSubmitError:s}}})},dR=()=>{var{apiClient:e}=Ff(),{modelData:t,selectedInterior:n}=Cg(),{data:o,status:a,fetch:s",
+      "t(i().Fragment,null,i().createElement(Tg,{data:p,dataStatus:h},i().createElement(WR,{\"data-testid\":\"visualizer-container\"},i().createElement(VR,null,i().createElement(LC,{ref:d}),i().createElement(zk,{display:\"desktop\",downloadImage:w})),i().createElement(Gk,{handleCtaAction:e=>{var t;\"CarSummary\"===e.type&&(t=e.formId,y(!0),x(t",
+      "\":{display:\"none\"},\"&:first-child\":{display:\"none\"}},previewDisclaimer:{marginBlockStart:28},sectionConfigurator:{display:\"flex\",flexDirection:\"column\",height:\"100%\"}}}),YR=e=>{var{settings:t,isWidget:n}=e,{config:r}=Ff(),{isFullScreen:o}=Gf(),a=\"true\"===o,s=\"Success\"===Wf(Bm),l=!0===(null==t?void 0:t.disableGutters)||a,{classes:c",
+      "ce:t.errorService},i().createElement(jf,{breakpoints:cd.values},i().createElement(\"div\",{className:\"visualizer-main\"},i().createElement(im,null,i().createElement(YR,{settings:r})))))))))},ZR=o(23618),JR=o(45116),QR=o(65108),eL=function(e){return\"@@redux-saga/\"+e},tL=eL(\"CANCEL_PROMISE\"),nL=eL(\"CHANNEL_END\"),rL=eL(\"IO\"),iL=eL(\"MA",
+      "terUtmParameters,copyUrlUtmParameters:null===(w=e.config)||void 0===w?void 0:w.copyUrlUtmParameters,visualizerToolUrl:null===(_=e.config)||void 0===_?void 0:_.visualizerToolUrl},trackingFeatureService:A,target:E}),P=function(e){(0,JR.tY)({});var t=RI({context:{services:e}}),n=((0,QR.A)(),(0,ZR.Yl)((0,ZR.HY)({services:DI}),(0,ZR."
+    ],
+    "links": [],
+    "scripts": [],
+    "policies": [
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://visualizer.skoda-auto.com",
+        "url": "https://visualizer.skoda-auto.com/robots.txt",
+        "status": 404,
+        "body": "",
+        "checkedAt": "2026-10-28T12:07:54.221Z",
+        "note": "Unavailable robots: RFC 9309 section 2.3.1.3; 401/403/429/challenges are still hard stops"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "skoda-config",
+    "url": "https://clg.skoda-auto.com/api/link?bid=260&bodyCode=60004&carLine=60004&culture=cs-CZ&instanceName=CZE&mbv=PJ3&modelCode=PJ&pageGroup=Website&salesProgram=CZE&tool=CC3",
+    "publishedBy": "https://www.skoda-auto.cz/modely/fabia/fabia",
+    "redirects": [
+      {
+        "from": "https://clg.skoda-auto.com/api/link?bid=260&bodyCode=60004&carLine=60004&culture=cs-CZ&instanceName=CZE&mbv=PJ3&modelCode=PJ&pageGroup=Website&salesProgram=CZE&tool=CC3",
+        "to": "https://cc.skoda-auto.com/cze/cs-CZ/start-configuration?mbvCode=PJ3&modelcode=PJ&pagegroup=Website&salesprogram=CZE"
+      }
+    ],
+    "stop": "Unrecognized robots response",
+    "policies": [
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://clg.skoda-auto.com",
+        "url": "https://clg.skoda-auto.com/robots.txt",
+        "status": 404,
+        "body": "",
+        "checkedAt": "2026-10-28T12:07:56.072Z",
+        "note": "Unavailable robots: RFC 9309 section 2.3.1.3; 401/403/429/challenges are still hard stops"
+      }
+    ],
+    "requests": 3
+  },
+  {
+    "site": "toyota-config",
+    "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator",
+    "publishedBy": "https://www.toyota.cz/nova-auta/corolla-sedan",
+    "redirects": [],
+    "finalUrl": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\toyota-config.txt",
+    "bytes": 1511580,
+    "sha256": "7e67891d0f0a6d04fce3ec918f01553049e4330be6a81322c8b5c084213f6ee7",
+    "contexts": [
+      "         <a id=\"-link-2\" class=\"cmp-reachout__link\" data-gt-action=\"click-cta\" data-gt-label=\"carconfigurator\" data-gt-name=\"ctaevent\" data-gt-componentname=\"reach-out-button\" data-gt-componentgroup=\"content\" href=\"https://www.toyota.cz/nova-auta\" target=\"_self\">",
+      ":\"Sestavit Toyotu\",\"internalLink\":\"https://www.toyota.cz/nova-auta\",\"externalLink\":\"\",\"ctaType\":\"carconfigurator\",\"internalLinkBehaviour\":\"DEFAULT_SITE_BEHAVIOUR\",\"externalLinkBehaviour\":\"DEFAULT_SITE_BEHAVIOUR\",\"overlayTitleInternal\":\"\",\"overlayTitleExternal\":\"\",\"internalTitle\":\"Toyota | Najít auto, které splňuje vaše požadavky\",",
+      "\":\"https://www.toyota.cz/nova-auta\",\"externalLink\":\"https://proverenevozy.toyota.cz/\",\"ctaType\":\"carconfigurator\",\"internalLinkBehaviour\":\"DEFAULT_SITE_BEHAVIOUR\",\"externalLinkBehaviour\":\"NEW_TAB\",\"overlayTitleInternal\":\"\",\"overlayTitleExternal\":\"\",\"internalTitle\":\"Toyota | Najít auto, které splňuje vaše požadavky\",\"disableNorefer",
+      ":\"Sestavit Toyotu\",\"internalLink\":\"https://www.toyota.cz/nova-auta\",\"externalLink\":\"\",\"ctaType\":\"carconfigurator\",\"internalLinkBehaviour\":\"SAME_TAB\",\"externalLinkBehaviour\":\"DEFAULT_SITE_BEHAVIOUR\",\"overlayTitleInternal\":\"\",\"overlayTitleExternal\":\"\",\"linkExternal\":false,\"linkBehaviour\":\"_self\",\"overlayTitle\":\"\",\"linkInternal\":true",
+      "nkEmpty\":false,\"overlayBehaviour\":\"\",\"dynamicLinkBehaviour\":null,\"overlay\":false,\"taggingLabel\":\"carconfigurator\",\"openInNewTab\":false,\"link\":\"https://www.toyota.cz/nova-auta\",\"internalTitle\":\"Toyota | Najít auto, které splňuje vaše požadavky\",\"disableNoreferrer\":false},{\"linkType\":\"INTERNAL_PATH\",\"linkText\":\"Modely a ceníky\",\"int",
+      "figA11yNavUpholstery\":\"Čalounění\",\"carConfigA11yNavWinterWheel\":\"Výběr zimních kol\",\"carConfigA11yNavExtra\":\"Volby extra výbavy\",\"carConfigA11yNavSpecs\":\"Posuvník specifikací\",\"carConfigA11yNavCharging\":\"Volby nabíjení\",\"carConfigA11yLinkSkipToSpinContainer\":\"Přeskočit na kontejner otáčení\",\"carConfigA11yLinkReturnToConfig",
+      "4fb7-98d8-d309f40f0465.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"22414290-26e6-4453-a186-7ad0794bb2a7\",\"code\":\"209\",\"internalCode\":\"209\",\"name\":\"",
+      "4bcd-be98-47a8dc651a22.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"2158c3e3-dd75-446b-a763-4ec4c0ffdeeb\",\"code\":\"3U5\",\"internalCode\":\"3U5\",\"name\":\"",
+      "453d-9e5c-083aedbf2fb5.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"94c9fd2e-78c9-4e8b-bf96-c32bba579cdd\",\"code\":\"089\",\"internalCode\":\"089\",\"name\":\"",
+      "4971-85a4-0c3a3f3ccd91.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"08277417-b48d-4dd6-ad88-0bce82d31911\",\"code\":\"785\",\"internalCode\":\"785\",\"name\":\"",
+      "4cd3-8308-2e836ca6a885.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"840a5edc-8c7a-4375-b003-93a84ac94fb1\",\"code\":\"1J6\",\"internalCode\":\"1J6\",\"name\":\"",
+      "4933-aa84-dd894b2545c5.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},{\"id\":\"ec73bc3e-752e-426f-a75b-16684777c4f6\",\"code\":\"1M2\",\"internalCode\":\"1M2\",\"name\":\"",
+      "4477-80ae-220093e738d2.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"}],\"wheels\":[{\"index\":0,\"objectType\":\"wheel\",\"id\":\"1ea74744-7807-46ec-861f-eaaf87ecb6a9\",",
+      "4fb7-98d8-d309f40f0465.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},\"upholstery\":{\"index\":0,\"objectType\":\"upholstery\",\"id\":\"214de403-424f-466d-bfb0-65a489e",
+      "4fb7-98d8-d309f40f0465.JPG\",\"upholsteries\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteriesCarConfigurator\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"upholsteryOnlineAvailability\":[\"214de403-424f-466d-bfb0-65a489e097ca\"],\"description\":\"\"},\"primaryAccentColour\":null,\"secondaryAccentColour\":null,\"upholstery\":{\"index\":0,\"object",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1000/height/533/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp\"/><link rel=\"preload\" as=\"image\" imagesrcset=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/300/height/171/scale-mode/",
+      "1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 300w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/600/height/342/scale-mode/1/padding/0/image-quality/75/day-exterior",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1170/height/666/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 1170w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1624/height/924/scale-mode/1/padding/0/image-quality/75/day-exteri",
+      "29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1850/height/1053/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 1850w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/2048/height/1165/scale-mode/1/padding/0/image-quality/75/day-exter",
+      "e/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/640/height/640/scale-mode/1/padding/0/image-quality/75/day-exterior-18_040_FA20.png\"/><link rel=\"preload\" as=\"image\" href=\"https://img-optimize.toyota-europe.com/cardb/PNG/resize/1200X1200/69ea497f-32e6-405e-bcc3-0ab879a5130c.webp\"/><link rel=\"preload\" as=\"image\" href=\"https://img-optimi",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1000/height/700/scale-mode/1/padding/0/image-quality/75/day-exterior-12_040_FA20.webp\" imagesrcset=\"\"/><ul aria-live=\"polite\" aria-atomic=\"false\" class=\"global__global--_TI0A Accessibility__sr-only--Jea6c\"><li>Byla aktualizována cena Cena vaší konfigurace činí 723 900 Kč</li></ul><section",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1000/height/533/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp\" alt=\"\" role=\"presentation\"/><img data-image=\"previousimg\" alt=\"\" role=\"presentation\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-",
+      "586fb03fac7c/width/1000/height/533/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/300/height/171/scale-mode/1/padding/0/image-quality/75/day-exte",
+      "e/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/600/height/342/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 600w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1170/height/666/scale-mode/1/padding/0/image-quality/75/day-exterio",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1624/height/924/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 1624w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1850/height/1053/scale-mode/1/padding/0/image-quality/75/day-exter",
+      "29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/2048/height/1165/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 2048w\" sizes=\"\" style=\"opacity:0;transition:none;position:absolute;left:0;top:0;right:0;bottom:0;z-index:5;width:100%;height:100%;object-fit:contain\"/><img data-image=\"current\" alt=\"\" role=\"presentation\" ",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1000/height/533/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/300/height/171/scale-mode/1/padding/0/image-quality/75/day-exte",
+      "e/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/600/height/342/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 600w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1170/height/666/scale-mode/1/padding/0/image-quality/75/day-exterio",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1624/height/924/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 1624w,//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1850/height/1053/scale-mode/1/padding/0/image-quality/75/day-exter",
+      "29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/2048/height/1165/scale-mode/1/padding/0/image-quality/75/day-exterior-3_040_FA20.webp 2048w\" sizes=\"\" style=\"position:absolute;opacity:1;left:0;top:0;right:0;bottom:0;width:100%;height:100%;object-fit:contain\"/></div><div class=\"Exterior360__spinner-buttons--gD0TY\"><button type=\"button\" cl",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-13_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-0_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-18_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/></div><div class=\"ExteriorSlider__slider-bullets--LRuRu\" data-transform=\"true\"><div data-active=\"true\" aria-hidden=\"true\"></div><div data-active=\"fal",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-13_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-0_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-18_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/></div><div class=\"ExteriorSlider__slider-bullets--LRuRu\" data-transform=\"true\"><div data-active=\"true\" aria-hidden=\"true\"></div><div data-active=\"fal",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-27_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><div class=\"ExteriorSlider__wheel--f_aUm ExteriorSlider__slider-item--VPkpC\"><img src=\"//t1-carassets.toyota-europe.com/69ea497f-32e6-405e-bcc3-0ab87",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-13_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-0_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-18_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/></div><div class=\"ExteriorSlider__slider-bullets--LRuRu\" data-transform=\"true\"><div data-active=\"true\" aria-hidden=\"true\"></div><div data-active=\"fal",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-13_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-0_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-18_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/></div><div class=\"ExteriorSlider__slider-bullets--LRuRu\" data-transform=\"true\"><div data-active=\"true\" aria-hidden=\"true\"></div><div data-active=\"fal",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-13_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-3_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-0_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/><img class=\"ExteriorSlider__slider-item--VPkpC\" src=\"//images.toyota-europe.com/cz/product-token/b535e803-66bd-45a5-bd67-ced9c8046fe2/vehicle/29fe3c4b",
+      "86fb03fac7c/width/1600/height/900/scale-mode/1/padding/12/background-colour/FFFFFF/image-quality/75/day-exterior-18_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" loading=\"lazy\"/></div><div class=\"ExteriorSlider__slider-bullets--LRuRu\" data-transform=\"true\"><div data-active=\"true\" aria-hidden=\"true\"></div><div data-active=\"fal",
+      "e/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/640/height/640/scale-mode/1/padding/0/image-quality/75/day-exterior-18_040_FA20.png\" alt=\"\" role=\"presentation\"/></div><div><header class=\"Overview__header--sNWs3\"><h3 class=\"Text__apheleia-body--olXGO Text__heading-global--rDWeu Overview__title--cwARt\"><span>Barva</span></h3><button typ",
+      "/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/1000/height/700/scale-mode/1/padding/0/image-quality/75/day-exterior-12_040_FA20.webp\" srcset=\"\" alt=\"\" role=\"presentation\" class=\"Overview__imagegrid-visual-main--JeO19\"/></div><div style=\"--or-animation-delay:0.25\" class=\"Overview__imagegrid-visual--NJ6_M\" aria-describedby=\"visual-descr",
+      "e/29fe3c4b-752d-4346-b4e3-586fb03fac7c/width/640/height/640/scale-mode/1/padding/0/image-quality/75/day-exterior-18_040_FA20.png\" alt=\"\" role=\"presentation\"/><div id=\"visual-description-colour\" class=\"Overview__imagegrid-visual-overlay--CfQ47\"><span>Barva</span></div></div><div class=\"Overview__imagegrid-visual--NJ6_M Overview__ima"
+    ],
+    "links": [
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#P%C5%99ej%C3%ADt-na-hlavn%C3%AD-obsah",
+        "title": "Přejít na hlavní obsah (Press Enter)"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers",
+        "title": "Vyhledat prodejce"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#",
+        "title": "Dealer Name"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers/show-results-on-page-load=true",
+        "title": "Vyhledat prodejce nebo servis"
+      },
+      {
+        "url": "https://www.toyota.cz/koupe-a-nabidky/ceniky",
+        "title": "Modely a ceníky"
+      },
+      {
+        "url": "https://www.toyota.cz/newsletter-modely",
+        "title": "Přihlášení k odběru novinek"
+      },
+      {
+        "url": "https://www.toyota.cz/koupe-a-nabidky/ceniky",
+        "title": "Modely a ceníky"
+      },
+      {
+        "url": "https://www.toyota.cz/objevte-toyotu/toyota-gazoo-racing",
+        "title": "TOYOTA GAZOO Racing modely"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta",
+        "title": "Konfigurujte Toyotu"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers",
+        "title": "Vyhledat prodejce nebo servis"
+      },
+      {
+        "url": "https://www.toyota.cz/newsletter-modely",
+        "title": "Přihlášení k odběru novinek"
+      },
+      {
+        "url": "https://www.toyota.cz/koupe-a-nabidky/ceniky",
+        "title": "Modely a ceníky"
+      },
+      {
+        "url": "https://www.toyota.cz/objevte-toyotu/toyota-gazoo-racing",
+        "title": "TOYOTA GAZOO Racing modely"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta",
+        "title": "Konfigurujte Toyotu"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers",
+        "title": "Vyhledat prodejce nebo servis"
+      },
+      {
+        "url": "https://www.toyota.cz/newsletter-modely",
+        "title": "Přihlášení k odběru novinek"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers/show-results-on-page-load=true",
+        "title": "Najít nejbližšího prodejce"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers/show-results-on-page-load=true",
+        "title": "Najít nejbližšího prodejce"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers/show-results-on-page-load=true",
+        "title": "Najít nejbližšího prodejce"
+      },
+      {
+        "url": "https://www.toyota.cz/nova-auta/corolla-sedan/konfigurator#/publish/my_toyota_my_dealers/show-results-on-page-load=true",
+        "title": "Najít nejbližšího prodejce"
+      }
+    ],
+    "scripts": [
+      "https://rum.hlx.page/.rum/@adobe/helix-rum-js@%5E2/dist/micro.js",
+      "https://cdn.cookielaw.org/consent/150fb9cc-3348-4f36-b494-5e39bd240773/OtAutoBlock.js",
+      "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+      "https://www.toyota.cz/etc.clientlibs/clientlibs/granite/jquery.min.cf5bdf053ce8fb11dd5d95ebdc71b234.js",
+      "https://www.toyota.cz/etc.clientlibs/clientlibs/granite/utils.min.899004cc02c33efc1f6694b1aee587fd.js",
+      "https://www.toyota.cz/var/dxp/scripts/requirees.js?version=200",
+      "https://www.toyota.cz/etc.clientlibs/dxp/clientlibs/clientlib-dependencies.min.916f76eab353ec7f3e5289f56904d9af.js",
+      "https://www.toyota.cz/etc.clientlibs/dxp/clientlibs/clientlib-forms.min.32d02a2d54c94ce52ef7fc11dcfd4c0d.js",
+      "https://www.toyota.cz/etc.clientlibs/dxp/clientlibs/clientlib-base.min.23112f25a4ccaae8f38ac4b4ef885ddd.js",
+      "https://www.toyota.cz/etc.clientlibs/dxp/clientlibs/clientlib-toyota.min.11fc0f713013efe5acbb0004bf1fc555.js",
+      "https://www.toyota.cz/etc.clientlibs/dnb/clientlibs/clientlib-toyota.min.905fd2f29d1ce06704bc378cf41ae7e7.js",
+      "https://www.toyota.cz/etc.clientlibs/dxp-kinandcarta/clientlibs/clientlib-toyota.min.8c2edb428dd7ee92c57e5a57852ec846.js",
+      "https://www.toyota.cz/etc.clientlibs/retailers/clientlibs/clientlib-toyota.min.c4ec47b5ba9b775d22af0ac384311aea.js",
+      "https://www.toyota.cz/etc.clientlibs/qt/clientlibs/clientlib-toyota.min.b05fff150f5f6828d1fc84bbc591c321.js"
+    ],
+    "policies": [
+      {
+        "rules": [
+          {
+            "allow": false,
+            "pattern": "/content/forms/af/"
+          },
+          {
+            "allow": false,
+            "pattern": "*/_jcr_content/*"
+          },
+          {
+            "allow": false,
+            "pattern": "/header-and-footer/"
+          },
+          {
+            "allow": false,
+            "pattern": "*?focusImage*"
+          },
+          {
+            "allow": false,
+            "pattern": "/bin/cocadap*"
+          },
+          {
+            "allow": false,
+            "pattern": "/sys*"
+          },
+          {
+            "allow": false,
+            "pattern": "/libs/cq/i18n/"
+          },
+          {
+            "allow": false,
+            "pattern": "/var/dxp/forms/datasources/"
+          },
+          {
+            "allow": false,
+            "pattern": "*?dealer=*"
+          },
+          {
+            "allow": false,
+            "pattern": "*?dealerId=*"
+          },
+          {
+            "allow": false,
+            "pattern": "*path=customize*"
+          },
+          {
+            "allow": false,
+            "pattern": "*path=engine*"
+          },
+          {
+            "allow": false,
+            "pattern": "*path=model*"
+          },
+          {
+            "allow": false,
+            "pattern": "*path=summary*"
+          },
+          {
+            "allow": false,
+            "pattern": "*brand=toyota&uscContext*"
+          },
+          {
+            "allow": false,
+            "pattern": "*?journeyId=*"
+          },
+          {
+            "allow": false,
+            "pattern": "*?namespace=s7classic$"
+          }
+        ],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://www.toyota.cz",
+        "url": "https://www.toyota.cz/robots.txt",
+        "status": 200,
+        "body": "User-agent: *\nSitemap: https://www.toyota.cz/sitemap.xml\nDisallow: /content/forms/af/\nDisallow: */_jcr_content/*\nDisallow: /header-and-footer/\nDisallow: *?focusImage*\nDisallow: /bin/cocadap*\nDisallow: /sys*\nDisallow: /libs/cq/i18n/\nDisallow: /var/dxp/forms/datasources/\nDisallow: *?dealer=*\nDisallow: *?dealerId=*\nDisallow: *path=customize*\nDisallow: *path=engine*\nDisallow: *path=model*\nDisallow: *path=summary*\nDisallow: *brand=toyota&uscContext*\nDisallow: *?journeyId=*\nDisallow: *?namespace=s7classic$",
+        "checkedAt": "2026-10-28T12:07:58.348Z"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "kia-config",
+    "url": "https://www.kia.com/cz/prodej/konfigurator/",
+    "publishedBy": "https://www.kia.com/cz/",
+    "redirects": [],
+    "finalUrl": "https://www.kia.com/cz/prodej/konfigurator/",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\kia-config.txt",
+    "bytes": 193880,
+    "sha256": "dc2c400710804658698a06012d983955d8318431e99e0363126899522330f0c8",
+    "contexts": [
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/gr/odigos-agoras/car-configurator/\" hreflang=\"el-GR\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/ie/purchase-guide/car-configurator/\" hreflang=\"en-IE\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/lu/acheter/car-configurator/\" hreflang=\"fr-LU\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/it/guida-all-acquisto/configuratore/\" hreflang=\"it-IT\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/nl/kies-je-kia/car-configurator/\" hreflang=\"nl-NL\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/be/nl/kopen/car-configurator/\" hreflang=\"nl-BE\"/>",
+      "\t\t\t\t<link rel=\"alternate\" href=\"https://www.kia.com/be/fr/acheter/car-configurator/\" hreflang=\"fr-BE\"/>",
+      "<meta name=\"kia_metrics_pagename\" content=\"purchase-guide|car-configurator\"/> ",
+      "<meta name=\"title\" content=\"Car configurator\"/>",
+      "<meta property=\"og:title\" content=\"Car configurator\"/>",
+      "<meta name=\"twitter:title\" content=\"Car configurator\"/>",
+      "            <li class=\"eut_configurator eut_configuratorBuyButton gnbListItem--right\" data-gnb-item=\"buyButton\">",
+      "            <li class=\"eut_configurator eut_configuratorCarButton\" data-gnb-item=\"carButton\">",
+      "class=\"eut_cmpe_btn icon ctaButton\" onclick=\"eut.analytics.prop({internal_link: 'conversion|GNB|car configurator'}).track( 'internal_link' );\"><span class=\"configurator\"></span>Konfigurátor</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/be/nl/kopen/car-configurator/\"><span class=\"countryName Belgium (Dutch)\"></span>Belgium (Dutch)</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/be/fr/acheter/car-configurator/\"><span class=\"countryName Belgium (French)\"></span>Belgium (French)</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/gr/odigos-agoras/car-configurator/\"><span class=\"countryName Greece\"></span>Greece</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/ie/purchase-guide/car-configurator/\"><span class=\"countryName Ireland\"></span>Ireland</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/it/guida-all-acquisto/configuratore/\"><span class=\"countryName Italy\"></span>Italy</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/nl/kies-je-kia/car-configurator/\"><span class=\"countryName Netherlands\"></span>Netherlands</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/lu/acheter/car-configurator/\"><span class=\"countryName Luxembourg\"></span>Luxembourg</a>",
+      "        <li class=\"eut_configurator eut_configuratorBuyButton gnbListItem--right gnbListItem--extra-item\" data-gnb-item=\"buyButton\">",
+      "          <li class=\"eut_configurator eut_configuratorCarButton gnbListItem--right gnbListItem--extra-item\" data-gnb-item=\"carButton\">",
+      "class=\"eut_cmpe_btn icon ctaButton\" onclick=\"eut.analytics.prop({internal_link: 'conversion|GNB|car configurator'}).track( 'internal_link' );\"><span class=\"configurator\"></span>Konfigurátor</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/be/nl/kopen/car-configurator/\"><span class=\"countryName Belgium (Dutch)\"></span>Belgium (Dutch)</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/be/fr/acheter/car-configurator/\"><span class=\"countryName Belgium (French)\"></span>Belgium (French)</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/gr/odigos-agoras/car-configurator/\"><span class=\"countryName Greece\"></span>Greece</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/ie/purchase-guide/car-configurator/\"><span class=\"countryName Ireland\"></span>Ireland</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/it/guida-all-acquisto/configuratore/\"><span class=\"countryName Italy\"></span>Italy</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/nl/kies-je-kia/car-configurator/\"><span class=\"countryName Netherlands\"></span>Netherlands</a>",
+      "        <a class=\"countryLink\" href=\"https://www.kia.com/lu/acheter/car-configurator/\"><span class=\"countryName Luxembourg\"></span>Luxembourg</a>",
+      "\t<div id=\"page-name-current\" data-page-name-current=\"car-configurator\">",
+      "\t<div id=\"contents\" class=\"carconfigurator\">",
+      "\t\t<div class=\"carConfigurator common section\">",
+      "\t\tcarConfiguratorURL : window.location.pathname.split('.')[0],",
+      "            disablePriceOnConfigurator :  true,",
+      "      form_name: 'car_configurator'",
+      "<link rel=\"stylesheet\" href=\"/etc.clientlibs/eutSpec/components/cz/SPAcomponents/carConfigurator/carConfiguratorClienlib.min.4c8773993bc6efe7fef8cd311354c715.css\" type=\"text/css\"/>",
+      "<script src=\"/etc.clientlibs/eutSpec/components/cz/SPAcomponents/carConfigurator/carConfiguratorClienlib.min.b1c50ca19c687b171f20a74a68fffd74.js\"></script>",
+      " window.location.href = \"https://www.kia.com/de/angebote/konfigurator/#/\" + window.eut.i18n.get('eu-configurator-car-selector');",
+      "                    ctaCheckFireGTM(\"car-configurator\", undefined, \"mep sticky menu\");",
+      "    var configurator_btn_elements = document.querySelectorAll(\".eut_configuratorCarButton a\");",
+      "    if (configurator_btn_elements && configurator_btn_elements.length > 0) {",
+      "      configurator_btn_elements.forEach((item) => {",
+      "    var buy_my_kia_header_links = document.querySelectorAll(\".eut_configuratorBuyButton a\");",
+      "      if (textIncludes(anchor_link, \"car-configurator\") || icon_link?.includes(\"icon_configurator_black\") || textIncludes(anchor_link, \"soluciones-de-movilidad\") || textIncludes(anchor_link, \"vehiculo-nuevo\")) {",
+      "        case \"car-configurator\": return text.includes(\"configuratore\") || text.includes(\"configura la tua kia\") || text.includes(\"configura\");"
+    ],
+    "links": [
+      {
+        "url": "https://www.kia.com/cz/prodej/konfigurator/#contents",
+        "title": "Go to content"
+      },
+      {
+        "url": "https://www.kia.com/cz/prodej/konfigurator/",
+        "title": "Konfigurátor"
+      },
+      {
+        "url": "https://www.kia.com/at/kaufberater/konfigurator/",
+        "title": "Austria"
+      },
+      {
+        "url": "https://www.kia.com/be/nl/kopen/car-configurator/",
+        "title": "Belgium (Dutch)"
+      },
+      {
+        "url": "https://www.kia.com/be/fr/acheter/car-configurator/",
+        "title": "Belgium (French)"
+      },
+      {
+        "url": "https://www.kia.com/gr/odigos-agoras/car-configurator/",
+        "title": "Greece"
+      },
+      {
+        "url": "https://www.kia.com/hu/vasarlas/konfigurator/",
+        "title": "Hungary"
+      },
+      {
+        "url": "https://www.kia.com/ie/purchase-guide/car-configurator/",
+        "title": "Ireland"
+      },
+      {
+        "url": "https://www.kia.com/it/guida-all-acquisto/configuratore/",
+        "title": "Italy"
+      },
+      {
+        "url": "https://www.kia.com/nl/kies-je-kia/car-configurator/",
+        "title": "Netherlands"
+      },
+      {
+        "url": "https://www.kia.com/pl/sprzedaz/konfigurator/",
+        "title": "Poland"
+      },
+      {
+        "url": "https://www.kia.com/sk/predaj/konfigurator/",
+        "title": "Slovakia"
+      },
+      {
+        "url": "https://www.kia.com/cz/prodej/konfigurator/",
+        "title": "Česká republika"
+      },
+      {
+        "url": "https://www.kia.com/fi/ostajalle/konfiguraattori/",
+        "title": "Finland"
+      },
+      {
+        "url": "https://www.kia.com/dk/koebsguide/bil-konfigurator/",
+        "title": "Denmark"
+      },
+      {
+        "url": "https://www.kia.com/de/angebote/konfigurator/",
+        "title": "Germany"
+      },
+      {
+        "url": "https://www.kia.com/lu/acheter/car-configurator/",
+        "title": "Luxembourg"
+      },
+      {
+        "url": "https://www.kia.com/es/quiero-un-kia/configurador/",
+        "title": "Spain"
+      },
+      {
+        "url": "https://www.kia.com/fr/achat-location/configurateur/",
+        "title": "France"
+      },
+      {
+        "url": "https://www.kia.com/cz/prodej/konfigurator",
+        "title": "cs"
+      }
+    ],
+    "scripts": [
+      "https://c.seznam.cz/js/rc.js",
+      "https://www.kia.com/etc.clientlibs/clientlibs/granite/jquery.min.3e24d4d067ac58228b5004abb50344ef.js",
+      "https://www.kia.com/etc.clientlibs/clientlibs/granite/utils.min.3b86602c4e1e0b41d9673f674a75cd4b.js",
+      "https://www.kia.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js",
+      "https://www.kia.com/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js",
+      "https://www.kia.com/etc.clientlibs/foundation/clientlibs/shared.min.e9d9a3990d7779c2e8e3361187f3d36b.js",
+      "https://www.kia.com/etc.clientlibs/foundation/clientlibs/main.min.be53d5d2acc50492007c4929cbe3ee9e.js",
+      "https://kia.searchready.cz/serp-dist/searchready.bundle.js?clientConfigURL=https://kia.searchready.cz/api/serp/config/full-serp-cs.json",
+      "https://www.kia.com/etc.clientlibs/settings/wcm/designs/eut/clientlib/libs/libs.min.995f851ba5c3aeff77d1461aab19bf55.js",
+      "https://www.kia.com/etc.clientlibs/settings/wcm/designs/eutSpec/clientlib/cz/libs/common.min.2889ba54f65683aedf77debe6b73b6e0.js",
+      "https://www.kia.com/etc.clientlibs/eut/components/content/pageComponent/util_search/clientlibs.min.8897ec95fdf2db04bdcf39f11cd2c77d.js",
+      "https://www.kia.com/etc.clientlibs/eut/components/content/pageComponent/breadcrumb/clientlibs.min.8d31a28f59f69ed06992b5c4fdb0c5ed.js",
+      "https://www.kia.com/etc.clientlibs/settings/wcm/designs/eut/clientlib/libs/components/video-carousel.min.058b986ff27349c606f71281953cef2c.js",
+      "https://www.kia.com/etc.clientlibs/eutSpec/components/cz/SPAcomponents/carConfigurator/carConfiguratorClienlib.min.b1c50ca19c687b171f20a74a68fffd74.js",
+      "https://www.youtube.com/iframe_api",
+      "https://releases.flowplayer.org/7.2.7/commercial/flowplayer.min.js",
+      "https://embed.cloudflarestream.com/embed/sdk.latest.js",
+      "https://apis.google.com/js/client.js?onload=load",
+      "https://www.kia.com/etc.clientlibs/settings/wcm/designs/eut/clientlib/libs/components.min.10691abc60bfc60a9a687aba74ab0b70.js"
+    ],
+    "policies": [
+      {
+        "rules": [
+          {
+            "allow": true,
+            "pattern": "/kr/"
+          },
+          {
+            "allow": true,
+            "pattern": "/content/dam/"
+          },
+          {
+            "allow": true,
+            "pattern": "/content/kwp/kr/"
+          },
+          {
+            "allow": true,
+            "pattern": "/etc/designs/"
+          },
+          {
+            "allow": false,
+            "pattern": "/kr/my/"
+          },
+          {
+            "allow": false,
+            "pattern": "/content/kr/ko/my/"
+          },
+          {
+            "allow": false,
+            "pattern": "/etc/admin/"
+          },
+          {
+            "allow": false,
+            "pattern": "/crx/"
+          },
+          {
+            "allow": false,
+            "pattern": "/tmp/"
+          },
+          {
+            "allow": false,
+            "pattern": "/var/"
+          },
+          {
+            "allow": false,
+            "pattern": "/kgn/"
+          },
+          {
+            "allow": false,
+            "pattern": "/content/kwcms/kme/"
+          },
+          {
+            "allow": false,
+            "pattern": "/content/kwcms/kme-dealer/"
+          },
+          {
+            "allow": false,
+            "pattern": "/content/kwcms/kme-dealers/"
+          },
+          {
+            "allow": false,
+            "pattern": "/content/kwcms/kme/eu/en/"
+          },
+          {
+            "allow": false,
+            "pattern": "/eut/"
+          },
+          {
+            "allow": false,
+            "pattern": "/kr/discover-kia/news/"
+          },
+          {
+            "allow": false,
+            "pattern": "/*dealer-master*"
+          },
+          {
+            "allow": false,
+            "pattern": "/es/concesionarios/es-*"
+          },
+          {
+            "allow": false,
+            "pattern": "/fr/concessions/fr-*"
+          },
+          {
+            "allow": false,
+            "pattern": "/pl/dealers/pl-*"
+          },
+          {
+            "allow": false,
+            "pattern": "/kr/family-mall/"
+          },
+          {
+            "allow": false,
+            "pattern": "*/search/"
+          },
+          {
+            "allow": false,
+            "pattern": "/fr/recherche/"
+          },
+          {
+            "allow": false,
+            "pattern": "/fr/achat-location/configurateur.*"
+          }
+        ],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://www.kia.com",
+        "url": "https://www.kia.com/robots.txt",
+        "status": 200,
+        "body": "User-agent: ia_archiver\nDisallow: /\n\nUser-agent: *\nAllow: /kr/\nAllow: /content/dam/\nAllow: /content/kwp/kr/\nAllow: /etc/designs/\nDisallow: /kr/my/\nDisallow: /content/kr/ko/my/\nDisallow: /etc/admin/\nDisallow: /crx/\nDisallow: /tmp/\nDisallow: /var/\nDisallow: /kgn/\nDisallow: /content/kwcms/kme/\nDisallow: /content/kwcms/kme-dealer/\nDisallow: /content/kwcms/kme-dealers/\nDisallow: /content/kwcms/kme/eu/en/\nDisallow: /eut/\nDisallow: /kr/discover-kia/news/\nDisallow: /*dealer-master*\nDisallow: /es/concesionarios/es-*\nDisallow: /fr/concessions/fr-*\nDisallow: /pl/dealers/pl-*\nDisallow: /kr/family-mall/\nDisallow: */search/\nDisallow: /fr/recherche/\nDisallow: /fr/achat-location/configurateur.*\n\nSitemap: https://www.kia.com/sitemap.xml\nSitemap: https://www.kia.com/kr/sitemap.xml\nSitemap: https://www.kia.com/worldwide/sitemap.xml\nSitemap: https://m.kia.com/worldwide/sitemap.xml\nSitemap: https://www.kia.com/dk/sitemap.xml\nSitemap: https://www.kia.com/es/sitemap.xml\nSitemap: https://www.kia.com/fr/sitemap.xml\nSitemap: https://www.kia.com/hu/sitemap.xml\nSitemap: https://www.kia.com/ie/sitemap.xml\nSitemap: https://www.kia.com/is/sitemap.xml\nSitemap: https://www.kia.com/it/sitemap.xml\nSitemap: https://www.kia.com/lu/sitemap.xml\nSitemap: https://www.kia.com/nl/sitemap.xml\nSitemap: https://www.kia.com/no/sitemap.xml\nSitemap: https://www.kia.com/pl/sitemap.xml\nSitemap: https://www.kia.com/se/sitemap.xml\nSitemap: https://www.kia.com/sk/sitemap.xml\nSitemap: https://www.kia.com/sg/sitemap.xml\nSitemap: https://www.kia.com/mu/sitemap.xml\nSitemap: https://www.kia.com/sv/sitemap.xml\nSitemap: https://www.kia.com/fj/sitemap.xml\nSitemap: https://www.kia.com/mn/sitemap.xml\nSitemap: https://www.kia.com/om/ar/sitemap.xml\nSitemap: https://www.kia.com/om/en/sitemap.xml\nSitemap: https://www.kia.com/dm/sitemap.xml\nSitemap: https://www.kia.com/pa/sitemap.xml\nSitemap: https://www.kia.com/th/th/sitemap.xml\nSitemap: https://www.kia.com/th/en/sitemap.xml\nSitemap: https://www.kia.com/hn/sitemap.xml\nSitemap: https://www.kia.com/kw/sitemap.xml\nSitemap: http://www.kia.com/kz/sitemap.xml\nSitemap: https://www.kia.com/ph/sitemap.xml\nSitemap: https://www.kia.com/id/id/sitemap.xml\nSitemap: https://www.kia.com/id/en/sitemap.xml \nSitemap: https://www.kia.com/aw/sitemap.xml\nSitemap: https://www.kia.com/fi/sitemap.xml\nSitemap: https://www.kia.com/mx/sitemap.xml\nSitemap: https://www.kia.com/uk/sitemap.xml\nSitemap: https://www.kia.com/tr/sitemap.xml\nSitemap: https://www.kia.com/au/sitemap.xml\nSitemap: https://www.kia.com/pk/sitemap.xml\nSitemap: https://www.kia.com/ua/sitemap.xml\nSitemap: https://www.kia.com/az/sitemap.xml\nSitemap: https://www.kia.com/ge/sitemap.xml\nSitemap: https://www.kia.com/lb/sitemap.xml\nSitemap: https://www.kia.com/cl/sitemap.xml\nSitemap: https://www.kia.com/co/sitemap.xml\nSitemap: https://www.kia.com/cr/sitemap.xml\nSitemap: https://www.kia.com/ec/sitemap.xml\nSitemap: https://www.kia.com/pe/sitemap.xml\nSitemap: https://www.kia.com/pr/sitemap.xml\nSitemap: https://www.kia.com/my/sitemap.xml\nSitemap: https://www.kia.com/bn/sitemap.xml\nSitemap: https://www.kia.com/la/sitemap.xml\nSitemap: https://www.kia.com/hk/en/sitemap.xml\nSitemap: https://www.kia.com/hk/zh/sitemap.xml\nSitemap: https://www.kia.com/tw/sitemap.xml\nSitemap: https://www.kia.com/ma/sitemap.xml\nSitemap: https://www.kia.com/aljabr/en/sitemap.xml\nSitemap: https://www.kia.com/aljabr/ar/sitemap.xml\nSitemap: https://www.kia.com/sd/en/sitemap.xml\nSitemap: https://www.kia.com/sd/ar/sitemap.xml\nSitemap: https://www.kia.com/in/sitemap.xml\nSitemap: https://www.kia.com/us/sitemap.xml\nSitemap: https://www.kia.com/us/es-sitemap.xml\nSitemap: https://www.kia.com/de/sitemap.xml\nSitemap: https://www.kia.com/nmc/en/sitemap.xml\nSitemap: https://www.kia.com/nmc/ar/sitemap.xml\nSitemap: https://www.kia.com/be/sitemap.xml\nSitemap: https://www.kia.com/at/sitemap.xml\nSitemap: https://www.kia.com/cz/sitemap.xml\nSitemap: https://www.kia.com/au/en/cci-sitemap.xml\nSitemap: https://www.kia.com/th/th/cci-sitemap.xml\nSitemap: https://www.kia.com/th/en/cci-sitemap.xml\nSitemap: https://www.kia.com/id/id/cci-sitemap.xml\nSitemap: https://www.kia.com/id/en/cci-sitemap.xml\nSitemap: https://www.kia.com/my/en/cci-sitemap.xml\nSitemap: https://www.kia.com/hk/en/cci-sitemap.xml\nSitemap: https://www.kia.com/hk/zh/cci-sitemap.xml\nSitemap: https://www.kia.com/sg/en/cci-sitemap.xml\nSitemap: https://www.kia.com/kw/en/cci-sitemap.xml\nSitemap: https://www.kia.com/mu/en/cci-sitemap.xml\nSitemap: https://www.kia.com/lb/en/cci-sitemap.xml\nSitemap: https://www.kia.com/om/en/cci-sitemap.xml\nSitemap: https://www.kia.com/om/ar/cci-sitemap.xml\nSitemap: https://www.kia.com/aljabr/en/cci-sitemap.xml\nSitemap: https://www.kia.com/aljabr/ar/cci-sitemap.xml\nSitemap: https://www.kia.com/nmc/en/cci-sitemap.xml\nSitemap: https://www.kia.com/nmc/ar/cci-sitemap.xml\n\n#DaumWebMasterTool:8b0eb587425c723d97232c80a8af923e593ee7b275c62ca80d8d8baa51a00cf1:SCb58MbNXK3Aq7wj6OKJvA==\n",
+        "checkedAt": "2026-10-28T12:08:00.584Z"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "dacia-config",
+    "url": "https://www.dacia.cz/vozy/sandero/konfigurator.html",
+    "publishedBy": "https://www.dacia.cz/",
+    "redirects": [],
+    "finalUrl": "https://www.dacia.cz/vozy/sandero/konfigurator.html",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\dacia-config.txt",
+    "bytes": 1367914,
+    "sha256": "f4bf7e638a5e2c98cfc6a460cda77a99d8362c770e1c9a9295d5968541887e4c",
+    "contexts": [
+      ":\"\",\"position\":\"bottom\",\"solution\":\"one\"},\"businessType\":\"new-car\",\"mboxActivated\":\"no\",\"pageType\":\"configurator-v2\",\"pageName\":\"configurator-v2\",\"vehicleModel\":\"SANDERO\",\"vehicleId\":\"BI1\",\"modelAdminId\":\"sandero-bi1-ph2\"};",
+      "tType\\\":\\\"301\\\",\\\"meta_robots_follow\\\":\\\"follow\\\",\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002Fstructure\\u002Fpage\\u002Fhomepage\\\",\\\"disableMultiLanguage\\\":false,\\\"meta_description_seo\\\":\\\"Využijte náš konfigurátor modelu Dacia Sandero. Vyberte si verzi, motor, úroveň výbavy a mnoho dalšího. Objevte naši nab",
+      "g:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fcommon\\u002Fstructure\\u002Fcontent\\u002FcontentZone\\\",\\\"configurator\\\":{\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fconfigurator\\\",\\\"enginesPromoZone\\\":{\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002FenginesPromoZone\\\"},\\\"gradesPromoZone\\\":{\\\"sling:resourceType",
+      "\\\":\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002FgradesPromoZone\\\"},\\\"staticData\\\":{\\\"type\\\":\\\"STANDARD_ENGINE_FIRST\\\",\\\"designPictures\\\":[{\\\"code\\\":\\\"CATCOLORS1\\\",\\\"label\\\":\\\"barva karoserie\\\",\\\"pictures\\\":[{\\\"specCode\\\":\\\"TEKQG\\\",\\\"url\\\":\\\"https:\\u002F\\u002F3dv",
+      "eType\\\":\\\"one\\u002Fcomponents\\u002Fstructure\\u002Fadminpage\\u002Fsite\\u002FnciTransverseParams\\\"},\\\"configuratorParams\\\":{\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fstructure\\u002Fadminpage\\u002Fsite\\u002FconfiguratorParams\\\",\\\"textIsRich\\\":\\\"true\\\",\\\"labels\\\":{\\\"priceTypeOption\\\":\\\"PriceType option\\\",\\\"freeOption\\\":\\\"As st",
+      "\":\\\"cena & financování\\\",\\\"compareLabel\\\":\\\"porovnat\\\",\\\"optionalLabel\\\":\\\"volitelné\\\",\\\"slideChangeAngleLabel\\\":\\\"posunutím změníte úhel\\\"}},\\\"tyreLabelling\\\":{\\\"frontTyresLabel\\\":\\\"Přední pneumatiky\\\",\\\"rearTyresLabel\\\":\\\"Zadní pneumatiky\\\",\\\"tooltipTitle\\\":\\\"Energetické štítky pneumatik\\\",\\\"sling:resourceType\\\":\\\"one\\u002",
+      "w\\\"}],\\\"analyticsPageParams\\\":{\\\"businessType\\\":\\\"new-car\\\",\\\"mboxActivated\\\":\\\"no\\\",\\\"pageType\\\":\\\"configurator-v2\\\",\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fbase\\u002Fanalytics\\\",\\\"pageName\\\":\\\"configurator-v2\\\",\\\"vehicleModel\\\":\\\"SANDERO\\\",\\\"vehicleId\\\":\\\"BI1\\\",\\\"modelAdminId\\\":\\\"sandero-bi1-ph2\\\"},\\\"authentication\\\":{",
+      "2Fcomponents\\u002Fbase\\u002Fauthentication\\\"},\\\"liveChat\\\":{\\\"activateProductPlans\\\":true,\\\"activateConfigurator\\\":true,\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fstructure\\u002Flivechat\\\",\\\"activateEdito\\\":true,\\\"activateHomepage\\\":true},\\\"breadcrumb\\\":{\\\"sling:resourceType\\\":\\\"one\\u002Fcomponents\\u002Fbase\\u002Fbreadcrumb",
+      "ttps:\\u002F\\u002Fcdn.group.renault.com\\u002Fpackshots\\u002Fdacia-sandero-bi1-ph2\\\",\\\"showFinanceDataConfigurator\\\":true,\\\"batdIsActive\\\":true,\\\"weight\\\":\\\"0\\\",\\\"modelURI\\\":\\\"https:\\u002F\\u002Fcz.co.rplug.renault.com\\u002Fproduct\\u002Fmodel\\u002FBI1;mtc=BI1_slash_ENS_MDL2P1SERIELIM1,ENS_MDL2P1SERIELIM2,ENS_MDL2P1SERIELIM3\\u002Fsand",
+      "WoOptionsWoVAT\\\":\\\"280909.09\\\"},\\\"withModelURI\\\":false}}},\\\"slingList\\\":[\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002Fstructure\\u002Fpage\\u002Fhomepage\\\",\\\"one\\u002Fcomponents\\u002Fcommon\\u002Fstructure\\u002Fcontent\\u002FglobalZone\\\",\\\"one\\u002Fcomponents\\u002Fcommon\\u002Fstructure\\u002Fcontent\\u002FcontentZone\\\",\\\"one\\u002Fcompon",
+      "ents\\u002Fconfigurator\\\",\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002FenginesPromoZone\\\",\\\"one\\u002Fcomponents\\u002Fconfigurator\\u002FgradesPromoZone\\\",\\\"one\\u002Fcomponents\\u002Fcommon\\u002Fstructure\\u002Fcontent\\u002FsubFooter\\u002FsubFooterZone\\\",\\\"one\\u002Fcomponents\\u002Fedito\\u",
+      "Fsite\\u002FnciTransverseParams\\\",\\\"one\\u002Fcomponents\\u002Fstructure\\u002Fadminpage\\u002Fsite\\u002FconfiguratorParams\\\",\\\"one\\u002Fcomponents\\u002Fstructure\\u002Fadminpage\\u002Fsite\\u002FvehicleComparatorParams\\\",\\\"one\\u002Fcomponents\\u002Fstructure\\u002Fadminpage\\u002Fsite\\u002FtyreLabelling\\\",\\\"one\\u002Fcomponents\\u002Fstructur",
+      "reviews-801f5b83ef83950c.js\\\",\\\"\\u002Fclient\\u002Fdacia-model-reviews-90ab378678ddba10.css\\\"],\\\"uci-configurator-homepage\\\":[\\\"\\u002Fclient\\u002Fdacia-uci-configurator-homepage-f4b2ae14e09751c8.js\\\",\\\"\\u002Fclient\\u002Fdacia-uci-configurator-homepage-c7748c83c4e52766.css\\\"],\\\"title-with-icon\\\":[\\\"\\u002Fclient\\u002Fdacia-title-with"
+    ],
+    "links": [
+      {
+        "url": "https://www.dacia.cz/kontaktujte-nas/mam-zajem-o-novy-vuz/novy-vuz.html?modelAdminId=sandero-bi1-ph2&modelURI=https%3A%2F%2Fcz.co.rplug.renault.com%2Fc%2FBADCz0AhiAhAAAjIXIYIZ%2FA&saveCode=1GTRRG",
+        "title": "nabídka na míru"
+      },
+      {
+        "url": "https://www.dacia.cz/kontaktujte-nas/testovaci-jizda/testovaci-jizda.html?modelAdminId=sandero-bi1-ph2&modelURI=https%3A%2F%2Fcz.co.rplug.renault.com%2Fc%2FBADCz0AhiAhAAAjIXIYIZ%2FA&saveCode=1GTRRG",
+        "title": "testovací jízda"
+      },
+      {
+        "url": "https://www.dacia.cz/kontaktujte-nas/testovaci-jizda/testovaci-jizda.html?modelAdminId=sandero-bi1-ph2&modelURI=https%3A%2F%2Fcz.co.rplug.renault.com%2Fc%2FBADCz0AhiAhAAAjIXIYIZ%2FA&saveCode=1GTRRG",
+        "title": "testovací jízda"
+      },
+      {
+        "url": "https://www.dacia.cz/vozy/sandero/konfigurator.html#grades",
+        "title": "změnit"
+      },
+      {
+        "url": "https://www.dacia.cz/vozy/sandero/konfigurator.html#CATCOLORS1",
+        "title": "změnit"
+      },
+      {
+        "url": "https://www.dacia.cz/vozy/sandero/konfigurator.html#CATWHEELS1",
+        "title": "změnit"
+      },
+      {
+        "url": "https://www.dacia.cz/vozy/sandero/konfigurator.html#CATUPHOLSTERIES1",
+        "title": "změnit"
+      },
+      {
+        "url": "https://www.dacia.cz/kontaktujte-nas/mam-zajem-o-novy-vuz/novy-vuz.html?modelAdminId=sandero-bi1-ph2&modelURI=https%3A%2F%2Fcz.co.rplug.renault.com%2Fc%2FBADCz0AhiAhAAAjIXIYIZ%2FA&saveCode=1GTRRG",
+        "title": "nabídka na míru"
+      }
+    ],
+    "scripts": [
+      "https://www.dacia.cz/client/dacia-main-3984b4d4eb0339b2.js",
+      "https://www.dacia.cz/client/dacia-main-266182504a0fd411.js",
+      "https://www.dacia.cz/client/dacia-one-config-9252b004207b0fc1.js",
+      "https://www.dacia.cz/client/dacia-async-rci-financing-f520c61fa25072cc.js",
+      "https://www.dacia.cz/client/dacia-one-ui-anim-motion-76de597746f58c3d.js",
+      "https://www.dacia.cz/client/dacia-one-ui-layout-tooltip-d3a85794490c712e.js",
+      "https://www.dacia.cz/client/dacia-legal-3b3289bef818f5d1.js",
+      "https://www.dacia.cz/client/dacia-pre-footer-870dbb028a3f61f0.js",
+      "https://www.dacia.cz/client/dacia-footer-fc4d1782e188b28d.js",
+      "https://www.dacia.cz/client/dacia-renault-legalfooter-9b03eda364a451e8.js",
+      "https://www.dacia.cz/client/dacia-cookie-one-trust-1c6d0a89cd37b5a7.js"
+    ],
+    "policies": [
+      {
+        "rules": [
+          {
+            "allow": false,
+            "pattern": "/*&conf=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*?conf=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*&confuri=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*?confuri=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*&dealerId=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*?dealerId=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*&modelURI=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*?modelURI=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*&vin=*"
+          },
+          {
+            "allow": false,
+            "pattern": "/*?vin=*"
+          }
+        ],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://www.dacia.cz",
+        "url": "https://www.dacia.cz/robots.txt",
+        "status": 200,
+        "body": "User-Agent: *\nDisallow: /*&conf=*\nDisallow: /*?conf=*\nDisallow: /*&confuri=*\nDisallow: /*?confuri=*\nDisallow: /*&dealerId=*\nDisallow: /*?dealerId=*\nDisallow: /*&modelURI=*\nDisallow: /*?modelURI=*\nDisallow: /*&vin=*\nDisallow: /*?vin=*\n\nSitemap: https://www.dacia.cz/sitemap.xml",
+        "checkedAt": "2026-10-28T12:08:01.378Z"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "ford-config",
+    "url": "https://www.ford.cz/osobni-vozy",
+    "publishedBy": "https://www.ford.cz/",
+    "redirects": [],
+    "finalUrl": "https://www.ford.cz/osobni-vozy",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\ford-config.txt",
+    "bytes": 49159,
+    "sha256": "1f723ba1f47d383e1edd17b3ade1e9ec474bb033687f05503068e9458e4dea23",
+    "contexts": [],
+    "links": [
+      {
+        "url": "https://www.ford.cz/pred-nakupem/dalsi-kroky/katalogy-a-ceniky-ke-stazeni",
+        "title": "Ceníky Prozkoumejte ceny a specifikace našich modelů"
+      }
+    ],
+    "scripts": [
+      "https://www.ford.cz/etc/designs/dse/dsefoe-aem-utils/clientlibs/dsefoe-aem-utils-vendors.js",
+      "https://www.ford.eu/static/prod/cookieservice/cookieservice.bundle.js",
+      "https://assets.adobedtm.com/1db89c73e928/3d7bacf78384/launch-a3cee5bdf32c.min.js",
+      "https://www.youtube.com/iframe_api",
+      "https://www.ford.eu/static/prod/contextservice/contextservice.bundle.js",
+      "https://www.ford.cz/etc/designs/dse/dsefoe-aem-utils/clientlibs/dsefoe-aem-utils.js",
+      "https://www.ford.cz/etc/designs/dse/dsefoe-core-components/clientlibs/dsefoe-core-components.js",
+      "https://www.dse-cookiebanner.ford.com/prod/build/dist/bundle.js",
+      "https://www.dse-globalnav.ford.com/prod/build/dist/bundleJs.js",
+      "https://www.dse-searchfe.ford.com/build/dist/bundle.js",
+      "https://www.dse-showroom.ford.com/prod/build/dist/bundle.js",
+      "https://www.dse-disclosure.ford.com/prod/build/dist/bundle.js",
+      "https://www.dse-overlay.ford.com/prod/build/dist/bundle.js",
+      "https://www.dse-footer.ford.com/build/dist/footerBundleJs.js",
+      "https://www.dse-chatbot.ford.com/build/dist/bundle.js",
+      "https://www.dse-overlay.ford.com/prod/build/dist/bundle.js",
+      "https://www.ford.cz/etc/designs/dse/dsefoe-aem-utils/clientlibs/dsefoe-aem-utils.min.js",
+      "https://www.ford.cz/q7gEcEEclHTNAHjTcHtU/rumGcVVGGikfQfJuaw/W3lIdCkmegE/XihV/D0o7AEg"
+    ],
+    "policies": [
+      {
+        "rules": [
+          {
+            "allow": true,
+            "pattern": "/"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/overlays/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/applications-labels/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/error-pages/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/roadblock/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/forms/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/disclosure-library/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/wizards/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/offers-library/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/additional-offers/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/content/snippets/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/servis/moje-vozidlo/objednat-servis/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/servis/moje-vozidlo/book-a-service/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/s/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/dashboard/*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/forms*"
+          },
+          {
+            "allow": false,
+            "pattern": "*/offer-*"
+          }
+        ],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://www.ford.cz",
+        "url": "https://www.ford.cz/robots.txt",
+        "status": 200,
+        "body": "User-agent: *\r\nAllow: /\r\n\r\nDisallow:*/content/overlays/*\r\nDisallow:*/content/applications-labels/*\r\nDisallow:*/content/error-pages/*\r\nDisallow:*/content/roadblock/*\r\nDisallow:*/content/forms/*\r\nDisallow:*/content/disclosure-library/*\r\nDisallow:*/content/wizards/*\r\nDisallow:*/content/offers-library/*\r\nDisallow:*/content/additional-offers/*\r\nDisallow:*/content/snippets/*\r\nDisallow:*/servis/moje-vozidlo/objednat-servis/*\r\nDisallow:*/servis/moje-vozidlo/book-a-service/*\r\nDisallow:*/s/*\r\nDisallow:*/dashboard/*\r\nDisallow:*/forms*\r\nDisallow:*/offer-*\r\n\r\nSitemap:https://www.ford.cz/sitemap.xml",
+        "checkedAt": "2026-10-28T12:08:03.559Z"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "audi-config",
+    "url": "https://groupcms-services-api.porsche-holding.com/urls/cc/A/cz?modelCode=077&variant=Q7",
+    "publishedBy": "https://www.audi.cz/",
+    "redirects": [
+      {
+        "from": "https://groupcms-services-api.porsche-holding.com/urls/cc/A/cz?modelCode=077&variant=Q7",
+        "to": "https://konfigurator.audi.cz/cc-cz/cs_CZ_AUDI23/A/auv/077?variant=Q7"
+      }
+    ],
+    "finalUrl": "https://konfigurator.audi.cz/cc-cz/cs_CZ_AUDI23/A/auv/077?variant=Q7",
+    "local": "analysis\\codex\\lineart\\test-out\\angle-research\\audi-config.txt",
+    "bytes": 3308,
+    "sha256": "9fb47c0de3d84fb6f95a6df106c088c36c5bd6836ca82c7567dd06f78f1a98b9",
+    "contexts": [],
+    "links": [],
+    "scripts": [
+      "https://konfigurator.audi.cz/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+      "https://konfigurator.audi.cz/cc-cz/cs_CZ_AUDI23/A/auv/polyfills-RRLK3PZ6.js",
+      "https://konfigurator.audi.cz/cc-cz/cs_CZ_AUDI23/A/auv/main-5LPN22QM.js",
+      "https://konfigurator.audi.cz/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+      "https://konfigurator.audi.cz/cc-cz/cs_CZ_AUDI23/A/auv/assets/legacy-browser.js"
+    ],
+    "policies": [
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://groupcms-services-api.porsche-holding.com",
+        "url": "https://groupcms-services-api.porsche-holding.com/robots.txt",
+        "status": 404,
+        "body": "",
+        "checkedAt": "2026-10-28T12:08:04.725Z",
+        "note": "Unavailable robots: RFC 9309 section 2.3.1.3; 401/403/429/challenges are still hard stops"
+      },
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://konfigurator.audi.cz",
+        "url": "https://konfigurator.audi.cz/robots.txt",
+        "status": 200,
+        "body": "User-agent: *\n",
+        "checkedAt": "2026-10-28T12:08:07.082Z"
+      }
+    ],
+    "requests": 4
+  }
+]

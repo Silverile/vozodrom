@@ -1,0 +1,3 @@
+import {spawnSync} from 'node:child_process';
+const files=['Alfa24HP.jpg','Alfa romeo 4c front distant.jpg','Alfa Romeo 6C 1500 Normale front Maastricht 2010.jpg','Alfa-Romeo 6C Gran Sport 1931 (front view, Deutsches Museum Verkehrszentrum).jpg','Alfa Romeo 6C 1900cc manufactured 1933.JPG','Alfa Romeo 6C-2300B front-bigger.jpg','Alfa-Romeo 6C 2500 Freccia d’Oro (Golden Arrow) (25913846634).jpg','The frontview of Alfa Romeo 8C Competizione.JPG','1933 Alfa Romeo 8C Touring Spider (Chassis 2311234) 2.3 Front.jpg','1938 Alfa Romeo 2900 8c - black - fvr.jpg','The frontview of Alfa Romeo Alfasud Berlina.JPG','Alfa Romeo Alfetta Berlina 1X7A2523.jpg'];
+spawnSync(process.execPath,['analysis/codex/letter-a/a11-tools.mjs','fetch',...files],{stdio:'inherit'});

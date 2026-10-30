@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {cars,root} from './batch.mjs';
+const [id,original,seconds,notes]=process.argv.slice(2);const c=cars.find(c=>c.id===id);
+const raw=`${root}/raw/${id}.png`;
+if(!fs.existsSync(raw))fs.copyFileSync(original,raw,fs.constants.COPYFILE_EXCL);
+const dest=`${c.folder}/${id}.png`;if(!fs.existsSync(dest))fs.copyFileSync(raw,dest,fs.constants.COPYFILE_EXCL);
+const a=JSON.parse(fs.readFileSync(c.folder+'/reference-audit.json','utf8'));
+const result={id,status:'done',folder:c.folder,referencePage:a.referencePage,licence:a.licence,evidence:a.evidence,variant:a.variant,view:a.view,genSeconds:Number(seconds),notes,originalOutput:original,externalCopyPending:true,review:'pending Claude independent reference/drawing review'};
+const p=`${root}/a-01-results.json`;const rows=fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):[];
+const i=rows.findIndex(r=>r.id===id);if(i<0)rows.push(result);else rows[i]=result;
+fs.writeFileSync(p,JSON.stringify(rows,null,2));console.log(id+' saved');

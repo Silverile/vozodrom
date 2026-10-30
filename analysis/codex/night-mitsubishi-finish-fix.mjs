@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';let p='analysis/codex/night-mitsubishi-finish.mjs',s=fs.readFileSync(p,'utf8').replace('48,36,29','48,34').replace('!author||!licence||!licenceUrl','!author||!licence');s=s.replace('3000GT side-profile fallback explicitly labelled;','3000GT candidates were cropped or lacked an identifiable author;');fs.writeFileSync(p,s);

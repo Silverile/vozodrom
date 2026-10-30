@@ -1,0 +1,2 @@
+import fs from'node:fs';const dir='analysis/codex/photo-backfill-50',all=JSON.parse(fs.readFileSync(dir+'/candidates.json'));
+for(const id of process.argv[2].split(',').map(Number)){const c=all.find(x=>x.id===id);if(!c)continue;const url=c.ii.thumburl.split('?')[0],r=await fetch(url);console.log(id,r.status);if(r.ok)fs.writeFileSync(dir+'/candidate-'+id+'.jpg',Buffer.from(await r.arrayBuffer()));if(r.status===429)break;await new Promise(r=>setTimeout(r,900));}

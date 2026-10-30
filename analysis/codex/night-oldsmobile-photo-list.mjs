@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';const a=JSON.parse(fs.readFileSync('analysis/codex/oldsmobile-evidence/photos/metadata-groups.json'));for(let g of a.filter(x=>/Toronado|Curved/.test(x.category)))console.log(g.category,g.pages.length,g.pages.map(x=>x.title));

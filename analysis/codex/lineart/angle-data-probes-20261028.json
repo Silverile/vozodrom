@@ -1,0 +1,58 @@
+[
+  {
+    "site": "skoda-frames",
+    "url": "https://visualizer.skoda-auto.com/260/cs-CZ/api/exteriorImages?device=desktop&scene=day&salesGroup=60004&mbvCode=PJ3&colorPrCode=0B0B&wheelPrCode=40M",
+    "derivation": "Published loadExteriorImages builder and React effect parameter names; values from published model data, no guessed frame URL.",
+    "local": "analysis/codex/lineart/test-out/angle-research/skoda-frames.txt",
+    "bytes": 4401,
+    "sha256": "229842e138bbeaf368beff9f1ecaf7d11e384599776697c56eb3689996f508fc",
+    "contexts": [],
+    "policies": [
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://visualizer.skoda-auto.com",
+        "url": "https://visualizer.skoda-auto.com/robots.txt",
+        "status": 404,
+        "body": "",
+        "checkedAt": "2026-10-28T12:10:05.131Z",
+        "note": "Unavailable robots: RFC 9309 section 2.3.1.3; 401/403/429/challenges are still hard stops"
+      }
+    ],
+    "requests": 2
+  },
+  {
+    "site": "toyota-angle-js",
+    "url": "https://dxp-webcarconfig.toyota-europe.com/js/car-config-toyota-557ef8b.js",
+    "derivation": "Literal require URL in configurator HTML",
+    "local": "analysis/codex/lineart/test-out/angle-research/toyota-angle-js.txt",
+    "bytes": 1861471,
+    "sha256": "6b6356d30b2e1ff8d99b3a6082bbb81a195ee59dc6e2de4eb4dcdb9739dc788f",
+    "contexts": [
+      "CompressedCcisPath=t.ImageMode=void 0;var a=n(79941),o=r(n(34126));t.ImageMode=function(e){return e.Exterior=\"day-exterior\",e.Interior=\"interior\",e.ClayExterior=\"clay-mobility-exterior\",e.ClayInterior=\"clay-mobility-interior\",e.RackingClayMode=\"clay-racking-exterior\",e}({});const i=(e,t)=>!!e.compressedCcisPath&&!1!==e.query.useCompressedCc",
+      "40,height:426})}/${i}${s}/submodel/${r}${u}/width/1140/height/426/background-colour/00FFFFFF/image-quality/75/day-exterior-${t}.png`};t.get3dJsonObject=(e,t,n,r={},o=\"\",i=\"\")=>{const c=(0,a.getModelToken)(e,t),s=c?`/product-token/${c}/vehicle/${n}`:`/vehicle/${t}/${n}`;return`${l(e,r)}/${e.country}${s}${o}/exterior${i}.json`}},79941:functio",
+      "),w=(0,g.useCarConfigSelector)(e=>(0,v.modelIsLcv)(e.car.model.id)),S=(0,b.useCarConfigLabel)(\"carConfigA11yNavExtra\"),O=(0,g.useCarConfigSelector)(e=>e.carConfigNavigation.packAddedByExtra),P=0!==n.length,k=0!==r.length,x=P&&k,[T,I]=(0,a.useState)(!P),[A,M]=(0,b.useCarConfigLabel)([\"carConfigPacks\",\"carConfigExtras\"]);return(0,a.us",
+      "\"div\",{className:`${f.default.panel} ${T?f.default.active:f.default.inactive}`},w?a.default.createElement(y.LcvExtras,{extras:r}):a.default.createElement(c.default,{extras:r}))))}},9171:function(e,t,n){\"use strict\";n(67348);var r=n(24994);Object.defineProperty(t,\"__esModule\",{value:!0}),t.default=void 0,n(23792),n(62953);var a=funct",
+      "205:function(e,t,n){\"use strict\";n(67348);var r=n(24994);Object.defineProperty(t,\"__esModule\",{value:!0}),t.LcvExtras=void 0,n(23792),n(26910),n(62953);var a=function(e,t){if(\"function\"==typeof WeakMap)var n=new WeakMap,r=new WeakMap;return function(e,t){if(!t&&e&&e.__esModule)return e;var a,o,i={__proto__:null,default:e};if(null===",
+      "35),i=r(n(53792)),l=r(n(38210)),c=r(n(76351)),s=r(n(5732)),u=r(n(78681)),d=n(53424),f=n(16390),p=n(23892);t.LcvExtras=({extras:e})=>{const t=(0,a.useMemo)(()=>Object.entries((0,o.groupExtrasByCategory)(e)).sort(o.sortCategories),[e]),[n,r]=(0,a.useState)(t.length?(0,o.getCategoryKey)(t[0][0]):\"\");return(0,a.useEffect)(()=>{if(t.leng",
+      "ours\",carConfigA11yNavUpholstery:\"Upholstery\",carConfigA11yNavWinterWheel:\"Winterwheel toggle\",carConfigA11yNavExtra:\"Extra toggle\",carConfigA11yNavSpecs:\"Specs slider\",carConfigA11yNavCharging:\"Charging toggle\",carConfigA11yLinkSkipToSpinContainer:\"Skip to spin container\",carConfigA11yLinkReturnToConfiguration:\"Return to configurat"
+    ],
+    "policies": [
+      {
+        "rules": [],
+        "delay": 1100,
+        "aiDenied": false,
+        "aiRules": [],
+        "origin": "https://dxp-webcarconfig.toyota-europe.com",
+        "url": "https://dxp-webcarconfig.toyota-europe.com/robots.txt",
+        "status": 404,
+        "body": "",
+        "checkedAt": "2026-10-28T12:10:06.139Z",
+        "note": "Unavailable robots: RFC 9309 section 2.3.1.3; 401/403/429/challenges are still hard stops"
+      }
+    ],
+    "requests": 2
+  }
+]

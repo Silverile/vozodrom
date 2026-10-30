@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+const root='analysis/codex/letter-a',db=root+'/a-27-results.json',rows=JSON.parse(fs.readFileSync(db)),sources=JSON.parse(fs.readFileSync(root+'/a27-sources.json'));
+const [id,file,variant,licence,lic]=process.argv.slice(2),r=rows.find(x=>x.id===id),s=sources.find(x=>x.file===file&&x.local);if(!r||!s)throw Error('Missing');
+Object.assign(r,{referencePage:s.referencePage,image:s.image,credit:s.credit,licence,licenceUrl:lic==='PD'?'https://commons.wikimedia.org/wiki/Template:PD-self':lic==='CC0'?'https://creativecommons.org/publicdomain/zero/1.0/':`https://creativecommons.org/licenses/${lic}/`,variant,view:'Head-on; complete front, both headlights, grille, bumper corners and bonnet visible',notes:'Initial oblique candidate rejected before generation; replacement visually inspected and passed. Plates, wipers, antenna, interior and accessories excluded. Generation pending.'});r.evidence[0]=s.referencePage;
+fs.copyFileSync(s.local,r.folder+'/reference.jpg');
+fs.writeFileSync(r.folder+'/info.txt',`ID: ${r.id}\nZnačka: ${r.make}\nModel: ${r.model}\nGenerace: ${r.generation}\nRoky: ${r.years}\nPage: ${r.referencePage}\nImage: ${r.image}\nCredit: ${r.credit}\nLicence: ${r.licence}\nLicence URL: ${r.licenceUrl}\n${r.evidence.map(u=>'Evidence: '+u).join('\n')}\nView: ${r.view}\nVariant: ${r.variant}\nNotes: ${r.notes}\n`);
+fs.writeFileSync(db,JSON.stringify(rows,null,2));console.log('Replaced '+id);

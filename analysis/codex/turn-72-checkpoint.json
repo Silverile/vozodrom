@@ -1,0 +1,415 @@
+{
+  "startedAt": "2026-10-27T05:17:07Z",
+  "finishedAt": "2026-10-27T05:38:09.088Z",
+  "elapsedMinutes": 21,
+  "before": {
+    "makes": 135,
+    "cards": 2799,
+    "generations": 3798,
+    "versions": 1030,
+    "photos": 941
+  },
+  "after": {
+    "makes": 139,
+    "cards": 2979,
+    "generations": 4095,
+    "versions": 1197,
+    "photos": 1020
+  },
+  "done": [
+    {
+      "make": "mazda",
+      "lines": 53,
+      "generations": 84,
+      "versions": 71,
+      "photos": 14,
+      "gaps": [
+        "NOT COMPLETE: 67 selected combinations in 13 generation records; every version table remains partial. All 31 prior catalogue identities retained.",
+        "High-priority next: Mazda6 GG first-generation engines/gearboxes; Mazda3 BK missing MPS and more body-specific dimensions, BL missing diesel/MPS, BM final homologated values and later BN, BP older G122/G150/X180/diesels.",
+        "Mazda2 DY missing all tables; DE later diesel/automatic and DJ earlier75/90/115 updates not exhaustive. Mazda2 Hybrid has no technical rows.",
+        "323 FA/BD/BF/BG/BA/BJ and 626 all historical generations lack version tables; original 2002 UK323 brochure mirror returned403, so search snippets were not used to populate specifications.",
+        "MX-5 NA/NB/NC engine/gearbox combinations missing. CX-3, CX-5 KE/KM and CX-7 lack tables; CX-30 earlier G122/G150/X180 and CX-60 D200 absent. CX-80 only selected UK configurations.",
+        "Historic and global range is partial: Biante, Navajo, MS-8, Flair Wagon/Crossover and some LCV derivatives not yet independently resolved; Cosmo,929,MPV,B-Series andBT-50 require complete generation breakdowns.",
+        "RX-2 folded into626 alias, RX-4 into929/Luce alias, RX-5 intoCosmo alias, Lantis/323FBA into323 alias to avoid duplicate regional family cards. AutozamAZ-1 retained with explicit subsidiary-badge scope.",
+        "R360 end1966/1969 and Cosmo final1995/1996 scope conflicts leftnull; CX-8 global endnull because Japanese enddoes not settle overseas assembly.",
+        "Mazda3 BM selected values explicitly PRELIMINARY July2013 Europe excluding Russia. UK0–62mph/mph values remainnull; no unit conversion.",
+        "Consumption cycles leftunknown where exactCyprus sheet does not specify; displacement/cylinders and gearbox count are not inferred from marketing labels.",
+        "Photos are incomplete; category and subcategory searches were bounded, not exhausted. Tight crops/details/incorrect subjects were rejected."
+      ],
+      "report": "night-mazda-report.json"
+    },
+    {
+      "make": "mclaren",
+      "lines": 21,
+      "generations": 30,
+      "versions": 2,
+      "photos": 15,
+      "gaps": [
+        "Most exact production starts/ends remain null; launch dates are not silently treated as production dates.",
+        "F1 LM/GT remain family derivatives; MSO HS, X-1 and individual coachbuilt commissions not exhaustively researched.",
+        "Only two exact 750S configurations have technical rows. Other generation engine/gearbox tables remain incomplete.",
+        "Spider photographs and unfilled family photographs require follow-up Commons searches."
+      ],
+      "report": "night-mclaren-report.json"
+    },
+    {
+      "make": "mercedes-benz",
+      "lines": 72,
+      "generations": 141,
+      "versions": 87,
+      "photos": 29,
+      "gaps": [
+        "Partial historical catalogue: extra 1920s/1930s identities were checked in the production-vehicle overview, but exact periods and bodies remain null until individual model sources are checked. W30 / 150 excluded as prototype / racing history; W31/G4 and military specials excluded.",
+        "Pre-merger Mercedes and Benz and historical standalone Maybach not automatically reassigned. Later Mercedes-Maybach S/GLS derivatives belong here but no exact technical row was verified this turn.",
+        "Old-generation C/E/S, most AMG, G, Sprinter and electric configurations still lack version tables. See the per-generation matrix; 81 rows are selected, not a complete table.",
+        "Scalar consumption remains null for configuration intervals. The eight scalar consumption figures are scoped to the exact compact V-Class variants and the 2016 German brochure procedure, without guessing an NEDC/WLTP acronym.",
+        "Most engine power standards, version production periods, kerb weights and many body-specific dimensions remain unknown. No boost outputs or gross/dry/kerb mass definitions were guessed.",
+        "Photos cover eight inspected generations before parent core-generation backfill. R107 side view and W447 direct-front view are declared angle fallbacks. Other unsearched or unaccepted generations are not claimed to have no suitable Commons image."
+      ],
+      "report": "night-mercedes-benz-report.json"
+    },
+    {
+      "make": "mercury",
+      "lines": 34,
+      "generations": 42,
+      "versions": 7,
+      "photos": 21,
+      "gaps": [
+        "All generation production dates remain null pending separation of model years, introductions and actual production.",
+        "Eight, Cougar, Comet, Marquis, Montclair, Monterey, Topaz, Tracer, Villager, Mountaineer and other long-lived families still need complete generation splits.",
+        "Selected period factory specifications use imperial units. Metric power/mass/dimensions/consumption remain null rather than guessed conversions.",
+        "Most exact engine/gearbox combinations remain missing; seven sourced rows are an initial selection only.",
+        "Photo coverage remains partial despite category and subcategory searches; remaining omissions are not a claim that suitable images do not exist."
+      ],
+      "report": "night-mercury-report.json"
+    }
+  ],
+  "coverage": {
+    "mazda": {
+      "cards": 53,
+      "records": 84,
+      "versions": 71,
+      "generationsWithVersions": 14,
+      "photos": 14,
+      "missingPhotoRecords": 70
+    },
+    "mercedes-benz": {
+      "cards": 72,
+      "records": 141,
+      "versions": 87,
+      "generationsWithVersions": 16,
+      "photos": 29,
+      "missingPhotoRecords": 112
+    }
+  },
+  "priorityFollowup": [
+    "mazda",
+    "mercedes-benz"
+  ],
+  "nextAbsentMake": "mg",
+  "remainingMakes": 49,
+  "externallyCovered": [
+    {
+      "make": "sunbeam",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "suzuki",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "tagaz",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "talbot",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "tata-motors",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "tatra",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "tesla",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "trabant",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "triumph",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "tvr",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "uaz",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "vauxhall",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "venturi",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "vinfast",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "volvo",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "voyah",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wanderer",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wartburg",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wey",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wiesmann",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "willys",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wolseley-motors",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "wuling-motors",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "xpeng",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zastava",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zaz",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zeekr",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    },
+    {
+      "make": "zotye-auto",
+      "reason": "Claude-owned model-card file already exists; skip entire make to avoid duplicate work."
+    }
+  ],
+  "notes": [
+    "Four partial researched make histories; three workers plus root photo review. Mazda and Mercedes require further work before satisfying the requested full CZ version tables and all-generation photographs. Saved make files are not completion certificates.",
+    "Mazda71 selected rows across14/84 records;14 photos/70 missing. Mercedes87 selected rows across16/141 records;29 photos/112 missing. Every generation coverage record remains complete=false. Priorities: Mazda323/626/legacyMX5 and remaining3/6 matrices; old MercedesC/E/S, AMG/Maybach, G, Vito/Sprinter and electric variants.",
+    "Root21 inspected Mercedes references cover the listed A4/C5/E6/S6 chassis-code records. Additional3 Mazda references supplied by worker. Whole cars, preferred front three-quarter view and aspect1.4-1.7; W126 approximately4-5% left-margin exception and W222S550Long illustration explicitly noted. Photos do not certify exact EU configuration or body dimensions.",
+    "Legacy patches add4 UK2005 Mazda6GG five-door configurations and6 gearbox/subperiod-specific W202 C180/C200 combinations. Mazda booklet is a readable factory-imprinted Scribd mirror, not authenticated against an OEM-hosted copy. Three-point Mercedes consumption is not averaged into combined; imperial0-62mph and guessedcycles are not substituted.",
+    "Exact Commons PD-user-en Arpingstone and PD-user OSX permission evidence retained; no CC licence invented. Temporary source documents/preview binaries removed. Original883 line objects and protected Skoda/Claude files preserved.",
+    "McLaren21cards/30body records/2versions/15photos; W1 excluded pending customer-production confirmation, Sabre US scope explicit. Mercury34cards/42partial era records/7engine rows/21photos; historic generation splits and metric specs remain incomplete.",
+    "Rebuild: each make report sequence, apply-legacy-72.mjs, integrate-night-cards.mjs, merge-photo-patches-72.mjs, finalize-turn-72.mjs, validators, night-progress/review. Complete rebuild not performed. No application index/build, commits or publishing."
+  ],
+  "changedFiles": [
+    "analysis/codex/apply-legacy-72.mjs",
+    "analysis/codex/checkpoint-night-72.mjs",
+    "analysis/codex/finalize-turn-72.mjs",
+    "analysis/codex/legacy-applied-72.json",
+    "analysis/codex/mazda-evidence/documents.json",
+    "analysis/codex/mazda-evidence/historic-facts.json",
+    "analysis/codex/mazda-evidence/photos/api-log-targets-001.json",
+    "analysis/codex/mazda-evidence/photos/api-log-targets-002.json",
+    "analysis/codex/mazda-evidence/photos/api-log-targets-003.json",
+    "analysis/codex/mazda-evidence/photos/candidates.json",
+    "analysis/codex/mazda-evidence/photos/metadata-groups.json",
+    "analysis/codex/mazda-evidence/photos/selected.json",
+    "analysis/codex/mazda-evidence/photos/subcategories.json",
+    "analysis/codex/mazda-evidence/photos/targets-001.json",
+    "analysis/codex/mazda-evidence/photos/targets-002.json",
+    "analysis/codex/mazda-evidence/photos/targets-003.json",
+    "analysis/codex/mazda-legacy-72/README.md",
+    "analysis/codex/mazda-legacy-72/build.mjs",
+    "analysis/codex/mazda-legacy-72/evidence.json",
+    "analysis/codex/mazda-legacy-72/patch.json",
+    "analysis/codex/mazda-legacy-72/validate.mjs",
+    "analysis/codex/mazda-photos-72/batch001.json",
+    "analysis/codex/mazda-photos-72/candidates.json",
+    "analysis/codex/mazda-photos-72/finish.mjs",
+    "analysis/codex/mazda-photos-72/gj-source.json",
+    "analysis/codex/mazda-photos-72/permission-evidence.json",
+    "analysis/codex/mazda-photos-72/report.json",
+    "analysis/codex/mazda-photos-72/research-gj.mjs",
+    "analysis/codex/mazda-photos-72/research.mjs",
+    "analysis/codex/mclaren-photos/api-log-targets-001.json",
+    "analysis/codex/mclaren-photos/api-log-targets-002.json",
+    "analysis/codex/mclaren-photos/candidates.json",
+    "analysis/codex/mclaren-photos/metadata-groups.json",
+    "analysis/codex/mclaren-photos/selected.json",
+    "analysis/codex/mclaren-photos/selection.json",
+    "analysis/codex/mclaren-photos/targets-001.json",
+    "analysis/codex/mclaren-photos/targets-002.json",
+    "analysis/codex/mercedes-benz-evidence/versions.json",
+    "analysis/codex/mercedes-legacy-72/README.md",
+    "analysis/codex/mercedes-legacy-72/build.mjs",
+    "analysis/codex/mercedes-legacy-72/evidence.json",
+    "analysis/codex/mercedes-legacy-72/patch.json",
+    "analysis/codex/mercedes-legacy-72/validate.mjs",
+    "analysis/codex/mercury-photos/api-log-targets-001.json",
+    "analysis/codex/mercury-photos/api-log-targets-003.json",
+    "analysis/codex/mercury-photos/api-log-targets-004.json",
+    "analysis/codex/mercury-photos/api-log-targets-005.json",
+    "analysis/codex/mercury-photos/api-log-targets-006.json",
+    "analysis/codex/mercury-photos/api-log-targets-007.json",
+    "analysis/codex/mercury-photos/api-log-targets-008.json",
+    "analysis/codex/mercury-photos/candidates.json",
+    "analysis/codex/mercury-photos/category-tree.json",
+    "analysis/codex/mercury-photos/metadata-groups.json",
+    "analysis/codex/mercury-photos/selected.json",
+    "analysis/codex/mercury-photos/selection.json",
+    "analysis/codex/mercury-photos/targets-001.json",
+    "analysis/codex/mercury-photos/targets-002.json",
+    "analysis/codex/mercury-photos/targets-003.json",
+    "analysis/codex/mercury-photos/targets-004.json",
+    "analysis/codex/mercury-photos/targets-005.json",
+    "analysis/codex/mercury-photos/targets-006.json",
+    "analysis/codex/mercury-photos/targets-007.json",
+    "analysis/codex/mercury-photos/targets-008.json",
+    "analysis/codex/merge-photo-patches-72.mjs",
+    "analysis/codex/model-line-primary-facts.json",
+    "analysis/codex/model-lines-review.md",
+    "analysis/codex/night-checkpoint-72.md",
+    "analysis/codex/night-mazda-323.mjs",
+    "analysis/codex/night-mazda-audit-source.mjs",
+    "analysis/codex/night-mazda-audit.mjs",
+    "analysis/codex/night-mazda-bl.mjs",
+    "analysis/codex/night-mazda-bm.mjs",
+    "analysis/codex/night-mazda-build.mjs",
+    "analysis/codex/night-mazda-categories.mjs",
+    "analysis/codex/night-mazda-cleanup.mjs",
+    "analysis/codex/night-mazda-download.mjs",
+    "analysis/codex/night-mazda-evidence-clean.mjs",
+    "analysis/codex/night-mazda-extra.mjs",
+    "analysis/codex/night-mazda-finish.mjs",
+    "analysis/codex/night-mazda-history.mjs",
+    "analysis/codex/night-mazda-m2.mjs",
+    "analysis/codex/night-mazda-more.mjs",
+    "analysis/codex/night-mazda-morephotos.mjs",
+    "analysis/codex/night-mazda-morephotos2.mjs",
+    "analysis/codex/night-mazda-old.mjs",
+    "analysis/codex/night-mazda-oldversions.mjs",
+    "analysis/codex/night-mazda-photos.mjs",
+    "analysis/codex/night-mazda-report.json",
+    "analysis/codex/night-mazda-sheet.mjs",
+    "analysis/codex/night-mazda-targets.mjs",
+    "analysis/codex/night-mazda-targets2.mjs",
+    "analysis/codex/night-mazda-targets3.mjs",
+    "analysis/codex/night-mazda-validate.mjs",
+    "analysis/codex/night-mazda-versions.mjs",
+    "analysis/codex/night-mclaren-build.mjs",
+    "analysis/codex/night-mclaren-cleanup-evidence.json",
+    "analysis/codex/night-mclaren-photo-audit.json",
+    "analysis/codex/night-mclaren-photo.mjs",
+    "analysis/codex/night-mclaren-quality.mjs",
+    "analysis/codex/night-mclaren-report.json",
+    "analysis/codex/night-mclaren-validate.mjs",
+    "analysis/codex/night-mercedes-benz-build.mjs",
+    "analysis/codex/night-mercedes-benz-early.mjs",
+    "analysis/codex/night-mercedes-benz-historic-lcv.mjs",
+    "analysis/codex/night-mercedes-benz-notes.md",
+    "analysis/codex/night-mercedes-benz-photos/batch-001.json",
+    "analysis/codex/night-mercedes-benz-photos/batch-002.json",
+    "analysis/codex/night-mercedes-benz-photos/batch-003.json",
+    "analysis/codex/night-mercedes-benz-photos/candidates.json",
+    "analysis/codex/night-mercedes-benz-photos/choose.mjs",
+    "analysis/codex/night-mercedes-benz-photos/finalize.mjs",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-190-sl.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-300-sl.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-380-500k-540k.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-600.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-770.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-glc.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-gle.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-ponton.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-sl.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-trida-b.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-trida-v.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-w114-w115.json",
+    "analysis/codex/night-mercedes-benz-photos/search-mercedes-benz-w123.json",
+    "analysis/codex/night-mercedes-benz-photos/search-targets.json",
+    "analysis/codex/night-mercedes-benz-photos/search.mjs",
+    "analysis/codex/night-mercedes-benz-photos/sheet.mjs",
+    "analysis/codex/night-mercedes-benz-refine.mjs",
+    "analysis/codex/night-mercedes-benz-report.json",
+    "analysis/codex/night-mercedes-benz-scope.mjs",
+    "analysis/codex/night-mercedes-benz-validate.mjs",
+    "analysis/codex/night-mercedes-benz-versions.mjs",
+    "analysis/codex/night-mercury-build.mjs",
+    "analysis/codex/night-mercury-cleanup-evidence.json",
+    "analysis/codex/night-mercury-photo-audit.json",
+    "analysis/codex/night-mercury-photo.mjs",
+    "analysis/codex/night-mercury-quality.mjs",
+    "analysis/codex/night-mercury-report.json",
+    "analysis/codex/night-mercury-tree.mjs",
+    "analysis/codex/night-mercury-validate.mjs",
+    "analysis/codex/night-progress.json",
+    "analysis/codex/night-progress.md",
+    "analysis/codex/night-progress.mjs",
+    "analysis/codex/photo-mercedes-72/README.md",
+    "analysis/codex/photo-mercedes-72/api-log-targets-001.json",
+    "analysis/codex/photo-mercedes-72/api-log-targets-002.json",
+    "analysis/codex/photo-mercedes-72/api.mjs",
+    "analysis/codex/photo-mercedes-72/before-core.json",
+    "analysis/codex/photo-mercedes-72/before-mazda.json",
+    "analysis/codex/photo-mercedes-72/candidates.json",
+    "analysis/codex/photo-mercedes-72/categories.mjs",
+    "analysis/codex/photo-mercedes-72/category-lookup.json",
+    "analysis/codex/photo-mercedes-72/metadata-groups.json",
+    "analysis/codex/photo-mercedes-72/permission-evidence.json",
+    "analysis/codex/photo-mercedes-72/permissions.mjs",
+    "analysis/codex/photo-mercedes-72/report.json",
+    "analysis/codex/photo-mercedes-72/select.mjs",
+    "analysis/codex/photo-mercedes-72/selected-001.json",
+    "analysis/codex/photo-mercedes-72/selected-002.json",
+    "analysis/codex/photo-mercedes-72/selected-003.json",
+    "analysis/codex/photo-mercedes-72/selected-004.json",
+    "analysis/codex/photo-mercedes-72/selected-005.json",
+    "analysis/codex/photo-mercedes-72/selected-006.json",
+    "analysis/codex/photo-mercedes-72/selected-007.json",
+    "analysis/codex/photo-mercedes-72/selected-008.json",
+    "analysis/codex/photo-mercedes-72/sheet.mjs",
+    "analysis/codex/photo-mercedes-72/targets-001.json",
+    "analysis/codex/photo-mercedes-72/targets-002.json",
+    "analysis/codex/turn-72-baseline.json",
+    "analysis/codex/turn-72-checkpoint.json",
+    "analysis/codex/validate-turn-72.mjs",
+    "analysis/codex/write-night-review.mjs",
+    "src/data/catalog/SOURCES.md",
+    "src/data/catalog/model-cards/mazda.json",
+    "src/data/catalog/model-cards/mclaren.json",
+    "src/data/catalog/model-cards/mercedes-benz.json",
+    "src/data/catalog/model-cards/mercury.json",
+    "src/data/catalog/model-line-additions.json",
+    "src/data/catalog/model-lines-auto.json"
+  ]
+}

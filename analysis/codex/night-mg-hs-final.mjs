@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';const D=JSON.parse(fs.readFileSync('analysis/codex/mg-evidence/documents.json'));const r=await fetch(D.hsicefinal);console.log(r.status);if(r.ok)fs.writeFileSync('analysis/codex/mg-evidence/hsfinal.pdf',Buffer.from(await r.arrayBuffer()));

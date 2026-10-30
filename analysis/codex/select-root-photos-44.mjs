@@ -1,0 +1,5 @@
+﻿import fs from 'node:fs';
+const make=process.argv[2],ids=process.argv[3].split(',').map(Number),dir=`analysis/codex/${make}-photos`,candidates=JSON.parse(fs.readFileSync(dir+'/candidates.json','utf8'));
+const clean=s=>s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&#39;/g,"'").trim();
+const selected=ids.map(id=>{const c=candidates.find(c=>c.pageid===id);if(!c)throw Error('Missing '+id);const m=c.ii.extmetadata,author=clean(m.Artist.value),licence=m.LicenseShortName.value,filePageUrl=c.ii.descriptionurl;return{lineSlug:c.lineSlug,generationIndex:c.generationIndex,photo:{source:'commons',file:c.title,url:c.ii.url,filePageUrl,author,licence,licenceUrl:m.LicenseUrl?.value||null,credit:`${author} / Wikimedia Commons / ${licence}`,depicts:'generation',visualReview:'reviewed',reviewedAt:'2026-10-27',reviewNoteCs:'Prohlédnuto: celý vůz, okraje a přední tříčtvrteční pohled. Fotografie ilustruje rodinu, nikoli přesnou motorizaci; poměr stran v pásmu1,3–1,75 pro výplň karty.',sources:[filePageUrl]}};});
+fs.writeFileSync(dir+'/selected.json',JSON.stringify(selected,null,2)+'\n');console.log(selected.length+' photos selected after viewing.');

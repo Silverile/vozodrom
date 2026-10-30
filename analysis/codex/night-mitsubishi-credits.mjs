@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';const ps=JSON.parse(fs.readFileSync('analysis/codex/mitsubishi-evidence/photos/candidates.json'));for(let id of[1,5,9,14,16,56,61,38,41,43,48,36,29]){let x=ps.find(x=>x.id===id);console.log(id,x.ii.extmetadata.Artist?.value,x.ii.extmetadata.LicenseShortName?.value,x.ii.extmetadata.LicenseUrl?.value);}

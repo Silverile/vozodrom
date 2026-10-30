@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';let p='analysis/codex/mitsubishi-evidence/photos/metadata-groups.json',a=JSON.parse(fs.readFileSync(p));for(let g of a)console.log(g.category,g.pages.length,g.pages.slice(3,9).map(x=>x.title));

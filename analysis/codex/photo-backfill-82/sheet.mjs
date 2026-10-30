@@ -1,0 +1,4 @@
+﻿import fs from'node:fs';import sharp from'sharp';const d='analysis/codex/photo-backfill-82',start=Number(process.argv[2]||0),max=Number(process.argv[3]||40),cs=JSON.parse(fs.readFileSync(d+'/candidates.json')).filter(c=>c.id>=start&&fs.existsSync(`${d}/candidate-${c.id}.jpg`)).slice(0,max),co=[];for(const[j,c]of cs.entries()){try{const b=await sharp(`${d}/candidate-${c.id}.jpg`).resize(300,190,{fit:'contain',background:'#fff'}).toBuffer(),label=`${c.id}: ${c.title.slice(5,57)}`.replace(/[<>&]/g,'');co.push({input:b,top:Math.floor(j/4)*225,left:j%4*300},{input:Buffer.from(`<svg width="300" height="35"><rect width="300" height="35" fill="white"/><text x="3" y="15" font-size="11">${label}</text></svg>`),top:Math.floor(j/4)*225+190,left:j%4*300});}catch{console.log("Invalidthumbnail",c.id)}}await sharp({create:{width:1200,height:Math.ceil(cs.length/4)*225,channels:3,background:'#ddd'}}).composite(co).jpeg().toFile(`${d}/sheet-${start}.jpg`);console.log(cs.length);
+
+
+

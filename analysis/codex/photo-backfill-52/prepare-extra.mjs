@@ -1,0 +1,4 @@
+import fs from'node:fs';const d='analysis/codex/photo-backfill-52',src=JSON.parse(fs.readFileSync(d+'/groups-001.json'));
+const out=[{makeSlug:'citroen',lineSlug:'c3',generationIndex:0,category:'C3I targeted full-car candidates',titles:['Citroën C3 (1st generation - 2002) en Valencia 01.jpg','Citroën C3 (1st generation - 2002) en Valencia.jpg','Citroën C3 - 2.jpg','Citroën C3.jpg']},{makeSlug:'citroen',lineSlug:'ami-6-8',generationIndex:0,category:'Ami6 targeted candidates',titles:['Citroen Ami 6 (15865397693).jpg','Citroen Ami 6 (16483786121).jpg','1962 Citroën Ami 6 in Taiwan 2013-06-26.jpg','1964 Citroen AMI 6 Berlina.jpg','1964 Citroen Ami.jpg']}];
+for(const slug of ['gs','c15','dyane']){const g=src.find(g=>g.lineSlug===slug);out.push({...g,titles:g.titles.filter(x=>!/rear|heck|detail|motor|engine|camargue|crash|interior|rally|24h/i.test(x)).slice(5,14)});}
+fs.writeFileSync(d+'/groups-004.json',JSON.stringify(out,null,2)+'\n');

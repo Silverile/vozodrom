@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+const root='analysis/codex/letter-a',sources=JSON.parse(fs.readFileSync(root+'/a14-sources.json'));
+const specs=[
+['b2',0,'B2 — raná rodina E12','?–?','B2-E12.jpg','1976 E12 528 B2 sedan','https://www.alpina-archive.com/?page_id=170','Copyright'],
+['b3',0,'B3 E30','1987–1992','Alpina_B3_2.7_(E30)_Retro_Classics_2025_DSC_7733.jpg','E30 B3 2.7 two-door saloon, factory Alpina spoiler','38','by-sa/4.0'],
+['b3',1,'B3 E36','1993–1999','BMW_Alpina_B3_3.0_Coupé_E36_(7719093352).jpg','1993 E36 B3 3.0 coupe, original pre-facelift','38','by/2.0'],
+['b3',2,'B3 E46','1999–2006','2000_Alpina_B3_3.3.jpg','2000 E46 B3 3.3 coupe, original front','38','by-sa/4.0'],
+['b3',3,'B3 Bi-Turbo E9x','2007–2012','ALPINA_B3_BITURBO_LIMOUSINE_(E90)_front.jpg','E90 B3 Bi-Turbo saloon, pre-facelift','38','by-sa/4.0'],
+['b3',4,'B3 Bi-Turbo F3x','2013–2019','BMW_ALPINA_B3_BITURBO_LIMOUSINE_(F30)_front.jpg','F30 B3 Bi-Turbo saloon, original front','38','by-sa/4.0'],
+['b3',5,'B3 G2x','2020–2025','2024_Alpina_B3_(G20)_IMG_0711.jpg','2024 G20 B3 saloon, facelift','38','by-sa/4.0'],
+['b4',0,'B4 Bi-Turbo a B4 S','2014–?','ALPINA_B4_BITURBO_COUPE_(F32)_front.jpg','F32 B4 Bi-Turbo coupe, original pre-S front','38','CC0'],
+['b4',1,'B4 Gran Coupé','2022–?','2022_Alpina_B4.jpg','2022 G26 B4 Gran Coupe, original front, Goodwood FOS display','38','by-sa/4.0'],
+['b5',0,'B5 a B5 S','2005–?','BMW_Alpina_B5_E60_(10254620943).jpg','E60 B5 sedan, original front','39','by/2.0'],
+['b5',1,'B5 Bi-Turbo F1x','?–?','Alpina_B5_(F10)_Facelift_IMG_5864.jpg','F10 B5 Bi-Turbo sedan, facelift','39','by-sa/4.0'],
+['b5',2,'B5 Bi-Turbo G3x','2017–?','Alpina_B5_(G30)_Facelift_DSC_8465.jpg','G30 B5 Bi-Turbo saloon, facelift','39','by-sa/4.0']
+];
+const db=root+'/a-14-results.json',old=fs.existsSync(db)?JSON.parse(fs.readFileSync(db)):[];
+const rows=specs.map(([line,n,generation,years,file,variant,ev,lic])=>{const id=`alpina--${line}--${n}`,prev=old.find(x=>x.id===id);if(prev?.status==='done')return prev;const s=sources.findLast(x=>x.file===file&&x.local);const folder=s?`${root}/staged/alpina/${id} ${generation.replace(/[<>:"/\\|?*]/g,'-')}`:null;const r={id,make:'Alpina',model:line.toUpperCase(),generation,years,status:'failed',folder,referencePage:s?.referencePage||null,image:s?.image,credit:s?.credit?.replace(' &#160;',''),licence:lic==='CC0'?'CC0 1.0':lic==='Copyright'?'Copyright; no open licence stated':'CC '+lic.toUpperCase().replace('/',' '),licenceUrl:lic==='CC0'?'https://creativecommons.org/publicdomain/zero/1.0/':lic==='Copyright'?s?.referencePage:`https://creativecommons.org/licenses/${lic}/`,evidence:s?[s.referencePage,ev.startsWith('http')?ev:`https://www.alpina-archive.com/?page_id=${ev}`]:[],variant,view:'Front three-quarter; complete grille, both headlamps, bumper corners and bonnet visible. Omit wipers, antenna, plates, decals and glass contents; factory Alpina front spoiler retained.',genSeconds:0,notes:'Pending reference visual gate.',promptSuffix:`Alpina ${generation} (${years}). Remember: no wipers, no antenna, empty glass, no letters, both mirrors, no accessories.`};if(folder){fs.mkdirSync(folder,{recursive:true});fs.copyFileSync(s.local,folder+'/reference.jpg');fs.writeFileSync(folder+'/info.txt',`ID: ${id}\nZnačka: Alpina\nModel: ${r.model}\nGenerace: ${generation}\nRoky: ${years}\nPage: ${r.referencePage}\nImage: ${r.image}\nCredit: ${r.credit}\nLicence: ${r.licence}\nLicence URL: ${r.licenceUrl}\n${r.evidence.map(x=>'Evidence: '+x).join('\n')}\nView: ${r.view}\nVariant: ${variant}\n`);}return r;});fs.writeFileSync(db,JSON.stringify(rows,null,2));console.log(rows.map(x=>({id:x.id,folder:x.folder})));

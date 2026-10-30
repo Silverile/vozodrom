@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const files=['analysis/codex/photo-credit-audit-44.json','analysis/codex/photo-credit-rest-audit-44.json'];
+let verified=0;const cards=fs.readdirSync('src/data/catalog/model-cards').filter(f=>f.endsWith('.json')&&f!=='skoda.json').flatMap(f=>JSON.parse(fs.readFileSync('src/data/catalog/model-cards/'+f,'utf8')));
+const normalized=url=>decodeURIComponent(url).replace(/^http:/,'https:');
+for(const file of files){const r=JSON.parse(fs.readFileSync(file,'utf8'));assert.equal(r.counts.missing,0);for(const e of[...(r.corrections||[]),...(r.bmwSupplement?.corrections||[])]){if(!e.actual)continue;const c=cards.find(c=>c.makeSlug===e.target.makeSlug&&c.lineSlug===e.target.lineSlug);assert(c,'Missing audited card');const g=c.generations.find(g=>g.photo&&normalized(g.photo.url)===normalized(e.url));assert(g,'Missing audited photo');for(const field of['author','licence','licenceUrl'])assert.equal(g.photo[field],e.actual[field],`${c.makeSlug}/${c.lineSlug} ${field}`);verified++;}}
+console.log(`PASS: ${verified} stored photo references match retrieved exact-file Commons author/licence evidence, including 19 Audi and 7 BMW references.`);

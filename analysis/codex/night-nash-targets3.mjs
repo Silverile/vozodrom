@@ -1,0 +1,1 @@
+﻿import fs from'node:fs';const d='analysis/codex/nash-evidence/photos';fs.writeFileSync(d+'/targets-003.json',JSON.stringify([['nash','nash-healey',0,'Nash-Healey by Panelcraft'],['nash','nash-healey',1,'Nash-Healey vehicles'],['nash','advanced-eight',0,'Nash Advanced Eight'],['nash','twin-ignition-six',0,'Nash Twin Ignition Six']],null,2));

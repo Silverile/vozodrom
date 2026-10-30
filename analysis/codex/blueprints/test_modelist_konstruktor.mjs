@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {source} from './crawl_modelist_konstruktor.mjs';
+const origin=source.origin;
+const maps=await source.parse({url:origin+'/sitemap.xml',body:'<sitemapindex><loc><![CDATA['+origin+'/post-sitemap2.xml]]></loc><loc>'+origin+'/attachment-sitemap.xml</loc><loc>https://evil.test/post-sitemap.xml</loc></sitemapindex>'});
+assert.deepEqual(maps.pages,[origin+'/post-sitemap2.xml']);
+const pages=await source.parse({url:origin+'/post-sitemap2.xml',body:'<urlset><loc>'+origin+'/avtosalon/vozvrashhenie-mini</loc><loc>'+origin+'/avtosalon/page/2</loc><loc>'+origin+'/aviacziya/plane</loc></urlset>'});
+assert.deepEqual(pages.pages,[origin+'/avtosalon/vozvrashhenie-mini']);
+const title='Геометрическая схема автомобиля MINI COOPER S';
+const found=await source.parse({url:origin+'/avtosalon/vozvrashhenie-mini',body:'<article><img alt="'+title+'" src="/img/8104/2.jpg"><img alt="Фотография MINI" src="/img/8104/1.jpg"><img alt="Габаритный чертеж грузового автомобиля" src="/img/8104/3.jpg"><img alt="'+title+'" src="https://elsewhere.test/img/1.jpg"><img alt="'+title+'" src="/wp-content/uploads/2015/2-700x400.jpg"><img alt="Ходовая часть автомобиля MINI" src="/img/8104/4.jpg"></article>'});
+assert.equal(found.images.length,1);assert.equal(found.images[0].make,'mini');assert.equal(found.images[0].url,origin+'/img/8104/2.jpg');
+assert.equal(source.allowedHost('elsewhere.test'),false);
+console.log('PASS: sitemap/CDATA enumeration, category boundary, caption selection, passenger exclusion, same-origin originals, thumbnail rejection');
