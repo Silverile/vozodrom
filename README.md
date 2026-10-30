@@ -24,9 +24,11 @@ cp .dev.vars.example .dev.vars   # lokální proměnné (BETTER_AUTH_URL podle p
 npm run db:local                 # PGlite na 127.0.0.1:5433, data v .local/pgdata (nechat běžet)
 npm run db:migrate               # vytvoří tabulky podle ./drizzle
 npm run dev
-npm run admin:grant -- e-mail@example.com   # první administrátor (účet už musí existovat)
+npm run admin:create -- e-mail@example.com "Jméno"   # administrátor bez registrace (zeptá se na heslo)
+npm run admin:grant -- e-mail@example.com            # existujícímu účtu přidá roli admin
 ```
 
+Registrace je v produkci vypnutá (`SIGNUP_OPEN` ve `wrangler.jsonc`), dokud nepůjde posílat e-maily.
 Bez poskytovatele e-mailů se ověřovací odkazy a odkazy pro reset hesla jen vypisují do konzole
 dev serveru (`src/lib/mail.ts`). Změna schématu: upravit `src/db/schema.ts`, pak `npm run db:generate`.
 

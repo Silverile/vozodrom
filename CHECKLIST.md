@@ -30,7 +30,11 @@
   - [x] Кеш страниц: пока статические ассеты Workers (страницы без ревалидации); R2 — когда появится БД
   - [x] Конфигурация в репозитории, workflow deploy-cloudflare.yml
   - [x] Секреты GitHub добавлены; деплой из Actions работает (vozodrom.vozodrom.workers.dev, 30.10.2026)
-  - [ ] Перенести DNS vozodrom.cz в Cloudflare (сначала снять DNSSEC в WEDOS), привязать домен к Worker, отключить Pages
+  - [x] DNS vozodrom.cz в Cloudflare: DNSSEC WEDOS снят (DS исчез 11:19), NS jakub/ruth.ns.cloudflare.com с 30.10.2026 13:18
+  - [x] DNSSEC в Cloudflare + KEYSET в WEDOS (DS 2371 в .cz с 30.10.2026 14:49, проверка проходит)
+  - [x] vozodrom.cz и www на Worker (custom domains, 30.10.2026), workflow Pages удалён
+  - [x] Redirect Rule www → vozodrom.cz (301, с query), Always Use HTTPS; GitHub Pages выключен, TXT удалён
+  - [ ] Влить ветку accounts (после Neon + Hyperdrive)
   - [ ] Удалить пробный Worker vozodrom-trial
 - [ ] Правовые документы: VOP, условия для дилеров (P2B), GDPR, cookies, порядок жалоб DSA, правила форума
 - [ ] Проверка документов юристом (1–2 часа)

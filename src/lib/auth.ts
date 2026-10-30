@@ -22,6 +22,11 @@ export function googleEnabled(): boolean {
   return Boolean(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET);
 }
 
+/** New accounts are accepted only with SIGNUP_OPEN=true (closed until e-mail sending works). */
+export function signupOpen(): boolean {
+  return getCloudflareContext().env.SIGNUP_OPEN === "true";
+}
+
 // Built per request because the database connection is per request (see src/db).
 export const getAuth = cache(() => {
   const { env } = getCloudflareContext();
@@ -32,6 +37,7 @@ export const getAuth = cache(() => {
     telemetry: { enabled: false },
     emailAndPassword: {
       enabled: true,
+      disableSignUp: !signupOpen(),
       requireEmailVerification: true,
       minPasswordLength: 10,
       revokeSessionsOnPasswordReset: true,
@@ -56,7 +62,7 @@ export const getAuth = cache(() => {
     },
     socialProviders:
       env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET
-        ? { google: { clientId: env.GOOGLE_CLIENT_ID, clientSecret: env.GOOGLE_CLIENT_SECRET } }
+        ? { google: { clientId: env.GOOGLE_CLIENT_ID, clientSecret: env.GOOGLE_CLIENT_SECRET, disableSignUp: !signupOpen() } }
         : undefined,
     account: { accountLinking: { enabled: true, trustedProviders: ["google"] } },
     plugins: [admin({ defaultRole: "user", adminRoles: ["admin"] }), nextCookies()],

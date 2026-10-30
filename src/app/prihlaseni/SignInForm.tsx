@@ -30,10 +30,10 @@ function message(error: { code?: string; message?: string } | null): string {
   return (error.code && ERRORS[error.code]) || "Něco se nepovedlo. Zkuste to prosím znovu.";
 }
 
-export function SignInForm({ google }: { google: boolean }) {
+export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen: boolean }) {
   const router = useRouter();
   const params = useSearchParams();
-  const register = params.get("rezim") === "registrace";
+  const register = signupOpen && params.get("rezim") === "registrace";
   const next = safeNext(params.get("dalsi"));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -149,22 +149,26 @@ export function SignInForm({ google }: { google: boolean }) {
           <Link href="/zapomenute-heslo/" className="text-[var(--color-brand)] hover:underline">Zapomněli jste heslo?</Link>
         </p>
       )}
-      <p className="text-sm text-center text-[var(--color-muted)]">
-        {register ? "Už účet máte? " : "Nemáte účet? "}
-        <button
-          type="button"
-          className="text-[var(--color-brand)] hover:underline"
-          onClick={() => {
-            setError("");
-            const query = new URLSearchParams(params);
-            if (register) query.delete("rezim");
-            else query.set("rezim", "registrace");
-            router.replace(`/prihlaseni/${query.size ? `?${query}` : ""}`);
-          }}
-        >
-          {register ? "Přihlásit se" : "Zaregistrovat se"}
-        </button>
-      </p>
+      {!signupOpen ? (
+        <p className="text-sm text-center text-[var(--color-muted)]">Registraci nových účtů spustíme v nejbližších dnech.</p>
+      ) : (
+        <p className="text-sm text-center text-[var(--color-muted)]">
+          {register ? "Už účet máte? " : "Nemáte účet? "}
+          <button
+            type="button"
+            className="text-[var(--color-brand)] hover:underline"
+            onClick={() => {
+              setError("");
+              const query = new URLSearchParams(params);
+              if (register) query.delete("rezim");
+              else query.set("rezim", "registrace");
+              router.replace(`/prihlaseni/${query.size ? `?${query}` : ""}`);
+            }}
+          >
+            {register ? "Přihlásit se" : "Zaregistrovat se"}
+          </button>
+        </p>
+      )}
     </div>
   );
 }

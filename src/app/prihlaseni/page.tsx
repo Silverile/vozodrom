@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { connection } from "next/server";
 import { Suspense } from "react";
-import { getSession, googleEnabled } from "@/lib/auth";
+import { getSession, googleEnabled, signupOpen } from "@/lib/auth";
 import { safeNext } from "@/lib/safe-next";
 import { SignInForm } from "./SignInForm";
 
@@ -14,7 +14,7 @@ export default async function SignInPage({ searchParams }: { searchParams: Promi
   return (
     <div className="mx-auto max-w-md px-4 py-10">
       <Suspense>
-        <SignInForm google={googleEnabled()} />
+        <SignInForm google={googleEnabled()} signupOpen={signupOpen()} />
       </Suspense>
     </div>
   );

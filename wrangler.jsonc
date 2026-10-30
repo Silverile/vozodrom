@@ -24,5 +24,6 @@
   ],
   // BETTER_AUTH_URL is public; secrets (BETTER_AUTH_SECRET, GOOGLE_CLIENT_SECRET, …) come from
   // `wrangler secret put` in production and from .dev.vars locally.
-  "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz" }
+  // SIGNUP_OPEN stays "false" until verification e-mails can be sent (src/lib/mail.ts).
+  "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz", "SIGNUP_OPEN": "false" }
 }
