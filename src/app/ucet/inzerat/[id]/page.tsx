@@ -29,6 +29,7 @@ export default async function ManageListingPage({ params }: { params: Promise<{ 
           phone: row.phone ?? "",
           messengers: row.messengers,
           rejectReason: row.rejectReason,
+          wasPublished: row.publishedAt !== null,
         }}
       />
     </div>

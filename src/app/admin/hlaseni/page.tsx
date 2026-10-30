@@ -20,7 +20,7 @@ export default async function ReportsPage() {
       <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Hlášení (DSA) <span className="text-[var(--color-muted)] text-lg font-normal">{reports.length}</span></h1>
       <p className="text-sm text-[var(--color-muted)]">
         Hlášení od uživatelů k inzerátům. Tři otevřená hlášení inzerát skryjí do vašeho rozhodnutí. Oznamovatelé dostanou výsledek
-        e-mailem; při stažení dostane autor zdůvodnění.
+        e-mailem (vyžaduje to DSA); autor stažený inzerát a zdůvodnění uvidí ve svém účtu.
       </p>
       {groups.length === 0 && <p className="card p-6 text-sm text-[var(--color-muted)]">Žádná otevřená hlášení.</p>}
       <ul className="space-y-3">

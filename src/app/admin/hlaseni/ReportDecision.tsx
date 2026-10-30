@@ -11,7 +11,7 @@ export function ReportDecision({ listingId }: { listingId: string }) {
   async function decide(decision: "remove" | "dismiss") {
     const reason = prompt(
       decision === "remove"
-        ? "Zdůvodnění stažení (dostane ho autor inzerátu i oznamovatelé):"
+        ? "Zdůvodnění stažení (autor ho uvidí v účtu, oznamovatelé ho dostanou e-mailem):"
         : "Proč inzerát ponecháváte (dostanou to oznamovatelé):",
     );
     if (!reason?.trim()) return;

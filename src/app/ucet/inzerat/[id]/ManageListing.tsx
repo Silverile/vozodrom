@@ -16,7 +16,7 @@ import { draftStore } from "../../../pridat/AddListingForm";
 const MAX_PHOTOS = 20;
 
 interface Props {
-  listing: { id: string; title: string; status: ListingStatus; data: Draft; photos: ListingPhoto[]; phone: string; messengers: Messenger[]; rejectReason: string | null };
+  listing: { id: string; title: string; status: ListingStatus; data: Draft; photos: ListingPhoto[]; phone: string; messengers: Messenger[]; rejectReason: string | null; wasPublished: boolean };
 }
 
 async function call(url: string, method: string, body?: unknown): Promise<string | null> {
@@ -110,9 +110,16 @@ export function ManageListing({ listing }: Props) {
       </div>
 
       {listing.status === "rejected" && listing.rejectReason && (
-        <p className="card p-4 text-sm"><strong>Důvod zamítnutí:</strong> {listing.rejectReason}<br />Upravte inzerát a odešlete ho znovu.</p>
+        <p className="card p-4 text-sm">
+          <strong>Inzerát {listing.wasPublished ? "jsme stáhli z webu" : "jsme nezveřejnili"}.</strong> Důvod: {listing.rejectReason}
+          <br />
+          <span className="text-[var(--color-muted)]">
+            Rozhodl moderátor{listing.wasPublished ? " po kontrole nebo hlášení uživatelů" : ""}. Upravte inzerát a odešlete ho znovu, případně vysvětlete
+            situaci v popisu; obrátit se můžete také na soud.
+          </span>
+        </p>
       )}
-      {listing.status === "pending" && <p className="card p-4 text-sm text-[var(--color-muted)]">Automatická kontrola našla v inzerátu něco, na co se musí podívat moderátor. O výsledku vám pošleme e-mail.</p>}
+      {listing.status === "pending" && <p className="card p-4 text-sm text-[var(--color-muted)]">Automatická kontrola našla v inzerátu něco, na co se musí podívat moderátor. Výsledek uvidíte tady a v Moje inzeráty.</p>}
       {live && editable && <p className="text-xs text-[var(--color-muted)]">Změněné údaje znovu projdou automatickou kontrolou.</p>}
 
       <section className="card p-4 space-y-3">

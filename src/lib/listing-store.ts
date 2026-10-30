@@ -7,8 +7,7 @@ import { getDb } from "@/db";
 import { type ListingPhoto, type ListingStatus, listing, user } from "@/db/schema";
 import { STAFF_ROLES, type Session, hasRole } from "./auth";
 import { MESSENGERS, type Messenger } from "./listing-status";
-import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
-import { sendMail } from "./mail";
+import { type Draft, cleanDraft, draftProblems, isDraft } from "./listing-draft";
 import { marketEstimate, roughMarketPrice } from "./market";
 import { reviewListing } from "./moderation";
 import { toListing } from "./user-listings";
@@ -20,6 +19,8 @@ import { toListing } from "./user-listings";
 //                      pending ──────────────────────┘   ▼
 //                         └──reject──▶ rejected ──edit──▶ draft
 // Editing a published listing runs the review again; a flagged edit goes to the moderators.
+// Authors are not e-mailed about these steps (to save the sending quota): the status and any
+// rejection reasons are shown in their account.
 
 export type ListingRow = typeof listing.$inferSelect;
 
@@ -141,7 +142,6 @@ export async function changeStatus(session: Session, id: string, action: string,
             : { status: "published", moderationFlags: [], submittedAt: now, publishedAt: row.publishedAt ?? now, rejectReason: null, moderatedBy: null, updatedAt: now },
         )
         .where(eq(listing.id, id));
-      if (!flags.length) await notifyOwner(row, "published");
       return;
     }
     await getDb()
@@ -167,7 +167,6 @@ export async function changeStatus(session: Session, id: string, action: string,
         ...(action === "approve" && { publishedAt: row.publishedAt ?? new Date() }),
       })
       .where(eq(listing.id, id));
-    await notifyOwner(row, action === "approve" ? "published" : "rejected", rejectReason);
     return;
   }
   throw new ListingError(400, "Neznámá akce.");
@@ -186,22 +185,6 @@ async function autoReview(row: ListingRow, data: Draft): Promise<string[]> {
     publishedBefore: earlier?.n ?? 0,
     marketPrice: marketEstimate(asListing)?.median ?? roughMarketPrice(asListing),
   });
-}
-
-async function notifyOwner(row: ListingRow, result: "published" | "rejected", reason?: string) {
-  const [owner] = await getDb().select({ email: user.email }).from(user).where(eq(user.id, row.userId)).limit(1);
-  if (!owner) return;
-  const base = getCloudflareContext().env.BETTER_AUTH_URL;
-  const title = draftTitle(row.data);
-  // A listing that was online is taken down; the author gets the reasons and the ways to object (DSA art. 17).
-  const takenDown = result === "rejected" && row.publishedAt !== null;
-  const text =
-    result === "published"
-      ? `Dobrý den,\n\nváš inzerát ${title} je zveřejněný:\n${base}/inzerat/${row.id}/\n\nSpravovat ho můžete v účtu: ${base}/ucet/inzerat/${row.id}/`
-      : `Dobrý den,\n\nváš inzerát ${title} jsme ${takenDown ? "stáhli z webu" : "nemohli zveřejnit"}.\n\nDůvod: ${reason}\nRozhodl moderátor${takenDown ? " na základě kontroly nebo hlášení uživatelů" : ""}.\n\nInzerát můžete upravit a odeslat znovu: ${base}/ucet/inzerat/${row.id}/\nS rozhodnutím nesouhlasíte? Odešlete inzerát znovu s vysvětlením v popisu; obrátit se můžete také na soud.`;
-  // A failed notice must not undo the moderation decision; the owner still sees the status in the account.
-  const subject = result === "published" ? `Inzerát zveřejněn: ${title}` : takenDown ? `Inzerát stažen: ${title}` : `Inzerát zamítnut: ${title}`;
-  await sendMail({ to: owner.email, subject, text }).catch(() => {});
 }
 
 export async function deleteListing(session: Session, id: string) {

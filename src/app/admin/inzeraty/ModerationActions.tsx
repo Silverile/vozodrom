@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import type { ListingStatus } from "@/db/schema";
 
-// Approve or reject; the author gets an e-mail either way. A published listing can be taken down
+// Approve or reject; the author sees the result and the reason in the account. A published listing can be taken down
 // (reject) with a reason, which is what a DSA-style removal needs.
 export function ModerationActions({ id, status }: { id: string; status: ListingStatus }) {
   const router = useRouter();

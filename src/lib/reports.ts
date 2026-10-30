@@ -15,7 +15,7 @@ import { sendMail } from "./mail";
 // - anyone can report a published listing, with a reason, name and e-mail, in good faith;
 // - the notifier gets a confirmation and later the decision;
 // - three open notices hide a listing until a moderator looks at it;
-// - removing a listing sends its author the reasons (the listing rejection e-mail).
+// - removing a listing shows its author the reasons in the account (no e-mail, to save the quota).
 
 /** Open notices that hide a listing until a moderator decides. */
 const HIDE_AT = 3;
