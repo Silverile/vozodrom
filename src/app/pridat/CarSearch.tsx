@@ -44,7 +44,7 @@ let index: Entry[] | undefined;
 function entries(): Entry[] {
   index ??= makesIn("auto").flatMap((make) =>
     modelLinesOf(make.slug).map((line) => {
-      const lineWords = [...wordsOf(line.name), ...(line.aliases ?? []).flatMap(wordsOf), fold(line.name).replace(/[\s-]+/g, "")];
+      const lineWords = [...wordsOf(line.name), ...((line as { aliases?: string[] }).aliases ?? []).flatMap(wordsOf), fold(line.name).replace(/[\s-]+/g, "")];
       return { make, line, lineWords, words: [...wordsOf(make.name), ...make.keys.flatMap(wordsOf), ...lineWords] };
     }),
   );
