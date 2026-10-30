@@ -35,6 +35,24 @@ const FUEL: Record<string, ListingFuel> = {
   electric: "elektro",
 };
 
+/**
+ * The catalogue card's generation for a generation of the model list. Their codes differ for some
+ * lines ("GB/IB" in the list, "GB" on the card), so codes are compared part by part, then years.
+ */
+export function cardGeneration<T extends { code: string | null; from: number | null; to: number | null }>(
+  g: { code: string | null; from: number | null; to: number | null },
+  cards: T[],
+): T | undefined {
+  const parts = (code: string | null) => (code ?? "").split(/[s/,]+/).filter(Boolean).map((p) => p.toLowerCase());
+  const mine = parts(g.code);
+  return (
+    cards.find((c) => c.code !== null && c.code === g.code) ??
+    cards.find((c) => parts(c.code).some((p) => mine.includes(p))) ??
+    (g.from !== null ? cards.find((c) => c.from === g.from && (c.to === g.to || g.to === null || c.to === null)) : undefined) ??
+    (g.to !== null ? cards.find((c) => c.code === null && c.to === g.to && c.from !== null) : undefined)
+  );
+}
+
 export const toListingFuel = (fuel: string | null | undefined): ListingFuel | null => (fuel ? FUEL[fuel] ?? null : null);
 export const toGearbox = (type: string): ListingGearbox => (type === "manual" ? "manuál" : "automat");
 

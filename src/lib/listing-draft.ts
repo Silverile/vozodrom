@@ -96,7 +96,10 @@ export function draftFieldProblems(draft: Draft): Partial<Record<DraftField, str
   if (!whole(draft.year, 1950, CURRENT_YEAR + 1)) problems.year = "vyplňte rok výroby";
   else if (lineOf(draft)) {
     const { dated, matching } = generationsForYear(draft);
-    if (dated.length && !matching.length) problems.year = `model se v roce ${draft.year} nevyráběl`;
+    const line = lineOf(draft)!;
+    // Only when the year is outside the whole line: some generations have no years in the catalogue.
+    const outside = (line.from !== null && draft.year < line.from) || (line.to !== null && !line.current && draft.year > line.to);
+    if (dated.length && !matching.length && outside) problems.year = `model se v roce ${draft.year} nevyráběl`;
     else if (draft.generation && matching.length && !matching.some((g) => generationId(g) === draft.generation)) problems.generation = "generace nesedí s rokem výroby";
     else if (!draft.generation && matching.length > 1) problems.generation = "vyberte generaci";
   }
@@ -105,7 +108,8 @@ export function draftFieldProblems(draft: Draft): Partial<Record<DraftField, str
   if (!FUELS.includes(draft.fuel as ListingFuel)) problems.fuel = "vyberte palivo";
   if (!whole(draft.powerKw, 1, 1500)) problems.powerKw = "vyplňte výkon (kW)";
   if (draft.transmission !== "manuál" && draft.transmission !== "automat") problems.transmission = "vyberte převodovku";
-  if (!whole(draft.mileageKm, 0, 1_500_000)) problems.mileageKm = "neplatný nájezd";
+  if (!draft.mileageKm) problems.mileageKm = "vyplňte nájezd (km)";
+  else if (!whole(draft.mileageKm, 1, 1_500_000)) problems.mileageKm = "neplatný nájezd";
   if (!whole(draft.price, 1000, 100_000_000)) problems.price = "vyplňte cenu (Kč, při platbě najednou)";
   if (!REGIONS.includes(draft.region)) problems.place = "vyberte místo";
   else if (draft.city && getCity(draft.city)?.region !== draft.region) problems.place = "město nepatří do kraje";

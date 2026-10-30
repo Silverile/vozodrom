@@ -2,17 +2,18 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { ListingRow } from "@/components/ListingRow";
-import { frontDrawingFor, newestFrontDrawing } from "@/components/FrontDrawing";
+import { FrontDrawing, frontDrawingFor, newestFrontDrawing } from "@/components/FrontDrawing";
 import { FUEL_LABEL, REGIONS } from "@/lib/catalog";
 import { formatKm, formatPrice } from "@/lib/format";
 import { citiesIn, getCity } from "@/lib/geo";
-import { BODY_KEYS, type FormEngine, type FormGeneration, pictogramBody } from "@/lib/listing-catalog";
+import { BODY_KEYS, type FormEngine, type FormGeneration, cardGeneration, coversYear, pictogramBody } from "@/lib/listing-catalog";
 import {
   type DraftField, EMPTY_LOCAL_DRAFT, type LocalDraft, draftFieldProblems, generationId, generationsForYear, isDraft, lineOf,
 } from "@/lib/listing-draft";
 import { getMake, makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { createStore } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
+import { CarSearch } from "./CarSearch";
 import { SubmitListing } from "./SubmitListing";
 
 // Car listing form driven by the catalogue: make → model line → year → generation → body →
@@ -62,8 +63,6 @@ const useHydrated = () => useSyncExternalStore(() => () => {}, () => true, () =>
 const powerHint = (e: FormEngine) =>
   e.kwMin && e.kwMax ? (e.kwMin === e.kwMax ? `${e.kwMin} kW` : `${e.kwMin}–${e.kwMax} kW`) : null;
 
-const engineOption = (e: FormEngine) => [e.label, e.fuel ? FUEL_LABEL[e.fuel].toLowerCase() : null, powerHint(e)].filter(Boolean).join(" · ");
-
 /** A labelled control with its problem underneath; the control itself is passed as children. */
 function Field({ id, label, error, hint, wide, children, onLeave }: {
   id: string;
@@ -94,6 +93,8 @@ export function AddListingForm() {
   const [modelQuery, setModelQuery] = useState("");
   const [customModel, setCustomModel] = useState(false);
   const [customEngine, setCustomEngine] = useState(false);
+  // engine words typed into the quick search ("1.0 tdi"), to put the matching catalogue engines first
+  const [engineHint, setEngineHint] = useState("");
   // undefined until the stored draft is read: then the first unfinished step opens; null = all closed.
   const [open, setOpen] = useState<number | null | undefined>(undefined);
   const [touched, setTouched] = useState<Set<DraftField>>(new Set());
@@ -111,9 +112,16 @@ export function AddListingForm() {
   const generationChoices = draft.year ? matching : dated;
   const chosenId = draft.generation || (matching.length === 1 ? generationId(matching[0]) : "");
   const chosenGeneration = generationChoices.find((g) => generationId(g) === chosenId);
-  const cardGen = cardGenerations.find((g) => g.code === chosenId);
+  // The catalogue card's generation: matched to the chosen one, else the one built in the year
+  // (some generations of the model list have no years, the cards usually do).
+  const cardGen =
+    (chosenGeneration && cardGeneration(chosenGeneration, cardGenerations)) ??
+    (draft.year ? cardGenerations.filter((g) => g.from !== null && coversYear(g, draft.year)).pop() : undefined);
   const bodies = (cardGen?.bodies.length ? cardGen.bodies : line?.bodyTypes.length ? line.bodyTypes : Object.keys(BODY_KEYS)).filter((b) => b in BODY_KEYS);
-  const engines = cardGen?.engines ?? [];
+  const hintWords = engineHint.toLowerCase().split(/s+/).filter(Boolean);
+  const fits = (e: FormEngine) => hintWords.length > 0 && hintWords.every((w) => e.label.toLowerCase().includes(w));
+  // Engines the seller already named in the quick search come first.
+  const engines = [...(cardGen?.engines ?? [])].sort((a, b) => Number(fits(b)) - Number(fits(a)));
   // The same displacement can exist as petrol and diesel, so the fuel tells them apart.
   const sameLabel = (e: FormEngine) => e.label === draft.engine;
   const engineIndex = Math.max(engines.findIndex((e) => sameLabel(e) && e.fuel === draft.fuel), engines.findIndex(sameLabel));
@@ -237,6 +245,28 @@ export function AddListingForm() {
 
   const fieldsOf: ReactNode[] = [
     <>
+      <CarSearch
+        onPick={(pick) => {
+          const sameCar =
+            pick.brand === draft.brand && pick.model === draft.model && (pick.year ?? draft.year) === draft.year && (pick.generation ?? "") === draft.generation;
+          setCustomModel(false);
+          setCustomEngine(false);
+          setModelQuery("");
+          setEngineHint(pick.engineHint);
+          write({
+            brand: pick.brand,
+            model: pick.model,
+            generation: pick.generation ?? "",
+            ...(pick.year && { year: pick.year }),
+            // a different car or generation: engines and gearboxes of the previous one no longer apply
+            ...(!sameCar && { body: "", engine: "", fuel: "", powerKw: 0, transmission: "" }),
+          });
+          (["brand", "model", ...(pick.year ? (["year"] as const) : [])] as DraftField[]).forEach(touch);
+        }}
+      />
+      <p className="sm:col-span-2 flex items-center gap-3 text-xs text-[var(--color-muted)]" aria-hidden="true">
+        <span className="h-px flex-1 bg-[var(--color-line)]" />nebo vyberte ručně<span className="h-px flex-1 bg-[var(--color-line)]" />
+      </p>
       <Field id="f-brand" label="Značka" error={shown("brand", 0)} onLeave={() => touch("brand")}>
         <select
           id="f-brand"
@@ -317,7 +347,7 @@ export function AddListingForm() {
           <div className="mt-1 grid gap-2 grid-cols-2 sm:grid-cols-3">
             {generationChoices.map((g) => {
               const id = generationId(g);
-              const card = cardGenerations.find((c) => c.code === id);
+              const tileDrawing = frontDrawingFor(draft.brand, line.slug, g.from ?? draft.year);
               return (
                 <button
                   key={id}
@@ -326,8 +356,8 @@ export function AddListingForm() {
                   onClick={() => { write({ generation: id }); touch("generation"); }}
                   className="card overflow-hidden text-left text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:ring-2 aria-pressed:ring-[var(--color-brand)]"
                 >
-                  {card?.photo ? (
-                    <img src={card.photo} alt="" className="w-full aspect-[16/10] object-cover bg-[var(--color-photo)]" loading="lazy" />
+                  {tileDrawing ? (
+                    <FrontDrawing id={tileDrawing} alt={`${line.name} ${g.code ?? ""}`} />
                   ) : (
                     <span className="block w-full aspect-[16/10] bg-[var(--color-field)]" />
                   )}
@@ -343,42 +373,65 @@ export function AddListingForm() {
             <p id="f-generation-chyba" className="mt-1 text-xs text-[var(--color-warn)]">Vyberte generaci, v roce {draft.year} se prodávalo víc generací.</p>
           ) : !draft.year ? (
             <p className="text-xs text-[var(--color-muted)] mt-1">Vyplňte rok výroby, nabídneme jen generace z toho roku.</p>
+          ) : matching.length > 1 ? (
+            <p className="text-xs text-[var(--color-muted)] mt-1">V roce {draft.year} se prodávalo víc generací, vyberte tu svoji.</p>
           ) : (
-            matching.length > 1 && <p className="text-xs text-[var(--color-muted)] mt-1">V roce {draft.year} se prodávalo víc generací, vyberte tu svoji.</p>
+            matching.length === 1 && <p className="text-xs text-[var(--color-muted)] mt-1">Vybráno podle roku výroby. Jiná generace? Zkontrolujte rok.</p>
           )}
         </fieldset>
       )}
 
       {engines.length > 0 && (
-        <Field id={showEngineFields ? "f-engine-katalog" : "f-engine"} label="Motor z katalogu" wide error={showEngineFields ? undefined : shown("engine", 0)} onLeave={() => touch("engine")}>
-          <select
-            id={showEngineFields ? "f-engine-katalog" : "f-engine"}
-            className={input}
-            value={showEngineFields ? CUSTOM : engineIndex >= 0 ? String(engineIndex) : ""}
-            {...(showEngineFields ? {} : invalid("engine", 0))}
-            onChange={(e) => {
-              if (e.target.value === CUSTOM) {
+        <fieldset className="sm:col-span-2" data-field="engine" aria-describedby={!showEngineFields && shown("engine", 0) ? "f-engine-chyba" : undefined}>
+          <legend className="text-sm">Motor z katalogu{cardGen?.name ? ` · ${cardGen.name}` : ""}</legend>
+          <div className="mt-1 grid gap-2 grid-cols-1 sm:grid-cols-2">
+            {engines.map((e, i) => (
+              <button
+                key={`${e.label}-${e.fuel}-${i}`}
+                type="button"
+                aria-pressed={!showEngineFields && engineIndex === i}
+                onClick={() => {
+                  setCustomEngine(false);
+                  touch("engine");
+                  write({
+                    engine: e.label,
+                    ...(e.fuel && { fuel: e.fuel }),
+                    ...(e.kwMin && e.kwMin === e.kwMax && { powerKw: e.kwMin }),
+                  });
+                }}
+                className="card px-3 py-2 text-left text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:ring-2 aria-pressed:ring-[var(--color-brand)]"
+              >
+                <span className="block font-semibold">
+                  {e.label}
+                  {fits(e) && <span className="ml-2 chip text-xs font-normal">podle hledání</span>}
+                </span>
+                <span className="block text-xs text-[var(--color-muted)]">{[e.fuel ? FUEL_LABEL[e.fuel] : null, powerHint(e)].filter(Boolean).join(" · ") || "údaje neznáme"}</span>
+              </button>
+            ))}
+            <button
+              type="button"
+              aria-pressed={showEngineFields}
+              onClick={() => {
                 setCustomEngine(true);
-                return write({ engine: "" });
-              }
-              setCustomEngine(false);
-              const engine = engines[Number(e.target.value)];
-              if (!engine) return write({ engine: "" });
-              write({
-                engine: engine.label,
-                ...(engine.fuel && { fuel: engine.fuel }),
-                ...(engine.kwMin && engine.kwMin === engine.kwMax && { powerKw: engine.kwMin }),
-              });
-            }}
-          >
-            <option value="">Vyberte</option>
-            {engines.map((e, i) => <option key={`${e.label}-${i}`} value={i}>{engineOption(e)}</option>)}
-            <option value={CUSTOM}>Jiný motor…</option>
-          </select>
-        </Field>
+                write({ engine: "" });
+              }}
+              className="card px-3 py-2 text-left text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:ring-2 aria-pressed:ring-[var(--color-brand)]"
+            >
+              <span className="block font-semibold">Jiný motor</span>
+              <span className="block text-xs text-[var(--color-muted)]">Napíšete ho sami</span>
+            </button>
+          </div>
+          {!showEngineFields && shown("engine", 0) && <p id="f-engine-chyba" className="mt-1 text-xs text-[var(--color-warn)]">Vyberte motor, nebo zvolte Jiný motor.</p>}
+        </fieldset>
       )}
       {showEngineFields && (
-        <Field id="f-engine" label="Motor" error={shown("engine", 0)} onLeave={() => touch("engine")}>
+        <Field
+          id="f-engine"
+          label="Motor"
+          error={shown("engine", 0)}
+          onLeave={() => touch("engine")}
+          hint={engines.length === 0 && line && "Motory této generace katalog zatím nezná, napište ho."}
+        >
           <input id="f-engine" className={input} placeholder="např. 1.6 TDI" value={draft.engine} {...invalid("engine", 0)} onChange={(e) => write({ engine: e.target.value })} />
         </Field>
       )}

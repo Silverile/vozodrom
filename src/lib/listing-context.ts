@@ -2,7 +2,7 @@ import "server-only";
 
 import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
-import { coversYear, toListingFuel } from "./listing-catalog";
+import { cardGeneration, coversYear, toListingFuel } from "./listing-catalog";
 import { generationId, lineOf, type Draft } from "./listing-draft";
 import { type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, stagesOf } from "./modelCards";
 import type { Listing } from "./types";
@@ -71,7 +71,9 @@ export function listingContext(listing: Listing, draft: Draft): ListingContext |
   const line = lineOf(draft);
   const card = line && cardOf(draft.brand, line.slug);
   if (!line || !card) return null;
-  const chosen = card.generations.findIndex((g) => draft.generation && generationId(g) === draft.generation);
+  const listed = line.generations.find((g) => draft.generation && generationId(g) === draft.generation);
+  const matched = listed && cardGeneration(listed, card.generations);
+  const chosen = matched ? card.generations.indexOf(matched) : -1;
   const covering = card.generations.map((g, i) => [g, i] as const).filter(([g]) => g.from !== null && coversYear(g, listing.year));
   const genIndex = chosen >= 0 ? chosen : covering.length ? covering[covering.length - 1][1] : -1;
   if (genIndex < 0) return null;
