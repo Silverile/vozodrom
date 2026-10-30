@@ -21,10 +21,10 @@
 - [x] Разделы: авто, техника, мото, запчасти, шины; отзывы владельцев, форум, новости и советы (тестовые данные)
 - [x] Подача объявления для всех разделов (только предпросмотр, без отправки)
 - [x] Договор купли-продажи и инструкция по přepis (проверено Codex)
-- [ ] Настоящие фото вместо иллюстраций (после бэкенда и загрузки фото)
+- [x] Настоящие фото в объявлениях пользователей (R2, сжатие и удаление EXIF в браузере); тестовые объявления — иллюстрации
 
 ## Перед открытием для людей
-- [ ] Хостинг с бэкендом (Vercel/Cloudflare + Postgres в ЕС) — GitHub Pages запрещает коммерческое использование
+- [x] Хостинг с бэкендом: Cloudflare Workers + Neon Postgres (Франкфурт) — подробности в docs/provoz.md
   - [x] Выбран Cloudflare Workers (OpenNext); Workers Paid ($5/мес) оплачен 30.10.2026
   - [x] Пробный деплой vozodrom-trial на workers.dev работает (Worker 3,2 MiB gzip — больше лимита Free)
   - [x] Кеш страниц: пока статические ассеты Workers (страницы без ревалидации); R2 — когда появится БД
@@ -51,4 +51,12 @@
 - [x] Přihlášení přes Google (projekt vozodrom v Google Cloud, klient vozodrom.cz; secrets ve Workeru), ověřeno 30.10.2026
 - [x] E-maily: Cloudflare Email Service, noreply@vozodrom.cz (SPF/DKIM/DMARC), limit 200/den; registrace otevřená
 - [x] WAF: Block scanners (/wp-*, *.php, /.env, /.git → 403); Auth rate limit 5 POST/10 s na IP (sign-in, sign-up, reset)
-- [ ] Další etapy adminu: inzeráty s fotkami (R2) + moderace, hlášení DSA, fórum a recenze, katalog a novinky
+- [x] Inzeráty uživatelů: formulář podle katalogu, fotky, robot + ruční moderace podezřelých
+- [x] Hlášení podle DSA (čl. 16/17): formulář, skrytí po 3 hlášeních, rozhodnutí a vyrozumění
+- [x] Chat kupující–prodejce (WebSocket, Durable Objects), oznámení ve vlákně „Vozodrom“, hlídací pes (cron)
+- [ ] Neon: zbavit se usínání databáze (doplatek $10/měs. nebo Launch) — zatím ponecháno
+- [ ] Inzeráty uživatelů ve „Výběr“ a „Oblíbené“
+- [ ] Podávání inzerátů v rubrikách technika, moto, díly, pneumatiky
+- [ ] Chat: nahlášení zprávy, blokování uživatele
+- [ ] Admin: moderace fóra a recenzí, úpravy katalogu a novinek
+- [ ] Příjem pošty na doméně (např. podpora@vozodrom.cz přes Cloudflare Email Routing)
