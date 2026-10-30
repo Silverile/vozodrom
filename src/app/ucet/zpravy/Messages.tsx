@@ -63,7 +63,12 @@ export function Messages({ userId, initial }: { userId: string; initial: Convers
       (event: ChatEvent) => {
         if (event.type !== "message") return;
         if (event.conversationId === openId) {
-          setMessages((list) => (list.some((m) => m.id === event.message.id) ? list : [...list, event.message]));
+          setMessages((list) => {
+            if (list.some((m) => m.id === event.message.id)) return list;
+            // Our own message pushed back before the send request answered: it replaces the pending copy.
+            const pending = list.findIndex((m) => m.id.startsWith("odesilani-") && m.body === event.message.body);
+            return pending >= 0 ? list.map((m, i) => (i === pending ? event.message : m)) : [...list, event.message];
+          });
           if (document.visibilityState === "visible") markRead(event.conversationId);
         }
         if (conversations.some((c) => c.id === event.conversationId)) {
@@ -85,11 +90,23 @@ export function Messages({ userId, initial }: { userId: string; initial: Convers
   async function send() {
     if (!open || !text.trim()) return;
     setError("");
-    const response = await fetch(`/api/zpravy/${open.id}/`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ body: text }) });
-    const result = (await response.json().catch(() => ({}))) as ChatMessage & { error?: string };
-    if (!response.ok) return setError(result.error ?? "Zprávu se nepodařilo odeslat.");
+    // Shown at once; replaced by the stored message when the server answers, removed if it fails.
+    const draft = text;
+    const pending: ChatMessage = { id: `odesilani-${Date.now()}`, senderId: userId, body: draft.trim(), link: null, createdAt: new Date().toISOString() };
     setText("");
-    setMessages((list) => (list.some((m) => m.id === result.id) ? list : [...list, result]));
+    setMessages((list) => [...list, pending]);
+    const response = await fetch(`/api/zpravy/${open.id}/`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ body: draft }) }).catch(() => null);
+    const result = (await response?.json().catch(() => ({}))) as (ChatMessage & { error?: string }) | undefined;
+    if (!response?.ok || !result?.id) {
+      setMessages((list) => list.filter((m) => m.id !== pending.id));
+      setText(draft);
+      return setError(result?.error ?? "Zprávu se nepodařilo odeslat.");
+    }
+    // The pushed copy may already be in the list; keep exactly one.
+    setMessages((list) => {
+      const withoutPending = list.filter((m) => m.id !== pending.id);
+      return withoutPending.some((m) => m.id === result.id) ? withoutPending : [...withoutPending, result];
+    });
   }
 
   return (

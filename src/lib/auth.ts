@@ -65,6 +65,9 @@ export const getAuth = cache(() => {
         ? { google: { clientId: env.GOOGLE_CLIENT_ID, clientSecret: env.GOOGLE_CLIENT_SECRET, disableSignUp: !signupOpen() } }
         : undefined,
     account: { accountLinking: { enabled: true, trustedProviders: ["google"] } },
+    // Every signed-in request reads the session; a signed cookie copy for two minutes saves that
+    // database round trip. A ban or sign-out elsewhere therefore takes effect within two minutes.
+    session: { cookieCache: { enabled: true, maxAge: 120 } },
     plugins: [admin({ defaultRole: "user", adminRoles: ["admin"] }), nextCookies()],
   });
 });

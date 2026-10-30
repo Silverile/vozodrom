@@ -49,6 +49,18 @@ const toMessage = (m: typeof message.$inferSelect): ChatMessage => ({
   createdAt: m.createdAt.toISOString(),
 });
 
+/**
+ * Runs work after the response has been sent (pushes, unread counts), so the sender does not wait
+ * for other people's sockets. Outside Workers it simply runs now.
+ */
+function later(work: Promise<unknown>) {
+  try {
+    getCloudflareContext().ctx.waitUntil(work.catch((error) => console.error("[chat]", error)));
+  } catch {
+    work.catch((error) => console.error("[chat]", error));
+  }
+}
+
 /** Sends an event to every open tab of the users. Delivery is best effort: the page reloads from the database. */
 async function push(userIds: string[], event: ChatEvent) {
   let env: CloudflareEnv;
@@ -87,22 +99,28 @@ export async function unreadTotal(userId: string): Promise<number> {
   return row?.n ?? 0;
 }
 
-async function insertMessage(conversationId: string, senderId: string | null, body: string, link: string | null, memberIds: string[]) {
+async function insertMessage(conversationId: string, senderId: string | null, body: string, link: string | null, memberIds: string[]): Promise<ChatMessage> {
   const db = getDb();
   const row = { id: `m-${generateRandomString(16, "a-z", "0-9")}`, conversationId, senderId, body, link, createdAt: new Date() };
   await db.insert(message).values(row);
-  await db
-    .update(conversation)
-    .set({ lastMessageAt: row.createdAt, lastMessagePreview: body.slice(0, 140) })
-    .where(eq(conversation.id, conversationId));
-  if (senderId) {
-    await db
-      .update(conversationMember)
-      .set({ lastReadAt: row.createdAt })
-      .where(and(eq(conversationMember.conversationId, conversationId), eq(conversationMember.userId, senderId)));
-  }
-  await push(memberIds, { type: "message", conversationId, message: toMessage(row) });
-  await pushUnread(memberIds.filter((id) => id !== senderId));
+  // The bookkeeping and the pushes do not change what the sender sees, so they run after the response.
+  later(
+    (async () => {
+      await db
+        .update(conversation)
+        .set({ lastMessageAt: row.createdAt, lastMessagePreview: body.slice(0, 140) })
+        .where(eq(conversation.id, conversationId));
+      if (senderId) {
+        await db
+          .update(conversationMember)
+          .set({ lastReadAt: row.createdAt })
+          .where(and(eq(conversationMember.conversationId, conversationId), eq(conversationMember.userId, senderId)));
+      }
+      await push(memberIds, { type: "message", conversationId, message: toMessage(row) });
+      await pushUnread(memberIds.filter((id) => id !== senderId));
+    })(),
+  );
+  return toMessage(row);
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -154,11 +172,14 @@ export async function openListingChat(session: Session, listingId: string): Prom
 }
 
 async function membership(session: Session, conversationId: string) {
-  const db = getDb();
-  const members = await db.select().from(conversationMember).where(eq(conversationMember.conversationId, conversationId));
-  if (!members.some((m) => m.userId === session.user.id)) throw new ListingError(404, "Konverzace nenalezena.");
-  const [conv] = await db.select().from(conversation).where(eq(conversation.id, conversationId)).limit(1);
-  return { conv: conv!, members };
+  // One query for the conversation and its members.
+  const rows = await getDb()
+    .select({ conv: conversation, userId: conversationMember.userId })
+    .from(conversation)
+    .innerJoin(conversationMember, eq(conversationMember.conversationId, conversation.id))
+    .where(eq(conversation.id, conversationId));
+  if (!rows.some((r) => r.userId === session.user.id)) throw new ListingError(404, "Konverzace nenalezena.");
+  return { conv: rows[0].conv, members: rows.map((r) => ({ userId: r.userId })) };
 }
 
 export async function sendMessage(session: Session, conversationId: string, text: string): Promise<ChatMessage> {
@@ -172,9 +193,7 @@ export async function sendMessage(session: Session, conversationId: string, text
     .from(message)
     .where(and(eq(message.senderId, session.user.id), gt(message.createdAt, new Date(Date.now() - 600_000))));
   if ((recent?.n ?? 0) >= PER_TEN_MINUTES) throw new ListingError(429, "Posíláte zprávy příliš rychle, chvíli počkejte.");
-  await insertMessage(conversationId, session.user.id, body, null, members.map((m) => m.userId));
-  const [last] = await db.select().from(message).where(eq(message.conversationId, conversationId)).orderBy(desc(message.createdAt)).limit(1);
-  return toMessage(last!);
+  return insertMessage(conversationId, session.user.id, body, null, members.map((m) => m.userId));
 }
 
 export async function markRead(session: Session, conversationId: string) {
