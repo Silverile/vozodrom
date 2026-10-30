@@ -9,11 +9,12 @@ import type { Session } from "./auth";
 import { draftTitle } from "./listing-draft";
 import { REPORT_CATEGORY_LABEL as CATEGORY_LABEL } from "./listing-status";
 import { ListingError, changeStatus, findListing } from "./listing-store";
+import { notify, notifyStaff } from "./chat";
 import { sendMail } from "./mail";
 
 // Notices about listings and how they are decided (DSA art. 16 and 17):
 // - anyone can report a published listing, with a reason, name and e-mail, in good faith;
-// - the notifier gets a confirmation and later the decision;
+// - the notifier gets a confirmation and later the decision: in the chat when signed in, else by e-mail;
 // - three open notices hide a listing until a moderator looks at it;
 // - removing a listing shows its author the reasons in the account (no e-mail, to save the quota).
 
@@ -74,11 +75,16 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
   });
 
   const title = draftTitle(target.data);
-  await sendMail({
-    to: notice.email,
-    subject: `Hlášení přijato: ${title}`,
-    text: `Dobrý den,\n\nděkujeme, vaše hlášení k inzerátu ${title} jsme přijali a posoudíme ho. O výsledku vás budeme informovat e-mailem.\n\nDůvod: ${CATEGORY_LABEL[notice.category as ReportCategory]}\n${notice.explanation}`,
-  }).catch(() => {});
+  if (session) {
+    await notify(session.user.id, `Hlášení k inzerátu ${title} jsme přijali a posoudíme ho. Výsledek vám napíšeme sem.`);
+  } else {
+    await sendMail({
+      to: notice.email,
+      subject: `Hlášení přijato: ${title}`,
+      text: `Dobrý den,\n\nděkujeme, vaše hlášení k inzerátu ${title} jsme přijali a posoudíme ho. O výsledku vás budeme informovat e-mailem.\n\nDůvod: ${CATEGORY_LABEL[notice.category as ReportCategory]}\n${notice.explanation}`,
+    }).catch(() => {});
+  }
+  await notifyStaff(`Nové hlášení: ${title} (${CATEGORY_LABEL[notice.category as ReportCategory]})`, "/admin/hlaseni/");
 
   const [open] = await db.select({ n: count() }).from(report).where(and(eq(report.listingId, target.id), eq(report.status, "open")));
   if ((open?.n ?? 0) >= HIDE_AT) {
@@ -87,6 +93,8 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
       .update(listing)
       .set({ status: "pending", moderationFlags: [...new Set([...target.moderationFlags, "opakovaně nahlášeno uživateli"])], updatedAt: new Date() })
       .where(and(eq(listing.id, target.id), eq(listing.status, "published")));
+    await notify(target.userId, `Inzerát ${title} jsme kvůli hlášením uživatelů dočasně skryli, než ho posoudí moderátor.`, `/ucet/inzerat/${target.id}/`);
+    await notifyStaff(`Skryto po ${HIDE_AT} hlášeních: ${title}`, "/admin/hlaseni/");
   }
 }
 
@@ -115,6 +123,7 @@ export async function decideReports(session: Session, listingId: string, decisio
       .update(listing)
       .set({ status: "published", moderationFlags: target.moderationFlags.filter((f) => f !== "opakovaně nahlášeno uživateli"), updatedAt: new Date() })
       .where(eq(listing.id, listingId));
+    await notify(target.userId, `Inzerát ${draftTitle(target.data)} je po kontrole hlášení znovu zveřejněný.`, `/inzerat/${listingId}/`);
   }
 
   await db
@@ -129,6 +138,10 @@ export async function decideReports(session: Session, listingId: string, decisio
       ? `Inzerát jsme stáhli z webu.`
       : `Inzerát jsme posoudili a ponecháváme ho zveřejněný: ${base}/inzerat/${listingId}/`;
   for (const n of notices) {
+    if (n.userId) {
+      await notify(n.userId, `Výsledek hlášení k inzerátu ${title}: ${decision === "remove" ? "inzerát jsme stáhli z webu" : "inzerát ponecháváme zveřejněný"}. Zdůvodnění: ${text}`);
+      continue;
+    }
     await sendMail({
       to: n.notifierEmail,
       subject: `Výsledek hlášení: ${title}`,

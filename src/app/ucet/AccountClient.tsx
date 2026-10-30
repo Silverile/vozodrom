@@ -129,7 +129,7 @@ function Section({ name, listings }: { name: SectionKey; listings: MyListing[] }
     case "hlidaci-pes":
       return <Watchdog />;
     case "zpravy":
-      return <Empty title="Žádné zprávy" text="Brzy si tu budete psát s prodávajícími a kupujícími, bez zveřejnění telefonu nebo e-mailu." />;
+      return <Empty title="Zprávy" text="Konverzace s prodávajícími a kupujícími a oznámení od Vozodromu." action={{ href: "/ucet/zpravy/", label: "Otevřít zprávy" }} />;
     case "statistiky":
       return <Empty title="Statistiky inzerátů" text="Po zveřejnění inzerátu tu uvidíte počet zobrazení, uložení do oblíbených a dotazů po dnech." />;
     case "vin":

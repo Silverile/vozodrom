@@ -7,7 +7,8 @@ import { getDb } from "@/db";
 import { type ListingPhoto, type ListingStatus, listing, user } from "@/db/schema";
 import { STAFF_ROLES, type Session, hasRole } from "./auth";
 import { MESSENGERS, type Messenger } from "./listing-status";
-import { type Draft, cleanDraft, draftProblems, isDraft } from "./listing-draft";
+import { notify, notifyStaff } from "./chat";
+import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
 import { marketEstimate, roughMarketPrice } from "./market";
 import { reviewListing } from "./moderation";
 import { toListing } from "./user-listings";
@@ -19,8 +20,8 @@ import { toListing } from "./user-listings";
 //                      pending ──────────────────────┘   ▼
 //                         └──reject──▶ rejected ──edit──▶ draft
 // Editing a published listing runs the review again; a flagged edit goes to the moderators.
-// Authors are not e-mailed about these steps (to save the sending quota): the status and any
-// rejection reasons are shown in their account.
+// Authors are not e-mailed about these steps (to save the sending quota): they get a message in
+// their "Vozodrom" chat thread, and moderators get one for each listing waiting for them.
 
 export type ListingRow = typeof listing.$inferSelect;
 
@@ -111,6 +112,7 @@ export async function updateListing(
       updatedAt: new Date(),
     })
     .where(eq(listing.id, id));
+  if (row.status === "published" && status === "pending") await announceReview({ ...row, data: changes.data ?? row.data }, flags);
 }
 
 type OwnerAction = "submit" | "cancel" | "withdraw";
@@ -142,6 +144,7 @@ export async function changeStatus(session: Session, id: string, action: string,
             : { status: "published", moderationFlags: [], submittedAt: now, publishedAt: row.publishedAt ?? now, rejectReason: null, moderatedBy: null, updatedAt: now },
         )
         .where(eq(listing.id, id));
+      await announceReview(row, flags);
       return;
     }
     await getDb()
@@ -167,9 +170,25 @@ export async function changeStatus(session: Session, id: string, action: string,
         ...(action === "approve" && { publishedAt: row.publishedAt ?? new Date() }),
       })
       .where(eq(listing.id, id));
+    const title = draftTitle(row.data);
+    await notify(
+      row.userId,
+      action === "approve"
+        ? `Inzerát ${title} je zveřejněný.`
+        : `Inzerát ${title} jsme ${row.publishedAt ? "stáhli z webu" : "nezveřejnili"}. Důvod: ${rejectReason}`,
+      action === "approve" ? `/inzerat/${id}/` : `/ucet/inzerat/${id}/`,
+    );
     return;
   }
   throw new ListingError(400, "Neznámá akce.");
+}
+
+/** Tells the author how the automatic review ended and, when it flagged something, the moderators. */
+async function announceReview(row: ListingRow, flags: string[]) {
+  const title = draftTitle(row.data);
+  if (!flags.length) return notify(row.userId, `Inzerát ${title} je zveřejněný.`, `/inzerat/${row.id}/`);
+  await notify(row.userId, `Inzerát ${title} čeká na kontrolu moderátorem.`, `/ucet/inzerat/${row.id}/`);
+  await notifyStaff(`Ke schválení: ${title} (${flags.join(", ")})`, "/admin/inzeraty/");
 }
 
 /** Runs lib/moderation on a listing's (new) data; an empty list means it may go live at once. */

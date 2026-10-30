@@ -32,6 +32,12 @@ Registraci lze vypnout proměnnou `SIGNUP_OPEN` ve `wrangler.jsonc`. E-maily pos
 Lokálně (prázdné `MAIL_FROM`) se ověřovací odkazy a odkazy pro reset hesla jen vypisují do konzole
 dev serveru (`src/lib/mail.ts`). Změna schématu: upravit `src/db/schema.ts`, pak `npm run db:generate`.
 
+### Zprávy a oznámení
+Chat kupující–prodejce u inzerátu a vlákno „Vozodrom“ s oznámeními (`src/lib/chat.ts`). Nové zprávy chodí okamžitě přes
+WebSocket: vstupní Worker `worker/index.ts` obaluje aplikaci OpenNext a pro každého uživatele drží Durable Object `Inbox`
+s jeho otevřenými záložkami. Pod `next dev` Durable Objects nejsou, počet nepřečtených se pak jen dotazuje; plné chování
+ukáže `npm run cf:preview`. Hlídací pes běží denně v 06:00 UTC (cron v `wrangler.jsonc`, `src/lib/watchdog.ts`).
+
 ## Struktura
 - `src/lib/catalog.ts` — značky a modely (testovací čísla)
 - `src/lib/listings.ts` — deterministický generátor testovacích inzerátů (smyšlená VIN `TESTVZD…`)

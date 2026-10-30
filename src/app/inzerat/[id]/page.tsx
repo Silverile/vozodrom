@@ -20,6 +20,7 @@ import { marketEstimate } from "@/lib/market";
 import { userListingPage } from "@/lib/user-listings";
 import { PhoneReveal } from "./PhoneReveal";
 import { ReportListing } from "./ReportListing";
+import { WriteSeller } from "./WriteSeller";
 
 // Listings placed by users, rendered on every request so approvals and withdrawals show at once.
 // Test and dealer-feed listings stay prerendered at /inzeraty/[id].
@@ -127,6 +128,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
               </div>
             </div>
             {row.phone ? <PhoneReveal phone={row.phone} messengers={row.messengers} /> : <p className="text-sm text-[var(--color-muted)]">Prodejce neuvedl telefon.</p>}
+            {!preview && viewer?.user.id !== row.userId && <WriteSeller listingId={row.id} signedIn={Boolean(viewer)} />}
             <div className="flex items-center justify-between gap-3">
               <span className="text-sm">Přidat do výběru</span>
               <FavoriteButton id={listing.id} label={title} />

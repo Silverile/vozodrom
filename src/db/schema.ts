@@ -88,6 +88,8 @@ export const savedSearch = pgTable(
     query: text("query").notNull(),
     label: text("label").notNull(),
     savedAt: timestamp("saved_at", { withTimezone: true }).notNull().defaultNow(),
+    /** last time the daily watchdog run reported new listings for this search */
+    notifiedAt: timestamp("notified_at", { withTimezone: true }),
   },
   (t) => [primaryKey({ columns: [t.userId, t.query] })],
 );
@@ -152,4 +154,48 @@ export const report = pgTable(
     decidedAt: timestamp("decided_at", { withTimezone: true }),
   },
   (t) => [index("report_listing_idx").on(t.listingId), index("report_status_idx").on(t.status, t.createdAt)],
+);
+
+/**
+ * A chat: buyer and seller about one listing (id l-<listing>-<buyer>), or a user's "Vozodrom"
+ * system thread with notifications (id s-<user>). Deterministic ids make creation idempotent.
+ */
+export const conversation = pgTable(
+  "conversation",
+  {
+    id: text("id").primaryKey(),
+    kind: text("kind").$type<"listing" | "system">().notNull(),
+    listingId: text("listing_id").references(() => listing.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    lastMessageAt: timestamp("last_message_at", { withTimezone: true }).notNull().defaultNow(),
+    lastMessagePreview: text("last_message_preview").notNull().default(""),
+  },
+  (t) => [index("conversation_listing_idx").on(t.listingId)],
+);
+
+export const conversationMember = pgTable(
+  "conversation_member",
+  {
+    conversationId: text("conversation_id").notNull().references(() => conversation.id, { onDelete: "cascade" }),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    /** buyer | seller in listing chats, owner of a system thread */
+    role: text("role").$type<"buyer" | "seller" | "owner">().notNull(),
+    lastReadAt: timestamp("last_read_at", { withTimezone: true }),
+  },
+  (t) => [primaryKey({ columns: [t.conversationId, t.userId] }), index("conversation_member_user_idx").on(t.userId)],
+);
+
+export const message = pgTable(
+  "message",
+  {
+    id: text("id").primaryKey(),
+    conversationId: text("conversation_id").notNull().references(() => conversation.id, { onDelete: "cascade" }),
+    /** null for notifications from Vozodrom */
+    senderId: text("sender_id").references(() => user.id, { onDelete: "set null" }),
+    body: text("body").notNull(),
+    /** optional site path a notification points to, e.g. /admin/hlaseni/ */
+    link: text("link"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("message_conversation_idx").on(t.conversationId, t.createdAt)],
 );

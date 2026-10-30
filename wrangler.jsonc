@@ -1,7 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "vozodrom",
-  "main": ".open-next/worker.js",
+  // worker/index.ts wraps the OpenNext app (.open-next/worker.js) and adds chat WebSockets and the cron.
+  "main": "worker/index.ts",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
@@ -30,5 +31,10 @@
   // MAIL_FROM switches sending on; without it (locally) mail is only logged.
   "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz", "SIGNUP_OPEN": "true", "MAIL_FROM": "Vozodrom <noreply@vozodrom.cz>" },
   // Cloudflare Email Service; vozodrom.cz is onboarded for sending (SPF/DKIM on cf-bounce, DMARC).
-  "send_email": [{ "name": "EMAIL" }]
+  "send_email": [{ "name": "EMAIL" }],
+  // Chat: one Inbox per user holds its open WebSockets (worker/index.ts).
+  "durable_objects": { "bindings": [{ "name": "INBOX", "class_name": "Inbox" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Inbox"] }],
+  // Daily watchdog (hlídací pes) at 06:00 UTC.
+  "triggers": { "crons": ["0 6 * * *"] }
 }

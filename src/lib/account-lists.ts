@@ -52,9 +52,14 @@ export async function readSearches(userId: string): Promise<SavedSearch[]> {
 
 export async function writeSearches(userId: string, searches: SavedSearch[]): Promise<void> {
   await getDb().transaction(async (tx) => {
+    // Keep when the watchdog last reported each search, so re-saving the list does not repeat old results.
+    const previous = await tx.select({ query: savedSearch.query, notifiedAt: savedSearch.notifiedAt }).from(savedSearch).where(eq(savedSearch.userId, userId));
+    const notified = new Map(previous.map((p) => [p.query, p.notifiedAt]));
     await tx.delete(savedSearch).where(eq(savedSearch.userId, userId));
     if (searches.length) {
-      await tx.insert(savedSearch).values(searches.map((s) => ({ userId, query: s.query, label: s.label, savedAt: new Date(s.savedAt) })));
+      await tx.insert(savedSearch).values(
+        searches.map((s) => ({ userId, query: s.query, label: s.label, savedAt: new Date(s.savedAt), notifiedAt: notified.get(s.query) ?? null })),
+      );
     }
   });
 }

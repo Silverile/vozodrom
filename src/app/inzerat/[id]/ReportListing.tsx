@@ -11,7 +11,7 @@ export function ReportListing({ listingId, name, email }: { listingId: string; n
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
 
-  if (done) return <p role="status" className="text-sm text-[var(--color-good)]">Děkujeme, hlášení jsme přijali. Potvrzení a výsledek vám pošleme e-mailem.</p>;
+  if (done) return <p role="status" className="text-sm text-[var(--color-good)]">Děkujeme, hlášení jsme přijali. Potvrzení a výsledek najdete {email ? "ve Zprávách" : "v e-mailu"}.</p>;
   if (!open) {
     return (
       <button type="button" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => setOpen(true)}>
