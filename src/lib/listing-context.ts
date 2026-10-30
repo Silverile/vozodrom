@@ -1,6 +1,5 @@
 import "server-only";
 
-import drawingReview from "@/data/front-drawing-review.json";
 import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
 import { coversYear, toListingFuel } from "./listing-catalog";
@@ -79,9 +78,8 @@ export function listingContext(listing: Listing, draft: Draft): ListingContext |
   const gen = card.generations[genIndex];
   const stage = stagesOf(gen).filter((s) => s.from === null || s.from <= listing.year).pop()?.label ?? "";
 
-  // Lines whose drawings await review may have generations out of step with the statistics: whole line only.
   const statsLine = STATS.makes[draft.brand]?.[line.slug];
-  const genStats = `${draft.brand}--${line.slug}` in drawingReview ? undefined : statsLine?.gens?.[String(genIndex)];
+  const genStats = statsLine?.gens?.[String(genIndex)];
   const { gens: _, ...lineStats } = statsLine ?? {};
 
   return {
