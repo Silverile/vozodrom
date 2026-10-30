@@ -132,7 +132,8 @@ export default async function UserListingPage({ params }: { params: Params }) {
               <FavoriteButton id={listing.id} label={title} />
             </div>
           </section>
-          {!preview && (
+          {/* Sellers cannot report their own listing; they manage it in the account instead. */}
+          {!preview && viewer?.user.id !== row.userId && (
             <section className="card p-4">
               <ReportListing listingId={row.id} name={viewer?.user.name ?? ""} email={viewer?.user.email ?? ""} />
             </section>

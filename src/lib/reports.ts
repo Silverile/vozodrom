@@ -56,6 +56,7 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
   const db = getDb();
   const target = await findListing(notice.listingId);
   if (!target || target.status !== "published") throw new ListingError(404, "Inzerát nenalezen.");
+  if (session && target.userId === session.user.id) throw new ListingError(409, "Vlastní inzerát nahlásit nelze.");
   const [recent] = await db
     .select({ n: count() })
     .from(report)
