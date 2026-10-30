@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Bar } from "@/components/Bar";
-import { CarImage } from "@/components/CarImage";
+import { CatalogImage } from "@/components/CatalogImage";
+import { ModelListingCount } from "@/components/ModelListingCount";
+import { OpenOnHash } from "@/components/OpenOnHash";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
@@ -24,7 +26,6 @@ import {
   yearsSpan,
 } from "@/lib/modelCards";
 import { type StatsEntry, lineStats } from "@/lib/stats";
-import type { Body } from "@/lib/types";
 import drawingReview from "@/data/front-drawing-review.json";
 
 // One page per model line. Every curated line has one; demo models add owner ratings, STK data,
@@ -32,8 +33,6 @@ import drawingReview from "@/data/front-drawing-review.json";
 // pictures are front-view drawings only (FrontDrawing), not photos.
 
 type Params = Promise<{ brand: string; model: string }>;
-
-const PICTOGRAM: Record<string, Body> = { kupe: "hatchback", kabriolet: "hatchback", pickup: "suv", dodavka: "mpv" };
 
 export function generateStaticParams() {
   const seen = new Set<string>();
@@ -97,16 +96,25 @@ function power(e: CardEngine): string {
   return `${e.powerKwMin}–${e.powerKwMax} kW`;
 }
 
-/** Power range over all engines and trims of a model, or "" when nothing is known. */
-function powerRange(gens: CardGeneration[]): string {
-  const values = gens.flatMap((g) => [
-    ...g.engines.flatMap((e) => [e.powerKwMin, e.powerKwMax]),
-    ...g.trims.map((t) => t.engine?.powerKw ?? null),
-  ]).filter((v): v is number => typeof v === "number");
-  if (!values.length) return "";
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  return min === max ? `${min} kW` : `${min}–${max} kW`;
+/**
+ * Power range of the generations that have one. When only some do, the label names them, so one
+ * series' figure is not read as the whole model's (Adler Favorit: only 2U has a known power).
+ */
+function powerSummary(gens: CardGeneration[]): { label: string; value: string } | null {
+  const known = gens
+    .map((g, i) => ({
+      name: g.code ?? g.name ?? `${i + 1}. generace`,
+      values: [...g.engines.flatMap((e) => [e.powerKwMin, e.powerKwMax]), ...g.trims.map((t) => t.engine?.powerKw ?? null)].filter(
+        (v): v is number => typeof v === "number",
+      ),
+    }))
+    .filter((g) => g.values.length > 0);
+  if (!known.length) return null;
+  const all = known.flatMap((g) => g.values);
+  const [min, max] = [Math.min(...all), Math.max(...all)];
+  const value = min === max ? `${num(min)} kW` : `${num(min)}–${num(max)} kW`;
+  if (known.length === gens.length) return { label: "Výkon", value };
+  return { label: known.length <= 2 ? `Výkon · ${known.map((g) => g.name).join(", ")}` : `Výkon · ${known.length} z ${gens.length} generací`, value };
 }
 
 /** "4 689 × 1 829 × 1 470 mm" when all three are known, otherwise only the known ones by name. */
@@ -154,7 +162,11 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
 ];
 
 
-function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null }) {
+/**
+ * One generation's details, folded except the newest so a long model history stays short. Folded
+ * content is still in the page for search engines; the generation cards open it (OpenOnHash).
+ */
+function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null; open: boolean }) {
   const facts: [string, string | null][] = [
     [gen.dateBasis && gen.dateBasis !== "production" ? "Období modelu" : "Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
     ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => (f.name ? `${f.year} (${f.name})` : f.year)).join(", ") : null],
@@ -173,12 +185,18 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
   const shown = facts.filter(([, v]) => v);
   const columns = TRIM_COLUMNS.filter((c) => gen.trims.some((t) => c.value(t)));
 
+  const empty = shown.length === 0 && gen.engines.length === 0 && gen.trims.length === 0;
+
   return (
-    <section id={id} className="card min-w-0 p-5 scroll-mt-24">
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className="font-bold text-lg">{title}</h3>
+    <details id={id} open={open} className="group card min-w-0 p-5 scroll-mt-24">
+      <summary className="flex cursor-pointer list-none flex-wrap items-baseline justify-between gap-2 [&::-webkit-details-marker]:hidden">
+        <h3 className="font-bold text-lg">
+          <span aria-hidden="true" className="mr-2 inline-block text-[var(--color-muted)] transition-transform group-open:rotate-90">›</span>
+          {title}
+        </h3>
         <span className="text-sm text-[var(--color-muted)]">{yearsSpan(gen.from, gen.to, gen.current)}</span>
-      </div>
+      </summary>
+      {empty && <p className="mt-3 text-sm text-[var(--color-muted)]">Technické údaje této generace zatím nemáme ověřené.</p>}
       {gen.dateNote && <p className="mt-2 text-xs text-[var(--color-muted)]">{gen.dateNote}</p>}
       {stats && (stats.fleet || stats.stk) && (
         <ul className="mt-2 flex flex-wrap gap-1.5 text-xs">
@@ -266,7 +284,7 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
           )}
         </div>
       )}
-    </section>
+    </details>
   );
 }
 
@@ -282,9 +300,11 @@ export default async function ModelPage({ params }: { params: Params }) {
   const title = `${make.name} ${name}`;
   const gens = card?.generations ?? [];
   const coverDrawing = newestFrontDrawing(brandSlug, modelSlug);
+  const coverIndex = coverDrawing ? Number(coverDrawing.split("--").pop()) : -1;
+  const coverGen = gens[coverIndex] ? gens[coverIndex].code ?? gens[coverIndex].name ?? `${coverIndex + 1}. generace` : "";
   const bodies = [...new Set([...(line?.bodyTypes ?? []), ...gens.flatMap((g) => g.bodyTypes)])];
   const years = line ? yearsOf(line) : "";
-  const powers = powerRange(gens);
+  const powers = powerSummary(gens);
   const offers = model ? listingsOf(brandSlug, modelSlug) : [];
   const demo = getBrand(brandSlug) && model ? model : undefined;
   const real = lineStats(brandSlug, modelSlug);
@@ -340,7 +360,7 @@ export default async function ModelPage({ params }: { params: Params }) {
 
           <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
             {(gens.length || line?.generations.length) ? <Stat label="Generace" value={gens.length || line?.generations.length} /> : null}
-            {powers && <Stat label="Výkon" value={powers} />}
+            {powers && <Stat label={powers.label} value={powers.value} />}
             {real?.entry.stk ? (
               <Stat label="Neprošlo STK" value={formatPercent(real.entry.stk.failRate)} />
             ) : demo ? (
@@ -351,18 +371,22 @@ export default async function ModelPage({ params }: { params: Params }) {
             <Stat
               label="Inzeráty"
               value={
-                <Link href={`/inzeraty/?znacka=${brandSlug}${model ? `&model=${modelSlug}` : ""}`} className="text-[var(--color-brand)] hover:underline">
-                  {offers.length}
+                <Link href={`/inzeraty/?znacka=${brandSlug}&model=${modelSlug}`} className="text-[var(--color-brand)] hover:underline">
+                  <ModelListingCount brand={brandSlug} model={modelSlug} prerendered={offers.length} />
                 </Link>
               }
             />
           </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Link href={`/inzeraty/?znacka=${brandSlug}&model=${modelSlug}`} className="pill">Zobrazit inzeráty</Link>
+            <Link href={`/pridat/?znacka=${brandSlug}&model=${modelSlug}`} className="pill">Prodat tento model</Link>
+          </div>
         </div>
-        {coverDrawing ? (
-          <FrontDrawing id={coverDrawing} alt={title} className="rounded-2xl" />
-        ) : (
-          brandSlug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={demo?.body ?? PICTOGRAM[bodies[0]] ?? ((bodies[0] as Body) || "hatchback")} color="modrá" className="w-full rounded-2xl" />
-        )}
+        <figure className="min-w-0">
+          <CatalogImage drawing={coverDrawing} make={brandSlug} line={modelSlug} alt={coverGen ? `${title} ${coverGen}` : title} bodyType={demo?.body ?? bodies[0]} className="rounded-2xl" />
+          {/* the hero shows the newest drawn generation, which need not be the newest generation */}
+          {coverGen && gens.length > 1 && <figcaption className="mt-1.5 text-xs text-[var(--color-muted)]">Na nákresu: {coverGen}</figcaption>}
+        </figure>
       </div>
 
       {gens.length > 0 && (
@@ -376,11 +400,7 @@ export default async function ModelPage({ params }: { params: Params }) {
               return shown.map((st, k) => (
                 <li key={`${i}-${k}`} className="min-w-0">
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-                    {frontDrawingId(brandSlug, modelSlug, i) ? (
-                      <FrontDrawing id={frontDrawingId(brandSlug, modelSlug, i)!} alt={`${title} ${base}`} />
-                    ) : (
-                      brandSlug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-sm text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
-                    )}
+                    <CatalogImage drawing={frontDrawingId(brandSlug, modelSlug, i)} make={brandSlug} line={modelSlug} alt={`${title} ${base}`} bodyType={g.bodyTypes[0]} />
                     <div className="p-3">
                       <div className="font-semibold truncate">
                         {base}
@@ -403,9 +423,10 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
               const i = gens.length - 1 - r;
-              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={`${brandSlug}--${modelSlug}` in drawingReview ? undefined : real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
+              return <GenerationDetail key={i} id={`g${i + 1}`} open={r === 0} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={`${brandSlug}--${modelSlug}` in drawingReview ? undefined : real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
             })}
           </div>
+          <OpenOnHash />
         </>
       )}
 

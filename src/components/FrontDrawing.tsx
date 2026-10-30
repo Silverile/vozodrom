@@ -11,6 +11,9 @@ import { asset } from "@/lib/format";
 const LINES = lines as unknown as Record<string, [number, number | null, number | null][]>;
 const pending = (make: string, line: string) => `${make}--${line}` in review;
 
+/** Drawings of this model line are being checked and are not shown yet. */
+export const drawingPending = pending;
+
 export function frontDrawingId(makeSlug: string, lineSlug: string, genIndex: number): string | null {
   if (pending(makeSlug, lineSlug)) return null;
   return LINES[`${makeSlug}--${lineSlug}`]?.some(([i]) => i === genIndex) ? `${makeSlug}--${lineSlug}--${genIndex}` : null;

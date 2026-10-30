@@ -87,7 +87,12 @@ roky výroby celé řady se odmítne; generace bez let v katalogu rok neblokuje.
   [SOURCES.md](../src/data/catalog/SOURCES.md). Kurátorství probíhá v `analysis/codex/`.
 - `src/data/*-index.json` — malé indexy pro web, generované skripty `scripts/makes-index.mjs`,
   `scripts/model-lines-index.mjs`, `scripts/model-cards-index.mjs` (spustit po změně zdrojů).
-- Nákresy zepředu: `src/data/front-drawings.json` + soubory v `public/`, pipeline `scripts/lineart.py`.
+- Nákresy zepředu: `src/data/front-drawings.json` + soubory v `public/`, pipeline `scripts/lineart.py`. Řady
+  v `front-drawing-review.json` se ověřují a nákresy se neukazují. Bez schváleného nákresu ukazuje `CatalogImage`
+  obecný piktogram s popiskem „Ilustrační obrázek“ — nikdy jako obrázek konkrétního vozu.
+- Období výroby automobilů a motocyklů značek: `src/data/catalog/brand-production-periods.json` (se zdroji) →
+  `brand-facts.json` (`node scripts/brand-facts.mjs --periods-only`). Chybějící konec = neověřeno, ne „vyrábí se“;
+  `dissolved` je zánik společnosti, ne konec výroby.
 - Skutečná data z registru a STK: `src/data/stats/<značka>.json` (statické stránky modelů) a z nich výtah
   `src/data/listing-stats.json` pro dynamické stránky inzerátů uživatelů (`node scripts/listing-stats-index.mjs`,
   spustit po změně statistik). Worker nemůže číst soubory z disku, výtah je proto součástí bundlu (~140 kB gzip).

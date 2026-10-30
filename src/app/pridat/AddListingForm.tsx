@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { ListingRow } from "@/components/ListingRow";
 import { FrontDrawing, frontDrawingFor, newestFrontDrawing } from "@/components/FrontDrawing";
@@ -155,6 +156,17 @@ export function AddListingForm() {
   // (after signing in with Google the page reloads, and the seller continues there).
   useEffect(() => {
     if (hydrated && open === undefined) setOpen(complete ? PHOTOS : firstOpen);
+  }, [hydrated]);
+
+  // "Prodat tento model" on a catalogue page links here with ?znacka=&model=. It starts the form
+  // with that car, but never replaces a draft the seller already has in progress.
+  const params = useSearchParams();
+  useEffect(() => {
+    const brand = params.get("znacka");
+    const model = params.get("model");
+    if (!hydrated || !brand || draftStore.read().brand) return;
+    if (!CAR_MAKES.some((m) => m.slug === brand)) return;
+    write({ brand, model: model && modelLinesOf(brand).some((l) => l.slug === model) ? model : "" });
   }, [hydrated]);
 
   const shown = (field: DraftField, step: number) => (touched.has(field) || tried.has(step) ? problems[field] : undefined);

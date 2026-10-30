@@ -16,6 +16,24 @@ export interface BrandFacts {
   description: string | null;
   wikiCs: string | null;
   wikiEn: string | null;
+  /**
+   * Years cars and motorcycles were made, from sources curated in
+   * src/data/catalog/brand-production-periods.json. A missing end is unknown, never "still made";
+   * these differ from `dissolved`, the end of the company.
+   */
+  carsFrom?: number;
+  carsTo?: number;
+  motorcyclesFrom?: number;
+  motorcyclesTo?: number;
+  periodNoteCs?: string;
+  periodSources?: string[];
+  periodVerifiedAt?: string;
+}
+
+/** "1906–1977", "1900–?" or "?–1966" when one end is not established; null when neither is. */
+export function periodOf(from: number | undefined, to: number | undefined): string | null {
+  if (from === undefined && to === undefined) return null;
+  return `${from ?? "?"}–${to ?? "?"}`;
 }
 
 const FACTS = factIndex as unknown as Record<string, BrandFacts>;

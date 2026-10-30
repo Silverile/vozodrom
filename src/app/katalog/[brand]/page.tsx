@@ -7,10 +7,11 @@ import { BODY_LABEL, getBrand, modelsOf } from "@/lib/catalog";
 import { items } from "@/lib/classifieds";
 import { listings, listingsOf } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
-import { factsOf, historyOf, hostOf } from "@/lib/brandFacts";
+import { factsOf, historyOf, hostOf, periodOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
 import { BODY_GROUPS, cardOf } from "@/lib/modelCards";
-import { FrontDrawing, newestFrontDrawing } from "@/components/FrontDrawing";
+import { CatalogImage } from "@/components/CatalogImage";
+import { newestFrontDrawing } from "@/components/FrontDrawing";
 import type { Body } from "@/lib/types";
 
 // Every make has a page. Makes with curated model lines show the whole range as drawing cards,
@@ -19,8 +20,6 @@ import type { Body } from "@/lib/types";
 type Params = Promise<{ brand: string }>;
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-
-const PICTOGRAM: Record<string, Body> = { kupe: "hatchback", kabriolet: "hatchback", liftback: "hatchback", pickup: "suv", dodavka: "mpv" };
 
 function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: ModelLine[] }) {
   return (
@@ -33,11 +32,7 @@ function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: Mo
         return (
           <li key={l.slug} className="min-w-0">
             <Link href={`/katalog/${slug}/${l.slug}/`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-              {drawing ? (
-                <FrontDrawing id={drawing} alt={`${make} ${l.name}`} />
-              ) : (
-                slug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-sm text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
-              )}
+              <CatalogImage drawing={drawing} make={slug} line={l.slug} alt={`${make} ${l.name}`} bodyType={l.bodyTypes[0]} label={false} />
               <div className="p-3">
                 <div className="font-semibold truncate">{make} {l.name}</div>
                 <div className="text-xs text-[var(--color-muted)]">
@@ -94,7 +89,9 @@ export default async function BrandPage({ params }: { params: Params }) {
   const tiles = (
     [
       ["Založeno", facts?.founded ? `${facts.founded}${facts.foundedIn && facts.foundedIn !== facts.hq ? `, ${facts.foundedIn}` : ""}` : null],
-      ["Konec výroby", facts?.dissolved ? String(facts.dissolved) : null],
+      ["Výroba automobilů", periodOf(facts?.carsFrom, facts?.carsTo)],
+      ["Výroba motocyklů", periodOf(facts?.motorcyclesFrom, facts?.motorcyclesTo)],
+      ["Zánik společnosti", facts?.dissolved ? String(facts.dissolved) : null],
       ["Sídlo", [facts?.hq, make.country].filter(Boolean).join(", ") || null],
       ["Patří pod", facts?.parent ?? null],
       ["Modely v katalogu", lines.length ? `${lines.length}${currentModels ? ` · ${currentModels} vyráběných` : ""}` : null],
@@ -104,14 +101,14 @@ export default async function BrandPage({ params }: { params: Params }) {
     ] as [string, string | null][]
   )
     .filter((t): t is [string, string] => Boolean(t[1]))
-    .slice(0, 6);
+    .slice(0, 8);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <nav className="text-sm text-[var(--color-muted)]">
         <Link href="/katalog/" className="hover:underline">Katalog</Link> / {make.name}
       </nav>
-      <div className="card mt-3 p-5 sm:p-6 grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
+      <div className="card mt-3 p-5 sm:p-6 grid gap-6 lg:grid-cols-[minmax(16rem,1fr)_minmax(0,1.4fr)] lg:items-center">
         <div className="flex flex-wrap items-center gap-4 min-w-0">
           {/* wide wordmarks (Škoda, Michelin…) get a wider box instead of shrinking into a square */}
           <span className="grid place-items-center shrink-0 min-w-20 h-20 px-3 rounded-2xl bg-[var(--color-field)]">
@@ -131,7 +128,8 @@ export default async function BrandPage({ params }: { params: Params }) {
             )}
           </div>
         </div>
-        <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 min-w-0">
+        {/* tiles at least 9rem wide, so "Frankfurt nad Mohanem" or a founder's name is not broken into fragments */}
+        <dl className="grid grid-cols-[repeat(auto-fill,minmax(min(9rem,100%),1fr))] gap-3 min-w-0">
           {tiles.map(([label, value]) => (
             <div key={label} className="rounded-xl bg-[var(--color-field)] px-3 py-2.5 min-w-0">
               <dt className="text-xs text-[var(--color-muted)]">{label}</dt>
@@ -139,6 +137,19 @@ export default async function BrandPage({ params }: { params: Params }) {
             </div>
           ))}
         </dl>
+        {facts?.periodNoteCs && (
+          <details className="lg:col-span-2 text-xs text-[var(--color-muted)]">
+            <summary className="cursor-pointer hover:text-[var(--color-ink)]">Poznámka k obdobím výroby</summary>
+            <p className="mt-1 max-w-3xl">{facts.periodNoteCs}</p>
+            {facts.periodSources && facts.periodSources.length > 0 && (
+              <ul className="mt-1 space-y-0.5">
+                {facts.periodSources.map((s) => (
+                  <li key={s} className="truncate"><a href={s} rel="noopener nofollow" className="underline hover:text-[var(--color-ink)]">{hostOf(s)}</a></li>
+                ))}
+              </ul>
+            )}
+          </details>
+        )}
       </div>
 
       {history.length > 0 && (
