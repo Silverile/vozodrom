@@ -3,10 +3,12 @@ import "server-only";
 import { and, desc, eq } from "drizzle-orm";
 import { getDb } from "@/db";
 import { listing, user } from "@/db/schema";
-import { BODY_LABEL, FUEL_LABEL, generationMatch, getModel } from "./catalog";
+import { FUEL_LABEL, generationMatch, getModel } from "./catalog";
 import { regionCapital } from "./geo";
+import { pictogramBody } from "./listing-catalog";
+import { lineOf } from "./listing-draft";
 import type { ListingRow } from "./listing-store";
-import type { Body, Fuel, Listing } from "./types";
+import type { Fuel, Listing } from "./types";
 
 // Published user listings in the same Listing shape as test and feed listings, so search,
 // cards and the shortlist treat them alike. Contact details are not part of this shape.
@@ -16,13 +18,15 @@ const publicName = (name: string) => name.trim().split(/\s+/)[0] || "Soukromý p
 
 export function toListing(row: ListingRow, sellerName: string): Listing {
   const d = row.data;
-  const model = getModel(d.brand, d.model);
+  // modelSlug is the line slug, which is also the demo catalogue's model slug (used for price estimates).
+  const line = lineOf(d);
+  const model = getModel(d.brand, line?.slug ?? d.model);
   return {
     id: row.id,
     source: { kind: "user" },
     brandSlug: d.brand,
-    modelSlug: d.model,
-    generation: (model && generationMatch(model, d.year)?.code) ?? "generace neuvedena",
+    modelSlug: line?.slug ?? d.model,
+    generation: d.generation || (model && generationMatch(model, d.year)?.code) || "generace neuvedena",
     year: d.year,
     mileageKm: d.mileageKm,
     price: d.price,
@@ -30,7 +34,7 @@ export function toListing(row: ListingRow, sellerName: string): Listing {
     fuel: (d.fuel in FUEL_LABEL ? d.fuel : "benzin") as Fuel,
     transmission: d.transmission === "automat" ? "automat" : "manuál",
     powerKw: d.powerKw,
-    body: model?.body ?? ((d.body in BODY_LABEL ? d.body : "hatchback") as Body),
+    body: pictogramBody(d.body),
     color: d.color || "neuvedena",
     region: d.region,
     city: d.city || regionCapital(d.region)?.slug || "",

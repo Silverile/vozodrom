@@ -51,3 +51,15 @@ export function marketEstimate(listing: Listing): MarketEstimate | null {
   const [, score, verdict] = BANDS.find(([limit]) => ratio < limit)!;
   return { median: Math.round(m / 1000) * 1000, comparables: comparables.length, ratio, score, verdict };
 }
+
+/**
+ * A coarser price for the automatic listing review: same model within five model years, same
+ * adjustments, at least two comparables. Used when marketEstimate has too few close matches.
+ */
+export function roughMarketPrice(listing: Listing): number | null {
+  const comparables = listings.filter(
+    (l) => l.id !== listing.id && l.brandSlug === listing.brandSlug && l.modelSlug === listing.modelSlug && Math.abs(l.year - listing.year) <= 5,
+  );
+  if (comparables.length < 2) return null;
+  return median(comparables.map((l) => l.price * Math.pow(0.86, l.year - listing.year) * (1 - (listing.mileageKm - l.mileageKm) / 400000)));
+}

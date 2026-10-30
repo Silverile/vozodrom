@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FUEL_LABEL, getBrand, getModel } from "@/lib/catalog";
-import { getMake } from "@/lib/makes";
+import { getMake, modelLinesOf } from "@/lib/makes";
 import { formatAgo, formatKm, formatPrice, listingHref } from "@/lib/format";
 import { photoUrl } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
@@ -17,16 +17,18 @@ import { PriceMeter, VerdictBadge } from "./VerdictBadge";
  * rating on the right. The title link stretches over the whole card so the
  * shortlist button can stay a separate, focusable control.
  */
-export function ListingRow({ listing, drawing: given }: { listing: Listing; drawing?: string | null }) {
+/** compact: the two-column phone layout at any width, for narrow places such as the form preview. */
+export function ListingRow({ listing, drawing: given, compact = false }: { listing: Listing; drawing?: string | null; compact?: boolean }) {
   const brand = getBrand(listing.brandSlug);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
-  // Makes outside the demo catalogue carry the model name the seller typed in modelSlug.
-  const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${model?.name ?? listing.modelSlug}, ${listing.year}`;
+  // modelSlug is a demo-catalogue model, a model line slug (user listings) or a typed name.
+  const modelName = model?.name ?? modelLinesOf(listing.brandSlug).find((l) => l.slug === listing.modelSlug)?.name ?? listing.modelSlug;
+  const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${modelName}, ${listing.year}`;
   // no seller photos yet: the generation's front drawing, else the body-type pictogram
   const drawing = given !== undefined ? given : frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
   return (
-    <article className="card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[200px_minmax(0,1fr)_auto] gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
+    <article className={`card relative min-w-0 grid grid-cols-[112px_minmax(0,1fr)] ${compact ? "" : "sm:grid-cols-[200px_minmax(0,1fr)_auto]"} gap-x-4 gap-y-2 p-3 hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors`}>
       <div className="self-start overflow-hidden rounded-[10px]">
         {listing.photos?.[0] ? (
           <img src={photoUrl(listing.photos[0].key)} alt={name} className="w-full aspect-[4/3] object-cover bg-[var(--color-photo)]" loading="lazy" />
@@ -55,16 +57,16 @@ export function ListingRow({ listing, drawing: given }: { listing: Listing; draw
           {listing.sellerType === "soukromý" && <span className="chip bg-[var(--color-field)] text-[var(--color-ink-soft)]">Soukromý prodejce</span>}
         </div>
       </div>
-      <div className="col-span-2 sm:col-span-1 sm:col-start-3 min-w-0 flex flex-col items-start sm:items-end gap-1 sm:text-right">
-        <div className="flex w-full items-center justify-between gap-3 sm:w-auto">
+      <div className={compact ? "col-span-2 min-w-0 flex flex-col items-start gap-1" : "col-span-2 sm:col-span-1 sm:col-start-3 min-w-0 flex flex-col items-start sm:items-end gap-1 sm:text-right"}>
+        <div className={`flex w-full items-center justify-between gap-3 ${compact ? "" : "sm:w-auto"}`}>
           <span className="text-xl font-extrabold tracking-tight whitespace-nowrap">
             {formatPrice(listing.price)}
             <span className="sr-only"> (cena při platbě v hotovosti)</span>
           </span>
           <FavoriteButton id={listing.id} label={name} className="relative z-10 shrink-0 !h-8 !w-8 text-base" />
         </div>
-        {estimate && <span className="hidden sm:inline-flex"><PriceMeter score={estimate.score} /></span>}
-        <span className="text-xs text-[var(--color-muted)] sm:mt-auto"><Place city={listing.city} fallback={listing.region} /> · {formatAgo(listing.postedAt)}</span>
+        {estimate && !compact && <span className="hidden sm:inline-flex"><PriceMeter score={estimate.score} /></span>}
+        <span className={`text-xs text-[var(--color-muted)] ${compact ? "" : "sm:mt-auto"}`}><Place city={listing.city} fallback={listing.region} /> · {formatAgo(listing.postedAt)}</span>
       </div>
     </article>
   );

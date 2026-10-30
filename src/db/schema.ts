@@ -112,6 +112,8 @@ export const listing = pgTable(
     photos: jsonb("photos").$type<ListingPhoto[]>().notNull().default([]),
     phone: text("phone"),
     rejectReason: text("reject_reason"),
+    /** reasons the automatic review sent the listing to a moderator (lib/moderation) */
+    moderationFlags: jsonb("moderation_flags").$type<string[]>().notNull().default([]),
     moderatedBy: text("moderated_by").references(() => user.id, { onDelete: "set null" }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),

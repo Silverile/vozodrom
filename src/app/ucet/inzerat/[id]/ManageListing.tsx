@@ -7,6 +7,7 @@ import type { ListingPhoto, ListingStatus } from "@/db/schema";
 import { FUEL_LABEL } from "@/lib/catalog";
 import { formatKm, formatPrice } from "@/lib/format";
 import { getCity } from "@/lib/geo";
+import { BODY_KEYS } from "@/lib/listing-catalog";
 import type { Draft } from "@/lib/listing-draft";
 import { STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
 import { resizePhoto } from "@/lib/photo-resize";
@@ -92,6 +93,7 @@ export function ManageListing({ listing }: Props) {
     ["Cena", formatPrice(d.price)],
     ["Motor", `${d.engine}, ${d.powerKw} kW`],
     ["Palivo", FUEL_LABEL[d.fuel as keyof typeof FUEL_LABEL] ?? d.fuel],
+    ["Karoserie", BODY_KEYS[d.body] ?? d.body],
     ["Převodovka", d.transmission],
     ["Místo", getCity(d.city)?.name ?? d.region],
     ["VIN", d.vin || "neuveden"],
@@ -108,8 +110,8 @@ export function ManageListing({ listing }: Props) {
       {listing.status === "rejected" && listing.rejectReason && (
         <p className="card p-4 text-sm"><strong>Důvod zamítnutí:</strong> {listing.rejectReason}<br />Upravte inzerát a odešlete ho znovu.</p>
       )}
-      {listing.status === "pending" && <p className="card p-4 text-sm text-[var(--color-muted)]">Inzerát čeká na kontrolu moderátorem. O výsledku vám pošleme e-mail.</p>}
-      {live && editable && <p className="text-xs text-[var(--color-muted)]">Změna údajů nebo telefonu pošle inzerát znovu ke schválení.</p>}
+      {listing.status === "pending" && <p className="card p-4 text-sm text-[var(--color-muted)]">Automatická kontrola našla v inzerátu něco, na co se musí podívat moderátor. O výsledku vám pošleme e-mail.</p>}
+      {live && editable && <p className="text-xs text-[var(--color-muted)]">Změněné údaje znovu projdou automatickou kontrolou.</p>}
 
       <section className="card p-4 space-y-3">
         <div className="flex items-center justify-between gap-3">
@@ -210,8 +212,8 @@ export function ManageListing({ listing }: Props) {
 
       <div className="flex flex-wrap items-center gap-2">
         {(listing.status === "draft" || listing.status === "rejected") && (
-          <button type="button" className="btn-cta disabled:opacity-60" disabled={busy || photos.length === 0} onClick={() => run(() => call(`${base}stav/`, "POST", { action: "submit" }), "Odesláno ke schválení.")}>
-            Odeslat ke schválení
+          <button type="button" className="btn-cta disabled:opacity-60" disabled={busy || photos.length === 0} onClick={() => run(() => call(`${base}stav/`, "POST", { action: "submit" }))}>
+            Zveřejnit inzerát
           </button>
         )}
         {listing.status === "pending" && (
@@ -239,7 +241,7 @@ export function ManageListing({ listing }: Props) {
           Smazat inzerát
         </button>
       </div>
-      {photos.length === 0 && (listing.status === "draft" || listing.status === "rejected") && <p className="text-xs text-[var(--color-muted)]">Před odesláním přidejte alespoň jednu fotku.</p>}
+      {photos.length === 0 && (listing.status === "draft" || listing.status === "rejected") && <p className="text-xs text-[var(--color-muted)]">Před zveřejněním přidejte alespoň jednu fotku.</p>}
       {error && <p role="alert" className="text-sm text-[var(--color-warn)]">{error}</p>}
       {notice && <p role="status" className="text-sm text-[var(--color-good)]">{notice}</p>}
     </div>

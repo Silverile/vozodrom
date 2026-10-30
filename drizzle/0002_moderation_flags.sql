@@ -1,0 +1,1 @@
+ALTER TABLE "listing" ADD COLUMN "moderation_flags" jsonb DEFAULT '[]'::jsonb NOT NULL;

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { ArticleCard } from "@/components/ArticleCard";
 import { CategoryIcon } from "@/components/CategoryIcon";
-import { ListingCard } from "@/components/ListingCard";
 import { REGIONS, brands, models } from "@/lib/catalog";
 import { formatNumber } from "@/lib/format";
 import { articles } from "@/lib/articles";
@@ -10,6 +9,7 @@ import { itemsOf } from "@/lib/classifieds";
 import { lastActivity, threads } from "@/lib/forum";
 import { listings } from "@/lib/listings";
 import { SECTIONS } from "@/lib/sections";
+import { LatestListings } from "@/components/LatestListings";
 import { HomeSearch } from "./HomeSearch";
 
 const QUICK = [
@@ -86,9 +86,7 @@ export default function HomePage() {
           <h2 className="text-xl font-bold">Nejnovější inzeráty</h2>
           <Link href="/inzeraty/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny inzeráty →</Link>
         </div>
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
-          {latest.map((l) => <ListingCard key={l.id} listing={l} />)}
-        </div>
+        <LatestListings listings={latest} count={latest.length} />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 mt-12">

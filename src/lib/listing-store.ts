@@ -2,20 +2,23 @@ import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateRandomString } from "better-auth/crypto";
-import { and, asc, desc, eq, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNotNull, ne, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { type ListingPhoto, type ListingStatus, listing, user } from "@/db/schema";
 import { STAFF_ROLES, type Session, hasRole } from "./auth";
 import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
 import { sendMail } from "./mail";
+import { marketEstimate, roughMarketPrice } from "./market";
+import { reviewListing } from "./moderation";
+import { toListing } from "./user-listings";
 
 // Server side of user listings: who may do what in which status, and the photos in R2.
-//   draft ──submit──▶ pending ──approve──▶ published ──withdraw──▶ withdrawn
-//                       │  ▲                  │
-//                cancel │  │ edit       reject │ (staff takedown)
-//                       ▼  │                  ▼
-//                     draft / rejected ◀──────┘
-// Editing a pending or published listing sends it back to moderation.
+//   draft ──submit──▶ automatic review ──clean──▶ published ──withdraw──▶ withdrawn
+//                         │ flagged                  ▲   │
+//                         ▼                  approve │   │ reject (staff takedown)
+//                      pending ──────────────────────┘   ▼
+//                         └──reject──▶ rejected ──edit──▶ draft
+// Editing a published listing runs the review again; a flagged edit goes to the moderators.
 
 export type ListingRow = typeof listing.$inferSelect;
 
@@ -78,10 +81,12 @@ export async function updateListing(session: Session, id: string, changes: { dat
     if (changes.order.length !== photos.length || !changes.order.every((k) => byKey.has(k))) throw new ListingError(400, "Neplatné pořadí fotek.");
     photos = changes.order.map((k) => byKey.get(k)!);
   }
-  // Changed content must be moderated again; a rejected listing becomes an editable draft.
+  // Changed content of a live listing is reviewed again; a rejected listing becomes an editable draft.
   const contentChanged = changes.data !== undefined || changes.phone !== undefined;
+  const live = row.status === "pending" || row.status === "published";
+  const flags = contentChanged && live ? await autoReview(row, changes.data ?? row.data) : row.moderationFlags;
   const status: ListingStatus =
-    contentChanged && (row.status === "pending" || row.status === "published") ? "pending" : row.status === "rejected" ? "draft" : row.status;
+    contentChanged && live ? (flags.length || row.status === "pending" ? "pending" : "published") : row.status === "rejected" ? "draft" : row.status;
   await getDb()
     .update(listing)
     .set({
@@ -89,6 +94,7 @@ export async function updateListing(session: Session, id: string, changes: { dat
       ...(changes.phone !== undefined && { phone: changes.phone }),
       photos,
       status,
+      moderationFlags: flags,
       ...(status === "pending" && row.status !== "pending" && { submittedAt: new Date() }),
       updatedAt: new Date(),
     })
@@ -113,10 +119,23 @@ export async function changeStatus(session: Session, id: string, action: string,
       if (draftProblems(row.data).length) throw new ListingError(422, "Inzerát není kompletní.");
       if (row.photos.length === 0) throw new ListingError(422, "Přidejte alespoň jednu fotku.");
     }
-    const status: ListingStatus = action === "submit" ? "pending" : action === "cancel" ? "draft" : "withdrawn";
+    if (action === "submit") {
+      const flags = await autoReview(row, row.data);
+      const now = new Date();
+      await getDb()
+        .update(listing)
+        .set(
+          flags.length
+            ? { status: "pending", moderationFlags: flags, submittedAt: now, rejectReason: null, updatedAt: now }
+            : { status: "published", moderationFlags: [], submittedAt: now, publishedAt: row.publishedAt ?? now, rejectReason: null, moderatedBy: null, updatedAt: now },
+        )
+        .where(eq(listing.id, id));
+      if (!flags.length) await notifyOwner(row, "published");
+      return;
+    }
     await getDb()
       .update(listing)
-      .set({ status, updatedAt: new Date(), ...(action === "submit" && { submittedAt: new Date(), rejectReason: null }) })
+      .set({ status: action === "cancel" ? "draft" : "withdrawn", updatedAt: new Date() })
       .where(eq(listing.id, id));
     return;
   }
@@ -132,6 +151,7 @@ export async function changeStatus(session: Session, id: string, action: string,
         status: action === "approve" ? "published" : "rejected",
         rejectReason: rejectReason ?? null,
         moderatedBy: session.user.id,
+        ...(action === "approve" && { moderationFlags: [] }),
         updatedAt: new Date(),
         ...(action === "approve" && { publishedAt: row.publishedAt ?? new Date() }),
       })
@@ -142,6 +162,21 @@ export async function changeStatus(session: Session, id: string, action: string,
   throw new ListingError(400, "Neznámá akce.");
 }
 
+/** Runs lib/moderation on a listing's (new) data; an empty list means it may go live at once. */
+async function autoReview(row: ListingRow, data: Draft): Promise<string[]> {
+  const db = getDb();
+  const [[owner], [earlier]] = await Promise.all([
+    db.select({ name: user.name, createdAt: user.createdAt }).from(user).where(eq(user.id, row.userId)).limit(1),
+    db.select({ n: count() }).from(listing).where(and(eq(listing.userId, row.userId), ne(listing.id, row.id), isNotNull(listing.publishedAt))),
+  ]);
+  const asListing = toListing({ ...row, data }, owner?.name ?? "");
+  return reviewListing(data, {
+    accountAgeHours: owner ? (Date.now() - owner.createdAt.getTime()) / 3_600_000 : 0,
+    publishedBefore: earlier?.n ?? 0,
+    marketPrice: marketEstimate(asListing)?.median ?? roughMarketPrice(asListing),
+  });
+}
+
 async function notifyOwner(row: ListingRow, result: "published" | "rejected", reason?: string) {
   const [owner] = await getDb().select({ email: user.email }).from(user).where(eq(user.id, row.userId)).limit(1);
   if (!owner) return;
@@ -149,7 +184,7 @@ async function notifyOwner(row: ListingRow, result: "published" | "rejected", re
   const title = draftTitle(row.data);
   const text =
     result === "published"
-      ? `Dobrý den,\n\nváš inzerát ${title} jsme zkontrolovali a je zveřejněný:\n${base}/inzerat/${row.id}/\n\nSpravovat ho můžete v účtu: ${base}/ucet/inzerat/${row.id}/`
+      ? `Dobrý den,\n\nváš inzerát ${title} je zveřejněný:\n${base}/inzerat/${row.id}/\n\nSpravovat ho můžete v účtu: ${base}/ucet/inzerat/${row.id}/`
       : `Dobrý den,\n\nváš inzerát ${title} jsme nemohli zveřejnit.\n\nDůvod: ${reason}\n\nInzerát můžete upravit a odeslat znovu: ${base}/ucet/inzerat/${row.id}/`;
   // A failed notice must not undo the moderation decision; the owner still sees the status in the account.
   await sendMail({ to: owner.email, subject: result === "published" ? `Inzerát zveřejněn: ${title}` : `Inzerát zamítnut: ${title}`, text }).catch(() => {});

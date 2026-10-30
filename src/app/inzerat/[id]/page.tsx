@@ -12,6 +12,7 @@ import { STAFF_ROLES, getSession, hasRole } from "@/lib/auth";
 import { BODY_LABEL, FUEL_LABEL, getModel } from "@/lib/catalog";
 import { formatDate, formatKm, formatPrice } from "@/lib/format";
 import { regionLabel } from "@/lib/geo";
+import { BODY_KEYS } from "@/lib/listing-catalog";
 import { draftTitle } from "@/lib/listing-draft";
 import { getMake } from "@/lib/makes";
 import { STATUS_LABEL } from "@/lib/listing-status";
@@ -56,7 +57,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
     ["Výkon", `${listing.powerKw} kW`],
     ["Palivo", FUEL_LABEL[listing.fuel]],
     ["Převodovka", listing.transmission],
-    ["Karoserie", BODY_LABEL[listing.body]],
+    ["Karoserie", BODY_KEYS[row.data.body] ?? BODY_LABEL[listing.body]],
     ["Barva", listing.color],
     ...(model ? [["Generace", listing.generation] as [string, React.ReactNode]] : []),
     ["VIN", listing.vin],

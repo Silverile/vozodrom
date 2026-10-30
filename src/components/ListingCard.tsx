@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getBrand, getModel } from "@/lib/catalog";
-import { getMake } from "@/lib/makes";
+import { getMake, modelLinesOf } from "@/lib/makes";
 import { formatKm, formatPrice, listingHref } from "@/lib/format";
 import { photoUrl } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
@@ -16,7 +16,8 @@ export function ListingCard({ listing }: { listing: Listing }) {
   const brand = getBrand(listing.brandSlug);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
-  const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${model?.name ?? listing.modelSlug}, ${listing.year}`;
+  const modelName = model?.name ?? modelLinesOf(listing.brandSlug).find((l) => l.slug === listing.modelSlug)?.name ?? listing.modelSlug;
+  const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${modelName}, ${listing.year}`;
   const drawing = frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
   return (
     <article className="card relative min-w-0 overflow-hidden flex flex-col hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">

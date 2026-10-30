@@ -21,6 +21,11 @@ function ListingCard({ row }: { row: ListingRow }) {
           {formatPrice(d.price)} · {formatKm(d.mileageKm)} · {d.engine}, {d.powerKw} kW · {FUEL_LABEL[d.fuel as keyof typeof FUEL_LABEL] ?? d.fuel} · {getCity(d.city)?.name ?? d.region}
         </span>
       </div>
+      {row.moderationFlags.length > 0 && (
+        <ul className="flex flex-wrap gap-1.5">
+          {row.moderationFlags.map((f) => <li key={f} className="chip bg-[var(--color-warn-soft)] text-[var(--color-warn)]">⚑ {f}</li>)}
+        </ul>
+      )}
       {row.photos.length > 0 && (
         <ul className="flex gap-2 overflow-x-auto">
           {row.photos.map((p) => (
@@ -54,6 +59,7 @@ export default async function ModerationPage() {
       <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Inzeráty</h1>
       <section className="space-y-3">
         <h2 className="text-lg font-bold">Ke schválení <span className="text-[var(--color-muted)] font-normal">{pending.length}</span></h2>
+        <p className="text-sm text-[var(--color-muted)]">Sem chodí jen inzeráty, u kterých automatická kontrola něco našla (důvody u každého). Ostatní se zveřejní hned.</p>
         {pending.length === 0 ? (
           <p className="card p-6 text-sm text-[var(--color-muted)]">Žádné inzeráty nečekají na kontrolu.</p>
         ) : (
