@@ -85,8 +85,11 @@ samostatnou stránku se stejným formulářem.
 
 ## Tok inzerátu
 
-1. Formulář `/pridat/` drží rozpracovaná data v `localStorage`; „Pokračovat k fotkám“ je uloží jako `draft`.
-2. Na `/ucet/inzerat/[id]` se přidají fotky (zmenšené v prohlížeči na WebP ≤ 1920 px) a telefon.
+1. Formulář `/pridat/` má kroky Vozidlo → Stav a cena → Výbava → Místo a popis → Fotky a zveřejnění. Vůz se
+   najde jedním polem v katalogu (`CarSearch`) nebo ručně; rozpracovaná data drží `localStorage`, takže přežijí
+   přihlášení v dialogu i obnovení stránky. Chyby se ukazují u polí až po jejich vyplnění nebo „Pokračovat“.
+2. V posledním kroku se údaje uloží jako `draft` (id zůstane v rozpracovaných datech) a ve formuláři se přidají fotky
+   (`PhotoManager`, zmenšené v prohlížeči na WebP ≤ 1920 px) a telefon; stejný `PhotoManager` je na `/ucet/inzerat/[id]`.
 3. „Zveřejnit“ spustí robota (`moderation.ts`): čistý inzerát je hned `published`, podezřelý `pending`
    s důvody pro moderátora. Úprava zveřejněného inzerátu projde robotem znovu.
 4. Moderátor schválí/zamítne v `/admin/inzeraty/`; autor dostane oznámení do vlákna „Vozodrom“.

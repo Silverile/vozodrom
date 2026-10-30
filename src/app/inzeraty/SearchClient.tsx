@@ -7,6 +7,7 @@ import { ListingRow } from "@/components/ListingRow";
 import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, getBrand, getModel, models } from "@/lib/catalog";
 import { LocationPills, useSearchLocation } from "@/components/LocationPills";
+import { EQUIPMENT, EQUIPMENT_GROUPS } from "@/lib/equipment";
 import { getCity, nearestDistance, withinAny } from "@/lib/geo";
 import { listings } from "@/lib/listings";
 import { getMake, makesIn, modelLinesOf } from "@/lib/makes";
@@ -44,7 +45,12 @@ const FLAGS: { key: string; label: string; test: (l: Listing) => boolean }[] = [
   { key: "dobraCena", label: "Jen dobrá a výborná cena", test: (l) => (marketEstimate(l)?.ratio ?? 1) < 0.95 },
 ];
 const COLORS = [...new Set(listings.map((l) => l.color))].sort((a, b) => a.localeCompare(b, "cs"));
-const FEATURES = [...new Set(listings.flatMap((l) => l.features))].sort((a, b) => a.localeCompare(b, "cs"));
+// The equipment dictionary by group, then anything feeds wrote that the dictionary does not know.
+const KNOWN = new Set(EQUIPMENT.map((e) => e.label));
+const FEATURE_GROUPS: [string, string[]][] = [
+  ...EQUIPMENT_GROUPS.map((g): [string, string[]] => [g, EQUIPMENT.filter((e) => e.group === g).map((e) => e.label)]),
+  ["Ostatní", [...new Set(listings.flatMap((l) => l.features))].filter((f) => !KNOWN.has(f)).sort((a, b) => a.localeCompare(b, "cs"))] as [string, string[]],
+].filter(([, items]) => items.length > 0);
 const ADVANCED_KEYS = ["cenaOd", "rokDo", "najezdOd", "vykonOd", "vykonDo", "barva", "prodejce", "vybava", ...FLAGS.map((f) => f.key)];
 const list = (value: string | null) => (value ?? "").split(",").filter(Boolean);
 
@@ -370,15 +376,20 @@ export function SearchClient() {
               </summary>
               <fieldset className="card absolute z-20 mt-1 p-2 w-72 max-h-72 overflow-y-auto shadow-2xl right-0 md:left-0 md:right-auto">
                 <legend className="sr-only">Výbava</legend>
-                {FEATURES.map((f) => (
-                  <label key={f} className="flex gap-2 items-center px-2 py-1 text-sm rounded-md hover:bg-[var(--color-field)]">
-                    <input
-                      type="checkbox"
-                      checked={features.includes(f)}
-                      onChange={(e) => update("vybava", (e.target.checked ? [...features, f] : features.filter((x) => x !== f)).join(","))}
-                    />
-                    {f}
-                  </label>
+                {FEATURE_GROUPS.map(([group, items]) => (
+                  <div key={group} role="group" aria-label={group}>
+                    <p className="px-2 pt-2 pb-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">{group}</p>
+                    {items.map((f) => (
+                      <label key={f} className="flex gap-2 items-center px-2 py-1 text-sm rounded-md hover:bg-[var(--color-field)]">
+                        <input
+                          type="checkbox"
+                          checked={features.includes(f)}
+                          onChange={(e) => update("vybava", (e.target.checked ? [...features, f] : features.filter((x) => x !== f)).join(","))}
+                        />
+                        {f}
+                      </label>
+                    ))}
+                  </div>
                 ))}
               </fieldset>
             </details>

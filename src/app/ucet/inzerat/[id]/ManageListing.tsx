@@ -9,11 +9,10 @@ import { formatKm, formatPrice } from "@/lib/format";
 import { getCity } from "@/lib/geo";
 import { BODY_KEYS } from "@/lib/listing-catalog";
 import type { Draft } from "@/lib/listing-draft";
-import { MESSENGERS, MESSENGER_LABEL, type Messenger, STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
-import { resizePhoto } from "@/lib/photo-resize";
+import { PhotoManager } from "@/components/PhotoManager";
+import { equipmentLabels } from "@/lib/equipment";
+import { MESSENGERS, MESSENGER_LABEL, type Messenger, STATUS_LABEL, STATUS_STYLE } from "@/lib/listing-status";
 import { draftStore } from "../../../pridat/AddListingForm";
-
-const MAX_PHOTOS = 20;
 
 interface Props {
   listing: { id: string; title: string; status: ListingStatus; data: Draft; photos: ListingPhoto[]; phone: string; messengers: Messenger[]; rejectReason: string | null; wasPublished: boolean };
@@ -37,7 +36,6 @@ export function ManageListing({ listing }: Props) {
   const [messengers, setMessengers] = useState<Messenger[]>(listing.messengers);
   const contactChanged = phone !== listing.phone || messengers.join() !== listing.messengers.join();
   const [busy, setBusy] = useState(false);
-  const [progress, setProgress] = useState("");
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const editable = listing.status !== "withdrawn";
@@ -56,38 +54,6 @@ export function ManageListing({ listing }: Props) {
     }
   }
 
-  async function upload(files: FileList) {
-    const room = MAX_PHOTOS - photos.length;
-    const chosen = [...files].slice(0, room);
-    setBusy(true);
-    setError("");
-    for (const [i, file] of chosen.entries()) {
-      setProgress(`Nahrávám ${i + 1} / ${chosen.length}…`);
-      try {
-        const { blob, width, height } = await resizePhoto(file);
-        const response = await fetch(`${base}fotky/?w=${width}&h=${height}`, { method: "POST", headers: { "content-type": blob.type }, body: blob });
-        const result = (await response.json().catch(() => ({}))) as ListingPhoto & { error?: string };
-        if (!response.ok) throw new Error(result.error ?? "Nahrání se nepovedlo.");
-        setPhotos((current) => [...current, result]);
-      } catch (e) {
-        setError(`${file.name}: ${e instanceof Error ? e.message : "nahrání se nepovedlo"}`);
-        break;
-      }
-    }
-    if (files.length > room) setError(`Lze nahrát nejvýše ${MAX_PHOTOS} fotek.`);
-    setProgress("");
-    setBusy(false);
-    router.refresh();
-  }
-
-  async function move(index: number, delta: number) {
-    const next = [...photos];
-    const [photo] = next.splice(index, 1);
-    next.splice(index + delta, 0, photo);
-    setPhotos(next);
-    await run(() => call(base, "PATCH", { order: next.map((p) => p.key) }));
-  }
-
   const d = listing.data;
   const specs: [string, string][] = [
     ["Rok výroby", String(d.year)],
@@ -99,6 +65,7 @@ export function ManageListing({ listing }: Props) {
     ["Převodovka", d.transmission],
     ["Místo", getCity(d.city)?.name ?? d.region],
     ["VIN", d.vin || "neuveden"],
+    ["Výbava", equipmentLabels(d.features).join(", ") || "neuvedena"],
   ];
 
   return (
@@ -123,61 +90,8 @@ export function ManageListing({ listing }: Props) {
       {live && editable && <p className="text-xs text-[var(--color-muted)]">Změněné údaje znovu projdou automatickou kontrolou.</p>}
 
       <section className="card p-4 space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="font-bold">Fotky <span className="text-[var(--color-muted)] font-normal">{photos.length} / {MAX_PHOTOS}</span></h2>
-          {editable && photos.length < MAX_PHOTOS && (
-            <label className="pill cursor-pointer">
-              + Přidat fotky
-              <input
-                type="file"
-                accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
-                multiple
-                className="sr-only"
-                disabled={busy}
-                onChange={(e) => {
-                  if (e.target.files?.length) upload(e.target.files);
-                  e.target.value = "";
-                }}
-              />
-            </label>
-          )}
-        </div>
-        {photos.length === 0 ? (
-          <p className="text-sm text-[var(--color-muted)]">Přidejte alespoň jednu fotku; první bude hlavní. Fotky před nahráním zmenšíme a odstraníme z nich údaje o poloze.</p>
-        ) : (
-          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {photos.map((p, i) => (
-              <li key={p.key} className="space-y-1">
-                <img src={photoUrl(p.key)} alt={`Fotka ${i + 1}`} width={p.width} height={p.height} className="w-full aspect-[4/3] object-cover rounded-[10px] bg-[var(--color-photo)]" loading="lazy" />
-                <div className="flex items-center gap-1 text-xs">
-                  {i === 0 ? <span className="chip">hlavní</span> : <span className="text-[var(--color-muted)]">{i + 1}.</span>}
-                  {editable && (
-                    <span className="ml-auto flex gap-1">
-                      <button type="button" className="pill !px-2" disabled={busy || i === 0} aria-label="Posunout dopředu" onClick={() => move(i, -1)}>←</button>
-                      <button type="button" className="pill !px-2" disabled={busy || i === photos.length - 1} aria-label="Posunout dozadu" onClick={() => move(i, 1)}>→</button>
-                      <button
-                        type="button"
-                        className="pill !px-2"
-                        disabled={busy}
-                        aria-label="Smazat fotku"
-                        onClick={() =>
-                          run(async () => {
-                            const problem = await call(`${base}fotky/?klic=${encodeURIComponent(p.key)}`, "DELETE");
-                            if (!problem) setPhotos((current) => current.filter((x) => x.key !== p.key));
-                            return problem;
-                          })
-                        }
-                      >
-                        ✕
-                      </button>
-                    </span>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-        {progress && <p className="text-sm text-[var(--color-muted)]" role="status">{progress}</p>}
+        <h2 className="font-bold">Fotky</h2>
+        <PhotoManager listingId={listing.id} photos={photos} editable={editable} onChange={setPhotos} />
       </section>
 
       <section className="card p-4">

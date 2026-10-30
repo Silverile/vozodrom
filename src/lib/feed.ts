@@ -1,4 +1,5 @@
 import { FUEL_LABEL, REGIONS, generationMatch, getModel } from "./catalog";
+import { equipmentLabel } from "./equipment";
 import { getCity, regionCapital } from "./geo";
 import type { Fuel, Listing, Transmission } from "./types";
 
@@ -154,7 +155,8 @@ export function importFeed(feed: Feed): ImportReport {
       vin: "neuvedeno",
       stkHistory: [],
       postedAt: v.updatedAt.slice(0, 10),
-      features: v.features ?? [],
+      // the dictionary's label when the feed's wording is known, so the equipment filter finds it
+      features: [...new Set((v.features ?? []).map(equipmentLabel))],
       description: v.description ?? "",
     });
   }

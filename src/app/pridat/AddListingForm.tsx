@@ -13,8 +13,9 @@ import {
 import { getMake, makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { createStore } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
+import { EQUIPMENT, EQUIPMENT_GROUPS, equipmentLabels, equipmentMatches } from "@/lib/equipment";
 import { CarSearch } from "./CarSearch";
-import { SubmitListing } from "./SubmitListing";
+import { usePhotosStep } from "./PhotosStep";
 
 // Car listing form driven by the catalogue: make → model line → year → generation → body →
 // engine. Choosing a catalogue engine fills fuel and power; anything the catalogue lacks can be
@@ -35,9 +36,12 @@ const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCa
 const STEPS: { title: string; fields: DraftField[] }[] = [
   { title: "Vozidlo", fields: ["brand", "model", "year", "generation", "body", "engine", "fuel", "powerKw", "transmission"] },
   { title: "Stav a cena", fields: ["mileageKm", "price", "vin"] },
+  { title: "Výbava", fields: [] },
   { title: "Místo a popis", fields: ["place"] },
 ];
-const LAST = STEPS.length - 1;
+/** Photos, contact and publishing come after the data steps; see PhotosStep. */
+const PHOTOS = STEPS.length;
+const TITLES = [...STEPS.map((s) => s.title), "Fotky a zveřejnění"];
 
 /** Catalogue generations (bodies, engines, gearboxes, photo) of a model line, fetched per line. */
 function useCardGenerations(make: string, line: string | undefined): FormGeneration[] {
@@ -99,6 +103,9 @@ export function AddListingForm() {
   const [open, setOpen] = useState<number | null | undefined>(undefined);
   const [touched, setTouched] = useState<Set<DraftField>>(new Set());
   const [tried, setTried] = useState<Set<number>>(new Set());
+  const [equipmentQuery, setEquipmentQuery] = useState("");
+  // Equipment groups shown open; on phones only the first starts open, a search opens all.
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set([EQUIPMENT_GROUPS[0]]));
   const formRef = useRef<HTMLFormElement>(null);
 
   const lines = useMemo(() => [...modelLinesOf(draft.brand)].sort((a, b) => a.name.localeCompare(b.name, "cs")), [draft.brand]);
@@ -118,7 +125,7 @@ export function AddListingForm() {
     (chosenGeneration && cardGeneration(chosenGeneration, cardGenerations)) ??
     (draft.year ? cardGenerations.filter((g) => g.from !== null && coversYear(g, draft.year)).pop() : undefined);
   const bodies = (cardGen?.bodies.length ? cardGen.bodies : line?.bodyTypes.length ? line.bodyTypes : Object.keys(BODY_KEYS)).filter((b) => b in BODY_KEYS);
-  const hintWords = engineHint.toLowerCase().split(/s+/).filter(Boolean);
+  const hintWords = engineHint.toLowerCase().split(/\s+/).filter(Boolean);
   const fits = (e: FormEngine) => hintWords.length > 0 && hintWords.every((w) => e.label.toLowerCase().includes(w));
   // Engines the seller already named in the quick search come first.
   const engines = [...(cardGen?.engines ?? [])].sort((a, b) => Number(fits(b)) - Number(fits(a)));
@@ -142,11 +149,12 @@ export function AddListingForm() {
   const stepDone = STEPS.map((s) => s.fields.every((f) => !problems[f]));
   const firstOpen = stepDone.findIndex((done) => !done);
   const complete = firstOpen === -1;
-  const current = open === undefined ? (hydrated ? (complete ? null : firstOpen) : 0) : open;
+  const current = open === undefined ? (hydrated ? (complete ? PHOTOS : firstOpen) : 0) : open;
 
-  // Once the stored draft is read, open its first unfinished step (all closed when it is complete).
+  // Once the stored draft is read, open its first unfinished step, or the photos when all is filled
+  // (after signing in with Google the page reloads, and the seller continues there).
   useEffect(() => {
-    if (hydrated && open === undefined) setOpen(complete ? null : firstOpen);
+    if (hydrated && open === undefined) setOpen(complete ? PHOTOS : firstOpen);
   }, [hydrated]);
 
   const shown = (field: DraftField, step: number) => (touched.has(field) || tried.has(step) ? problems[field] : undefined);
@@ -173,11 +181,20 @@ export function AddListingForm() {
 
   function next(step: number) {
     if (!stepDone[step]) return showProblems(step);
-    const following = stepDone.findIndex((done, i) => i > step && !done);
-    if (following >= 0) reveal(following);
+    // In order, so the optional Výbava is not skipped; problems left earlier show at the end.
+    if (step + 1 < STEPS.length) reveal(step + 1);
     else if (!complete) showProblems(firstOpen);
-    else setOpen(null);
+    else reveal(PHOTOS);
   }
+
+  const features = draft.features ?? [];
+  // Výbava has nothing required: it shows as done once something is ticked or the seller went past it.
+  const looksDone = (i: number) => stepDone[i] && (STEPS[i].fields.length > 0 || features.length > 0 || (current ?? PHOTOS) > i);
+  // Reads the stored draft, not this render's copy, so quick taps in a row all count.
+  const toggleFeature = (key: string) => {
+    const now = draftStore.read().features ?? [];
+    write({ features: now.includes(key) ? now.filter((k) => k !== key) : [...now, key] });
+  };
 
   const makeName = getMake(draft.brand)?.name ?? "";
   const genName = chosenGeneration ? chosenGeneration.code ?? yearsOf({ from: chosenGeneration.from, to: chosenGeneration.to, current: chosenGeneration.to === null }) : "";
@@ -192,11 +209,20 @@ export function AddListingForm() {
       BODY_KEYS[draft.body] ?? null,
     ],
     [draft.mileageKm ? formatKm(draft.mileageKm) : null, draft.price ? formatPrice(draft.price) : null, draft.color || null, draft.vin ? `VIN ${draft.vin}` : null],
+    [features.length ? `${features.length} ${features.length === 1 ? "položka" : features.length < 5 ? "položky" : "položek"}: ${equipmentLabels(features).join(", ")}` : null],
     [
       city && city.name !== draft.region ? `${city.name}, ${draft.region}` : draft.region || null,
       draft.description.trim() ? `popis ${draft.description.trim().length} znaků` : draft.region ? "bez popisu" : null,
     ],
   ].map((parts) => parts.filter(Boolean).join(" · "));
+
+  const photos = usePhotosStep({
+    draft: { ...draft, generation: chosenId, features },
+    complete,
+    onIncomplete: () => showProblems(firstOpen),
+    write,
+  });
+  const photoList = photos.photos;
 
   const drawing = line ? (frontDrawingFor(draft.brand, line.slug, draft.year) ?? newestFrontDrawing(draft.brand, line.slug)) : null;
   const preview: Listing | null =
@@ -223,25 +249,21 @@ export function AddListingForm() {
           vin: draft.vin || "neuvedeno",
           stkHistory: [],
           postedAt: new Date().toISOString().slice(0, 10),
-          features: [],
+          features: equipmentLabels(features),
           description: draft.description,
+          photos: photoList,
         }
       : null;
 
   const input = "input mt-1 aria-[invalid=true]:border-[var(--color-warn)]";
   const number = (value: string) => (value === "" ? 0 : Number(value));
-  const submit = (
-    <SubmitListing
-      draft={{ ...draft, generation: chosenId }}
-      complete={complete}
-      onIncomplete={() => showProblems(firstOpen)}
-    />
-  );
-  // The main action of the open step: continue, or save once nothing is left.
+  // The main action of the open step: continue to the next one; on the last, the photos step's own.
   const action = (step: number | null) =>
-    step === null || (step === LAST && complete) || (complete && stepDone[step]) ? submit : (
+    step === null || step === PHOTOS ? photos.primary : (
       <button type="button" className="btn-cta text-sm" onClick={() => next(step)}>Pokračovat</button>
     );
+
+  const equipmentShown = EQUIPMENT.filter((e) => equipmentMatches(e, equipmentQuery));
 
   const fieldsOf: ReactNode[] = [
     <>
@@ -474,9 +496,73 @@ export function AddListingForm() {
       </Field>
     </>,
 
+    <div key="vybava" className="sm:col-span-2 space-y-3">
+      <div className="flex flex-wrap items-center gap-3">
+        <input
+          className="input sm:max-w-xs"
+          type="search"
+          aria-label="Hledat ve výbavě"
+          placeholder="Hledat ve výbavě…"
+          value={equipmentQuery}
+          onChange={(e) => setEquipmentQuery(e.target.value)}
+        />
+        <span className="text-sm text-[var(--color-muted)]" aria-live="polite">Vybráno: {features.length}</span>
+        {features.length > 0 && (
+          <button type="button" className="text-sm text-[var(--color-brand)] hover:underline" onClick={() => write({ features: [] })}>Vymazat výběr</button>
+        )}
+      </div>
+      <p className="text-xs text-[var(--color-muted)]">Nepovinné. Vybraná výbava se ukáže v inzerátu a kupující podle ní mohou filtrovat.</p>
+      {equipmentShown.length === 0 && (
+        <p className="text-sm text-[var(--color-muted)]">Tuto výbavu v seznamu nemáme, napište ji do popisu.</p>
+      )}
+      {EQUIPMENT_GROUPS.map((group) => {
+        const items = equipmentShown.filter((e) => e.group === group);
+        if (!items.length) return null;
+        const chosen = items.filter((e) => features.includes(e.key)).length;
+        // A search shows every match; otherwise groups fold, open on wide screens.
+        const isOpenGroup = Boolean(equipmentQuery.trim()) || openGroups.has(group);
+        return (
+          <section key={group} className="border-t border-[var(--color-line)] pt-2">
+            <button
+              type="button"
+              aria-expanded={isOpenGroup}
+              className="flex w-full items-center justify-between gap-3 py-1 text-left font-semibold sm:pointer-events-none"
+              onClick={() => setOpenGroups((g) => {
+                const next = new Set(g);
+                if (next.has(group)) next.delete(group);
+                else next.add(group);
+                return next;
+              })}
+            >
+              <span>{group}{chosen > 0 && <span className="ml-2 font-normal text-sm text-[var(--color-muted)]">{chosen}</span>}</span>
+              <span aria-hidden="true" className="sm:hidden text-[var(--color-muted)]">{isOpenGroup ? "−" : "+"}</span>
+            </button>
+            <ul className={`mt-2 flex-wrap gap-2 ${isOpenGroup ? "flex" : "hidden sm:flex"}`} aria-label={group}>
+              {items.map((e) => {
+                const on = features.includes(e.key);
+                return (
+                  <li key={e.key}>
+                    <button
+                      type="button"
+                      aria-pressed={on}
+                      onClick={() => toggleFeature(e.key)}
+                      className="pill min-h-11 !px-3.5 text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:bg-[var(--color-brand)]/15 aria-pressed:text-[var(--color-ink)]"
+                    >
+                      {on && <span aria-hidden="true">✓ </span>}
+                      {e.label}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })}
+    </div>,
+
     <>
-      <Field id="f-place" label="Místo" wide error={shown("place", 2)} onLeave={() => touch("place")}>
-        <select id="f-place" className={input} value={draft.city} {...invalid("place", 2)} onChange={(e) => write({ city: e.target.value, region: getCity(e.target.value)?.region ?? "" })}>
+      <Field id="f-place" label="Místo" wide error={shown("place", 3)} onLeave={() => touch("place")}>
+        <select id="f-place" className={input} value={draft.city} {...invalid("place", 3)} onChange={(e) => write({ city: e.target.value, region: getCity(e.target.value)?.region ?? "" })}>
           <option value="">Vyberte</option>
           {REGIONS.map((r) => (
             <optgroup key={r} label={r}>
@@ -494,7 +580,7 @@ export function AddListingForm() {
   const progress = (
     <ol className="flex gap-1.5" aria-label="Postup">
       {[...STEPS.map((s) => s.title), "Fotky"].map((title, i) => {
-        const done = i < STEPS.length && stepDone[i];
+        const done = i < STEPS.length && looksDone(i);
         return (
           <li key={title} className="flex-1 min-w-0">
             <span className={`block h-1.5 rounded-full ${done ? "bg-[var(--color-brand)]" : i === current ? "bg-[var(--color-ink)]/40" : "bg-[var(--color-line)]"}`} />
@@ -514,7 +600,7 @@ export function AddListingForm() {
       <form ref={formRef} className="space-y-3 min-w-0" onSubmit={(e) => e.preventDefault()} noValidate>
         <div className="card p-4">
           <div className="flex items-baseline justify-between gap-3 mb-2 text-sm">
-            <span className="font-semibold">{current === null ? "Vše vyplněno" : `Krok ${current + 1} z ${STEPS.length + 1}: ${STEPS[current].title}`}</span>
+            <span className="font-semibold">{current === null ? "Vše vyplněno" : `Krok ${current + 1} z ${TITLES.length}: ${TITLES[current]}`}</span>
             <span className="text-xs text-[var(--color-muted)]">Ukládá se v tomto prohlížeči</span>
           </div>
           {progress}
@@ -541,31 +627,49 @@ export function AddListingForm() {
                 >
                   <span
                     aria-hidden="true"
-                    className={`grid h-7 w-7 shrink-0 place-items-center rounded-full text-xs font-bold ${stepDone[i] ? "bg-[var(--color-brand)] text-white" : "bg-[var(--color-field)] text-[var(--color-muted)]"}`}
+                    className={`grid h-7 w-7 shrink-0 place-items-center rounded-full text-xs font-bold ${looksDone(i) ? "bg-[var(--color-brand)] text-white" : "bg-[var(--color-field)] text-[var(--color-muted)]"}`}
                   >
-                    {stepDone[i] ? "✓" : i + 1}
+                    {looksDone(i) ? "✓" : i + 1}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span id={`krok-${i}-nadpis`} className="block font-semibold">{step.title}</span>
                     {summaries[i] && <span className="block truncate text-sm text-[var(--color-muted)]">{summaries[i]}</span>}
                     {tried.has(i) && !stepDone[i] && <span className="block text-xs text-[var(--color-warn)]">Chybí údaje</span>}
                   </span>
-                  <span className="text-sm font-semibold text-[var(--color-brand)]">{stepDone[i] || summaries[i] ? "Upravit" : "Vyplnit"}</span>
+                  <span className="text-sm font-semibold text-[var(--color-brand)]">{looksDone(i) || summaries[i] ? "Upravit" : "Vyplnit"}</span>
                 </button>
               )}
             </section>
           );
         })}
 
-        <section className="card flex items-center gap-3 p-4 text-[var(--color-muted)]">
-          <span aria-hidden="true" className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--color-field)] text-xs font-bold">{STEPS.length + 1}</span>
-          <span className="min-w-0 flex-1">
-            <span className="block font-semibold text-[var(--color-ink)]">Fotky a zveřejnění</span>
-            <span className="block text-sm">Po uložení přidáte fotky a telefon a odešlete inzerát.</span>
-          </span>
+        <section id={`krok-${PHOTOS}`} className={`card scroll-mt-24 ${current === PHOTOS ? "p-4" : ""}`} aria-labelledby={`krok-${PHOTOS}-nadpis`}>
+          {current === PHOTOS ? (
+            <>
+              <h2 id={`krok-${PHOTOS}-nadpis`} className="font-bold text-lg">
+                <span className="text-[var(--color-muted)] font-normal">{PHOTOS + 1}.</span> {TITLES[PHOTOS]}
+              </h2>
+              <div className="mt-3">{photos.body}</div>
+              <div className="mt-5 hidden lg:flex items-center justify-end gap-3">{photos.primary}</div>
+            </>
+          ) : (
+            <button
+              type="button"
+              onClick={() => (complete ? reveal(PHOTOS) : showProblems(firstOpen))}
+              className="w-full flex items-center gap-3 p-4 text-left rounded-[14px] hover:bg-[var(--color-field)]"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true" className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[var(--color-field)] text-xs font-bold text-[var(--color-muted)]">{PHOTOS + 1}</span>
+              <span className="min-w-0 flex-1">
+                <span id={`krok-${PHOTOS}-nadpis`} className="block font-semibold">{TITLES[PHOTOS]}</span>
+                <span className="block truncate text-sm text-[var(--color-muted)]">
+                  {complete ? photos.summary : "Až budou údaje o voze kompletní"}
+                </span>
+              </span>
+              <span className="text-sm font-semibold text-[var(--color-brand)]">{complete ? "Otevřít" : ""}</span>
+            </button>
+          )}
         </section>
-
-        {current === null && <div className="hidden lg:flex justify-end">{submit}</div>}
 
         <div className="flex justify-start">
           <button type="button" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => {
@@ -596,15 +700,15 @@ export function AddListingForm() {
           <p className="card p-4 text-sm text-[var(--color-muted)]">Náhled se objeví, až vyberete značku a model.</p>
         )}
         <p className="text-xs text-[var(--color-muted)]">
-          Nákres ukazuje generaci z katalogu, ne váš vůz. Po uložení ho nahradí vaše fotky.
+          {photoList.length ? "Hlavní fotka je první v pořadí." : "Nákres ukazuje generaci z katalogu, ne váš vůz. Nahradí ho vaše první fotka."}
         </p>
       </aside>
 
       <div className="lg:hidden fixed inset-x-0 bottom-0 z-30 border-t border-[var(--color-line)] bg-[var(--color-surface)] px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
           <span className="min-w-0 text-sm">
-            <span className="block text-xs text-[var(--color-muted)]">{current === null ? "Hotovo" : `Krok ${current + 1} z ${STEPS.length + 1}`}</span>
-            <span className="block truncate font-semibold">{current === null ? "Vše vyplněno" : STEPS[current].title}</span>
+            <span className="block text-xs text-[var(--color-muted)]">{current === null ? "Hotovo" : `Krok ${current + 1} z ${TITLES.length}`}</span>
+            <span className="block truncate font-semibold">{current === null ? "Vše vyplněno" : TITLES[current]}</span>
           </span>
           <span className="shrink-0">{action(current)}</span>
         </div>

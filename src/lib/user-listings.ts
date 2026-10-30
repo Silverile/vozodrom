@@ -4,6 +4,7 @@ import { and, desc, eq } from "drizzle-orm";
 import { getDb } from "@/db";
 import { listing, user } from "@/db/schema";
 import { FUEL_LABEL, generationMatch, getModel } from "./catalog";
+import { equipmentLabels } from "./equipment";
 import { regionCapital } from "./geo";
 import { pictogramBody } from "./listing-catalog";
 import { lineOf } from "./listing-draft";
@@ -44,7 +45,7 @@ export function toListing(row: ListingRow, sellerName: string): Listing {
     // STK records will come from the VIN lookup once it exists; until then none are shown.
     stkHistory: [],
     postedAt: (row.publishedAt ?? row.updatedAt).toISOString().slice(0, 10),
-    features: [],
+    features: equipmentLabels(d.features),
     description: d.description,
     photos: row.photos,
   };

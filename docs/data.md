@@ -24,7 +24,7 @@
 | `id` | `u-` + 12 náhodných znaků |
 | `user_id` | autor |
 | `status` | `draft` · `pending` · `published` · `rejected` · `withdrawn` |
-| `data` | JSON s údaji o voze (typ `Draft` v `src/lib/listing-draft.ts`) |
+| `data` | JSON s údaji o voze (typ `Draft` v `src/lib/listing-draft.ts`), včetně `features` = klíče výbavy |
 | `photos` | JSON `[{ key, width, height }]`, pořadí = pořadí v galerii |
 | `phone`, `messengers` | kontakt; `messengers` ⊂ `whatsapp`, `telegram`, `viber` |
 | `moderation_flags` | důvody, proč robot poslal inzerát moderátorovi |
@@ -60,11 +60,19 @@ nebo kontakt (e-mail, telefon) v textu, cenu pod polovinou odhadu trhu, nebo je 
 mladšího 24 hodin. Robot sám nic nezamítá. Komunikátory (WhatsApp, Telegram, Viber) se nehlídají — prodejce
 je uvádí u telefonu.
 
+### Výbava (`src/lib/equipment.ts`)
+
+Slovník s pevnými klíči, českými názvy a skupinami (Bezpečnost, Komfort, Multimédia, Exteriér, Historie a stav).
+Inzerát ukládá klíče; hledání, karty a filtr `?vybava=` pracují s názvy, které jsou shodné s dřívějšími texty
+testovacích inzerátů a feedů, takže staré odkazy fungují. Texty z feedů se převádějí přes aliasy, neznámé zůstanou,
+jak jsou (ve filtru ve skupině „Ostatní“). Starší inzeráty a koncepty bez `features` se čtou jako bez výbavy.
+
 ### Kontrola údajů (`src/lib/listing-draft.ts`)
 
 Stejná pravidla v prohlížeči i na serveru: značka z katalogu, model (řada nebo vlastní název), rok v rozmezí
 generací řady, generace (povinná, když roku odpovídá víc generací), karoserie, motor, palivo, výkon,
-převodovka, nájezd, cena ≥ 1 000 Kč, místo, VIN (17 znaků bez I/O/Q).
+převodovka, nájezd (povinný), cena ≥ 1 000 Kč, místo, VIN (nepovinný; když je, 17 znaků bez I/O/Q). Rok mimo
+roky výroby celé řady se odmítne; generace bez let v katalogu rok neblokuje.
 
 ## Migrace
 

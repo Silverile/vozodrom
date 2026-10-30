@@ -43,7 +43,7 @@ export function cardGeneration<T extends { code: string | null; from: number | n
   g: { code: string | null; from: number | null; to: number | null },
   cards: T[],
 ): T | undefined {
-  const parts = (code: string | null) => (code ?? "").split(/[s/,]+/).filter(Boolean).map((p) => p.toLowerCase());
+  const parts = (code: string | null) => (code ?? "").split(/[\s/,]+/).filter(Boolean).map((p) => p.toLowerCase());
   const mine = parts(g.code);
   return (
     cards.find((c) => c.code !== null && c.code === g.code) ??

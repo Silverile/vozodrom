@@ -1,4 +1,5 @@
 import { REGIONS } from "./catalog";
+import { cleanEquipment } from "./equipment";
 import { getCity } from "./geo";
 import { BODY_KEYS, type ListingFuel, coversYear } from "./listing-catalog";
 import { type ModelLine, getMake, makesIn, modelLinesOf } from "./makes";
@@ -27,6 +28,8 @@ export interface Draft {
   city: string;
   description: string;
   vin: string;
+  /** equipment keys from lib/equipment; missing in drafts and listings saved before it existed */
+  features?: string[];
 }
 
 /** A draft being edited in the browser; serverId is set when it edits a saved listing. */
@@ -37,16 +40,19 @@ const FUELS: ListingFuel[] = ["benzin", "nafta", "hybrid", "elektro", "lpg"];
 
 export const EMPTY_DRAFT: Draft = {
   brand: "", model: "", generation: "", year: 0, mileageKm: 0, price: 0, engine: "", fuel: "", transmission: "",
-  powerKw: 0, body: "", color: "", region: "", city: "", description: "", vin: "",
+  powerKw: 0, body: "", color: "", region: "", city: "", description: "", vin: "", features: [],
 };
 
 export const EMPTY_LOCAL_DRAFT: LocalDraft = { ...EMPTY_DRAFT, serverId: "" };
 
-/** Drafts saved before `generation` existed are still accepted (it reads as not chosen). */
+/** Drafts saved before `generation` or `features` existed are still accepted (read as empty). */
 export function isDraft(v: unknown): v is Draft {
   if (!v || typeof v !== "object") return false;
   const record = v as Record<string, unknown>;
-  return Object.entries(EMPTY_DRAFT).every(([k, x]) => typeof record[k] === typeof x || (k === "generation" && record[k] === undefined));
+  if (record.features !== undefined && !(Array.isArray(record.features) && record.features.every((f) => typeof f === "string"))) return false;
+  return Object.entries(EMPTY_DRAFT).every(
+    ([k, x]) => k === "features" || typeof record[k] === typeof x || (k === "generation" && record[k] === undefined),
+  );
 }
 
 /** Keeps exactly the Draft fields, with text trimmed and capped, so nothing extra is stored. */
@@ -56,7 +62,7 @@ export function cleanDraft(v: Draft): Draft {
     brand: text(v.brand, 64), model: text(v.model, 80), generation: text(v.generation ?? "", 80), year: v.year,
     mileageKm: v.mileageKm, price: v.price, engine: text(v.engine, 80), fuel: v.fuel, transmission: v.transmission,
     powerKw: v.powerKw, body: v.body, color: text(v.color, 40), region: v.region, city: v.city,
-    description: text(v.description, 5000), vin: text(v.vin, 17).toUpperCase(),
+    description: text(v.description, 5000), vin: text(v.vin, 17).toUpperCase(), features: cleanEquipment(v.features),
   };
 }
 

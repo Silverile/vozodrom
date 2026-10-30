@@ -114,6 +114,14 @@ export default async function UserListingPage({ params }: { params: Params }) {
               <p className="mt-1 text-[var(--color-muted)] whitespace-pre-line">{listing.description}</p>
             </section>
           )}
+          {listing.features.length > 0 && (
+            <section className="card p-4">
+              <h2 className="font-bold">Výbava</h2>
+              <ul className="mt-2 flex flex-wrap gap-1.5 text-sm">
+                {listing.features.map((f) => <li key={f} className="chip bg-[var(--color-field)] text-[var(--color-ink-soft)]">{f}</li>)}
+              </ul>
+            </section>
+          )}
           {context && <GenerationCard context={context} makeName={makeName} brandSlug={listing.brandSlug} />}
           {context && <CzechData context={context} listing={listing} makeName={makeName} />}
         </div>
