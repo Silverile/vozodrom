@@ -8,6 +8,7 @@ Všechny cesty končí lomítkem (web má `trailingSlash`); bez něj Next přesm
 | Metoda a cesta | Kdo | Co |
 |---|---|---|
 | `GET/POST /api/auth/*` | kdokoli | Better Auth: registrace, přihlášení (e-mail, Google), odhlášení, ověření e-mailu, reset hesla, admin (role, blokace). Router Better Auth nezná lomítko na konci, handler ho odstraní. |
+| `GET /api/prihlaseni/volby/` | kdokoli | `{ google, signupOpen }` — co nabídne přihlašovací dialog (cache 5 min) |
 | `GET /api/ucet/seznamy/` | přihlášený | oblíbené a uložená hledání |
 | `PUT /api/ucet/seznamy/[?merge=1]` | přihlášený | `{ favorites?, searches? }` nahradí (nebo s `merge=1` přidá) seznamy |
 

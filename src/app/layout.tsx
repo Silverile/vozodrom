@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { AccountLink } from "@/components/AccountLink";
 import { AccountSync } from "@/components/AccountSync";
 import { ChatConnection } from "@/components/ChatConnection";
+import { SignInModal } from "@/components/SignInModal";
 import { Analytics, ConsentSettings } from "@/components/Analytics";
 import { AddListingButton, BrandLink, SectionTabs } from "@/components/Brand";
 import { LocationPicker } from "@/components/LocationPicker";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeSync />
         <AccountSync />
         <ChatConnection />
+        <SignInModal />
       </body>
     </html>
   );

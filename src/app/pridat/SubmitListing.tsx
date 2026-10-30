@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { SignInLink } from "@/components/SignInModal";
 import { authClient } from "@/lib/auth-client";
 import { EMPTY_LOCAL_DRAFT, type LocalDraft } from "@/lib/listing-draft";
 import { draftStore } from "./AddListingForm";
@@ -17,9 +17,9 @@ export function SubmitListing({ draft, complete }: { draft: LocalDraft; complete
 
   if (!signedIn) {
     return (
-      <Link href="/prihlaseni/?dalsi=/pridat/" className="btn-cta text-sm">
+      <SignInLink next="/pridat/" className="btn-cta text-sm">
         Přihlásit se a pokračovat
-      </Link>
+      </SignInLink>
     );
   }
 

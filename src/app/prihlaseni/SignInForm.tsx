@@ -30,11 +30,20 @@ function message(error: { code?: string; message?: string } | null): string {
   return (error.code && ERRORS[error.code]) || "Něco se nepovedlo. Zkuste to prosím znovu.";
 }
 
-export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen: boolean }) {
+/** In the sign-in dialog the form stays on the current page: no URL changes, it closes on success. */
+export interface ModalOptions {
+  /** page to come back to after Google or e-mail verification */
+  next: string;
+  onClose: () => void;
+}
+
+export function SignInForm({ google, signupOpen, modal }: { google: boolean; signupOpen: boolean; modal?: ModalOptions }) {
   const router = useRouter();
   const params = useSearchParams();
-  const register = signupOpen && params.get("rezim") === "registrace";
-  const next = safeNext(params.get("dalsi"));
+  const [modalRegister, setModalRegister] = useState(false);
+  const register = signupOpen && (modal ? modalRegister : params.get("rezim") === "registrace");
+  const next = modal ? modal.next : safeNext(params.get("dalsi"));
+  const Title = modal ? "h2" : "h1";
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [unverified, setUnverified] = useState<string | null>(null);
@@ -55,7 +64,10 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
       const { error } = await authClient.signIn.email({ email, password, callbackURL: next });
       if (error?.code === "EMAIL_NOT_VERIFIED") setUnverified(email);
       else if (error) setError(message(error));
-      else {
+      else if (modal) {
+        modal.onClose();
+        router.refresh();
+      } else {
         router.replace(next);
         router.refresh();
       }
@@ -74,7 +86,7 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
   if (sentTo) {
     return (
       <div className="card p-6 space-y-3">
-        <h1 className="text-2xl font-extrabold">Zkontrolujte e-mail</h1>
+        <Title className="text-2xl font-extrabold">Zkontrolujte e-mail</Title>
         <p className="text-sm text-[var(--color-muted)]">
           Na adresu <strong className="text-[var(--color-ink)]">{sentTo}</strong> jsme poslali odkaz pro potvrzení. Po jeho otevření budete přihlášeni.
         </p>
@@ -84,11 +96,11 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
   }
 
   return (
-    <div className="card p-6 space-y-5">
+    <div className={modal ? "space-y-5" : "card p-6 space-y-5"}>
       <div>
-        <h1 className="text-2xl font-extrabold">{register ? "Vytvořit účet" : "Přihlásit se"}</h1>
+        <Title id={modal ? "sign-in-title" : undefined} className="text-2xl font-extrabold">{register ? "Vytvořit účet" : "Přihlásit se"}</Title>
         <p className="text-sm text-[var(--color-muted)] mt-1">
-          Účet slouží k uložení oblíbených aut a hlídacích psů na všech zařízeních a později k přidání inzerátu.
+          S účtem můžete přidat inzerát, psát prodejcům a mít oblíbená auta a hlídací psy na všech zařízeních.
         </p>
       </div>
 
@@ -130,7 +142,7 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
         {register && (
           <label className="flex gap-2 text-sm text-[var(--color-muted)]">
             <input type="checkbox" required className="mt-1" />
-            <span>Souhlasím s podmínkami a beru na vědomí <Link href="/soukromi/" className="underline">zásady ochrany soukromí</Link>.</span>
+            <span>Souhlasím s podmínkami a beru na vědomí <Link href="/soukromi/" className="underline" onClick={modal?.onClose}>zásady ochrany soukromí</Link>.</span>
           </label>
         )}
         <button type="submit" disabled={busy} className="btn-cta w-full disabled:opacity-60">{register ? "Vytvořit účet" : "Přihlásit se"}</button>
@@ -146,7 +158,7 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
 
       {!register && (
         <p className="text-sm text-center">
-          <Link href="/zapomenute-heslo/" className="text-[var(--color-brand)] hover:underline">Zapomněli jste heslo?</Link>
+          <Link href="/zapomenute-heslo/" className="text-[var(--color-brand)] hover:underline" onClick={modal?.onClose}>Zapomněli jste heslo?</Link>
         </p>
       )}
       {!signupOpen ? (
@@ -159,6 +171,7 @@ export function SignInForm({ google, signupOpen }: { google: boolean; signupOpen
             className="text-[var(--color-brand)] hover:underline"
             onClick={() => {
               setError("");
+              if (modal) return setModalRegister(!register);
               const query = new URLSearchParams(params);
               if (register) query.delete("rezim");
               else query.set("rezim", "registrace");

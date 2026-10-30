@@ -258,3 +258,64 @@ body {
     transition: none;
   }
 }
+
+/*
+ * Press feedback for every button and text link, not only .btn-cta and .pill: buttons squeeze a
+ * little, links dim. In the base layer, so utility classes on a component still win.
+ */
+@layer base {
+  button,
+  [role="button"] {
+    transition-property: transform, background-color, border-color, color, filter, opacity;
+    transition-duration: 0.12s;
+    transition-timing-function: ease;
+  }
+
+  button:active:not(:disabled),
+  [role="button"]:active {
+    transform: scale(0.97);
+  }
+
+  a {
+    transition: opacity 0.12s ease, color 0.15s ease;
+  }
+
+  a:active {
+    opacity: 0.7;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    button:active:not(:disabled),
+    [role="button"]:active {
+      transform: none;
+    }
+  }
+}
+
+/* Sign-in dialog (src/components/SignInModal.tsx) */
+.sign-in-dialog {
+  margin: auto;
+  color: var(--color-ink);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+}
+.sign-in-dialog::backdrop {
+  background: rgb(0 0 0 / 0.45);
+  backdrop-filter: blur(2px);
+}
+.sign-in-dialog[open] {
+  animation: sign-in-in 0.18s ease-out;
+}
+.sign-in-dialog[open]::backdrop {
+  animation: sign-in-fade 0.18s ease-out;
+}
+@keyframes sign-in-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+@keyframes sign-in-fade {
+  from { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sign-in-dialog[open],
+  .sign-in-dialog[open]::backdrop { animation: none; }
+}

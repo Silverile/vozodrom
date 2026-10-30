@@ -78,6 +78,10 @@ Better Auth ukládá uživatele, relace a účty do Postgresu. Role: `user`, `de
 `moderator` (administrace kromě uživatelů), `admin` (vše). `/admin` vidí jen moderátoři a admini, ostatní
 dostanou 404. Registraci lze vypnout proměnnou `SIGNUP_OPEN`.
 
+Přihlašuje se v dialogu (`SignInModal` v layoutu, otevírá ho `SignInLink`), stránka zůstane, kde byla.
+Odkazy vedou dál na `/prihlaseni/`, takže nová záložka i přesměrování z chráněných stránek dostanou
+samostatnou stránku se stejným formulářem.
+
 ## Tok inzerátu
 
 1. Formulář `/pridat/` drží rozpracovaná data v `localStorage`; „Pokračovat k fotkám“ je uloží jako `draft`.

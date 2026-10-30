@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { useUnread } from "@/lib/chat-client";
+import { SignInLink } from "./SignInModal";
 
 // Header entries: "Přihlásit" for visitors; messages (with the unread count) and the account for
 // signed-in users. The session is read on the client so that prerendered pages stay static.
@@ -24,10 +25,17 @@ export function AccountLink() {
           )}
         </Link>
       )}
-      <Link href={signedIn ? "/ucet/" : "/prihlaseni/"} aria-label={signedIn ? "Můj účet" : "Přihlásit"} className={linkClass}>
-        <span aria-hidden="true" className="sm:hidden">👤</span>
-        <span className="hidden sm:inline max-w-[12ch] truncate align-bottom">{signedIn ? "Můj účet" : "Přihlásit"}</span>
-      </Link>
+      {signedIn ? (
+        <Link href="/ucet/" aria-label="Můj účet" className={linkClass}>
+          <span aria-hidden="true" className="sm:hidden">👤</span>
+          <span className="hidden sm:inline max-w-[12ch] truncate align-bottom">Můj účet</span>
+        </Link>
+      ) : (
+        <SignInLink className={linkClass}>
+          <span aria-hidden="true" className="sm:hidden">👤</span>
+          <span className="sr-only sm:not-sr-only">Přihlásit</span>
+        </SignInLink>
+      )}
     </>
   );
 }

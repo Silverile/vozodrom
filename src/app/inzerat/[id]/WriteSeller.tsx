@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { SignInLink } from "@/components/SignInModal";
 
 /** "Napsat prodejci": opens the chat with the seller (sign-in first for visitors). */
 export function WriteSeller({ listingId, signedIn }: { listingId: string; signedIn: boolean }) {
@@ -10,7 +10,7 @@ export function WriteSeller({ listingId, signedIn }: { listingId: string; signed
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   if (!signedIn) {
-    return <Link href={`/prihlaseni/?dalsi=/inzerat/${listingId}/`} className="pill w-full justify-center">✉ Napsat prodejci</Link>;
+    return <SignInLink next={`/inzerat/${listingId}/`} className="pill w-full justify-center">✉ Napsat prodejci</SignInLink>;
   }
   return (
     <>
