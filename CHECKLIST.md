@@ -34,8 +34,8 @@
   - [x] DNSSEC в Cloudflare + KEYSET в WEDOS (DS 2371 в .cz с 30.10.2026 14:49, проверка проходит)
   - [x] vozodrom.cz и www на Worker (custom domains, 30.10.2026), workflow Pages удалён
   - [x] Redirect Rule www → vozodrom.cz (301, с query), Always Use HTTPS; GitHub Pages выключен, TXT удалён
-  - [ ] Влить ветку accounts (после Neon + Hyperdrive)
-  - [ ] Удалить пробный Worker vozodrom-trial
+  - [x] Ветка accounts влита, аккаунты на vozodrom.cz работают (30.10.2026)
+  - [x] Пробный Worker vozodrom-trial удалён
 - [ ] Правовые документы: VOP, условия для дилеров (P2B), GDPR, cookies, порядок жалоб DSA, правила форума
 - [ ] Проверка документов юристом (1–2 часа)
 - [ ] Выписка работодателя из торгового реестра (§304) — убедиться, что предмет деятельности не пересекается
@@ -45,8 +45,10 @@
 - [x] GA4 property „vozodrom web“ (G-2D6CJ8T7NY), načítá se jen se souhlasem
 - [x] GA: Google Signals vypnuté, uchovávání dat 14 měsíců (uvedeno na /soukromi/)
 - [ ] Před ostrým spuštěním: doplnit provozovatele do /soukromi/ a nechat zkontrolovat
-- [x] Účty: Better Auth + Neon Postgres (přes Hyperdrive); e-mail/heslo a Google, role, admin /admin/ (větev accounts)
-- [ ] Neon projekt (Frankfurt) + Hyperdrive config, ID do wrangler.jsonc; migrace na Neon; BETTER_AUTH_SECRET přes wrangler secret
-- [ ] Google OAuth klient (Google Cloud Console) → GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET
-- [ ] Poskytovatel e-mailů pro ověření a reset hesla (bez něj registrace v produkci nedokončí ověření)
+- [x] Účty: Better Auth + Neon Postgres (přes Hyperdrive); e-mail/heslo, role, admin /admin/ — v provozu
+- [x] Neon projekt vozodrom (Frankfurt) + Hyperdrive vozodrom-db (bez cache); migrace; BETTER_AUTH_SECRET
+- [ ] Změnit heslo neondb_owner v Neonu (bylo vidět v terminálu) a aktualizovat ho v Hyperdrive
+- [x] Přihlášení přes Google (projekt vozodrom v Google Cloud, klient vozodrom.cz; secrets ve Workeru), ověřeno 30.10.2026
+- [x] E-maily: Cloudflare Email Service, noreply@vozodrom.cz (SPF/DKIM/DMARC), limit 200/den; registrace otevřená
+- [x] WAF: Block scanners (/wp-*, *.php, /.env, /.git → 403); Auth rate limit 5 POST/10 s na IP (sign-in, sign-up, reset)
 - [ ] Další etapy adminu: inzeráty s fotkami (R2) + moderace, hlášení DSA, fórum a recenze, katalog a novinky
