@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { analyticsConsent } from "@/lib/storage";
 
 // Google Analytics 4, loaded only after the visitor opts in (Czech law requires
@@ -57,14 +57,19 @@ export function setConsent(value: "granted" | "denied") {
   }
 }
 
+const noop = () => () => {};
+
 export function Analytics() {
   const consent = analyticsConsent.useValue();
+  // The server cannot know the stored choice; showing the banner only once the browser has read it
+  // keeps it from flashing on every load for visitors who already chose.
+  const hydrated = useSyncExternalStore(noop, () => true, () => false);
 
   useEffect(() => {
     if (GA_ID && consent === "granted") loadGtag();
   }, [consent]);
 
-  if (!GA_ID || consent !== null) return null;
+  if (!GA_ID || !hydrated || consent !== null) return null;
   return (
     <div role="dialog" aria-label="Souhlas s analytikou" className="fixed inset-x-0 bottom-0 z-30 p-3 sm:p-4 print:hidden">
       <div className="card mx-auto max-w-3xl p-4 shadow-2xl sm:flex sm:items-center sm:gap-4">
