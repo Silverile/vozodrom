@@ -8,7 +8,7 @@ import { getBrand, getModel } from "@/lib/catalog";
 import { formatDate, formatPrice } from "@/lib/format";
 import { STATUS_LABEL, STATUS_STYLE, photoUrl } from "@/lib/listing-status";
 import { getListing } from "@/lib/listings";
-import { getMake } from "@/lib/makes";
+import { getMake, modelLinesOf } from "@/lib/makes";
 import { savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 import type { ListingStatus } from "@/db/schema";
@@ -59,7 +59,7 @@ function MyListings({ listings }: { listings: MyListing[] }) {
         <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
           <div>
             <span className="chip bg-[var(--color-warn-soft)] text-[var(--color-warn)]">{draft.serverId ? "neuložené změny" : "rozpracováno"}</span>
-            <p className="font-bold mt-2">{getBrand(draft.brand)?.name ?? getMake(draft.brand)?.name} {model?.name ?? draft.model}, {draft.year}</p>
+            <p className="font-bold mt-2">{getBrand(draft.brand)?.name ?? getMake(draft.brand)?.name} {model?.name ?? modelLinesOf(draft.brand).find((l) => l.slug === draft.model)?.name ?? draft.model}{draft.year ? `, ${draft.year}` : ""}</p>
             <p className="text-sm text-[var(--color-muted)]">{draft.price ? formatPrice(draft.price) : "cena zatím nevyplněna"} · zatím jen v tomto prohlížeči</p>
           </div>
           <Link href="/pridat/" className="pill">Pokračovat v úpravách</Link>

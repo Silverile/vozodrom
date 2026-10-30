@@ -10,8 +10,9 @@ export const formatPercent = (value: number) => `${Math.round(value * 100)} %`;
 export const listingHref = (listing: { id: string; source: { kind: string } }) =>
   listing.source.kind === "user" ? `/inzerat/${listing.id}/` : `/inzeraty/${listing.id}/`;
 
+/** "30. 10. 2026" from a date ("2026-10-30") or a full ISO timestamp. */
 export function formatDate(iso: string): string {
-  const [y, m, d] = iso.split("-").map(Number);
+  const [y, m, d] = iso.slice(0, 10).split("-").map(Number);
   return `${d}. ${m}. ${y}`;
 }
 

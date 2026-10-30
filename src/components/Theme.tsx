@@ -30,28 +30,47 @@ export function ThemeSync() {
   return null;
 }
 
-const OPTIONS: [ThemeChoice, string][] = [
-  ["dark", "Tmavý"],
-  ["light", "Světlý"],
-  ["system", "Podle systému"],
-];
+function isLight(choice: ThemeChoice) {
+  return choice === "light" || (choice === "system" && typeof matchMedia !== "undefined" && matchMedia("(prefers-color-scheme: light)").matches);
+}
 
+/** Lets colours fade instead of jumping while the theme changes. */
+function switchTheme(next: ThemeChoice) {
+  const root = document.documentElement;
+  root.classList.add("theme-anim");
+  themeChoice.write(next);
+  setTimeout(() => root.classList.remove("theme-anim"), 350);
+}
+
+/**
+ * Dark/light switch with a sliding sun-and-moon knob, and "Podle systému" to follow the
+ * operating system. Changing the switch by hand leaves the system mode.
+ */
 export function ThemeSwitch() {
   const choice = themeChoice.useValue();
+  const light = isLight(choice);
   return (
-    <div role="radiogroup" aria-label="Motiv" className="flex flex-wrap gap-1">
-      {OPTIONS.map(([value, label]) => (
-        <button
-          key={value}
-          role="radio"
-          aria-checked={choice === value}
-          data-on={choice === value}
-          className="pill"
-          onClick={() => themeChoice.write(value)}
-        >
-          {label}
-        </button>
-      ))}
+    <div className="flex flex-col gap-2">
+      <button
+        type="button"
+        role="switch"
+        aria-checked={light}
+        aria-label="Světlý motiv"
+        onClick={() => switchTheme(light ? "dark" : "light")}
+        className="theme-switch"
+        data-light={light}
+      >
+        <span className="theme-switch__track" aria-hidden="true">
+          <span className="theme-switch__icon theme-switch__moon">☾</span>
+          <span className="theme-switch__icon theme-switch__sun">☀</span>
+          <span className="theme-switch__knob">{light ? "☀" : "☾"}</span>
+        </span>
+        <span className="text-sm">{light ? "Světlý" : "Tmavý"}</span>
+      </button>
+      <label className="flex items-center gap-2 text-xs text-[var(--color-muted)] cursor-pointer">
+        <input type="checkbox" checked={choice === "system"} onChange={(e) => switchTheme(e.target.checked ? "system" : light ? "light" : "dark")} />
+        Podle systému
+      </label>
     </div>
   );
 }

@@ -13,12 +13,23 @@ const time = (iso: string) => {
 };
 
 /** Conversation list on the left, the open thread (?k=<id>) on the right; one column on phones. */
-export function Messages({ userId, initial }: { userId: string; initial: ConversationSummary[] }) {
+export function Messages({
+  userId,
+  initial,
+  initialThread,
+}: {
+  userId: string;
+  initial: ConversationSummary[];
+  /** the thread named in the URL, rendered with the page */
+  initialThread: { id: string; messages: ChatMessage[] } | null;
+}) {
   const router = useRouter();
   const params = useSearchParams();
   const openId = params.get("k");
   const [conversations, setConversations] = useState(initial);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>(initialThread?.messages ?? []);
+  // The thread already rendered by the server does not need to be fetched again.
+  const preloaded = useRef(initialThread?.id ?? null);
   const [loading, setLoading] = useState(false);
   const [text, setText] = useState("");
   const [error, setError] = useState("");
@@ -37,6 +48,11 @@ export function Messages({ userId, initial }: { userId: string; initial: Convers
 
   useEffect(() => {
     if (!openId) return;
+    if (preloaded.current === openId) {
+      preloaded.current = null;
+      markRead(openId);
+      return;
+    }
     let cancelled = false;
     setLoading(true);
     setError("");
