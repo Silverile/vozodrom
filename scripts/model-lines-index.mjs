@@ -21,10 +21,13 @@ for (const l of lines) {
   (index[l.makeSlug] ??= []).push({
     slug: l.slug,
     name: l.name,
+    ...(l.aliases?.length ? { aliases: l.aliases } : {}),
+    ...(l.familyLineSlug ? { familyLineSlug: l.familyLineSlug } : {}),
     from: l.from,
     // null end means "still made" only when the source says so; otherwise the end is unknown
     to: l.to,
     current: l.productionStatus === "current",
+    ...(l.dateScope === 'model-specific-generation-envelope' ? { dateScope: l.dateScope } : {}),
     bodyTypes: l.bodyTypes ?? [],
     generations: (l.generations ?? []).map((g) => ({ code: g.code, from: g.from, to: g.to })),
   });
@@ -45,6 +48,8 @@ for (const dir of ["../src/data/catalog/model-cards/", "../src/data/model-cards/
       (index[card.makeSlug] ??= []).push({
         slug: card.lineSlug,
         name: card.name,
+        ...(card.aliases?.length ? { aliases: card.aliases } : {}),
+        ...(card.familyLineSlug ? { familyLineSlug: card.familyLineSlug } : {}),
         from: froms.length ? Math.min(...froms) : null,
         to: current || !tos.length ? null : Math.max(...tos),
         current,
@@ -57,5 +62,9 @@ for (const dir of ["../src/data/catalog/model-cards/", "../src/data/model-cards/
 }
 for (const list of Object.values(index)) list.sort((a, b) => a.name.localeCompare(b.name, "cs", { numeric: true }));
 
-writeFileSync(new URL("../src/data/model-lines-index.json", import.meta.url), `${JSON.stringify(index)}\n`);
+const output = new URL("../src/data/model-lines-index.json", import.meta.url);
+const onlyMake = process.argv.find(arg => arg.startsWith('--make='))?.slice(7);
+const result = onlyMake ? { ...JSON.parse(readFileSync(output, 'utf8')), [onlyMake]: index[onlyMake] } : index;
+if (onlyMake && !index[onlyMake]) throw new Error(`Unknown make: ${onlyMake}`);
+writeFileSync(output, `${JSON.stringify(result)}\n`);
 console.log(`${lines.length} + ${fromCards} card-only model lines for ${Object.keys(index).length} makes`);

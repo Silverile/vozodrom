@@ -37,6 +37,7 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         from: g.from ?? null,
         to: g.to ?? null,
         current: g.productionStatus === "current",
+        ...(g.dateBasis ? { dateBasis: g.dateBasis, dateNote: g.specificationScope?.noteCs ?? null } : {}),
         // a facelift may carry its own name, end year, chassis code and photo (shown as its own stage)
         facelifts: (g.facelift ?? []).map((f) => ({
           year: f.year,
@@ -63,5 +64,9 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
   }
 }
 
-writeFileSync(new URL("../src/data/model-cards-index.json", import.meta.url), `${JSON.stringify(index)}\n`);
+const output = new URL("../src/data/model-cards-index.json", import.meta.url);
+const onlyMake = process.argv.find(arg => arg.startsWith('--make='))?.slice(7);
+const result = onlyMake ? { ...JSON.parse(readFileSync(output, 'utf8')), [onlyMake]: index[onlyMake] } : index;
+if (onlyMake && !index[onlyMake]) throw new Error(`Unknown make: ${onlyMake}`);
+writeFileSync(output, `${JSON.stringify(result)}\n`);
 console.log(`${count} model cards for ${Object.keys(index).length} makes`);

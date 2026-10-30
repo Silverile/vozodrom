@@ -1,4 +1,5 @@
 import lines from "@/data/front-drawings.json";
+import review from "@/data/front-drawing-review.json";
 import { asset } from "@/lib/format";
 
 // Front-view line drawing of a generation, the placeholder until there is a photo. The drawings are
@@ -8,19 +9,23 @@ import { asset } from "@/lib/format";
 
 /** per model line: [generation index, first year, last year or null while in production] */
 const LINES = lines as unknown as Record<string, [number, number | null, number | null][]>;
+const pending = (make: string, line: string) => `${make}--${line}` in review;
 
 export function frontDrawingId(makeSlug: string, lineSlug: string, genIndex: number): string | null {
+  if (pending(makeSlug, lineSlug)) return null;
   return LINES[`${makeSlug}--${lineSlug}`]?.some(([i]) => i === genIndex) ? `${makeSlug}--${lineSlug}--${genIndex}` : null;
 }
 
 /** The newest drawn generation of a model line. */
 export function newestFrontDrawing(makeSlug: string, lineSlug: string): string | null {
+  if (pending(makeSlug, lineSlug)) return null;
   const gens = LINES[`${makeSlug}--${lineSlug}`];
   return gens?.length ? `${makeSlug}--${lineSlug}--${gens[gens.length - 1][0]}` : null;
 }
 
 /** Drawing of the generation built in `year`; where generations overlap, the newer one. */
 export function frontDrawingFor(makeSlug: string, lineSlug: string, year: number): string | null {
+  if (pending(makeSlug, lineSlug)) return null;
   const hit = (LINES[`${makeSlug}--${lineSlug}`] ?? []).filter(([, from, to]) => (from ?? 0) <= year && year <= (to ?? 9999)).pop();
   return hit ? `${makeSlug}--${lineSlug}--${hit[0]}` : null;
 }

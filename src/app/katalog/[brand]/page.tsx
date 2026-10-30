@@ -36,7 +36,7 @@ function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: Mo
               {drawing ? (
                 <FrontDrawing id={drawing} alt={`${make} ${l.name}`} />
               ) : (
-                <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
+                slug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-sm text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={PICTOGRAM[l.bodyTypes[0]] ?? ((l.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
               )}
               <div className="p-3">
                 <div className="font-semibold truncate">{make} {l.name}</div>

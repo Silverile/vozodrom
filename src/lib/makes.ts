@@ -50,6 +50,9 @@ export function initialOf(name: string): string {
 export interface ModelLine {
   slug: string;
   name: string;
+  aliases?: string[];
+  familyLineSlug?: string | null;
+  dateScope?: string;
   from: number | null;
   to: number | null;
   current: boolean;
@@ -61,6 +64,12 @@ const LINES = lineIndex as Record<string, ModelLine[]>;
 
 export function modelLinesOf(makeSlug: string): ModelLine[] {
   return LINES[makeSlug] ?? [];
+}
+
+/** Exact model identity, allowing spacing/punctuation aliases, never S line -> S. */
+export function resolveModelLine(makeSlug: string, name: string): ModelLine | undefined {
+  const key = (value: string) => fold(value).replace(/[\s-]+/g, "");
+  return modelLinesOf(makeSlug).find(l => [l.slug, l.name, ...(l.aliases ?? [])].some(value => key(value) === key(name)));
 }
 
 /** "1996–dosud", "2011–2020", "od 2025", or "" when the years are unknown. */

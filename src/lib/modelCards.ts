@@ -98,6 +98,8 @@ export function stagesOf(g: CardGeneration): GenerationStage[] {
 }
 
 export interface CardGeneration {
+  dateBasis?: string;
+  dateNote?: string | null;
   code: string | null;
   name: string | null;
   from: number | null;

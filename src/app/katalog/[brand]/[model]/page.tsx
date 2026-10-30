@@ -25,6 +25,7 @@ import {
 } from "@/lib/modelCards";
 import { type StatsEntry, lineStats } from "@/lib/stats";
 import type { Body } from "@/lib/types";
+import drawingReview from "@/data/front-drawing-review.json";
 
 // One page per model line. Every curated line has one; demo models add owner ratings, STK data,
 // prices and listings. Model cards (generations, engines, trims) come from Codex's catalogue;
@@ -155,7 +156,7 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
 
 function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null }) {
   const facts: [string, string | null][] = [
-    ["Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
+    [gen.dateBasis && gen.dateBasis !== "production" ? "Období modelu" : "Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
     ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => (f.name ? `${f.year} (${f.name})` : f.year)).join(", ") : null],
     ["Karoserie", gen.bodyTypes.length ? gen.bodyTypes.map((b) => BODY_NAMES[b] ?? b).join(", ") : null],
     ["Pohon", gen.drivetrains.length ? gen.drivetrains.map((d) => DRIVE[d] ?? d).join(", ") : null],
@@ -178,6 +179,7 @@ function GenerationDetail({ gen, title, id, stats, drawing }: { gen: CardGenerat
         <h3 className="font-bold text-lg">{title}</h3>
         <span className="text-sm text-[var(--color-muted)]">{yearsSpan(gen.from, gen.to, gen.current)}</span>
       </div>
+      {gen.dateNote && <p className="mt-2 text-xs text-[var(--color-muted)]">{gen.dateNote}</p>}
       {stats && (stats.fleet || stats.stk) && (
         <ul className="mt-2 flex flex-wrap gap-1.5 text-xs">
           {stats.fleet && <li className="chip">V registru ČR {formatNumber(stats.fleet.n)}</li>}
@@ -309,7 +311,7 @@ export default async function ModelPage({ params }: { params: Params }) {
         <div className="min-w-0">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{title}</h1>
           <p className="text-[var(--color-muted)] mt-1">
-            {[segmentOf(card?.segment ?? demo?.segment), years && `vyráběno ${years}`].filter(Boolean).join(" · ")}
+            {[segmentOf(card?.segment ?? demo?.segment), years && `${line?.dateScope ? "období modelu" : "vyráběno"} ${years}`].filter(Boolean).join(" · ")}
           </p>
           {bodies.length > 0 && (
             <ul className="mt-3 flex flex-wrap gap-1.5">
@@ -359,7 +361,7 @@ export default async function ModelPage({ params }: { params: Params }) {
         {coverDrawing ? (
           <FrontDrawing id={coverDrawing} alt={title} className="rounded-2xl" />
         ) : (
-          <CarImage body={demo?.body ?? PICTOGRAM[bodies[0]] ?? ((bodies[0] as Body) || "hatchback")} color="modrá" className="w-full rounded-2xl" />
+          brandSlug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={demo?.body ?? PICTOGRAM[bodies[0]] ?? ((bodies[0] as Body) || "hatchback")} color="modrá" className="w-full rounded-2xl" />
         )}
       </div>
 
@@ -377,7 +379,7 @@ export default async function ModelPage({ params }: { params: Params }) {
                     {frontDrawingId(brandSlug, modelSlug, i) ? (
                       <FrontDrawing id={frontDrawingId(brandSlug, modelSlug, i)!} alt={`${title} ${base}`} />
                     ) : (
-                      <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
+                      brandSlug === "audi" ? <div className="w-full aspect-[16/10] grid place-items-center text-sm text-[var(--color-muted)]">Nákres se ověřuje</div> : <CarImage body={PICTOGRAM[g.bodyTypes[0]] ?? ((g.bodyTypes[0] as Body) || "hatchback")} color="stříbrná" className="w-full aspect-[16/10]" />
                     )}
                     <div className="p-3">
                       <div className="font-semibold truncate">
@@ -401,7 +403,7 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
               const i = gens.length - 1 - r;
-              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
+              return <GenerationDetail key={i} id={`g${i + 1}`} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={`${brandSlug}--${modelSlug}` in drawingReview ? undefined : real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
             })}
           </div>
         </>
