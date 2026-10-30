@@ -19,6 +19,7 @@ import { STATUS_LABEL } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
 import { userListingPage } from "@/lib/user-listings";
 import { PhoneReveal } from "./PhoneReveal";
+import { ReportListing } from "./ReportListing";
 
 // Listings placed by users, rendered on every request so approvals and withdrawals show at once.
 // Test and dealer-feed listings stay prerendered at /inzeraty/[id].
@@ -46,6 +47,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
   const found = await load((await params).id);
   if (!found) notFound();
   const { listing, row, preview } = found;
+  const viewer = await getSession();
   const title = draftTitle(row.data);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
@@ -130,6 +132,11 @@ export default async function UserListingPage({ params }: { params: Params }) {
               <FavoriteButton id={listing.id} label={title} />
             </div>
           </section>
+          {!preview && (
+            <section className="card p-4">
+              <ReportListing listingId={row.id} name={viewer?.user.name ?? ""} email={viewer?.user.email ?? ""} />
+            </section>
+          )}
         </div>
 
         {model && (

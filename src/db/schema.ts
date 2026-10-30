@@ -125,3 +125,31 @@ export const listing = pgTable(
   },
   (t) => [index("listing_user_idx").on(t.userId), index("listing_status_idx").on(t.status, t.submittedAt)],
 );
+
+export const REPORT_CATEGORIES = ["podvod", "nezakonny", "nepravdive", "jine"] as const;
+export type ReportCategory = (typeof REPORT_CATEGORIES)[number];
+
+/**
+ * Notices about listings (DSA art. 16): who reported what and why, and the decision. Kept after
+ * the decision as the record of how each notice was handled.
+ */
+export const report = pgTable(
+  "report",
+  {
+    id: text("id").primaryKey(),
+    listingId: text("listing_id").notNull().references(() => listing.id, { onDelete: "cascade" }),
+    category: text("category").$type<ReportCategory>().notNull(),
+    explanation: text("explanation").notNull(),
+    notifierName: text("notifier_name").notNull(),
+    notifierEmail: text("notifier_email").notNull(),
+    /** set when the notifier was signed in */
+    userId: text("user_id").references(() => user.id, { onDelete: "set null" }),
+    /** open | removed (listing taken down) | dismissed */
+    status: text("status").$type<"open" | "removed" | "dismissed">().notNull().default("open"),
+    decision: text("decision"),
+    decidedBy: text("decided_by").references(() => user.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    decidedAt: timestamp("decided_at", { withTimezone: true }),
+  },
+  (t) => [index("report_listing_idx").on(t.listingId), index("report_status_idx").on(t.status, t.createdAt)],
+);

@@ -193,12 +193,15 @@ async function notifyOwner(row: ListingRow, result: "published" | "rejected", re
   if (!owner) return;
   const base = getCloudflareContext().env.BETTER_AUTH_URL;
   const title = draftTitle(row.data);
+  // A listing that was online is taken down; the author gets the reasons and the ways to object (DSA art. 17).
+  const takenDown = result === "rejected" && row.publishedAt !== null;
   const text =
     result === "published"
       ? `Dobrý den,\n\nváš inzerát ${title} je zveřejněný:\n${base}/inzerat/${row.id}/\n\nSpravovat ho můžete v účtu: ${base}/ucet/inzerat/${row.id}/`
-      : `Dobrý den,\n\nváš inzerát ${title} jsme nemohli zveřejnit.\n\nDůvod: ${reason}\n\nInzerát můžete upravit a odeslat znovu: ${base}/ucet/inzerat/${row.id}/`;
+      : `Dobrý den,\n\nváš inzerát ${title} jsme ${takenDown ? "stáhli z webu" : "nemohli zveřejnit"}.\n\nDůvod: ${reason}\nRozhodl moderátor${takenDown ? " na základě kontroly nebo hlášení uživatelů" : ""}.\n\nInzerát můžete upravit a odeslat znovu: ${base}/ucet/inzerat/${row.id}/\nS rozhodnutím nesouhlasíte? Odešlete inzerát znovu s vysvětlením v popisu; obrátit se můžete také na soud.`;
   // A failed notice must not undo the moderation decision; the owner still sees the status in the account.
-  await sendMail({ to: owner.email, subject: result === "published" ? `Inzerát zveřejněn: ${title}` : `Inzerát zamítnut: ${title}`, text }).catch(() => {});
+  const subject = result === "published" ? `Inzerát zveřejněn: ${title}` : takenDown ? `Inzerát stažen: ${title}` : `Inzerát zamítnut: ${title}`;
+  await sendMail({ to: owner.email, subject, text }).catch(() => {});
 }
 
 export async function deleteListing(session: Session, id: string) {
