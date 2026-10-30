@@ -13,7 +13,7 @@ const PICTOGRAM: Record<string, Body> = { kupe: "hatchback", kabriolet: "hatchba
 /** Pictogram for a catalogue body type ("kombi", "kupe"…). */
 export const pictogramOf = (bodyType: string | undefined): Body => PICTOGRAM[bodyType ?? ""] ?? ((bodyType as Body) || "hatchback");
 
-export function CatalogImage({ drawing, make, line, alt, bodyType, className = "", label = true }: {
+export function CatalogImage({ drawing, make, line, alt, bodyType, className = "", label = true, genIndex }: {
   /** drawing id from frontDrawingId / newestFrontDrawing, or null */
   drawing: string | null;
   make: string;
@@ -25,9 +25,11 @@ export function CatalogImage({ drawing, make, line, alt, bodyType, className = "
   className?: string;
   /** small cards may hide the corner label; the accessible name still says it is illustrative */
   label?: boolean;
+  /** the generation shown, so a drawing held for review just for it says so */
+  genIndex?: number;
 }) {
   if (drawing) return <FrontDrawing id={drawing} alt={alt} className={className} />;
-  const pending = drawingPending(make, line);
+  const pending = drawingPending(make, line, genIndex);
   return (
     <div
       role="img"

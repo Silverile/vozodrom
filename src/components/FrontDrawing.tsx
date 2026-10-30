@@ -9,27 +9,33 @@ import { asset } from "@/lib/format";
 
 /** per model line: [generation index, first year, last year or null while in production] */
 const LINES = lines as unknown as Record<string, [number, number | null, number | null][]>;
-const pending = (make: string, line: string) => `${make}--${line}` in review;
+// Drawings held back for review (front-drawing-review.json, kept by Codex's pipeline): a key
+// "make--line" holds the whole model line, "make--line--<generation index>" one generation.
+const HELD = review as Record<string, string>;
+const lineHeld = (make: string, line: string) => `${make}--${line}` in HELD;
 
-/** Drawings of this model line are being checked and are not shown yet. */
-export const drawingPending = pending;
+/** Drawings of this model line, or of this one generation, are being checked and not shown yet. */
+export function drawingPending(make: string, line: string, genIndex?: number): boolean {
+  return lineHeld(make, line) || (genIndex !== undefined && `${make}--${line}--${genIndex}` in HELD);
+}
+
+/** Published, not held drawings of a model line, as [generation index, first year, last year]. */
+const shownOf = (make: string, line: string) =>
+  lineHeld(make, line) ? [] : (LINES[`${make}--${line}`] ?? []).filter(([i]) => !drawingPending(make, line, i));
 
 export function frontDrawingId(makeSlug: string, lineSlug: string, genIndex: number): string | null {
-  if (pending(makeSlug, lineSlug)) return null;
-  return LINES[`${makeSlug}--${lineSlug}`]?.some(([i]) => i === genIndex) ? `${makeSlug}--${lineSlug}--${genIndex}` : null;
+  return shownOf(makeSlug, lineSlug).some(([i]) => i === genIndex) ? `${makeSlug}--${lineSlug}--${genIndex}` : null;
 }
 
 /** The newest drawn generation of a model line. */
 export function newestFrontDrawing(makeSlug: string, lineSlug: string): string | null {
-  if (pending(makeSlug, lineSlug)) return null;
-  const gens = LINES[`${makeSlug}--${lineSlug}`];
-  return gens?.length ? `${makeSlug}--${lineSlug}--${gens[gens.length - 1][0]}` : null;
+  const gens = shownOf(makeSlug, lineSlug);
+  return gens.length ? `${makeSlug}--${lineSlug}--${gens[gens.length - 1][0]}` : null;
 }
 
 /** Drawing of the generation built in `year`; where generations overlap, the newer one. */
 export function frontDrawingFor(makeSlug: string, lineSlug: string, year: number): string | null {
-  if (pending(makeSlug, lineSlug)) return null;
-  const hit = (LINES[`${makeSlug}--${lineSlug}`] ?? []).filter(([, from, to]) => (from ?? 0) <= year && year <= (to ?? 9999)).pop();
+  const hit = shownOf(makeSlug, lineSlug).filter(([, from, to]) => (from ?? 0) <= year && year <= (to ?? 9999)).pop();
   return hit ? `${makeSlug}--${lineSlug}--${hit[0]}` : null;
 }
 

@@ -107,14 +107,17 @@ function powerSummary(gens: CardGeneration[]): { label: string; value: string } 
       values: [...g.engines.flatMap((e) => [e.powerKwMin, e.powerKwMax]), ...g.trims.map((t) => t.engine?.powerKw ?? null)].filter(
         (v): v is number => typeof v === "number",
       ),
+      // only listed technical versions, not the engine range: a sample, not the model's span
+      sample: !g.engines.some((e) => e.powerKwMin != null || e.powerKwMax != null),
     }))
     .filter((g) => g.values.length > 0);
   if (!known.length) return null;
+  const sampleNote = known.some((g) => g.sample) ? " (uvedené verze)" : "";
   const all = known.flatMap((g) => g.values);
   const [min, max] = [Math.min(...all), Math.max(...all)];
   const value = min === max ? `${num(min)} kW` : `${num(min)}–${num(max)} kW`;
-  if (known.length === gens.length) return { label: "Výkon", value };
-  return { label: known.length <= 2 ? `Výkon · ${known.map((g) => g.name).join(", ")}` : `Výkon · ${known.length} z ${gens.length} generací`, value };
+  if (known.length === gens.length) return { label: `Výkon${sampleNote}`, value };
+  return { label: (known.length <= 2 ? `Výkon · ${known.map((g) => g.name).join(", ")}` : `Výkon · ${known.length} z ${gens.length} generací`) + sampleNote, value };
 }
 
 /** "4 689 × 1 829 × 1 470 mm" when all three are known, otherwise only the known ones by name. */
@@ -185,7 +188,9 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
   const shown = facts.filter(([, v]) => v);
   const columns = TRIM_COLUMNS.filter((c) => gen.trims.some((t) => c.value(t)));
 
-  const empty = shown.length === 0 && gen.engines.length === 0 && gen.trims.length === 0;
+  // catalogue rows can be empty placeholders (every field null); they are not engines to list
+  const engines = gen.engines.filter((e) => e.variant || e.fuel || e.displacementCc || e.powerKwMin != null || e.powerKwMax != null);
+  const empty = shown.length === 0 && engines.length === 0 && gen.trims.length === 0;
 
   return (
     <details id={id} open={open} className="group card min-w-0 p-5 scroll-mt-24">
@@ -220,7 +225,7 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
               ))}
             </dl>
           )}
-          {gen.engines.length > 0 && (
+          {engines.length > 0 && (
             <div className="mt-4 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead className="text-left text-[var(--color-muted)]">
@@ -232,7 +237,7 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
                   </tr>
                 </thead>
                 <tbody>
-                  {gen.engines.map((e, i) => (
+                  {engines.map((e, i) => (
                     <tr key={i} className="border-t border-[var(--color-line)]">
                       <td className="py-1.5 pr-3 font-medium">{engineName(e)}</td>
                       <td className="pr-3">{e.fuel ? CARD_FUEL[e.fuel] : "—"}</td>
@@ -400,7 +405,7 @@ export default async function ModelPage({ params }: { params: Params }) {
               return shown.map((st, k) => (
                 <li key={`${i}-${k}`} className="min-w-0">
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-                    <CatalogImage drawing={frontDrawingId(brandSlug, modelSlug, i)} make={brandSlug} line={modelSlug} alt={`${title} ${base}`} bodyType={g.bodyTypes[0]} />
+                    <CatalogImage drawing={frontDrawingId(brandSlug, modelSlug, i)} make={brandSlug} line={modelSlug} genIndex={i} alt={`${title} ${base}`} bodyType={g.bodyTypes[0]} />
                     <div className="p-3">
                       <div className="font-semibold truncate">
                         {base}
