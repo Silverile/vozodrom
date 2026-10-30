@@ -54,7 +54,7 @@ export function createStore<T>(key: string, fallback: T, isValid: (value: unknow
     return useSyncExternalStore(subscribe, read, () => fallback);
   }
 
-  return { read, write, useValue };
+  return { read, write, subscribe, useValue };
 }
 
 export const MAX_COMPARE = 4;

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 import { ListingRow } from "@/components/ListingRow";
 import { getBrand, getModel } from "@/lib/catalog";
 import { formatDate, formatPrice } from "@/lib/format";
@@ -11,9 +12,8 @@ import { savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 import { draftStore } from "../pridat/AddListingForm";
 
-// Preview of the account area modelled on Drom's: the sections exist, and the ones that
-// can work without accounts (favourites, saved searches, the listing draft) show this
-// browser's real data. The rest explain what they will do once accounts launch.
+// Account area modelled on Drom's. Favourites and saved searches follow the account (AccountSync);
+// the listing draft is still per browser, and the remaining sections explain what they will do.
 
 const SECTIONS = [
   { key: "inzeraty", label: "Moje inzeráty", icon: "＋" },
@@ -39,7 +39,7 @@ function MyListings() {
   const draft = draftStore.useValue();
   const model = getModel(draft.brand, draft.model);
   if (!draft.brand || !draft.model.trim()) {
-    return <Empty title="Zatím žádné inzeráty" text="Inzerát můžete připravit už teď; zveřejnit půjde po spuštění účtů." action={{ href: "/pridat/", label: "+ Přidat inzerát zdarma" }} />;
+    return <Empty title="Zatím žádné inzeráty" text="Inzerát můžete připravit už teď; zveřejňování inzerátů spustíme v dalším kroku." action={{ href: "/pridat/", label: "+ Přidat inzerát zdarma" }} />;
   }
   return (
     <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
@@ -70,7 +70,7 @@ function Favourites() {
 function Watchdog() {
   const searches = savedSearches.useValue();
   if (searches.length === 0) {
-    return <Empty title="Nemáte žádného hlídacího psa" text="Ve vyhledávání nastavte filtry a klikněte na „Uložit hledání“. Po spuštění účtů vám pošleme e-mail, když přibude nové auto." action={{ href: "/inzeraty/", label: "Přejít na inzeráty" }} />;
+    return <Empty title="Nemáte žádného hlídacího psa" text="Ve vyhledávání nastavte filtry a klikněte na „Uložit hledání“. E-mailová upozornění na nová auta brzy doplníme." action={{ href: "/inzeraty/", label: "Přejít na inzeráty" }} />;
   }
   return (
     <ul className="space-y-2">
@@ -78,7 +78,7 @@ function Watchdog() {
         <li key={s.query} className="card p-4 flex flex-wrap items-center justify-between gap-3">
           <div>
             <Link href={`/inzeraty/?${s.query}`} className="font-semibold hover:text-[var(--color-brand)]">{s.label}</Link>
-            <p className="text-xs text-[var(--color-muted)]">uloženo {formatDate(s.savedAt)} · upozornění e-mailem po spuštění účtů</p>
+            <p className="text-xs text-[var(--color-muted)]">uloženo {formatDate(s.savedAt)} · e-mailová upozornění připravujeme</p>
           </div>
           <button className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => savedSearches.write(searches.filter((x) => x.query !== s.query))}>
             Smazat
@@ -98,7 +98,7 @@ function Section({ name }: { name: SectionKey }) {
     case "hlidaci-pes":
       return <Watchdog />;
     case "zpravy":
-      return <Empty title="Žádné zprávy" text="Po spuštění účtů si tu budete psát s prodávajícími a kupujícími, bez zveřejnění telefonu nebo e-mailu." />;
+      return <Empty title="Žádné zprávy" text="Brzy si tu budete psát s prodávajícími a kupujícími, bez zveřejnění telefonu nebo e-mailu." />;
     case "statistiky":
       return <Empty title="Statistiky inzerátů" text="Po zveřejnění inzerátu tu uvidíte počet zobrazení, uložení do oblíbených a dotazů po dnech." />;
     case "vin":
@@ -106,17 +106,35 @@ function Section({ name }: { name: SectionKey }) {
   }
 }
 
-export function AccountClient() {
+export function AccountClient({ user, staff }: { user: { name: string; email: string }; staff: boolean }) {
   const params = useSearchParams();
+  const router = useRouter();
   const requested = params.get("sekce");
   const active: SectionKey = SECTIONS.some((s) => s.key === requested) ? (requested as SectionKey) : "inzeraty";
   const current = SECTIONS.find((s) => s.key === active)!;
 
   return (
     <>
-      <p className="card p-3 text-sm text-[var(--color-warn)]">
-        Náhled účtu. Přihlášení zatím není spuštěné; oblíbená auta, hlídací psi a rozpracovaný inzerát jsou jen z tohoto prohlížeče.
-      </p>
+      <div className="card p-4 flex flex-wrap items-center justify-between gap-3">
+        <div className="min-w-0">
+          <p className="font-bold truncate">{user.name}</p>
+          <p className="text-sm text-[var(--color-muted)] truncate">{user.email} · oblíbená auta a hlídací psi se ukládají k účtu</p>
+        </div>
+        <div className="flex gap-2">
+          {staff && <Link href="/admin/" className="pill">Administrace</Link>}
+          <button
+            type="button"
+            className="pill"
+            onClick={async () => {
+              await authClient.signOut();
+              router.replace("/");
+              router.refresh();
+            }}
+          >
+            Odhlásit se
+          </button>
+        </div>
+      </div>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-[minmax(0,1fr)_240px] mt-6 items-start">
         <section aria-labelledby="section-title" className="min-w-0">
           <h1 id="section-title" className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">{current.label}</h1>

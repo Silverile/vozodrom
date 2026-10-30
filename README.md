@@ -15,6 +15,21 @@ npm run dev      # http://localhost:3000
 npm run build    # kontrola buildu Next.js
 ```
 
+### Účty a databáze
+Účty (Better Auth) a data uživatelů jsou v Postgresu: v produkci Neon (Frankfurt) přes Cloudflare Hyperdrive,
+lokálně PGlite — Postgres v Node.js, bez Dockeru.
+
+```bash
+cp .dev.vars.example .dev.vars   # lokální proměnné (BETTER_AUTH_URL podle portu dev serveru)
+npm run db:local                 # PGlite na 127.0.0.1:5433, data v .local/pgdata (nechat běžet)
+npm run db:migrate               # vytvoří tabulky podle ./drizzle
+npm run dev
+npm run admin:grant -- e-mail@example.com   # první administrátor (účet už musí existovat)
+```
+
+Bez poskytovatele e-mailů se ověřovací odkazy a odkazy pro reset hesla jen vypisují do konzole
+dev serveru (`src/lib/mail.ts`). Změna schématu: upravit `src/db/schema.ts`, pak `npm run db:generate`.
+
 ## Struktura
 - `src/lib/catalog.ts` — značky a modely (testovací čísla)
 - `src/lib/listings.ts` — deterministický generátor testovacích inzerátů (smyšlená VIN `TESTVZD…`)

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
+import { AccountLink } from "@/components/AccountLink";
+import { AccountSync } from "@/components/AccountSync";
 import { Analytics, ConsentSettings } from "@/components/Analytics";
 import { AddListingButton, BrandLink, SectionTabs } from "@/components/Brand";
 import { LocationPicker } from "@/components/LocationPicker";
@@ -36,10 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="ml-auto flex items-center gap-0.5 sm:gap-1 text-sm">
               <ShortlistLink />
               <MoreMenu />
-              <Link href="/prihlaseni/" aria-label="Přihlásit" className="px-2 sm:px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap">
-                <span aria-hidden="true" className="sm:hidden">👤</span>
-                <span className="hidden sm:inline">Přihlásit</span>
-              </Link>
+              <AccountLink />
             </div>
             <Suspense>
               <AddListingButton />
@@ -67,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
         <Analytics />
         <ThemeSync />
+        <AccountSync />
       </body>
     </html>
   );

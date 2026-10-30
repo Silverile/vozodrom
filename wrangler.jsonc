@@ -12,5 +12,17 @@
     { "pattern": "vozodrom.cz", "custom_domain": true },
     { "pattern": "www.vozodrom.cz", "custom_domain": true }
   ],
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // Postgres (Neon, Frankfurt) through Hyperdrive. Locally `npm run db:local` serves PGlite on 5433.
+  // TODO before the first deploy: replace the id with the Hyperdrive config created in the dashboard.
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "00000000000000000000000000000000",
+      "localConnectionString": "postgres://postgres:postgres@127.0.0.1:5433/postgres"
+    }
+  ],
+  // BETTER_AUTH_URL is public; secrets (BETTER_AUTH_SECRET, GOOGLE_CLIENT_SECRET, …) come from
+  // `wrangler secret put` in production and from .dev.vars locally.
+  "vars": { "BETTER_AUTH_URL": "https://vozodrom.cz" }
 }

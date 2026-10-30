@@ -29,7 +29,7 @@
   - [x] Пробный деплой vozodrom-trial на workers.dev работает (Worker 3,2 MiB gzip — больше лимита Free)
   - [x] Кеш страниц: пока статические ассеты Workers (страницы без ревалидации); R2 — когда появится БД
   - [x] Конфигурация в репозитории, workflow deploy-cloudflare.yml
-  - [ ] Секреты GitHub: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID; первый деплой из Actions
+  - [x] Секреты GitHub добавлены; деплой из Actions работает (vozodrom.vozodrom.workers.dev, 30.10.2026)
   - [ ] Перенести DNS vozodrom.cz в Cloudflare (сначала снять DNSSEC в WEDOS), привязать домен к Worker, отключить Pages
   - [ ] Удалить пробный Worker vozodrom-trial
 - [ ] Правовые документы: VOP, условия для дилеров (P2B), GDPR, cookies, порядок жалоб DSA, правила форума
@@ -41,4 +41,8 @@
 - [x] GA4 property „vozodrom web“ (G-2D6CJ8T7NY), načítá se jen se souhlasem
 - [x] GA: Google Signals vypnuté, uchovávání dat 14 měsíců (uvedeno na /soukromi/)
 - [ ] Před ostrým spuštěním: doplnit provozovatele do /soukromi/ a nechat zkontrolovat
-- [ ] Vybrat poskytovatele účtů (Firebase / Supabase / vlastní backend); /prihlaseni/ je zatím jen náhled
+- [x] Účty: Better Auth + Neon Postgres (přes Hyperdrive); e-mail/heslo a Google, role, admin /admin/ (větev accounts)
+- [ ] Neon projekt (Frankfurt) + Hyperdrive config, ID do wrangler.jsonc; migrace na Neon; BETTER_AUTH_SECRET přes wrangler secret
+- [ ] Google OAuth klient (Google Cloud Console) → GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET
+- [ ] Poskytovatel e-mailů pro ověření a reset hesla (bez něj registrace v produkci nedokončí ověření)
+- [ ] Další etapy adminu: inzeráty s fotkami (R2) + moderace, hlášení DSA, fórum a recenze, katalog a novinky

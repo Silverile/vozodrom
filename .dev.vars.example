@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `npm run dev` / `npm run cf:preview`. Never commit .dev.vars.
+BETTER_AUTH_URL=http://localhost:3000
+# Any long random string locally; production uses `npx wrangler secret put BETTER_AUTH_SECRET`.
+BETTER_AUTH_SECRET=local-dev-secret-change-me-0123456789abcdef
+# Optional: Google sign-in appears only when both are set.
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
