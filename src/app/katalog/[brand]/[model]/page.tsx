@@ -427,17 +427,29 @@ export default async function ModelPage({ params }: { params: Params }) {
           <h2 className="text-xl font-bold mt-10 mb-3">Generace <span className="text-base font-normal text-[var(--color-muted)]">· {gens.length}</span></h2>
           <ol className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
             {gens.flatMap((g, i) => {
-              // one card per generation: there is one drawing per generation (facelifts are listed in its details)
-              const shown = stagesOf(g).slice(0, 1);
+              // One card per look: the generation as launched, then each facelift with its own years.
+              // Drawings exist per generation and show its original look, so a facelift card keeps the
+              // placeholder until it has a drawing of its own; mixing the two looks would mislead.
+              const shown = stagesOf(g);
               const base = g.name ?? g.code ?? `${i + 1}. generace`;
-              return shown.map((st, k) => (
+              return shown.map((st, k) => {
+                // "Kodiaq I – modernizace 2021" → "modernizace 2021"
+                const stage = st.label ? st.label.replace(base, "").replace(/^[\s–-]+/, "") || st.label : "";
+                return (
                 <li key={`${i}-${k}`} className="min-w-0">
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
-                    <CatalogImage drawing={frontDrawingId(brandSlug, modelSlug, i)} make={brandSlug} line={modelSlug} genIndex={i} alt={`${title} ${base}`} bodyType={g.bodyTypes[0]} />
+                    <CatalogImage
+                      drawing={k === 0 ? frontDrawingId(brandSlug, modelSlug, i) : null}
+                      make={brandSlug}
+                      line={modelSlug}
+                      genIndex={i}
+                      alt={`${title} ${base}${stage ? ` ${stage}` : ""}`}
+                      bodyType={g.bodyTypes[0]}
+                    />
                     <div className="p-3">
                       <div className="font-semibold truncate">
                         {base}
-                        {st.label && <span className="ml-1.5 text-xs font-medium text-[var(--color-brand)]">{st.label}</span>}
+                        {stage && <span className="ml-1.5 text-xs font-medium text-[var(--color-brand)]">{stage}</span>}
                       </div>
                       <div className="text-xs text-[var(--color-muted)]">
                         {[
@@ -450,7 +462,8 @@ export default async function ModelPage({ params }: { params: Params }) {
                     </div>
                   </a>
                 </li>
-              ));
+                );
+              });
             })}
           </ol>
           <div className="mt-4 flex flex-col gap-4">
