@@ -1,0 +1,22 @@
+import fs from 'node:fs';import cp from 'node:child_process';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+import {buildFamilyCard,buildFamilyLine,publicEngine} from './family-generation-policy.mjs';import {evidenceProblem} from './engine-throughput-policy.mjs';
+const root='analysis/codex/second-source-engines/families-8',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
+assert(!fs.existsSync(root+'/migration.json'),'Migration already applied');const research=read(root+'/research.json'),autoPath='src/data/catalog/model-lines-auto.json',addPath='src/data/catalog/model-line-additions.json',auto=read(autoPath),add=read(addPath),drawings=read('src/data/front-drawings.json'),holds=read('src/data/front-drawing-review.json'),proofPath='analysis/codex/second-source-engines/evidence-7.json',oldProofs=read(proofPath),newProofs=[],changes=[];
+for(const [id,assignment]of Object.entries(research.existingEngineAssignments)){
+ const [make,line]=id.split('/'),p=`src/data/catalog/model-cards/${make}.json`,cards=read(p),ci=cards.findIndex(c=>c.lineSlug===line),before=cards[ci],defs=research.definitions.filter(d=>d.make===make&&d.line===line);assert(ci>=0);
+ assert(!drawings[make+'--'+line]?.length,'Drawing needs explicit attribution before migration');assert(!Object.keys(holds).some(k=>k.startsWith(make+'--'+line+'--')),'Existing hold needs a remap');
+ const after=buildFamilyCard(before,defs,assignment);cards[ci]=after;write(p,cards);
+ for(const source of [auto,add]){const i=source.findIndex(l=>l.makeSlug===make&&l.slug===line);if(i>=0)source[i]=buildFamilyLine(source[i],after);}
+ for(const row of oldProofs.rows.filter(r=>r.make===make&&r.line===line)){
+  row.index=assignment;row.sourceScope.generationEvidence.generationIndex=assignment;
+  if(make==='cadillac'){Object.assign(row.sourceScope.generationEvidence,{method:'generation-heading',anchor:row.sourceScope.tableSection.split(' / ')[0],fromYear:2020,toYear:2026});}
+ }
+ for(const d of defs)for(const raw of d.newEngines){const e=publicEngine(raw);assert.equal(evidenceProblem(after.generations[d.index],d.index,raw),null);newProofs.push({make,line,index:d.index,variant:e.variant,kw:e.powerKwMin,publicEngineHash:hash(e),sourceScope:raw.sourceScope});}
+ const statsPath=`src/data/stats/${make}.json`,stats=read(statsPath);if(stats[line])delete stats[line].gens;fs.writeFileSync(statsPath,JSON.stringify(stats));
+ changes.push({id,make,line,sourceFile:p,beforeHash:hash(before),afterHash:hash(after),oldToNew:{0:defs.map(d=>d.index)},engineOldToNew:assignment,before:[{index:0,code:before.generations[0].code,from:before.generations[0].from,to:before.generations[0].to}],after:after.generations.map((g,index)=>({index,code:g.code,from:g.from,to:g.to,engines:g.engines.length,facelifts:(g.facelift??[]).map(f=>f.year)})),drawingMoves:[],holdsMoved:[],oldListingId:`${before.generations[0].from}–${before.generations[0].to??'?'}`,newListingIds:defs.map(d=>d.code),listingPolicy:'Former family year id requires chassis/year/body fallback; no blanket one-to-one rewrite.'});
+}
+write(autoPath,auto);write(addPath,add);write(proofPath,oldProofs);write('analysis/codex/second-source-engines/evidence-families-8.json',{baselineRevision:research.baselineRevision,rows:newProofs});
+write(root+'/migration.json',{baselineRevision:research.baselineRevision,changes,statisticsStatus:'pending',generationsAdded:6,generationsRemoved:0,faceliftsAdded:4,newEngineRows:newProofs.length,oldEngineRowsPreserved:6,drawingFilesMoved:0,notes:research.notes});
+cp.execFileSync('node',['scripts/model-cards-index.mjs'],{stdio:'inherit'});cp.execFileSync('node',['scripts/model-lines-index.mjs'],{stdio:'inherit'});
+const inputPaths=['scripts/stats/match.py','scripts/stats/istp-stats.py','scripts/stats/rsv-stats.py','scripts/stats/build-stats.py','src/data/model-cards-index.json','src/data/model-lines-index.json','src/data/catalog/model-lines-auto.json'];write(root+'/rebuild-inputs.json',{baselineRevision:research.baselineRevision,makes:['bmw','cadillac','fiat'],sha256:Object.fromEntries(inputPaths.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))});
+console.log(JSON.stringify({families:changes.map(c=>c.id),generationsAdded:6,newEngineRows:newProofs.length,statsStatus:'pending'}));

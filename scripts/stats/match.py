@@ -333,6 +333,13 @@ class Matcher:
         if not year or not gens:
             return None
         hits = [i for i, (a, b, _) in enumerate(gens) if a and a <= year and (b is None or year <= b)]
+        if make == 'fiat' and line == 'palio':
+            # The overlapping 326 is a South-American successor. European
+            # Weekend registrations must not become 326 solely from their year.
+            regional = [i for i in hits if '326' in gens[i][2]]
+            if regional and re.search(r'\b326[A-Z0-9]*\b', fold(type_text)):
+                return regional[0]
+            hits = [i for i in hits if i not in regional]
         if len(hits) > 1 and type_text:
             t = set(re.findall(r"[A-Z0-9]{2,4}", fold(type_text)))
             coded = [i for i in hits if gens[i][2] & t]

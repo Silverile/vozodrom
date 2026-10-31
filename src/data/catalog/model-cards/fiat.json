@@ -1090,8 +1090,39 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1368,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "availablePowerKw": [
+              103
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Fiat 124 Spider",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1368,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 125,
+            "powerKwMax": 125,
+            "availablePowerKw": [
+              125
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Abarth 124 Spider",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1131,13 +1162,15 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
+          "https://en.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
+          "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
-      "https://en.wikipedia.org/wiki/Fiat_124_Sport_Spider"
+      "https://en.wikipedia.org/wiki/Fiat_124_Sport_Spider",
+      "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
     ],
     "needsReview": [
       {
@@ -18219,17 +18252,48 @@
     "name": "Palio",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada Palio je zde vedena jako samostatná výrobní rodina značky Fiat. Přehled rozlišuje doložené výrobní etapy; výbavy, regionální nabídka a technické verze zatím nejsou vyčerpávající.",
+    "summaryCs": "Palio má generaci 178 (hatchback 1996–2016, Weekend 1997–2020) a regionální generaci 326 (2011–2018, Brazílie a Argentina). Evropské motorizace nejsou automaticky přiřazovány jihoamerickému nástupci.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Palio",
+        "code": "178",
+        "name": "Palio (178)",
         "from": 1996,
-        "to": 2018,
+        "to": 2020,
         "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": null,
+        "facelift": [
+          {
+            "year": 2000,
+            "to": 2020,
+            "name": "Facelift",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Palio"
+            ],
+            "photo": null
+          },
+          {
+            "year": 2004,
+            "to": 2020,
+            "name": "Facelift",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Palio"
+            ],
+            "photo": null
+          },
+          {
+            "year": 2007,
+            "to": 2020,
+            "name": "Facelift",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Palio"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "hatchback",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -18302,23 +18366,65 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe / South America",
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Hatchback 1996–2016; Weekend 1997–2020. Modernizace a nabídka se lišily podle trhu."
         },
         "trunkL": null,
         "markets": [
-          "Europe / source-specific global production"
+          "Europe",
+          "South America"
         ],
-        "marketNotesCs": "Rozsah výroby se liší podle trhu; evropský konec není automaticky globálním koncem. Technické verze jsou omezeny na uvedený rok a trh.",
+        "marketNotesCs": "Hatchback 1996–2016; Weekend 1997–2020. Modernizace a nabídka se lišily podle trhu.",
         "photo": null,
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Palio",
           "https://de.wikipedia.org/wiki/Fiat_Palio"
-        ]
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "326",
+        "name": "Palio (326)",
+        "from": 2011,
+        "to": 2018,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
+        "engines": [],
+        "engineCoverage": "unknown",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Brazil / Argentina",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Druhá generace pro Brazílii a Argentinu; nejde o evropský Palio Weekend. Bez přiřazení evropských motorizací."
+        },
+        "trunkL": null,
+        "markets": [
+          "Brazil",
+          "Argentina"
+        ],
+        "marketNotesCs": "Druhá generace pro Brazílii a Argentinu; nejde o evropský Palio Weekend. Bez přiřazení evropských motorizací.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Palio"
+        ],
+        "drawingStage": 0
       }
     ],
     "sources": [
@@ -18328,70 +18434,6 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       }
     ]
@@ -24523,8 +24565,174 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1242,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 54,
+            "powerKwMax": 54,
+            "availablePowerKw": [
+              54
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.2",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1242,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 44,
+            "powerKwMax": 44,
+            "availablePowerKw": [
+              44
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.2",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1747,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 97,
+            "powerKwMax": 97,
+            "availablePowerKw": [
+              97
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.8",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1248,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 62,
+            "powerKwMax": 62,
+            "availablePowerKw": [
+              62
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.3 Multijet",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1248,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.3 Multijet",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1698,
+            "displacementLitresNominal": 1.7,
+            "powerKwMin": 51,
+            "powerKwMax": 51,
+            "availablePowerKw": [
+              51
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.7 TD",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 46,
+            "powerKwMax": 46,
+            "availablePowerKw": [
+              46
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.9 D",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 59,
+            "powerKwMax": 59,
+            "availablePowerKw": [
+              59
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.9 JTD",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 999,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "availablePowerKw": [
+              88
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.0 Turbo 200 (Argentinien)",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1332,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 73,
+            "powerKwMax": 73,
+            "availablePowerKw": [
+              73
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.3 Firefly (Argentinien)",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1368,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 63,
+            "powerKwMax": 63,
+            "availablePowerKw": [
+              63
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.4 (Argentinien)",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Fiat_Strada"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -24548,12 +24756,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Strada"
+          "https://en.wikipedia.org/wiki/Fiat_Strada",
+          "https://de.wikipedia.org/wiki/Fiat_Strada"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Strada"
+      "https://en.wikipedia.org/wiki/Fiat_Strada",
+      "https://de.wikipedia.org/wiki/Fiat_Strada"
     ],
     "needsReview": [
       {

@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-10-31"
+    }
+  },
+  "rawAggregateSha256": {
+    "istp-agg.json": "1dcaeb993356ae71ee0b7daf98aa2d9a3f471f50bd7c7ebc526ebe067c689543",
+    "rsv-agg.json": "6b606f8dc0a9418fc3c61f3b21639fc82008de67c3010370392f00b6c1b21c73"
+  },
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPreviouslyPopulatedLineLostAllGenerationCohorts": true,
+  "reports": [
+    {
+      "make": "bmw",
+      "makeFleet": 249196,
+      "makeInspections": 444492,
+      "fleetCohorts": 61,
+      "inspectionCohorts": 52,
+      "lines": [
+        {
+          "id": "bmw/ix3",
+          "fleetBefore": 319,
+          "fleetAfter": 319,
+          "inspectionsBefore": 74,
+          "inspectionsAfter": 74,
+          "generations": [
+            {
+              "index": 0,
+              "from": 2020,
+              "to": 2025,
+              "fleet": 147,
+              "inspections": 74
+            },
+            {
+              "index": 1,
+              "from": 2025,
+              "to": null,
+              "fleet": 172,
+              "inspections": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "make": "cadillac",
+      "makeFleet": 1061,
+      "makeInspections": 2271,
+      "fleetCohorts": 6,
+      "inspectionCohorts": 8,
+      "lines": [
+        {
+          "id": "cadillac/escalade",
+          "fleetBefore": 390,
+          "fleetAfter": 390,
+          "inspectionsBefore": 876,
+          "inspectionsAfter": 876,
+          "generations": [
+            {
+              "index": 0,
+              "from": 1998,
+              "to": 2000,
+              "fleet": null,
+              "inspections": null
+            },
+            {
+              "index": 1,
+              "from": 2001,
+              "to": 2006,
+              "fleet": null,
+              "inspections": 77
+            },
+            {
+              "index": 2,
+              "from": 2006,
+              "to": 2014,
+              "fleet": 155,
+              "inspections": 393
+            },
+            {
+              "index": 3,
+              "from": 2014,
+              "to": 2019,
+              "fleet": 109,
+              "inspections": 315
+            },
+            {
+              "index": 4,
+              "from": 2020,
+              "to": null,
+              "fleet": 96,
+              "inspections": 88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "make": "fiat",
+      "makeFleet": 187572,
+      "makeInspections": 358994,
+      "fleetCohorts": 51,
+      "inspectionCohorts": 48,
+      "lines": [
+        {
+          "id": "fiat/palio",
+          "fleetBefore": 506,
+          "fleetAfter": 506,
+          "inspectionsBefore": 496,
+          "inspectionsAfter": 496,
+          "generations": [
+            {
+              "index": 0,
+              "from": 1996,
+              "to": 2020,
+              "fleet": 506,
+              "inspections": 496
+            },
+            {
+              "index": 1,
+              "from": 2011,
+              "to": 2018,
+              "fleet": null,
+              "inspections": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputSha256": {
+    "src/data/stats/bmw.json": "40ecfdf029dd432a52033d2d7e1c51919a681b6c19b9b0359e19d27f4688ac83",
+    "src/data/stats/cadillac.json": "c0828fdd6c290013ae74e8f67f2b435d34b70aa5df20231ac5864fcec135a050",
+    "src/data/stats/fiat.json": "c8f7214d8e1ab712016920de199d6f47b64852652f355a134a0d721ce9825cdd",
+    "src/data/stats/index.json": "ab188d741bac6f7bace1e3347bf8c65262924fe2d5c40fb9f3f31ccedfe315c6",
+    "src/data/listing-stats.json": "94dd210cda43ae45ef319652d49f538b3bdf9b3fe3933bfd612d09e77e02f851"
+  }
+}

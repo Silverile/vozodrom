@@ -27451,16 +27451,54 @@
     ],
     "from": 2020,
     "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "productionStatus": "current",
+    "productionPeriods": [
+      {
+        "from": 2020,
+        "to": 2025
+      },
+      {
+        "from": 2025,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "G08",
+        "from": 2020,
+        "to": 2025,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://de.wikipedia.org/wiki/BMW_G01",
+          "https://www.ultimatespecs.com/car-specs/BMW/128138/BMW-iX3-.html"
+        ]
+      },
+      {
+        "code": "NA5",
+        "from": 2025,
+        "to": null,
+        "productionStatus": "current",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/BMW_iX3"
+        ]
+      }
+    ],
     "wikidataQid": "Q97159640",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381746649",
       "https://en.wikipedia.org/w/index.php?oldid=1381638432",
       "https://www.wikidata.org/wiki/Q97159640",
-      "https://www.press.bmwgroup.com/global/article/attachment/T0318114EN/463696"
+      "https://www.press.bmwgroup.com/global/article/attachment/T0318114EN/463696",
+      "https://www.ultimatespecs.com/car-specs/BMW/128138/BMW-iX3-.html",
+      "https://de.wikipedia.org/wiki/BMW_G01",
+      "https://en.wikipedia.org/wiki/BMW_iX3"
     ],
     "needsReview": [
       {
@@ -27474,10 +27512,6 @@
       {
         "field": "to",
         "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       }
     ]
   },
@@ -39818,15 +39852,48 @@
     ],
     "from": 1998,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "current",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1998,
+        "to": 2000
+      },
+      {
+        "from": 2001,
+        "to": 2006
+      },
+      {
+        "from": 2006,
+        "to": 2014
+      },
+      {
+        "from": 2014,
+        "to": 2019
+      },
+      {
+        "from": 2020,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GMT400",
         "from": 1998,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2000,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMT800",
+        "from": 2001,
+        "to": 2006,
+        "productionStatus": "ended",
         "bodyTypes": [
           "suv",
           "pickup"
@@ -39834,11 +39901,51 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Cadillac_Escalade"
         ]
+      },
+      {
+        "code": "GMT900",
+        "from": 2006,
+        "to": 2014,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMTK2XX",
+        "from": 2014,
+        "to": 2019,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+          "https://de.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMTT1XX",
+        "from": 2020,
+        "to": null,
+        "productionStatus": "current",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+          "https://de.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+      "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+      "https://de.wikipedia.org/wiki/Cadillac_Escalade"
     ],
     "needsReview": [
       {
@@ -97436,16 +97543,54 @@
       "hatchback",
       "kombi"
     ],
-    "from": null,
-    "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "from": 1996,
+    "to": 2020,
+    "productionStatus": "ended",
+    "productionPeriods": [
+      {
+        "from": 1996,
+        "to": 2020
+      },
+      {
+        "from": 2011,
+        "to": 2018
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "178",
+        "from": 1996,
+        "to": 2020,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "hatchback",
+          "kombi"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Palio",
+          "https://de.wikipedia.org/wiki/Fiat_Palio"
+        ]
+      },
+      {
+        "code": "326",
+        "from": 2011,
+        "to": 2018,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Palio"
+        ]
+      }
+    ],
     "wikidataQid": "Q525756",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1374251521",
-      "https://www.wikidata.org/wiki/Q525756"
+      "https://www.wikidata.org/wiki/Q525756",
+      "https://en.wikipedia.org/wiki/Fiat_Palio",
+      "https://de.wikipedia.org/wiki/Fiat_Palio"
     ],
     "needsReview": [
       {
@@ -97455,10 +97600,6 @@
       {
         "field": "to",
         "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       }
     ]
   },

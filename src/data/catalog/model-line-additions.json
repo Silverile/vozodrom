@@ -40090,15 +40090,48 @@
     ],
     "from": 1998,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "current",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1998,
+        "to": 2000
+      },
+      {
+        "from": 2001,
+        "to": 2006
+      },
+      {
+        "from": 2006,
+        "to": 2014
+      },
+      {
+        "from": 2014,
+        "to": 2019
+      },
+      {
+        "from": 2020,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GMT400",
         "from": 1998,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2000,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMT800",
+        "from": 2001,
+        "to": 2006,
+        "productionStatus": "ended",
         "bodyTypes": [
           "suv",
           "pickup"
@@ -40106,11 +40139,51 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Cadillac_Escalade"
         ]
+      },
+      {
+        "code": "GMT900",
+        "from": 2006,
+        "to": 2014,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMTK2XX",
+        "from": 2014,
+        "to": 2019,
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+          "https://de.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
+      },
+      {
+        "code": "GMTT1XX",
+        "from": 2020,
+        "to": null,
+        "productionStatus": "current",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+          "https://de.wikipedia.org/wiki/Cadillac_Escalade"
+        ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Cadillac_Escalade"
+      "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+      "https://de.wikipedia.org/wiki/Cadillac_Escalade"
     ],
     "needsReview": [
       {
