@@ -10,15 +10,15 @@
     "A model absent from both indexes cannot be discovered by this internal audit."
   ],
   "counts": {
-    "lines": 4809,
-    "cards": 4648,
-    "linesWithoutCard": 161,
-    "generations": 6696,
-    "generationsWithEngines": 2526,
+    "lines": 4785,
+    "cards": 4707,
+    "linesWithoutCard": 78,
+    "generations": 6786,
+    "generationsWithEngines": 2540,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
-    "generationsWithFacelifts": 836
+    "generationsWithFacelifts": 837
   },
   "prioritiesByGap": {
     "no-card": [
@@ -29,38 +29,8 @@
         "generationIndexes": []
       },
       {
-        "makeSlug": "austin-motor-company",
-        "lineSlug": "austin-seven-mini-ado15",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
         "makeSlug": "automobili-pininfarina",
         "lineSlug": "b95",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "chevrolet",
-        "lineSlug": "blazer-ev",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "chevrolet",
-        "lineSlug": "equinox-ev",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "chevrolet",
-        "lineSlug": "silverado-ev",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "dacia",
-        "lineSlug": "striker",
         "fleetN": null,
         "generationIndexes": []
       },
@@ -78,18 +48,6 @@
       },
       {
         "makeSlug": "ford",
-        "lineSlug": "bronco-sport",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "ford",
-        "lineSlug": "expedition",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "ford",
         "lineSlug": "f-150",
         "fleetN": null,
         "generationIndexes": []
@@ -102,19 +60,7 @@
       },
       {
         "makeSlug": "mahindra",
-        "lineSlug": "e2o",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "mahindra",
         "lineSlug": "scorpio-pik-up-goa-pik-up-getaway",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "maruti-suzuki",
-        "lineSlug": "alto-alto-800-alto-k10",
         "fleetN": null,
         "generationIndexes": []
       },
@@ -139,6 +85,60 @@
       {
         "makeSlug": "maruti-suzuki",
         "lineSlug": "s-cross",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "maruti-suzuki",
+        "lineSlug": "super-carry",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "maruti-suzuki",
+        "lineSlug": "zen-estilo-estilo",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "maserati",
+        "lineSlug": "2-24v-4-24v-4-18v",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "maxus",
+        "lineSlug": "edeliver-5",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "mazda",
+        "lineSlug": "cx-5e",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "mclaren",
+        "lineSlug": "788hs",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "mercedes-benz",
+        "lineSlug": "eqt",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "microcar",
+        "lineSlug": "m-go-models-auto-has-0-microcar-rows",
+        "fleetN": null,
+        "generationIndexes": []
+      },
+      {
+        "makeSlug": "mitsubishi",
+        "lineSlug": "asx-vr-e-foxtron-based-bev",
         "fleetN": null,
         "generationIndexes": []
       }
@@ -87818,15 +87818,42 @@
     {
       "makeSlug": "austin-motor-company",
       "lineSlug": "austin-seven-mini-ado15",
-      "name": "Austin Seven / Mini (ADO15)",
+      "name": "Austin Seven / Mini",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Austin Seven / Mini",
+          "code": "ADO15",
+          "from": 1959,
+          "to": 1967,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mini"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "austin-motor-company",
@@ -107080,13 +107107,39 @@
       "lineSlug": "blazer-ev",
       "name": "Blazer EV",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Blazer EV",
+          "code": null,
+          "from": 2023,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 4,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Chevrolet_Blazer_EV"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "chevrolet",
@@ -107858,13 +107911,39 @@
       "lineSlug": "equinox-ev",
       "name": "Equinox EV",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Equinox EV",
+          "code": null,
+          "from": 2024,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Chevrolet_Equinox_EV"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "chevrolet",
@@ -108593,13 +108672,40 @@
       "lineSlug": "silverado-ev",
       "name": "Silverado EV",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Silverado EV",
+          "code": null,
+          "from": 2023,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Chevrolet_Silverado_EV"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "chevrolet",
@@ -111678,13 +111784,40 @@
       "lineSlug": "striker",
       "name": "Striker",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Striker",
+          "code": null,
+          "from": 2026,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Dacia_Striker"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "dacia",
@@ -138918,13 +139051,40 @@
       "lineSlug": "bronco-sport",
       "name": "Bronco Sport",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Bronco Sport",
+          "code": null,
+          "from": 2020,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Bronco_Sport"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "ford",
@@ -139037,13 +139197,144 @@
       "lineSlug": "expedition",
       "name": "Expedition",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 5,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Expedition I",
+          "code": null,
+          "from": 1996,
+          "to": 2002,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Expedition"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Expedition II",
+          "code": null,
+          "from": 2002,
+          "to": 2006,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Expedition"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Expedition III",
+          "code": null,
+          "from": 2006,
+          "to": 2017,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Expedition"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Expedition IV",
+          "code": null,
+          "from": 2017,
+          "to": 2024,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Expedition"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Expedition V",
+          "code": null,
+          "from": 2025,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Ford_Expedition"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "ford",
@@ -178780,13 +179071,40 @@
       "lineSlug": "e2o",
       "name": "e2o",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "e2o",
+          "code": null,
+          "from": 2013,
+          "to": 2017,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mahindra_e2o"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "mahindra",
@@ -180425,13 +180743,92 @@
       "lineSlug": "alto-alto-800-alto-k10",
       "name": "Alto / Alto 800 / Alto K10",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 3,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "First generation (RF)",
+          "code": "RF",
+          "from": 2000,
+          "to": 2014,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Second generation (AOD)",
+          "code": "AOD",
+          "from": 2012,
+          "to": 2022,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Third generation",
+          "code": null,
+          "from": 2022,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "maruti-suzuki",
@@ -181664,13 +182061,118 @@
       "lineSlug": "swift-dzire-dzire",
       "name": "Swift Dzire / Dzire",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 4,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "First generation",
+          "code": null,
+          "from": 2008,
+          "to": 2016,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Second generation",
+          "code": null,
+          "from": 2011,
+          "to": 2023,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Third generation",
+          "code": null,
+          "from": 2017,
+          "to": 2025,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Fourth generation",
+          "code": null,
+          "from": 2024,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "maruti-suzuki",
@@ -181800,13 +182302,66 @@
       "lineSlug": "vitara-brezza-brezza",
       "name": "Vitara Brezza / Brezza",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 2,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "First generation",
+          "code": null,
+          "from": 2016,
+          "to": 2022,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Second generation",
+          "code": null,
+          "from": 2022,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "maruti-suzuki",
@@ -182651,19 +183206,6 @@
     },
     {
       "makeSlug": "maserati",
-      "lineSlug": "granturismo-ii-m189",
-      "name": "GranTurismo II (M189)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "maserati",
       "lineSlug": "gt2-stradale",
       "name": "GT2 Stradale",
       "fleetN": null,
@@ -183050,19 +183592,6 @@
     },
     {
       "makeSlug": "maserati",
-      "lineSlug": "mcpura-incl-mcpura-cielo",
-      "name": "MCPURA (incl. MCPURA Cielo)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "maserati",
       "lineSlug": "merak",
       "name": "Merak",
       "fleetN": null,
@@ -183209,19 +183738,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "maserati",
-      "lineSlug": "quattroporte-v-m139",
-      "name": "Quattroporte V (M139)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "maserati",
@@ -183496,19 +184012,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "maserati",
-      "lineSlug": "spyder-biturbo-spyder-m138-spyder-as-separate-models",
-      "name": "Spyder (Biturbo Spyder / M138 Spyder) as separate models",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "matra",
@@ -183836,13 +184339,40 @@
       "lineSlug": "eterron-9-terron-9",
       "name": "eTerron 9 / Terron 9",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "eTerron 9 / Terron 9",
+          "code": "SK103",
+          "from": 2024,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Maxus_Terron_9"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "maxus",
@@ -184155,19 +184685,6 @@
     },
     {
       "makeSlug": "maxus",
-      "lineSlug": "mifa-9-in-models-auto",
-      "name": "Mifa 9 in models-auto",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "maxus",
       "lineSlug": "t60",
       "name": "T60",
       "fleetN": null,
@@ -184253,19 +184770,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "maxus",
-      "lineSlug": "t70-v80-in-models-auto",
-      "name": "T70 / V80 in models-auto",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "maxus",
@@ -195068,15 +195572,276 @@
     {
       "makeSlug": "mitsubishi",
       "lineSlug": "lancer-evolution-i-x",
-      "name": "Lancer Evolution (I-X)",
+      "name": "Lancer Evolution",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 10,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "First generation",
+          "code": "I",
+          "from": 1992,
+          "to": 1994,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Second generation",
+          "code": "II",
+          "from": 1994,
+          "to": 1995,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Third generation",
+          "code": "III",
+          "from": 1995,
+          "to": 1996,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Fourth generation",
+          "code": "IV",
+          "from": 1996,
+          "to": 1998,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Fifth generation",
+          "code": "V",
+          "from": 1998,
+          "to": 1999,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 5,
+          "name": "Sixth generation",
+          "code": "VI",
+          "from": 1999,
+          "to": 2001,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 6,
+          "name": "Seventh generation",
+          "code": "VII",
+          "from": 2001,
+          "to": 2003,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 7,
+          "name": "Eighth generation",
+          "code": "VIII",
+          "from": 2003,
+          "to": 2005,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 8,
+          "name": "Ninth generation",
+          "code": "IX",
+          "from": 2005,
+          "to": 2007,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 9,
+          "name": "Tenth generation",
+          "code": "X",
+          "from": 2007,
+          "to": 2016,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "mitsubishi",
@@ -200969,13 +201734,39 @@
       "lineSlug": "u-x",
       "name": "U / X",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "U / X",
+          "code": null,
+          "from": 2020,
+          "to": 2026,
+          "fleetN": null,
+          "engineRows": 4,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Neta_U"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "neta-auto",
@@ -201052,13 +201843,39 @@
       "lineSlug": "v-aya",
       "name": "V / Aya",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "V / Aya",
+          "code": null,
+          "from": 2020,
+          "to": 2026,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Neta_Aya"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "nio",
@@ -202229,15 +203046,42 @@
     {
       "makeSlug": "noble",
       "lineSlug": "m500-line-entry-present-in-models-auto-only",
-      "name": "M500 (line entry; present in models-auto only)",
+      "name": "M500",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "M500",
+          "code": null,
+          "from": 2022,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Noble_M500"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "noble",
@@ -206100,15 +206944,41 @@
     {
       "makeSlug": "omoda",
       "lineSlug": "omoda-5-c5-vc-e5-5-ev",
-      "name": "Omoda 5 / C5 (vč. E5 / 5 EV)",
+      "name": "Omoda 5 / C5 / E5",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Omoda 5 / C5 / E5",
+          "code": null,
+          "from": 2022,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Omoda_C5"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "omoda",
@@ -206579,15 +207449,94 @@
     {
       "makeSlug": "opel",
       "lineSlug": "commodore-model-line-models-commodore-a-b-c-exist-but-there-is-no-line-or-card",
-      "name": "Commodore (model line; models commodore-a/b/c exist but there is no line or card)",
+      "name": "Commodore",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 3,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Commodore A",
+          "code": "A",
+          "from": 1967,
+          "to": 1971,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Commodore"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Commodore B",
+          "code": "B",
+          "from": 1972,
+          "to": 1977,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Commodore"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Commodore C",
+          "code": "C",
+          "from": 1978,
+          "to": 1986,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Commodore"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "opel",
@@ -207086,19 +208035,6 @@
       ]
     },
     {
-      "makeSlug": "opel",
-      "lineSlug": "vectra-b",
-      "name": "Vectra B",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
       "makeSlug": "ora",
       "lineSlug": "03",
       "name": "03 / Good Cat",
@@ -207316,15 +208252,41 @@
     {
       "makeSlug": "ora",
       "lineSlug": "mecha-dragon-sedan-china-only",
-      "name": "Mecha Dragon (sedan, China only)",
+      "name": "Mecha Dragon",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Mecha Dragon",
+          "code": null,
+          "from": 2022,
+          "to": 2024,
+          "fleetN": null,
+          "engineRows": 1,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mecha_Dragon"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "ora",
@@ -216131,13 +217093,40 @@
       "lineSlug": "fregate",
       "name": "Frégate",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Frégate",
+          "code": null,
+          "from": 1951,
+          "to": 1960,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Fr%C3%A9gate"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "renault",
@@ -216157,26 +217146,80 @@
       "lineSlug": "mascott",
       "name": "Mascott",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Mascott",
+          "code": null,
+          "from": 1999,
+          "to": 2013,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Master#Renault_Mascott"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "renault",
       "lineSlug": "rodeo",
       "name": "Rodeo",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Rodeo",
+          "code": null,
+          "from": 1970,
+          "to": 1987,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Rodeo"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "renault",
@@ -216236,15 +217279,94 @@
     {
       "makeSlug": "renault",
       "lineSlug": "thalia-alias-for-slug-symbol",
-      "name": "Thalia (alias for slug symbol)",
+      "name": "Thalia / Symbol",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 3,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Clio Symbol",
+          "code": "I",
+          "from": 1999,
+          "to": 2008,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Symbol"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Symbol II",
+          "code": "II",
+          "from": 2008,
+          "to": 2013,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Symbol"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Symbol III",
+          "code": "III",
+          "from": 2013,
+          "to": 2021,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Renault_Symbol"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "rimac",
@@ -216447,26 +217569,80 @@
       "lineSlug": "350",
       "name": "350",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "350",
+          "code": null,
+          "from": 2010,
+          "to": 2014,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_350"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "360-360-plus",
       "name": "360 / 360 Plus",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "360 / 360 Plus",
+          "code": null,
+          "from": 2015,
+          "to": 2018,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_360"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -216610,39 +217786,119 @@
       "lineSlug": "clever",
       "name": "Clever",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Clever",
+          "code": null,
+          "from": 2020,
+          "to": 2025,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_Clever"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "d5x",
       "name": "D5X",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "D5X",
+          "code": null,
+          "from": 2024,
+          "to": 2026,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_RX5#III"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "d6",
       "name": "D6",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "D6",
+          "code": null,
+          "from": 2025,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_D6"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -216729,26 +217985,80 @@
       "lineSlug": "ei5",
       "name": "Ei5",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Ei5",
+          "code": null,
+          "from": 2017,
+          "to": 2025,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_i5#Roewe_Ei5_/_MG5_EV_(EP22)"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "i5",
       "name": "i5",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "i5",
+          "code": null,
+          "from": 2017,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_i5"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -216830,26 +218140,80 @@
       "lineSlug": "imax8",
       "name": "iMAX8",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "iMAX8",
+          "code": null,
+          "from": 2020,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_iMAX8"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "jiayue-07",
       "name": "Jiayue 07",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Jiayue 07",
+          "code": null,
+          "from": 2026,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_Jiayue_07"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -216896,39 +218260,120 @@
       "lineSlug": "m7",
       "name": "M7",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "M7",
+          "code": null,
+          "from": 2025,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_D7#Roewe_M7"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "marvel-x",
       "name": "Marvel X",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Marvel X",
+          "code": null,
+          "from": 2018,
+          "to": 2021,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_Marvel_X"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
       "lineSlug": "rx3",
       "name": "RX3",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "RX3",
+          "code": null,
+          "from": 2017,
+          "to": 2023,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_RX3"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -217035,13 +218480,40 @@
       "lineSlug": "rx5-max-emax",
       "name": "RX5 Max / eMax",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "RX5 Max / eMax",
+          "code": null,
+          "from": 2019,
+          "to": 2023,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_RX5#Max"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -217091,13 +218563,40 @@
       "lineSlug": "rx9",
       "name": "RX9",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "RX9",
+          "code": null,
+          "from": 2023,
+          "to": 2025,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Roewe_RX9"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "roewe",
@@ -218118,19 +219617,6 @@
     },
     {
       "makeSlug": "rover",
-      "lineSlug": "model-line-additions-for-all-rover-cards",
-      "name": "model-line-additions for all Rover cards",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "rover",
       "lineSlug": "p4",
       "name": "P4",
       "fleetN": null,
@@ -219108,15 +220594,42 @@
     {
       "makeSlug": "saturn",
       "lineSlug": "ev1-saturn-dealer-sold-gm-ev1",
-      "name": "EV1 (Saturn-dealer sold GM EV1)",
+      "name": "GM EV1",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "GM EV1",
+          "code": null,
+          "from": 1996,
+          "to": 1999,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/General_Motors_EV1"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "saturn",
@@ -219754,13 +221267,40 @@
       "lineSlug": "xd",
       "name": "xD",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "xD",
+          "code": "XP110",
+          "from": 2007,
+          "to": 2014,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Scion_xD"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "seat",
@@ -220260,26 +221800,80 @@
       "lineSlug": "panda",
       "name": "Panda",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Panda",
+          "code": null,
+          "from": 1980,
+          "to": 1986,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/SEAT_Marbella"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "seat",
       "lineSlug": "ritmo",
       "name": "Ritmo",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Ritmo",
+          "code": null,
+          "from": 1979,
+          "to": 1982,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/SEAT_Ritmo"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "seres",
@@ -220629,13 +222223,40 @@
       "lineSlug": "horizon",
       "name": "Horizon",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Horizon",
+          "code": null,
+          "from": 1978,
+          "to": 1987,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Chrysler_Horizon"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "simca",
@@ -221976,15 +223597,42 @@
     {
       "makeSlug": "studebaker",
       "lineSlug": "champ-pickup",
-      "name": "Champ (pickup)",
+      "name": "Champ",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Champ",
+          "code": null,
+          "from": 1960,
+          "to": 1964,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Studebaker_Champ"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "studebaker",
@@ -223845,84 +225493,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-1000-ff-1-line-in-model-line-additions-card-exists",
-      "name": "Subaru 1000 / FF-1 (line in model-line-additions; card exists)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-360-line-in-model-line-additions-card-exists-with-isaddition",
-      "name": "Subaru 360 (line in model-line-additions; card exists with isAddition)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-ascent-line-in-model-line-additions-card-exists",
-      "name": "Subaru Ascent (line in model-line-additions; card exists)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-baja-line-in-model-line-additions-card-exists",
-      "name": "Subaru Baja (line in model-line-additions; card exists)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-uncharted-models-auto-entry-missing-line-exists",
-      "name": "Subaru Uncharted (models-auto entry missing; line exists)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "subaru",
-      "lineSlug": "subaru-xt-line-in-model-line-additions-card-exists",
-      "name": "Subaru XT (line in model-line-additions; card exists)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "subaru",
@@ -229149,13 +230719,40 @@
       "lineSlug": "avensis-verso",
       "name": "Avensis Verso",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Avensis Verso",
+          "code": "XM20",
+          "from": 2001,
+          "to": 2010,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_Ipsum"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "toyota",
@@ -229202,13 +230799,40 @@
       "lineSlug": "corolla-cross",
       "name": "Corolla Cross",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Corolla Cross",
+          "code": "XG10",
+          "from": 2020,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_Corolla_Cross"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "toyota",
@@ -229390,26 +231014,235 @@
       "lineSlug": "gr-yaris",
       "name": "GR Yaris",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "GR Yaris",
+          "code": "XP210",
+          "from": 2020,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_GR_Yaris"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "toyota",
       "lineSlug": "hiace",
       "name": "Hiace",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 7,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "First generation",
+          "code": "H10",
+          "from": 1967,
+          "to": 1977,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Second generation",
+          "code": "H11/H20/H30/H40",
+          "from": 1977,
+          "to": 1985,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Third generation",
+          "code": "H50/H60/H70/H80/H90",
+          "from": 1982,
+          "to": 2007,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 3,
+          "name": "Fourth generation",
+          "code": "H100",
+          "from": 1989,
+          "to": 2004,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 4,
+          "name": "Toyota HiAce (XH10/XH20)",
+          "code": "XH10/XH20",
+          "from": 1995,
+          "to": 2012,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 5,
+          "name": "Fifth generation",
+          "code": "H200",
+          "from": 2004,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 6,
+          "name": "Sixth generation",
+          "code": "H300",
+          "from": 2019,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_HiAce"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "toyota",
@@ -229920,13 +231753,40 @@
       "lineSlug": "yaris-verso",
       "name": "Yaris Verso",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Yaris Verso",
+          "code": "XP40",
+          "from": 1999,
+          "to": 2005,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Toyota_Yaris_Verso"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "trabant",
@@ -238570,15 +240430,66 @@
     {
       "makeSlug": "volkswagen",
       "lineSlug": "crafter-line-models-auto-slug-crafter-has-no-line-or-card",
-      "name": "Crafter (line; models-auto slug crafter has no line or card)",
+      "name": "Crafter",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 2,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Crafter I",
+          "code": "2E",
+          "from": 2006,
+          "to": 2016,
+          "fleetN": null,
+          "engineRows": 9,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Crafter"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Crafter II",
+          "code": "SY/SZ",
+          "from": 2016,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 5,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Crafter"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volkswagen",
@@ -238623,41 +240534,120 @@
     {
       "makeSlug": "volkswagen",
       "lineSlug": "golf-plus-line-models-auto-slug-golf-plus-has-no-line-or-card",
-      "name": "Golf Plus (line; models-auto slug golf-plus has no line or card)",
+      "name": "Golf Plus",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Golf Plus",
+          "code": null,
+          "from": 2004,
+          "to": 2014,
+          "fleetN": null,
+          "engineRows": 18,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 1,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Golf_Plus"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volkswagen",
       "lineSlug": "golf-sportsvan-line-models-auto-slug-golf-sportsvan-has-no-line-or-card",
-      "name": "Golf Sportsvan (line; models-auto slug golf-sportsvan has no line or card)",
+      "name": "Golf Sportsvan",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Golf Sportsvan",
+          "code": null,
+          "from": 2014,
+          "to": 2020,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Golf_Sportsvan"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volkswagen",
       "lineSlug": "id-polo-line-models-auto-slug-id-polo-has-no-line-or-card",
-      "name": "ID. Polo (line; models-auto slug id-polo has no line or card)",
+      "name": "ID. Polo",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "ID. Polo",
+          "code": null,
+          "from": 2026,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_ID._Polo"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volkswagen",
@@ -239037,15 +241027,66 @@
     {
       "makeSlug": "volkswagen",
       "lineSlug": "lt-line-models-auto-slug-lt-has-no-line-or-card",
-      "name": "LT (line; models-auto slug lt has no line or card)",
+      "name": "LT",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 2,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Volkswagen LT (1st generation)",
+          "code": "Typ 28/21",
+          "from": 1975,
+          "to": 1995,
+          "fleetN": null,
+          "engineRows": 6,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_LT"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Volkswagen LT (2nd generation)",
+          "code": "Typ 2D",
+          "from": 1996,
+          "to": 2006,
+          "fleetN": null,
+          "engineRows": 9,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_LT"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volkswagen",
@@ -239171,13 +241212,40 @@
       "lineSlug": "144",
       "name": "144",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "144",
+          "code": "144",
+          "from": 1966,
+          "to": 1974,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volvo_140_Series"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "volvo",
@@ -239891,15 +241959,42 @@
     {
       "makeSlug": "voyah",
       "lineSlug": "courage-zhiyin",
-      "name": "Courage (Zhiyin)",
+      "name": "Courage / Zhiyin",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Courage / Zhiyin",
+          "code": null,
+          "from": 2024,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Voyah_Courage"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "voyah",
@@ -242730,13 +244825,40 @@
       "lineSlug": "mb-jeep",
       "name": "MB (Jeep)",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "MB (Jeep)",
+          "code": "MB",
+          "from": 1941,
+          "to": 1945,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Willys_MB"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "willys",
@@ -244956,19 +247078,6 @@
     },
     {
       "makeSlug": "wolseley-motors",
-      "lineSlug": "other-pre-war-card-lines-without-models-auto-entry-sixteen-nine-wasp-15-40-16-35-seven-20-28-30-34-40-50-16-24-45-6",
-      "name": "Other pre-war card lines without models-auto entry: sixteen, nine, wasp, 15-40, 16-35, seven, 20-28, 30-34, 40, 50, 16, 24, 45, 6",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
       "lineSlug": "oxford-taxi",
       "name": "Oxford Taxi",
       "fleetN": null,
@@ -245482,123 +247591,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-1100-1300",
-      "name": "Wolseley 1100/1300",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-12-48",
-      "name": "Wolseley 12/48",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-1500",
-      "name": "Wolseley 1500",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-16-60",
-      "name": "Wolseley 16/60",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-18-22-series-2200",
-      "name": "Wolseley (18-22 series / 2200)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-18-85",
-      "name": "Wolseley 18/85",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-21-60",
-      "name": "Wolseley 21/60",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-6-110",
-      "name": "Wolseley 6/110",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "wolseley-motors",
-      "lineSlug": "wolseley-six",
-      "name": "Wolseley Six",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "wolseley-motors",
@@ -247200,15 +249192,42 @@
     {
       "makeSlug": "wuling-motors",
       "lineSlug": "wuling-binguo-plus",
-      "name": "Wuling Binguo Plus",
+      "name": "Binguo Plus",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Binguo Plus",
+          "code": null,
+          "from": 2024,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Wuling_Bingo_Plus"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "wuling-motors",
@@ -247239,28 +249258,82 @@
     {
       "makeSlug": "wuling-motors",
       "lineSlug": "wuling-hongguang-s1-confero",
-      "name": "Wuling Hongguang S1 / Confero",
+      "name": "Hongguang S1 / Confero",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Hongguang S1 / Confero",
+          "code": null,
+          "from": 2015,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Wuling_Hongguang_S1"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "wuling-motors",
       "lineSlug": "wuling-starlight-560-eksion",
-      "name": "Wuling Starlight 560 (Eksion)",
+      "name": "Starlight 560 / Eksion",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Starlight 560 / Eksion",
+          "code": null,
+          "from": 2025,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Wuling_Starlight_560"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "wuling-motors",

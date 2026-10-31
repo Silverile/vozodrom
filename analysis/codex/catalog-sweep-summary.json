@@ -13,19 +13,19 @@
     "generationsWithFacelifts": 790
   },
   "countsAfter": {
-    "lines": 4809,
-    "cards": 4648,
-    "linesWithoutCard": 161,
-    "generations": 6696,
-    "generationsWithEngines": 2526,
+    "lines": 4785,
+    "cards": 4707,
+    "linesWithoutCard": 78,
+    "generations": 6786,
+    "generationsWithEngines": 2540,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
-    "generationsWithFacelifts": 836
+    "generationsWithFacelifts": 837
   },
   "engineRowsBefore": 4471,
-  "engineRowsAfter": 9758,
-  "changedPublicCards": 814,
+  "engineRowsAfter": 9826,
+  "changedPublicCards": 873,
   "wave1SecondSource": {
     "visited": 528,
     "filled": 274,
@@ -68,14 +68,28 @@
     },
     {
       "wave": 3,
-      "lines": 3720,
-      "missingCards": 161,
-      "generations": 4559,
-      "emptyEngineGenerations": 3478,
+      "lines": 3696,
+      "missingCards": 78,
+      "generations": 4649,
+      "emptyEngineGenerations": 3554,
       "partialPowerGenerations": 410
     }
   ],
-  "structuralSignalLines": 83,
-  "closingValidation": "analysis/codex/second-source-engines/final-validation-9-10.json",
-  "scopeNote": "Engine queues visited, not all model histories certified. Original wave-2 header lines=615 described the whole fleet wave; its 651 queued items belonged to 450 distinct lines."
+  "structuralSignalLines": 84,
+  "closingValidation": "analysis/codex/wave-3-missing-cards/validation.json",
+  "scopeNote": "Engine queues visited, not all model histories certified. Original wave-2 header lines=615 described the whole fleet wave; its 651 queued items belonged to 450 distinct lines.",
+  "wave3MissingCards": {
+    "phase": "missing-card batch 1 complete; remaining missing models before structural signals",
+    "queueAtStart": 161,
+    "createdCards": 59,
+    "addedGenerations": 90,
+    "addedEngineRows": 68,
+    "addedFaceliftStages": 1,
+    "duplicateProposalsRemoved": 22,
+    "nonModelProposalsRemoved": 2,
+    "remainingMissingCards": 78,
+    "report": "analysis/codex/wave-3-missing-cards/report.json",
+    "validation": "analysis/codex/wave-3-missing-cards/validation.json",
+    "structurePassStarted": false
+  }
 }
