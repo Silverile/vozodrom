@@ -136,6 +136,11 @@ export interface CardGeneration {
   trunkL: number | null;
   markets: string[];
   trims: CardTrim[];
+  /**
+   * Which look the generation's front drawing shows: 0 = as launched (the default), n = the n-th
+   * facelift in year order. The drawing goes on that look's card; the others keep a placeholder.
+   */
+  drawingStage?: number;
   /** trim levels such as Active, Ambition, Style, RS; missing on most generations so far */
   equipmentLines?: CardEquipmentLine[];
   photo: CardPhoto | null;
