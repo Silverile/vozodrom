@@ -1,0 +1,15 @@
+{
+  "policy": "No raw vehicle identifiers; synthetic model badges only. Corrections require another raw rebuild and are not included in this batch.",
+  "cases": [
+    {"make":"bmw","syntheticModel":"320D","year":2015,"candidateLines":["320"],"matchedLine":null,"issue":"Longest historic badge match wins before the existing modern series-3 normalization. Date rejection removes the false historic assignment but does not reroute it to rada-3."}
+  ],
+  "largestFleetChanges": [
+    {"id":"skoda/130-135-136","before":50526,"after":24544},
+    {"id":"bmw/320","before":22258,"after":null},
+    {"id":"suzuki/sx4","before":25522,"after":16107},
+    {"id":"skoda/105-120-125","before":117101,"after":111242},
+    {"id":"skoda/1203","before":12696,"after":8092},
+    {"id":"volkswagen/multivan","before":23135,"after":19481}
+  ],
+  "interpretation": "Date-based exclusions remain in make totals. Model-line totals should not be read as complete badge coverage; individual excluded records were not manually reviewed."
+}
