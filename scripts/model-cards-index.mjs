@@ -37,6 +37,7 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         from: g.from ?? null,
         to: g.to ?? null,
         current: g.productionStatus === "current",
+        ...(g.drawingStage != null ? { drawingStage: g.drawingStage } : {}),
         ...(g.dateBasis ? { dateBasis: g.dateBasis, dateNote: g.specificationScope?.noteCs ?? null } : {}),
         // a facelift may carry its own name, end year, chassis code and photo (shown as its own stage)
         facelifts: (g.facelift ?? []).map((f) => ({

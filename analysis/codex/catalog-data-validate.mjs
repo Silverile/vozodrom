@@ -12,7 +12,9 @@ const periods=read('src/data/catalog/brand-production-periods.json');
 for(const make of read('src/data/makes-index.json').filter(m=>m.defunct&&m.sections.includes('auto')))assert(periods[make.slug]?.periodSources.length,`Unreviewed ${make.slug}`);
 const beforeCards=head('src/data/catalog/model-cards/skoda.json');
 const cards=read('src/data/catalog/model-cards/skoda.json');
-assert.deepEqual(cards.filter(c=>c.lineSlug!=='kodiaq'),beforeCards.filter(c=>c.lineSlug!=='kodiaq'),'Preserve all other Skoda cards');
+const batch=fs.existsSync('analysis/codex/popular-batch1-review.json')?new Set(['octavia','fabia','superb','105-120-125','felicia']):new Set();
+if(batch.size)execFileSync(process.execPath,['analysis/codex/popular-batch1-validate.mjs'],{stdio:'inherit'});
+assert.deepEqual(cards.filter(c=>c.lineSlug!=='kodiaq'&&!batch.has(c.lineSlug)),beforeCards.filter(c=>c.lineSlug!=='kodiaq'&&!batch.has(c.lineSlug)),'Preserve all other Skoda cards');
 const card=cards.find(c=>c.lineSlug==='kodiaq');
 assert.equal(card.generations.length,2);
 assert.deepEqual(card.generations.map(g=>[g.from,g.to]),[[2016,2024],[2024,null]]);
@@ -23,7 +25,7 @@ for(const [i,g] of beforeCards.find(c=>c.lineSlug==='kodiaq').generations.entrie
   assert(found,'Existing researched version lost');assert.deepEqual(noObservation(found),noObservation(old),'Existing specifications changed');
 }
 const index=read('src/data/model-cards-index.json');const oldIndex=head('src/data/model-cards-index.json');
-for(const [make,lines] of Object.entries(oldIndex))for(const [slug,c] of Object.entries(lines))if(make!=='skoda'||slug!=='kodiaq')assert.deepEqual(index[make][slug],c,`Unrelated public card changed: ${make}/${slug}`);
+for(const [make,lines] of Object.entries(oldIndex))for(const [slug,c] of Object.entries(lines))if(make!=='skoda'||(slug!=='kodiaq'&&!batch.has(slug)))assert.deepEqual(index[make][slug],c,`Unrelated public card changed: ${make}/${slug}`);
 for(const [gi,g] of card.generations.entries()){
   assert(g.engines.every(e=>e.powerKwMin!=null&&e.powerKwMax!=null&&e.powerKwMin<=e.powerKwMax));
   assert.deepEqual(index.skoda.kodiaq.generations[gi].equipmentLines,g.equipmentLines);
