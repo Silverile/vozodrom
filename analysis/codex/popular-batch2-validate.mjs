@@ -6,6 +6,8 @@ const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const r=read('analysis/codex/popular-batch2-review.json');
 const expected=['volkswagen/golf','volkswagen/passat','ford/focus','hyundai/i30','volkswagen/transporter','renault/megane','skoda/rapid','skoda/karoq','volkswagen/touran','ford/transit','hyundai/tucson','volkswagen/caddy','ford/mondeo','kia/ceed','skoda/scala'];
 const allowed=new Set(expected);assert.deepEqual(r.targets.map(t=>t.join('/')),expected);
+const later=fs.existsSync('analysis/codex/popular-batch3-review.json')?new Set(read('analysis/codex/popular-batch3-review.json').targets.map(t=>t.join('/'))):new Set();
+if(later.size)execFileSync(process.execPath,['analysis/codex/popular-batch3-validate.mjs'],{stdio:'inherit'});
 const head=p=>execFileSync('git',['show',`${r.baselineCommit}:${p}`],{encoding:'utf8',maxBuffer:64*1024*1024});
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 function blocks(raw){let q=false,esc=false,depth=0,start;const out=new Map();for(let i=0;i<raw.length;i++){const c=raw[i];if(q){if(esc)esc=false;else if(c==='\\')esc=true;else if(c==='"')q=false;continue;}if(c==='"'){q=true;continue;}if(c==='{'){if(depth++===0)start=i;}else if(c==='}'&&--depth===0){const text=raw.slice(start,i+1),value=JSON.parse(text);out.set(`${value.makeSlug}/${value.lineSlug}`,{text,value});}}return out;}
@@ -21,6 +23,7 @@ for(const path of r.sourceFiles){
  const original=blocks(head(path)),current=blocks(fs.readFileSync(path,'utf8'));
  assert.equal(current.size,original.size,`Source card inserted/removed in ${path}`);
  for(const [key,b] of original){const now=current.get(key);assert(now);
+  if(later.has(key))continue; // Independently validated against the next fixed baseline above.
   if(!allowed.has(key)){assert.equal(now.text,b.text,`Unrelated source bytes changed: ${key}`);continue;}
   const old=b.value,c=now.value;assert.equal(hash(c),r.resultHashes[key]);preserve(old,c,'',key);
   assert.deepEqual(c.generations.map(g=>[g.name,g.code,g.from,g.to]),old.generations.map(g=>[g.name,g.code,g.from,g.to]),`Generation indexes/date identities changed: ${key}`);
@@ -52,7 +55,7 @@ for(const path of r.sourceFiles){
   }
  }
 }
-for(const [make,lines] of Object.entries(oldIndex))for(const [slug,c] of Object.entries(lines))if(!allowed.has(`${make}/${slug}`))assert.equal(JSON.stringify(index[make][slug]),JSON.stringify(c),`Unrelated indexed card changed: ${make}/${slug}`);
+for(const [make,lines] of Object.entries(oldIndex))for(const [slug,c] of Object.entries(lines))if(!allowed.has(`${make}/${slug}`)&&!later.has(`${make}/${slug}`))assert.equal(JSON.stringify(index[make][slug]),JSON.stringify(c),`Unrelated indexed card changed: ${make}/${slug}`);
 // Existing appearance identities remain intact even for deliberately unusual source layouts.
 assert.equal(index.hyundai.tucson.generations[0].code,'NX5');assert.equal(index.hyundai.tucson.generations[0].trims.length,0);
 assert.equal(index.hyundai.tucson.generations[1].code,'NX4');

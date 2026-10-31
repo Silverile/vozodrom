@@ -14,6 +14,7 @@ const beforeCards=head('src/data/catalog/model-cards/skoda.json');
 const cards=read('src/data/catalog/model-cards/skoda.json');
 const batch=fs.existsSync('analysis/codex/popular-batch1-review.json')?new Set(['octavia','fabia','superb','105-120-125','felicia']):new Set();
 const batch2=fs.existsSync('analysis/codex/popular-batch2-review.json')?new Set(read('analysis/codex/popular-batch2-review.json').targets.map(t=>t.join('/'))):new Set();
+if(fs.existsSync('analysis/codex/popular-batch3-review.json'))for(const t of read('analysis/codex/popular-batch3-review.json').targets)batch2.add(t.join('/'));
 if(batch.size)execFileSync(process.execPath,['analysis/codex/popular-batch1-validate.mjs'],{stdio:'inherit'});
 assert.deepEqual(cards.filter(c=>c.lineSlug!=='kodiaq'&&!batch.has(c.lineSlug)&&!batch2.has(`skoda/${c.lineSlug}`)),beforeCards.filter(c=>c.lineSlug!=='kodiaq'&&!batch.has(c.lineSlug)&&!batch2.has(`skoda/${c.lineSlug}`)),'Preserve all other Skoda cards');
 const card=cards.find(c=>c.lineSlug==='kodiaq');

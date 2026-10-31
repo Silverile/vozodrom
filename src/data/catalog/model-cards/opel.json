@@ -2778,7 +2778,108 @@
           "hatchback",
           "kombi"
         ],
-        "engines": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1199,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 96,
+            "powerKwMax": 100,
+            "variant": "1,2 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              96,
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1498,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 96,
+            "powerKwMax": 96,
+            "variant": "1,5 nafta; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              96
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "variant": "1,6 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf"
+              ]
+            }
+          },
+          {
+            "fuel": "petrol-hev",
+            "displacementCc": 1199,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 107,
+            "powerKwMax": 107,
+            "variant": "1,2 benzin HEV; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              107
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            },
+            "powerBasis": "system"
+          }
+        ],
         "engineCoverage": "unknown",
         "drivetrains": null,
         "transmissions": null,
@@ -2899,8 +3000,31 @@
               "noteCs": "Ceník platný od 10.10.2026, datum vydání 10/2026. Nejde o odhad výrobního ani modelového roku. U hybridu je v engine.powerKw a torqueNm výslovně výkon/moment spalovacího motoru, nikoli systémový součet. Hatchback, kód G0. Převzat přímo objem 1498 cm³ z tohoto CZ ceníku, nikoli jiná hodnota příbuzného motoru. WLTP 4,9–5,0 l/100 km."
             },
             "sources": [
-              "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf"
-            ]
+              "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "equipmentLineIds": [
+              "batch3-5-edition",
+              "batch3-5-gs"
+            ],
+            "fieldSources": {
+              "equipmentLineIds": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            }
           },
           {
             "name": "1.6 TURBO Plug-in Hybrid 143 kW systém eDCT7",
@@ -2987,6 +3111,220 @@
             "sources": [
               "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf"
             ]
+          },
+          {
+            "id": "popular-batch3-opel-astra-5-4",
+            "name": "1.2 Turbo 96 kW – 6st. manuál (2025-09-07)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1199,
+              "cylinders": 3,
+              "powerKw": 96
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": null,
+            "specificationScope": {
+              "market": "CZ",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.fuel": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.powerKw": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.type": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "equipmentLineIds": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            },
+            "equipmentLineIds": [
+              "batch3-5-edition",
+              "batch3-5-gs"
+            ]
+          },
+          {
+            "id": "popular-batch3-opel-astra-5-5",
+            "name": "1.2 Turbo 96 kW – 8st. automat (2025-09-07)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1199,
+              "cylinders": 3,
+              "powerKw": 96
+            },
+            "transmission": {
+              "type": "automatic",
+              "gears": 8
+            },
+            "drive": null,
+            "specificationScope": {
+              "market": "CZ",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.fuel": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.powerKw": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.type": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "equipmentLineIds": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            },
+            "equipmentLineIds": [
+              "batch3-5-edition",
+              "batch3-5-gs"
+            ]
+          },
+          {
+            "id": "popular-batch3-opel-astra-5-6",
+            "name": "Hybrid 1.2 Turbo 107 kW – 6st. dvouspojkový automat (2025-09-07)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol-hev",
+              "displacementCc": 1199,
+              "cylinders": 3,
+              "powerKw": 107,
+              "powerBasis": "system"
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 6
+            },
+            "drive": null,
+            "specificationScope": {
+              "market": "CZ",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.fuel": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.powerKw": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.type": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "transmission.gears": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.cylinders": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "engine.powerBasis": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ],
+              "equipmentLineIds": [
+                "https://www.opel24.cz/download/cenik-astra.pdf"
+              ]
+            },
+            "equipmentLineIds": [
+              "batch3-5-edition",
+              "batch3-5-gs"
+            ]
           }
         ],
         "sources": [
@@ -2994,7 +3332,61 @@
           "https://www.opel.cz/content/dam/opel/czech_republic/brochure-library/pricelists/2026/Q2/CZ_Astra_HB.pdf",
           "https://en.wikipedia.org/w/index.php?title=Opel_Astra&oldid=1381589027"
         ],
-        "fieldSources": {}
+        "fieldSources": {},
+        "equipmentLines": [
+          {
+            "id": "batch3-5-edition",
+            "name": "Edition",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ]
+          },
+          {
+            "id": "batch3-5-gs",
+            "name": "GS",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2025-09-07",
+                "observedAt": "2026-10-31",
+                "stage": "original",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.opel24.cz/download/cenik-astra.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.opel24.cz/download/cenik-astra.pdf"
+            ]
+          }
+        ]
       }
     ],
     "sources": [

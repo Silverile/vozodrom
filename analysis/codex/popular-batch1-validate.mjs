@@ -10,6 +10,7 @@ const original=JSON.parse(head(file)),cards=read(file),index=read('src/data/mode
 const allowed=new Set(['octavia','fabia','superb','105-120-125','felicia','kodiaq']);
 // Later batches validate their own target changes from a fixed commit baseline.
 const batch2=fs.existsSync('analysis/codex/popular-batch2-review.json')?new Set(read('analysis/codex/popular-batch2-review.json').targets.map(t=>t.join('/'))):new Set();
+if(fs.existsSync('analysis/codex/popular-batch3-review.json'))for(const t of read('analysis/codex/popular-batch3-review.json').targets)batch2.add(t.join('/'));
 if(batch2.size)execFileSync(process.execPath,['analysis/codex/popular-batch2-validate.mjs'],{stdio:'inherit'});
 function preserve(old,now,path,slug){
  if(old===null)return;
