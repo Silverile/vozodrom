@@ -145,6 +145,55 @@ LEADS.update({
  'peugeot/405':{0:['Peugeot_405']},
  'jeep/cherokee':{0:['Jeep_Cherokee_(SJ)'],2:['Jeep_Cherokee_(KJ)'],3:['Jeep_Cherokee_(KK)']},
 })
+LEADS.update({
+ 'jeep/cherokee':{4:['Jeep_Cherokee_(KL)'],5:['Jeep_Cherokee_(KM)','Jeep_Cherokee']},
+ 'nissan/almera':{0:['Nissan_Almera'],1:['Nissan_Almera']},
+ 'moskvic/408':{0:['Moskwitsch-408']},
+ 'audi/80':{0:['Audi_80_B1'],1:['Audi_80_B2'],2:['Audi_80_B3']},
+ 'mercedes-benz/glb':{1:['Mercedes-Benz_GLB']},
+ 'mazda/626':{i:['Mazda_626'] for i in range(6)},
+ 'fiat/freemont':{0:['Fiat_Freemont']},
+ 'fiat/600':{0:['Fiat_600'],1:['Fiat_600_(2023)']},
+ 'land-rover/defender':{i:['Land_Rover_Defender'] for i in range(4)},
+ 'kia/carens':{i:['Kia_Carens'] for i in range(3)},
+ 'lada/niva':{0:['Lada_Niva']},
+ 'jeep/compass':{i:['Jeep_Compass'] for i in range(3)},
+ 'mitsubishi/space-star':{0:['Mitsubishi_Space_Star_(1998)'],1:['Mitsubishi_Space_Star_(2012)']},
+ 'nissan/note':{0:['Nissan_Note'],1:['Nissan_Note']},
+ 'nissan/navara':{0:['Nissan_Navara'],1:['Nissan_Navara'],2:['Nissan_Navara']},
+ 'jeep/wrangler':{i:['Jeep_Wrangler'] for i in range(4)},
+ 'peugeot/807':{0:['Peugeot_807']},
+ 'bmw/x7':{0:['BMW_G07']},
+ 'bmw/i3':{0:['BMW_i3']},
+ 'fiat/croma':{0:['Fiat_Croma_(Typ_154)']},
+ 'land-rover/range-rover-sport':{1:['Range_Rover_Sport']},
+ 'chevrolet/cruze':{0:['Chevrolet_Cruze'],1:['Chevrolet_Cruze']},
+ 'hyundai/elantra':{0:['Hyundai_Elantra']},
+ 'alfa-romeo/156':{0:['Alfa_Romeo_156']},
+ 'mercedes-benz/slk':{0:['Mercedes-Benz_Baureihe_170'],1:['Mercedes-Benz_Baureihe_171'],2:['Mercedes-Benz_Baureihe_172']},
+ 'bmw/z4':{0:['BMW_E85']},
+ 'land-rover/range-rover-evoque':{i:['Range_Rover_Evoque'] for i in range(3)},
+ 'opel/grandland':{0:['Opel_Grandland'],1:['Opel_Grandland']},
+ 'fiat/fiorino':{i:['Fiat_Fiorino'] for i in range(4)},
+ 'nissan/primera':{i:['Nissan_Primera'] for i in range(3)},
+ 'audi/tt':{2:['Audi_TT_FV']},
+ 'mg/hs':{0:['MG_HS'],1:['MG_HS']},
+ 'bmw/rada-6':{0:['BMW_E24']},
+ 'land-rover/range-rover':{0:['Range_Rover_Classic'],1:['Range_Rover_P38A'],4:['Range_Rover_L460']},
+ 'cupra/leon':{0:['Cupra_Leon']},
+ 'citroen/c4-cactus':{0:['Citroën_C4_Cactus']},
+ 'citroen/c8':{0:['Citroën_C8']},
+ 'bmw/rada-2':{0:['BMW_F22']},
+ 'mercedes-benz/trida-g':{2:['Mercedes-Benz_Baureihe_463'],4:['Mercedes-Benz_Baureihe_465']},
+ 'moskvic/2140':{0:['Moskwitsch-2140']},
+ 'mercedes-benz/cls':{1:['Mercedes-Benz_Baureihe_218'],2:['Mercedes-Benz_Baureihe_257']},
+ 'mercedes-benz/glk':{0:['Mercedes-Benz_Baureihe_204_(GLK)']},
+ 'citroen/c2':{0:['Citroën_C2']},
+ 'peugeot/309':{0:['Peugeot_309']},
+ 'mercedes-benz/clk':{0:['Mercedes-Benz_Baureihe_208']},
+ 'peugeot/301':{0:['Peugeot_301_(1932–1936)'],1:['Peugeot_301_(2012)']},
+ 'mercedes-benz/sl':{0:['Mercedes-Benz_W_113'],1:['Mercedes-Benz_Baureihe_107'],2:['Mercedes-Benz_Baureihe_129'],3:['Mercedes-Benz_Baureihe_230'],4:['Mercedes-Benz_Baureihe_231']},
+})
 
 def bmw_hybrid_rows(tree,source,card,gi):
     """Explicit system outputs only; never add ICE and electric power together."""
@@ -297,6 +346,10 @@ def urls(item,card):
     key=item['make']+'/'+item['line'];gi=item['generationIndex']
     leads=LEADS.get(key,{}).get(gi,[])
     out=[('https://en.wikipedia.org/wiki/'+x[3:] if x.startswith('en:') else 'https://de.wikipedia.org/wiki/'+x) for x in leads]
+    if item['make']=='mercedes-benz':
+        # German roadster/GLK articles use R_170/X_204 rather than Baureihe_170.
+        chassis=re.findall(r'\b([WRCAXVH])(\d{3})\b',card['generations'][gi].get('code') or '')
+        out=[f'https://de.wikipedia.org/wiki/Mercedes-Benz_{letter}_{number}' for letter,number in chassis]+out
     if key=='honda/civic':out.insert(0,f'https://de.wikipedia.org/wiki/Honda_Civic_{gi+1}._Generation')
     if key in FAMILIES:out.insert(1,'https://de.wikipedia.org/wiki/'+FAMILIES[key])
     # Family articles only contribute rows when the parser proves generation scope.
