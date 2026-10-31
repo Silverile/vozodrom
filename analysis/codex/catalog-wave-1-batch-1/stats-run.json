@@ -1,0 +1,86 @@
+{
+  "state": "complete",
+  "inputs": {
+    "src/data/makes-index.json": "c40ac271041b151f7ce2667f7ee33b6f67d71d9dd40e81a3bf7fbbcc582a6a8f",
+    "src/data/catalog/model-lines-auto.json": "de06f48f7cb16d372a7ec49b8b09447fdb58a4591a31b221e3d937e7a7f18a7b",
+    "src/data/model-cards-index.json": "6144a237d0a37df486e1701ce39bd8a11ec0d119d64a17c91fb2ca5718650068",
+    "scripts/stats/match.py": "f304c65e20d68720f99641c303f148c6a413d696ac5f3d6a8edbffec45b0fb14"
+  },
+  "rawDays": 1094,
+  "jobs": {
+    "istp": {
+      "args": [
+        "scripts/stats/istp-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--out-dir",
+        "analysis/codex/catalog-wave-1-batch-1/staged/out",
+        "--workers",
+        "16",
+        "--skip-unmatched-output"
+      ],
+      "pid": 4528,
+      "state": "complete",
+      "exitCode": 0
+    },
+    "rsv": {
+      "args": [
+        "scripts/stats/rsv-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--out-dir",
+        "analysis/codex/catalog-wave-1-batch-1/staged/out"
+      ],
+      "pid": 34320,
+      "state": "complete",
+      "exitCode": 0
+    },
+    "build": {
+      "args": [
+        "scripts/stats/build-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--aggregates-dir",
+        "analysis/codex/catalog-wave-1-batch-1/staged/out",
+        "--out-dir",
+        "analysis/codex/catalog-wave-1-batch-1/staged/stats"
+      ],
+      "pid": 11476,
+      "state": "complete",
+      "exitCode": 0
+    }
+  },
+  "promoted": [
+    {
+      "make": "peugeot",
+      "source": "src/data/stats/peugeot.json",
+      "sha256": "87273e08cc303d87a8a43a5d4556f19249e3aa1e2a0c610afccd10dd2f1bbe18",
+      "meta": {
+        "stk": {
+          "from": "2023-10-12",
+          "to": "2026-10-11",
+          "days": 1094
+        },
+        "register": {
+          "file": "vypisvozidel.csv",
+          "built": "2026-10-31"
+        },
+        "minN": 30
+      }
+    },
+    {
+      "make": "dacia",
+      "source": "src/data/stats/dacia.json",
+      "sha256": "f99b3653c1ae6a9ae318d91a43012f284f9351cc3f8b3daa1616a9bd63aee184",
+      "meta": {
+        "stk": {
+          "from": "2023-10-12",
+          "to": "2026-10-11",
+          "days": 1094
+        },
+        "register": {
+          "file": "vypisvozidel.csv",
+          "built": "2026-10-31"
+        },
+        "minN": 30
+      }
+    }
+  ]
+}
