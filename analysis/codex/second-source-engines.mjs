@@ -19,6 +19,7 @@ function problem(g,i,e){
 }
 function covered(rows,e){return rows.some(r=>r.variant?.toLowerCase()===e.variant.toLowerCase()&&powerValues(r).includes(e.powerKwMin)||r.fuel===e.fuel&&powerValues(r).includes(e.powerKwMin)&&(e.fuel==='electric'||r.displacementCc&&r.displacementCc===e.displacementCc||r.displacementLitresNominal&&e.displacementLitresNominal&&Math.abs(r.displacementLitresNominal-e.displacementLitresNominal)<0.051));}
 if(process.argv.includes('--apply')){
+ const repairChanged=new Set();
  if(process.argv.includes('--repair')){
   const previous=read(root+`/batch-${batchNumber}.json`),baselines=new Map();
   for(const r of previous.results.filter(r=>r.enginesAdded)){
@@ -27,9 +28,10 @@ if(process.argv.includes('--apply')){
    const before=baselines.get(p).find(c=>c.makeSlug===r.make&&c.lineSlug===r.line),oldg=before.generations[r.index];
    for(const f of ['engines','engineCoverage','sources'])if(Object.hasOwn(oldg,f))g[f]=structuredClone(oldg[f]);else delete g[f];
    card.sources=structuredClone(before.sources);
+   repairChanged.add(p);
   }
  }
- const results=[],changed=new Set(),evidence=[];
+ const results=[],changed=new Set(repairChanged),evidence=[];
  for(const r of candidates.generations){
   const {p,card}=locations.get(`${r.make}/${r.line}`),g=card.generations[r.generationIndex],beforeHash=hash(g),added=[],excluded=[];
   assert(!(g.engines??[]).length,'Queued generation acquired engines concurrently');
@@ -46,7 +48,7 @@ if(process.argv.includes('--apply')){
   results.push({make:r.make,line:r.line,index:r.generationIndex,name:g.name,code:g.code,from:g.from,to:g.to,sourceFile:p,beforeHash,afterHash:hash(g),enginesAdded:added.length,status:added.length?'engines-added':'no-source',reason:added.length?null:r.reason??'All candidate rows rejected by source/naming checks.',excluded,sources:r.attempts});
  }
  const summary={generationsVisited:results.length,generationsFilled:results.filter(r=>r.enginesAdded).length,enginesAdded:results.reduce((n,r)=>n+r.enginesAdded,0),linesTouched:new Set(results.filter(r=>r.enginesAdded).map(r=>r.make+'/'+r.line)).size,generationsAdded:0,generationsRemoved:0,faceliftsAdded:0,statsRebuildRequired:false};
- for(const p of changed)write(p,sources.get(p));if(compactPublic)write(root+`/evidence-${batchNumber}.json`,{baselineRevision:baseline,rows:evidence});write(root+`/batch-${batchNumber}.json`,{baselineRevision:baseline,...(compactPublic?{evidenceFile:root+`/evidence-${batchNumber}.json`}:{}),summary,results});
+ for(const p of changed)write(p,sources.get(p));if(compactPublic)write(root+`/evidence-${batchNumber}.json`,{baselineRevision:baseline,rows:evidence});write(root+`/batch-${batchNumber}.json`,{baselineRevision:baseline,wave:candidates.wave??1,queueSource:candidates.queueSource??root+'/queue.json',...(compactPublic?{evidenceFile:root+`/evidence-${batchNumber}.json`}:{}),summary,results});
  cp.execFileSync('node',['scripts/model-cards-index.mjs'],{stdio:'inherit'});
  console.log(JSON.stringify(summary));
 }else{

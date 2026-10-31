@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-10-31"
+    }
+  },
+  "rawAggregateSha256": {
+    "istp-agg.json": "cf54109627d1a0aba242c7da4d01f01caadb321fb0fea2f5dcc9e872f02bfb33",
+    "rsv-agg.json": "548d39aea9cbdebc11621f63bb01e1316d7e3d73ab628559acb8246ccef0a51e"
+  },
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPreviouslyPopulatedLineLostAllGenerationCohorts": true,
+  "reports": [
+    {
+      "make": "alfa-romeo",
+      "makeFleet": 19749,
+      "makeInspections": 37051,
+      "fleetCohorts": 22,
+      "inspectionCohorts": 20,
+      "lines": [
+        {
+          "id": "alfa-romeo/mito",
+          "fleetBefore": 692,
+          "fleetAfter": 692,
+          "inspectionsBefore": 1866,
+          "inspectionsAfter": 1863,
+          "generations": [
+            {
+              "index": 0,
+              "from": 2008,
+              "to": 2018,
+              "fleet": 692,
+              "inspections": 1862
+            }
+          ]
+        },
+        {
+          "id": "alfa-romeo/166",
+          "fleetBefore": 564,
+          "fleetAfter": 564,
+          "inspectionsBefore": 799,
+          "inspectionsAfter": 799,
+          "generations": [
+            {
+              "index": 0,
+              "from": 1998,
+              "to": 2007,
+              "fleet": 564,
+              "inspections": 799
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputSha256": {
+    "src/data/stats/alfa-romeo.json": "619efda0c0066fade1e3621939752017758088775bc1369e922a147f9cace2c2",
+    "src/data/stats/index.json": "ca1f80c1e34ea6dd61ae82fc7208c9d0a7f1c4b0f70f9d78a283770b7e17d218",
+    "src/data/listing-stats.json": "8d22c9c9414f0bce3aabd1015808712da70847811aeb12ef41fd0101d7480fee"
+  }
+}

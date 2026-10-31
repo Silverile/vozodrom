@@ -273,6 +273,12 @@ def short_name(value):
 def table_rows(table,context,source,number):
     table=t.lxml.html.fromstring(t.lxml.html.tostring(table,encoding='unicode'))
     for el in table.xpath('.//style|.//script|.//sup|.//table'):el.drop_tree()
+    # A component row is not a vehicle's system output. Mixed combustion/electric
+    # tables need an explicit, separately reviewed hybrid extractor (as for G45).
+    text=t.fold(table.text_content()+' '+context)
+    if t.foreign_market(context) or re.search(r'\bBRASILIEN\b|\bARGENTINIEN\b',t.fold(context)):return []
+    if re.search(r'HYBRID|SYSTEMLEISTUNG|SYSTEM OUTPUT|COMBINED POWER|\bPHEV\b|\bHEV\b|\bMHEV\b',text):return []
+    if 'ELEKTROMOTOR' in text and re.search(r'OTTOMOTOR|DIESELMOTOR|VERBRENNUNGSMOTOR',text):return []
     try:df=t.pd.read_html(io.StringIO(t.lxml.html.tostring(table,encoding='unicode')),flavor='lxml')[0].fillna('')
     except Exception:return []
     if df.shape[1]<2 or df.shape[0]>250:return []
@@ -282,6 +288,8 @@ def table_rows(table,context,source,number):
     pi=next((i for i,l in enumerate(labels) if re.match(r'^(?:MAX |MAXIMALE |NENN)?LEISTUNG(?: |$)|^SYSTEMLEISTUNG',l)),None)
     result=[]
     def add(variant,p,cc,kind,years,header,cch,notes=''):
+        ordered=re.search(r'\b((?:18|19|20)\d{2})\s*[–−-]\s*((?:18|19|20)\d{2})\b',years)
+        if ordered and int(ordered[1])>int(ordered[2]):return
         if t.foreign_market(' '.join([variant,p,notes])):return
         if re.search(r'48V|HYBRID|\bHEV\b|\bPHEV\b|\bMHEV\b|ALPINA|SCHNITZER|\bCRX\b|\bA 32K\b|\bA 38\b',variant+' '+kind,re.I):return
         variant=short_name(variant)
@@ -298,7 +306,7 @@ def table_rows(table,context,source,number):
         fi=[i for i,l in enumerate(labels) if l in ('MOTOR','MOTORTYP','MOTORART','KRAFTSTOFF','ANTRIEBSART','BAUART')]
         yi=next((i for i,l in enumerate(labels) if 'BAUZEIT' in l or 'PRODUKTION' in l),None)
         vi=next((i for i,r in enumerate(rows[:5]) if (not r[0] or re.match(r'KENNGRO|MODELL|MOTORISIERUNG',labels[i])) and sum(bool(x) for x in r)>1),None)
-        ni=[i for i,l in enumerate(labels) if re.search(r'AUSFUHRUNG|MARKT|COUNTRY',l)]
+        ni=[i for i,l in enumerate(labels) if re.search(r'AUSFUHRUNG|MARKT|COUNTRY|REGION',l)]
         for j in range(1,len(cols)):
             v=rows[vi][j] if vi is not None else cols[j]
             if v.isdigit() and str(cols[0]).isdigit() and vi is None or v.startswith('Unnamed'):continue
@@ -318,7 +326,7 @@ def table_rows(table,context,source,number):
     badge=next((i for i,c in enumerate(cols) if t.fold(c) in ('MODELL','MODEL','MODEL NAME')),None)
     if badge is not None:vi=badge
     yi=next((i for i,c in enumerate(cols) if re.search(r'YEARS|PRODUCTION|BAUZEIT',t.fold(c))),None)
-    ni=[i for i,c in enumerate(cols) if re.search(r'NOTES|MARKET|COUNTRY|ANMERKUNG|BEMERKUNG',t.fold(c))]
+    ni=[i for i,c in enumerate(cols) if re.search(r'NOTES|MARKET|COUNTRY|REGION|ANMERKUNG|BEMERKUNG',t.fold(c))]
     # The lowest header tier can mark petrol, but a spanning Diesel row overrides it.
     category=' '.join(re.findall(r'Ottomotoren|Benzinmotoren|Dieselmotoren|Petrol|Diesel', ' '.join(cols), re.I))
     if re.search(r'DIESEL',category,re.I) and re.search(r'OTTO|BENZIN|PETROL',category,re.I):category=''
@@ -389,17 +397,43 @@ def urls(item,card):
         if re.match(r'https://(?:en|de|cs)\.wikipedia\.org/wiki/',u) and u not in out:out.append(u)
     return list(dict.fromkeys(out))[:6]
 
-def research(item):
+def owns_article(tree,card,make,gi):
+    """Reject namespace/unrelated pinned revisions before considering any tables."""
+    title=t.clean(tree.xpath('string(//h1)'))
+    if ':' in title:return False
+    folded=t.fold(title);joined=folded.replace(' ','')
+    names=[card['name']]
+    names+=re.split(r'\s*/\s*',card['generations'][gi].get('name') or '')
+    for name in names:
+        n=t.fold(name)
+        if len(n)>=2 and (re.search(r'(?<![A-Z0-9])'+re.escape(n)+r'(?![A-Z0-9])',folded) or len(n.replace(' ',''))>=3 and n.replace(' ','') in joined):return True
+    if make in ('bmw','mercedes-benz'):
+        brand='BMW' if make=='bmw' else 'MERCEDES BENZ'
+        codes=set(re.findall(r'\b[A-Z]+\d+[A-Z0-9]*\b',t.fold(card['generations'][gi].get('code') or '')))
+        if folded.startswith(brand) and codes&t.token(title):return True
+        if make=='mercedes-benz' and folded.startswith(brand):
+            series=re.search(r'\b(?:BAUREIHE|[WRCAVXH])\s*(\d{3})\b',folded)
+            if series and re.search(r'\b[WRCAVXH]'+series[1]+r'\b',card['generations'][gi].get('code') or ''):return True
+        # Translated series/class titles: Czech Rada/Trida vs German/English.
+        model=re.sub(r'^(?:RADA|TRIDA)\s+','',t.fold(card['name']))
+        if folded.startswith(brand) and model and re.search(r'(?<![A-Z0-9])'+re.escape(model)+r'(?![A-Z0-9])',folded):return True
+    return False
+
+def research(item,candidate_urls=None,phase=None):
     make,line,gi=item['make'],item['line'],item['generationIndex']
     card=INDEX[make][line];g=card['generations'][gi]
     result={**item,'attempts':[],'engines':[],'status':'no-source'}
     if not g.get('from'):
         result['reason']='Generation is undated/unidentified; no engine attribution guessed.';return result
-    for url in urls(item,card):
+    for url in (urls(item,card) if candidate_urls is None else candidate_urls):
         tree,canonical,error=t.fetch(url)
         attempt={'url':url,'canonical':canonical,'error':error}
         result['attempts'].append(attempt)
+        if phase:attempt['phase']=phase
         if tree is None:continue
+        if not owns_article(tree,card,make,gi):
+            attempt['articleTitle']=t.clean(tree.xpath('string(//h1)'))
+            attempt['canonical']=None;attempt['error']='Source article ownership not established for requested model (unrelated/namespace revision or unrecognized alias).';continue
         rows=[];seen=set()
         if make=='bmw' and g.get('code') in ('G45','G65'):
             rows=bmw_hybrid_rows(tree,canonical,card,gi)

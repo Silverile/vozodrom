@@ -48,3 +48,25 @@ porsche={'name':'911','generations':[{'code':'993','name':'911 993','from':1994,
 assert [gi for gi,e in r.page_rows(overlap,'https://de.wikipedia.org/wiki/Porsche_993',porsche)]==[0]
 print('PASS: transposed fuel evidence, foreign-market exclusion, embedded headers, spanning fuel categories, kW-only header, litre evidence, sibling exclusion and ambiguous-generation rejection')
 print('PASS: explicit system power without component sum; regional/future revisions excluded; article identity required; overlapping numeric chassis article attributed uniquely')
+component=r.t.lxml.html.fromstring('''<table><tr><th>Modell</th><th>FWD</th></tr>
+<tr><th>Motor</th><td>Ottomotor</td></tr><tr><th>Hubraum</th><td>1490 cm3</td></tr>
+<tr><th>max. Leistung</th><td>67 kW</td></tr><tr><th>Elektromotor</th><td>69 kW</td></tr>
+<tr><th>Systemleistung</th><td>100 kW</td></tr></table>''')
+assert not r.table_rows(component,'Technische Daten','https://de.wikipedia.org/wiki/Lexus_LBX',2)
+owner={'name':'1007','generations':[{'name':'1007','from':2004,'to':2009}]}
+assert not r.owns_article(r.t.lxml.html.fromstring('<h1>Talk:Nacogdoches</h1>'),owner,'peugeot',0)
+assert not r.owns_article(r.t.lxml.html.fromstring('<h1>Peugeot 108</h1>'),owner,'peugeot',0)
+assert r.owns_article(r.t.lxml.html.fromstring('<h1>Peugeot 1007</h1>'),owner,'peugeot',0)
+mercedes={'name':'CL','generations':[{'name':'CL','code':'C216','from':2006,'to':2014}]}
+assert r.owns_article(r.t.lxml.html.fromstring('<h1>Mercedes-Benz Baureihe 216</h1>'),mercedes,'mercedes-benz',0)
+assert not r.owns_article(r.t.lxml.html.fromstring('<h1>Mercedes-Benz Baureihe 215</h1>'),mercedes,'mercedes-benz',0)
+print('PASS: mixed hybrid component tables skipped; unrelated revisions and wrong chassis articles rejected')
+regional=r.t.lxml.html.fromstring('''<table><tr><th>Model</th><th>Displacement</th><th>Power</th><th>Region</th></tr>
+<tr><td>1.8 i-VTEC</td><td>1799 cc</td><td>103 kW</td><td>Europe</td></tr>
+<tr><td>2.4 i-VTEC</td><td>2354 cc</td><td>119 kW</td><td>Japan</td></tr></table>''')
+assert len(r.table_rows(regional,'Petrol engines','https://en.wikipedia.org/wiki/Honda_FR-V',2))==1
+assert not r.table_rows(regional,'Technische Daten Brasilien / Ottomotoren','https://de.wikipedia.org/wiki/Fiat_Idea',2)
+reversed_years=r.t.lxml.html.fromstring('''<table><tr><th>Model</th><th>Displacement</th><th>Power</th><th>Production years</th></tr>
+<tr><td>1.4 Turbo</td><td>1368 cc</td><td>88 kW</td><td>2009-2008</td></tr></table>''')
+assert not r.table_rows(reversed_years,'Petrol engines','https://en.wikipedia.org/wiki/Alfa_Romeo_MiTo',2)
+print('PASS: Region-column and German Brazil-heading exclusions; reversed source years rejected')
