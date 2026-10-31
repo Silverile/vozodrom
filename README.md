@@ -58,6 +58,7 @@ Celé chování jako v produkci ukáže `npm run cf:preview`.
 - [Provoz](docs/provoz.md) — prostředí, tajné hodnoty, nasazení, migrace, doména a DNS, e-maily, WAF, náklady
   a známé limity.
 - [CHECKLIST.md](CHECKLIST.md) — stav spuštění a co zbývá.
+- [Strategie](docs/strategie.md) — jak se stát konkurenceschopnými: pilotní segment, ověření VIN, plán na 180 dní (rusky).
 - [qa/BUGS.md](qa/BUGS.md) — chyby z ručního testování.
 - [legal/](legal/) — návrhy právních dokumentů.
 - [src/data/catalog/SOURCES.md](src/data/catalog/SOURCES.md) — původ a licence katalogových dat.
