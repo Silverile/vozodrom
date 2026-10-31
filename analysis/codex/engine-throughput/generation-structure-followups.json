@@ -1,0 +1,146 @@
+{
+  "researchedOn": "2026-10-31",
+  "generationChangesApplied": 0,
+  "reason": "Engine-only batches stay independently publishable. These gaps need coupled index/statistics migrations; no speculative structure edits.",
+  "reviews": [
+    {
+      "make": "bmw",
+      "line": "rada-3",
+      "issue": "Missing E21; four undated technical-sheet entries duplicate E46/E90/F30/G20. F30 is incorrectly open-ended.",
+      "source": "https://en.wikipedia.org/wiki/BMW_3_Series_(E21)",
+      "additionalSource": "https://en.wikipedia.org/wiki/BMW_3_Series",
+      "verifiedFacts": [
+        "E21 series production: June 1975 to December 1983.",
+        "The main article separates E21/E30/E36/E46/E90/F30/G20.",
+        "G20 facelift revealed in May 2022; launch depends on market."
+      ],
+      "uncertainties": [
+        "Resolve production bounds for all body styles before closing F3x; do not copy a sedan-only end date onto the family.",
+        "Future G50/NA0 announcement is not series production."
+      ],
+      "nextAction": "Coupled migration: insert E21, merge duplicate technical-sheet entries into matching chassis, retain sources/engine rows, remap drawings/holds/stats and document listing-id aliases.",
+      "currentGenerations": [
+        {
+          "index": 0,
+          "name": "Řada 3 (E30)",
+          "code": "E30",
+          "from": 1982,
+          "to": 1994
+        },
+        {
+          "index": 1,
+          "name": "Řada 3 (E36)",
+          "code": "E36",
+          "from": 1990,
+          "to": 2000
+        },
+        {
+          "index": 2,
+          "name": "Řada 3 (E46)",
+          "code": "E46",
+          "from": 1997,
+          "to": 2006
+        },
+        {
+          "index": 3,
+          "name": "Řada 3 (E90)",
+          "code": "E90",
+          "from": 2004,
+          "to": 2013
+        },
+        {
+          "index": 4,
+          "name": "Řada 3 (F30)",
+          "code": "F30",
+          "from": 2011,
+          "to": null
+        },
+        {
+          "index": 5,
+          "name": "Řada 3 (G20)",
+          "code": "G20",
+          "from": 2018,
+          "to": null
+        },
+        {
+          "index": 6,
+          "name": "Řada 3 (G20)",
+          "code": "G20",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 7,
+          "name": "Řada 3 (F30)",
+          "code": "F30",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 8,
+          "name": "E90 Sedan — technický list UK03/2005",
+          "code": "E90",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 9,
+          "name": "E46 Sedan320d — tovární profil2001",
+          "code": "E46",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "verified-gap-migration-deferred"
+    },
+    {
+      "make": "citroen",
+      "line": "jumper",
+      "issue": "One undated, undifferentiated family instead of generation cards.",
+      "source": "https://de.wikipedia.org/wiki/Citro%C3%ABn_Jumper",
+      "verifiedFacts": [
+        "Article explicitly separates Jumper I (230/244), 1994-2006, and Jumper II (250), since 2006.",
+        "230 to 244 is the 2002 update within Jumper I.",
+        "The article has 2014 and 2024 facelift sections for the shared platform."
+      ],
+      "uncertainties": [
+        "Shared article also covers Ducato, Boxer and other badges: select only Jumper-specific engines and verify each stage applies to Jumper."
+      ],
+      "nextAction": "Split family into I/II only after attributing existing engines, drawings and fleet statistics; retain 2002 as a stage.",
+      "currentGenerations": [
+        {
+          "index": 0,
+          "name": "Jumper – neúplně rozlišená rodina",
+          "code": null,
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "verified-gap-migration-deferred"
+    },
+    {
+      "make": "peugeot",
+      "line": "307",
+      "issue": "Family closes in 2008 although it includes CC body style.",
+      "source": "https://de.wikipedia.org/wiki/Peugeot_307",
+      "verifiedFacts": [
+        "Article separates 307 SW/Break production 2002-2008 and 307 CC 2003-2009.",
+        "The existing family already records the 2005 facelift."
+      ],
+      "uncertainties": [
+        "Distinguish European body-style bounds from longer overseas production before changing a family-wide production endpoint."
+      ],
+      "nextAction": "Review body-specific date scope; do not add a generation for CC or the facelift. A production-date change requires a fleet-statistics rebuild.",
+      "currentGenerations": [
+        {
+          "index": 0,
+          "name": "307 – modelová rodina",
+          "code": null,
+          "from": 2001,
+          "to": 2008
+        }
+      ],
+      "status": "verified-gap-migration-deferred"
+    }
+  ]
+}

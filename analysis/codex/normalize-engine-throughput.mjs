@@ -4,7 +4,7 @@ import cp from 'node:child_process';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual as equal} from 'node:util';
-import {normalizeEngineRows,normalizeVariant} from './engine-throughput-policy.mjs';
+import {normalizeEngineRows,normalizeVariant,enginePresentation} from './engine-throughput-policy.mjs';
 const root='analysis/codex/engine-throughput',read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const revision=read(`${root}/session.json`).baselineRevision,hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const reports=fs.readdirSync(root).filter(f=>/^batch-\d+\.json$/.test(f)).map(file=>({file,data:read(`${root}/${file}`)}));
@@ -20,7 +20,7 @@ for(const dir of ['src/data/catalog/model-cards','src/data/model-cards'])for(con
   const changes=[];
   for(const [i,g]of card.generations.entries()){
    const normalized=normalizeEngineRows(g.engines);
-   if(!equal(g.engines,normalized)){changes.push({generation:i,rowsBefore:g.engines?.length??0,rowsAfter:normalized?.length??0,names:(g.engines??[]).filter(e=>typeof e.variant==='string'&&normalizeVariant(e.variant)!==e.variant).map(e=>({from:e.variant,to:normalizeVariant(e.variant)}))});g.engines=normalized;dirty=true;}
+   if(!equal(g.engines,normalized)){changes.push({generation:i,rowsBefore:g.engines?.length??0,rowsAfter:normalized?.length??0,names:(g.engines??[]).flatMap(e=>{const p=enginePresentation(e);return e.variant!==p?.variant?[{from:e.variant??null,to:p?.variant??null,notePreserved:!!p?.noteCs,labelBasis:p?.labelBasis??null}]:[];})});g.engines=normalized;dirty=true;}
   }
   if(changes.length)cleanup.push({make:card.makeSlug,line:card.lineSlug,sourceFile:file,changes});
   allCards.set(`${file}#${key}`,card);baselineCards.set(`${file}#${key}`,old);

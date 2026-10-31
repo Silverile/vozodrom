@@ -359,7 +359,16 @@ def main():
             done.update((r['make'],r['line']) for r in load(OUT+'/'+file)['lines'])
     prior_report=load(OUT+f'/batch-{args.batch}.json') if args.repair else None
     repair_keys={(r['make'],r['line']) for r in prior_report['lines']} if prior_report else set()
-    queue=[r for r in audit['lines'] if (r['makeSlug'],r['lineSlug']) in repair_keys] if args.repair else [r for r in audit['lines'] if r['fleetN'] is not None and r['fleetN']>=1000 and (r['makeSlug'],r['lineSlug']) not in done][:args.size]
+    def wave_of(row):
+        fleet=row['fleetN']
+        return 1 if fleet is not None and fleet>=1000 else 2 if fleet is not None and fleet>0 else 3
+    if args.repair:
+        wave=prior_report['wave']
+        queue=[r for r in audit['lines'] if (r['makeSlug'],r['lineSlug']) in repair_keys]
+    else:
+        remaining=[r for r in audit['lines'] if (r['makeSlug'],r['lineSlug']) not in done]
+        wave=min((wave_of(r) for r in remaining),default=3)
+        queue=[r for r in remaining if wave_of(r)==wave][:args.size]
     items=[(r['makeSlug'],r['lineSlug'],index[r['makeSlug']][r['lineSlug']]) for r in queue if r['cardPresent']]
     base_revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     # The first run's git revision is a compact, immutable baseline for subsequent batches.
@@ -410,7 +419,7 @@ def main():
           'remainingGaps':'Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.',
           'sources':item['attempts']})
     for file in changed_files:write(file,source_files[file])
-    batch={'schemaVersion':1,'batch':args.batch,'wave':1,'baselineRevision':session['baselineRevision'],'countsBefore':prior_report['countsBefore'] if prior_report else audit['counts'],'lines':report,
+    batch={'schemaVersion':1,'batch':args.batch,'wave':wave,'baselineRevision':session['baselineRevision'],'countsBefore':prior_report['countsBefore'] if prior_report else audit['counts'],'lines':report,
       'summary':{'attempted':len(report),'touched':sum(bool(r['enginesAdded']) for r in report),'enginesAdded':sum(r['enginesAdded'] for r in report),'noSource':sum(r['status']=='no-source' for r in report),'alreadyCovered':sum(r['status']=='already-covered' for r in report),
       'generationsAdded':0,'generationsRemoved':0,'faceliftsAdded':0,'listingIdChanges':0,'statsRebuildRequired':False},'validation':'pending'}
     if args.repair:batch['qaRevision']='Excluded experimental/concept tables; badge-aware generation attribution; nominal litre parser rejects embedded model badges.'

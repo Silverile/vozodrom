@@ -24,10 +24,11 @@ assert.deepEqual(Object.keys(currentSources).sort(),Object.keys(oldSources).sort
 let untouched=0,added=0,baselineCardsNormalized=0,baselineOnlyNormalized=0;
 for(const [source,rawBefore]of Object.entries(oldSources)){
  const before=structuredClone(rawBefore);for(const g of before.generations)g.engines=normalizeEngineRows(g.engines);
+ const legacyBefore=structuredClone(rawBefore);for(const g of legacyBefore.generations)g.engines=normalizeEngineRows(g.engines,false);
  if(!equal(before,rawBefore))baselineCardsNormalized++;
  const after=currentSources[source],identity=source.split('#')[1],row=touched.get(identity);
  if(!row||source!==`${row.sourceFile}#${identity}`){assert(equal(after,before),`Untouched source card changed: ${source}`);if(equal(before,rawBefore))untouched++;else baselineOnlyNormalized++;continue;}
- assert([hash(before),hash(rawBefore)].includes(row.beforeHash),`Before fingerprint mismatch ${identity}`);
+ assert([hash(before),hash(rawBefore),hash(legacyBefore)].includes(row.beforeHash),`Before fingerprint mismatch ${identity}`);
  assert.equal(hash(after),row.afterHash,`After fingerprint mismatch ${identity}`);
  assert.equal(after.generations.length,before.generations.length);
  const restored=structuredClone(after);restored.sources=before.sources;restored.needsReview=before.needsReview;

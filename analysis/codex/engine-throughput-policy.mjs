@@ -8,15 +8,44 @@ export function normalizeVariant(value){
  return /^(?:motor(?:en)?|engine(?:s)?|benzin|diesel|petrol|gasoline|ottomotor(?:en)?|unnamed(?::.*)?)$/i.test(v)?null:v||null;
 }
 export const powerValues=e=>[...new Set((e.availablePowerKw?.length?e.availablePowerKw:[e.powerKwMin,e.powerKwMax]).filter(Number.isFinite))];
-export function normalizeEngineRows(rows){
+const folded=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+export function labelFromStoredFacts(e){
+ const fuel={petrol:'benzin',diesel:'diesel','petrol-cng':'benzin/CNG','petrol-lpg':'benzin/LPG','petrol-mhev':'benzin mHEV','diesel-mhev':'diesel mHEV','petrol-hev':'benzin HEV','petrol-phev':'benzin PHEV',electric:'Elektromotor',hydrogen:'Vodíkový pohon'}[e.fuel]??null;
+ const size=e.displacementLitresNominal>0?`${e.displacementLitresNominal} l`:e.displacementCc>0?`${e.displacementCc} cm³`:null;
+ const values=powerValues(e),kw=values.length?`${Math.min(...values)}${Math.min(...values)!==Math.max(...values)?`–${Math.max(...values)}`:''} kW`:null;
+ if(!size&&!fuel&&!kw)return null;
+ if(!size&&!kw&&fuel==='benzin')return 'Benzinový motor';
+ if(!size&&!kw&&fuel==='diesel')return 'Dieselový motor';
+ return [size,fuel,kw].filter(Boolean).join(' ');
+}
+export function enginePresentation(engine){
+ let e={...engine},name=normalizeVariant(e.variant),original=e.variant;
+ if(typeof original==='string'&&name===null)return null; // a header is not an engine
+ if(!name){name=labelFromStoredFacts(e);if(!name)return null;e.variant=name;e.labelBasis='stored-engine-fields';return e;}
+ let v=name;
+ // Keep technical wording before an editorial qualifier. Preserve the full old text below.
+ if(v.includes(';'))v=v.split(';')[0].trim();
+ if(v.includes(':')&&/nabidka|prospekt|brochure|technical sheet|press kit|comparison sheet/i.test(folded(v.split(':')[0])))v=v.slice(v.indexOf(':')+1).trim();
+ v=v.replace(/\s+[–—]\s+.*$/u,part=>/nabidka|profil|udaj|muze|dolozen|zdroj|prospekt|vyber|historick|specifikace/i.test(folded(part))?'':part);
+ v=v.replace(/\s*\([^)]*\)/g,part=>/nabidka|vyber|dolozen|prospekt|overen|specifikace|vykon podle verze/i.test(folded(part))?'':part).trim();
+ if(/comparison sheet|technical sheet|press kit|brochure/i.test(v)||v.length>75)v=labelFromStoredFacts(e)??v.split(/[;,]/)[0].slice(0,75).trim();
+ if(v!==name){e.noteCs=[e.noteCs,name].filter((x,i,a)=>x&&a.indexOf(x)===i).join('\n');e.variant=v;}
+ else e.variant=name;
+ return e;
+}
+export function normalizeEngineRows(rows,presentation=true){
  if(!Array.isArray(rows))return rows;
  const seen=new Set(),out=[];
- for(const engine of rows){
+ for(const original of rows){
+  const engine=presentation?enginePresentation(original):{...original};if(!engine)continue;
   if(engine.sourceScope?.generationEvidence&&nonEuropeanMarket([engine.sourceScope.originalVariant,engine.sourceScope.variantYears,engine.sourceScope.tableSection,engine.sourceScope.rowNotes].filter(Boolean).join(' ')))continue;
   const name=normalizeVariant(engine.variant);
   if(typeof engine.variant==='string'&&name===null)continue;
   const values=powerValues(engine),keys=name?values.map(kw=>`${name.toLowerCase()}|${kw}`):[];
-  if(keys.length&&keys.every(k=>seen.has(k)))continue;
+  if(keys.length&&keys.every(k=>seen.has(k))){
+   if(engine.noteCs){const target=out.find(e=>e.variant===name);if(target)target.noteCs=[...new Set([target.noteCs,engine.noteCs].filter(Boolean))].join('\n');}
+   continue;
+  }
   const fresh=name?[...new Set(values)].filter(kw=>!seen.has(`${name.toLowerCase()}|${kw}`)):values;
   let cleaned=typeof engine.variant==='string'?{...engine,variant:name}:engine;
   if(keys.length&&fresh.length<new Set(values).size)cleaned={...cleaned,availablePowerKw:fresh,powerKwMin:Math.min(...fresh),powerKwMax:Math.max(...fresh)};
