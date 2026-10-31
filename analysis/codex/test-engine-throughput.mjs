@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {normalizeVariant,normalizeEngineRows,nonEuropeanMarket,evidenceProblem,enginePresentation,balancedBrackets} from './engine-throughput-policy.mjs';
+assert.equal(normalizeVariant('GS 1.8'),'GS 1.8');assert.equal(normalizeVariant('XK8 4.2'),'XK8 4.2');
 for(const [raw,want]of [['Motor.9',null],['Engine',null],['Benzin 1.2 ecoFLEX.1','1.2 ecoFLEX'],['Diesel 1.3 CDTI.1','1.3 CDTI'],['1.0 MPI.3','1.0 MPI'],['Cupra VZ 2.0 TSI.1','Cupra VZ 2.0 TSI'],['FM2.6 CR CD BSVI.2','FM2.6 CR CD BSVI'],['M102.922','M102.922']])assert.equal(normalizeVariant(raw),want);
 assert.equal(normalizeEngineRows([{variant:'1.6 TDI',powerKwMin:77,powerKwMax:77},{variant:'1.6 TDI.2',powerKwMin:77,powerKwMax:77}]).length,1);
 const ranges=normalizeEngineRows([{variant:'2.0 TSI',availablePowerKw:[150],powerKwMin:150,powerKwMax:150},{variant:'2.0 TSI',availablePowerKw:[150,180],powerKwMin:150,powerKwMax:180}]);assert.deepEqual(ranges[1].availablePowerKw,[180]);

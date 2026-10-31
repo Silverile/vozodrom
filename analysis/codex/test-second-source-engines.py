@@ -70,3 +70,12 @@ reversed_years=r.t.lxml.html.fromstring('''<table><tr><th>Model</th><th>Displace
 <tr><td>1.4 Turbo</td><td>1368 cc</td><td>88 kW</td><td>2009-2008</td></tr></table>''')
 assert not r.table_rows(reversed_years,'Petrol engines','https://en.wikipedia.org/wiki/Alfa_Romeo_MiTo',2)
 print('PASS: Region-column and German Brazil-heading exclusions; reversed source years rejected')
+prose=r.t.lxml.html.fromstring('''<html><h1>Fiat Palio</h1><table><tr><th>Produktionszeitraum</th><td>1996–2017</td></tr></table><h2>Motoren</h2><h3>Benziner</h3><ul>
+<li>1.2 8V: Vierzylinder mit 1242 cm³ Hubraum und 44 kW (60 PS) ab 2001</li>
+<li>1.0 16V: Vierzylinder mit 998 cm³ Hubraum und 44 kW (für Brasilien)</li>
+</ul><h3>Diesel</h3><ul><li>1.7 TD 8V: Vierzylinder Turbodiesel mit 1698 cm³ Hubraum und 51 kW (70 PS) bis 2001</li>
+<li>1.3 M-Jet 16V: Vierzylinder Turbodiesel mit 1248 cm³ Hubraum und 63 kW für Strada</li></ul></html>''')
+palio={'name':'Palio','generations':[{'name':'Palio','code':None,'from':1996,'to':2018}]}
+out=r.prose_rows(prose,'https://de.wikipedia.org/wiki/Fiat_Palio',palio)
+assert [(e['fuel'],e['powerKwMin']) for _,e in out]==[('petrol',44),('diesel',51)],out
+print('PASS: explicit engine prose bullets; regional and sibling-model exclusions')

@@ -1,7 +1,7 @@
 export function normalizeVariant(value){
  if(typeof value!=='string')return value;
  let v=value.replace(/\[[^\]]*\]/g,'').replace(/\s+/g,' ').trim();
- if(!/^(?:\d+\.\d+|[A-Za-z]{1,4}\d{2,4}\.\d{2,4})$/.test(v))v=v.replace(/\.\d{1,2}$/,'');
+ if(!/^(?:\d+\.\d+|[A-Za-z]{1,4}\d{2,4}\.\d{2,4})$/.test(v)&&!/\s\d[.,]\d{1,2}$/.test(v))v=v.replace(/\.\d{1,2}$/,'');
  v=v.replace(/^(?:(?:Benzin|Diesel|Petrol|Gasoline|Otto)(?:motor(?:en)?| engines?)?)[\s:–-]+/i,'');
  v=v.replace(/\s*\((?:petrol|diesel|gasoline|benzin)\)/ig,'').replace(/\s+[-–]\s+(?:Van\b|Saloon\b|Estate\b|Hatchback\b|Sedan\b|\d{2}\/\d{2}).*$/i,'');
  v=v.replace(/\binline[- ](?:four|six|three)\b/ig,'').replace(/\s+/g,' ').replace(/^[ ,;\-]+|[ ,;\-]+$/g,'');
@@ -71,10 +71,29 @@ export function evidenceProblem(g,index,e){
  if(nonEuropeanMarket([scope.originalVariant,scope.variantYears,scope.tableSection,scope.rowNotes].filter(Boolean).join(' ')))return 'Explicit non-European market row';
  const ev=scope.generationEvidence;
  if(!ev||ev.generationIndex!==index)return 'Missing/wrong source generation evidence';
- if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production','series-number-article'].includes(ev.method))return 'Unknown attribution method';
+ if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production','series-number-article','specification-page'].includes(ev.method))return 'Unknown attribution method';
  if(ev.rowFromYear!=null&&!(ev.rowFromYear>=g.from&&ev.rowToYear<=(g.to??2026)))return 'Engine row years contradict generation';
  if(ev.fromYear!=null&&ev.fromYear>(g.to??2026))return 'Source starts after generation';
  if(ev.toYear!=null&&ev.toYear<g.from)return 'Source ends before generation';
+ if(ev.method==='specification-page'){
+  const p=scope.specificationPage;
+  if(!p||!(e.sources??[]).includes(p.url)||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/\d+\/[^/?#]+\.html$/.test(p.url??''))return 'Missing specification-page source';
+  if(!p.title||!p.generation||p.generation!==ev.anchor||p.generationProductionFrom!==ev.fromYear||p.generationProductionTo!==ev.toYear)return 'Specification generation evidence mismatch';
+  if(typeof p.generationFieldPresent!=='boolean')return 'Specification generation evidence kind missing';
+  if(p.generationFieldPresent===false&&(!p.linkedFromGenerationEngineTable||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/M\d+\/[^/?#]+$/.test(p.generationPageUrl??'')||p.generation!==p.generationPageTitle))return 'Missing explicit generation-table link';
+  const words=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ');
+  const owns=text=>(p.modelAliases??[]).some(a=>/^[A-Z0-9]+$/.test(a)&&new RegExp(`(?<![A-Z0-9])${[...a].join('\\s*')}(?![A-Z0-9])`).test(words(text)));
+  if(!owns(p.title)||!owns(p.generation))return 'Specification model title mismatch';
+  if(!['HORSEPOWER','TOTAL ELECTRIC POWER'].includes(p.powerLabel))return 'Unsupported specification power label';
+  if(e.fuel==='electric'&&!/electric/i.test(p.fuelText??''))return 'Missing electric propulsion evidence';
+  if(p.powerLabel==='TOTAL ELECTRIC POWER'&&e.fuel!=='electric')return 'Electric power used for combustion engine';
+  if(e.fuel==='diesel'&&!/diesel/i.test(p.fuelText??'')||e.fuel==='petrol'&&!/petrol|gasoline/i.test(p.fuelText??''))return 'Specification fuel mismatch';
+  if(/hybrid|PHEV|MHEV|HEV|48\s*V/i.test((p.fuelText??'')+' '+p.title))return 'Hybrid needs explicit system-output handling';
+  if(!/\bkW\b/i.test(p.powerText??''))return 'Specification page lacks explicit kW';
+  const kw=[...new Set([...p.powerText.matchAll(/(\d+(?:[.,]\d+)?)\s*kW\b/ig)].map(m=>Number(m[1].replace(',','.'))))];
+  if(kw.length!==1||kw[0]!==e.powerKwMin||e.powerKwMin!==e.powerKwMax)return 'Specification power differs from published kW';
+  if(ev.rowFromYear==null)return 'Specification variant production year missing';
+ }
  if(ev.method==='series-number-article'){
   if(!/^\d{3}$/.test(ev.seriesNumber??''))return 'Missing article series number';
   if(!new RegExp(`\\b[WRCAVXH]${ev.seriesNumber}\\b`).test(g.code??''))return 'Article series number contradicts generation';
@@ -94,6 +113,7 @@ export function evidenceProblem(g,index,e){
 }
 export function rejectEngine(make,line,engine){
  const v=engine.variant.toUpperCase();
+ if(/\bmotorsport\b|\brally(?:ing)?\b/i.test(engine.sourceScope?.tableSection??''))return 'Motorsport section is not a road-car engine specification';
  if(/CONCEPT|PROTOTYP|EXPERIMENTAL|IMPULS/.test(v+' '+(engine.sourceScope?.tableSection??'').toUpperCase()))return 'Experimental/concept version';
  if(make==='audi'&&/^a[3468]$/.test(line)&&new RegExp(`\\bR?S${line.slice(1)}\\b`).test(v))return 'Explicit S/RS sibling badge has its own catalogue line';
  if(make==='bmw'&&['rada-3','rada-5'].includes(line)&&new RegExp(`\\bM${line.slice(-1)}\\b`).test(v))return 'Explicit M sibling badge';

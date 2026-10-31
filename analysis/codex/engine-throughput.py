@@ -31,7 +31,7 @@ def clean(s):
 def variant_name(value):
     value=clean(value)
     # pandas appends .1/.2 to duplicate labels; Mercedes M102.922 is a real code.
-    if not re.fullmatch(r'(?:\d+\.\d+|[A-Za-z]{1,4}\d{2,4}\.\d{2,4})',value):value=re.sub(r'\.\d{1,2}$','',value)
+    if not re.fullmatch(r'(?:\d+\.\d+|[A-Za-z]{1,4}\d{2,4}\.\d{2,4})',value) and not re.search(r'\s\d[.,]\d{1,2}$',value):value=re.sub(r'\.\d{1,2}$','',value)
     value=re.sub(r'^(?:(?:Benzin|Diesel|Petrol|Gasoline|Otto)(?:motor(?:en)?| engines?)?)[\s:–-]+','',value,flags=re.I)
     value=re.sub(r'\s*\((?:petrol|diesel|gasoline|benzin)\)','',value,flags=re.I)
     value=re.sub(r'\s+[-–]\s+(?:Van\b|Saloon\b|Estate\b|Hatchback\b|Sedan\b|\d{2}/\d{2}).*$','',value,flags=re.I)
@@ -200,6 +200,7 @@ def fuel(text,context):
 def engine(variant,powcell,cccell,fuels,context,source,table,header='',ccheader='',years=''):
     original=clean(variant)
     if foreign_market(original+' '+clean(years)+' '+context):return None
+    if re.search(r'\bmotorsport\b|\brally(?:ing)?\b',context,re.I):return None
     variant=variant_name(original)
     if not variant or len(variant)>150 or re.search(r'concept|prototype|prototyp|renn|racing|experimental|impuls',variant+' '+context,re.I):return None
     if re.search(r'hybrid|\b[PM]HEV\b|petrol\s*(?:&|and|/)\s*electric',variant+' '+clean(fuels)+' '+context.split('/')[-1],re.I):return None

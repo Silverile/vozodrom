@@ -1,0 +1,42 @@
+{
+  "batch": 7,
+  "researchRejections": [
+    {
+      "id": "fiat/palio",
+      "variant": "1.0 Evo",
+      "reason": "Novo Palio is a separately named later model; using original-model explicit engine prose instead."
+    },
+    {
+      "id": "fiat/palio",
+      "variant": "1.4 Evo",
+      "reason": "Novo Palio is a separately named later model; using original-model explicit engine prose instead."
+    },
+    {
+      "id": "fiat/palio",
+      "variant": "1.6 16V",
+      "reason": "Novo Palio is a separately named later model; using original-model explicit engine prose instead."
+    }
+  ],
+  "reviewCorrections": [
+    {
+      "id": "opel/adam",
+      "source": "https://en.wikipedia.org/wiki/Opel_Adam",
+      "excluded": "1.6 Ecotec 16V 103 kW",
+      "reason": "Motorsport / Rally section; not a road-car engine."
+    },
+    {
+      "ids": [
+        "jaguar/xk",
+        "mitsubishi/eclipse"
+      ],
+      "reason": "Preserve trailing decimal displacement in names; do not treat it as a pandas duplicate-column suffix."
+    }
+  ],
+  "specSitePass": {
+    "visited": 150,
+    "rateLimited": false,
+    "complete": true,
+    "requestSpacingSeconds": 1.5
+  },
+  "evidencePolicy": "Explicit kW, no HP conversion, no hybrid components; exact model tokens and generation link/year proof required. Public rows keep only facts plus source URLs."
+}

@@ -276,6 +276,7 @@ def table_rows(table,context,source,number):
     # A component row is not a vehicle's system output. Mixed combustion/electric
     # tables need an explicit, separately reviewed hybrid extractor (as for G45).
     text=t.fold(table.text_content()+' '+context)
+    if source=='https://de.wikipedia.org/wiki/Fiat_Palio' and 'NOVO PALIO' in t.fold(context):return [] # separately named later model; broad card not yet split
     if t.foreign_market(context) or re.search(r'\bBRASILIEN\b|\bARGENTINIEN\b',t.fold(context)):return []
     if re.search(r'HYBRID|SYSTEMLEISTUNG|SYSTEM OUTPUT|COMBINED POWER|\bPHEV\b|\bHEV\b|\bMHEV\b',text):return []
     if 'ELEKTROMOTOR' in text and re.search(r'OTTOMOTOR|DIESELMOTOR|VERBRENNUNGSMOTOR',text):return []
@@ -288,6 +289,7 @@ def table_rows(table,context,source,number):
     pi=next((i for i,l in enumerate(labels) if re.match(r'^(?:MAX |MAXIMALE |NENN)?LEISTUNG(?: |$)|^SYSTEMLEISTUNG',l)),None)
     result=[]
     def add(variant,p,cc,kind,years,header,cch,notes=''):
+        original_variant=variant
         ordered=re.search(r'\b((?:18|19|20)\d{2})\s*[–−-]\s*((?:18|19|20)\d{2})\b',years)
         if ordered and int(ordered[1])>int(ordered[2]):return
         if t.foreign_market(' '.join([variant,p,notes])):return
@@ -296,6 +298,7 @@ def table_rows(table,context,source,number):
         if not variant:return
         out=t.engine(variant,p,cc,kind,context,source,number,header,cch,years)
         if out:
+            out['sourceScope']['originalVariant']=original_variant
             if out['displacementCc'] is None and out['displacementLitresNominal'] is None:
                 litre=re.fullmatch(r'([0-9][.,][0-9])\s*l',t.clean(cc),re.I)
                 if litre:out['displacementLitresNominal']=float(litre[1].replace(',','.'))
@@ -338,6 +341,32 @@ def table_rows(table,context,source,number):
             continue
         kind=(row[fi] if fi is not None else '')+' '+category
         add(row[vi],row[pi],row[ci] if ci is not None else '',kind,row[yi] if yi is not None else '',cols[pi],cols[ci] if ci is not None else '', ' '.join(row[i] for i in ni))
+    return result
+
+def prose_rows(tree,source,card):
+    """Explicit single-power/displacement engine bullets, not free-text inference."""
+    title=t.clean(tree.xpath('string(//h1)'));production=None
+    for tr in tree.xpath('(//table)[1]//tr'):
+        text=' '.join(t.clean(c.text_content()) for c in tr.xpath('./th|./td'))
+        if re.match(r'Production\b|Produktionszeitraum\b|Výroba\b',text,re.I):production=t.year_span(text);break
+    anchor=title+(f' ({production[0]}–{production[1]})' if production else '')
+    headings={};result=[]
+    for el in tree.iter():
+        tag=el.tag if isinstance(el.tag,str) else ''
+        if re.fullmatch('h[2345]',tag):
+            level=int(tag[1]);headings={k:v for k,v in headings.items() if k<level};headings[level]=t.clean(el.text_content())
+        if tag!='li' or el.xpath('ancestor::table'):continue
+        context=' / '.join(headings.values());text=t.clean(el.text_content())
+        if not re.search(r'\bMotoren\b|\bEngines\b',context,re.I):continue
+        m=re.match(r'^([0-9][.,][0-9][^:]{0,30}):\s*(.+)',text)
+        if not m or not re.search(r'\bkW\b',text,re.I) or re.search(r'Brasilien|Argentinien',text,re.I):continue
+        if source=='https://de.wikipedia.org/wiki/Fiat_Palio' and re.search(r'Novo Palio|\bStrada\b',context+' '+text,re.I):continue
+        kind='Diesel' if re.search(r'Diesel',context,re.I) else 'Petrol' if re.search(r'Benziner|Petrol|Gasoline',context,re.I) else ''
+        row=t.engine(m[1],m[2],m[2],kind,context,source,0,'explicit prose kW','explicit prose cc',m[2])
+        if not row or row['displacementCc'] is None:continue
+        row['sourceScope']['proseEvidence']=text[:800]
+        attribution=t.generation_attribution(card,anchor,list(headings.values()),row,production)
+        if attribution:gi,ev=attribution;row['sourceScope']['generationEvidence']=ev;result.append((gi,row))
     return result
 
 def page_rows(tree,source,card):
@@ -441,7 +470,7 @@ def research(item,candidate_urls=None,phase=None):
             if rows:result['engines']=rows;result['status']='candidates';break
             result['reason']='No currently started, non-regional variant with explicit system power; future month-dated revisions and iX5 siblings skipped.'
             continue
-        for target,row in page_rows(tree,canonical,card):
+        for target,row in [*page_rows(tree,canonical,card),*prose_rows(tree,canonical,card)]:
             if target!=gi or not row.get('displacementCc') and not row.get('displacementLitresNominal') and row['fuel']!='electric':continue
             v=t.fold(row['variant'])
             if make=='bmw' and line=='rada-5' and re.search(r'\bM5\b',v):continue

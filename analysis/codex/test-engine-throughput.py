@@ -2,6 +2,9 @@
 import importlib.util
 s=importlib.util.spec_from_file_location('bulk','analysis/codex/engine-throughput.py')
 m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+assert m.variant_name('GS 1.8')=='GS 1.8'
+assert m.variant_name('XK8 4.2')=='XK8 4.2'
+assert m.engine('1.6 Ecotec 16V','103 kW','1598 cc','Petrol','Motorsport / Rally','https://en.wikipedia.org/wiki/Opel_Adam',1) is None
 for raw,want in [('Motor.1',None),('Engine',None),('1.2 ecoFLEX.1','1.2 ecoFLEX'),('1.0 MPI.3','1.0 MPI'),('M102.922','M102.922'),('1.0','1.0'),('Diesel 1.9 TDI.4','1.9 TDI'),('1.5 L 3E inline-four (petrol) - Van, 09/91-01/94','1.5 L 3E')]:
     assert m.variant_name(raw)==want,(raw,m.variant_name(raw),want)
 card={'name':'Sharan','generations':[{'name':'Sharan I','code':'I (7M)','from':1995,'to':2010},{'name':'Sharan II','code':'II (7N)','from':2010,'to':2022}]}
