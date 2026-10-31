@@ -1,8 +1,9 @@
 import fs from 'node:fs';import cp from 'node:child_process';import assert from 'node:assert/strict';
-import {plans,duplicateTargets,nonModelProposals} from './wave-3-missing-cards/plan.mjs';
 import {compactEngineRows} from './short-engine-labels.mjs';
 import {evidenceProblem,rejectEngine,balancedBrackets,normalizeVariant} from './engine-throughput-policy.mjs';
-const root='analysis/codex/wave-3-missing-cards',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n');
+const root=process.argv.find(a=>a.startsWith('--root='))?.slice(7)??'analysis/codex/wave-3-missing-cards';assert(/^analysis\/codex\/wave-3-missing-cards(?:-\d+)?$/.test(root));
+const {plans,duplicateTargets,nonModelProposals}=await import('./'+root.split('/').pop()+'/plan.mjs');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n');
 const survey=read(root+'/survey.json'),baselineRevision=survey.baselineRevision,git=p=>JSON.parse(cp.execFileSync('git',['show',baselineRevision+':'+p],{maxBuffer:80e6})),before=git('src/data/model-cards-index.json');
 assert(survey.complete,'Finish or explicitly defer the entire survey queue before materialization.');
 const sourceFiles=['src/data/catalog/model-lines-auto.json','src/data/catalog/model-line-additions.json'],lineSources=sourceFiles.map(file=>({file,rows:read(file)})),all=lineSources.flatMap(x=>x.rows);
@@ -46,6 +47,7 @@ for(const plan of plans){
   const candidate=engineCandidates?.generations.find(r=>r.make===make&&r.line===line&&r.generationIndex===i);if(!candidate?.engines.length)continue;
   assert.equal(candidate.from,g.from);assert.equal(candidate.to,g.to);
   for(const original of candidate.engines){const e=compactEngineRows([original])[0];
+   const firstYear=original.sourceScope?.variantYears?.match(/(?:19|20)\d{2}/)?.[0];if(firstYear&&Number(firstYear)>2026){engineExcluded.push({id:plan.id,index:i,variant:original.variant,reason:'Variant source period starts after the research year 2026.'});continue;}
    if(e?.fuel==='electric'&&/\bkWh\b/.test(e.variant))e.variant='Elektromotor '+e.powerKwMin+' kW';
    if(make==='volkswagen'&&line.startsWith('golf-plus-line-')&&e?.variant==='1.4 TSI'&&e.powerKwMin===59){engineExcluded.push({id:plan.id,index:i,variant:e.variant,reason:'Source table labels BLG as 59 kW, conflicting with the known TSI specification; omitted rather than guessed.'});continue;}
    const reason=e?(rejectEngine(make,line,e)||evidenceProblem(g,i,e)||(!balancedBrackets(e.variant)||normalizeVariant(e.variant)!==e.variant||e.variant.length>40?'Malformed/long variant':null)):'Header/non-European row';
@@ -55,11 +57,12 @@ for(const plan of plans){
    g.engines.push(published);engineEvidence.push({id:plan.id,index:i,engine:published,sourceScope:e.sourceScope});
   }
  }
- const card={makeSlug:make,lineSlug:line,name,isAddition:true,coverage:'source-partial',generations:gs,sources:[article.url]};
+ const card={makeSlug:make,lineSlug:line,name,isAddition:true,coverage:'source-partial',...(plan.summaryCs?{summaryCs:plan.summaryCs}:{}),generations:gs,sources:[...new Set(gs.flatMap(g=>g.sources))]};
  const file='src/data/catalog/model-cards/'+make+'.json';if(!cardFiles.has(file))cardFiles.set(file,fs.existsSync(file)?read(file):[]);const cards=cardFiles.get(file);
  const old=cards.findIndex(c=>c.lineSlug===line);if(old>=0){assert(!before[make]?.[line]);cards[old]=card;}else cards.push(card);
  lineRecord.name=name;lineRecord.generations=gs.map(g=>({code:g.code,from:g.from,to:g.to,bodyTypes:g.bodyTypes,productionStatus:g.productionStatus,sources:g.sources,...(g.dateBasis?{dateBasis:g.dateBasis}:{})}));
- lineRecord.from=Math.min(...gs.map(g=>g.from));lineRecord.to=gs.some(g=>g.to==null)?null:Math.max(...gs.map(g=>g.to));lineRecord.productionStatus=plan.announcement?'announced':gs.some(g=>g.productionStatus==='current')?'current':'ended';lineRecord.productionPeriods=plan.announcement?null:[{from:lineRecord.from,to:lineRecord.to}];lineRecord.bodyTypes=[...new Set(gs.flatMap(g=>g.bodyTypes))];lineRecord.sources=[...new Set([...(lineRecord.sources??[]),article.url])];
+ const starts=gs.map(g=>g.from).filter(Number.isFinite),ends=gs.map(g=>g.to).filter(Number.isFinite);
+ lineRecord.from=starts.length?Math.min(...starts):null;lineRecord.to=gs.some(g=>g.to==null)||!ends.length?null:Math.max(...ends);lineRecord.productionStatus=gs.every(g=>g.productionStatus==='announced')?'announced':gs.some(g=>g.productionStatus==='current')?'current':gs.every(g=>g.productionStatus==='ended')?'ended':'unknown';lineRecord.productionPeriods=lineRecord.productionStatus==='announced'||lineRecord.from==null?null:[{from:lineRecord.from,to:lineRecord.to}];lineRecord.bodyTypes=[...new Set(gs.flatMap(g=>g.bodyTypes))];lineRecord.sources=[...new Set([...(lineRecord.sources??[]),...card.sources])];
  added.push({id:plan.id,name,file,generations:gs.length,engines:gs.reduce((n,g)=>n+g.engines.length,0),facelifts:gs.reduce((n,g)=>n+(g.facelift?.length??0),0),proof});
 }
 const remove=new Set([...Object.keys(duplicateTargets),...nonModelProposals]);
@@ -74,7 +77,7 @@ for(const [file,cards]of cardFiles)write(file,cards);
 for(const s of lineSources){const rows=s.rows.filter(l=>!remove.has(id(l)));if(JSON.stringify(rows)!==JSON.stringify(read(s.file)))write(s.file,rows);}
 const resolved=new Set([...added.map(x=>x.id),...remove]);
 for(const item of survey.lines.filter(x=>!resolved.has(x.id))){const limited=!item.articles.length&&item.attempts.some(a=>/429|Deferred/.test(a.error??''));findings.push({id:item.id,status:limited?'source-fetch-deferred':'needs-model-specific-source-or-scope-review',attempts:item.attempts,reason:item.articles.length?'Model-specific badge/generation/market review still pending; fetched article retained for the next pass, no parent-family dates copied automatically.':'No usable model-specific infobox yet; source availability is not disproved.'});}
-write(root+'/report.json',{baselineRevision,phase:'wave-3 missing-card batch 1',addedCards:added.length,addedGenerations:added.reduce((n,x)=>n+x.generations,0),addedEngineRows:added.reduce((n,x)=>n+x.engines,0),addedFaceliftStages:added.reduce((n,x)=>n+x.facelifts,0),duplicateProposalsRemoved:Object.keys(duplicateTargets).length,nonModelProposalsRemoved:nonModelProposals.length,oldToNewGenerationRemaps:[],coupledAssets:'No existing card changed; no generation-index remaps. No published stats or drawings on removed proposal lines.',added,removed,remaining:findings});
+write(root+'/report.json',{baselineRevision,phase:'wave-3 missing-card batch '+(root.match(/-(\d+)$/)?.[1]??1),addedCards:added.length,addedGenerations:added.reduce((n,x)=>n+x.generations,0),addedEngineRows:added.reduce((n,x)=>n+x.engines,0),addedFaceliftStages:added.reduce((n,x)=>n+x.facelifts,0),duplicateProposalsRemoved:Object.keys(duplicateTargets).length,nonModelProposalsRemoved:nonModelProposals.length,oldToNewGenerationRemaps:[],coupledAssets:'No existing card changed; no generation-index remaps. No published stats or drawings on removed proposal lines.',added,removed,remaining:findings});
 if(engineCandidates)write(root+'/engine-evidence.json',{baselineRevision,rows:engineEvidence,excluded:engineExcluded});
 cp.execFileSync('node',['scripts/model-cards-index.mjs'],{stdio:'inherit'});cp.execFileSync('node',['scripts/model-lines-index.mjs'],{stdio:'inherit'});
 console.log(JSON.stringify({addedCards:added.length,addedGenerations:added.reduce((n,x)=>n+x.generations,0),removed:removed.length,remaining:findings.length}));
