@@ -72738,7 +72738,7 @@
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
   },
-  "activePhase": "wave-1 second-source engines",
+  "activePhase": "wave-2 table and second-source engines",
   "structurePasses": [
     {
       "report": "analysis/codex/structure-pass/batch-1.json",
@@ -72895,13 +72895,13 @@
   ],
   "pendingStatisticsRebuild": null,
   "lastRawStatisticsRebuild": {
-    "report": "analysis/codex/second-source-engines/bmw-x/statistics.json",
+    "report": "analysis/codex/second-source-engines/bmw-series/statistics.json",
     "makes": [
       "bmw"
     ],
-    "scope": "X5 and X3 family splits; all BMW raw cohorts rebuilt."
+    "scope": "Z4/6/2 family splits and dedicated G32 GT routing"
   },
-  "secondSourceQueue": "analysis/codex/second-source-engines/queue.json",
+  "secondSourceQueue": "analysis/codex/second-source-engines/wave-2-queue.json",
   "globalMatcherCoverage": {
     "inventoryMakes": 432,
     "coveredMakes": 432,
@@ -72942,13 +72942,31 @@
     "validation": "analysis/codex/badge-routing/validation.json"
   },
   "secondSourceProgress": {
-    "visited": 400,
-    "filled": 230,
-    "unresolved": 170,
-    "unvisited": 128,
-    "enginesAdded": 1875,
-    "lastBatch": 4,
-    "report": "analysis/codex/second-source-engines/report-4.json",
-    "validation": "analysis/codex/second-source-engines/validation-4.json"
+    "visited": 528,
+    "filled": 274,
+    "unresolved": 254,
+    "unvisited": 0,
+    "enginesAdded": 2118,
+    "lastBatch": 5,
+    "report": "analysis/codex/second-source-engines/report-5.json",
+    "validation": "analysis/codex/second-source-engines/validation-5.json"
+  },
+  "wave1SecondSource": {
+    "visited": 528,
+    "filled": 274,
+    "unresolved": 254,
+    "unvisited": 0,
+    "enginesAdded": 2118,
+    "lastBatch": 5,
+    "report": "analysis/codex/second-source-engines/report-5.json",
+    "validation": "analysis/codex/second-source-engines/validation-5.json",
+    "queueFullyVisited": true,
+    "unresolvedRemain": true
+  },
+  "wave2EngineQueue": {
+    "path": "analysis/codex/second-source-engines/wave-2-queue.json",
+    "lines": 615,
+    "generations": 651,
+    "partialPowerGenerations": 67
   }
 }

@@ -7047,17 +7047,31 @@
     "name": "Řada 2",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada 2 označuje modelovou řadu BMW. Jednotlivé karoserie, konstrukční etapy a motorizace se liší; tento přehled zatím nepokrývá každé prodávané provedení.",
+    "summaryCs": "Řada 2: generace F22/F23, G42 podle sériové výroby. Motorizace jsou vybraný doložený přehled.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Řada 2",
-        "from": 2014,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
-        "bodyTypes": null,
+        "code": "F22/F23",
+        "name": "Řada 2 (F22/F23)",
+        "from": 2013,
+        "to": 2021,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2017,
+            "to": 2021,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F22/F23",
+              "https://newsroom.bmwgroup.com/global/anniversary-20-years-of-series-production-at-bmw-group-plant-leipzig/"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -7235,11 +7249,11 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe",
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace. Původní interní označení podkladu: Řada 2 — dosavadní katalogová rodina."
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
         },
         "trunkL": null,
         "markets": [],
@@ -7249,86 +7263,153 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1353857559",
           "https://www.wikidata.org/wiki/Q12062562",
-          "https://de.wikipedia.org/wiki/BMW_F22/F23"
-        ]
+          "https://de.wikipedia.org/wiki/BMW_F22/F23",
+          "https://newsroom.bmwgroup.com/global/anniversary-20-years-of-series-production-at-bmw-group-plant-leipzig/"
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "G42",
+        "name": "Řada 2 (G42)",
+        "from": 2021,
+        "to": null,
+        "productionStatus": "current",
+        "facelift": null,
+        "bodyTypes": [
+          "kupe"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 115,
+            "powerKwMax": 115,
+            "availablePowerKw": [
+              115
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "218i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 135,
+            "powerKwMax": 135,
+            "availablePowerKw": [
+              135
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "220i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "230i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 275,
+            "powerKwMax": 275,
+            "availablePowerKw": [
+              275
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M240i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 288,
+            "powerKwMax": 288,
+            "availablePowerKw": [
+              288
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M240i xDrive",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "220d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G42"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/w/index.php?oldid=1353857559",
+          "https://www.wikidata.org/wiki/Q12062562",
+          "https://de.wikipedia.org/wiki/BMW_F22/F23",
+          "https://de.wikipedia.org/wiki/BMW_G42"
+        ],
+        "drawingStage": 0
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1353857559",
       "https://www.wikidata.org/wiki/Q12062562",
-      "https://de.wikipedia.org/wiki/BMW_F22/F23"
+      "https://de.wikipedia.org/wiki/BMW_F22/F23",
+      "https://newsroom.bmwgroup.com/global/anniversary-20-years-of-series-production-at-bmw-group-plant-leipzig/",
+      "https://de.wikipedia.org/wiki/BMW_G42"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7356,8 +7437,174 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 75,
+            "powerKwMax": 75,
+            "availablePowerKw": [
+              75
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "216i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 100,
+            "powerKwMax": 100,
+            "availablePowerKw": [
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "218i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 141,
+            "powerKwMax": 141,
+            "availablePowerKw": [
+              141
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "220i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 170,
+            "powerKwMax": 170,
+            "availablePowerKw": [
+              170
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "225i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "availablePowerKw": [
+              80
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "216i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "availablePowerKw": [
+              103
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "218i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 131,
+            "powerKwMax": 131,
+            "availablePowerKw": [
+              131
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "220i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1496,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "214d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1496,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "availablePowerKw": [
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "216d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "218d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "220d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F45"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -7380,13 +7627,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372407951",
-          "https://www.wikidata.org/wiki/Q16535169"
+          "https://www.wikidata.org/wiki/Q16535169",
+          "https://de.wikipedia.org/wiki/BMW_F45"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1372407951",
-      "https://www.wikidata.org/wiki/Q16535169"
+      "https://www.wikidata.org/wiki/Q16535169",
+      "https://de.wikipedia.org/wiki/BMW_F45"
     ],
     "needsReview": [
       {
@@ -18656,17 +18905,40 @@
     "name": "Řada 6",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada 6 označuje modelovou řadu BMW. Jednotlivé karoserie, konstrukční etapy a motorizace se liší; tento přehled zatím nepokrývá každé prodávané provedení.",
+    "summaryCs": "Řada 6: generace E24, E63/E64, F12/F13/F06 podle sériové výroby. Motorizace jsou vybraný doložený přehled. G32 má samostatnou kartu Řada 6 Gran Turismo.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Řada 6",
+        "code": "E24",
+        "name": "Řada 6 (E24)",
         "from": 1976,
-        "to": 2023,
+        "to": 1989,
         "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": null,
+        "facelift": [
+          {
+            "year": 1982,
+            "to": 1989,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E24",
+              "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-12-0.bmw-6-series-e24.html"
+            ],
+            "photo": null
+          },
+          {
+            "year": 1987,
+            "to": 1989,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E24",
+              "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-12-0.bmw-6-series-e24.html"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kupe"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -18874,11 +19146,11 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe",
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace. Původní interní označení podkladu: Řada 6 — dosavadní katalogová rodina."
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník. Od roku 1976 dle BMW Classic; rok 1975 v některých přehledech zahrnuje předvýrobní období."
         },
         "trunkL": null,
         "markets": [],
@@ -18888,82 +19160,262 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1363256463",
           "https://www.wikidata.org/wiki/Q796427",
-          "https://de.wikipedia.org/wiki/BMW_E24"
-        ]
+          "https://de.wikipedia.org/wiki/BMW_E24",
+          "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-12-0.bmw-6-series-e24.html"
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "E63/E64",
+        "name": "Řada 6 (E63/E64)",
+        "from": 2003,
+        "to": 2010,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2007,
+            "to": 2010,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 2996,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "630i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2996,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 200,
+            "powerKwMax": 200,
+            "availablePowerKw": [
+              200
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "630i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4398,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 245,
+            "powerKwMax": 245,
+            "availablePowerKw": [
+              245
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "645Ci",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4799,
+            "displacementLitresNominal": 4.8,
+            "powerKwMin": 270,
+            "powerKwMax": 270,
+            "availablePowerKw": [
+              270
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "650i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 210,
+            "powerKwMax": 210,
+            "availablePowerKw": [
+              210
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "635d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E63"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/w/index.php?oldid=1363256463",
+          "https://www.wikidata.org/wiki/Q796427",
+          "https://de.wikipedia.org/wiki/BMW_E24",
+          "https://de.wikipedia.org/wiki/BMW_E63"
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "F12/F13/F06",
+        "name": "Řada 6 (F12/F13/F06)",
+        "from": 2011,
+        "to": 2018,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2015,
+            "to": 2018,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F12"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "640i / 640i xDrive",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F12"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4395,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 300,
+            "powerKwMax": 300,
+            "availablePowerKw": [
+              300
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "650i / 650i xDrive",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F12"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4395,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 330,
+            "powerKwMax": 330,
+            "availablePowerKw": [
+              330
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "650i / 650i xDrive",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F12"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 230,
+            "powerKwMax": 230,
+            "availablePowerKw": [
+              230
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "640d / 640d xDrive",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F12"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/w/index.php?oldid=1363256463",
+          "https://www.wikidata.org/wiki/Q796427",
+          "https://de.wikipedia.org/wiki/BMW_E24",
+          "https://de.wikipedia.org/wiki/BMW_F12"
+        ],
+        "drawingStage": 0
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1363256463",
       "https://www.wikidata.org/wiki/Q796427",
-      "https://de.wikipedia.org/wiki/BMW_E24"
+      "https://de.wikipedia.org/wiki/BMW_E24",
+      "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-12-0.bmw-6-series-e24.html",
+      "https://de.wikipedia.org/wiki/BMW_E63",
+      "https://de.wikipedia.org/wiki/BMW_F12"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18978,21 +19430,108 @@
     "name": "Řada 6 Gran Turismo",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Řada 6 Gran Turismo označuje modelovou řadu BMW. Jednotlivé karoserie, konstrukční etapy a motorizace se liší; tento přehled zatím nepokrývá každé prodávané provedení.",
+    "summaryCs": "Řada 6 Gran Turismo: generace G32 podle sériové výroby. Motorizace jsou vybraný doložený přehled.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Řada 6 Gran Turismo",
+        "code": "G32",
+        "name": "Řada 6 Gran Turismo (G32)",
         "from": 2017,
         "to": 2023,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2020,
+            "to": 2023,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32",
+              "https://www.press.bmwgroup.com/global/article/detail/T0308711EN/the-new-bmw-6-series-gran-turismo?language=en"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "630i Gran Turismo",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 250,
+            "powerKwMax": 250,
+            "availablePowerKw": [
+              250
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "3 l benzin 250 kW",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "620d Gran Turismo",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 195,
+            "powerKwMax": 195,
+            "availablePowerKw": [
+              195
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "3 l diesel 195 kW",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "640d xDrive Gran Turismo",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G32"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -19002,11 +19541,11 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe",
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace. Původní interní označení podkladu: Řada 6 Gran Turismo — dosavadní katalogová rodina."
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník. G32 zůstává na samostatné linii Gran Turismo. Doložené motorizace jsou před modernizací 2020; mild-hybridní výkony nejsou dopočítávány."
         },
         "trunkL": null,
         "markets": [],
@@ -19015,77 +19554,22 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372217415",
-          "https://www.wikidata.org/wiki/Q31270264"
-        ]
+          "https://www.wikidata.org/wiki/Q31270264",
+          "https://de.wikipedia.org/wiki/BMW_G32",
+          "https://www.press.bmwgroup.com/global/article/detail/T0308711EN/the-new-bmw-6-series-gran-turismo?language=en"
+        ],
+        "drawingStage": 0
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1372217415",
-      "https://www.wikidata.org/wiki/Q31270264"
+      "https://www.wikidata.org/wiki/Q31270264",
+      "https://de.wikipedia.org/wiki/BMW_G32",
+      "https://www.press.bmwgroup.com/global/article/detail/T0308711EN/the-new-bmw-6-series-gran-turismo?language=en"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -19468,8 +19952,99 @@
           "kabriolet",
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 2997,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 160,
+            "powerKwMax": 160,
+            "availablePowerKw": [
+              160
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "830i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 3982,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 210,
+            "powerKwMax": 210,
+            "availablePowerKw": [
+              210
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "840i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4398,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 210,
+            "powerKwMax": 210,
+            "availablePowerKw": [
+              210
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "840Ci",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 4988,
+            "displacementLitresNominal": 5,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "850Ci",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 5379,
+            "displacementLitresNominal": 5.4,
+            "powerKwMin": 240,
+            "powerKwMax": 240,
+            "availablePowerKw": [
+              240
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "850Ci",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 5576,
+            "displacementLitresNominal": 5.6,
+            "powerKwMin": 280,
+            "powerKwMax": 280,
+            "availablePowerKw": [
+              280
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "850CSi",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E31"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -19492,13 +20067,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372477022",
-          "https://www.wikidata.org/wiki/Q739844"
+          "https://www.wikidata.org/wiki/Q739844",
+          "https://de.wikipedia.org/wiki/BMW_E31"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1372477022",
-      "https://www.wikidata.org/wiki/Q739844"
+      "https://www.wikidata.org/wiki/Q739844",
+      "https://de.wikipedia.org/wiki/BMW_E31"
     ],
     "needsReview": [
       {
@@ -19789,8 +20366,129 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 100,
+            "powerKwMax": 100,
+            "availablePowerKw": [
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive18i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "availablePowerKw": [
+              103
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive18i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 131,
+            "powerKwMax": 131,
+            "availablePowerKw": [
+              131
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive20i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 141,
+            "powerKwMax": 141,
+            "availablePowerKw": [
+              141
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive20i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 225,
+            "powerKwMax": 225,
+            "availablePowerKw": [
+              225
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M35i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive18d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive20d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 170,
+            "powerKwMax": 170,
+            "availablePowerKw": [
+              170
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive25d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F39"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -19829,13 +20527,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373439966",
-          "https://www.wikidata.org/wiki/Q15947574"
+          "https://www.wikidata.org/wiki/Q15947574",
+          "https://de.wikipedia.org/wiki/BMW_F39"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1373439966",
-      "https://www.wikidata.org/wiki/Q15947574"
+      "https://www.wikidata.org/wiki/Q15947574",
+      "https://de.wikipedia.org/wiki/BMW_F39"
     ],
     "needsReview": [
       {
@@ -21234,8 +21934,114 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 135,
+            "powerKwMax": 135,
+            "availablePowerKw": [
+              135
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive20i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive28i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 225,
+            "powerKwMax": 225,
+            "availablePowerKw": [
+              225
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive35i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 265,
+            "powerKwMax": 265,
+            "availablePowerKw": [
+              265
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "X4 M40i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1995,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive20d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive30d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 230,
+            "powerKwMax": 230,
+            "availablePowerKw": [
+              230
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "xDrive35d",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_F26"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -21274,13 +22080,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381632951",
-          "https://www.wikidata.org/wiki/Q4836084"
+          "https://www.wikidata.org/wiki/Q4836084",
+          "https://de.wikipedia.org/wiki/BMW_F26"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381632951",
-      "https://www.wikidata.org/wiki/Q4836084"
+      "https://www.wikidata.org/wiki/Q4836084",
+      "https://de.wikipedia.org/wiki/BMW_F26"
     ],
     "needsReview": [
       {
@@ -23530,8 +24338,159 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1796,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "availablePowerKw": [
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 1",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1895,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 87,
+            "powerKwMax": 87,
+            "availablePowerKw": [
+              87
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 1.9i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1895,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 103,
+            "powerKwMax": 103,
+            "availablePowerKw": [
+              103
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 1",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1991,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 2",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2171,
+            "displacementLitresNominal": 2.2,
+            "powerKwMin": 125,
+            "powerKwMax": 125,
+            "availablePowerKw": [
+              125
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 2.2i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2793,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": 141,
+            "powerKwMax": 141,
+            "availablePowerKw": [
+              141
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 2",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2793,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": 142,
+            "powerKwMax": 142,
+            "availablePowerKw": [
+              142
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 2.8i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 170,
+            "powerKwMax": 170,
+            "availablePowerKw": [
+              170
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Z3 3.0i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 3201,
+            "displacementLitresNominal": 3.2,
+            "powerKwMin": 236,
+            "powerKwMax": 236,
+            "availablePowerKw": [
+              236
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M 3",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 3246,
+            "displacementLitresNominal": 3.2,
+            "powerKwMin": 239,
+            "powerKwMax": 239,
+            "availablePowerKw": [
+              239
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M 3",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_Z3"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -23570,13 +24529,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1380623952",
-          "https://www.wikidata.org/wiki/Q720552"
+          "https://www.wikidata.org/wiki/Q720552",
+          "https://de.wikipedia.org/wiki/BMW_Z3"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380623952",
-      "https://www.wikidata.org/wiki/Q720552"
+      "https://www.wikidata.org/wiki/Q720552",
+      "https://de.wikipedia.org/wiki/BMW_Z3"
     ],
     "needsReview": [
       {
@@ -23655,16 +24616,26 @@
     "name": "Z4",
     "isAddition": false,
     "segment": null,
-    "summaryCs": "Z4 označuje modelovou řadu BMW. Jednotlivé karoserie, konstrukční etapy a motorizace se liší; tento přehled zatím nepokrývá každé prodávané provedení.",
+    "summaryCs": "Z4: generace E85/E86, E89, G29 podle sériové výroby. Motorizace jsou vybraný doložený přehled.",
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Z4",
+        "code": "E85/E86",
+        "name": "Z4 (E85/E86)",
         "from": 2002,
-        "to": 2026,
+        "to": 2008,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2006,
+            "to": 2008,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E85"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "kupe",
           "kabriolet"
@@ -23801,11 +24772,11 @@
           "wheelbase": null
         },
         "specificationScope": {
-          "market": "source-production",
+          "market": "Europe",
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace. Původní interní označení podkladu: Z4 — dosavadní katalogová rodina."
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
         },
         "trunkL": null,
         "markets": [],
@@ -23834,7 +24805,283 @@
           "https://en.wikipedia.org/w/index.php?oldid=1378819353",
           "https://en.wikipedia.org/w/index.php?oldid=1353632764",
           "https://de.wikipedia.org/wiki/BMW_E85"
-        ]
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "E89",
+        "name": "Z4 (E89)",
+        "from": 2009,
+        "to": 2016,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2013,
+            "to": 2016,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kabriolet"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 115,
+            "powerKwMax": 115,
+            "availablePowerKw": [
+              115
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive18i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 135,
+            "powerKwMax": 135,
+            "availablePowerKw": [
+              135
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive20i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2497,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "availablePowerKw": [
+              150
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive23i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive28i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2996,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive30i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 225,
+            "powerKwMax": 225,
+            "availablePowerKw": [
+              225
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive35i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2979,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 250,
+            "powerKwMax": 250,
+            "availablePowerKw": [
+              250
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive35is",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_E89"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/w/index.php?oldid=1379248370",
+          "https://en.wikipedia.org/w/index.php?oldid=1380961847",
+          "https://en.wikipedia.org/w/index.php?oldid=1378819353",
+          "https://en.wikipedia.org/w/index.php?oldid=1353632764",
+          "https://de.wikipedia.org/wiki/BMW_E85",
+          "https://de.wikipedia.org/wiki/BMW_E89"
+        ],
+        "drawingStage": 0
+      },
+      {
+        "code": "G29",
+        "name": "Z4 (G29)",
+        "from": 2018,
+        "to": 2026,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 2022,
+            "to": 2026,
+            "name": "Facelift",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G29",
+              "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0404076EN_GB/the-updated-bmw-z4?language=en_GB",
+              "https://www.press.bmwgroup.com/usa/article/detail/T0454065EN_US/the-bmw-z4-final-edition"
+            ],
+            "photo": null
+          }
+        ],
+        "bodyTypes": [
+          "kabriolet"
+        ],
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 145,
+            "powerKwMax": 145,
+            "availablePowerKw": [
+              145
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive20i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G29"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "sDrive30i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G29"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 250,
+            "powerKwMax": 250,
+            "availablePowerKw": [
+              250
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M40i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G29"
+            ]
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 285,
+            "powerKwMax": 285,
+            "availablePowerKw": [
+              285
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "M40i",
+            "sources": [
+              "https://de.wikipedia.org/wiki/BMW_G29"
+            ]
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Europe",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané doložené motorizace, nikoli úplný český ceník. Výroba od roku 2018; maloobchodní uvedení v roce 2019 není začátkem výroby. Modernizace od listopadu 2022 odpovídá modelovému roku 2023."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/w/index.php?oldid=1379248370",
+          "https://en.wikipedia.org/w/index.php?oldid=1380961847",
+          "https://en.wikipedia.org/w/index.php?oldid=1378819353",
+          "https://en.wikipedia.org/w/index.php?oldid=1353632764",
+          "https://de.wikipedia.org/wiki/BMW_E85",
+          "https://de.wikipedia.org/wiki/BMW_G29",
+          "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0404076EN_GB/the-updated-bmw-z4?language=en_GB",
+          "https://www.press.bmwgroup.com/usa/article/detail/T0454065EN_US/the-bmw-z4-final-edition"
+        ],
+        "drawingStage": 0
       }
     ],
     "sources": [
@@ -23842,67 +25089,15 @@
       "https://en.wikipedia.org/w/index.php?oldid=1380961847",
       "https://en.wikipedia.org/w/index.php?oldid=1378819353",
       "https://en.wikipedia.org/w/index.php?oldid=1353632764",
-      "https://de.wikipedia.org/wiki/BMW_E85"
+      "https://de.wikipedia.org/wiki/BMW_E85",
+      "https://de.wikipedia.org/wiki/BMW_E89",
+      "https://de.wikipedia.org/wiki/BMW_G29",
+      "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0404076EN_GB/the-updated-bmw-z4?language=en_GB",
+      "https://www.press.bmwgroup.com/usa/article/detail/T0454065EN_US/the-bmw-z4-final-edition"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

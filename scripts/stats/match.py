@@ -240,6 +240,10 @@ class Matcher:
                     series = 'rada-2-gran-tourer'
                 elif badge[2] == '6' and re.search(r'\bGT\b|GRAN\s*TURISMO', text):
                     series = 'rada-6-gran-turismo'
+                elif badge[2] == '6' and self._in_period(make, series, year) is False and self._in_period(make, 'rada-6-gran-turismo', year) is True:
+                    # After the coupe/cabriolet ended, numeric 6xx badges belong
+                    # to the separately catalogued G32 GT, not an expired coupe.
+                    series = 'rada-6-gran-turismo'
                 return [series] + ([badge[2] + badge[3]] if not badge[1] else [])
         elif make == 'saab':
             badge = re.match(r'^(9)\s*([23457])\s*(X?)(?=$|\s|[A-Z])', text)

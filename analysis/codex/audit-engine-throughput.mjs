@@ -5,7 +5,7 @@ import {normalizeVariant,powerValues,evidenceProblem,balancedBrackets} from './e
 const root='analysis/codex/engine-throughput',read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const cards=read('src/data/model-cards-index.json');let engineRows=0,cardCount=0;
 const externalProofs=new Map(),proofsUsed=new Set(),secondSource='analysis/codex/second-source-engines';
-for(const f of fs.readdirSync(secondSource).filter(f=>/^evidence-\d+\.json$/.test(f)))for(const r of read(`${secondSource}/${f}`).rows){const key=`${r.make}/${r.line}/${r.index}/${r.variant}/${r.kw}`;assert(!externalProofs.has(key));externalProofs.set(key,r);}
+for(const f of fs.readdirSync(secondSource).filter(f=>/^evidence-(?:\d+|bmw-series)\.json$/.test(f)))for(const r of read(`${secondSource}/${f}`).rows){const key=`${r.make}/${r.line}/${r.index}/${r.variant}/${r.kw}`;assert(!externalProofs.has(key));externalProofs.set(key,r);}
 for(const [make,lines]of Object.entries(cards))for(const [line,card]of Object.entries(lines)){
  cardCount++;
  for(const [i,g]of card.generations.entries()){

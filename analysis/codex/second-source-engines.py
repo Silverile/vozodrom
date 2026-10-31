@@ -194,6 +194,38 @@ LEADS.update({
  'peugeot/301':{0:['Peugeot_301_(1932–1936)'],1:['Peugeot_301_(2012)']},
  'mercedes-benz/sl':{0:['Mercedes-Benz_W_113'],1:['Mercedes-Benz_Baureihe_107'],2:['Mercedes-Benz_Baureihe_129'],3:['Mercedes-Benz_Baureihe_230'],4:['Mercedes-Benz_Baureihe_231']},
 })
+LEADS.update({
+ 'mercedes-benz/sl':{5:['Mercedes-AMG_R_232']},
+ 'bmw/x4':{0:['BMW_F26']},'bmw/z3':{0:['BMW_Z3']},'bmw/x2':{0:['BMW_F39']},'bmw/rada-8':{0:['BMW_E31']},
+ 'citroen/c5-aircross':{0:['Citroën_C5_Aircross']},
+ 'skoda/felicia-1959':{0:['Škoda_Felicia_(1959–1964)']},'skoda/440-445-450':{0:['Škoda_440']},'skoda/1202':{0:['Škoda_1202']},
+ 'daewoo/matiz':{0:['Daewoo_Matiz'],1:['Daewoo_Matiz'],2:['Daewoo_Matiz']},
+ 'nissan/patrol':{0:['Nissan_Patrol']},'nissan/pathfinder':{0:['Nissan_Pathfinder']},'nissan/terrano':{0:['Nissan_Terrano_II']},'nissan/sunny':{0:['Nissan_Sunny']},'nissan/nv200':{0:['Nissan_NV200']},
+ 'ram/1500':{1:['Ram_1500']},
+ 'audi/100':{i:['Audi_100_C'+str(i+1)] for i in range(4)},
+ 'fiat/marea':{0:['Fiat_Marea']},'fiat/sedici':{0:['Fiat_Sedici']},'fiat/seicento':{0:['Fiat_Seicento']},'fiat/ulysse':{i:['Fiat_Ulysse'] for i in range(3)},'fiat/500x':{0:['Fiat_500X']},'fiat/talento':{0:['Fiat_Talento'],1:['Fiat_Talento']},
+ 'citroen/c-elysee':{0:['Citroën_C-Elysée']},'citroen/bx':{0:['Citroën_BX']},'citroen/c-crosser':{0:['Citroën_C-Crosser']},'citroen/zx':{0:['Citroën_ZX']},
+ 'mitsubishi/eclipse-cross':{0:['Mitsubishi_Eclipse_Cross'],1:['Mitsubishi_Eclipse_Cross']},
+ 'kia/k4':{0:['Kia_K4']},'kia/niro':{1:['Kia_Niro']},'kia/carnival':{i:['Kia_Carnival'] for i in range(4)},
+ 'land-rover/discovery-sport':{0:['Land_Rover_Discovery_Sport']},'land-rover/range-rover-velar':{0:['Range_Rover_Velar']},
+ 'cupra/ateca':{0:['Cupra_Ateca']},'cupra/terramar':{0:['Cupra_Terramar']},
+ 'moskvic/412':{0:['Moskwitsch-412']},'moskvic/2138':{0:['Moskwitsch-2138']},
+ 'bmw/rada-2-active-tourer':{0:['BMW_F45']},
+ 'dodge/durango':{i:['Dodge_Durango'] for i in range(3)},'dodge/challenger':{i:['Dodge_Challenger'] for i in range(3)},
+ 'mercedes-benz/190':{0:['Mercedes-Benz_W_201']},'mercedes-benz/trida-r':{0:['Mercedes-Benz_Baureihe_251']},
+ 'mazda/cx-60':{0:['Mazda_CX-60']},
+ 'alfa-romeo/stelvio':{0:['Alfa_Romeo_Stelvio']},'alfa-romeo/giulietta':{0:['Alfa_Romeo_Giulietta_(Typ_750/101)'],1:['Alfa_Romeo_Giulietta_(Typ_116)']},'alfa-romeo/giulia':{0:['Alfa_Romeo_Giulia_(1962)']},
+ 'mitsubishi/galant':{i:['Mitsubishi_Galant'] for i in range(9)},
+ 'porsche/panamera':{2:['Porsche_Panamera_(Typ_976)']},'porsche/macan':{1:['Porsche_Macan_(Typ_XAB)']},'porsche/boxster':{0:['Porsche_Boxster_(Typ_986)'],1:['Porsche_Boxster_(Typ_987)'],2:['Porsche_Boxster_(Typ_981)'],3:['Porsche_718_(Typ_982)']},
+ 'mini/countryman':{0:['Mini_Countryman_(R60)'],1:['Mini_Countryman_(F60)']},
+ 'nissan/leaf':{i:['Nissan_Leaf'] for i in range(3)},
+ 'opel/rekord':{0:['Opel_Olympia_Rekord'],1:['Opel_Rekord_P1'],2:['Opel_Rekord_P2'],3:['Opel_Rekord_A'],4:['Opel_Rekord_B'],5:['Opel_Rekord_C'],6:['Opel_Rekord_D'],7:['Opel_Rekord_E']},
+ 'jaguar/xf':{i:['Jaguar_XF'] for i in range(5)},
+ 'opel/ascona':{0:['Opel_Ascona_A'],1:['Opel_Ascona_B'],2:['Opel_Ascona_C']},'opel/tigra':{0:['Opel_Tigra']},'opel/antara':{0:['Opel_Antara']},
+ 'peugeot/4007':{0:['Peugeot_4007']},'peugeot/607':{0:['Peugeot_607']},
+ 'chevrolet/camaro':{0:['Chevrolet_Camaro']},'chevrolet/corvette':{0:['Chevrolet_Corvette']},'daewoo/lanos':{0:['Daewoo_Lanos']},
+ 'lancia/delta':{i:['Lancia_Delta'] for i in range(3)},'isuzu/d-max':{i:['Isuzu_D-Max'] for i in range(3)},'lada/samara':{0:['Lada_Samara']},
+})
 
 def bmw_hybrid_rows(tree,source,card,gi):
     """Explicit system outputs only; never add ICE and electric power together."""
@@ -263,7 +295,7 @@ def table_rows(table,context,source,number):
             result.append(out)
     if pi is not None:
         ci=next((i for i,l in enumerate(labels) if 'HUBRAUM' in l or l=='DISPLACEMENT'),None)
-        fi=[i for i,l in enumerate(labels) if l in ('MOTORTYP','MOTORART','KRAFTSTOFF','ANTRIEBSART','BAUART')]
+        fi=[i for i,l in enumerate(labels) if l in ('MOTOR','MOTORTYP','MOTORART','KRAFTSTOFF','ANTRIEBSART','BAUART')]
         yi=next((i for i,l in enumerate(labels) if 'BAUZEIT' in l or 'PRODUKTION' in l),None)
         vi=next((i for i,r in enumerate(rows[:5]) if (not r[0] or re.match(r'KENNGRO|MODELL|MOTORISIERUNG',labels[i])) and sum(bool(x) for x in r)>1),None)
         ni=[i for i,l in enumerate(labels) if re.search(r'AUSFUHRUNG|MARKT|COUNTRY',l)]

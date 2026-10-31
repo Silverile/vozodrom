@@ -10,7 +10,7 @@ const batchArg=process.argv.indexOf('--batch'),batchNumber=batchArg<0?1:Number(p
 const candidates=process.argv.includes('--apply')?read(root+`/staged/candidates-${batchNumber}.json`):(()=>{const b=read(root+`/batch-${batchNumber}.json`);return {baselineRevision:b.baselineRevision,complete:true,generations:b.results};})(),baseline=candidates.baselineRevision;
 const compactPublic=batchNumber>=3;
 const publicEngine=e=>Object.fromEntries(['fuel','displacementCc','displacementLitresNominal','powerKwMin','powerKwMax','availablePowerKw','powerRangeCoverage','variant','sources'].filter(k=>Object.hasOwn(e,k)).map(k=>[k,e[k]]));
-assert(candidates.complete&&candidates.generations.length>0&&candidates.generations.length<=100,'Research incomplete');
+assert(candidates.complete&&candidates.generations.length>0&&candidates.generations.length<=150,'Research incomplete'); // final wave tail may contain 128
 const old=p=>JSON.parse(cp.execFileSync('git',['show',`${baseline}:${p}`],{maxBuffer:80e6}));
 const sources=new Map(),locations=new Map();
 for(const d of ['src/data/catalog/model-cards','src/data/model-cards'])for(const f of fs.readdirSync(d).filter(f=>f.endsWith('.json'))){const p=d+'/'+f,data=read(p);sources.set(p,data);for(const card of data)locations.set(`${card.makeSlug}/${card.lineSlug}`,{p,card});}
