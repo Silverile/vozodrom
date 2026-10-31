@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {normalizeVariant,normalizeEngineRows,nonEuropeanMarket,evidenceProblem,enginePresentation} from './engine-throughput-policy.mjs';
+import {normalizeVariant,normalizeEngineRows,nonEuropeanMarket,evidenceProblem,enginePresentation,balancedBrackets} from './engine-throughput-policy.mjs';
 for(const [raw,want]of [['Motor.9',null],['Engine',null],['Benzin 1.2 ecoFLEX.1','1.2 ecoFLEX'],['Diesel 1.3 CDTI.1','1.3 CDTI'],['1.0 MPI.3','1.0 MPI'],['Cupra VZ 2.0 TSI.1','Cupra VZ 2.0 TSI'],['FM2.6 CR CD BSVI.2','FM2.6 CR CD BSVI'],['M102.922','M102.922']])assert.equal(normalizeVariant(raw),want);
 assert.equal(normalizeEngineRows([{variant:'1.6 TDI',powerKwMin:77,powerKwMax:77},{variant:'1.6 TDI.2',powerKwMin:77,powerKwMax:77}]).length,1);
 const ranges=normalizeEngineRows([{variant:'2.0 TSI',availablePowerKw:[150],powerKwMin:150,powerKwMax:150},{variant:'2.0 TSI',availablePowerKw:[150,180],powerKwMin:150,powerKwMax:180}]);assert.deepEqual(ranges[1].availablePowerKw,[180]);
@@ -15,6 +15,8 @@ assert.equal(enginePresentation({variant:null}),null);
 const annotated={variant:'1.6 T.Spark 120 PS \u2013 n\u011bmeck\u00e1 nab\u00eddka 15. 4. 2004',powerKwMin:88,powerKwMax:88};
 const presented=enginePresentation(annotated);assert.equal(presented.variant,'1.6 T.Spark 120 PS');assert.equal(presented.noteCs,annotated.variant);
 assert.deepEqual(enginePresentation(presented),presented);
+assert.equal(enginePresentation({variant:'2.2 diesel (120\u2013180 PS; selected versions)'}).variant,'2.2 diesel');
+assert(!balancedBrackets('2.2 diesel (120\u2013180 PS'));assert(balancedBrackets('M10 (316)'));
 const editorial=enginePresentation({variant:'Evropsk\u00e1 tov\u00e1rn\u00ed nab\u00eddka A4 2019: 2.0 TDI; dolo\u017een\u00fd v\u00fdb\u011br.'});assert.equal(editorial.variant,'2.0 TDI');assert(editorial.noteCs.includes('2019'));
 const merged=normalizeEngineRows([{variant:'1.6 T.Spark 120 PS',powerKwMin:88,powerKwMax:88},annotated]);assert.equal(merged.length,1);assert.equal(merged[0].noteCs,annotated.variant);
 console.log('PASS: 8 names, 2 deduplication, 2 market, 3 validator evidence and 7 presentation cases');

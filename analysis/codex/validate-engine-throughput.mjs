@@ -4,10 +4,11 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual as equal} from 'node:util';
 import {rejectEngine,normalizeEngineRows,normalizeVariant,powerValues,evidenceProblem} from './engine-throughput-policy.mjs';
+import {projectCatalogueBaseline,validateOverlayFiles,overlayManifest} from './catalogue-overlays.mjs';
 const root='analysis/codex/engine-throughput';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const session=read(`${root}/session.json`),revision=session.baselineRevision;
-const git=p=>JSON.parse(cp.execFileSync('git',['show',`${revision}:${p}`],{encoding:'utf8',maxBuffer:80e6}));
+const git=p=>projectCatalogueBaseline(p,JSON.parse(cp.execFileSync('git',['show',`${revision}:${p}`],{encoding:'utf8',maxBuffer:80e6})));
 const hash=v=>crypto.createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const reports=fs.readdirSync(root).filter(f=>/^batch-\d+\.json$/.test(f)).map(f=>({file:f,data:read(`${root}/${f}`)})).sort((a,b)=>a.data.batch-b.data.batch);
 assert(reports.length,'No completed batch report');
@@ -76,7 +77,8 @@ for(const [make,lines]of Object.entries(oldIndex)){
 }
 // All ordinal-coupled data must stay byte-identical in an engine-only batch.
 const changed=cp.execFileSync('git',['diff','--name-only',revision,'--','src/data/stats','src/data/listing-stats.json','src/data/catalog/model-lines-auto.json','src/data/model-lines-index.json','src/data/front-drawings.json','src/data/front-drawing-review.json','public/front'],{encoding:'utf8'}).trim();
-assert.equal(changed,'','A protected identity/statistics/drawing file changed');
+const declared=validateOverlayFiles();
+assert.deepEqual(changed.split(/\r?\n/).filter(Boolean).filter(p=>!declared.includes(p)),[],'An undeclared identity/statistics/drawing file changed');
 const front=read('src/data/front-drawings.json');let drawingEntries=0,statsKeys=0;
 for(const [key,rows]of Object.entries(front))for(const [i]of rows){assert(fs.existsSync(`public/front/${key}--${i}.webp`));drawingEntries++;}
 for(const identity of touched.keys()){
@@ -86,7 +88,7 @@ for(const identity of touched.keys()){
 const counts=read('analysis/codex/catalog-completeness-audit.json').counts;
 const result={result:'PASS',batches:reports.map(r=>r.data.batch),attemptedLines:reports.reduce((n,r)=>n+r.data.lines.length,0),
  touchedLines:touched.size,engineRowsAdded:added,baselineCardsNormalized,baselineOnlyNormalized,untouchedSourceCardsUnchanged:untouched,untouchedGeneratedCardsUnchanged:untouchedPublic,
- generationStructureDatesBodiesFaceliftsPhotos:'unchanged',listingIds:'unchanged',drawingsHoldsStatistics:'byte-identical',drawingEntriesChecked:drawingEntries,affectedStatisticsKeysChecked:statsKeys,
+ generationStructureDatesBodiesFaceliftsPhotos:overlayManifest()?'unchanged except explicit catalogue-overlays.json operations':'unchanged',listingIds:'existing ids unchanged',drawingsHoldsStatistics:declared.length?'exact declared migration; all other coupled files byte-identical':'byte-identical',drawingEntriesChecked:drawingEntries,affectedStatisticsKeysChecked:statsKeys,
  countsAfter:counts};
 for(const report of reports){report.data.validationScope='whole-current-session';report.data.validation=result;fs.writeFileSync(`${root}/${report.file}`,JSON.stringify(report.data,null,2)+'\n');}
 fs.writeFileSync(`${root}/validation.json`,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

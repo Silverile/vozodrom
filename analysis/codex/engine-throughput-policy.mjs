@@ -9,6 +9,11 @@ export function normalizeVariant(value){
 }
 export const powerValues=e=>[...new Set((e.availablePowerKw?.length?e.availablePowerKw:[e.powerKwMin,e.powerKwMax]).filter(Number.isFinite))];
 const folded=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+export function balancedBrackets(value){
+ const stack=[],pairs={')':'(',']':'[','}':'{'};
+ for(const c of value??''){if('([{'.includes(c))stack.push(c);else if(Object.hasOwn(pairs,c)&&stack.pop()!==pairs[c])return false;}
+ return stack.length===0;
+}
 export function labelFromStoredFacts(e){
  const fuel={petrol:'benzin',diesel:'diesel','petrol-cng':'benzin/CNG','petrol-lpg':'benzin/LPG','petrol-mhev':'benzin mHEV','diesel-mhev':'diesel mHEV','petrol-hev':'benzin HEV','petrol-phev':'benzin PHEV',electric:'Elektromotor',hydrogen:'Vodíkový pohon'}[e.fuel]??null;
  const size=e.displacementLitresNominal>0?`${e.displacementLitresNominal} l`:e.displacementCc>0?`${e.displacementCc} cm³`:null;
@@ -25,11 +30,13 @@ export function enginePresentation(engine){
  let v=name;
  // Keep technical wording before an editorial qualifier. Preserve the full old text below.
  if(v.includes(';'))v=v.split(';')[0].trim();
+ // A qualifier can itself contain a semicolon; discard an incomplete bracketed tail.
+ if(!balancedBrackets(v))v=v.replace(/\s*\([^)]*$/, '').trim();
  if(v.includes(':')&&/nabidka|prospekt|brochure|technical sheet|press kit|comparison sheet/i.test(folded(v.split(':')[0])))v=v.slice(v.indexOf(':')+1).trim();
  v=v.replace(/\s+[–—]\s+.*$/u,part=>/nabidka|profil|udaj|muze|dolozen|zdroj|prospekt|vyber|historick|specifikace/i.test(folded(part))?'':part);
  v=v.replace(/\s*\([^)]*\)/g,part=>/nabidka|vyber|dolozen|prospekt|overen|specifikace|vykon podle verze/i.test(folded(part))?'':part).trim();
  if(/comparison sheet|technical sheet|press kit|brochure/i.test(v)||v.length>75)v=labelFromStoredFacts(e)??v.split(/[;,]/)[0].slice(0,75).trim();
- if(v!==name){e.noteCs=[e.noteCs,name].filter((x,i,a)=>x&&a.indexOf(x)===i).join('\n');e.variant=v;}
+ if(v!==name){e.noteCs=e.noteCs?.includes(name)?e.noteCs:[e.noteCs,name].filter((x,i,a)=>x&&a.indexOf(x)===i).join('\n');e.variant=v;}
  else e.variant=name;
  return e;
 }

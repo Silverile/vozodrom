@@ -22,12 +22,12 @@
       {
         "wave": 1,
         "lines": 478,
-        "visited": 410
+        "visited": 478
       },
       {
         "wave": 2,
         "lines": 630,
-        "visited": 0
+        "visited": 50
       },
       {
         "wave": 3,
@@ -36,162 +36,11 @@
       }
     ],
     "completeLines": 0,
-    "linesEnriched": 177,
-    "unvisited": 4399,
-    "linesVisited": 410
+    "linesEnriched": 199,
+    "unvisited": 4281,
+    "linesVisited": 528
   },
-  "nextDataTargets": [
-    {
-      "makeSlug": "fiat",
-      "lineSlug": "ulysse",
-      "fleetN": 1441
-    },
-    {
-      "makeSlug": "suzuki",
-      "lineSlug": "wagon-r",
-      "fleetN": 1437
-    },
-    {
-      "makeSlug": "alfa-romeo",
-      "lineSlug": "stelvio",
-      "fleetN": 1434
-    },
-    {
-      "makeSlug": "alfa-romeo",
-      "lineSlug": "giulietta",
-      "fleetN": 1422
-    },
-    {
-      "makeSlug": "citroen",
-      "lineSlug": "c-crosser",
-      "fleetN": 1418
-    },
-    {
-      "makeSlug": "mercedes-benz",
-      "lineSlug": "trida-g",
-      "fleetN": 1415
-    },
-    {
-      "makeSlug": "audi",
-      "lineSlug": "a1",
-      "fleetN": 1403
-    },
-    {
-      "makeSlug": "bmw",
-      "lineSlug": "x2",
-      "fleetN": 1401
-    },
-    {
-      "makeSlug": "mitsubishi",
-      "lineSlug": "galant",
-      "fleetN": 1393
-    },
-    {
-      "makeSlug": "opel",
-      "lineSlug": "rekord",
-      "fleetN": 1386
-    },
-    {
-      "makeSlug": "porsche",
-      "lineSlug": "panamera",
-      "fleetN": 1381
-    },
-    {
-      "makeSlug": "fiat",
-      "lineSlug": "talento",
-      "fleetN": 1377
-    },
-    {
-      "makeSlug": "mini",
-      "lineSlug": "countryman",
-      "fleetN": 1360
-    },
-    {
-      "makeSlug": "moskvic",
-      "lineSlug": "2138",
-      "fleetN": 1343
-    },
-    {
-      "makeSlug": "jaguar",
-      "lineSlug": "f-pace",
-      "fleetN": 1337
-    },
-    {
-      "makeSlug": "nissan",
-      "lineSlug": "nv200",
-      "fleetN": 1329
-    },
-    {
-      "makeSlug": "mercedes-benz",
-      "lineSlug": "300-350-predvalecne",
-      "fleetN": 1328
-    },
-    {
-      "makeSlug": "audi",
-      "lineSlug": "a2",
-      "fleetN": 1324
-    },
-    {
-      "makeSlug": "citroen",
-      "lineSlug": "zx",
-      "fleetN": 1323
-    },
-    {
-      "makeSlug": "nissan",
-      "lineSlug": "leaf",
-      "fleetN": 1316
-    },
-    {
-      "makeSlug": "bmw",
-      "lineSlug": "z3",
-      "fleetN": 1304
-    },
-    {
-      "makeSlug": "porsche",
-      "lineSlug": "macan",
-      "fleetN": 1298
-    },
-    {
-      "makeSlug": "opel",
-      "lineSlug": "ascona",
-      "fleetN": 1292
-    },
-    {
-      "makeSlug": "bmw",
-      "lineSlug": "328",
-      "fleetN": 1291
-    },
-    {
-      "makeSlug": "toyota",
-      "lineSlug": "highlander",
-      "fleetN": 1289
-    },
-    {
-      "makeSlug": "ford",
-      "lineSlug": "explorer",
-      "fleetN": 1287
-    },
-    {
-      "makeSlug": "nissan",
-      "lineSlug": "cabstar",
-      "fleetN": 1283
-    },
-    {
-      "makeSlug": "volvo",
-      "lineSlug": "ex30",
-      "fleetN": 1274
-    },
-    {
-      "makeSlug": "jaguar",
-      "lineSlug": "xf",
-      "fleetN": 1272
-    },
-    {
-      "makeSlug": "fiat",
-      "lineSlug": "500x",
-      "fleetN": 1261
-    }
-  ],
+  "nextDataTargets": [],
   "batches": [
     {
       "id": "catalog-wave-1-batch-1",
@@ -236,6 +85,21 @@
     {
       "id": "engine-throughput-batch-9",
       "report": "analysis/codex/engine-throughput/batch-9.json",
+      "validation": "analysis/codex/engine-throughput/validation.json"
+    },
+    {
+      "id": "engine-throughput-batch-10",
+      "report": "analysis/codex/engine-throughput/batch-10.json",
+      "validation": "analysis/codex/engine-throughput/validation.json"
+    },
+    {
+      "id": "engine-throughput-batch-11",
+      "report": "analysis/codex/engine-throughput/batch-11.json",
+      "validation": "analysis/codex/engine-throughput/validation.json"
+    },
+    {
+      "id": "engine-throughput-batch-12",
+      "report": "analysis/codex/engine-throughput/batch-12.json",
       "validation": "analysis/codex/engine-throughput/validation.json"
     }
   ],
@@ -540,9 +404,7 @@
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
+      "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
@@ -629,7 +491,6 @@
       "generationCount": 6,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1
       ],
       "generationsWithEnginePowerGaps": [],
@@ -830,7 +691,6 @@
       "generationCount": 8,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1,
         2,
         3,
@@ -929,7 +789,6 @@
       "generationCount": 10,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1,
         2,
         3,
@@ -938,7 +797,8 @@
         6,
         7,
         8,
-        9
+        9,
+        10
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -6821,8 +6681,8 @@
       "lineSlug": "ulysse",
       "fleetN": 1441,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -6831,125 +6691,127 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "suzuki",
       "lineSlug": "wagon-r",
       "fleetN": 1437,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "alfa-romeo",
       "lineSlug": "stelvio",
       "fleetN": 1434,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "alfa-romeo",
       "lineSlug": "giulietta",
       "fleetN": 1422,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
-        1,
-        2
+        1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "citroen",
       "lineSlug": "c-crosser",
       "fleetN": 1418,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mercedes-benz",
       "lineSlug": "trida-g",
       "fleetN": 1415,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 5,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1,
         2,
-        3,
         4
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "a1",
       "fleetN": 1403,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0,
-        1
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "bmw",
       "lineSlug": "x2",
       "fleetN": 1401,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mitsubishi",
       "lineSlug": "galant",
       "fleetN": 1393,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 9,
       "announcedOnlyGenerations": [],
@@ -6964,15 +6826,16 @@
         7,
         8
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "opel",
       "lineSlug": "rekord",
       "fleetN": 1386,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 8,
       "announcedOnlyGenerations": [],
@@ -6986,32 +6849,32 @@
         6,
         7
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "porsche",
       "lineSlug": "panamera",
       "fleetN": 1381,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "talento",
       "fleetN": 1377,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -7019,77 +6882,79 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mini",
       "lineSlug": "countryman",
       "fleetN": 1360,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
-        1,
-        2
+        1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "moskvic",
       "lineSlug": "2138",
       "fleetN": 1343,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "jaguar",
       "lineSlug": "f-pace",
       "fleetN": 1337,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "nv200",
       "fleetN": 1329,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mercedes-benz",
       "lineSlug": "300-350-predvalecne",
       "fleetN": 1328,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -7098,45 +6963,46 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "a2",
       "fleetN": 1324,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "citroen",
       "lineSlug": "zx",
       "fleetN": 1323,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "leaf",
       "fleetN": 1316,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -7145,46 +7011,48 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "bmw",
       "lineSlug": "z3",
       "fleetN": 1304,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "porsche",
       "lineSlug": "macan",
       "fleetN": 1298,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "opel",
       "lineSlug": "ascona",
       "fleetN": 1292,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -7193,86 +7061,92 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "bmw",
       "lineSlug": "328",
       "fleetN": 1291,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "toyota",
       "lineSlug": "highlander",
       "fleetN": 1289,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "explorer",
       "fleetN": 1287,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 7,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         4
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "cabstar",
       "fleetN": 1283,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "volvo",
       "lineSlug": "ex30",
       "fleetN": 1274,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "jaguar",
       "lineSlug": "xf",
       "fleetN": 1272,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 5,
       "announcedOnlyGenerations": [],
@@ -7283,58 +7157,60 @@
         3,
         4
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "500x",
       "fleetN": 1261,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mitsubishi",
       "lineSlug": "carisma",
       "fleetN": 1255,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "wartburg",
       "lineSlug": "311",
       "fleetN": 1245,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "hyundai",
       "lineSlug": "sonata",
       "fleetN": 1244,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 8,
       "announcedOnlyGenerations": [],
@@ -7343,206 +7219,216 @@
         2,
         4,
         7
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "ritmo",
       "fleetN": 1239,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "renault",
       "lineSlug": "talisman",
       "fleetN": 1239,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         0
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "skoda",
       "lineSlug": "forman",
       "fleetN": 1234,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "bmw",
       "lineSlug": "335",
       "fleetN": 1225,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "tesla",
       "lineSlug": "model-s",
       "fleetN": 1223,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "opel",
       "lineSlug": "tigra",
       "fleetN": 1212,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "simca",
       "lineSlug": "1301-1501",
       "fleetN": 1208,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         0
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "opel",
       "lineSlug": "antara",
       "fleetN": 1202,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "multipla",
       "fleetN": 1201,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "chevrolet",
       "lineSlug": "camaro",
       "fleetN": 1170,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "4007",
       "fleetN": 1161,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "ecosport",
       "fleetN": 1139,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "daewoo",
       "lineSlug": "lanos",
       "fleetN": 1133,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "lancia",
       "lineSlug": "delta",
       "fleetN": 1123,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -7551,60 +7437,64 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "607",
       "fleetN": 1122,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "edge",
       "fleetN": 1101,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         2
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "128",
       "fleetN": 1095,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-10",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "isuzu",
       "lineSlug": "d-max",
       "fleetN": 1095,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -7613,31 +7503,32 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "alfa-romeo",
       "lineSlug": "giulia",
       "fleetN": 1091,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1
+        0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "kia",
       "lineSlug": "carnival",
       "fleetN": 1086,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
@@ -7647,58 +7538,62 @@
         2,
         3
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "chevrolet",
       "lineSlug": "corvette",
       "fleetN": 1076,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "land-rover",
       "lineSlug": "range-rover-velar",
       "fleetN": 1075,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "transit-courier",
       "fleetN": 1073,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "toyota",
       "lineSlug": "celica",
       "fleetN": 1072,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 7,
       "announcedOnlyGenerations": [],
@@ -7710,71 +7605,76 @@
         3,
         4,
         5
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "tatra",
       "lineSlug": "613",
       "fleetN": 1066,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "sq7",
       "fleetN": 1063,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 0,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "toyota",
       "lineSlug": "prius",
       "fleetN": 1054,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 5,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "skoda",
       "lineSlug": "garde",
       "fleetN": 1052,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "chrysler",
       "lineSlug": "300",
       "fleetN": 1040,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
@@ -7784,30 +7684,32 @@
         2,
         3
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "lada",
       "lineSlug": "samara",
       "fleetN": 1038,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "porsche",
       "lineSlug": "boxster",
       "fleetN": 1015,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
@@ -7817,30 +7719,32 @@
         2,
         3
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "citroen",
       "lineSlug": "ax",
       "fleetN": 1010,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "taunus",
       "fleetN": 1010,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -7848,90 +7752,94 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "chrysler",
       "lineSlug": "pt-cruiser",
       "fleetN": 1003,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "lada",
       "lineSlug": "2104",
       "fleetN": 1000,
       "wave": 1,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-11",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "lexus",
       "lineSlug": "lbx",
       "fleetN": 997,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "renault",
       "lineSlug": "11",
       "fleetN": 992,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         0
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "q2",
       "fleetN": 991,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "chevrolet",
       "lineSlug": "lacetti",
       "fleetN": 958,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -7939,30 +7847,32 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "1007",
       "fleetN": 945,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ssangyong-kgm",
       "lineSlug": "torres",
       "fleetN": 941,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -7970,30 +7880,32 @@
       "generationsWithEnginePowerGaps": [
         0,
         1
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "108",
       "fleetN": 932,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "barkas",
       "lineSlug": "b1000",
       "fleetN": 929,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -8001,56 +7913,60 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "smart",
       "lineSlug": "forfour",
       "fleetN": 927,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "already-covered",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "barchetta",
       "fleetN": 925,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "volvo",
       "lineSlug": "s90",
       "fleetN": 922,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "dacia",
       "lineSlug": "spring",
       "fleetN": 918,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -8058,160 +7974,167 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "kia",
       "lineSlug": "optima",
       "fleetN": 911,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 6,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
         1,
-        2,
-        3,
         4,
         5
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "volvo",
       "lineSlug": "c70",
       "fleetN": 903,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "already-covered",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "tatra",
       "lineSlug": "57",
       "fleetN": 901,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "almera-tino",
       "fleetN": 900,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "moskvic",
       "lineSlug": "407",
       "fleetN": 884,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "bipper",
       "fleetN": 877,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "s6",
       "fleetN": 870,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 0,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "hyundai",
       "lineSlug": "terracan",
       "fleetN": 866,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "already-covered",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "hyundai",
       "lineSlug": "staria",
       "fleetN": 865,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "already-covered",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "seat",
       "lineSlug": "exeo",
       "fleetN": 861,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "renault",
       "lineSlug": "4",
       "fleetN": 849,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -8219,75 +8142,78 @@
       "generationsWithEnginePowerGaps": [
         0,
         1
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mg",
       "lineSlug": "mg3",
       "fleetN": 848,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "408",
       "fleetN": 844,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "renault",
       "lineSlug": "zoe",
       "fleetN": 843,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "tempra",
       "fleetN": 836,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "mercedes-benz",
       "lineSlug": "amg-gt",
       "fleetN": 827,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -8295,30 +8221,32 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "renault",
       "lineSlug": "25",
       "fleetN": 824,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [
         0
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "rs6",
       "fleetN": 821,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 4,
       "announcedOnlyGenerations": [],
@@ -8328,44 +8256,46 @@
         2,
         3
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "toyota",
       "lineSlug": "bz4x",
       "fleetN": 818,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "jaguar",
       "lineSlug": "x-type",
       "fleetN": 804,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "daihatsu",
       "lineSlug": "terios",
       "fleetN": 801,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
@@ -8373,30 +8303,32 @@
         0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "citroen",
       "lineSlug": "nemo",
       "fleetN": 784,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "rs3",
       "fleetN": 782,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -8405,15 +8337,16 @@
         1,
         2
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "interstar",
       "fleetN": 777,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 3,
       "announcedOnlyGenerations": [],
@@ -8423,15 +8356,16 @@
       ],
       "generationsWithEnginePowerGaps": [
         2
-      ]
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "honda",
       "lineSlug": "prelude",
       "fleetN": 756,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 6,
       "announcedOnlyGenerations": [],
@@ -8443,101 +8377,106 @@
         4,
         5
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "citroen",
       "lineSlug": "xm",
       "fleetN": 754,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        0
-      ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithoutEngines": [],
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "alfa-romeo",
       "lineSlug": "gt",
       "fleetN": 753,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "seat",
       "lineSlug": "mii",
       "fleetN": 753,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "already-covered",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "volkswagen",
       "lineSlug": "id-buzz",
       "fleetN": 752,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "peugeot",
       "lineSlug": "806",
       "fleetN": 744,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "audi",
       "lineSlug": "q8-e-tron",
       "fleetN": 740,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "ford",
       "lineSlug": "cortina",
       "fleetN": 736,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 5,
       "announcedOnlyGenerations": [],
@@ -8548,31 +8487,32 @@
         3,
         4
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "nissan",
       "lineSlug": "primastar",
       "fleetN": 733,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "engines-added",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
         1
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "suzuki",
       "lineSlug": "alto",
       "fleetN": 729,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 11,
       "announcedOnlyGenerations": [],
@@ -8583,28 +8523,30 @@
         7,
         10
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "subaru",
       "lineSlug": "brz",
       "fleetN": 728,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "lexus",
       "lineSlug": "is",
       "fleetN": 726,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 6,
       "announcedOnlyGenerations": [],
@@ -8616,37 +8558,40 @@
         4,
         5
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "fiat",
       "lineSlug": "linea",
       "fleetN": 725,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "honda",
       "lineSlug": "city",
       "fleetN": 724,
       "wave": 2,
-      "status": "not-reviewed-in-sweep",
-      "batch": null,
+      "status": "no-source",
+      "batch": "engine-throughput-batch-12",
       "cardPresent": true,
       "generationCount": 1,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0
       ],
-      "generationsWithEnginePowerGaps": []
+      "generationsWithEnginePowerGaps": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
     {
       "makeSlug": "suzuki",
@@ -72409,5 +72354,13 @@
         0
       ]
     }
-  ]
+  ],
+  "secondarySourceSummary": {
+    "additionalEngineRows": 24,
+    "newGenerationEngineRows": 9,
+    "newGeneration": "bmw/rada-3/E21",
+    "remainingWave1Lines": 256,
+    "remainingWave1Generations": 550,
+    "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
+  }
 }

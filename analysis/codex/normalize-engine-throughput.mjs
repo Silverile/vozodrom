@@ -5,13 +5,14 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual as equal} from 'node:util';
 import {normalizeEngineRows,normalizeVariant,enginePresentation} from './engine-throughput-policy.mjs';
+import {projectCatalogueBaseline,overlayManifest} from './catalogue-overlays.mjs';
 const root='analysis/codex/engine-throughput',read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const revision=read(`${root}/session.json`).baselineRevision,hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const reports=fs.readdirSync(root).filter(f=>/^batch-\d+\.json$/.test(f)).map(file=>({file,data:read(`${root}/${file}`)}));
 const records=new Map(reports.flatMap(r=>r.data.lines.map(l=>[`${l.make}/${l.line}`,l])));
 const cleanup=[],allCards=new Map(),baselineCards=new Map();
 for(const dir of ['src/data/catalog/model-cards','src/data/model-cards'])for(const f of fs.readdirSync(dir).filter(f=>f.endsWith('.json'))){
- const file=`${dir}/${f}`,cards=read(file),before=JSON.parse(cp.execFileSync('git',['show',`${revision}:${file}`],{encoding:'utf8',maxBuffer:30e6}));let dirty=false;
+ const file=`${dir}/${f}`,cards=read(file),before=projectCatalogueBaseline(file,JSON.parse(cp.execFileSync('git',['show',`${revision}:${file}`],{encoding:'utf8',maxBuffer:30e6})));let dirty=false;
  for(const card of cards){
   const key=`${card.makeSlug}/${card.lineSlug}`,old=before.find(c=>c.makeSlug===card.makeSlug&&c.lineSlug===card.lineSlug),record=records.get(key);
   const normalizedOld=structuredClone(old);for(const g of normalizedOld.generations)g.engines=normalizeEngineRows(g.engines);
@@ -35,6 +36,7 @@ for(const report of reports){
    return (g.engines??[]).slice(old.length).map(e=>({generation:i,fuel:e.fuel,cc:e.displacementCc,litres:e.displacementLitresNominal,kw:e.powerKwMin,variant:e.variant,sources:e.sources}));
   });
   r.enginesAdded=r.added.length;r.afterHash=hash(card);
+  if(overlayManifest()){const projected=structuredClone(before);for(const g of projected.generations)g.engines=normalizeEngineRows(g.engines);r.preOverlayBeforeHash??=r.beforeHash;r.beforeHash=hash(projected);r.baselineProjection='catalogue-overlays.json';}
   if(!r.enginesAdded&&r.status==='engines-added'){r.status='already-covered';r.reason='Normalized engine/power already present.';}
  }
  report.data.summary.touched=report.data.lines.filter(r=>r.enginesAdded).length;report.data.summary.enginesAdded=report.data.lines.reduce((s,r)=>s+r.enginesAdded,0);

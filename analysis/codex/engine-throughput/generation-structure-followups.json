@@ -1,7 +1,7 @@
 {
   "researchedOn": "2026-10-31",
-  "generationChangesApplied": 0,
-  "reason": "Engine-only batches stay independently publishable. These gaps need coupled index/statistics migrations; no speculative structure edits.",
+  "generationChangesApplied": 1,
+  "reason": "E21 inserted with coupled drawings/statistics/listing-id validation; Jumper and 307 remain follow-ups.",
   "reviews": [
     {
       "make": "bmw",
@@ -18,7 +18,7 @@
         "Resolve production bounds for all body styles before closing F3x; do not copy a sedan-only end date onto the family.",
         "Future G50/NA0 announcement is not series production."
       ],
-      "nextAction": "Coupled migration: insert E21, merge duplicate technical-sheet entries into matching chassis, retain sources/engine rows, remap drawings/holds/stats and document listing-id aliases.",
+      "nextAction": "E21 insertion complete. Duplicate technical-sheet entries and unresolved F30 body-specific end dates remain a separate coupled migration.",
       "currentGenerations": [
         {
           "index": 0,
@@ -91,7 +91,8 @@
           "to": null
         }
       ],
-      "status": "verified-gap-migration-deferred"
+      "status": "e21-inserted-duplicates-remain",
+      "appliedMigration": "catalogue-overlays.json"
     },
     {
       "make": "citroen",

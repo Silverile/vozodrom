@@ -13,8 +13,8 @@
     "lines": 4809,
     "cards": 4648,
     "linesWithoutCard": 161,
-    "generations": 6735,
-    "generationsWithEngines": 1999,
+    "generations": 6736,
+    "generationsWithEngines": 2027,
     "generationsWithEngineRowsWithoutPower": 607,
     "generationsWithTechnicalVersions": 2112,
     "generationsWithEquipmentLines": 32,
@@ -275,19 +275,10 @@
         ]
       },
       {
-        "makeSlug": "kia",
-        "lineSlug": "ceed",
-        "fleetN": 59185,
-        "generationIndexes": [
-          0
-        ]
-      },
-      {
         "makeSlug": "opel",
         "lineSlug": "astra",
         "fleetN": 51952,
         "generationIndexes": [
-          0,
           1
         ]
       },
@@ -304,7 +295,6 @@
         "lineSlug": "rada-5",
         "fleetN": 38142,
         "generationIndexes": [
-          0,
           1,
           2,
           3,
@@ -334,7 +324,6 @@
         "lineSlug": "rada-3",
         "fleetN": 32703,
         "generationIndexes": [
-          0,
           1,
           2,
           3,
@@ -343,7 +332,8 @@
           6,
           7,
           8,
-          9
+          9,
+          10
         ]
       },
       {
@@ -461,6 +451,14 @@
         "makeSlug": "peugeot",
         "lineSlug": "207",
         "fleetN": 21746,
+        "generationIndexes": [
+          0
+        ]
+      },
+      {
+        "makeSlug": "bmw",
+        "lineSlug": "x5",
+        "fleetN": 21733,
         "generationIndexes": [
           0
         ]
@@ -811,7 +809,8 @@
           2,
           3,
           4,
-          5
+          5,
+          6
         ]
       },
       {
@@ -1797,7 +1796,6 @@
           "index": 0,
           "fleetN": 18094,
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -1976,7 +1974,6 @@
           "index": 0,
           "fleetN": 5129,
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -4593,7 +4590,7 @@
           "from": 2006,
           "to": 2012,
           "fleetN": 18094,
-          "engineRows": 0,
+          "engineRows": 11,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -4606,10 +4603,10 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Kia_Ceed",
             "https://www.kia.com/se/aga/support/instruktionsbocker/ceed/",
-            "https://en.wikipedia.org/w/index.php?title=Kia_Ceed&oldid=1380825792"
+            "https://en.wikipedia.org/w/index.php?title=Kia_Ceed&oldid=1380825792",
+            "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -5069,7 +5066,7 @@
           "from": 1991,
           "to": 2003,
           "fleetN": 5129,
-          "engineRows": 0,
+          "engineRows": 4,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -5080,10 +5077,10 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1381589027"
+            "https://en.wikipedia.org/w/index.php?oldid=1381589027",
+            "https://en.wikipedia.org/wiki/Opel_Astra"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -6699,7 +6696,7 @@
           "from": 1972,
           "to": 1981,
           "fleetN": 315,
-          "engineRows": 0,
+          "engineRows": 9,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -6711,10 +6708,10 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://www.bmw.co.uk/content/bmw/marketGB/bmw_co_uk/en/all-models/bmw-5-series-overview.html",
-            "https://cs.wikipedia.org/wiki/BMW_%C5%99ady_5"
+            "https://cs.wikipedia.org/wiki/BMW_%C5%99ady_5",
+            "https://en.wikipedia.org/wiki/BMW_5_Series_(E12)"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -7526,7 +7523,7 @@
       "name": "Řada 3",
       "fleetN": 32703,
       "cardPresent": true,
-      "generationCount": 10,
+      "generationCount": 11,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
         "generation-field-gaps"
@@ -7534,6 +7531,31 @@
       "generations": [
         {
           "index": 0,
+          "name": "Řada 3 (E21)",
+          "code": "E21",
+          "from": 1975,
+          "to": 1983,
+          "fleetN": null,
+          "engineRows": 9,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/BMW_3_Series_(E21)"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
           "name": "Řada 3 (E30)",
           "code": "E30",
           "from": 1982,
@@ -7559,7 +7581,7 @@
           ]
         },
         {
-          "index": 1,
+          "index": 2,
           "name": "Řada 3 (E36)",
           "code": "E36",
           "from": 1990,
@@ -7585,7 +7607,7 @@
           ]
         },
         {
-          "index": 2,
+          "index": 3,
           "name": "Řada 3 (E46)",
           "code": "E46",
           "from": 1997,
@@ -7611,7 +7633,7 @@
           ]
         },
         {
-          "index": 3,
+          "index": 4,
           "name": "Řada 3 (E90)",
           "code": "E90",
           "from": 2004,
@@ -7637,7 +7659,7 @@
           ]
         },
         {
-          "index": 4,
+          "index": 5,
           "name": "Řada 3 (F30)",
           "code": "F30",
           "from": 2011,
@@ -7663,7 +7685,7 @@
           ]
         },
         {
-          "index": 5,
+          "index": 6,
           "name": "Řada 3 (G20)",
           "code": "G20",
           "from": 2018,
@@ -7689,7 +7711,7 @@
           ]
         },
         {
-          "index": 6,
+          "index": 7,
           "name": "Řada 3 (G20)",
           "code": "G20",
           "from": null,
@@ -7714,7 +7736,7 @@
           ]
         },
         {
-          "index": 7,
+          "index": 8,
           "name": "Řada 3 (F30)",
           "code": "F30",
           "from": null,
@@ -7739,7 +7761,7 @@
           ]
         },
         {
-          "index": 8,
+          "index": 9,
           "name": "E90 Sedan — technický list UK03/2005",
           "code": "E90",
           "from": null,
@@ -7768,7 +7790,7 @@
           ]
         },
         {
-          "index": 9,
+          "index": 10,
           "name": "E46 Sedan320d — tovární profil2001",
           "code": "E46",
           "from": null,
@@ -37400,7 +37422,7 @@
           "from": 2010,
           "to": 2020,
           "fleetN": 1338,
-          "engineRows": 0,
+          "engineRows": 13,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -37420,7 +37442,6 @@
             "https://en.wikipedia.org/w/index.php?title=Alfa_Romeo_Giulietta_(2010)&oldid=1373436567"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -37487,7 +37508,7 @@
           "from": 1979,
           "to": null,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 7,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -37503,7 +37524,6 @@
             "https://www.wikidata.org/wiki/Q659251"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -37571,7 +37591,7 @@
           "from": 2018,
           "to": 2024,
           "fleetN": 550,
-          "engineRows": 0,
+          "engineRows": 4,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -37587,7 +37607,6 @@
             "https://www.wikidata.org/wiki/Q659251"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -37641,7 +37660,7 @@
           "from": 2010,
           "to": 2018,
           "fleetN": 1165,
-          "engineRows": 0,
+          "engineRows": 13,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -37655,7 +37674,6 @@
             "https://en.wikipedia.org/w/index.php?oldid=1377099630"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -37667,7 +37685,7 @@
           "from": 2018,
           "to": 2026,
           "fleetN": 237,
-          "engineRows": 0,
+          "engineRows": 5,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -37681,7 +37699,6 @@
             "https://en.wikipedia.org/w/index.php?oldid=1377099630"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -38242,7 +38259,7 @@
           "from": 2009,
           "to": 2016,
           "fleetN": 444,
-          "engineRows": 0,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -38255,10 +38272,10 @@
           "sources": [
             "https://newsroom.porsche.jp/dam/jcr%3Ab08d4132-e595-475a-b654-61a5f0b34f4b/DE_Porsche%20Werk%20Leipzig_Pressemappe.pdf",
             "https://newsroom.porsche.com/en_AE/2023/products/porsche-panamera-world-premiere-shanghai-34450.html",
-            "https://en.wikipedia.org/w/index.php?oldid=1380842326"
+            "https://en.wikipedia.org/w/index.php?oldid=1380842326",
+            "https://de.wikipedia.org/w/index.php?oldid=268173148"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -38270,7 +38287,7 @@
           "from": 2016,
           "to": 2023,
           "fleetN": 664,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -38288,7 +38305,6 @@
             "https://newsroom.porsche.com/en/company/leipzig/porsche-leipzig-factory.html"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -38466,7 +38482,7 @@
           "from": 2023,
           "to": null,
           "fleetN": 432,
-          "engineRows": 0,
+          "engineRows": 3,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 2,
           "technicalVersionRowsWithoutPower": [],
@@ -38484,7 +38500,6 @@
             "https://en.wikipedia.org/wiki/Mini_Countryman"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -38550,7 +38565,7 @@
           "from": 2016,
           "to": 2025,
           "fleetN": 1337,
-          "engineRows": 0,
+          "engineRows": 10,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -38564,7 +38579,6 @@
             "https://en.wikipedia.org/wiki/Jaguar_F-Pace"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -38724,7 +38738,7 @@
           "from": 1999,
           "to": 2005,
           "fleetN": 1308,
-          "engineRows": 0,
+          "engineRows": 5,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -38739,7 +38753,6 @@
             "https://www.wikidata.org/wiki/Q741656"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -38941,7 +38954,7 @@
           "from": 2013,
           "to": 2026,
           "fleetN": 941,
-          "engineRows": 0,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -38959,7 +38972,6 @@
             "https://www.motor1.com/news/801083/porsche-gas-macan-production-ends"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -39492,7 +39504,7 @@
           "from": 2023,
           "to": null,
           "fleetN": 1274,
-          "engineRows": 1,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 5,
           "technicalVersionRowsWithoutPower": [],
@@ -39718,7 +39730,7 @@
           "from": 1995,
           "to": 2004,
           "fleetN": 1250,
-          "engineRows": 0,
+          "engineRows": 11,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -39733,7 +39745,6 @@
             "https://www.wikidata.org/wiki/Q1327305"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -39800,7 +39811,7 @@
           "from": 2019,
           "to": null,
           "fleetN": null,
-          "engineRows": 3,
+          "engineRows": 8,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 4,
           "technicalVersionRowsWithoutPower": [],
@@ -39827,7 +39838,7 @@
           "from": 2014,
           "to": null,
           "fleetN": null,
-          "engineRows": 2,
+          "engineRows": 10,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 3,
           "technicalVersionRowsWithoutPower": [],
@@ -40135,7 +40146,7 @@
           "from": 1990,
           "to": 1995,
           "fleetN": 1224,
-          "engineRows": 0,
+          "engineRows": 3,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 1,
           "technicalVersionRowsWithoutPower": [],
@@ -40153,7 +40164,6 @@
             "https://skoda120.inetbox.sk/_temp/favorit_andrt_malina.pdf"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -40389,7 +40399,7 @@
           "from": 1998,
           "to": 2010,
           "fleetN": 1194,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -40403,7 +40413,6 @@
             "https://en.wikipedia.org/wiki/Fiat_Multipla"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -41005,7 +41014,7 @@
           "from": 2015,
           "to": null,
           "fleetN": 1080,
-          "engineRows": 0,
+          "engineRows": 14,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -41020,7 +41029,6 @@
             "https://www.wikidata.org/wiki/Q2575932"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -42419,7 +42427,7 @@
           "from": 2016,
           "to": 2026,
           "fleetN": 991,
-          "engineRows": 0,
+          "engineRows": 3,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -42434,7 +42442,6 @@
             "https://www.wikidata.org/wiki/Q22927297"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -42882,7 +42889,7 @@
           "from": 2016,
           "to": null,
           "fleetN": 904,
-          "engineRows": 4,
+          "engineRows": 12,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 9,
           "technicalVersionRowsWithoutPower": [],
@@ -42894,7 +42901,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1373918887",
-            "https://de.wikipedia.org/w/index.php?oldid=268812904"
+            "https://de.wikipedia.org/w/index.php?oldid=268812904",
+            "https://de.wikipedia.org/wiki/Volvo_S90_(2016)"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -43041,7 +43049,7 @@
           "from": 2010,
           "to": 2015,
           "fleetN": 189,
-          "engineRows": 0,
+          "engineRows": 8,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -43055,7 +43063,6 @@
             "https://en.wikipedia.org/wiki/Kia_Optima"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -43067,7 +43074,7 @@
           "from": 2015,
           "to": 2020,
           "fleetN": 453,
-          "engineRows": 0,
+          "engineRows": 7,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -43081,7 +43088,6 @@
             "https://en.wikipedia.org/wiki/Kia_Optima"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -43529,7 +43535,7 @@
           "from": 2008,
           "to": 2013,
           "fleetN": 855,
-          "engineRows": 0,
+          "engineRows": 9,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -43546,7 +43552,6 @@
             "https://it.wikipedia.org/wiki/SEAT_Exeo"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -43642,7 +43647,7 @@
           "from": 2008,
           "to": 2011,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -43656,7 +43661,6 @@
             "https://en.wikipedia.org/wiki/MG_3"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -43668,7 +43672,7 @@
           "from": 2011,
           "to": 2024,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 3,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -43679,10 +43683,10 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1375233690"
+            "https://en.wikipedia.org/w/index.php?oldid=1375233690",
+            "https://en.wikipedia.org/wiki/MG_3"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -44133,7 +44137,7 @@
           "from": 2001,
           "to": 2009,
           "fleetN": 305,
-          "engineRows": 0,
+          "engineRows": 5,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -44147,7 +44151,6 @@
             "https://en.wikipedia.org/wiki/Jaguar_X-Type"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -44673,7 +44676,7 @@
           "from": 1989,
           "to": 2000,
           "fleetN": 751,
-          "engineRows": 0,
+          "engineRows": 14,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -44688,7 +44691,6 @@
             "https://www.wikidata.org/wiki/Q658918"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -45062,7 +45064,7 @@
           "from": 2001,
           "to": 2014,
           "fleetN": 717,
-          "engineRows": 0,
+          "engineRows": 6,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -45077,7 +45079,6 @@
             "https://www.wikidata.org/wiki/Q1412098"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]

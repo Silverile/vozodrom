@@ -1,0 +1,5396 @@
+{
+  "schemaVersion": 1,
+  "policy": "Fleet-ordered remaining wave-1 gaps. Visited table-pass status does not mean complete. Announced vehicles are never assigned inferred engine specifications.",
+  "completed": [
+    {
+      "make": "kia",
+      "line": "ceed",
+      "status": "engines-added",
+      "source": "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)",
+      "rows": 11,
+      "note": "Source includes ED body variants into 2013; existing generation years left unchanged per protected-line instruction."
+    },
+    {
+      "make": "opel",
+      "line": "astra",
+      "status": "engines-added",
+      "source": "https://en.wikipedia.org/wiki/Opel_Astra",
+      "rows": 4,
+      "remaining": "Astra G still requires a generation-specific source."
+    },
+    {
+      "make": "bmw",
+      "line": "rada-5",
+      "status": "engines-added",
+      "source": "https://en.wikipedia.org/wiki/BMW_5_Series_(E12)",
+      "rows": 9,
+      "remaining": "Other empty chassis generations remain queued."
+    }
+  ],
+  "deferred": [
+    {
+      "make": "hyundai",
+      "line": "tucson",
+      "status": "deferred-announced-generation",
+      "reason": "Only empty generation is announced NX5; no engine specifications inferred."
+    }
+  ],
+  "migration": {
+    "make": "bmw",
+    "line": "rada-3",
+    "code": "E21",
+    "engineRows": 9
+  },
+  "remainingLines": 256,
+  "remainingGenerations": 550,
+  "queue": [
+    {
+      "make": "hyundai",
+      "line": "tucson",
+      "fleetN": 63988,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Tucson V",
+          "from": 2026,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "astra",
+      "fleetN": 51952,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Astra G – T98",
+          "from": 1998,
+          "to": 2009
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "renault",
+      "line": "clio",
+      "fleetN": 48404,
+      "gaps": [
+        {
+          "index": 5,
+          "name": "Clio VI",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-5",
+      "fleetN": 38142,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "E28",
+          "from": 1981,
+          "to": 1988
+        },
+        {
+          "index": 2,
+          "name": "E34",
+          "from": 1988,
+          "to": 1996
+        },
+        {
+          "index": 3,
+          "name": "E39",
+          "from": 1995,
+          "to": 2004
+        },
+        {
+          "index": 4,
+          "name": "E60 / E61",
+          "from": 2003,
+          "to": 2010
+        },
+        {
+          "index": 6,
+          "name": "G30 / G31",
+          "from": 2017,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "a6",
+      "fleetN": 34002,
+      "gaps": [
+        {
+          "index": 4,
+          "name": "A6 C8 (4K)",
+          "from": 2018,
+          "to": 2025
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c3",
+      "fleetN": 32704,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C3 I – evropská nabídka",
+          "from": 2002,
+          "to": 2010
+        },
+        {
+          "index": 3,
+          "name": "C3 – odlišná indická a jihoamerická rodina",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-3",
+      "fleetN": 32703,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Řada 3 (E30)",
+          "from": 1982,
+          "to": 1994
+        },
+        {
+          "index": 2,
+          "name": "Řada 3 (E36)",
+          "from": 1990,
+          "to": 2000
+        },
+        {
+          "index": 3,
+          "name": "Řada 3 (E46)",
+          "from": 1997,
+          "to": 2006
+        },
+        {
+          "index": 4,
+          "name": "Řada 3 (E90)",
+          "from": 2004,
+          "to": 2013
+        },
+        {
+          "index": 5,
+          "name": "Řada 3 (F30)",
+          "from": 2011,
+          "to": null
+        },
+        {
+          "index": 6,
+          "name": "Řada 3 (G20)",
+          "from": 2018,
+          "to": null
+        },
+        {
+          "index": 7,
+          "name": "Řada 3 (G20)",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 8,
+          "name": "Řada 3 (F30)",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 9,
+          "name": "E90 Sedan — technický list UK03/2005",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 10,
+          "name": "E46 Sedan320d — tovární profil2001",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "sportage",
+      "fleetN": 32278,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "NB – původní SUV",
+          "from": 1993,
+          "to": 2005
+        },
+        {
+          "index": 1,
+          "name": "KM / JE – původní korejská řada",
+          "from": 2004,
+          "to": 2010
+        },
+        {
+          "index": 2,
+          "name": "SL – původní korejská řada",
+          "from": 2010,
+          "to": 2015
+        },
+        {
+          "index": 3,
+          "name": "QL – původní korejská řada",
+          "from": 2015,
+          "to": 2021
+        },
+        {
+          "index": 4,
+          "name": "NQ5 – evropská krátká verze",
+          "from": 2021,
+          "to": null
+        },
+        {
+          "index": 5,
+          "name": "NQ5 – delší karoserie",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "corsa",
+      "fleetN": 28289,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "B",
+          "from": 1993,
+          "to": 2000
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "sprinter",
+      "fleetN": 26571,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W901–W905",
+          "from": 1995,
+          "to": 2006
+        },
+        {
+          "index": 1,
+          "name": "W906",
+          "from": 2006,
+          "to": 2018
+        },
+        {
+          "index": 2,
+          "name": "W907 / W910",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-e",
+      "fleetN": 25569,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W124",
+          "from": 1985,
+          "to": 1997
+        },
+        {
+          "index": 1,
+          "name": "W210",
+          "from": 1995,
+          "to": 2002
+        },
+        {
+          "index": 2,
+          "name": "W211",
+          "from": 2002,
+          "to": 2009
+        },
+        {
+          "index": 3,
+          "name": "W212",
+          "from": 2009,
+          "to": 2016
+        },
+        {
+          "index": 4,
+          "name": "C207 / A207",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 5,
+          "name": "W213",
+          "from": 2016,
+          "to": 2023
+        },
+        {
+          "index": 6,
+          "name": "C238 / A238",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 7,
+          "name": "W214",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "logan",
+      "fleetN": 24757,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Logan II",
+          "from": 2012,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "Logan III",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "jumper",
+      "fleetN": 23777,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Jumper – neúplně rozlišená rodina",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "qashqai",
+      "fleetN": 22640,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "J10",
+          "from": 2006,
+          "to": 2013
+        },
+        {
+          "index": 2,
+          "name": "J12",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "partner",
+      "fleetN": 22438,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Partner II (B9) / Partner Tepee",
+          "from": 2008,
+          "to": 2018
+        },
+        {
+          "index": 2,
+          "name": "Partner III (K9)",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "320",
+      "fleetN": 22258,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "320",
+          "from": 1937,
+          "to": 1938
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "a3",
+      "fleetN": 22026,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A3 (8L)",
+          "from": 1996,
+          "to": 2003
+        },
+        {
+          "index": 3,
+          "name": "A3 (8Y)",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "honda",
+      "line": "cr-v",
+      "fleetN": 21924,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CR-V 1",
+          "from": 1995,
+          "to": 2001
+        },
+        {
+          "index": 1,
+          "name": "CR-V 2",
+          "from": 2001,
+          "to": 2006
+        },
+        {
+          "index": 2,
+          "name": "CR-V 3",
+          "from": 2006,
+          "to": 2012
+        },
+        {
+          "index": 3,
+          "name": "CR-V 4",
+          "from": 2011,
+          "to": 2018
+        },
+        {
+          "index": 4,
+          "name": "CR-V 5",
+          "from": 2016,
+          "to": 2023
+        },
+        {
+          "index": 5,
+          "name": "CR-V 6",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "207",
+      "fleetN": 21746,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "207 – modelová rodina",
+          "from": 2006,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x5",
+      "fleetN": 21733,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X5",
+          "from": 1999,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "citigo",
+      "fleetN": 21368,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Citigo",
+          "from": 2011,
+          "to": 2020
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-c",
+      "fleetN": 21213,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W202",
+          "from": 1992,
+          "to": 2001
+        },
+        {
+          "index": 1,
+          "name": "W203",
+          "from": 1999,
+          "to": 2010
+        },
+        {
+          "index": 2,
+          "name": "W204",
+          "from": 2007,
+          "to": 2015
+        },
+        {
+          "index": 3,
+          "name": "W205",
+          "from": 2014,
+          "to": 2023
+        },
+        {
+          "index": 4,
+          "name": "W206",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "honda",
+      "line": "civic",
+      "fleetN": 20868,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1972,
+          "to": 1979
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 1979,
+          "to": 1983
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 1983,
+          "to": 1987
+        },
+        {
+          "index": 3,
+          "name": "IV",
+          "from": 1987,
+          "to": 1991
+        },
+        {
+          "index": 4,
+          "name": "V",
+          "from": 1991,
+          "to": 1995
+        },
+        {
+          "index": 5,
+          "name": "VI",
+          "from": 1995,
+          "to": 2000
+        },
+        {
+          "index": 6,
+          "name": "VII",
+          "from": 2000,
+          "to": 2005
+        },
+        {
+          "index": 7,
+          "name": "VIII",
+          "from": 2005,
+          "to": 2011
+        },
+        {
+          "index": 8,
+          "name": "IX",
+          "from": 2011,
+          "to": 2017
+        },
+        {
+          "index": 9,
+          "name": "X",
+          "from": 2015,
+          "to": 2022
+        },
+        {
+          "index": 10,
+          "name": "XI",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "zafira",
+      "fleetN": 20691,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A",
+          "from": 1999,
+          "to": 2005
+        },
+        {
+          "index": 1,
+          "name": "B",
+          "from": 2005,
+          "to": 2014
+        },
+        {
+          "index": 2,
+          "name": "C – Zafira Tourer",
+          "from": 2011,
+          "to": 2019
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2101",
+      "fleetN": 19755,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2101",
+          "from": 1970,
+          "to": 1988
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "dokker",
+      "fleetN": 19162,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Dokker / Dokker Van",
+          "from": 2012,
+          "to": 2021
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c4-picasso",
+      "fleetN": 19016,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C4 Picasso / SpaceTourer – větev 1",
+          "from": 2006,
+          "to": 2013
+        },
+        {
+          "index": 1,
+          "name": "C4 Picasso / SpaceTourer – větev 2",
+          "from": 2013,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "gle",
+      "fleetN": 18233,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "W164 – ML",
+          "from": 2005,
+          "to": 2011
+        },
+        {
+          "index": 2,
+          "name": "W166 – ML / GLE",
+          "from": 2011,
+          "to": 2019
+        },
+        {
+          "index": 3,
+          "name": "C292 – GLE Coupé",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 4,
+          "name": "V167 – GLE",
+          "from": 2018,
+          "to": null
+        },
+        {
+          "index": 5,
+          "name": "C167 – GLE Coupé",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "6",
+      "fleetN": 17834,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "GG1",
+          "from": 2002,
+          "to": 2008
+        },
+        {
+          "index": 1,
+          "name": "GH1/GH2",
+          "from": 2007,
+          "to": 2012
+        },
+        {
+          "index": 2,
+          "name": "GJ1/GL",
+          "from": 2012,
+          "to": 2024
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "1000-1100-mb",
+      "fleetN": 17505,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "1000 / 1100 MB – modelová rodina",
+          "from": 1964,
+          "to": 1969
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c4",
+      "fleetN": 17177,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "C4 II – evropská nabídka",
+          "from": 2010,
+          "to": 2018
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "doblo",
+      "fleetN": 16100,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "III (K9)",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "5008",
+      "fleetN": 15921,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "5008 II (P87)",
+          "from": 2017,
+          "to": 2024
+        },
+        {
+          "index": 2,
+          "name": "5008 III (P67)",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "meriva",
+      "fleetN": 15852,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A",
+          "from": 2003,
+          "to": 2010
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "asx",
+      "fleetN": 14946,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "ASX – původní Mitsubishi",
+          "from": 2010,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "ASX – Renault Captur příbuzná rodina",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "iveco",
+      "line": "daily",
+      "fleetN": 14833,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Daily – první konstrukční rodina",
+          "from": 1978,
+          "to": 1999
+        },
+        {
+          "index": 1,
+          "name": "Daily – druhá konstrukční rodina",
+          "from": 1999,
+          "to": 2014
+        },
+        {
+          "index": 2,
+          "name": "Daily – třetí konstrukční rodina",
+          "from": 2014,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "3",
+      "fleetN": 14629,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "BK",
+          "from": 2003,
+          "to": 2008
+        },
+        {
+          "index": 1,
+          "name": "BL",
+          "from": 2008,
+          "to": 2013
+        },
+        {
+          "index": 2,
+          "name": "BM/BN",
+          "from": 2013,
+          "to": 2018
+        },
+        {
+          "index": 3,
+          "name": "BP",
+          "from": 2019,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x3",
+      "fleetN": 14617,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X3",
+          "from": 2003,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-a",
+      "fleetN": 14180,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W168",
+          "from": 1997,
+          "to": 2004
+        },
+        {
+          "index": 1,
+          "name": "W169",
+          "from": 2004,
+          "to": 2012
+        },
+        {
+          "index": 2,
+          "name": "W176",
+          "from": 2012,
+          "to": 2018
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "seat",
+      "line": "alhambra",
+      "fleetN": 13919,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Alhambra I",
+          "from": 1996,
+          "to": 2010
+        },
+        {
+          "index": 1,
+          "name": "Alhambra II",
+          "from": 2010,
+          "to": 2020
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "rio",
+      "fleetN": 13807,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "DC – původní korejská řada",
+          "from": 1999,
+          "to": 2005
+        },
+        {
+          "index": 1,
+          "name": "JB",
+          "from": 2005,
+          "to": 2011
+        },
+        {
+          "index": 2,
+          "name": "UB",
+          "from": 2011,
+          "to": 2017
+        },
+        {
+          "index": 3,
+          "name": "QB – K2, Čína",
+          "from": 2011,
+          "to": 2017
+        },
+        {
+          "index": 4,
+          "name": "YB / SC",
+          "from": 2016,
+          "to": 2023
+        },
+        {
+          "index": 5,
+          "name": "FB / UC – regionální větev Kia",
+          "from": 2017,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "panda",
+      "fleetN": 13564,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I (141)",
+          "from": 1980,
+          "to": 2003
+        },
+        {
+          "index": 2,
+          "name": "III (319)",
+          "from": 2011,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "cx-5",
+      "fleetN": 13247,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "KE",
+          "from": 2012,
+          "to": 2017
+        },
+        {
+          "index": 1,
+          "name": "KF",
+          "from": 2016,
+          "to": 2025
+        },
+        {
+          "index": 2,
+          "name": "KM",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-v",
+      "fleetN": 13088,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W638",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "W639 – Viano",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "1203",
+      "fleetN": 12696,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "1203 – modelová rodina",
+          "from": 1968,
+          "to": 1981
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "3008",
+      "fleetN": 12679,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "3008 II (P84)",
+          "from": 2016,
+          "to": 2024
+        },
+        {
+          "index": 2,
+          "name": "3008 III (P64)",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "q7",
+      "fleetN": 11883,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "Q7 (G8)",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "vectra",
+      "fleetN": 11643,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A",
+          "from": 1988,
+          "to": 1995
+        },
+        {
+          "index": 1,
+          "name": "B",
+          "from": 1995,
+          "to": 2002
+        },
+        {
+          "index": 2,
+          "name": "C",
+          "from": 2002,
+          "to": 2008
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-1",
+      "fleetN": 11591,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Řada 1",
+          "from": 2004,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Řada 1 (F70)",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c5",
+      "fleetN": 10667,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "C5 – RD/TD",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "xsara-picasso",
+      "fleetN": 10472,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Xsara Picasso – neúplně rozlišená rodina",
+          "from": 1999,
+          "to": 2010
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mg",
+      "line": "zs",
+      "fleetN": 10050,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "ZS11",
+          "from": 2017,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "ZS32",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "glc",
+      "fleetN": 9955,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "X254 / C254",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "octavia-1959",
+      "fleetN": 9874,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Octavia (1959) – modelová rodina",
+          "from": 1959,
+          "to": 1971
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "jeep",
+      "line": "grand-cherokee",
+      "fleetN": 9814,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "WJ",
+          "from": 1998,
+          "to": 2005
+        },
+        {
+          "index": 2,
+          "name": "WK",
+          "from": 2004,
+          "to": 2010
+        },
+        {
+          "index": 3,
+          "name": "WK2",
+          "from": 2010,
+          "to": 2022
+        },
+        {
+          "index": 4,
+          "name": "WL",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "jogger",
+      "fleetN": 9523,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Jogger",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-b",
+      "fleetN": 9382,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W245",
+          "from": 2005,
+          "to": 2011
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "outlander",
+      "fleetN": 9322,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CU/ZE/ZF",
+          "from": 2003,
+          "to": 2006
+        },
+        {
+          "index": 1,
+          "name": "CW/ZG/ZH",
+          "from": 2006,
+          "to": 2012
+        },
+        {
+          "index": 2,
+          "name": "GF/GG/ZJ/ZK/ZL",
+          "from": 2012,
+          "to": 2024
+        },
+        {
+          "index": 3,
+          "name": "GM/GN/ZM",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "crossland",
+      "fleetN": 9319,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Crossland – přehled řady",
+          "from": 2017,
+          "to": 2024
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mini",
+      "line": "cooper",
+      "fleetN": 9205,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "R50/52/53",
+          "from": 2001,
+          "to": 2008
+        },
+        {
+          "index": 1,
+          "name": "R56/57",
+          "from": 2006,
+          "to": 2015
+        },
+        {
+          "index": 3,
+          "name": "J01",
+          "from": 2023,
+          "to": null
+        },
+        {
+          "index": 4,
+          "name": "F65/66/67",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "movano",
+      "fleetN": 8942,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Movano – přehled řady",
+          "from": 1998,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "q5",
+      "fleetN": 8829,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Q5 (FY)",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "Q5 (Type GU)",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2103",
+      "fleetN": 8718,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2103",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "125",
+      "fleetN": 8716,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "125",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "picanto",
+      "fleetN": 8701,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "SA",
+          "from": 2003,
+          "to": 2011
+        },
+        {
+          "index": 1,
+          "name": "TA – původní korejská řada",
+          "from": 2011,
+          "to": 2017
+        },
+        {
+          "index": 2,
+          "name": "JA",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "306",
+      "fleetN": 8427,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "306 – modelová rodina",
+          "from": 1993,
+          "to": 2002
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "x-trail",
+      "fleetN": 8167,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "T30",
+          "from": 2000,
+          "to": 2007
+        },
+        {
+          "index": 1,
+          "name": "T31",
+          "from": 2007,
+          "to": 2013
+        },
+        {
+          "index": 2,
+          "name": "T32",
+          "from": 2013,
+          "to": 2022
+        },
+        {
+          "index": 3,
+          "name": "T33",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "500",
+      "fleetN": 7902,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Nuova 500 (110)",
+          "from": 1957,
+          "to": 1975
+        },
+        {
+          "index": 2,
+          "name": "New 500 electric (332)",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "combo",
+      "fleetN": 7895,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Combo – přehled řady",
+          "from": 1986,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "tipo",
+      "fleetN": 7796,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I (160)",
+          "from": 1988,
+          "to": 1995
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "stonic",
+      "fleetN": 7593,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "YB CUV",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-s",
+      "fleetN": 7543,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W116",
+          "from": 1972,
+          "to": 1980
+        },
+        {
+          "index": 1,
+          "name": "W126",
+          "from": 1979,
+          "to": 1991
+        },
+        {
+          "index": 3,
+          "name": "W220",
+          "from": 1998,
+          "to": 2005
+        },
+        {
+          "index": 4,
+          "name": "W221",
+          "from": 2005,
+          "to": 2013
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "sorento",
+      "fleetN": 7310,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "BL – původní řada",
+          "from": 2002,
+          "to": 2011
+        },
+        {
+          "index": 1,
+          "name": "XM – původní korejská řada",
+          "from": 2009,
+          "to": 2014
+        },
+        {
+          "index": 2,
+          "name": "UM – původní korejská řada",
+          "from": 2014,
+          "to": 2020
+        },
+        {
+          "index": 3,
+          "name": "MQ4",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "aveo",
+      "fleetN": 7301,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Aveo",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Aveo T300 Hatchback — evropský listMY2012",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "rifter",
+      "fleetN": 7135,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Rifter – modelová rodina",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "a5",
+      "fleetN": 7082,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "A5 (F5)",
+          "from": 2016,
+          "to": 2024
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "lodgy",
+      "fleetN": 7071,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Lodgy",
+          "from": 2012,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "cupra",
+      "line": "formentor",
+      "fleetN": 7046,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Formentor – první produkční generace",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "gls",
+      "fleetN": 6708,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X164 – GL",
+          "from": 2006,
+          "to": 2012
+        },
+        {
+          "index": 1,
+          "name": "X166 – GL / GLS",
+          "from": 2012,
+          "to": 2019
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "micra",
+      "fleetN": 6690,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "K10",
+          "from": 1982,
+          "to": 1992
+        },
+        {
+          "index": 1,
+          "name": "K11",
+          "from": 1992,
+          "to": 2003
+        },
+        {
+          "index": 2,
+          "name": "K12",
+          "from": 2002,
+          "to": 2010
+        },
+        {
+          "index": 3,
+          "name": "K13",
+          "from": 2010,
+          "to": null
+        },
+        {
+          "index": 4,
+          "name": "K14",
+          "from": 2016,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "bravo",
+      "fleetN": 6680,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Bravo / Brava (182)",
+          "from": 1995,
+          "to": 2001
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-7",
+      "fleetN": 6313,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Řada 7",
+          "from": 1977,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "venga",
+      "fleetN": 6239,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "YN",
+          "from": 2009,
+          "to": 2019
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "xsara",
+      "fleetN": 6178,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Xsara – neúplně rozlišená rodina",
+          "from": 1997,
+          "to": 2006
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "cx-3",
+      "fleetN": 5972,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CX-3 – přehled řady",
+          "from": 2014,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "honda",
+      "line": "jazz",
+      "fleetN": 5921,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Jazz 1",
+          "from": 2001,
+          "to": 2008
+        },
+        {
+          "index": 1,
+          "name": "Jazz 2",
+          "from": 2007,
+          "to": 2014
+        },
+        {
+          "index": 2,
+          "name": "Jazz 3",
+          "from": 2013,
+          "to": 2022
+        },
+        {
+          "index": 3,
+          "name": "Jazz 4",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "q3",
+      "fleetN": 5857,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Q3 (F3)",
+          "from": 2018,
+          "to": 2025
+        },
+        {
+          "index": 2,
+          "name": "Q3 (FJ)",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x6",
+      "fleetN": 5851,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X6",
+          "from": 2007,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "106",
+      "fleetN": 5800,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "106 – modelová rodina",
+          "from": 1991,
+          "to": 2003
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "spark",
+      "fleetN": 5707,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Spark",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Spark M300 ? evropsk? technick? listMY2010",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "juke",
+      "fleetN": 5702,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "F15",
+          "from": 2010,
+          "to": 2019
+        },
+        {
+          "index": 1,
+          "name": "F16",
+          "from": 2019,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "1300",
+      "fleetN": 5637,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "1300",
+          "from": 1969,
+          "to": 1979
+        },
+        {
+          "index": 1,
+          "name": "1310 / 1210 / 1410",
+          "from": 1979,
+          "to": 2004
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "l200",
+      "fleetN": 5633,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1978,
+          "to": 1986
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 1986,
+          "to": 1996
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 1996,
+          "to": 2006
+        },
+        {
+          "index": 3,
+          "name": "IV",
+          "from": 2005,
+          "to": 2015
+        },
+        {
+          "index": 4,
+          "name": "V",
+          "from": 2015,
+          "to": 2023
+        },
+        {
+          "index": 5,
+          "name": "VI",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "kadett",
+      "fleetN": 5547,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Předválečný Kadett",
+          "from": 1936,
+          "to": 1940
+        },
+        {
+          "index": 1,
+          "name": "A",
+          "from": 1962,
+          "to": 1965
+        },
+        {
+          "index": 2,
+          "name": "B",
+          "from": 1965,
+          "to": 1973
+        },
+        {
+          "index": 3,
+          "name": "C",
+          "from": 1973,
+          "to": 1979
+        },
+        {
+          "index": 4,
+          "name": "D",
+          "from": 1979,
+          "to": 1984
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "508",
+      "fleetN": 5486,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "508 I (W23) – sedan a SW",
+          "from": 2010,
+          "to": 2018
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "colt",
+      "fleetN": 5465,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Colt / Mirage I",
+          "from": 1978,
+          "to": 1983
+        },
+        {
+          "index": 1,
+          "name": "Colt / Mirage II",
+          "from": 1983,
+          "to": 1987
+        },
+        {
+          "index": 2,
+          "name": "Colt / Mirage III",
+          "from": 1987,
+          "to": 1991
+        },
+        {
+          "index": 4,
+          "name": "Colt / Mirage V",
+          "from": 1995,
+          "to": 2003
+        },
+        {
+          "index": 6,
+          "name": "Colt – Renault Clio příbuzná rodina",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "honda",
+      "line": "accord",
+      "fleetN": 5362,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1976,
+          "to": 1981
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 1981,
+          "to": 1985
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 1985,
+          "to": 1989
+        },
+        {
+          "index": 3,
+          "name": "IV",
+          "from": 1989,
+          "to": 1993
+        },
+        {
+          "index": 4,
+          "name": "V",
+          "from": 1993,
+          "to": 1998
+        },
+        {
+          "index": 5,
+          "name": "VI",
+          "from": 1997,
+          "to": 2002
+        },
+        {
+          "index": 6,
+          "name": "VII Europe",
+          "from": 2002,
+          "to": 2008
+        },
+        {
+          "index": 7,
+          "name": "VIII Europe",
+          "from": 2008,
+          "to": 2015
+        },
+        {
+          "index": 10,
+          "name": "XI global",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "freelander",
+      "fleetN": 5251,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "L314 – pětidveřový",
+          "from": 1997,
+          "to": 2006
+        },
+        {
+          "index": 1,
+          "name": "L314 – třídveřový softback/hardback",
+          "from": null,
+          "to": 2006
+        },
+        {
+          "index": 2,
+          "name": "L359 – Freelander 2",
+          "from": 2006,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "discovery",
+      "fleetN": 5129,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Series I",
+          "from": 1989,
+          "to": 1998
+        },
+        {
+          "index": 1,
+          "name": "Series II – L318",
+          "from": 1998,
+          "to": 2004
+        },
+        {
+          "index": 2,
+          "name": "Discovery 3 – L319",
+          "from": 2004,
+          "to": 2009
+        },
+        {
+          "index": 4,
+          "name": "Discovery 5 – L462",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "stilo",
+      "fleetN": 5030,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Stilo",
+          "from": 2000,
+          "to": 2007
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "5",
+      "fleetN": 4873,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CR",
+          "from": 2005,
+          "to": 2010
+        },
+        {
+          "index": 1,
+          "name": "CW",
+          "from": 2010,
+          "to": 2018
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "uno",
+      "fleetN": 4853,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "II Brazil (327)",
+          "from": 2010,
+          "to": 2021
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "cla",
+      "fleetN": 4814,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "C178/174",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-2",
+      "fleetN": 4776,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Řada 2",
+          "from": 2014,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "porsche",
+      "line": "911",
+      "fleetN": 4737,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "911 – původní řada",
+          "from": 1964,
+          "to": 1973
+        },
+        {
+          "index": 1,
+          "name": "911 G / Turbo 930",
+          "from": 1973,
+          "to": 1989
+        },
+        {
+          "index": 2,
+          "name": "911 964",
+          "from": 1989,
+          "to": 1993
+        },
+        {
+          "index": 3,
+          "name": "911 993",
+          "from": 1994,
+          "to": 1998
+        },
+        {
+          "index": 4,
+          "name": "911 996",
+          "from": 1997,
+          "to": 2004
+        },
+        {
+          "index": 5,
+          "name": "911 997",
+          "from": 2004,
+          "to": 2013
+        },
+        {
+          "index": 6,
+          "name": "911 991",
+          "from": 2011,
+          "to": 2019
+        },
+        {
+          "index": 7,
+          "name": "911 992",
+          "from": 2019,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "mx-5",
+      "fleetN": 4698,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "NA",
+          "from": 1989,
+          "to": 1997
+        },
+        {
+          "index": 1,
+          "name": "NB",
+          "from": 1998,
+          "to": 2005
+        },
+        {
+          "index": 2,
+          "name": "NC",
+          "from": 2005,
+          "to": 2015
+        },
+        {
+          "index": 3,
+          "name": "ND",
+          "from": 2015,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "323",
+      "fleetN": 4605,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Familia – původní řady",
+          "from": 1963,
+          "to": 1977
+        },
+        {
+          "index": 1,
+          "name": "FA",
+          "from": 1977,
+          "to": 1980
+        },
+        {
+          "index": 2,
+          "name": "BD",
+          "from": 1980,
+          "to": 1985
+        },
+        {
+          "index": 3,
+          "name": "BF",
+          "from": 1985,
+          "to": 1989
+        },
+        {
+          "index": 4,
+          "name": "BG",
+          "from": 1989,
+          "to": 1994
+        },
+        {
+          "index": 5,
+          "name": "BA",
+          "from": 1994,
+          "to": 1998
+        },
+        {
+          "index": 6,
+          "name": "BJ",
+          "from": 1998,
+          "to": 2003
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "saxo",
+      "fleetN": 4426,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Saxo – neúplně rozlišená rodina",
+          "from": 1996,
+          "to": 2003
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "honda",
+      "line": "hr-v",
+      "fleetN": 4426,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "HR-V 1",
+          "from": 1999,
+          "to": 2006
+        },
+        {
+          "index": 1,
+          "name": "HR-V 2",
+          "from": 2013,
+          "to": 2022
+        },
+        {
+          "index": 2,
+          "name": "III global / Europe e:HEV",
+          "from": 2021,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "lancer",
+      "fleetN": 4344,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A70",
+          "from": 1973,
+          "to": 1979
+        },
+        {
+          "index": 1,
+          "name": "A170",
+          "from": 1979,
+          "to": 1988
+        },
+        {
+          "index": 2,
+          "name": "Fiore I",
+          "from": 1982,
+          "to": 1983
+        },
+        {
+          "index": 3,
+          "name": "Fiore II",
+          "from": 1983,
+          "to": 1987
+        },
+        {
+          "index": 4,
+          "name": "C50/C60/C70",
+          "from": 1988,
+          "to": 1991
+        },
+        {
+          "index": 5,
+          "name": "CB/CD",
+          "from": 1991,
+          "to": 1995
+        },
+        {
+          "index": 6,
+          "name": "CK/CM",
+          "from": 1995,
+          "to": 2003
+        },
+        {
+          "index": 7,
+          "name": "CS",
+          "from": 2000,
+          "to": 2010
+        },
+        {
+          "index": 8,
+          "name": "CY/CX",
+          "from": 2007,
+          "to": 2017
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "seat",
+      "line": "arona",
+      "fleetN": 4276,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Arona I",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "omega",
+      "fleetN": 4228,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Omega – přehled řady",
+          "from": 1986,
+          "to": 2003
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "porsche",
+      "line": "cayenne",
+      "fleetN": 4222,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Cayenne I",
+          "from": 2002,
+          "to": 2009
+        },
+        {
+          "index": 1,
+          "name": "Cayenne II",
+          "from": 2010,
+          "to": 2017
+        },
+        {
+          "index": 2,
+          "name": "Cayenne III",
+          "from": 2017,
+          "to": null
+        },
+        {
+          "index": 3,
+          "name": "Cayenne Electric",
+          "from": 2026,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "pajero",
+      "fleetN": 4197,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "L040, L140",
+          "from": 1982,
+          "to": 1991
+        },
+        {
+          "index": 1,
+          "name": "V20, V30, V40",
+          "from": 1991,
+          "to": 1999
+        },
+        {
+          "index": 2,
+          "name": "V60, V70",
+          "from": 1999,
+          "to": 2006
+        },
+        {
+          "index": 3,
+          "name": "V80, V90",
+          "from": 2006,
+          "to": 2021
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "agila",
+      "fleetN": 4157,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Agila – přehled řady",
+          "from": 2000,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "107",
+      "fleetN": 4118,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "107 – modelová rodina",
+          "from": 2005,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "cx-30",
+      "fleetN": 4105,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CX-30 – přehled řady",
+          "from": 2019,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "q8",
+      "fleetN": 4097,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Q8",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "gla",
+      "fleetN": 4076,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "3. generace (2026)",
+          "from": 2026,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dacia",
+      "line": "bigster",
+      "fleetN": 4053,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Bigster",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2105",
+      "fleetN": 3937,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2105",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chrysler",
+      "line": "voyager",
+      "fleetN": 3892,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Voyager / Grand Voyager — souhrnná výrobní rodina",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Grand Voyager RT — vybraná evropská specifikace2008",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "a8",
+      "fleetN": 3827,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A8 (4D)",
+          "from": 1994,
+          "to": 2002
+        },
+        {
+          "index": 1,
+          "name": "A8 (4E)",
+          "from": 2002,
+          "to": 2010
+        },
+        {
+          "index": 2,
+          "name": "A8 (D4/4H)",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "205",
+      "fleetN": 3824,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "205 – modelová rodina",
+          "from": 1983,
+          "to": 1998
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "405",
+      "fleetN": 3759,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "405 – modelová rodina",
+          "from": 1987,
+          "to": 1997
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "jeep",
+      "line": "cherokee",
+      "fleetN": 3734,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "SJ",
+          "from": 1974,
+          "to": 1983
+        },
+        {
+          "index": 2,
+          "name": "KJ / Liberty",
+          "from": 2001,
+          "to": 2007
+        },
+        {
+          "index": 3,
+          "name": "KK / Liberty",
+          "from": 2007,
+          "to": 2012
+        },
+        {
+          "index": 4,
+          "name": "KL",
+          "from": 2013,
+          "to": 2023
+        },
+        {
+          "index": 5,
+          "name": "KM",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "moskvic",
+      "line": "408",
+      "fleetN": 3709,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "408 – modelová rodina",
+          "from": 1964,
+          "to": 1976
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "almera",
+      "fleetN": 3686,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "N15",
+          "from": 1995,
+          "to": 2000
+        },
+        {
+          "index": 1,
+          "name": "N16",
+          "from": 2000,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "80",
+      "fleetN": 3667,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "80 B1",
+          "from": 1972,
+          "to": 1978
+        },
+        {
+          "index": 1,
+          "name": "80 B2",
+          "from": 1978,
+          "to": 1986
+        },
+        {
+          "index": 2,
+          "name": "80 B3",
+          "from": 1986,
+          "to": 1991
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "626",
+      "fleetN": 3489,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Capella – původní řada",
+          "from": 1970,
+          "to": 1978
+        },
+        {
+          "index": 1,
+          "name": "CB",
+          "from": 1978,
+          "to": 1982
+        },
+        {
+          "index": 2,
+          "name": "GC",
+          "from": 1982,
+          "to": 1987
+        },
+        {
+          "index": 3,
+          "name": "GD/GV",
+          "from": 1987,
+          "to": 1997
+        },
+        {
+          "index": 4,
+          "name": "GE",
+          "from": 1991,
+          "to": 1997
+        },
+        {
+          "index": 5,
+          "name": "GF/GW",
+          "from": 1997,
+          "to": 2002
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-4",
+      "fleetN": 3422,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Řada 4",
+          "from": 2014,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2102",
+      "fleetN": 3420,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2102",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "600",
+      "fleetN": 3412,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "600 (100)",
+          "from": 1955,
+          "to": 1972
+        },
+        {
+          "index": 1,
+          "name": "600 / 600e (F364)",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "freemont",
+      "fleetN": 3409,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Freemont",
+          "from": 2011,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "glb",
+      "fleetN": 3401,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "2. generace (2026)",
+          "from": 2026,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "defender",
+      "fleetN": 3382,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "One Ten – původní označení",
+          "from": 1983,
+          "to": 1990
+        },
+        {
+          "index": 1,
+          "name": "Ninety – původní označení",
+          "from": 1984,
+          "to": 1990
+        },
+        {
+          "index": 2,
+          "name": "One Two Seven – původní označení",
+          "from": 1985,
+          "to": 1990
+        },
+        {
+          "index": 3,
+          "name": "Defender 90 / 110 / 130 – původní rodina",
+          "from": 1990,
+          "to": 2016
+        },
+        {
+          "index": 5,
+          "name": "L663 – 90",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 6,
+          "name": "L663 – 130",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "carens",
+      "fleetN": 3353,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "RS / FJ",
+          "from": 1999,
+          "to": 2006
+        },
+        {
+          "index": 1,
+          "name": "UN",
+          "from": 2006,
+          "to": 2013
+        },
+        {
+          "index": 2,
+          "name": "RP – původní globální řada",
+          "from": 2013,
+          "to": 2019
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "niva",
+      "fleetN": 3342,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Původní Niva / Legend – historická rodina",
+          "from": 1977,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "jeep",
+      "line": "compass",
+      "fleetN": 3327,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "MK49",
+          "from": 2006,
+          "to": 2016
+        },
+        {
+          "index": 1,
+          "name": "MP/552",
+          "from": 2016,
+          "to": 2026
+        },
+        {
+          "index": 2,
+          "name": "J4U/J4D",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "space-star",
+      "fleetN": 3310,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Space Star MPV",
+          "from": 1998,
+          "to": 2005
+        },
+        {
+          "index": 1,
+          "name": "Space Star / Mirage hatchback",
+          "from": 2012,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "navara",
+      "fleetN": 3217,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "D40",
+          "from": 2004,
+          "to": 2021
+        },
+        {
+          "index": 1,
+          "name": "D23",
+          "from": 2014,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "D27",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "note",
+      "fleetN": 3190,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "E11",
+          "from": 2004,
+          "to": 2013
+        },
+        {
+          "index": 1,
+          "name": "E12",
+          "from": 2012,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "jeep",
+      "line": "wrangler",
+      "fleetN": 3113,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "YJ",
+          "from": 1986,
+          "to": 1995
+        },
+        {
+          "index": 1,
+          "name": "TJ",
+          "from": 1996,
+          "to": 2006
+        },
+        {
+          "index": 2,
+          "name": "JK",
+          "from": 2006,
+          "to": 2018
+        },
+        {
+          "index": 3,
+          "name": "JL",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "807",
+      "fleetN": 3098,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "807 – modelová rodina",
+          "from": 2002,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "i3",
+      "fleetN": 3092,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "i3",
+          "from": 2013,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x7",
+      "fleetN": 3088,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X7",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "croma",
+      "fleetN": 3078,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I (154)",
+          "from": 1985,
+          "to": 1996
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "range-rover-sport",
+      "fleetN": 3035,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "L494",
+          "from": 2013,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "cruze",
+      "fleetN": 3034,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Cruze",
+          "from": 2008,
+          "to": 2023
+        },
+        {
+          "index": 1,
+          "name": "Cruze J300 Sedan — UK2012",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "Cruze J300 Hatchback — UK07/2012",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "hyundai",
+      "line": "elantra",
+      "fleetN": 2956,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Elantra VIII (Avante)",
+          "from": 2026,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "alfa-romeo",
+      "line": "156",
+      "fleetN": 2946,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "156",
+          "from": 1997,
+          "to": 2007
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "slk",
+      "fleetN": 2870,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "R170",
+          "from": 1996,
+          "to": 2004
+        },
+        {
+          "index": 1,
+          "name": "R171",
+          "from": 2004,
+          "to": 2011
+        },
+        {
+          "index": 2,
+          "name": "R172 – SLK / SLC",
+          "from": 2011,
+          "to": 2020
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "z4",
+      "fleetN": 2867,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Z4",
+          "from": 2002,
+          "to": 2026
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "range-rover-evoque",
+      "fleetN": 2790,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "L538 – SUV",
+          "from": 2011,
+          "to": 2018
+        },
+        {
+          "index": 1,
+          "name": "L538 – Convertible",
+          "from": 2016,
+          "to": 2018
+        },
+        {
+          "index": 2,
+          "name": "L551",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "fiorino",
+      "fleetN": 2727,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1977,
+          "to": 1988
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 1988,
+          "to": 2013
+        },
+        {
+          "index": 2,
+          "name": "III Europe (225)",
+          "from": 2007,
+          "to": 2024
+        },
+        {
+          "index": 3,
+          "name": "III Brazil (327)",
+          "from": 2013,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "grandland",
+      "fleetN": 2718,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I – Grandland X / Grandland",
+          "from": 2017,
+          "to": 2024
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "primera",
+      "fleetN": 2681,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "P10",
+          "from": 1990,
+          "to": 1996
+        },
+        {
+          "index": 1,
+          "name": "P11",
+          "from": 1996,
+          "to": 2002
+        },
+        {
+          "index": 2,
+          "name": "P12",
+          "from": 2001,
+          "to": 2008
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "tt",
+      "fleetN": 2659,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "TT (Mk3)",
+          "from": 2014,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "1202",
+      "fleetN": 2613,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "1202 – modelová rodina",
+          "from": 1961,
+          "to": 1973
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mg",
+      "line": "hs",
+      "fleetN": 2611,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "AS23",
+          "from": 2018,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "AS33",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "range-rover",
+      "fleetN": 2604,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Classic",
+          "from": 1970,
+          "to": 1996
+        },
+        {
+          "index": 1,
+          "name": "P38A",
+          "from": 1994,
+          "to": 2001
+        },
+        {
+          "index": 4,
+          "name": "L405 – dlouhý rozvor",
+          "from": null,
+          "to": 2021
+        },
+        {
+          "index": 5,
+          "name": "L460 – standardní rozvor",
+          "from": 2022,
+          "to": null
+        },
+        {
+          "index": 6,
+          "name": "L460 – dlouhý rozvor",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c4-cactus",
+      "fleetN": 2536,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C4 Cactus – neúplně rozlišená rodina",
+          "from": 2014,
+          "to": 2020
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "850",
+      "fleetN": 2534,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "850",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "cupra",
+      "line": "leon",
+      "fleetN": 2529,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Leon – první produkční generace",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c8",
+      "fleetN": 2526,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C8 – neúplně rozlišená rodina",
+          "from": 2002,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "moskvic",
+      "line": "2140",
+      "fleetN": 2464,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2140 – modelová rodina",
+          "from": 1975,
+          "to": 1988
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "rada-6",
+      "fleetN": 2400,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Řada 6",
+          "from": 1976,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c2",
+      "fleetN": 2393,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C2 – neúplně rozlišená rodina",
+          "from": 2003,
+          "to": 2009
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "309",
+      "fleetN": 2376,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "309 – modelová rodina",
+          "from": 1985,
+          "to": 1994
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "captiva",
+      "fleetN": 2374,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Captiva",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Captiva — evropský facelift, UK2012",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "orlando",
+      "fleetN": 2347,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Orlando",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Orlando J309 — UK2012",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "126",
+      "fleetN": 2341,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "126",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "clk",
+      "fleetN": 2339,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C208 / A208",
+          "from": 1997,
+          "to": 2003
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "cls",
+      "fleetN": 2316,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "C218 / X218",
+          "from": 2011,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "C257",
+          "from": 2018,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "301",
+      "fleetN": 2285,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "301 – předválečná rodina",
+          "from": 1932,
+          "to": 1936
+        },
+        {
+          "index": 1,
+          "name": "301 – modelová rodina",
+          "from": 2012,
+          "to": 2021
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "glk",
+      "fleetN": 2257,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X204",
+          "from": 2008,
+          "to": 2015
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2106",
+      "fleetN": 2247,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2106",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x4",
+      "fleetN": 2241,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X4",
+          "from": 2014,
+          "to": 2025
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c5-aircross",
+      "fleetN": 2226,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C5 Aircross – neúplně rozlišená rodina",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "felicia-1959",
+      "fleetN": 2211,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Felicia (1959) – modelová rodina",
+          "from": 1959,
+          "to": 1964
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "audi",
+      "line": "100",
+      "fleetN": 2203,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "100 C1",
+          "from": 1968,
+          "to": 1976
+        },
+        {
+          "index": 1,
+          "name": "100 C2",
+          "from": 1976,
+          "to": 1982
+        },
+        {
+          "index": 2,
+          "name": "100 C3",
+          "from": 1982,
+          "to": 1991
+        },
+        {
+          "index": 3,
+          "name": "100 C4",
+          "from": 1990,
+          "to": 1994
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "daewoo",
+      "line": "matiz",
+      "fleetN": 2193,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Matiz M100 / M150",
+          "from": 1998,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Matiz M200",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "Matiz Creative M300",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "patrol",
+      "fleetN": 2186,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Patrol – rodina, členění neověřeno",
+          "from": 1951,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "pathfinder",
+      "fleetN": 2169,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Pathfinder – rodina, členění neověřeno",
+          "from": 1985,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "440-445-450",
+      "fleetN": 2166,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "440 / 445 / 450 – modelová rodina",
+          "from": 1955,
+          "to": 1959
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "ram",
+      "line": "1500",
+      "fleetN": 2142,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "1500 – starší rodina v období značky Ram / Classic",
+          "from": null,
+          "to": 2024
+        },
+        {
+          "index": 1,
+          "name": "1500 – nová rodina, výroba od března 2018",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "marea",
+      "fleetN": 2047,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Marea",
+          "from": 1996,
+          "to": 2002
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c-elysee",
+      "fleetN": 2006,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C-Elysée – neúplně rozlišená rodina",
+          "from": 2012,
+          "to": 2022
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2107",
+      "fleetN": 1950,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2107",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "127",
+      "fleetN": 1940,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "127",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "terrano",
+      "fleetN": 1925,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Terrano – rodina, členění neověřeno",
+          "from": 1993,
+          "to": 2005
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "bx",
+      "fleetN": 1851,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "BX – neúplně rozlišená rodina",
+          "from": 1982,
+          "to": 1994
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "eclipse-cross",
+      "fleetN": 1843,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Eclipse Cross – původní Mitsubishi",
+          "from": 2017,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Eclipse Cross EV – Renault Scenic příbuzná rodina",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "sedici",
+      "fleetN": 1820,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Sedici",
+          "from": 2005,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "k4",
+      "fleetN": 1809,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CL4 – sedan",
+          "from": 2024,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "CL4 – hatchback",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "discovery-sport",
+      "fleetN": 1783,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "L550",
+          "from": 2014,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "moskvic",
+      "line": "412",
+      "fleetN": 1726,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "412 – modelová rodina",
+          "from": 1967,
+          "to": 1976
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "cupra",
+      "line": "ateca",
+      "fleetN": 1720,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Ateca – první produkční generace",
+          "from": 2018,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dodge",
+      "line": "challenger",
+      "fleetN": 1682,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "E-body",
+          "from": 1969,
+          "to": 1974
+        },
+        {
+          "index": 1,
+          "name": "Mitsubishi-derived",
+          "from": 1977,
+          "to": 1983
+        },
+        {
+          "index": 2,
+          "name": "LC / LA",
+          "from": 2008,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "dodge",
+      "line": "durango",
+      "fleetN": 1630,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1997,
+          "to": 2003
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 2003,
+          "to": 2008
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 2010,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "500l",
+      "fleetN": 1624,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "500L",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "niro",
+      "fleetN": 1621,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "DE – Niro Plus",
+          "from": 2022,
+          "to": 2024
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "sl",
+      "fleetN": 1612,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W113",
+          "from": 1963,
+          "to": 1971
+        },
+        {
+          "index": 1,
+          "name": "R107",
+          "from": 1971,
+          "to": 1989
+        },
+        {
+          "index": 2,
+          "name": "R129",
+          "from": 1989,
+          "to": 2001
+        },
+        {
+          "index": 3,
+          "name": "R230",
+          "from": 2001,
+          "to": 2011
+        },
+        {
+          "index": 4,
+          "name": "R231",
+          "from": 2011,
+          "to": 2020
+        },
+        {
+          "index": 5,
+          "name": "R232",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "cupra",
+      "line": "terramar",
+      "fleetN": 1609,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Terramar – první produkční generace",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "seicento",
+      "fleetN": 1559,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Seicento",
+          "from": 1997,
+          "to": 2010
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "190",
+      "fleetN": 1558,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W201",
+          "from": 1983,
+          "to": 1993
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mazda",
+      "line": "cx-60",
+      "fleetN": 1515,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "CX-60 – přehled řady",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "sunny",
+      "fleetN": 1459,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Sunny – rodina, členění neověřeno",
+          "from": 1966,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-r",
+      "fleetN": 1444,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W251",
+          "from": 2004,
+          "to": 2017
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "ulysse",
+      "fleetN": 1441,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1994,
+          "to": 2002
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 2002,
+          "to": 2010
+        },
+        {
+          "index": 2,
+          "name": "III / E-Ulysse",
+          "from": 2022,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "alfa-romeo",
+      "line": "stelvio",
+      "fleetN": 1434,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Stelvio",
+          "from": 2016,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "alfa-romeo",
+      "line": "giulietta",
+      "fleetN": 1422,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Giulietta původní rodina",
+          "from": 1954,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "Giulietta transaxle",
+          "from": 1977,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "c-crosser",
+      "fleetN": 1418,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "C-Crosser – neúplně rozlišená rodina",
+          "from": 2007,
+          "to": 2012
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-g",
+      "fleetN": 1415,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "W461",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "W463 – původní rodina",
+          "from": 1990,
+          "to": 2018
+        },
+        {
+          "index": 4,
+          "name": "W465",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "x2",
+      "fleetN": 1401,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X2",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mitsubishi",
+      "line": "galant",
+      "fleetN": 1393,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 1969,
+          "to": 1973
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 1973,
+          "to": 1977
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 1976,
+          "to": 1980
+        },
+        {
+          "index": 3,
+          "name": "IV",
+          "from": 1980,
+          "to": 1984
+        },
+        {
+          "index": 4,
+          "name": "V",
+          "from": 1983,
+          "to": 1989
+        },
+        {
+          "index": 5,
+          "name": "VI",
+          "from": 1987,
+          "to": 1993
+        },
+        {
+          "index": 6,
+          "name": "VII",
+          "from": 1992,
+          "to": 1998
+        },
+        {
+          "index": 7,
+          "name": "VIII",
+          "from": 1996,
+          "to": 2006
+        },
+        {
+          "index": 8,
+          "name": "IX",
+          "from": 2003,
+          "to": 2012
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "rekord",
+      "fleetN": 1386,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Olympia Rekord",
+          "from": 1953,
+          "to": 1957
+        },
+        {
+          "index": 1,
+          "name": "P1",
+          "from": 1957,
+          "to": 1960
+        },
+        {
+          "index": 2,
+          "name": "P2",
+          "from": 1960,
+          "to": 1963
+        },
+        {
+          "index": 3,
+          "name": "A",
+          "from": 1963,
+          "to": 1965
+        },
+        {
+          "index": 4,
+          "name": "B",
+          "from": 1965,
+          "to": 1966
+        },
+        {
+          "index": 5,
+          "name": "C",
+          "from": 1966,
+          "to": 1971
+        },
+        {
+          "index": 6,
+          "name": "D",
+          "from": 1972,
+          "to": 1977
+        },
+        {
+          "index": 7,
+          "name": "E",
+          "from": 1977,
+          "to": 1986
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "porsche",
+      "line": "panamera",
+      "fleetN": 1381,
+      "gaps": [
+        {
+          "index": 2,
+          "name": "Panamera III",
+          "from": 2023,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "talento",
+      "fleetN": 1377,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Ducato-derived short van",
+          "from": 1989,
+          "to": 1994
+        },
+        {
+          "index": 1,
+          "name": "Renault-derived van",
+          "from": 2016,
+          "to": 2020
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mini",
+      "line": "countryman",
+      "fleetN": 1360,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "R60",
+          "from": 2010,
+          "to": 2016
+        },
+        {
+          "index": 1,
+          "name": "F60",
+          "from": 2016,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "moskvic",
+      "line": "2138",
+      "fleetN": 1343,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2138 – modelová rodina",
+          "from": 1975,
+          "to": 1981
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "nv200",
+      "fleetN": 1329,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "NV200 – rodina, členění neověřeno",
+          "from": 2009,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "300-350-predvalecne",
+      "fleetN": 1328,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "W03",
+          "from": 1926,
+          "to": 1930
+        },
+        {
+          "index": 1,
+          "name": "W04",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "W05",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "zx",
+      "fleetN": 1323,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "ZX – neúplně rozlišená rodina",
+          "from": 1991,
+          "to": 1998
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "leaf",
+      "fleetN": 1316,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "ZE0 – první hatchback",
+          "from": 2010,
+          "to": 2017
+        },
+        {
+          "index": 1,
+          "name": "ZE1 – druhý hatchback",
+          "from": 2017,
+          "to": 2025
+        },
+        {
+          "index": 2,
+          "name": "ZE2 – třetí generace (crossover)",
+          "from": 2025,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "z3",
+      "fleetN": 1304,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Z3",
+          "from": 1995,
+          "to": 2002
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "porsche",
+      "line": "macan",
+      "fleetN": 1298,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Macan Electric",
+          "from": 2024,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "ascona",
+      "fleetN": 1292,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "A",
+          "from": 1970,
+          "to": 1975
+        },
+        {
+          "index": 1,
+          "name": "B",
+          "from": 1975,
+          "to": 1981
+        },
+        {
+          "index": 2,
+          "name": "C",
+          "from": 1981,
+          "to": 1988
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "328",
+      "fleetN": 1291,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "328",
+          "from": 1936,
+          "to": 1940
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "nissan",
+      "line": "cabstar",
+      "fleetN": 1283,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Cabstar – rodina, členění neověřeno",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "jaguar",
+      "line": "xf",
+      "fleetN": 1272,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "X250 – sedan",
+          "from": 2007,
+          "to": 2015
+        },
+        {
+          "index": 1,
+          "name": "X250 –Sportbrake",
+          "from": 2012,
+          "to": 2015
+        },
+        {
+          "index": 2,
+          "name": "X260 – sedan",
+          "from": 2015,
+          "to": 2024
+        },
+        {
+          "index": 3,
+          "name": "X260 –Sportbrake",
+          "from": 2017,
+          "to": 2024
+        },
+        {
+          "index": 4,
+          "name": "XFL – dlouhý rozvor",
+          "from": 2016,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "500x",
+      "fleetN": 1261,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "500X",
+          "from": 2014,
+          "to": 2024
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "ritmo",
+      "fleetN": 1239,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Ritmo",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "bmw",
+      "line": "335",
+      "fleetN": 1225,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "335",
+          "from": 1939,
+          "to": 1941
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "tigra",
+      "fleetN": 1212,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Tigra – přehled řady",
+          "from": 1994,
+          "to": 2009
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "opel",
+      "line": "antara",
+      "fleetN": 1202,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Antara – přehled řady",
+          "from": 2006,
+          "to": 2015
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "camaro",
+      "fleetN": 1170,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Camaro",
+          "from": 1966,
+          "to": 2023
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "4007",
+      "fleetN": 1161,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "4007 – modelová rodina",
+          "from": 2007,
+          "to": 2012
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "daewoo",
+      "line": "lanos",
+      "fleetN": 1133,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Lanos – neúplně rozlišená rodina",
+          "from": 1997,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lancia",
+      "line": "delta",
+      "fleetN": 1123,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Delta – 1",
+          "from": 1979,
+          "to": 1994
+        },
+        {
+          "index": 1,
+          "name": "Delta – 2",
+          "from": 1993,
+          "to": 1999
+        },
+        {
+          "index": 2,
+          "name": "Delta – 3",
+          "from": 2008,
+          "to": 2014
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "peugeot",
+      "line": "607",
+      "fleetN": 1122,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "607 – modelová rodina",
+          "from": 1999,
+          "to": 2010
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "fiat",
+      "line": "128",
+      "fleetN": 1095,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "128",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "isuzu",
+      "line": "d-max",
+      "fleetN": 1095,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "I",
+          "from": 2002,
+          "to": 2012
+        },
+        {
+          "index": 1,
+          "name": "II",
+          "from": 2011,
+          "to": 2019
+        },
+        {
+          "index": 2,
+          "name": "III",
+          "from": 2019,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "alfa-romeo",
+      "line": "giulia",
+      "fleetN": 1091,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Giulia Berlina",
+          "from": 1962,
+          "to": 1978
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "kia",
+      "line": "carnival",
+      "fleetN": 1086,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "KV-II",
+          "from": 1998,
+          "to": 2005
+        },
+        {
+          "index": 1,
+          "name": "VQ – evropské období",
+          "from": 2006,
+          "to": 2012
+        },
+        {
+          "index": 2,
+          "name": "YP",
+          "from": 2014,
+          "to": 2020
+        },
+        {
+          "index": 3,
+          "name": "KA4",
+          "from": 2020,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chevrolet",
+      "line": "corvette",
+      "fleetN": 1076,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Corvette",
+          "from": 1953,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "land-rover",
+      "line": "range-rover-velar",
+      "fleetN": 1075,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "L560",
+          "from": 2017,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "toyota",
+      "line": "prius",
+      "fleetN": 1054,
+      "gaps": [
+        {
+          "index": 1,
+          "name": "Prius II (XW20)",
+          "from": 2003,
+          "to": 2009
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "skoda",
+      "line": "garde",
+      "fleetN": 1052,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Garde – modelová rodina",
+          "from": 1981,
+          "to": 1984
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chrysler",
+      "line": "300",
+      "fleetN": 1040,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "300 letter series",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 1,
+          "name": "300 non-letter series",
+          "from": null,
+          "to": null
+        },
+        {
+          "index": 2,
+          "name": "Moderní300 / 300C",
+          "from": null,
+          "to": 2023
+        },
+        {
+          "index": 3,
+          "name": "300C Walter P. Chrysler — evropská specifikace2010",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "samara",
+      "fleetN": 1038,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Samara",
+          "from": 1984,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "porsche",
+      "line": "boxster",
+      "fleetN": 1015,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Boxster 986",
+          "from": 1996,
+          "to": 2004
+        },
+        {
+          "index": 1,
+          "name": "Boxster 987",
+          "from": 2004,
+          "to": 2012
+        },
+        {
+          "index": 2,
+          "name": "Boxster 981",
+          "from": 2012,
+          "to": 2016
+        },
+        {
+          "index": 3,
+          "name": "718 Boxster 982",
+          "from": 2016,
+          "to": 2025
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "citroen",
+      "line": "ax",
+      "fleetN": 1010,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "AX – neúplně rozlišená rodina",
+          "from": 1986,
+          "to": 1998
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "ford",
+      "line": "taunus",
+      "fleetN": 1010,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "Taunus G93A",
+          "from": 1939,
+          "to": 1942
+        },
+        {
+          "index": 1,
+          "name": "Taunus G73A",
+          "from": 1948,
+          "to": 1952
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "chrysler",
+      "line": "pt-cruiser",
+      "fleetN": 1003,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "PT Cruiser — souhrnná výrobní rodina",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    },
+    {
+      "make": "lada",
+      "line": "2104",
+      "fleetN": 1000,
+      "gaps": [
+        {
+          "index": 0,
+          "name": "2104",
+          "from": null,
+          "to": null
+        }
+      ],
+      "status": "pending-generation-source"
+    }
+  ]
+}

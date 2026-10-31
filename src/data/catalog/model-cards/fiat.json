@@ -16920,8 +16920,41 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol-cng",
+            "displacementCc": 1581,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.6 (Blupower) CNG",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Multipla"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines ",
+              "variantYears": "1998–2002",
+              "originalVariant": "1.6 (Blupower) CNG",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": null,
+              "generationEvidence": {
+                "method": "row-years",
+                "anchor": "Fiat Multipla",
+                "fromYear": 1998,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": 1998,
+                "rowToYear": 2002
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -16983,10 +17016,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
