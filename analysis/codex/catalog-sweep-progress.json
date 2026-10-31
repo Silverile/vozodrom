@@ -2081,7 +2081,9 @@
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
-        1
+        1,
+        2,
+        3
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -4746,9 +4748,7 @@
         0,
         1,
         2,
-        3,
-        5,
-        6
+        3
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -5000,8 +5000,7 @@
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
-        1,
-        2
+        1
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -5353,9 +5352,7 @@
       "generationsWithoutEngines": [
         0,
         1,
-        4,
-        5,
-        6
+        4
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -6265,8 +6262,7 @@
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1
+        0
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -6757,7 +6753,6 @@
       "generationCount": 5,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        1,
         2,
         4
       ],
@@ -7979,8 +7974,7 @@
       "generationsWithoutEngines": [
         0,
         1,
-        4,
-        5
+        4
       ],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
@@ -9660,8 +9654,7 @@
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
         0,
-        1,
-        2
+        1
       ],
       "generationsWithEnginePowerGaps": []
     },
@@ -10841,8 +10834,7 @@
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1
+        0
       ],
       "generationsWithEnginePowerGaps": []
     },
@@ -11875,8 +11867,7 @@
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1
+        0
       ],
       "generationsWithEnginePowerGaps": []
     },
@@ -12220,8 +12211,7 @@
       "generationCount": 2,
       "announcedOnlyGenerations": [],
       "generationsWithoutEngines": [
-        0,
-        1
+        0
       ],
       "generationsWithEnginePowerGaps": []
     },
@@ -72363,6 +72353,89 @@
       "removedPseudoGenerations": 4,
       "engineRowsAdded": 86,
       "remainingSelectedLines": 42
+    },
+    {
+      "batch": 2,
+      "report": "analysis/codex/structure-pass-2/report.json",
+      "validation": "analysis/codex/structure-pass-2/validation.json",
+      "reviewed": 50,
+      "changed": 39,
+      "retainedIdentified": 11,
+      "addedGenerations": 3,
+      "removedGenerations": 13,
+      "faceliftsAdded": 2
     }
-  ]
+  ],
+  "pendingStatisticsRebuild": {
+    "when": "Once at the end of the structure pass; Mercedes included after deterministic matcher fix",
+    "lineIds": [
+      "audi/q7",
+      "audi/rs3",
+      "audi/rs5",
+      "audi/rs6",
+      "barkas/b1000",
+      "bmw/rada-1",
+      "byd/seal-u",
+      "chevrolet/cruze",
+      "chrysler/pacifica",
+      "citroen/c5",
+      "dacia/logan",
+      "dacia/spring",
+      "daewoo/matiz",
+      "daewoo/nubira",
+      "dodge/caravan",
+      "fiat/uno",
+      "jaguar/xj",
+      "kia/k4",
+      "kia/optima",
+      "land-rover/defender",
+      "land-rover/range-rover",
+      "ligier/js50",
+      "lynk-co/01",
+      "mercedes-benz/300-350-predvalecne",
+      "mercedes-benz/amg-gt",
+      "mercedes-benz/gla",
+      "mercedes-benz/gle",
+      "mercedes-benz/trida-g",
+      "mercedes-benz/trida-v",
+      "mg/hs",
+      "mitsubishi/asx",
+      "mitsubishi/eclipse-cross",
+      "nissan/micra",
+      "nissan/navara",
+      "ford/escort",
+      "hyundai/i20",
+      "renault/clio",
+      "toyota/hilux",
+      "volkswagen/t-roc"
+    ],
+    "makes": [
+      "audi",
+      "barkas",
+      "bmw",
+      "byd",
+      "chevrolet",
+      "chrysler",
+      "citroen",
+      "dacia",
+      "daewoo",
+      "dodge",
+      "fiat",
+      "jaguar",
+      "kia",
+      "land-rover",
+      "ligier",
+      "lynk-co",
+      "mercedes-benz",
+      "mg",
+      "mitsubishi",
+      "nissan",
+      "ford",
+      "hyundai",
+      "renault",
+      "toyota",
+      "volkswagen"
+    ],
+    "currentDisplay": "Changed lines keep line/make totals; their stale gens are empty until rebuilt."
+  }
 }

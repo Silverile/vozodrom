@@ -103,7 +103,7 @@ class Matcher:
         for make, v in self.lines.items():
             if make != "mercedes-benz":  # "E 220" must stay "E 220" to match class E
                 v.extend((compact(n), slug) for n, slug in list(v) if compact(n) != n)
-            v.sort(key=lambda x: -len(x[0]))
+            v.sort(key=lambda x: (-len(x[0]), x[0], x[1]))
         self._cache = {}
 
     def make(self, raw: str):
@@ -121,8 +121,13 @@ class Matcher:
         slugs = self._cache[key]
         if len(slugs) <= 1 or not year:
             return slugs[0] if slugs else None
-        inside = [s for s in slugs if (self.years[(make, s)][0] or 0) <= year <= (self.years[(make, s)][1] or 9999)]
-        return (inside or slugs)[0]
+        def rank(slug):
+            start, end = self.years[(make, slug)]
+            contains = (start is not None or end is not None) and (start or 0) <= year <= (end or 9999)
+            # Undated candidates are a fallback, not proof of production in every year.
+            undated = start is None and end is None
+            return (0 if contains else 1 if undated else 2, -(start or 0) if contains else 0, slug)
+        return min(slugs, key=rank)
 
     def _lines(self, make: str, raw_model: str):
         m = fold(raw_model)
@@ -161,7 +166,7 @@ class Matcher:
             return [found]
         # every line registered under the same name, newest first
         same = [s for n, s in self.lines.get(make, []) if n == matched_name]
-        return sorted(set(same), key=lambda s: -(self.years[(make, s)][0] or 0))
+        return sorted(set(same), key=lambda s: (-(self.years[(make, s)][0] or 0), s))
 
     def generation(self, make: str, line: str, year, type_text: str = ""):
         """Index of the generation built in `year`; a type code like (5E) in the raw text breaks ties."""
