@@ -31,4 +31,20 @@ assert len(rows)==1 and rows[0]['powerKwMin']==55 and rows[0]['displacementLitre
 card={'name':'Example','generations':[{'code':'I','name':'Example I','from':1990,'to':2000},{'code':'II','name':'Example II','from':2000,'to':2010}]}
 row={'sourceScope':{'variantYears':None}}
 assert r.t.generation_attribution(card,'Example',[],row,None) is None
+hybrid=r.t.lxml.html.fromstring('''<html><h1>BMW G45</h1><table><tr><th>Modell</th><th>20 xDrive</th><th>30 xDrive (1)</th><th>M50 xDrive</th></tr>
+<tr><th>Bauzeitraum</th><td>seit 11/2024</td><td>seit 11/2024</td><td>ab 12/2026</td></tr>
+<tr><th>Motorart</th><td>Ottomotor als Mild-Hybrid</td><td>Ottomotor als Mild-Hybrid</td><td>Ottomotor als Mild-Hybrid</td></tr>
+<tr><th>Hubraum</th><td>1998 cm³</td><td>1998 cm³</td><td>2998 cm³</td></tr>
+<tr><th>max. Leistung</th><td>140 kW + 13 kW</td><td>180 kW + 10 kW</td><td>313 kW + 13 kW</td></tr>
+<tr><th>Systemleistung</th><td>150 kW</td><td>190 kW</td><td>326 kW</td></tr></table></html>''')
+bmw={'name':'X3','generations':[{'name':'X3 (G45)','code':'G45','from':2024,'to':None}]}
+out=r.bmw_hybrid_rows(hybrid,'https://de.wikipedia.org/wiki/BMW_G45',bmw,0)
+assert [(e['variant'],e['fuel'],e['powerKwMin']) for e in out]==[('20 xDrive','petrol-mhev',150)]
+hybrid.xpath('//h1')[0].text='BMW X3'
+assert not r.bmw_hybrid_rows(hybrid,'https://de.wikipedia.org/wiki/BMW_X3',bmw,0)
+overlap=r.t.lxml.html.fromstring('''<html><h1>Porsche 993</h1><table><tr><th>Produktionszeitraum</th><td>1993–1998</td></tr><tr><th>Motoren</th><td>Ottomotoren</td></tr></table>
+<h2>Technische Daten</h2><table><tr><th>Modell</th><th>Hubraum</th><th>Leistung</th></tr><tr><td>Carrera</td><td>3600 cm³</td><td>200 kW</td></tr></table></html>''')
+porsche={'name':'911','generations':[{'code':'993','name':'911 993','from':1994,'to':1998},{'code':'996','name':'911 996','from':1997,'to':2004}]}
+assert [gi for gi,e in r.page_rows(overlap,'https://de.wikipedia.org/wiki/Porsche_993',porsche)]==[0]
 print('PASS: transposed fuel evidence, foreign-market exclusion, embedded headers, spanning fuel categories, kW-only header, litre evidence, sibling exclusion and ambiguous-generation rejection')
+print('PASS: explicit system power without component sum; regional/future revisions excluded; article identity required; overlapping numeric chassis article attributed uniquely')

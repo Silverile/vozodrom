@@ -109,6 +109,74 @@ LEADS.update({
  'nissan/juke':{0:['Nissan_Juke'],1:['Nissan_Juke']},
  'mitsubishi/l200':{0:['Mitsubishi_L200'],1:['Mitsubishi_L200']},
 })
+LEADS.update({
+ 'bmw/x5':{4:['BMW_G65']},'bmw/x3':{3:['BMW_G45']},
+ 'mitsubishi/l200':{i:['Mitsubishi_L200'] for i in range(6)},
+ 'dacia/1300':{0:['Dacia_1300'],1:['Dacia_1310','Dacia_1300']},
+ 'opel/kadett':{0:['Opel_Kadett_(1936–1940)'],1:['Opel_Kadett_A'],2:['Opel_Kadett_B'],3:['Opel_Kadett_C'],4:['Opel_Kadett_D']},
+ 'peugeot/508':{0:['Peugeot_508_I','Peugeot_508']},
+ 'mitsubishi/colt':{i:['Mitsubishi_Colt'] for i in range(7)},
+ 'honda/accord':{i:[f'Honda_Accord_{i+1}._Generation','Honda_Accord'] for i in range(11)},
+ 'mercedes-benz/cla':{2:['Mercedes-Benz_Baureihe_174']},
+ 'land-rover/freelander':{i:['Land_Rover_Freelander'] for i in range(3)},
+ 'bmw/rada-4':{0:['BMW_F32']},
+ 'land-rover/discovery':{i:['Land_Rover_Discovery'] for i in range(5)},
+ 'fiat/stilo':{0:['Fiat_Stilo']},
+ 'mazda/5':{0:['Mazda5'],1:['Mazda5']},
+ 'fiat/uno':{1:['Fiat_Uno']},
+ 'porsche/911':{0:['Porsche_911_(Urmodell)'],1:['Porsche_911_(G-Modell)'],2:['Porsche_964'],3:['Porsche_993'],4:['Porsche_996'],5:['Porsche_997'],6:['Porsche_991'],7:['Porsche_992']},
+ 'mazda/mx-5':{i:['Mazda_MX-5'] for i in range(4)},
+ 'mazda/323':{i:['Mazda_323'] for i in range(7)},
+ 'honda/hr-v':{i:['Honda_HR-V'] for i in range(3)},
+ 'citroen/saxo':{0:['Citroën_Saxo']},
+ 'seat/arona':{0:['Seat_Arona']},
+ 'mitsubishi/lancer':{i:['Mitsubishi_Lancer'] for i in range(9)},
+ 'porsche/cayenne':{0:['Porsche_Cayenne_(Typ_9PA)'],1:['Porsche_Cayenne_(Typ_92A)'],2:['Porsche_Cayenne_(Typ_PO536)'],3:['Porsche_Cayenne_Electric']},
+ 'mitsubishi/pajero':{i:['Mitsubishi_Pajero'] for i in range(4)},
+ 'opel/omega':{0:['Opel_Omega']},
+ 'mercedes-benz/gla':{2:['Mercedes-Benz_GLA']},
+ 'opel/agila':{0:['Opel_Agila']},
+ 'peugeot/107':{0:['Peugeot_107']},
+ 'mazda/cx-30':{0:['Mazda_CX-30']},
+ 'audi/q8':{0:['Audi_Q8']},
+ 'dacia/bigster':{0:['Dacia_Bigster']},
+ 'audi/a8':{0:['Audi_A8_D2'],1:['Audi_A8_D3'],2:['Audi_A8_D4']},
+ 'peugeot/205':{0:['Peugeot_205']},
+ 'peugeot/405':{0:['Peugeot_405']},
+ 'jeep/cherokee':{0:['Jeep_Cherokee_(SJ)'],2:['Jeep_Cherokee_(KJ)'],3:['Jeep_Cherokee_(KK)']},
+})
+
+def bmw_hybrid_rows(tree,source,card,gi):
+    """Explicit system outputs only; never add ICE and electric power together."""
+    code=card['generations'][gi].get('code')
+    if code not in ('G45','G65'):return []
+    if not re.search(r'\b'+code+r'\b',t.clean(tree.xpath('string(//h1)'))):return []
+    out=[]
+    for number,table in enumerate(tree.xpath('//table'),1):
+        if 'Systemleistung' not in table.text_content():continue
+        copy=t.lxml.html.fromstring(t.lxml.html.tostring(table,encoding='unicode'))
+        for el in copy.xpath('.//style|.//script'):el.drop_tree()
+        try:df=t.pd.read_html(io.StringIO(t.lxml.html.tostring(copy,encoding='unicode')),flavor='lxml')[0].fillna('')
+        except Exception:continue
+        rows=[[t.clean(v) for v in row] for row in df.values.tolist()];labels=[t.fold(row[0]) for row in rows];cols=[t.clean(c) for c in df.columns]
+        def ri(name):return next((i for i,l in enumerate(labels) if l==name),None)
+        pi,ci,fi,yi=ri('SYSTEMLEISTUNG'),ri('HUBRAUM'),ri('MOTORART'),ri('BAUZEITRAUM')
+        if None in (pi,ci,fi,yi):continue
+        for j in range(1,len(cols)):
+            name=cols[j];kind=rows[fi][j];years=rows[yi][j]
+            # Footnoted regional variants, future scheduled revisions, and iX5 siblings stay out.
+            if re.search(r'\(\d+\)|^iX5',name,re.I):continue
+            starts=re.match(r'(?:ab|seit)\s+(\d{2})/(20\d{2})',years)
+            if starts and (int(starts[2]),int(starts[1]))>(2026,10):continue
+            fuel='diesel-mhev' if 'Dieselmotor' in kind and 'Mild' in kind else 'petrol-mhev' if 'Ottomotor' in kind and 'Mild' in kind else 'petrol-phev' if 'Ottomotor + Elektromotor' in kind else None
+            if fuel is None:continue
+            kw=t.power(rows[pi][j]);cc=t.displacement(rows[ci][j],'Hubraum')
+            if kw is None or cc is None:continue
+            name=short_name(name)
+            g=card['generations'][gi];span=t.year_span(years)
+            scope={'tableIndex':number,'tableSection':f'BMW {code} / Systemleistung','variantYears':years,'originalVariant':cols[j], 'powerBasis':'explicit system output; not summed components','generationEvidence':{'method':'generation-article','anchor':f'BMW {code}','fromYear':g['from'],'toYear':g.get('to'),'generationIndex':gi,'rowFromYear':span[0] if span else None,'rowToYear':span[1] if span else None}}
+            out.append({'fuel':fuel,'displacementCc':cc,'displacementLitresNominal':round(cc/1000,1),'variant':name,'powerKwMin':kw,'powerKwMax':kw,'availablePowerKw':[kw],'powerRangeCoverage':'documented-versions-only','sources':[source],'sourceScope':scope})
+    return out
 
 def short_name(value):
     value=re.sub(r'^(\d{3})\.\d{1,2}$',r'\1',value)
@@ -186,7 +254,7 @@ def table_rows(table,context,source,number):
 def page_rows(tree,source,card):
     title=t.clean(tree.xpath('string(//h1)'));production=None;default_fuel=''
     for tr in tree.xpath('(//table)[1]//tr'):
-        text=t.clean(tr.text_content())
+        text=' '.join(t.clean(cell.text_content()) for cell in tr.xpath('./th|./td')) or t.clean(tr.text_content())
         if re.match(r'Production\b|Produktionszeitraum\b|Výroba\b',text,re.I) and production is None:production=t.year_span(text)
         if text.startswith('Motoren ') and re.search('Ottomotor',text,re.I) and not re.search('Diesel|Elektro|Hybrid',text,re.I):default_fuel='Ottomotoren'
     # Infobox years are source evidence; include them for date-based article attribution.
@@ -204,6 +272,14 @@ def page_rows(tree,source,card):
         context=list(headings.values())
         for row in table_rows(el,' / '.join(context)+(' / '+default_fuel if default_fuel else ''),source,table_number):
             attribution=t.generation_attribution(card,anchor,context,row,production)
+            if attribution is None:
+                # Explicit numeric chassis articles remain unambiguous when production
+                # overlaps the successor (e.g. Porsche 993 and 996 in 1997–1998).
+                explicit=[i for i,g in enumerate(card['generations']) if re.fullmatch(r'\d{3}',g.get('code') or '') and re.search(r'\b'+re.escape(g['code'])+r'\b',title)]
+                if len(explicit)==1 and production:
+                    gi=explicit[0];g=card['generations'][gi];span=t.year_span(row['sourceScope'].get('variantYears') or '')
+                    if abs(production[0]-g['from'])<=1 and (not span or g['from']<=span[0] and span[1]<=(g.get('to') or 2026)):
+                        attribution=(gi,{'method':'generation-article','anchor':anchor,'fromYear':production[0],'toYear':production[1],'generationIndex':gi,'rowFromYear':span[0] if span else None,'rowToYear':span[1] if span else None})
             if attribution is None:
                 # Mercedes article titles use a bare series number, while cards use W/C/A.
                 m=re.search(r'Mercedes-Benz (?:Baureihe |[WRCAVXH] ?)(\d{3})\b',title)
@@ -240,6 +316,12 @@ def research(item):
         result['attempts'].append(attempt)
         if tree is None:continue
         rows=[];seen=set()
+        if make=='bmw' and g.get('code') in ('G45','G65'):
+            rows=bmw_hybrid_rows(tree,canonical,card,gi)
+            attempt['usableRows']=len(rows)
+            if rows:result['engines']=rows;result['status']='candidates';break
+            result['reason']='No currently started, non-regional variant with explicit system power; future month-dated revisions and iX5 siblings skipped.'
+            continue
         for target,row in page_rows(tree,canonical,card):
             if target!=gi or not row.get('displacementCc') and not row.get('displacementLitresNominal') and row['fuel']!='electric':continue
             v=t.fold(row['variant'])
@@ -252,18 +334,18 @@ def research(item):
         attempt['usableRows']=len(rows)
         if rows:
             result['engines']=rows;result['status']='candidates';break
-    if not result['engines']:result['reason']='No usable European engine table with explicit kW and unambiguous generation evidence; hybrid combined outputs and ambiguous rows skipped.'
+    if not result['engines'] and not result.get('reason'):result['reason']='No usable European engine table with explicit kW and unambiguous generation evidence; hybrid combined outputs and ambiguous rows skipped.'
     return result
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--batch',type=int,default=1);ap.add_argument('--offset',type=int,default=0);ap.add_argument('--size',type=int,default=100);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--batch',type=int,default=1);ap.add_argument('--offset',type=int,default=0);ap.add_argument('--size',type=int,default=100);ap.add_argument('--queue',default='analysis/codex/badge-routing/wave-1-second-source-queue.json');args=ap.parse_args()
     INDEX=t.load('src/data/model-cards-index.json')
-    queue=t.load('analysis/codex/badge-routing/wave-1-second-source-queue.json')['generations'][args.offset:args.offset+args.size]
+    queue=t.load(args.queue)['generations'][args.offset:args.offset+args.size]
     revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     results=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         for r in pool.map(research,queue):
             results.append(r)
             print(json.dumps({'id':r['make']+'/'+r['line'],'generation':r['generationIndex'],'rows':len(r['engines']),'pages':len(r['attempts'])}),flush=True)
-            t.write(OUT+f'/staged/candidates-{args.batch}.json',{'baselineRevision':revision,'offset':args.offset,'generations':results,'complete':False})
-    t.write(OUT+f'/staged/candidates-{args.batch}.json',{'baselineRevision':revision,'offset':args.offset,'generations':results,'complete':True})
+            t.write(OUT+f'/staged/candidates-{args.batch}.json',{'baselineRevision':revision,'queueSource':args.queue,'offset':args.offset,'generations':results,'complete':False})
+    t.write(OUT+f'/staged/candidates-{args.batch}.json',{'baselineRevision':revision,'queueSource':args.queue,'offset':args.offset,'generations':results,'complete':True})
