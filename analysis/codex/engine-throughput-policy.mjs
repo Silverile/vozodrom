@@ -118,6 +118,7 @@ export function rejectEngine(make,line,engine){
  if(make==='audi'&&/^a[3468]$/.test(line)&&new RegExp(`\\bR?S${line.slice(1)}\\b`).test(v))return 'Explicit S/RS sibling badge has its own catalogue line';
  if(make==='bmw'&&['rada-3','rada-5'].includes(line)&&new RegExp(`\\bM${line.slice(-1)}\\b`).test(v))return 'Explicit M sibling badge';
  if(make==='mercedes-benz'&&line==='vito'&&/\bEQV\b/.test(v))return 'EQV passenger badge, not Vito';
+ if(make==='mercedes-benz'&&line==='slc-c107'&&/\bSL\b/.test(v))return 'SL roadster badge, not the C107 SLC coupe';
  if(make==='peugeot'&&line==='partner'&&/BERLINGO/.test(v))return 'Explicit Berlingo badge';
  return null;
 }

@@ -1,0 +1,81 @@
+{
+  "asOf": "2026-10-31",
+  "baselineRevision": "e827ed2aebb2342d0086739400f632be056d3cdf",
+  "countsBefore": {
+    "lines": 4809,
+    "cards": 4646,
+    "linesWithoutCard": 163,
+    "generations": 6730,
+    "generationsWithEngines": 1821,
+    "generationsWithEngineRowsWithoutPower": 614,
+    "generationsWithTechnicalVersions": 2108,
+    "generationsWithEquipmentLines": 2,
+    "generationsWithFacelifts": 790
+  },
+  "countsAfter": {
+    "lines": 4809,
+    "cards": 4648,
+    "linesWithoutCard": 161,
+    "generations": 6696,
+    "generationsWithEngines": 2526,
+    "generationsWithEngineRowsWithoutPower": 603,
+    "generationsWithTechnicalVersions": 2086,
+    "generationsWithEquipmentLines": 32,
+    "generationsWithFacelifts": 836
+  },
+  "engineRowsBefore": 4471,
+  "engineRowsAfter": 9758,
+  "changedPublicCards": 814,
+  "wave1SecondSource": {
+    "visited": 528,
+    "filled": 274,
+    "unresolved": 254,
+    "unvisited": 0,
+    "enginesAdded": 2118,
+    "lastBatch": 5,
+    "report": "analysis/codex/second-source-engines/report-5.json",
+    "validation": "analysis/codex/second-source-engines/validation-5.json",
+    "queueFullyVisited": true,
+    "unresolvedRemain": true
+  },
+  "wave2": {
+    "queuedGenerations": 651,
+    "distinctQueuedLines": 450,
+    "waveLinesAtCreation": 615,
+    "visited": 651,
+    "filled": 217,
+    "unresolved": 434,
+    "undatedNotResearched": 108,
+    "engineRowsAdded": 542,
+    "unvisited": 0
+  },
+  "currentFrame": [
+    {
+      "wave": 1,
+      "lines": 474,
+      "missingCards": 0,
+      "generations": 1234,
+      "emptyEngineGenerations": 256,
+      "partialPowerGenerations": 126
+    },
+    {
+      "wave": 2,
+      "lines": 615,
+      "missingCards": 0,
+      "generations": 903,
+      "emptyEngineGenerations": 436,
+      "partialPowerGenerations": 67
+    },
+    {
+      "wave": 3,
+      "lines": 3720,
+      "missingCards": 161,
+      "generations": 4559,
+      "emptyEngineGenerations": 3478,
+      "partialPowerGenerations": 410
+    }
+  ],
+  "structuralSignalLines": 83,
+  "closingValidation": "analysis/codex/second-source-engines/final-validation-9-10.json",
+  "scopeNote": "Engine queues visited, not all model histories certified. Original wave-2 header lines=615 described the whole fleet wave; its 651 queued items belonged to 450 distinct lines."
+}

@@ -38,8 +38,8 @@ def run(item):
     second=r.research(item,live_leads(item,first),'second-source')
     second['attempts']=first['attempts']+second['attempts'];return second
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--batch',type=int,required=True);ap.add_argument('--size',type=int,default=150);ap.add_argument('--queue',default='analysis/codex/second-source-engines/wave-2-queue.json');args=ap.parse_args()
-    items=r.t.load(args.queue)['generations'][:args.size];revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();results=[]
+    ap=argparse.ArgumentParser();ap.add_argument('--batch',type=int,required=True);ap.add_argument('--size',type=int,default=150);ap.add_argument('--offset',type=int,default=0);ap.add_argument('--queue',default='analysis/codex/second-source-engines/wave-2-queue.json');args=ap.parse_args()
+    items=r.t.load(args.queue)['generations'][args.offset:args.offset+args.size];revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();results=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         for x in pool.map(run,items):
             results.append(x);print(json.dumps({'id':x['make']+'/'+x['line'],'index':x['generationIndex'],'rows':len(x['engines']),'attempts':len(x['attempts'])}),flush=True)

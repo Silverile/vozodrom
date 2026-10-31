@@ -7,4 +7,5 @@ assert.equal(evidenceProblem(g,0,e),null);
 for(const [field,value]of [['powerText','326 PS'],['powerText','190 kW + 200 kW'],['title','BMW iX3 xDrive40 Specs'],['fuelText','Hybrid Electric'],['url','https://example.com/spec.html']]){const changed=structuredClone(e);changed.sourceScope.specificationPage[field]=value;assert(evidenceProblem(g,0,changed),`Accepted invalid ${field}`);}
 assert(evidenceProblem({...g,to:2020},0,e));
 assert(rejectEngine('opel','adam',{variant:'1.6 Ecotec 16V',sourceScope:{tableSection:'Motorsport / Rally'}}));
+assert(rejectEngine('mercedes-benz','slc-c107',{variant:'350 SL'}));assert.equal(rejectEngine('mercedes-benz','slc-c107',{variant:'350 SLC'}),null);
 console.log('PASS: specification source, kW and model identity proof; HP/component/hybrid/date rejection');

@@ -283,7 +283,7 @@ def table_rows(table,context,source,number):
     try:df=t.pd.read_html(io.StringIO(t.lxml.html.tostring(table,encoding='unicode')),flavor='lxml')[0].fillna('')
     except Exception:return []
     if df.shape[1]<2 or df.shape[0]>250:return []
-    cols=[' '.join(t.clean(c) for c in x) if isinstance(x,tuple) else t.clean(x) for x in df.columns]
+    cols=[' '.join(t.clean(c) for c in x if t.fold(t.clean(c)) not in ('MOTOR','ENGINE')) if isinstance(x,tuple) else t.clean(x) for x in df.columns]
     rows=[[t.clean(x) for x in row] for row in df.values.tolist()]
     labels=[t.fold(r[0]) for r in rows]
     pi=next((i for i,l in enumerate(labels) if re.match(r'^(?:MAX |MAXIMALE |NENN)?LEISTUNG(?: |$)|^SYSTEMLEISTUNG',l)),None)
@@ -299,6 +299,8 @@ def table_rows(table,context,source,number):
         out=t.engine(variant,p,cc,kind,context,source,number,header,cch,years)
         if out:
             out['sourceScope']['originalVariant']=original_variant
+            if t.fold(variant) in ('COUPE','SPYDER','LIMOUSINE','SALOON','SEDAN','ESTATE','AVANT','SPORTBACK') and out['displacementLitresNominal']:
+                out['variant']=str(out['displacementLitresNominal'])+' '+('diesel' if out['fuel']=='diesel' else 'benzin')
             if out['displacementCc'] is None and out['displacementLitresNominal'] is None:
                 litre=re.fullmatch(r'([0-9][.,][0-9])\s*l',t.clean(cc),re.I)
                 if litre:out['displacementLitresNominal']=float(litre[1].replace(',','.'))

@@ -79,3 +79,9 @@ palio={'name':'Palio','generations':[{'name':'Palio','code':None,'from':1996,'to
 out=r.prose_rows(prose,'https://de.wikipedia.org/wiki/Fiat_Palio',palio)
 assert [(e['fuel'],e['powerKwMin']) for _,e in out]==[('petrol',44),('diesel',51)],out
 print('PASS: explicit engine prose bullets; regional and sibling-model exclusions')
+multi=r.t.lxml.html.fromstring('''<table><tr><th>Modell</th><th>Coupé</th><th>SE</th></tr><tr><th>Motor</th><th>Motor</th><th>Motor</th></tr>
+<tr><td>Motorart</td><td>Ottomotor</td><td>Ottomotor</td></tr><tr><td>Hubraum</td><td>4961 cm³</td><td>4961 cm³</td></tr><tr><td>Leistung</td><td>368 kW</td><td>382 kW</td></tr></table>''')
+rows=r.table_rows(multi,'Technische Daten','https://de.wikipedia.org/wiki/Lamborghini_Gallardo',2)
+assert [(e['variant'],e['powerKwMin']) for e in rows]==[('5.0 benzin',368),('SE',382)],rows
+assert r.short_name('Single Motor')=='Single Motor'
+print('PASS: subordinate Motor header removed; body-only label uses stored displacement; Single Motor badge preserved')

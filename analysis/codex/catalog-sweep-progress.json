@@ -22,23 +22,23 @@
       {
         "wave": 1,
         "lines": 474,
-        "visited": 471
+        "visited": 474
       },
       {
         "wave": 2,
-        "lines": 614,
-        "visited": 52
+        "lines": 615,
+        "visited": 469
       },
       {
         "wave": 3,
-        "lines": 3721,
+        "lines": 3720,
         "visited": 5
       }
     ],
     "completeLines": 0,
-    "linesEnriched": 199,
-    "unvisited": 4281,
-    "linesVisited": 528
+    "linesEnriched": 814,
+    "unvisited": 3861,
+    "linesVisited": 948
   },
   "nextDataTargets": [],
   "batches": [
@@ -72738,7 +72738,7 @@
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
   },
-  "activePhase": "wave-2 engines and sourced family structures",
+  "activePhase": "wave-1/2 engine queues visited; residuals and wave-3 field research pending",
   "structurePasses": [
     {
       "report": "analysis/codex/structure-pass/batch-1.json",
@@ -72965,20 +72965,24 @@
   },
   "wave2EngineQueue": {
     "path": "analysis/codex/second-source-engines/wave-2-queue.json",
-    "lines": 615,
+    "lines": 450,
     "generations": 651,
-    "partialPowerGenerations": 67
+    "partialPowerGenerations": 67,
+    "waveLinesAtCreation": 615,
+    "scope": "Initial empty-engine queue only; not the full wave line count."
   },
   "wave2Queue": "analysis/codex/second-source-engines/wave-2-queue.json",
   "wave2Progress": {
-    "visited": 450,
-    "filled": 154,
-    "unresolved": 296,
-    "unvisited": 201,
-    "enginesAdded": 413,
-    "lastBatch": 8,
-    "report": "analysis/codex/second-source-engines/report-8.json",
-    "validation": "analysis/codex/second-source-engines/families-8/validation.json"
+    "visited": 651,
+    "filled": 217,
+    "unresolved": 434,
+    "unvisited": 0,
+    "enginesAdded": 542,
+    "lastBatch": 10,
+    "report": "analysis/codex/second-source-engines/report-9-10.json",
+    "validation": "analysis/codex/second-source-engines/final-validation-9-10.json",
+    "queueFullyVisited": true,
+    "unresolvedRemain": true
   },
   "wave2FamilyEnrichment": {
     "lines": [
@@ -72989,5 +72993,68 @@
     "generationsAdded": 6,
     "newEngineRows": 10,
     "statistics": "analysis/codex/second-source-engines/families-8/statistics.json"
-  }
+  },
+  "closingSummary": "analysis/codex/catalog-sweep-summary.md",
+  "currentAuditCounts": {
+    "lines": 4809,
+    "cards": 4648,
+    "linesWithoutCard": 161,
+    "generations": 6696,
+    "generationsWithEngines": 2526,
+    "generationsWithEngineRowsWithoutPower": 603,
+    "generationsWithTechnicalVersions": 2086,
+    "generationsWithEquipmentLines": 32,
+    "generationsWithFacelifts": 836
+  },
+  "currentFleetFrame": [
+    {
+      "wave": 1,
+      "lines": 474,
+      "missingCards": 0,
+      "generations": 1234,
+      "emptyEngineGenerations": 256,
+      "partialPowerGenerations": 126
+    },
+    {
+      "wave": 2,
+      "lines": 615,
+      "missingCards": 0,
+      "generations": 903,
+      "emptyEngineGenerations": 436,
+      "partialPowerGenerations": 67
+    },
+    {
+      "wave": 3,
+      "lines": 3720,
+      "missingCards": 161,
+      "generations": 4559,
+      "emptyEngineGenerations": 3478,
+      "partialPowerGenerations": 410
+    }
+  ],
+  "legacyLinePassCounts": {
+    "lines": 4809,
+    "byWave": [
+      {
+        "wave": 1,
+        "lines": 474,
+        "visited": 471
+      },
+      {
+        "wave": 2,
+        "lines": 614,
+        "visited": 52
+      },
+      {
+        "wave": 3,
+        "lines": 3721,
+        "visited": 5
+      }
+    ],
+    "completeLines": 0,
+    "linesEnriched": 199,
+    "unvisited": 4281,
+    "linesVisited": 528
+  },
+  "countsBasis": "Visited means recorded line/generation research or triage; enriched means generated card differs from sweep baseline; complete history is not certified."
 }
