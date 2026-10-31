@@ -83,8 +83,14 @@ const segmentOf = (s: string | null | undefined) => (s && /^[A-FJMS]$/.test(s) ?
 
 const num = (n: number | null | undefined, unit = "") => (n == null ? "—" : `${n.toLocaleString("cs-CZ")}${unit}`);
 
+/** Catalogue variants may carry a note after ";" ("1.4 TSI; ACT podle konkrétní verze"). */
+const variantParts = (variant: string) => {
+  const [name, ...note] = variant.split(";");
+  return { name: name.trim(), note: note.join(";").trim() };
+};
+
 function engineName(e: CardEngine): string {
-  if (e.variant) return e.variant;
+  if (e.variant) return variantParts(e.variant).name;
   const litres = e.displacementLitresNominal ?? (e.displacementCc ? Math.round(e.displacementCc / 100) / 10 : null);
   return [litres?.toLocaleString("cs-CZ", { minimumFractionDigits: 1 }), e.fuel && CARD_FUEL[e.fuel]].filter(Boolean).join(" ") || "—";
 }
@@ -137,7 +143,7 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
     label: "Výkon",
     value: (t) =>
       t.engine?.powerKw
-        ? `${t.engine.powerKw.toLocaleString("cs-CZ")} kW${t.engine.powerStandard && t.engine.powerStandard !== "ISO" ? ` (${t.engine.powerStandard})` : ""}`
+        ? `${t.engine.powerKw.toLocaleString("cs-CZ")} kW${t.engine.powerBasis === "system" ? " systémový" : ""}${t.engine.powerStandard && t.engine.powerStandard !== "ISO" ? ` (${t.engine.powerStandard})` : ""}`
         : null,
   },
   { label: "Moment", value: (t) => (t.engine?.torqueNm ? `${t.engine.torqueNm} Nm` : null) },
@@ -190,7 +196,8 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
 
   // catalogue rows can be empty placeholders (every field null); they are not engines to list
   const engines = gen.engines.filter((e) => e.variant || e.fuel || e.displacementCc || e.powerKwMin != null || e.powerKwMax != null);
-  const empty = shown.length === 0 && engines.length === 0 && gen.trims.length === 0;
+  const lines = gen.equipmentLines ?? [];
+  const empty = shown.length === 0 && engines.length === 0 && gen.trims.length === 0 && lines.length === 0;
 
   return (
     <details id={id} open={open} className="group card min-w-0 p-5 scroll-mt-24">
@@ -239,7 +246,10 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
                 <tbody>
                   {engines.map((e, i) => (
                     <tr key={i} className="border-t border-[var(--color-line)]">
-                      <td className="py-1.5 pr-3 font-medium">{engineName(e)}</td>
+                      <td className="py-1.5 pr-3 font-medium">
+                        {engineName(e)}
+                        {e.variant && variantParts(e.variant).note && <span className="block text-xs font-normal text-[var(--color-muted)]">{variantParts(e.variant).note}</span>}
+                      </td>
                       <td className="pr-3">{e.fuel ? CARD_FUEL[e.fuel] : "—"}</td>
                       <td className="pr-3 whitespace-nowrap">{e.displacementCc ? `${num(e.displacementCc)} cm³` : "—"}</td>
                       <td className="whitespace-nowrap">{power(e)}</td>
@@ -251,13 +261,31 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
           )}
         </div>
       </div>
+      {lines.length > 0 && (
+        <div className="mt-5">
+          <h4 className="font-semibold text-sm mb-2">Výbavové stupně</h4>
+          <ul className="flex flex-wrap gap-1.5 text-sm">
+            {lines.map((l) => {
+              const years = [...new Set((l.availabilityEvidence ?? []).map((a) => a.date.slice(0, 4)))].sort();
+              return (
+                <li key={l.id} className="chip" title={l.noteCs ?? undefined}>
+                  {l.name}
+                  {l.kind === "performance-line" && <span className="text-[var(--color-muted)]"> · sportovní</span>}
+                  {years.length > 0 && <span className="text-[var(--color-muted)]"> · {years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : years[0]}</span>}
+                </li>
+              );
+            })}
+          </ul>
+          <p className="mt-2 text-xs text-[var(--color-muted)]">Roky u výbav značí doloženou nabídku nebo představení, ne celé období výroby. Výbavy se liší podle trhu.</p>
+        </div>
+      )}
       {gen.trims.length > 0 && (
         <div className="mt-5 overflow-x-auto">
           <h4 className="font-semibold text-sm mb-2">Verze a technické údaje</h4>
           <table className="w-full text-sm">
             <thead className="text-left text-[var(--color-muted)]">
               <tr>
-                <th className="pb-1.5 pr-3 font-medium">Verze</th>
+                <th className="pb-1.5 pr-3 font-medium min-w-48">Verze</th>
                 {columns.map((c) => (
                   <th key={c.label} className="pb-1.5 pr-3 font-medium whitespace-nowrap">{c.label}</th>
                 ))}
@@ -266,7 +294,7 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
             <tbody>
               {gen.trims.map((t, i) => (
                 <tr key={i} className="border-t border-[var(--color-line)]">
-                  <td className="py-1.5 pr-3 font-medium">{t.name ?? "—"}</td>
+                  <td className="py-1.5 pr-3 font-medium min-w-48">{t.name ?? "—"}</td>
                   {columns.map((c) => {
                     const v = c.value(t);
                     const tip = v ? c.tip?.(t) : null;

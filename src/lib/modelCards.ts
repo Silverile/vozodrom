@@ -27,7 +27,13 @@ export interface CardTrim {
     /** Measurement standard of powerKw: "ISO", "SAE" or "UN-GTR.21"; null when the source does not say. */
     powerStandard?: string | null;
     torqueNm?: number | null;
+    /** "system" for hybrids whose powerKw is the combined output */
+    powerBasis?: string | null;
+    combustionPowerKw?: number | null;
+    electricPowerKw?: number | null;
   } | null;
+  /** equipment lines (CardEquipmentLine.id) this configuration was documented in */
+  equipmentLineIds?: string[];
   transmission?: { type?: string | null; gears?: number | null } | null;
   drive?: string | null;
   dimensionsMm?: { length?: number | null; width?: number | null; height?: number | null; wheelbase?: number | null } | null;
@@ -97,6 +103,22 @@ export function stagesOf(g: CardGeneration): GenerationStage[] {
   ];
 }
 
+/**
+ * A trim level ("výbavový stupeň"), a different thing from a technical version. availabilityEvidence
+ * records dated offers or announcements, not a production interval; from/to stay null when unknown.
+ */
+export interface CardEquipmentLine {
+  id: string;
+  name: string;
+  /** "equipment-line", or "performance-line" for RS-like lines that also bring their own engines */
+  kind: string;
+  from: number | null;
+  to: number | null;
+  availabilityEvidence?: { date: string; stage?: string | null; markets?: string[]; sources?: string[] }[];
+  sources?: string[];
+  noteCs?: string | null;
+}
+
 export interface CardGeneration {
   dateBasis?: string;
   dateNote?: string | null;
@@ -114,6 +136,8 @@ export interface CardGeneration {
   trunkL: number | null;
   markets: string[];
   trims: CardTrim[];
+  /** trim levels such as Active, Ambition, Style, RS; missing on most generations so far */
+  equipmentLines?: CardEquipmentLine[];
   photo: CardPhoto | null;
   sources: string[];
 }
