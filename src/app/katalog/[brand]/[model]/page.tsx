@@ -180,7 +180,10 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
  */
 function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null; open: boolean }) {
   const facts: [string, string | null][] = [
-    [gen.dateBasis && gen.dateBasis !== "production" ? "Období modelu" : "Výroba", yearsSpan(gen.from, gen.to, gen.current) || null],
+    [
+      gen.dateBasis === "announcement" ? "Představeno" : gen.dateBasis && gen.dateBasis !== "production" ? "Období modelu" : "Výroba",
+      gen.dateBasis === "announcement" ? (gen.from ? String(gen.from) : null) : yearsSpan(gen.from, gen.to, gen.current) || null,
+    ],
     ["Modernizace", gen.facelifts.length ? gen.facelifts.map((f) => (f.name ? `${f.year} (${f.name})` : f.year)).join(", ") : null],
     ["Karoserie", gen.bodyTypes.length ? gen.bodyTypes.map((b) => BODY_NAMES[b] ?? b).join(", ") : null],
     ["Pohon", gen.drivetrains.length ? gen.drivetrains.map((d) => DRIVE[d] ?? d).join(", ") : null],
@@ -209,7 +212,7 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
           <span aria-hidden="true" className="mr-2 inline-block text-[var(--color-muted)] transition-transform group-open:rotate-90">›</span>
           {title}
         </h3>
-        <span className="text-sm text-[var(--color-muted)]">{yearsSpan(gen.from, gen.to, gen.current)}</span>
+        <span className="text-sm text-[var(--color-muted)]">{gen.dateBasis === "announcement" ? (gen.from ? `připravuje se · představeno ${gen.from}` : "připravuje se") : yearsSpan(gen.from, gen.to, gen.current)}</span>
       </summary>
       {empty && <p className="mt-3 text-sm text-[var(--color-muted)]">Technické údaje této generace zatím nemáme ověřené.</p>}
       {gen.dateNote && <p className="mt-2 text-xs text-[var(--color-muted)]">{gen.dateNote}</p>}
@@ -454,10 +457,14 @@ export default async function ModelPage({ params }: { params: Params }) {
                       <div className="font-semibold truncate">
                         {base}
                         {stage && <span className="ml-1.5 text-xs font-medium text-[var(--color-brand)]">{stage}</span>}
+                        {/* announced, not yet confirmed in series production or on sale */}
+                        {g.dateBasis === "announcement" && <span className="ml-1.5 chip text-xs">Připravuje se</span>}
                       </div>
                       <div className="text-xs text-[var(--color-muted)]">
                         {[
-                          shown.length > 1 ? yearsSpan(st.from, st.to, st.current) : yearsSpan(g.from, g.to, g.current),
+                          g.dateBasis === "announcement"
+                            ? g.from && `představeno ${g.from}`
+                            : shown.length > 1 ? yearsSpan(st.from, st.to, st.current) : yearsSpan(g.from, g.to, g.current),
                           k === 0 && g.code && g.name && !g.name.includes(g.code) ? g.code : st.label ? st.code : null,
                         ]
                           .filter(Boolean)
