@@ -1,0 +1,112 @@
+{
+  "status": "complete",
+  "rawRecomputedMakes": [
+    "acura",
+    "alpina",
+    "alpine",
+    "aston-martin"
+  ],
+  "fullVinHistoryProcessed": true,
+  "fullHistorySelection": "analysis/codex/wave-3/batch-1/full-history-selection.json",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-11-01"
+    }
+  },
+  "snapshotMetadataPreserved": true,
+  "executionMetadata": [
+    {
+      "make": "acura",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    },
+    {
+      "make": "alpina",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    },
+    {
+      "make": "alpine",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    },
+    {
+      "make": "aston-martin",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    }
+  ],
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPopulatedLineLostAllGenerations": true,
+  "makeReports": [
+    {
+      "make": "acura",
+      "fleet": 43,
+      "inspections": 109,
+      "fleetCohorts": 0,
+      "inspectionCohorts": 0,
+      "rollbackBefore": null,
+      "rollbackAfter": null
+    },
+    {
+      "make": "alpina",
+      "fleet": 404,
+      "inspections": 646,
+      "fleetCohorts": 0,
+      "inspectionCohorts": 0,
+      "rollbackBefore": {
+        "vehicles": 230,
+        "share": 0.0043
+      },
+      "rollbackAfter": {
+        "vehicles": 230,
+        "share": 0.0043
+      }
+    },
+    {
+      "make": "alpine",
+      "fleet": 173,
+      "inspections": 64,
+      "fleetCohorts": 1,
+      "inspectionCohorts": 1,
+      "rollbackBefore": null,
+      "rollbackAfter": null
+    },
+    {
+      "make": "aston-martin",
+      "fleet": 421,
+      "inspections": 638,
+      "fleetCohorts": 4,
+      "inspectionCohorts": 6,
+      "rollbackBefore": {
+        "vehicles": 205,
+        "share": 0.0049
+      },
+      "rollbackAfter": {
+        "vehicles": 205,
+        "share": 0.0049
+      }
+    }
+  ],
+  "lineChanges": [],
+  "publishedChangedMakeFiles": [],
+  "rawAggregateSha256": {
+    "istp-agg.json": "c9bfa7a23fd9a0d33854942b9ccd4e2a021466dde8a932a02f0a935bee51eeaf",
+    "rsv-agg.json": "797c45eff7293f86c336667b306a65e4b67521a1b2d56b9b89b594aabb39bc83"
+  },
+  "outputSha256": {
+    "src/data/stats/acura.json": "24350185ab0ea885907ac064191fc9e1d0319a564ac2f085bf1a2aa5dec178d5",
+    "src/data/stats/alpina.json": "7a65ae3d4cdcb5944b5bcdc7f438a84432a3ff749b47db9a988b8b12ad2424e5",
+    "src/data/stats/alpine.json": "a3a34d8b418fee757d057ec2ec54ab2eedb0b756be09a425700f57abb7b61d19",
+    "src/data/stats/aston-martin.json": "436f3caed1088b5cffae2bebb840935843ab2e1dd37aa7a1206b5b71b89384bf",
+    "src/data/stats/index.json": "bf8e772f9d27ac607d42c37ed5ead14ea43b4fbb4f524644b5089dfd0f8f117f",
+    "src/data/listing-stats.json": "7e6183270aeb9b385d415ffdca65f7e0ba201b793ad7a5a2f4d5efc43267a605"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "fullHistoryProcessed": true,
+  "globalAggregateSha256": "3f4f3b8978912af7528d5100ca5cba8b1365d140e1a62bc0eb2a77a9236ab658",
+  "reason": "Early --makes filtering drops cross-make VIN readings, changing rollback denominators. Select aggregate keys only after processing all VIN histories. No per-vehicle data stored.",
+  "makes": [
+    "acura",
+    "alpina",
+    "alpine",
+    "aston-martin"
+  ],
+  "allAggregateKeys": 3278,
+  "selectedAggregateKeys": 63,
+  "rollbackDifferencesVersusEarlyFilter": [
+    {
+      "key": "alpina||",
+      "makeFilteredHistory": [
+        208,
+        1
+      ],
+      "fullHistory": [
+        213,
+        1
+      ]
+    },
+    {
+      "key": "acura|mdx|1",
+      "makeFilteredHistory": [
+        10,
+        0
+      ],
+      "fullHistory": [
+        11,
+        0
+      ]
+    },
+    {
+      "key": "acura|rsx|",
+      "makeFilteredHistory": [
+        3,
+        0
+      ],
+      "fullHistory": [
+        4,
+        0
+      ]
+    },
+    {
+      "key": "alpine||",
+      "makeFilteredHistory": null,
+      "fullHistory": [
+        1,
+        0
+      ]
+    }
+  ]
+}
