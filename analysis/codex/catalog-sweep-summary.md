@@ -1,29 +1,23 @@
-# Проверка каталога — 31 октября 2026
+# Catalogue sweep — 31 October 2026
 
-Очереди поиска двигателей первой и второй волн пройдены. В третьей волне создано **122 карточек, 178 записей поколений/параллельных модельных рядов и 125 строк двигателей**. Убраны 22 дублирующих предложений и 2 служебных записи. Из исходных 161 пункта осталось **15 моделей без карточек**. Последний пакет: 63 карточек, 88 записей, 57 строк двигателей, 7 рестайлингов. Полнота всей истории каждой модели пока не подтверждена.
+Wave-1 and wave-2 engine search queues were visited; gaps remain where no suitable generation-scoped source was imported. The original 161-item missing-card queue is now closed: **105 surviving new cards and 56 retired duplicate/unsupported proposals**. Across its three batches 131 cards were created historically; 26 were subsequently identified as duplicates and consolidated into existing richer cards. Closing a research queue does not certify complete histories.
 
-| Показатель | Начальный аудит e827ed2 | Сейчас |
+| Measure | Initial audit | Current |
 |---|---:|---:|
-| Модельных линий | 4809 | 4785 |
-| Карточек | 4646 | 4770 |
-| Линий без карточки | 163 | 15 |
-| Поколений / модельных записей | 6730 | 6874 |
-| Поколений с двигателями | 1821 | 2565 |
-| Строк двигателей | 4471 | 9883 |
-| Поколений с данными о рестайлинге | 790 | 843 |
+| Lines | 4809 | 4753 |
+| Cards | 4646 | 4753 |
+| Lines without cards | 163 | 0 |
+| Generation/parallel entries | 6730 | 6852 |
+| Entries with engines | 1821 | 2560 |
+| Engine rows | 4471 | 9878 |
+| Entries with facelifts | 790 | 842 |
 
-Всего изменены 936 публичных карточек относительно начального аудита. Исправлялись псевдопоколения, годы, широкие семейства BMW, Palio и Escalade; статистика и рисунки переносились вместе с поколениями. Утренние изменения до начального аудита в эту дельту не входят.
+Latest batch: nine new cards, 12 entries, one engine row; 26 duplicate cards consolidated. Added one concurrent Esteem entry under the existing 1000/Esteem line, corrected Dzire II, Kizashi, Studebaker R-series and UAZ-69 dates, and retained Sumo Spacio as a stage rather than a new chassis generation. Maruti and UAZ statistics recomputed from raw IS TP/register inputs. Existing canonical photos/trims/engines preserved; all drawing and statistics indexes validated.
 
-Первая волна: второй поиск прошёл 528 поколений, заполнил 274. Вторая волна: пройдены все 651 пункта очереди (450 разных линий), заполнены 217 поколений, добавлены 542 строки двигателей. 434 пункта остались без результата, включая 108 недатированных поколений. Это результаты поиска, а не гарантия полной комплектации каталога.
+## Remaining work
 
-Последний пакет добавил F-150, Maverick, отдельные ветви Diamante/Magna и Pajero Junior/Mini, региональные Renault и Maruti, исторические модели и электромобили. Производственные годы отделяются от модельных. Планируемые B95, Scorpio Lifestyler и ASX VR-e не помечаются как уже выпускающиеся. У прототипа AC 378, отменённого Москвича 5 и Power Hawk с известным только модельным годом календарные даты серии оставлены неизвестными. Некоторые концы производства и составы кузовов/модификаций ещё требуют уточнения.
+- Review original 84 structural signals; current refreshed scan has 84. Concurrent bodies/regions must not be closed automatically. M.Go needs photo attribution before its sourced two-generation split; Suburban/Strato-Chief/Santana periods need finer histories.
+- Ordinary wave 3 still needs generation/year/body research in batches around 200 lines, then engines where a usable source exists. Current wave-3 frame: 3664 lines, 3600 entries without engines.
+- All field gaps are in catalog-sweep-residuals.json; partial production dates and scope limitations of this batch are in wave-3-missing-cards-3/remaining-and-partial.json. Mazda CX-5e is excluded pending an identified vehicle, with trademark-only evidence retained.
 
-Все 4707 прежних карточек последним пакетом сохранены. Проверены 837 рисунков и 1806 ключей статистики. Рост индекса последнего пакета — 6236 байт gzip; размер собранного worker не измерялся.
-
-Следующие шаги по согласованному порядку:
-
-1. Закончить 15 отсутствующих карточек. Неизвестные значения остаются пустыми; список отдельно отмечает уже созданные карточки с неопределёнными датами.
-2. Проверить исходные 84 структурных сигнала. Текущий скан показывает 85; новые сигналы могут отражать подтверждённое параллельное производство кузовов или региональных версий. Сигнал сам по себе не доказывает ошибку.
-3. Пройти обычную третью волну пакетами примерно по 200 линий: поколения, годы и кузова, затем двигатели, где есть пригодные данные. Сейчас в этой волне 3696 линий и 3617 записей без строк двигателей. Отсутствие опубликованной оценки CZ-парка не означает отсутствие автомобилей в Чехии.
-
-Источники, ограничения и оставшиеся модели: [последний пакет](wave-3-missing-cards-2/report.md). Текущие пробелы: [catalog-sweep-residuals.json](catalog-sweep-residuals.json). Сборка, публикация, проверка настоящих объявлений и измерение worker последним пакетом не выполнялись.
+Full mappings and source notes: [latest batch](wave-3-missing-cards-3/report.md). No commits, publishing, live listing migration or compiled Worker measurement were performed by Codex.

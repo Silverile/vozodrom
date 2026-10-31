@@ -10,109 +10,18 @@
     "A model absent from both indexes cannot be discovered by this internal audit."
   ],
   "counts": {
-    "lines": 4785,
-    "cards": 4770,
-    "linesWithoutCard": 15,
-    "generations": 6874,
-    "generationsWithEngines": 2565,
+    "lines": 4753,
+    "cards": 4753,
+    "linesWithoutCard": 0,
+    "generations": 6852,
+    "generationsWithEngines": 2560,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
-    "generationsWithFacelifts": 843
+    "generationsWithFacelifts": 842
   },
   "prioritiesByGap": {
-    "no-card": [
-      {
-        "makeSlug": "mazda",
-        "lineSlug": "cx-5e",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "microcar",
-        "lineSlug": "m-go-models-auto-has-0-microcar-rows",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "moskvic",
-        "lineSlug": "2315-pickup-on-2140-base",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "omoda",
-        "lineSlug": "omoda-9-c9",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "opel",
-        "lineSlug": "rocks-e-rocks-electric-model-line-l6e-quadricycle-decide-whether-it-belongs-in-auto",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "packard",
-        "lineSlug": "packard-1958-sedan-hardtop-station-wagon-packardbaker",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "plymouth",
-        "lineSlug": "suburban",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "pontiac",
-        "lineSlug": "strato-chief-canada",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "pontiac",
-        "lineSlug": "wave-canada-rebadged-chevrolet-aveo-t200",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "salmson",
-        "lineSlug": "al",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "santana-motor",
-        "lineSlug": "santana-cajal",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "santana-motor",
-        "lineSlug": "santana-series-ii-iia-iii-88-109-licensed-land-rover",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "studebaker",
-        "lineSlug": "lark-cruiser-cruiser",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "studebaker",
-        "lineSlug": "lark-daytona-daytona",
-        "fleetN": null,
-        "generationIndexes": []
-      },
-      {
-        "makeSlug": "venturi",
-        "lineSlug": "atlantique-260-300-300-biturbo",
-        "fleetN": null,
-        "generationIndexes": []
-      }
-    ],
+    "no-card": [],
     "no-generation-records": [
       {
         "makeSlug": "audi",
@@ -55014,7 +54923,8 @@
             "https://omodaauto.co.uk/downloads/",
             "https://en.wikipedia.org/w/index.php?title=Omoda&oldid=1381279322",
             "https://omoda-jaecoo.cz/omoda/omoda-7",
-            "https://omoda-jaecoo.cz/omoda/omoda-7-shs"
+            "https://omoda-jaecoo.cz/omoda/omoda-7-shs",
+            "https://en.wikipedia.org/wiki/Omoda_C7"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -180884,7 +180794,7 @@
       "name": "1000 / Esteem",
       "fleetN": null,
       "cardPresent": true,
-      "generationCount": 1,
+      "generationCount": 2,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
         "generation-field-gaps"
@@ -180892,10 +180802,10 @@
       "generations": [
         {
           "index": 0,
-          "name": "1000 (1990–2000) / Esteem (1994–2007)",
+          "name": "1000",
           "code": null,
           "from": 1990,
-          "to": null,
+          "to": 2000,
           "fleetN": null,
           "engineRows": 0,
           "engineRowsWithoutPower": [],
@@ -180909,10 +180819,36 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
+            "https://en.wikipedia.org/wiki/Suzuki_Cultus"
           ],
           "gaps": [
             "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Esteem",
+          "code": "SF",
+          "from": 1994,
+          "to": 2008,
+          "fleetN": null,
+          "engineRows": 3,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 2,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Suzuki_Cultus"
+          ],
+          "gaps": [
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -181131,98 +181067,6 @@
     },
     {
       "makeSlug": "maruti-suzuki",
-      "lineSlug": "alto-alto-800-alto-k10",
-      "name": "Alto / Alto 800 / Alto K10",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 3,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "First generation (RF)",
-          "code": "RF",
-          "from": 2000,
-          "to": 2014,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 1,
-          "name": "Second generation (AOD)",
-          "code": "AOD",
-          "from": 2012,
-          "to": 2022,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 2,
-          "name": "Third generation",
-          "code": null,
-          "from": 2022,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Maruti_Suzuki_Alto"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
       "lineSlug": "baleno",
       "name": "Baleno",
       "fleetN": null,
@@ -181352,7 +181196,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
+            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181379,7 +181224,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
+            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181531,7 +181377,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-dzire-celebrates-momentous-3-million-sales-milestone",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812",
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181543,7 +181390,7 @@
           "index": 1,
           "name": "Dzire II",
           "code": null,
-          "from": null,
+          "from": 2011,
           "to": 2017,
           "fleetN": null,
           "engineRows": 0,
@@ -181558,7 +181405,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-dzire-celebrates-momentous-3-million-sales-milestone",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812",
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181585,7 +181433,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-dzire-celebrates-momentous-3-million-sales-milestone",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812",
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181614,7 +181463,8 @@
             "https://www.marutisuzuki.com/corporate/media/press-releases/2026/march/maruti-suzuki-dzire-celebrates-momentous-3-million-sales-milestone",
             "https://www.marutisuzuki.com/content/dam/msil/arena/in/en/assets/cars/dzire/documents/Arena-Dzire-Brochure.pdf",
             "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki_Dzire&oldid=1381751812",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
+            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
           ],
           "gaps": [
             "no-engine-rows",
@@ -181780,45 +181630,6 @@
     },
     {
       "makeSlug": "maruti-suzuki",
-      "lineSlug": "esteem",
-      "name": "Esteem",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Esteem",
-          "code": "SF",
-          "from": 1994,
-          "to": 2008,
-          "fleetN": null,
-          "engineRows": 3,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 2,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Cultus"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
       "lineSlug": "estilo",
       "name": "Estilo / Zen Estilo",
       "fleetN": null,
@@ -181848,7 +181659,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
+            "https://en.wikipedia.org/wiki/Suzuki_MR_Wagon"
           ],
           "gaps": [
             "no-engine-rows",
@@ -182185,47 +181997,6 @@
       "generations": [
         {
           "index": 0,
-          "name": "Kizashi – dovozní nabídka",
-          "code": null,
-          "from": 2011,
-          "to": 2014,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://www.marutisuzuki.com/corporate/media/press-releases/2011/march/maruti-suzuki-rolls-out-its-1-crore-ten-millionth-car",
-            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
-      "lineSlug": "kizashi-import",
-      "name": "Kizashi",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
           "name": "Kizashi",
           "code": null,
           "from": 2009,
@@ -182242,6 +182013,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
+            "https://www.marutisuzuki.com/corporate/media/press-releases/2011/march/maruti-suzuki-rolls-out-its-1-crore-ten-millionth-car",
+            "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995",
             "https://en.wikipedia.org/wiki/Suzuki_Kizashi"
           ],
           "gaps": [
@@ -182583,124 +182356,6 @@
     },
     {
       "makeSlug": "maruti-suzuki",
-      "lineSlug": "swift-dzire-dzire",
-      "name": "Swift Dzire / Dzire",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 4,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "First generation",
-          "code": null,
-          "from": 2008,
-          "to": 2016,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 1,
-          "name": "Second generation",
-          "code": null,
-          "from": 2011,
-          "to": 2023,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 2,
-          "name": "Third generation",
-          "code": null,
-          "from": 2017,
-          "to": 2025,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 3,
-          "name": "Fourth generation",
-          "code": null,
-          "from": 2024,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Dzire"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
       "lineSlug": "sx4",
       "name": "SX4",
       "fleetN": null,
@@ -182813,72 +182468,6 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
             "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
-      "lineSlug": "vitara-brezza-brezza",
-      "name": "Vitara Brezza / Brezza",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 2,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "First generation",
-          "code": null,
-          "from": 2016,
-          "to": 2022,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 1,
-          "name": "Second generation",
-          "code": null,
-          "from": 2022,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_Brezza#YF"
           ],
           "gaps": [
             "no-engine-rows",
@@ -183058,46 +182647,6 @@
           "sources": [
             "https://en.wikipedia.org/wiki/Maruti_Suzuki",
             "https://en.wikipedia.org/w/index.php?title=Maruti_Suzuki&oldid=1381698995"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "maruti-suzuki",
-      "lineSlug": "zen-estilo-estilo",
-      "name": "Zen Estilo / Estilo",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Zen Estilo / Estilo",
-          "code": null,
-          "from": 2006,
-          "to": 2012,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Suzuki_MR_Wagon"
           ],
           "gaps": [
             "no-engine-rows",
@@ -186537,19 +186086,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "mazda",
-      "lineSlug": "cx-5e",
-      "name": "CX-5e",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "mazda",
@@ -194389,19 +193925,6 @@
     },
     {
       "makeSlug": "microcar",
-      "lineSlug": "m-go-models-auto-has-0-microcar-rows",
-      "name": "M.Go (models-auto has 0 Microcar rows)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "microcar",
       "lineSlug": "m8",
       "name": "M8",
       "fleetN": null,
@@ -200506,15 +200029,42 @@
     {
       "makeSlug": "moskvic",
       "lineSlug": "2315-pickup-on-2140-base",
-      "name": "2315 (pickup on 2140 base)",
+      "name": "2315",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "2315",
+          "code": "2315",
+          "from": 1984,
+          "to": 1988,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://ru.wikipedia.org/wiki/Москвич-2140"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "moskvic",
@@ -208010,7 +207560,8 @@
             "https://omoda-jaecoo.cz/omoda/omoda-5",
             "https://omodajaecoo.srba.cz/pdf/cenik/model/omoda5ev/",
             "https://omoda-jaecoo.cz/omoda/omoda-5-ev",
-            "https://en.wikipedia.org/wiki/Omoda_5"
+            "https://en.wikipedia.org/wiki/Omoda_5",
+            "https://en.wikipedia.org/wiki/Omoda_C5"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -208018,98 +207569,6 @@
           ]
         }
       ]
-    },
-    {
-      "makeSlug": "omoda",
-      "lineSlug": "omoda-5-c5-vc-e5-5-ev",
-      "name": "Omoda 5 / C5 / E5",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Omoda 5 / C5 / E5",
-          "code": null,
-          "from": 2022,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 2,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Omoda_C5"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "omoda",
-      "lineSlug": "omoda-7-c7",
-      "name": "Omoda 7 / C7",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Omoda 7 / C7",
-          "code": null,
-          "from": 2025,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Omoda_C7"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "omoda",
-      "lineSlug": "omoda-9-c9",
-      "name": "Omoda 9 / C9",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
     },
     {
       "makeSlug": "omoda",
@@ -208975,15 +208434,41 @@
     {
       "makeSlug": "opel",
       "lineSlug": "rocks-e-rocks-electric-model-line-l6e-quadricycle-decide-whether-it-belongs-in-auto",
-      "name": "Rocks-e / Rocks Electric (model line; L6e quadricycle, decide whether it belongs in auto)",
+      "name": "Rocks-e / Rocks Electric",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Rocks-e / Rocks Electric",
+          "code": null,
+          "from": 2021,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 1,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Citroën_Ami_(electric_vehicle)"
+          ],
+          "gaps": [
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "opel",
@@ -210321,15 +209806,42 @@
     {
       "makeSlug": "packard",
       "lineSlug": "packard-1958-sedan-hardtop-station-wagon-packardbaker",
-      "name": "Packard (1958 sedan / hardtop / station wagon, 'Packardbaker')",
+      "name": "Packard (1958)",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Packard (MY 1958)",
+          "code": null,
+          "from": null,
+          "to": 1958,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/1957_and_1958_Packards"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "packard",
@@ -213894,13 +213406,92 @@
       "lineSlug": "suburban",
       "name": "Suburban",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 3,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Suburban",
+          "code": null,
+          "from": 1949,
+          "to": 1955,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Plymouth_Suburban"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Suburban (samostatná řada)",
+          "code": null,
+          "from": 1956,
+          "to": 1961,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Plymouth_Suburban"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 2,
+          "name": "Fury Suburban",
+          "code": null,
+          "from": 1968,
+          "to": 1978,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Plymouth_Suburban"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "plymouth",
@@ -215874,15 +215465,42 @@
     {
       "makeSlug": "pontiac",
       "lineSlug": "strato-chief-canada",
-      "name": "Strato Chief (Canada)",
+      "name": "Strato-Chief",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Strato-Chief",
+          "code": null,
+          "from": 1958,
+          "to": 1970,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://journal.classiccars.com/2026/01/15/pick-of-the-day-1964-pontiac-strato-chief/"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "pontiac",
@@ -216347,15 +215965,42 @@
     {
       "makeSlug": "pontiac",
       "lineSlug": "wave-canada-rebadged-chevrolet-aveo-t200",
-      "name": "Wave (Canada, rebadged Chevrolet Aveo T200)",
+      "name": "Wave / G3 Wave",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Wave / G3 Wave",
+          "code": "T200/T250",
+          "from": 2004,
+          "to": 2009,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Daewoo_Kalos"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "porsche",
@@ -221820,15 +221465,42 @@
     {
       "makeSlug": "salmson",
       "lineSlug": "al",
-      "name": "AL",
+      "name": "AL / AL3",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "AL / AL3",
+          "code": "AL",
+          "from": 1921,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://www.blockleytyre.com/make/salmson/salmson-al-al3"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "salmson",
@@ -222089,28 +221761,108 @@
     {
       "makeSlug": "santana-motor",
       "lineSlug": "santana-cajal",
-      "name": "Santana Cajal",
+      "name": "Cajal",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 1,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Cajal",
+          "code": null,
+          "from": 2026,
+          "to": null,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://www.santiagoramonycajal.org/articulos/santana-cajal-todoterreno-linares/"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "santana-motor",
       "lineSlug": "santana-series-ii-iia-iii-88-109-licensed-land-rover",
-      "name": "Santana Series II / IIA / III (88, 109, licensed Land Rover)",
+      "name": "Land Rover Santana",
       "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
+      "cardPresent": true,
+      "generationCount": 2,
       "historicalCompleteness": "not-established-by-field-presence",
       "gaps": [
-        "no-card"
+        "generation-field-gaps"
       ],
-      "generations": []
+      "generations": [
+        {
+          "index": 0,
+          "name": "Series II / IIA (88 / 109)",
+          "code": "II/IIA",
+          "from": 1958,
+          "to": 1974,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://es.wikipedia.org/wiki/Land_Rover_Santana"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        },
+        {
+          "index": 1,
+          "name": "Series III (88 / 109)",
+          "code": "III",
+          "from": 1974,
+          "to": 1984,
+          "fleetN": null,
+          "engineRows": 0,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 0,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 0,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://es.wikipedia.org/wiki/Land_Rover_Santana"
+          ],
+          "gaps": [
+            "no-engine-rows",
+            "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
     },
     {
       "makeSlug": "saturn",
@@ -225150,45 +224902,6 @@
     },
     {
       "makeSlug": "studebaker",
-      "lineSlug": "2r-3r-truck",
-      "name": "2R / 3R",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "R (2R / 3R)",
-          "code": "R",
-          "from": 1948,
-          "to": 1954,
-          "fleetN": null,
-          "engineRows": 3,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 1,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Studebaker_2R/3R"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "studebaker",
       "lineSlug": "avanti",
       "name": "Avanti",
       "fleetN": null,
@@ -225297,50 +225010,11 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1282801100"
-          ],
-          "gaps": [
-            "engine-rows-without-power",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "studebaker",
-      "lineSlug": "champ-pickup",
-      "name": "Champ",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Champ",
-          "code": null,
-          "from": 1960,
-          "to": 1964,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1282801100",
             "https://en.wikipedia.org/wiki/Studebaker_Champ"
           ],
           "gaps": [
-            "no-engine-rows",
+            "engine-rows-without-power",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -226151,32 +225825,6 @@
     },
     {
       "makeSlug": "studebaker",
-      "lineSlug": "lark-cruiser-cruiser",
-      "name": "Lark Cruiser / Cruiser",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "studebaker",
-      "lineSlug": "lark-daytona-daytona",
-      "name": "Lark Daytona / Daytona",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "studebaker",
       "lineSlug": "light-six",
       "name": "Light Six",
       "fleetN": null,
@@ -226432,24 +226080,24 @@
           "index": 0,
           "name": "2R / 3R",
           "code": null,
-          "from": 1949,
+          "from": 1948,
           "to": 1954,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 3,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
           "equipmentLineRows": 0,
-          "faceliftCount": 0,
+          "faceliftCount": 1,
           "expectedFaceliftCount": null,
           "faceliftComparison": "not-compared-to-historical-sources",
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1342123772"
+            "https://en.wikipedia.org/w/index.php?oldid=1342123772",
+            "https://en.wikipedia.org/wiki/Studebaker_2R/3R"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -231197,7 +230845,7 @@
             1
           ],
           "equipmentLineRows": 0,
-          "faceliftCount": 2,
+          "faceliftCount": 3,
           "expectedFaceliftCount": null,
           "faceliftComparison": "not-compared-to-historical-sources",
           "expectedGenerationCountForLine": null,
@@ -231205,7 +230853,8 @@
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1368183642",
             "https://www.auto-data.net/en/tata-sumo-generation-354",
-            "https://www.auto-data.net/en/tata-sumo-gold-generation-7009"
+            "https://www.auto-data.net/en/tata-sumo-gold-generation-7009",
+            "https://en.wikipedia.org/wiki/Tata_Sumo"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -231285,86 +230934,6 @@
             "https://en.wikipedia.org/wiki/Tata_Tigor"
           ],
           "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "tata-motors",
-      "lineSlug": "tata-spacio",
-      "name": "Spacio",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Spacio",
-          "code": null,
-          "from": 2000,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Tata_Sumo"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "tata-motors",
-      "lineSlug": "tata-yodha-alias-of-xenon",
-      "name": "Yodha",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Yodha",
-          "code": null,
-          "from": 2017,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 1,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Tata_Telcoline"
-          ],
-          "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -231524,7 +231093,8 @@
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1376417234",
             "https://de.wikipedia.org/w/index.php?oldid=266069866",
-            "https://www.auto-data.net/en/tata-xenon-generation-5318"
+            "https://www.auto-data.net/en/tata-xenon-generation-5318",
+            "https://en.wikipedia.org/wiki/Tata_Telcoline"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -236832,49 +236402,10 @@
             "https://ru.wikipedia.org/w/index.php?oldid=153750109",
             "https://en.wikipedia.org/w/index.php?oldid=1376540968",
             "https://www.uaz.ru/",
-            "https://auto.ru/mag/theme/news/uaz-hunter/"
-          ],
-          "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "uaz",
-      "lineSlug": "hunter-315195",
-      "name": "Hunter",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Hunter",
-          "code": "315195",
-          "from": 2003,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://auto.ru/mag/theme/news/uaz-hunter/",
             "https://ru.wikipedia.org/wiki/%D0%A3%D0%90%D0%97_%D0%A5%D0%B0%D0%BD%D1%82%D0%B5%D1%80"
           ],
           "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }
@@ -236950,49 +236481,10 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://ru.wikipedia.org/w/index.php?oldid=155777131",
-            "https://en.wikipedia.org/w/index.php?oldid=1372045437"
-          ],
-          "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "uaz",
-      "lineSlug": "pickup-23632",
-      "name": "Pickup",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Pickup",
-          "code": "23632",
-          "from": 2008,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1372045437",
             "https://www.uaz.ru/blog/news/uaz-pickup-novaya-model-v-semejstve-patriotov"
           ],
           "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }
@@ -237029,49 +236521,10 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://ru.wikipedia.org/w/index.php?oldid=155777131",
-            "https://en.wikipedia.org/w/index.php?oldid=1372045437"
-          ],
-          "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "uaz",
-      "lineSlug": "profi-2360",
-      "name": "Profi",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Profi",
-          "code": "2360",
-          "from": 2017,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1372045437",
             "https://life.uaz.ru/about/news/3049/"
           ],
           "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }
@@ -237638,8 +237091,8 @@
           "index": 0,
           "name": "GAZ-69 / GAZ-69A (výroba UAZ)",
           "code": "GAZ-69/69A",
-          "from": 1956,
-          "to": 1972,
+          "from": 1954,
+          "to": 1973,
           "fleetN": null,
           "engineRows": 1,
           "engineRowsWithoutPower": [
@@ -237658,50 +237111,11 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://ru.wikipedia.org/w/index.php?oldid=154232455",
-            "https://en.wikipedia.org/w/index.php?oldid=1375607760"
-          ],
-          "gaps": [
-            "engine-rows-without-power",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "uaz",
-      "lineSlug": "uaz-69-gaz-69-built-in-ulyanovsk",
-      "name": "UAZ-69 / GAZ-69",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "UAZ-69 / GAZ-69",
-          "code": "69",
-          "from": 1954,
-          "to": 1973,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375607760",
             "https://ru.wikipedia.org/wiki/ГАЗ-69"
           ],
           "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
+            "engine-rows-without-power",
             "no-equipment-line-records"
           ]
         }
@@ -241494,19 +240908,6 @@
     },
     {
       "makeSlug": "venturi",
-      "lineSlug": "atlantique-260-300-300-biturbo",
-      "name": "Atlantique (260, 300, 300 Biturbo)",
-      "fleetN": null,
-      "cardPresent": false,
-      "generationCount": 0,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "no-card"
-      ],
-      "generations": []
-    },
-    {
-      "makeSlug": "venturi",
       "lineSlug": "coupe",
       "name": "Coupé / Transcup",
       "fleetN": null,
@@ -241550,46 +240951,6 @@
           ],
           "gaps": [
             "engine-rows-without-power",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "venturi",
-      "lineSlug": "coupe-transcup-200-210-260",
-      "name": "Coupé / Transcup",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Coupé",
-          "code": null,
-          "from": 1987,
-          "to": 1992,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://fr.wikipedia.org/wiki/Venturi_Coup%C3%A9"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }
@@ -241785,48 +241146,10 @@
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1381897260",
             "https://www.electrive.com/2026/03/06/vinfast-to-supply-20000-electric-cars-to-transport-companies-in-indonesia/",
-            "https://www.electrive.com/2026/06/16/vietnam-vinfast-secures-an-order-for-2000-electric-cars/"
-          ],
-          "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "vinfast",
-      "lineSlug": "limo-green-vf-mpv-7",
-      "name": "Limo Green / VF MPV 7",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Limo Green / VF MPV 7",
-          "code": null,
-          "from": 2025,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 1,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://www.electrive.com/2026/06/16/vietnam-vinfast-secures-an-order-for-2000-electric-cars/",
             "https://en.wikipedia.org/wiki/VinFast_VF_MPV_7"
           ],
           "gaps": [
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }
@@ -241941,7 +241264,7 @@
           "from": 2025,
           "to": null,
           "fleetN": null,
-          "engineRows": 1,
+          "engineRows": 2,
           "engineRowsWithoutPower": [
             0
           ],
@@ -241958,49 +241281,11 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1381887960",
-            "https://www.electrive.com/2026/06/16/vietnam-vinfast-secures-an-order-for-2000-electric-cars/"
-          ],
-          "gaps": [
-            "engine-rows-without-power",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "vinfast",
-      "lineSlug": "minio-green-vf-2",
-      "name": "Minio Green / VF 2",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Minio Green / VF 2",
-          "code": null,
-          "from": 2025,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 1,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
+            "https://www.electrive.com/2026/06/16/vietnam-vinfast-secures-an-order-for-2000-electric-cars/",
             "https://en.wikipedia.org/wiki/VinFast_VF_2"
           ],
           "gaps": [
-            "no-technical-version-rows",
+            "engine-rows-without-power",
             "no-equipment-line-records"
           ]
         }
@@ -249739,7 +249024,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1378293460"
+            "https://en.wikipedia.org/w/index.php?oldid=1378293460",
+            "https://en.wikipedia.org/wiki/Baojun_530"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -249858,7 +249144,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1376334928"
+            "https://en.wikipedia.org/w/index.php?oldid=1376334928",
+            "https://en.wikipedia.org/wiki/Wuling_Bingo_Plus"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -249972,7 +249259,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1381291055"
+            "https://en.wikipedia.org/w/index.php?oldid=1381291055",
+            "https://en.wikipedia.org/wiki/Baojun_Yunduo"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -250037,7 +249325,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1362283945"
+            "https://en.wikipedia.org/w/index.php?oldid=1362283945",
+            "https://en.wikipedia.org/wiki/Baojun_730"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -250404,7 +249693,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1339093221"
+            "https://en.wikipedia.org/w/index.php?oldid=1339093221",
+            "https://en.wikipedia.org/wiki/Wuling_Hongguang_S1"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -250945,7 +250235,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1380893824"
+            "https://en.wikipedia.org/w/index.php?oldid=1380893824",
+            "https://en.wikipedia.org/wiki/Wuling_Starlight_560"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -251111,7 +250402,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1373320291"
+            "https://en.wikipedia.org/w/index.php?oldid=1373320291",
+            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -251140,7 +250432,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1373320291"
+            "https://en.wikipedia.org/w/index.php?oldid=1373320291",
+            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -251165,7 +250458,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1373320291"
+            "https://en.wikipedia.org/w/index.php?oldid=1373320291",
+            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -251189,7 +250483,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1373320291"
+            "https://en.wikipedia.org/w/index.php?oldid=1373320291",
+            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -251230,361 +250525,6 @@
             "https://en.wikipedia.org/w/index.php?oldid=1362328411"
           ],
           "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-almaz",
-      "name": "Almaz",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Almaz",
-          "code": null,
-          "from": 2019,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Baojun_530"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-binguo-plus",
-      "name": "Binguo Plus",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Binguo Plus",
-          "code": null,
-          "from": 2024,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Bingo_Plus"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-cloud-ev",
-      "name": "Cloud EV",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Cloud EV",
-          "code": null,
-          "from": 2024,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 1,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Baojun_Yunduo"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-cortez",
-      "name": "Cortez",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Cortez",
-          "code": null,
-          "from": 2018,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 1,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Baojun_730"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-hongguang-s1-confero",
-      "name": "Hongguang S1 / Confero",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Hongguang S1 / Confero",
-          "code": null,
-          "from": 2015,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Hongguang_S1"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-starlight-560-eksion",
-      "name": "Starlight 560 / Eksion",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Starlight 560 / Eksion",
-          "code": null,
-          "from": 2025,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Starlight_560"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
-      "makeSlug": "wuling-motors",
-      "lineSlug": "wuling-sunshine-zhiguang",
-      "name": "Sunshine / Zhiguang",
-      "fleetN": null,
-      "cardPresent": true,
-      "generationCount": 4,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Sunshine I",
-          "code": null,
-          "from": 2002,
-          "to": 2013,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 1,
-          "name": "Sunshine II",
-          "code": null,
-          "from": 2010,
-          "to": 2022,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 2,
-          "name": "Sunshine S",
-          "code": null,
-          "from": 2015,
-          "to": 2020,
-          "fleetN": null,
-          "engineRows": 0,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
-          ],
-          "gaps": [
-            "no-engine-rows",
-            "no-technical-version-rows",
-            "no-equipment-line-records"
-          ]
-        },
-        {
-          "index": 3,
-          "name": "Sunshine III",
-          "code": null,
-          "from": 2025,
-          "to": null,
-          "fleetN": null,
-          "engineRows": 1,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 0,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 0,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/wiki/Wuling_Sunshine"
-          ],
-          "gaps": [
-            "no-technical-version-rows",
             "no-equipment-line-records"
           ]
         }

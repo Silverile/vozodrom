@@ -17,7 +17,7 @@
     ]
   },
   "counts": {
-    "lines": 4785,
+    "lines": 4753,
     "byWave": [
       {
         "wave": 1,
@@ -31,14 +31,14 @@
       },
       {
         "wave": 3,
-        "lines": 3696,
-        "visited": 142
+        "lines": 3664,
+        "visited": 5
       }
     ],
     "completeLines": 0,
-    "linesEnriched": 936,
-    "unvisited": 3700,
-    "linesVisited": 1085
+    "linesEnriched": 940,
+    "unvisited": 3805,
+    "linesVisited": 948
   },
   "nextDataTargets": [],
   "batches": [
@@ -72738,7 +72738,7 @@
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
   },
-  "activePhase": "wave-3 missing-card batch 2 complete; remaining missing cards before structural signals",
+  "activePhase": "Missing-card queue closed; structural review next",
   "structurePasses": [
     {
       "report": "analysis/codex/structure-pass/batch-1.json",
@@ -72996,15 +72996,15 @@
   },
   "closingSummary": "analysis/codex/catalog-sweep-summary.md",
   "currentAuditCounts": {
-    "lines": 4785,
-    "cards": 4770,
-    "linesWithoutCard": 15,
-    "generations": 6874,
-    "generationsWithEngines": 2565,
+    "lines": 4753,
+    "cards": 4753,
+    "linesWithoutCard": 0,
+    "generations": 6852,
+    "generationsWithEngines": 2560,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
-    "generationsWithFacelifts": 843
+    "generationsWithFacelifts": 842
   },
   "currentFleetFrame": [
     {
@@ -73025,10 +73025,10 @@
     },
     {
       "wave": 3,
-      "lines": 3696,
-      "missingCards": 15,
-      "generations": 4737,
-      "emptyEngineGenerations": 3617,
+      "lines": 3664,
+      "missingCards": 0,
+      "generations": 4715,
+      "emptyEngineGenerations": 3600,
       "partialPowerGenerations": 410
     }
   ],
@@ -73058,29 +73058,28 @@
   },
   "countsBasis": "Visited means recorded line/generation research or triage; enriched means generated card differs from sweep baseline; complete history is not certified.",
   "wave3MissingCards": {
-    "phase": "wave-3 missing-card batch 2 complete; remaining missing cards before structural signals",
+    "phase": "Missing-card queue closed; structural review next",
     "queueAtStart": 161,
-    "createdCards": 122,
-    "addedGenerations": 178,
-    "addedEngineRows": 125,
-    "addedFaceliftStages": 8,
-    "duplicateProposalsRemoved": 22,
-    "nonModelProposalsRemoved": 2,
-    "remainingMissingCards": 15,
+    "historicallyCreatedCards": 131,
+    "retiredDuplicateCards": 26,
+    "survivingCreatedCards": 105,
+    "retiredOrExcludedProposals": 56,
+    "remainingMissingCards": 0,
     "lastBatch": {
-      "cards": 63,
-      "generations": 88,
-      "engines": 57,
-      "facelifts": 7
+      "cards": 9,
+      "generationEntries": 12,
+      "engineRows": 1,
+      "duplicateCardsConsolidated": 26,
+      "canonicalCardsUpdated": 26
     },
-    "report": "analysis/codex/wave-3-missing-cards-2/report.json",
-    "validation": "analysis/codex/wave-3-missing-cards-2/validation.json",
-    "structurePassStarted": false
+    "statisticsReport": "analysis/codex/wave-3-missing-cards-3/statistics.json",
+    "validation": "analysis/codex/wave-3-missing-cards-3/validation.json",
+    "fullStructuralPassCompleted": false
   },
   "wave3MissingCardTriage": {
     "originalItems": 161,
-    "resolvedItems": 146,
-    "unresolvedItems": 15,
+    "resolvedItems": 161,
+    "unresolvedItems": 0,
     "ids": [
       "austin-motor-company/austin-seven-mini-ado15",
       "chevrolet/blazer-ev",
@@ -73204,10 +73203,7 @@
       "uaz/uaz-69-gaz-69-built-in-ulyanovsk",
       "wartburg/wartburg-motorwagen-eisenach-decauville-licence",
       "santana-motor/santana-2500-series-iv-super-cazorla",
-      "mazda/cx-5e",
-      "microcar/m-go-models-auto-has-0-microcar-rows",
       "moskvic/2315-pickup-on-2140-base",
-      "omoda/omoda-9-c9",
       "opel/rocks-e-rocks-electric-model-line-l6e-quadricycle-decide-whether-it-belongs-in-auto",
       "packard/packard-1958-sedan-hardtop-station-wagon-packardbaker",
       "plymouth/suburban",
@@ -73216,10 +73212,37 @@
       "salmson/al",
       "santana-motor/santana-cajal",
       "santana-motor/santana-series-ii-iia-iii-88-109-licensed-land-rover",
+      "subaru/subaru-1000-ff-1-line-in-model-line-additions-card-exists",
+      "subaru/subaru-360-line-in-model-line-additions-card-exists-with-isaddition",
+      "subaru/subaru-ascent-line-in-model-line-additions-card-exists",
+      "subaru/subaru-baja-line-in-model-line-additions-card-exists",
+      "subaru/subaru-uncharted-models-auto-entry-missing-line-exists",
+      "subaru/subaru-xt-line-in-model-line-additions-card-exists",
+      "maserati/granturismo-ii-m189",
+      "maserati/quattroporte-v-m139",
+      "maserati/mcpura-incl-mcpura-cielo",
+      "maserati/spyder-biturbo-spyder-m138-spyder-as-separate-models",
+      "maxus/mifa-9-in-models-auto",
+      "maxus/t70-v80-in-models-auto",
+      "opel/vectra-b",
+      "wolseley-motors/wolseley-1100-1300",
+      "wolseley-motors/wolseley-12-48",
+      "wolseley-motors/wolseley-1500",
+      "wolseley-motors/wolseley-16-60",
+      "wolseley-motors/wolseley-18-85",
+      "wolseley-motors/wolseley-21-60",
+      "wolseley-motors/wolseley-6-110",
+      "wolseley-motors/wolseley-six",
+      "wolseley-motors/wolseley-18-22-series-2200",
+      "rover/model-line-additions-for-all-rover-cards",
+      "wolseley-motors/other-pre-war-card-lines-without-models-auto-entry-sixteen-nine-wasp-15-40-16-35-seven-20-28-30-34-40-50-16-24-45-6",
+      "microcar/m-go-models-auto-has-0-microcar-rows",
+      "omoda/omoda-9-c9",
       "studebaker/lark-cruiser-cruiser",
       "studebaker/lark-daytona-daytona",
-      "venturi/atlantique-260-300-300-biturbo"
+      "venturi/atlantique-260-300-300-biturbo",
+      "mazda/cx-5e"
     ],
-    "scope": "Source research/triage recorded; full model-history completeness is not certified."
+    "scope": "Queue triaged. 105 surviving new cards plus 56 retired duplicates/unsupported proposals; not certification of complete histories."
   }
 }

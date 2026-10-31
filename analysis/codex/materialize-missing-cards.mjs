@@ -2,7 +2,7 @@ import fs from 'node:fs';import cp from 'node:child_process';import assert from 
 import {compactEngineRows} from './short-engine-labels.mjs';
 import {evidenceProblem,rejectEngine,balancedBrackets,normalizeVariant} from './engine-throughput-policy.mjs';
 const root=process.argv.find(a=>a.startsWith('--root='))?.slice(7)??'analysis/codex/wave-3-missing-cards';assert(/^analysis\/codex\/wave-3-missing-cards(?:-\d+)?$/.test(root));
-const {plans,duplicateTargets,nonModelProposals}=await import('./'+root.split('/').pop()+'/plan.mjs');
+const {plans,duplicateTargets,nonModelProposals,exclusionEvidence={}}=await import('./'+root.split('/').pop()+'/plan.mjs');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n');
 const survey=read(root+'/survey.json'),baselineRevision=survey.baselineRevision,git=p=>JSON.parse(cp.execFileSync('git',['show',baselineRevision+':'+p],{maxBuffer:80e6})),before=git('src/data/model-cards-index.json');
 assert(survey.complete,'Finish or explicitly defer the entire survey queue before materialization.');
@@ -57,7 +57,7 @@ for(const plan of plans){
    g.engines.push(published);engineEvidence.push({id:plan.id,index:i,engine:published,sourceScope:e.sourceScope});
   }
  }
- const card={makeSlug:make,lineSlug:line,name,isAddition:true,coverage:'source-partial',...(plan.summaryCs?{summaryCs:plan.summaryCs}:{}),generations:gs,sources:[...new Set(gs.flatMap(g=>g.sources))]};
+ const card={makeSlug:make,lineSlug:line,name,isAddition:true,coverage:'source-partial',...(plan.summaryCs?{summaryCs:plan.summaryCs}:{}),...(plan.vehicleCategory?{vehicleCategory:plan.vehicleCategory}:{}),generations:gs,sources:[...new Set(gs.flatMap(g=>g.sources))]};
  const file='src/data/catalog/model-cards/'+make+'.json';if(!cardFiles.has(file))cardFiles.set(file,fs.existsSync(file)?read(file):[]);const cards=cardFiles.get(file);
  const old=cards.findIndex(c=>c.lineSlug===line);if(old>=0){assert(!before[make]?.[line]);cards[old]=card;}else cards.push(card);
  lineRecord.name=name;lineRecord.generations=gs.map(g=>({code:g.code,from:g.from,to:g.to,bodyTypes:g.bodyTypes,productionStatus:g.productionStatus,sources:g.sources,...(g.dateBasis?{dateBasis:g.dateBasis}:{})}));
@@ -71,7 +71,7 @@ for(const oldId of remove){
  const targets=duplicateTargets[oldId]??[];
  for(const target of targets){const [m,l]=target.split('/');assert(before[m]?.[l],target+' target missing');}
  const statsFile='src/data/stats/'+make+'.json';assert(!fs.existsSync(statsFile)||!read(statsFile)[line],'cannot remove a line with published statistics');
- removed.push({id:oldId,targets,reason:targets.length?'Duplicate audit proposal; canonical card already contains this model/generation.':'Audit instruction, not a vehicle model.',targetGenerations:targets.map(target=>{const[m,l]=target.split('/');return {id:target,generations:before[m][l].generations.map(g=>({name:g.name,code:g.code,from:g.from,to:g.to}))};})});
+ removed.push({id:oldId,targets,reason:targets.length?'Duplicate audit proposal; canonical card already contains this model/generation.':exclusionEvidence[oldId]?.reason??'Audit instruction, not a vehicle model.',...(exclusionEvidence[oldId]?{evidence:exclusionEvidence[oldId]}:{}),targetGenerations:targets.map(target=>{const[m,l]=target.split('/');return {id:target,generations:before[m][l].generations.map(g=>({name:g.name,code:g.code,from:g.from,to:g.to}))};})});
 }
 for(const [file,cards]of cardFiles)write(file,cards);
 for(const s of lineSources){const rows=s.rows.filter(l=>!remove.has(id(l)));if(JSON.stringify(rows)!==JSON.stringify(read(s.file)))write(s.file,rows);}
