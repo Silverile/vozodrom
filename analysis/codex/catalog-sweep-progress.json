@@ -72342,7 +72342,7 @@
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
   },
-  "activePhase": "structure-pass",
+  "activePhase": "structure-pass: 79 remaining candidates, then wave-1 second-source engines and wave 2",
   "structurePasses": [
     {
       "report": "analysis/codex/structure-pass/batch-1.json",
@@ -72364,51 +72364,41 @@
       "addedGenerations": 3,
       "removedGenerations": 13,
       "faceliftsAdded": 2
+    },
+    {
+      "batch": 3,
+      "report": "analysis/codex/structure-pass-3/report.json",
+      "validation": "analysis/codex/structure-pass-3/validation.json",
+      "reviewed": 50,
+      "changed": 43,
+      "retainedParallel": 3,
+      "identifiedDateFollowups": 4,
+      "addedGenerations": 1,
+      "removedGenerations": 23,
+      "dateEdits": 54,
+      "engineRowsAdded": 0,
+      "engineRowsRetained": 7028,
+      "faceliftsAdded": 1,
+      "remainingStructureCandidates": 79,
+      "rawStatistics": {
+        "requestedMakes": 48,
+        "recomputedMakes": 42,
+        "coveredFleetLines": 54,
+        "coveredFleetLinesWithGenerations": 53,
+        "emptyCoveredFleetLines": [
+          {
+            "id": "mercedes-benz/300-350-predvalecne",
+            "fleet": 1328,
+            "generationKeys": [],
+            "exception": "Raw years are missing or outside the documented production periods"
+          }
+        ]
+      }
     }
   ],
-  "pendingStatisticsRebuild": {
-    "when": "Once at the end of the structure pass; Mercedes included after deterministic matcher fix",
-    "lineIds": [
-      "audi/q7",
-      "audi/rs3",
-      "audi/rs5",
-      "audi/rs6",
-      "barkas/b1000",
-      "bmw/rada-1",
-      "byd/seal-u",
-      "chevrolet/cruze",
-      "chrysler/pacifica",
-      "citroen/c5",
-      "dacia/logan",
-      "dacia/spring",
-      "daewoo/matiz",
-      "daewoo/nubira",
-      "dodge/caravan",
-      "fiat/uno",
-      "jaguar/xj",
-      "kia/k4",
-      "kia/optima",
-      "land-rover/defender",
-      "land-rover/range-rover",
-      "ligier/js50",
-      "lynk-co/01",
-      "mercedes-benz/300-350-predvalecne",
-      "mercedes-benz/amg-gt",
-      "mercedes-benz/gla",
-      "mercedes-benz/gle",
-      "mercedes-benz/trida-g",
-      "mercedes-benz/trida-v",
-      "mg/hs",
-      "mitsubishi/asx",
-      "mitsubishi/eclipse-cross",
-      "nissan/micra",
-      "nissan/navara",
-      "ford/escort",
-      "hyundai/i20",
-      "renault/clio",
-      "toyota/hilux",
-      "volkswagen/t-roc"
-    ],
+  "pendingStatisticsRebuild": null,
+  "lastRawStatisticsRebuild": {
+    "report": "analysis/codex/structure-pass-3/statistics-rebuild.json",
     "makes": [
       "audi",
       "barkas",
@@ -72434,8 +72424,34 @@
       "hyundai",
       "renault",
       "toyota",
-      "volkswagen"
+      "volkswagen",
+      "abarth",
+      "acura",
+      "adler",
+      "alfa-romeo",
+      "alpina",
+      "arcfox",
+      "ariel",
+      "aston-martin",
+      "bac",
+      "baic",
+      "bentley",
+      "brabus",
+      "caterham",
+      "chery",
+      "daihatsu",
+      "daimler-company",
+      "delage",
+      "dkw",
+      "donkervoort",
+      "ds-automobiles",
+      "infiniti",
+      "jeep",
+      "microcar"
     ],
-    "currentDisplay": "Changed lines keep line/make totals; their stale gens are empty until rebuilt."
+    "coveredPasses": [
+      2,
+      3
+    ]
   }
 }

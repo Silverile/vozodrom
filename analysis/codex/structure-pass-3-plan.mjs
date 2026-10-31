@@ -1,0 +1,41 @@
+export function build({get,date,approximate,merge,source}){
+ date('jeep/gladiator',0,1962,1988);
+ date('audi/rs-q3',0,2013,2016,'První RS Q3 podle generačního článku.','https://de.wikipedia.org/wiki/Audi_RS_Q3');
+ for(const [i,a,b]of [[0,1999,2001],[1,2006,2008],[2,2012,2015],[3,2018,2025]])date('audi/rs4',i,a,b,'Sériová výroba podle generačního infoboxu; modelový rok/představení se může lišit.');
+ merge('kia/clarus',{1:0},'Clarus / Credos');approximate('kia/seltos',0,2019,2025);merge('kia/ev5',{1:0},'EV5 (OV)');
+ merge('infiniti/g',{3:2,5:4,6:4});date('infiniti/g',2,2002,2007,'Sedan do 2006, kupé do 2007.');date('infiniti/g',4,2006,2015,'Společná rodina V36 včetně kupé a kabrioletu.');get('infiniti/g').rename={2:'G (V35)',4:'G (V36)'};
+ merge('microcar/m-go',{1:0},'M.Go');get('microcar/m-go').source='https://ligier-microcar.de/images/Downloads/Due-MGo-Preisliste-03-2022.pdf';
+ date('audi/tt-rs',0,2009,2014,'TT RS na platformě 8J, konec hlavní karoserie podle infoboxu TT.');
+ date('daihatsu/rocky',1,2019,null,'A200/A250; nikoli starší terénní model.','https://en.wikipedia.org/wiki/Daihatsu_Rocky_(A200)');
+ date('aston-martin/vantage',1,2005,2018,'V8 do 2017, V12 do 2018.');date('dodge/magnum',1,1979,1988,'Souhrn regionálních větví: Brazílie 1979–1981, Mexiko 1981–1988.');
+ date('ds-automobiles/ds-3',0,2015,2019,'Samostatná značka DS od 2015; předchozí roky patří k Citroënu DS3.');
+ merge('caterham/seven',{4:1,5:1,6:1},'Seven (S3)');date('caterham/seven',2,2000,null,'Samostatný širší podvozek SV podle historie článku.');date('caterham/seven',3,2005,null,'Sériové CSR200/260 od 2005; představení proběhlo v říjnu 2004.');
+ date('baic/bj30',0,2020,2023,'BJ30 I, nikoli předchozí BJ20.');
+ merge('abarth/ot-1000',{1:0},'OT / OTR / OTS 1000');date('abarth/ot-1000',0,1964,1971,'Období základní rodiny Fiat 850; dostupnost konkrétních Abarth verzí se liší.',null,'base-model-period');
+ for(const [i,a,b]of [[0,1985,1989],[1,1989,1993],[2,1993,2001]])date('acura/integra',i,a,b,'Sériová generační platforma Honda Integra; severoamerické modelové roky začínají o rok později.');
+ date('adler/vis-a-vis',0,1900,1901,'Přibližná hranice podle příchodu dalšího provedení.','https://www.adler-veteranen.de/ueber-die-adlerwerke/','successor-boundary');
+ date('alfa-romeo/20-30-hp',0,1914,1921,'Válečná přestávka; dokončování původních podvozků po válce.','https://en.wikipedia.org/wiki/ALFA_20/30_HP');
+ approximate('alpina/b4',0,2014,2021);date('alpina/b4',1,2022,2025);
+ date('alpina/b5',0,2005,2011);date('alpina/b5',1,2011,2016,'F10/F11: výrobní období podle generačního článku.','https://en.wikipedia.org/wiki/Alpina_B5_(F10)');date('alpina/b5',2,2017,2024);
+ date('alpina/b7',0,2004,2008,'Sériová výroba E65/E66, ne premiéra 2003.','https://en.wikipedia.org/wiki/Alpina_B7_(E65)');
+ merge('arcfox/alpha-t5',{1:0},'Alpha T5');date('arcfox/alpha-t5',0,2024,null,'Sériová výroba podle infoboxu; premiéra proběhla 2023.');merge('arcfox/kaola',{1:0},'Kaola / Kaola S');
+ for(const [i,a,b]of [[0,2000,2003],[1,2003,2007],[2,2007,2018]])date('ariel/atom',i,a,b,'Přibližná hranice podle uvedení nástupce v historii výrobce.','https://www.arielmotor.co.uk/our-history/','successor-boundary');
+ // Atom 3.5 already has a sourced 2012 launch stage; do not add a second stage for its production year.
+ get('ariel/atom').source='https://www.arielmotor.co.uk/our-history/';
+ date('ariel/nomad',0,2015,2024,'Odhad konce hlavní řady před zahájením výroby Nomad 2 v březnu 2025.','https://www.arielmotor.co.uk/nomad-2-production-begins/','successor-boundary');date('ariel/nomad',1,2025,null,'Výroba zahájena v březnu 2025; rok 2024 patří premiéře.','https://www.arielmotor.co.uk/nomad-2-production-begins/');
+ merge('bac/mono',{4:3},'Mono (novější řada)');date('bac/mono',3,2023,null,'MY2026 je technická specifikace stávající řady, nikoli nová generace.','https://www.bac-mono.com/news/the-evolution-of-mono');
+ date('bentley/derby',0,1933,1936,'Přechod na 4¼ Litre podle článku o původní řadě.');
+ for(const [id,map,name]of [['brabus/190-w201',{1:0},'190 (W201)'],['brabus/g-class',{1:0,2:0},'G (W463)'],['brabus/sl-r129',{1:0},'SL (R129)']])merge(id,map,name);
+ date('brabus/190-w201',0,1982,1993,'Období základního podvozku W201; ne přesné období každé úpravy Brabus.','https://en.wikipedia.org/wiki/Mercedes-Benz_W201','chassis-period');
+ date('brabus/g-class',0,1990,2018,'Období původního podvozku W463; původní Brabus specifikace zachovány.','https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class','chassis-period');date('brabus/g-class',3,2018,2024,'Období novějšího podvozku, nikoli dostupnost každé tuningové verze.','https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class','chassis-period');
+ date('brabus/sl-r129',0,1989,2001,'Období základního podvozku R129; ne přesné období každé úpravy Brabus.','https://en.wikipedia.org/wiki/Mercedes-Benz_SL-Class_(R129)','chassis-period');
+ date('chery/fulwin',1,2003,2016,'A15/Cowin 2003–2010, modernizace Cowin 2 do 2016.','https://en.wikipedia.org/wiki/Chery_A15');get('chery/fulwin').source='https://en.wikipedia.org/wiki/Chery_A15';get('chery/fulwin').stages=[{index:1,year:2010,name:'Cowin 2',note:'Modernizace A15/Cowin, nikoli další generace.'}];
+ date('daihatsu/copen',1,2014,2026,'Druhá generace LA400, výroba do srpna 2026.');date('daimler-company/sovereign',2,1973,1979,'Rodina XJ Series II.');
+ for(const [i,a,b,note]of [[1,1933,1934,'Premiéra 1932, sériová výroba od jara 1933.'],[8,1939,1940,'Předválečná rodina; hranice zastavení osobní výroby během války.'],[9,1946,1953,'Poválečná výroba podvozků; některé karoserie dokončeny 1954.']])date('delage/d6',i,a,b,note);
+ date('delage/d8',0,1929,1933);merge('dkw/f12',{1:0},'F12');date('dkw/f2',0,1932,1934,'Meisterklasse podle infoboxu; Reichsklasse samostatně do 1935.');
+ const pdf='https://www.dodgebrothersclub.org/DB_Production_Dates.pdf';date('dodge/30-35',0,1914,1923,'Sériové datování podle výrobního přehledu klubu.',pdf);date('dodge/30-35',1,1923,1927,'Řada 116-inch podle dat stavby; nejde o modelový rok.',pdf);date('dodge/30-35',2,1927,1927,'Sdružená 124/126: výrobní tabulka 1927.',pdf);
+ get('dodge/coronet').splitAt={1:[{code:null,name:'II',from:1953,to:1954,bodyTypes:['sedan','kombi','kupe','kabriolet'],source:source('dodge/coronet')},{code:null,name:'III',from:1955,to:1956,bodyTypes:['sedan','kombi','kupe','kabriolet'],source:source('dodge/coronet')}]};
+ date('dodge/ramcharger',1,1981,1993,'Hlavní americká výroba; mexická druhá řada do 1996.');
+ merge('donkervoort/d8',{1:0,2:0,3:0},'D8');date('donkervoort/d8',0,1992,2012,'Souhrn motorových provedení D8; přibližný konec před nástupem GTO.','https://www.donkervoort.com/en/the-story-of-us/history/','successor-boundary');
+ merge('donkervoort/s8',{1:0,2:0},'S8 / S8A / S8AT');date('donkervoort/s8',0,1980,1994,'Souhrnná rodina S8; konec podle článku o S8, jednotlivé varianty mají odlišná období.','https://en.wikipedia.org/wiki/Donkervoort_S8','family-period');
+}

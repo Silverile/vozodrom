@@ -258,8 +258,8 @@
         "code": null,
         "name": "30-35 / Model 30",
         "from": 1914,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1923,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": null,
@@ -277,7 +277,7 @@
           "modelYear": null,
           "variant": "30-35 / Model 30",
           "bodyType": null,
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null.\nSériové datování podle výrobního přehledu klubu."
         },
         "trunkL": null,
         "markets": [
@@ -305,14 +305,15 @@
         "sources": [
           "https://reedbrothersdodgehistory.com/1914-1920-2/dodge-cars-1914-1929-2/",
           "https://www.dodgebrothersclub.org/DB_Production_Dates.pdf"
-        ]
+        ],
+        "dateBasis": "production"
       },
       {
         "code": null,
         "name": "Series 116",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1923,
+        "to": 1927,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": null,
@@ -330,7 +331,7 @@
           "modelYear": 1924,
           "variant": "Series 116",
           "bodyType": null,
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null.\nŘada 116-inch podle dat stavby; nejde o modelový rok."
         },
         "trunkL": null,
         "markets": [
@@ -341,14 +342,15 @@
         "trims": null,
         "sources": [
           "https://www.dodgebrothersclub.org/DB_Production_Dates.pdf"
-        ]
+        ],
+        "dateBasis": "production"
       },
       {
         "code": null,
         "name": "Series 124 / 126",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1927,
+        "to": 1927,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
         "engines": null,
@@ -366,7 +368,7 @@
           "modelYear": 1927,
           "variant": "Series 124 / 126",
           "bodyType": null,
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null.\nSdružená 124/126: výrobní tabulka 1927."
         },
         "trunkL": null,
         "markets": [
@@ -377,7 +379,8 @@
         "trims": null,
         "sources": [
           "https://www.dodgebrothersclub.org/DB_Production_Dates.pdf"
-        ]
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
@@ -4822,41 +4825,93 @@
       },
       {
         "code": null,
-        "name": "II / III",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "name": "II",
+        "from": 1953,
+        "to": 1954,
+        "productionStatus": "ended",
+        "dateBasis": "production",
+        "drawingStage": 0,
         "bodyTypes": [
-          "sedan"
+          "sedan",
+          "kombi",
+          "kupe",
+          "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
-        "specificationScope": {
-          "market": "USA / historic export",
-          "modelYear": null,
-          "variant": "II / III",
-          "bodyType": "sedan",
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
-        },
-        "trunkL": null,
-        "markets": [
-          "USA / historic export"
-        ],
-        "marketNotesCs": "Doložený zahraniční trh není potvrzením současného českého prodeje.",
-        "photo": null,
-        "trims": null,
+        "engines": [],
+        "trims": [],
         "sources": [
           "https://en.wikipedia.org/wiki/Dodge_Coronet"
+        ],
+        "photo": null,
+        "facelift": [],
+        "specificationScope": {
+          "noteCs": "Výrobní období podle uvedeného generačního článku."
+        },
+        "specificationReferences": [
+          {
+            "code": null,
+            "name": "II / III",
+            "from": null,
+            "to": null,
+            "productionStatus": "unknown",
+            "facelift": null,
+            "bodyTypes": [
+              "sedan"
+            ],
+            "engines": null,
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "specificationScope": {
+              "market": "USA / historic export",
+              "modelYear": null,
+              "variant": "II / III",
+              "bodyType": "sedan",
+              "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+            },
+            "trunkL": null,
+            "markets": [
+              "USA / historic export"
+            ],
+            "marketNotesCs": "Doložený zahraniční trh není potvrzením současného českého prodeje.",
+            "photo": null,
+            "trims": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Dodge_Coronet"
+            ]
+          }
         ]
+      },
+      {
+        "code": null,
+        "name": "III",
+        "from": 1955,
+        "to": 1956,
+        "productionStatus": "ended",
+        "dateBasis": "production",
+        "drawingStage": 0,
+        "bodyTypes": [
+          "sedan",
+          "kombi",
+          "kupe",
+          "kabriolet"
+        ],
+        "engines": [],
+        "trims": [],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dodge_Coronet"
+        ],
+        "photo": null,
+        "facelift": [],
+        "specificationScope": {
+          "noteCs": "Výrobní období podle uvedeného generačního článku."
+        }
       },
       {
         "code": null,
@@ -5128,58 +5183,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5333,6 +5336,58 @@
       },
       {
         "field": "generations[5].trims",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].code",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].facelift",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].engines",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].drivetrains",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].transmissions",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].dimensionsMm.length",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].dimensionsMm.width",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].dimensionsMm.height",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].trunkL",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].photo",
+        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[6].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10497,9 +10552,9 @@
       {
         "code": null,
         "name": "Brazil / Mexico regional families",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
+        "from": 1979,
+        "to": 1988,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "kupe"
@@ -10519,7 +10574,7 @@
           "modelYear": null,
           "variant": "Brazil / Mexico regional families",
           "bodyType": "kupe",
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null.\nSouhrn regionálních větví: Brazílie 1979–1981, Mexiko 1981–1988."
         },
         "trunkL": null,
         "markets": [
@@ -10530,7 +10585,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Dodge_Magnum"
-        ]
+        ],
+        "dateBasis": "production"
       },
       {
         "code": null,
@@ -13048,8 +13104,8 @@
         "code": null,
         "name": "II USA / Mexico",
         "from": 1981,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1993,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
@@ -13069,7 +13125,7 @@
           "modelYear": null,
           "variant": "II USA / Mexico",
           "bodyType": "suv",
-          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null."
+          "noteCs": "Částečně doložená výrobní rodina. Modelový rok a kalendářní zahájení výroby se mohou lišit; neověřené hranice zůstávají null.\nHlavní americká výroba; mexická druhá řada do 1996."
         },
         "trunkL": null,
         "markets": [
@@ -13080,7 +13136,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Dodge_Ramcharger"
-        ]
+        ],
+        "dateBasis": "production"
       },
       {
         "code": null,
