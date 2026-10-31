@@ -5,6 +5,7 @@ import { Bar } from "@/components/Bar";
 import { CatalogImage } from "@/components/CatalogImage";
 import { ModelListingCount } from "@/components/ModelListingCount";
 import { OpenOnHash } from "@/components/OpenOnHash";
+import { PartnerOffers } from "@/components/PartnerOffers";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
@@ -421,6 +422,8 @@ export default async function ModelPage({ params }: { params: Params }) {
             <Link href={`/inzeraty/?znacka=${brandSlug}&model=${modelSlug}`} className="pill">Zobrazit inzeráty</Link>
             <Link href={`/pridat/?znacka=${brandSlug}&model=${modelSlug}`} className="pill">Prodat tento model</Link>
           </div>
+          {/* buying help without a loan: credit belongs next to a concrete car and price */}
+          <PartnerOffers kinds={["history", "inspection", "insurance"]} className="mt-5 max-w-xl" />
         </div>
         <figure className="min-w-0">
           <CatalogImage drawing={coverDrawing} make={brandSlug} line={modelSlug} alt={coverGen ? `${title} ${coverGen}` : title} bodyType={demo?.body ?? bodies[0]} className="rounded-2xl" />

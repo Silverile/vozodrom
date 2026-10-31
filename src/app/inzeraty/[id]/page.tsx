@@ -7,6 +7,7 @@ import { Gallery } from "@/components/Gallery";
 import { frontDrawingFor } from "@/components/FrontDrawing";
 import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
+import { PartnerOffers } from "@/components/PartnerOffers";
 import { Place } from "@/components/Place";
 import { PriceMeter, VerdictBadge } from "@/components/VerdictBadge";
 import { VehicleCheck } from "@/components/VehicleCheck";
@@ -181,6 +182,7 @@ export default async function ListingPage({ params }: { params: Params }) {
               <FavoriteButton id={listing.id} label={`${brand.name} ${model.name}, ${listing.year}`} />
             </div>
           </section>
+          <PartnerOffers />
         </div>
 
         {/* model context */}

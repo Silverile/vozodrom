@@ -7,6 +7,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { FrontDrawing } from "@/components/FrontDrawing";
 import { ListingCard } from "@/components/ListingCard";
 import { ModelSidebar } from "@/components/ModelSidebar";
+import { PartnerOffers } from "@/components/PartnerOffers";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { Place } from "@/components/Place";
 import { PriceMeter, VerdictBadge } from "@/components/VerdictBadge";
@@ -164,6 +165,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
               <FavoriteButton id={listing.id} label={title} />
             </div>
           </section>
+          {!preview && <PartnerOffers />}
           {/* Sellers cannot report their own listing; they manage it in the account instead. */}
           {!preview && viewer?.user.id !== row.userId && (
             <section className="card p-4">
