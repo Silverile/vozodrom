@@ -114,7 +114,10 @@ function powerSummary(gens: CardGeneration[]): { label: string; value: string } 
         (v): v is number => typeof v === "number",
       ),
       // only listed technical versions, not the engine range: a sample, not the model's span
-      sample: !g.engines.some((e) => e.powerKwMin != null || e.powerKwMax != null),
+      // (or ranges marked as spanning only documented versions)
+      sample:
+        !g.engines.some((e) => e.powerKwMin != null || e.powerKwMax != null) ||
+        g.engines.some((e) => (e.powerKwMin != null || e.powerKwMax != null) && e.powerRangeCoverage === "documented-versions-only"),
     }))
     .filter((g) => g.values.length > 0);
   if (!known.length) return null;
@@ -266,7 +269,8 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
           <h4 className="font-semibold text-sm mb-2">Výbavové stupně</h4>
           <ul className="flex flex-wrap gap-1.5 text-sm">
             {lines.map((l) => {
-              const years = [...new Set((l.availabilityEvidence ?? []).map((a) => a.date.slice(0, 4)))].sort();
+              // evidence may be undated (a source without a date); only dated offers give years
+              const years = [...new Set((l.availabilityEvidence ?? []).flatMap((a) => (typeof a.date === "string" ? [a.date.slice(0, 4)] : [])))].sort();
               return (
                 <li key={l.id} className="chip" title={l.noteCs ?? undefined}>
                   {l.name}

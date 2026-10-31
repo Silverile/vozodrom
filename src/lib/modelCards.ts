@@ -12,6 +12,10 @@ export interface CardEngine {
   powerKwMin: number | null;
   powerKwMax: number | null;
   variant: string | null;
+  /** "documented-versions-only" when min/max span only the versions found in sources */
+  powerRangeCoverage?: string | null;
+  /** discrete outputs documented for this engine family */
+  availablePowerKw?: number[];
 }
 
 export interface CardTrim {
@@ -114,7 +118,7 @@ export interface CardEquipmentLine {
   kind: string;
   from: number | null;
   to: number | null;
-  availabilityEvidence?: { date: string; stage?: string | null; markets?: string[]; sources?: string[] }[];
+  availabilityEvidence?: { date?: string | null; stage?: string | null; markets?: string[]; sources?: string[] }[];
   sources?: string[];
   noteCs?: string | null;
 }
