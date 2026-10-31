@@ -3,6 +3,35 @@
 Texty k odeslání (česky) a pravidla. Seznam firem a partnerských programů připravuje Codex v
 `analysis/codex/revenue/`; souhrn doplníme sem. Strategie a důvody: [strategie](strategie.md).
 
+## Komu (výzkum Codex, 31. 10. 2026)
+
+Plné seznamy se zdroji: [partnerské programy](../analysis/codex/revenue/affiliate-programmes.md) (19 kandidátů),
+[B2B firmy](../analysis/codex/revenue/b2b-targets.md) (40 firem, jen obecné firemní kontakty, také
+[CSV](../analysis/codex/revenue/b2b-targets.csv)), [ukázka dat](../analysis/codex/revenue/sample-vykupni-prehled.md)
+(Octavia, Fabia, Golf — 16 generací). Nikdo zatím nebyl osloven ani přihlášen.
+
+**Partnerské programy — začít těmito** (provize podle zveřejněných podmínek; ověřit při přihlášce):
+
+| Partner | Co | Zveřejněná odměna | Přihláška |
+|---|---|---|---|
+| Zonky | Půjčka na auto (kalkulačka jako u Autohledu) | Nutno potvrdit (vlastní program přes AffilBox) | [zonky.cz/affiliate](https://www.zonky.cz/affiliate/) |
+| Ušetřeno.cz | Srovnání povinného ručení a havarijního pojištění | 140 Kč za vytvořený lead | [usetreno.cz/spoluprace](https://www.usetreno.cz/spoluprace/) |
+| Cebia (přes eHUB) | Prověrka vozu podle VIN | 100 Kč za zaplacený certifikát | [ehub.cz](https://ehub.cz/6e6f52ca-cz-cebia-com) |
+| carVertical | Prověrka vozu podle VIN | Individuálně; bez minimální návštěvnosti | [carvertical.com/cz/affiliate-program](https://www.carvertical.com/cz/affiliate-program) |
+| Automato | Kontrola vozu technikem před koupí | Veřejný program nenalezen — individuální dotaz | [automato.cz/kontakt](https://automato.cz/kontakt/) |
+
+Pozor: Cebia a carVertical jsou zároveň datoví konkurenti — partnerský odkaz ano, sdílení našich dat ne.
+
+**B2B — první vlna** (hypotézy o rychlosti rozhodnutí, ne potvrzený zájem): DAVO CAR, AUTO VOLF, AUTO ŠEVČÍK,
+AUTO KOUTEK, AUTO KOUT CENTRUM, HAVEX-auto, AUTOBOND, Automato, AUTO BEZ OBAV, AUTO REVIZE — menší autobazary,
+dealeři s certifikovanými ojetinami a firmy prověřující auta před koupí. Velké firmy (AAA Auto, leasingy,
+pojišťovny) a datoví konkurenti (Cebia, carVertical, Autohled, TipCars) nejsou pro rychlý malý příjem priorita.
+
+**Cenový pokus** (návrh Codex, ne ceník): pilot 1 490 Kč za přehled do 10 generací a krátkou konzultaci.
+
+**Než ukázku pošleme:** v datech závad je metrika „výskyt kódu závady na prohlídku“, ne „podíl aut“ — v ukázce
+ji tak popsat, nebo nejdřív přepočítat; ověřit přiřazení generací u ukázkových modelů.
+
 ## Než cokoli odešlete
 
 - **Obchodní sdělení e-mailem bez předchozího souhlasu** omezuje zákon č. 480/2004 Sb. (§ 7), i vůči firmám.
