@@ -8,6 +8,9 @@ const head=p=>execFileSync('git',['show',`${report.baselineCommit}:${p}`],{encod
 const file='src/data/catalog/model-cards/skoda.json';
 const original=JSON.parse(head(file)),cards=read(file),index=read('src/data/model-cards-index.json');
 const allowed=new Set(['octavia','fabia','superb','105-120-125','felicia','kodiaq']);
+// Later batches validate their own target changes from a fixed commit baseline.
+const batch2=fs.existsSync('analysis/codex/popular-batch2-review.json')?new Set(read('analysis/codex/popular-batch2-review.json').targets.map(t=>t.join('/'))):new Set();
+if(batch2.size)execFileSync(process.execPath,['analysis/codex/popular-batch2-validate.mjs'],{stdio:'inherit'});
 function preserve(old,now,path,slug){
  if(old===null)return;
  if(Array.isArray(old)){assert(Array.isArray(now),`${slug}/${path} array removed`);assert(now.length>=old.length,`${slug}/${path} truncated`);old.forEach((v,i)=>preserve(v,now[i],`${path}.${i}`,slug));return;}
@@ -15,6 +18,7 @@ function preserve(old,now,path,slug){
  if(old!==now){const change=report.changes.find(c=>c.slug===slug&&c.path===path);assert(change?.sources.length&&change.before===old&&change.after===now,`${slug}/${path} unrecorded change ${old} -> ${now}`);}
 }
 for(const old of original){
+ if(batch2.has(`skoda/${old.lineSlug}`))continue;
  const now=cards.find(c=>c.lineSlug===old.lineSlug);assert(now);
  if(!allowed.has(old.lineSlug)){assert.deepEqual(now,old);continue;}
  assert.equal(now.generations.length,old.generations.length);
@@ -46,11 +50,12 @@ for(const old of original){
 // Source raw blocks of unrelated cards remain byte-identical, including formatting.
 function rawCards(raw){let q=false,escape=false,depth=0,start;const out=new Map();for(let i=0;i<raw.length;i++){const c=raw[i];if(q){if(escape)escape=false;else if(c==='\\')escape=true;else if(c==='"')q=false;continue;}if(c==='"'){q=true;continue;}if(c==='{'){if(depth++===0)start=i;}else if(c==='}'&&--depth===0){const value=raw.slice(start,i+1);out.set(JSON.parse(value).lineSlug,value);}}return out;}
 const oldRaw=rawCards(head(file)),newRaw=rawCards(fs.readFileSync(file,'utf8'));
-for(const [slug,raw] of oldRaw)if(!allowed.has(slug))assert.equal(newRaw.get(slug),raw,`Unrelated source bytes changed: ${slug}`);
+for(const [slug,raw] of oldRaw)if(!allowed.has(slug)&&!batch2.has(`skoda/${slug}`))assert.equal(newRaw.get(slug),raw,`Unrelated source bytes changed: ${slug}`);
 const oldIndex=JSON.parse(head('src/data/model-cards-index.json'));
-for(const [make,lines] of Object.entries(oldIndex))for(const [slug,card] of Object.entries(lines))if(make!=='skoda'||!allowed.has(slug))assert.equal(JSON.stringify(index[make][slug]),JSON.stringify(card),`Unrelated indexed card changed: ${make}/${slug}`);
+for(const [make,lines] of Object.entries(oldIndex))for(const [slug,card] of Object.entries(lines))if(!batch2.has(`${make}/${slug}`)&&(make!=='skoda'||!allowed.has(slug)))assert.equal(JSON.stringify(index[make][slug]),JSON.stringify(card),`Unrelated indexed card changed: ${make}/${slug}`);
 assert.equal(index.skoda.kodiaq.generations[0].drawingStage,0);
 for(const make of ['volkswagen','ford','hyundai']){
+ if(batch2.size)continue; // Whole-file equality superseded by batch2's unrelated raw-block equality.
  const path=`src/data/model-cards/${make}.json`;
  assert.equal(fs.readFileSync(path,'utf8'),head(path),`Source outside ownership changed: ${path}`);
 }

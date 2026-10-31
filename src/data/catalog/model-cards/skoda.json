@@ -20508,7 +20508,81 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1498,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "variant": "1,5 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf",
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf",
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2022/04/SKODA_KAROQ_ML_Motory-SK.pdf",
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ]
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 999,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 81,
+            "powerKwMax": 81,
+            "variant": "1,0 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              81
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ]
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1968,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 85,
+            "powerKwMax": 110,
+            "variant": "2,0 nafta; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              85,
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ]
+            }
+          }
+        ],
         "engineCoverage": "unknown",
         "drivetrains": [
           "fwd",
@@ -20644,7 +20718,470 @@
               "min": 1389,
               "max": 1617
             },
-            "massReference": "published-minimum"
+            "massReference": "published-minimum",
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-1",
+            "name": "1.0 TSI 81 kW – 6st. manuál (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 999,
+              "cylinders": 3,
+              "powerKw": 81
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-2",
+            "name": "1.5 TSI 110 kW – 7st. dvouspojkový automat (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 1498,
+              "cylinders": 4,
+              "powerKw": 110
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-3",
+            "name": "2.0 TDI 85 kW – 6st. manuál (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 85
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-4",
+            "name": "2.0 TDI 85 kW – 7st. dvouspojkový automat (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 85
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-5",
+            "name": "2.0 TDI 110 kW – 6st. manuál (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 110
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 6
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-karoq-0-6",
+            "name": "2.0 TDI 110 kW – 7st. dvouspojkový automat 4×4 (2022-04-04)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "suv",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1968,
+              "cylinders": 4,
+              "powerKw": 110
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "awd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2022-04-04",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-diesel-en.pdf"
+              ]
+            }
+          }
+        ],
+        "equipmentLines": [
+          {
+            "id": "batch2-0-selection",
+            "name": "Selection",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-04-02",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+            ]
+          },
+          {
+            "id": "batch2-0-drive",
+            "name": "Drive",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-04-02",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2021",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+            ]
           }
         ]
       }
@@ -33289,7 +33826,19 @@
         "from": 2012,
         "to": 2019,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2017,
+            "to": null,
+            "name": "Modernizace 2017",
+            "code": null,
+            "note": "Upravený spodní přední nárazník a mlhovky, zatmavené zadní svítilny; bi-xenonové světlomety a LED denní svícení podle provedení. Nové motory 1.0 TSI.",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/skoda-rapid-skoda-rapid-spaceback-optimized-interior-exterior/"
+            ],
+            "photo": null
+          }
+        ],
         "bodyTypes": [
           "hatchback"
         ],
@@ -33298,9 +33847,25 @@
             "fuel": "petrol",
             "displacementCc": null,
             "displacementLitresNominal": 1,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 70,
+            "powerKwMax": 81,
+            "variant": "1,0 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              70,
+              81
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
           },
           {
             "fuel": "petrol",
@@ -33314,9 +33879,24 @@
             "fuel": "petrol",
             "displacementCc": null,
             "displacementLitresNominal": 1.4,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 92,
+            "powerKwMax": 92,
+            "variant": "1,4 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              92
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
           },
           {
             "fuel": "petrol",
@@ -33330,17 +33910,47 @@
             "fuel": "diesel",
             "displacementCc": null,
             "displacementLitresNominal": 1.4,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 66,
+            "powerKwMax": 66,
+            "variant": "1,4 nafta; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              66
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
           },
           {
             "fuel": "diesel",
             "displacementCc": null,
             "displacementLitresNominal": 1.6,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "variant": "1,6 nafta; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "powerKwMax": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
           }
         ],
         "engineCoverage": "partial",
@@ -33508,7 +34118,20 @@
               "consumptionCycle": [
                 "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
               ]
-            }
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.0 TSI 81 kW - liftback 6MT (2017)",
@@ -33610,7 +34233,20 @@
               "consumptionCycle": [
                 "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
               ]
-            }
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.4 TSI 92 kW - liftback DSG7 (2017)",
@@ -33710,6 +34346,283 @@
                 "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
               ],
               "consumptionCycle": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "popular-batch2-skoda-rapid-0-3",
+            "name": "1.0 TSI 70 kW – 7st. dvouspojkový automat (2017-04-18)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "petrol",
+              "displacementCc": 999,
+              "cylinders": 3,
+              "powerKw": 70
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-rapid-0-4",
+            "name": "1.4 TDI 66 kW – 5st. manuál (2017-04-18)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1422,
+              "cylinders": 3,
+              "powerKw": 66
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 5
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-rapid-0-5",
+            "name": "1.4 TDI 66 kW – 7st. dvouspojkový automat (2017-04-18)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1422,
+              "cylinders": 3,
+              "powerKw": 66
+            },
+            "transmission": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.cylinders": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ]
+            }
+          },
+          {
+            "id": "popular-batch2-skoda-rapid-0-6",
+            "name": "1.6 TDI 85 kW – 5st. manuál (2017-04-18)",
+            "kind": "technical-version",
+            "from": null,
+            "to": null,
+            "bodyType": "hatchback",
+            "engine": {
+              "fuel": "diesel",
+              "displacementCc": 1596,
+              "cylinders": 4,
+              "powerKw": 85
+            },
+            "transmission": {
+              "type": "manual",
+              "gears": 5
+            },
+            "drive": "fwd",
+            "specificationScope": {
+              "market": "Europe",
+              "modelYear": null,
+              "noteCs": "Doložená konfigurace v dokumentu; datum je datum nabídky/listu, nikoli začátek výroby ani automaticky modelový rok. Bez doložení konkrétního rozvoru, výšky či výbavy nejsou další parametry doplňovány."
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2017-04-18",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2017",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+                ]
+              }
+            ],
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+            ],
+            "fieldSources": {
+              "bodyType": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.fuel": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.powerKw": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.type": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "transmission.gears": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "drive": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.displacementCc": [
+                "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
+              ],
+              "engine.cylinders": [
                 "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf"
               ]
             }
@@ -36419,17 +37332,54 @@
             "fuel": "petrol",
             "displacementCc": null,
             "displacementLitresNominal": 1,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 70,
+            "powerKwMax": 85,
+            "variant": "1,0 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              70,
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+              "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+                "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+                "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+              ]
+            }
           },
           {
             "fuel": "petrol",
             "displacementCc": null,
             "displacementLitresNominal": 1.5,
-            "powerKwMin": null,
-            "powerKwMax": null,
-            "variant": null
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "variant": "1,5 benzin; doložené verze, nikoli úplný historický rozsah.",
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+              "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+            ],
+            "fieldSources": {
+              "powerKwMin": [
+                "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+                "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+              ],
+              "powerKwMax": [
+                "https://www.skoda-storyboard.com/en/press-kits/skoda-scala-and-skoda-kamiq-media-launch-press-kit/powertrains-even-more-efficient-tsi-petrol-engines-from-the-latest-evo2-generation/",
+                "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+              ]
+            }
           },
           {
             "fuel": "petrol",
@@ -36611,7 +37561,20 @@
               "min": 1199,
               "max": 1364
             },
-            "massReference": "published-minimum"
+            "massReference": "published-minimum",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-09",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.0 TSI evo2 85 kW",
@@ -36703,7 +37666,20 @@
               "min": 1216,
               "max": 1388
             },
-            "massReference": "published-minimum"
+            "massReference": "published-minimum",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-09",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.5 TSI evo2 110 kW",
@@ -36795,7 +37771,20 @@
               "min": 1259,
               "max": 1423
             },
-            "massReference": "published-minimum"
+            "massReference": "published-minimum",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-09",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.0 TSI evo2 DSG 85 kW",
@@ -36908,7 +37897,20 @@
               "consumptionCycle": [
                 "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
               ]
-            }
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-09",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+                ]
+              }
+            ]
           },
           {
             "name": "1.5 TSI evo2 DSG 110 kW",
@@ -37021,7 +38023,126 @@
               "consumptionCycle": [
                 "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
               ]
-            }
+            },
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-09",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "Europe"
+                ],
+                "sources": [
+                  "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+                ]
+              }
+            ]
+          }
+        ],
+        "equipmentLines": [
+          {
+            "id": "batch2-0-selection",
+            "name": "Selection",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-29",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+            ]
+          },
+          {
+            "id": "batch2-0-top-selection",
+            "name": "Top Selection",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-29",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+            ]
+          },
+          {
+            "id": "batch2-0-monte-carlo",
+            "name": "Monte Carlo",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-01-29",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
+            ]
+          },
+          {
+            "id": "batch2-0-drive",
+            "name": "Drive",
+            "from": null,
+            "to": null,
+            "markets": [
+              "CZ"
+            ],
+            "noteCs": "Doložená nabídka podle pramene; úplný výrobní interval není odvozen.",
+            "availabilityEvidence": [
+              {
+                "date": "2024-04-02",
+                "observedAt": "2026-10-31",
+                "stage": "facelift-2023",
+                "markets": [
+                  "CZ"
+                ],
+                "sources": [
+                  "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+                ]
+              }
+            ],
+            "sources": [
+              "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
+            ]
           }
         ]
       }
