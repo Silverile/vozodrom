@@ -291,12 +291,12 @@
     "generations": [
       {
         "code": null,
-        "name": "Sonique Diesel",
-        "from": null,
-        "to": null,
+        "name": "Sonique",
+        "from": 2009,
+        "to": 2012,
         "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": null,
+        "facelift": [],
+        "bodyTypes": [],
         "engines": [
           {
             "fuel": "diesel",
@@ -305,11 +305,19 @@
             "powerKwMin": 4,
             "powerKwMax": 4,
             "variant": "Lombardini LDW502"
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 440,
+            "displacementLitresNominal": null,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "variant": "Lombardini442DCI"
           }
         ],
         "engineCoverage": "partial",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [],
+        "transmissions": [],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -321,7 +329,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nObdobí výroby podle italského infoboxu; motor DCI je verze stejné rodiny."
         },
         "trunkL": null,
         "markets": [],
@@ -372,54 +380,7 @@
               "https://www.bergamaschi.com/images/stories/codici/PDF/E172435200.PDF",
               "https://www.zebraminicars.nl/media/update2011.pdf"
             ]
-          }
-        ],
-        "sources": [
-          "https://it.wikipedia.org/wiki/Grecav_Sonique",
-          "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf",
-          "https://www.recambiosrevolucionarios.es/img/cms/pdf/grecav/GRECAV%20Sonique%201%20Version.pdf",
-          "https://www.zebraminicars.nl/media/update2011.pdf"
-        ]
-      },
-      {
-        "code": null,
-        "name": "Sonique DCI – motorová větev",
-        "from": 2010,
-        "to": null,
-        "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": null,
-        "engines": [
-          {
-            "fuel": "diesel",
-            "displacementCc": 440,
-            "displacementLitresNominal": null,
-            "powerKwMin": 4,
-            "powerKwMax": 4,
-            "variant": "Lombardini442DCI"
-          }
-        ],
-        "engineCoverage": "partial",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
-        "specificationScope": {
-          "market": "source-production",
-          "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
-        },
-        "trunkL": null,
-        "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
-        "photo": null,
-        "trims": [
+          },
           {
             "name": "Sonique DCI – 440 cm³",
             "kind": "technical-version",
@@ -466,8 +427,40 @@
           }
         ],
         "sources": [
-          "https://gsanspermis.com/grecav-sonique-dci/",
-          "https://www.zebraminicars.nl/media/update2011.pdf"
+          "https://it.wikipedia.org/wiki/Grecav_Sonique",
+          "https://sofima-aftermarket.com/EU/wp-content/uploads/downloads/sofima/pdfs/CatalogoLV/SOFIMA_Catalogo_LV_2021.pdf",
+          "https://www.recambiosrevolucionarios.es/img/cms/pdf/grecav/GRECAV%20Sonique%201%20Version.pdf",
+          "https://www.zebraminicars.nl/media/update2011.pdf",
+          "https://gsanspermis.com/grecav-sonique-dci/"
+        ],
+        "dateBasis": "production",
+        "equipmentLines": [],
+        "specificationReferences": [
+          {
+            "code": null,
+            "name": "Sonique DCI – motorová větev",
+            "from": 2010,
+            "to": null,
+            "productionStatus": "ended",
+            "facelift": null,
+            "engineCoverage": "partial",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+            },
+            "trunkL": null,
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null
+          }
         ]
       }
     ],
@@ -636,151 +629,151 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].code",
+        "field": "generations[0].code",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].to",
+        "field": "generations[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].facelift",
+        "field": "generations[0].facelift",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].bodyTypes",
+        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines[0].displacementLitresNominal",
+        "field": "generations[0].engines[0].displacementLitresNominal",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].drivetrains",
+        "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].transmissions",
+        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].dimensionsMm.length",
+        "field": "generations[0].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].dimensionsMm.width",
+        "field": "generations[0].dimensionsMm.width",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].dimensionsMm.height",
+        "field": "generations[0].dimensionsMm.height",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].dimensionsMm.wheelbase",
+        "field": "generations[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].specificationScope.modelYear",
+        "field": "generations[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].specificationScope.variant",
+        "field": "generations[0].specificationScope.variant",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].specificationScope.bodyType",
+        "field": "generations[0].specificationScope.bodyType",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trunkL",
+        "field": "generations[0].trunkL",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].photo",
+        "field": "generations[0].photo",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].from",
+        "field": "generations[0].trims[0].from",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].to",
+        "field": "generations[0].trims[0].to",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].bodyType",
+        "field": "generations[0].trims[0].bodyType",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].engine.powerStandard",
+        "field": "generations[0].trims[0].engine.powerStandard",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].transmission.type",
+        "field": "generations[0].trims[0].transmission.type",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].transmission.gears",
+        "field": "generations[0].trims[0].transmission.gears",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].drive",
+        "field": "generations[0].trims[0].drive",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].dimensionsMm.length",
+        "field": "generations[0].trims[0].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].dimensionsMm.width",
+        "field": "generations[0].trims[0].dimensionsMm.width",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].dimensionsMm.height",
+        "field": "generations[0].trims[0].dimensionsMm.height",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].dimensionsMm.wheelbase",
+        "field": "generations[0].trims[0].dimensionsMm.wheelbase",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].massKg",
+        "field": "generations[0].trims[0].massKg",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].massBasis",
+        "field": "generations[0].trims[0].massBasis",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].topSpeedKmh",
+        "field": "generations[0].trims[0].topSpeedKmh",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].acceleration0to100s",
+        "field": "generations[0].trims[0].acceleration0to100s",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].consumptionL100",
+        "field": "generations[0].trims[0].consumptionL100",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].consumptionCycle",
+        "field": "generations[0].trims[0].consumptionCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].consumptionKwh100",
+        "field": "generations[0].trims[0].consumptionKwh100",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].rangeKm",
+        "field": "generations[0].trims[0].rangeKm",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].rangeCycle",
+        "field": "generations[0].trims[0].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].trims[0].specificationScope.modelYear",
+        "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

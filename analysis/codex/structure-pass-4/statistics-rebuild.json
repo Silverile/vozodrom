@@ -1,0 +1,1161 @@
+{
+  "status": "complete",
+  "requestedMakes": 28,
+  "recomputedMakes": 17,
+  "sourcePeriod": {
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-10-31"
+    },
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "minN": 30
+  },
+  "catalogueAndMatcherFingerprintsVerified": true,
+  "makeTotalsPreserved": true,
+  "matcherDiagnostics": {
+    "prewarBeforeFleet": 1328,
+    "prewarAfterFleet": null,
+    "policy": "A sole candidate uses dated generation intervals before possibly stale line bounds; completely out-of-period records remain in make totals but are not assigned to that line."
+  },
+  "fleetLinesChecked": 135,
+  "nonemptyGenerationLines": 120,
+  "emptyGenerationExceptions": [
+    {
+      "id": "dodge/viper",
+      "fleet": 53,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1992": 1,
+        "1994": 3,
+        "1995": 1,
+        "1996": 3,
+        "1997": 2,
+        "1998": 1,
+        "1999": 3,
+        "2000": 1,
+        "2001": 3,
+        "2002": 2,
+        "2003": 1,
+        "2004": 7,
+        "2005": 3,
+        "2006": 8,
+        "2007": 2,
+        "2008": 2,
+        "2009": 3,
+        "2011": 1,
+        "2013": 1,
+        "2014": 2,
+        "2016": 1,
+        "2017": 1,
+        "2026": 1
+      }
+    },
+    {
+      "id": "dodge/intrepid",
+      "fleet": 31,
+      "cause": "Each matched generation group is below the privacy minimum of 30",
+      "matchedFleet": 31,
+      "matchedInspections": 23,
+      "unmatchedFleetYears": {}
+    },
+    {
+      "id": "kia/pride",
+      "fleet": 150,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1995": 8,
+        "1996": 9,
+        "1997": 29,
+        "1998": 21,
+        "1999": 43,
+        "2000": 38,
+        "2001": 1,
+        "2008": 1
+      }
+    },
+    {
+      "id": "lancia/thema",
+      "fleet": 379,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1985": 19,
+        "1986": 29,
+        "1987": 63,
+        "1988": 49,
+        "1989": 31,
+        "1990": 36,
+        "1991": 16,
+        "1992": 10,
+        "1993": 8,
+        "1994": 9,
+        "1995": 2,
+        "1996": 3,
+        "2011": 15,
+        "2012": 37,
+        "2013": 44,
+        "2014": 7,
+        "2026": 1
+      }
+    },
+    {
+      "id": "lancia/phedra",
+      "fleet": 415,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2002": 25,
+        "2003": 59,
+        "2004": 47,
+        "2005": 47,
+        "2006": 49,
+        "2007": 33,
+        "2008": 79,
+        "2009": 41,
+        "2010": 33,
+        "2011": 2
+      }
+    },
+    {
+      "id": "lancia/voyager",
+      "fleet": 264,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2011": 21,
+        "2012": 92,
+        "2013": 63,
+        "2014": 56,
+        "2015": 31,
+        "2016": 1
+      }
+    },
+    {
+      "id": "lancia/prisma",
+      "fleet": 409,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1980": 2,
+        "1983": 11,
+        "1984": 20,
+        "1985": 88,
+        "1986": 101,
+        "1987": 88,
+        "1988": 71,
+        "1989": 23,
+        "1990": 3,
+        "1993": 2
+      }
+    },
+    {
+      "id": "lancia/beta",
+      "fleet": 58,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1973": 1,
+        "1975": 4,
+        "1976": 8,
+        "1977": 1,
+        "1978": 6,
+        "1979": 7,
+        "1980": 9,
+        "1981": 6,
+        "1982": 5,
+        "1983": 1,
+        "1984": 2,
+        "1985": 6,
+        "1989": 1,
+        "1993": 1
+      }
+    },
+    {
+      "id": "lancia/zeta",
+      "fleet": 34,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1995": 3,
+        "1996": 6,
+        "1997": 3,
+        "1998": 2,
+        "1999": 2,
+        "2000": 8,
+        "2001": 8,
+        "2002": 1,
+        "2003": 1
+      }
+    },
+    {
+      "id": "ligier/js60",
+      "fleet": 114,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2020": 1,
+        "2021": 16,
+        "2022": 25,
+        "2023": 26,
+        "2024": 31,
+        "2025": 13,
+        "2026": 2
+      }
+    },
+    {
+      "id": "mercedes-benz/trida-t",
+      "fleet": 93,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2023": 25,
+        "2024": 29,
+        "2025": 25,
+        "2026": 14
+      }
+    },
+    {
+      "id": "mercedes-benz/eqv",
+      "fleet": 184,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2020": 15,
+        "2021": 29,
+        "2022": 42,
+        "2023": 30,
+        "2024": 45,
+        "2025": 17,
+        "2026": 6
+      }
+    },
+    {
+      "id": "mercedes-benz/clc",
+      "fleet": 175,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "2006": 1,
+        "2008": 37,
+        "2009": 94,
+        "2010": 33,
+        "2011": 10
+      }
+    },
+    {
+      "id": "mercedes-benz/380-500k-540k",
+      "fleet": 54,
+      "cause": "Raw years are missing or outside the documented production periods",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1979": 1,
+        "1980": 3,
+        "1981": 8,
+        "1982": 5,
+        "1983": 9,
+        "1984": 9,
+        "1985": 12,
+        "1986": 1,
+        "1987": 3,
+        "1988": 2,
+        "1996": 1
+      }
+    },
+    {
+      "id": "mercedes-benz/mb100",
+      "fleet": 147,
+      "cause": "No dated produced generation exists",
+      "matchedFleet": 0,
+      "matchedInspections": 0,
+      "unmatchedFleetYears": {
+        "1988": 5,
+        "1989": 8,
+        "1990": 15,
+        "1991": 29,
+        "1992": 25,
+        "1993": 15,
+        "1994": 28,
+        "1995": 13,
+        "1996": 7,
+        "1997": 1,
+        "1999": 1
+      }
+    }
+  ],
+  "lineMatchingChanges": [
+    {
+      "id": "dodge/dakota",
+      "beforeFleet": 36,
+      "afterFleet": 35,
+      "beforeInspections": 77,
+      "afterInspections": 75
+    },
+    {
+      "id": "dodge/stealth",
+      "beforeFleet": 39,
+      "afterFleet": 38,
+      "beforeInspections": 56,
+      "afterInspections": 56
+    },
+    {
+      "id": "dodge/intrepid",
+      "beforeFleet": 32,
+      "afterFleet": 31,
+      "beforeInspections": null,
+      "afterInspections": null
+    },
+    {
+      "id": "dodge/nitro",
+      "beforeFleet": 542,
+      "afterFleet": 537,
+      "beforeInspections": 1403,
+      "afterInspections": 1389
+    },
+    {
+      "id": "dodge/magnum",
+      "beforeFleet": 56,
+      "afterFleet": 54,
+      "beforeInspections": 113,
+      "afterInspections": 110
+    },
+    {
+      "id": "dodge/durango",
+      "beforeFleet": 1630,
+      "afterFleet": 1625,
+      "beforeInspections": 3015,
+      "afterInspections": 3001
+    },
+    {
+      "id": "dodge/caravan",
+      "beforeFleet": 595,
+      "afterFleet": 593,
+      "beforeInspections": 1117,
+      "afterInspections": 1114
+    },
+    {
+      "id": "dodge/caliber",
+      "beforeFleet": 558,
+      "afterFleet": 556,
+      "beforeInspections": 1572,
+      "afterInspections": 1568
+    },
+    {
+      "id": "dodge/neon",
+      "beforeFleet": 48,
+      "afterFleet": 43,
+      "beforeInspections": 81,
+      "afterInspections": 67
+    },
+    {
+      "id": "dodge/journey",
+      "beforeFleet": 335,
+      "afterFleet": 334,
+      "beforeInspections": 865,
+      "afterInspections": 861
+    },
+    {
+      "id": "dodge/challenger",
+      "beforeFleet": 1682,
+      "afterFleet": 1511,
+      "beforeInspections": 2743,
+      "afterInspections": 2720
+    },
+    {
+      "id": "gmc/vandura",
+      "beforeFleet": null,
+      "afterFleet": null,
+      "beforeInspections": 56,
+      "afterInspections": 52
+    },
+    {
+      "id": "gmc/sierra",
+      "beforeFleet": 112,
+      "afterFleet": 111,
+      "beforeInspections": 250,
+      "afterInspections": 245
+    },
+    {
+      "id": "gmc/acadia",
+      "beforeFleet": null,
+      "afterFleet": null,
+      "beforeInspections": 45,
+      "afterInspections": 41
+    },
+    {
+      "id": "infiniti/m",
+      "beforeFleet": 51,
+      "afterFleet": 49,
+      "beforeInspections": 133,
+      "afterInspections": 126
+    },
+    {
+      "id": "infiniti/fx",
+      "beforeFleet": 110,
+      "afterFleet": 110,
+      "beforeInspections": 374,
+      "afterInspections": 371
+    },
+    {
+      "id": "infiniti/qx70",
+      "beforeFleet": 97,
+      "afterFleet": 97,
+      "beforeInspections": 281,
+      "afterInspections": 280
+    },
+    {
+      "id": "infiniti/ex",
+      "beforeFleet": 57,
+      "afterFleet": 56,
+      "beforeInspections": 156,
+      "afterInspections": 154
+    },
+    {
+      "id": "jeep/renegade",
+      "beforeFleet": 1826,
+      "afterFleet": 1822,
+      "beforeInspections": 4419,
+      "afterInspections": 4415
+    },
+    {
+      "id": "jeep/cherokee",
+      "beforeFleet": 3734,
+      "afterFleet": 3732,
+      "beforeInspections": 9057,
+      "afterInspections": 9057
+    },
+    {
+      "id": "jeep/patriot",
+      "beforeFleet": 429,
+      "afterFleet": 426,
+      "beforeInspections": 1180,
+      "afterInspections": 1171
+    },
+    {
+      "id": "jeep/commander",
+      "beforeFleet": 552,
+      "afterFleet": 552,
+      "beforeInspections": 1364,
+      "afterInspections": 1360
+    },
+    {
+      "id": "jeep/grand-cherokee",
+      "beforeFleet": 9814,
+      "afterFleet": 9809,
+      "beforeInspections": 23934,
+      "afterInspections": 23931
+    },
+    {
+      "id": "jeep/wrangler",
+      "beforeFleet": 3113,
+      "afterFleet": 3109,
+      "beforeInspections": 6585,
+      "afterInspections": 6580
+    },
+    {
+      "id": "jeep/grand-wagoneer",
+      "beforeFleet": 33,
+      "afterFleet": 32,
+      "beforeInspections": null,
+      "afterInspections": null
+    },
+    {
+      "id": "kia/clarus",
+      "beforeFleet": 137,
+      "afterFleet": 136,
+      "beforeInspections": null,
+      "afterInspections": null
+    },
+    {
+      "id": "kia/ceed",
+      "beforeFleet": 59185,
+      "afterFleet": 59185,
+      "beforeInspections": 127912,
+      "afterInspections": 127910
+    },
+    {
+      "id": "kia/retona",
+      "beforeFleet": 59,
+      "afterFleet": 57,
+      "beforeInspections": 86,
+      "afterInspections": 84
+    },
+    {
+      "id": "kia/carens",
+      "beforeFleet": 3353,
+      "afterFleet": 3352,
+      "beforeInspections": 9510,
+      "afterInspections": 9506
+    },
+    {
+      "id": "kia/venga",
+      "beforeFleet": 6239,
+      "afterFleet": 6187,
+      "beforeInspections": 17723,
+      "afterInspections": 17535
+    },
+    {
+      "id": "kia/stinger",
+      "beforeFleet": 279,
+      "afterFleet": 274,
+      "beforeInspections": 581,
+      "afterInspections": 581
+    },
+    {
+      "id": "kia/soul",
+      "beforeFleet": 2123,
+      "afterFleet": 2122,
+      "beforeInspections": 5716,
+      "afterInspections": 5716
+    },
+    {
+      "id": "kia/cerato",
+      "beforeFleet": 565,
+      "afterFleet": 564,
+      "beforeInspections": 1625,
+      "afterInspections": 1625
+    },
+    {
+      "id": "kia/carnival",
+      "beforeFleet": 1086,
+      "afterFleet": 1085,
+      "beforeInspections": 1991,
+      "afterInspections": 1991
+    },
+    {
+      "id": "kia/rio",
+      "beforeFleet": 13807,
+      "afterFleet": 13737,
+      "beforeInspections": 33839,
+      "afterInspections": 33838
+    },
+    {
+      "id": "lancia/lybra",
+      "beforeFleet": 466,
+      "afterFleet": 454,
+      "beforeInspections": 866,
+      "afterInspections": 847
+    },
+    {
+      "id": "lancia/delta",
+      "beforeFleet": 1123,
+      "afterFleet": 1113,
+      "beforeInspections": 1987,
+      "afterInspections": 1963
+    },
+    {
+      "id": "lancia/y",
+      "beforeFleet": 485,
+      "afterFleet": 190,
+      "beforeInspections": 856,
+      "afterInspections": 292
+    },
+    {
+      "id": "lancia/kappa",
+      "beforeFleet": 70,
+      "afterFleet": 68,
+      "beforeInspections": 108,
+      "afterInspections": 101
+    },
+    {
+      "id": "lancia/ypsilon",
+      "beforeFleet": 141,
+      "afterFleet": 137,
+      "beforeInspections": 390,
+      "afterInspections": 375
+    },
+    {
+      "id": "lancia/musa",
+      "beforeFleet": 214,
+      "afterFleet": 214,
+      "beforeInspections": 566,
+      "afterInspections": 564
+    },
+    {
+      "id": "lancia/dedra",
+      "beforeFleet": 209,
+      "afterFleet": 206,
+      "beforeInspections": 93,
+      "afterInspections": 91
+    },
+    {
+      "id": "land-rover/freelander",
+      "beforeFleet": 5251,
+      "afterFleet": 5234,
+      "beforeInspections": 13759,
+      "afterInspections": 13710
+    },
+    {
+      "id": "land-rover/range-rover-evoque",
+      "beforeFleet": 2790,
+      "afterFleet": 2790,
+      "beforeInspections": 4668,
+      "afterInspections": 4666
+    },
+    {
+      "id": "land-rover/discovery",
+      "beforeFleet": 5129,
+      "afterFleet": 5124,
+      "beforeInspections": 12296,
+      "afterInspections": 12294
+    },
+    {
+      "id": "land-rover/defender",
+      "beforeFleet": 3382,
+      "afterFleet": 3380,
+      "beforeInspections": 5595,
+      "afterInspections": 5548
+    },
+    {
+      "id": "lincoln/town-car",
+      "beforeFleet": 131,
+      "afterFleet": 129,
+      "beforeInspections": 310,
+      "afterInspections": 303
+    },
+    {
+      "id": "lincoln/continental",
+      "beforeFleet": null,
+      "afterFleet": null,
+      "beforeInspections": 30,
+      "afterInspections": 63
+    },
+    {
+      "id": "lincoln/mark-series",
+      "beforeFleet": null,
+      "afterFleet": null,
+      "beforeInspections": 33,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    },
+    {
+      "id": "lotus/exige",
+      "beforeFleet": 40,
+      "afterFleet": 35,
+      "beforeInspections": 88,
+      "afterInspections": 80
+    },
+    {
+      "id": "lotus/emira",
+      "beforeFleet": 50,
+      "afterFleet": 49,
+      "beforeInspections": null,
+      "afterInspections": null
+    },
+    {
+      "id": "maruti-suzuki/alto",
+      "beforeFleet": null,
+      "afterFleet": null,
+      "beforeInspections": 37,
+      "afterInspections": 35
+    },
+    {
+      "id": "mercedes-benz/170",
+      "beforeFleet": 148,
+      "afterFleet": 141,
+      "beforeInspections": 52,
+      "afterInspections": null
+    },
+    {
+      "id": "mercedes-benz/190",
+      "beforeFleet": 1558,
+      "afterFleet": 1462,
+      "beforeInspections": 1815,
+      "afterInspections": 1712
+    },
+    {
+      "id": "mercedes-benz/slk",
+      "beforeFleet": 2870,
+      "afterFleet": 2866,
+      "beforeInspections": 6599,
+      "afterInspections": 6591
+    },
+    {
+      "id": "mercedes-benz/trida-e",
+      "beforeFleet": 25569,
+      "afterFleet": 25553,
+      "beforeInspections": 47994,
+      "afterInspections": 47975
+    },
+    {
+      "id": "mercedes-benz/glc",
+      "beforeFleet": 9955,
+      "afterFleet": 9954,
+      "beforeInspections": 13405,
+      "afterInspections": 13403
+    },
+    {
+      "id": "mercedes-benz/sprinter",
+      "beforeFleet": 26571,
+      "afterFleet": 26570,
+      "beforeInspections": 61036,
+      "afterInspections": 61035
+    },
+    {
+      "id": "mercedes-benz/cl",
+      "beforeFleet": 490,
+      "afterFleet": 487,
+      "beforeInspections": 1063,
+      "afterInspections": 1050
+    },
+    {
+      "id": "mercedes-benz/trida-v",
+      "beforeFleet": 13088,
+      "afterFleet": 13088,
+      "beforeInspections": 20431,
+      "afterInspections": 20430
+    },
+    {
+      "id": "mercedes-benz/vaneo",
+      "beforeFleet": 557,
+      "afterFleet": 547,
+      "beforeInspections": 1155,
+      "afterInspections": 1128
+    },
+    {
+      "id": "mercedes-benz/gls",
+      "beforeFleet": 6708,
+      "afterFleet": 6706,
+      "beforeInspections": 12108,
+      "afterInspections": 12107
+    },
+    {
+      "id": "mercedes-benz/cla",
+      "beforeFleet": 4814,
+      "afterFleet": 4812,
+      "beforeInspections": 6605,
+      "afterInspections": 6603
+    },
+    {
+      "id": "mercedes-benz/trida-r",
+      "beforeFleet": 1444,
+      "afterFleet": 1442,
+      "beforeInspections": 3411,
+      "afterInspections": 3399
+    },
+    {
+      "id": "mercedes-benz/trida-c",
+      "beforeFleet": 21213,
+      "afterFleet": 21190,
+      "beforeInspections": 44571,
+      "afterInspections": 44564
+    },
+    {
+      "id": "mercedes-benz/vito",
+      "beforeFleet": 19864,
+      "afterFleet": 19862,
+      "beforeInspections": 43147,
+      "afterInspections": 43147
+    },
+    {
+      "id": "mercedes-benz/cls",
+      "beforeFleet": 2316,
+      "afterFleet": 2314,
+      "beforeInspections": 5506,
+      "afterInspections": 5506
+    },
+    {
+      "id": "mercedes-benz/gle",
+      "beforeFleet": 18233,
+      "afterFleet": 18230,
+      "beforeInspections": 36546,
+      "afterInspections": 36544
+    },
+    {
+      "id": "mercedes-benz/trida-x",
+      "beforeFleet": 347,
+      "afterFleet": 344,
+      "beforeInspections": 967,
+      "afterInspections": 952
+    },
+    {
+      "id": "mercedes-benz/trida-a",
+      "beforeFleet": 14180,
+      "afterFleet": 14178,
+      "beforeInspections": 30619,
+      "afterInspections": 30618
+    },
+    {
+      "id": "mercedes-benz/clk",
+      "beforeFleet": 2339,
+      "afterFleet": 2330,
+      "beforeInspections": 5134,
+      "afterInspections": 5110
+    },
+    {
+      "id": "mercedes-benz/sl",
+      "beforeFleet": 1612,
+      "afterFleet": 1608,
+      "beforeInspections": 3492,
+      "afterInspections": 3480
+    },
+    {
+      "id": "mercedes-benz/sls-amg",
+      "beforeFleet": 79,
+      "afterFleet": 77,
+      "beforeInspections": 165,
+      "afterInspections": 162
+    },
+    {
+      "id": "mercedes-benz/trida-s",
+      "beforeFleet": 7543,
+      "afterFleet": 7251,
+      "beforeInspections": 12869,
+      "afterInspections": 12751
+    },
+    {
+      "id": "mercedes-benz/600",
+      "beforeFleet": 56,
+      "afterFleet": null,
+      "beforeInspections": 61,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    },
+    {
+      "id": "mercedes-benz/300-350-predvalecne",
+      "beforeFleet": 1328,
+      "afterFleet": null,
+      "beforeInspections": 1556,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    },
+    {
+      "id": "mercedes-benz/300-sl",
+      "beforeFleet": 88,
+      "afterFleet": null,
+      "beforeInspections": 127,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    },
+    {
+      "id": "mercedes-benz/stuttgart",
+      "beforeFleet": 161,
+      "afterFleet": null,
+      "beforeInspections": 56,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    },
+    {
+      "id": "mercedes-benz/nurburg",
+      "beforeFleet": 286,
+      "afterFleet": null,
+      "beforeInspections": 527,
+      "afterInspections": null,
+      "reason": "No remaining publishable line group after dated-bound matching"
+    }
+  ],
+  "batchCoverage": [
+    {
+      "id": "abarth/1000",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "bertone/freeclimber",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "delage/type-co",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "dodge/custom",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "estrima/biro",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "exeed/et",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "forthing/leiting",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "geely/boyue",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "geely/emgrand",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "geely/geometry-a",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "geely/okavango",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "geely/starray",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "gmc/acadia",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "gmc/canyon",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "gmc/terrain",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "great-wall/coolbear",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "great-wall/peri",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "great-wall/voleex-c10",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "grecav/sonique",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "haval/f7",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "haval/h1",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "haval/h6",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "haval/h7",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "hongqi/ca770",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "hongqi/h9",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "infiniti/qx50",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "izh/2715",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jeep/cj",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jeep/forward-control",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jetour/dashing",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jetour/t1",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jetour/t2",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jetour/x70",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "jetour/x90",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "kia/k3",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "koenigsegg/agera",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "lancia/flavia",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "land-rover/forward-control",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "ligier/x-too",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "lincoln/continental",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "lotus/esprit",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "lotus/europa",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "mahindra/armada",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "maruti-suzuki/alto",
+      "fleet": null,
+      "generationKeys": [
+        "0"
+      ],
+      "exception": null
+    },
+    {
+      "id": "maruti-suzuki/baleno",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "maruti-suzuki/swift",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    },
+    {
+      "id": "maybach/sw",
+      "fleet": null,
+      "generationKeys": [],
+      "exception": null
+    }
+  ],
+  "inputAggregates": [
+    {
+      "name": "rsv-agg.json",
+      "sha256": "7a34456eed29a8792245646aeb7f3dc32db71eea8fc7ad0074a12b88970ff9fa"
+    },
+    {
+      "name": "istp-agg.json",
+      "sha256": "b4a027b697deb1f6a27e8fc1304266062bc8913dba28bd32eb3797fb6ac32985"
+    }
+  ]
+}

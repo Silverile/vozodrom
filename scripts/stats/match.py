@@ -119,8 +119,21 @@ class Matcher:
         if key not in self._cache:
             self._cache[key] = self._lines(make, raw_model)
         slugs = self._cache[key]
-        if len(slugs) <= 1 or not year:
+        if not slugs or not year:
             return slugs[0] if slugs else None
+        if len(slugs) == 1:
+            slug = slugs[0]
+            # Generic line bounds may be unknown even for a fully dated historical
+            # family, or stale after adding generations. Prefer dated generations.
+            gens = getattr(self, 'gens', {}).get((make, slug)) or []
+            if any(a is not None and a <= year and (b is None or year <= b) for a, b, _ in gens):
+                return slug
+            if gens and all(a is not None for a, _, _ in gens):
+                return None
+            start, end = self.years[(make, slug)]
+            if (start is not None and year < start) or (end is not None and year > end):
+                return None
+            return slug
         def rank(slug):
             start, end = self.years[(make, slug)]
             contains = (start is not None or end is not None) and (start or 0) <= year <= (end or 9999)
