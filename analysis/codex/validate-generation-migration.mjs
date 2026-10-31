@@ -4,7 +4,9 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
-const head=p=>cp.execFileSync('git',['show',`HEAD:${p}`],{maxBuffer:50e6});
+// Fixed pre-migration revision: HEAD advances after the migration is committed.
+const baseline='55a0e70d1cd8e836ea85ab925feb705c99f45891';
+const head=p=>cp.execFileSync('git',['show',`${baseline}:${p}`],{maxBuffer:50e6});
 const report=read('analysis/codex/generation-migration-2026-10-31.json');
 const cards=read('src/data/model-cards-index.json');
 const lines=read('src/data/model-lines-index.json');

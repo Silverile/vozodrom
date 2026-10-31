@@ -43,6 +43,7 @@ const blank = (code,name,from,to,bodyTypes,sources) => ({
 
 // Tucson: V is officially announced in 2026, so the requested conditional removal does not apply.
 const h = cards.hyundai;
+h.summaryCs=h.summaryCs.replace('třetí, čtvrté a páté generace','třetí a čtvrté generace');
 const hHistory='https://www.hyundai.com/kr/ko/brand/brandstory/model/tucson-history';
 const hV='https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-company-all-new-tucson-debut';
 const hVEn='https://www.hyundai.news/uk/articles/press-releases/all-new-hyundai-tucson-october-2026.html';
