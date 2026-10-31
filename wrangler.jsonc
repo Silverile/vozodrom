@@ -14,6 +14,8 @@
     { "pattern": "www.vozodrom.cz", "custom_domain": true }
   ],
   "observability": { "enabled": true },
+  // Source maps of the bundled catalogue data exceed Cloudflare's 60 MiB upload limit.
+  "upload_source_maps": false,
   // Postgres (Neon project vozodrom, Frankfurt) through Hyperdrive config vozodrom-db, query caching off
   // so session and ban changes apply at once. Locally `npm run db:local` serves PGlite on 5433.
   "hyperdrive": [
