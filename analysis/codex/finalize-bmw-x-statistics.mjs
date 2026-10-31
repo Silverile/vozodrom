@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import cp from 'node:child_process';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const root='analysis/codex/second-source-engines/bmw-x',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n'),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const inputs=read(root+'/rebuild-inputs.json');for(const [p,sha]of Object.entries(inputs.sha256))assert.equal(hash(p),sha,`Input changed during rebuild: ${p}`);
+const before=JSON.parse(cp.execFileSync('git',['show',`${inputs.baselineRevision}:src/data/stats/bmw.json`],{maxBuffer:30e6})),after=read(root+'/staged/stats/bmw.json'),stk=read(root+'/staged/aggregates/istp-agg.json'),fleet=read(root+'/staged/aggregates/rsv-agg.json'),cards=read('src/data/model-cards-index.json');
+assert.equal(stk.meta.days,1094);assert.equal(after._.fleet.n,inputs.makeFleetBefore);assert.equal(after._.stk.inspections,inputs.makeInspectionsBefore);assert.deepEqual(after.meta,before.meta);
+let cohorts=0;for(const [key,v]of Object.entries(fleet.keys)){const [make,line,index]=key.split('|');if(index===''||v.n<30)continue;assert.equal(make,'bmw');assert.equal(after[line]?.gens?.[index]?.fleet?.n,v.n,`Missing fleet cohort ${key}`);cohorts++;}
+for(const [key,v]of Object.entries(stk.keys)){const [make,line,index]=key.split('|'),n=Object.values(v.ages).reduce((s,a)=>s+a[0],0);if(index===''||n<30)continue;assert.equal(after[line]?.gens?.[index]?.stk?.inspections,n,`Missing STK cohort ${key}`);}
+for(const [line,data]of Object.entries(after))for(const index of Object.keys(data.gens??{}))assert(cards.bmw[line]?.generations[Number(index)],`Out-of-range generation ${line}/${index}`);
+const lines=['x5','x3'].map(line=>({id:'bmw/'+line,fleetBefore:before[line]?.fleet?.n,fleetAfter:after[line]?.fleet?.n,inspectionsBefore:before[line]?.stk?.inspections,inspectionsAfter:after[line]?.stk?.inspections,generations:cards.bmw[line].generations.map((g,index)=>({index,code:g.code,from:g.from,to:g.to,fleet:after[line]?.gens?.[index]?.fleet?.n??null,inspections:after[line]?.gens?.[index]?.stk?.inspections??null}))}));
+for(const row of lines){assert.equal(row.fleetAfter,row.fleetBefore);assert.equal(row.inspectionsAfter,row.inspectionsBefore);assert(row.generations.filter(g=>g.fleet!==null).length>=3,'Generation fleet not restored');}
+fs.writeFileSync('src/data/stats/bmw.json',JSON.stringify(after));const global=read('src/data/stats/index.json'),partial=read(root+'/staged/stats/index.json');global.makes.bmw=partial.makes.bmw;fs.writeFileSync('src/data/stats/index.json',JSON.stringify(global));cp.execFileSync('node',['scripts/listing-stats-index.mjs'],{stdio:'inherit'});
+const outputs=['src/data/stats/bmw.json','src/data/stats/index.json','src/data/listing-stats.json'];write(root+'/statistics.json',{status:'complete',sourcePeriod:{stk:stk.meta,register:fleet.meta},makeTotalsPreserved:true,allPublishableRawCohortsVerified:true,publishableFleetCohorts:cohorts,lines,outputSha256:Object.fromEntries(outputs.map(p=>[p,hash(p)]))});console.log(JSON.stringify({status:'complete',lines}));
+const migration=read(root+'/migration.json');migration.statsStatus='complete';migration.statisticsReport=root+'/statistics.json';write(root+'/migration.json',migration);

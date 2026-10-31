@@ -42,6 +42,8 @@ def variant_name(value):
 
 NON_EUROPE=r'\b(?:Thailand|China|Chinese|Japan|Japanese.market|India|Indian.market|Indonesia|Malaysia|Taiwan|Brazil|Argentina|Mexico|Pakistan|Iran|Australia|New.Zealand|South.Africa|North.America|USA|US|United.States|Canada|US.spec|Nordamerika|Südamerika|Australien|Indien|Neuseeland|Kanada|Südafrika|Japonsko|Indie|Čína|Brazílie)\b'
 def foreign_market(text):
+    # Escort Mexico is a European model badge, not a country restriction.
+    text=re.sub(r'\b1[.,]6\s+Mexico\b','1.6 performance edition',text,flags=re.I)
     # An explicit exclusion of that market does not make a European row foreign.
     text=re.sub(r'(?:not (?:offered |sold |available )?in|except|excluding)\s+'+NON_EUROPE,'',text,flags=re.I)
     return bool(re.search(NON_EUROPE,text,re.I))

@@ -61,6 +61,7 @@ export function normalizeEngineRows(rows,presentation=true){
  return out;
 }
 export function nonEuropeanMarket(text){
+ text=text.replace(/\b1[.,]6\s+Mexico\b/ig,'1.6 performance edition'); // European Escort badge
  const region='\\b(?:Thailand|China|Chinese|Japan|Japanese.market|India|Indian.market|Indonesia|Malaysia|Taiwan|Brazil|Argentina|Mexico|Pakistan|Iran|Australia|New.Zealand|South.Africa|North.America|USA|US|United.States|Canada|US.spec|Nordamerika|Südamerika|Australien|Indien|Neuseeland|Kanada|Südafrika|Japonsko|Indie|Čína|Brazílie)\\b';
  return new RegExp(region,'i').test(text.replace(new RegExp('(?:not (?:offered |sold |available )?in|except|excluding)\\s+'+region,'ig'),''));
 }

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {shortEngineLabel,compactEngineRows,explicitlyForeignEngine} from './short-engine-labels.mjs';
+const e={variant:'2.9 L 90° 24v twin-turbocharged V6 AT8 "690T"',fuel:'petrol',displacementLitresNominal:2.9,powerKwMin:375,powerKwMax:375,availablePowerKw:[375],sources:['https://example.test/a']};
+assert.equal(shortEngineLabel(e),'2.9 V6 Bi-Turbo');
+assert.equal(shortEngineLabel({...e,variant:'2.0 L turbocharged I4 GME MultiAir AT8 Q4'}),'2.0 Turbo Q4');
+assert.equal(shortEngineLabel({...e,variant:'M102.922'}),'M102.922');
+const rows=compactEngineRows([e,{...e,variant:e.variant.replace('AT8','MT6'),sources:['https://example.test/b']}]);
+assert.equal(rows.length,1);assert.equal(rows[0].powerKwMin,375);assert.deepEqual(rows[0].sources,['https://example.test/a','https://example.test/b']);assert(rows[0].noteCs.includes('AT8')&&rows[0].noteCs.includes('MT6'));
+assert.equal(compactEngineRows([{...e,variant:'1.6-litre VTi 16v (Latin American C3 Picasso + C3 Aircross)'}]).length,0);
+assert.deepEqual(compactEngineRows(rows),rows);
+assert.equal(explicitlyForeignEngine({...e,variant:'1.6 Mexico'}),false);
+assert.equal(explicitlyForeignEngine({...e,variant:'1.6 (Mexico)'}),true);
+console.log('PASS: 40-character labels, original annotation retention, unchanged power, source-preserving duplicate merge, Latin-American exclusion, engine-code preservation and idempotency');

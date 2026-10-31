@@ -8,6 +8,8 @@ assert r.short_name('E 200 E 200 T E 200 Coupé')=='E 200'
 assert r.short_name('200 E 200 TE')=='200 E'
 assert r.short_name('518.1')=='518'
 assert r.short_name('M102.922')=='M102.922'
+assert not r.t.foreign_market('1.6 Mexico')
+assert r.t.foreign_market('1.6 (Mexico)')
 table=r.t.lxml.html.fromstring('''<table><tr><th>Modell</th><th>518</th><th>524d</th><th>535is</th></tr>
 <tr><th>Ausführung</th><td>DE</td><td>DE</td><td>US</td></tr>
 <tr><th>Motortyp</th><td>BMW M10</td><td>BMW M21</td><td>BMW M30</td></tr>

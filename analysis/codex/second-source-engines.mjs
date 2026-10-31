@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual as equal} from 'node:util';
 import {normalizeVariant,powerValues,evidenceProblem,rejectEngine,balancedBrackets} from './engine-throughput-policy.mjs';
+import {compactEngineRows} from './short-engine-labels.mjs';
 const root='analysis/codex/second-source-engines',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n'),hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const batchArg=process.argv.indexOf('--batch'),batchNumber=batchArg<0?1:Number(process.argv[batchArg+1]);assert(Number.isInteger(batchNumber)&&batchNumber>0);
 const candidates=process.argv.includes('--apply')?read(root+`/staged/candidates-${batchNumber}.json`):(()=>{const b=read(root+`/batch-${batchNumber}.json`);return {baselineRevision:b.baselineRevision,complete:true,generations:b.results};})(),baseline=candidates.baselineRevision;
@@ -30,8 +31,9 @@ if(process.argv.includes('--apply')){
  for(const r of candidates.generations){
   const {p,card}=locations.get(`${r.make}/${r.line}`),g=card.generations[r.generationIndex],beforeHash=hash(g),added=[],excluded=[];
   assert(!(g.engines??[]).length,'Queued generation acquired engines concurrently');
-  for(const e of r.engines){
-   const why=rejectEngine(r.make,r.line,e)||problem(g,r.generationIndex,e)||(r.make==='mercedes-benz'&&/^[A-Z]{1,3}$/.test(e.variant)?'Class header instead of engine badge':null);
+  for(const original of r.engines){
+   const e=compactEngineRows([original])[0];if(!e){excluded.push({variant:original.variant,reason:'Explicit non-European market/header row'});continue;}
+   const why=rejectEngine(r.make,r.line,e)||problem(g,r.generationIndex,e)||(e.variant.length>40?'Name exceeds 40 characters':null)||(r.make==='mercedes-benz'&&/^[A-Z]{1,3}$/.test(e.variant)?'Class header instead of engine badge':null);
    if(why){excluded.push({variant:e.variant,reason:why});continue;}
    if(covered(g.engines??[],e))continue;
    g.engines=[...(g.engines??[]),e];added.push(e);

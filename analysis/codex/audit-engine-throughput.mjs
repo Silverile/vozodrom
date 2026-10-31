@@ -8,7 +8,7 @@ for(const [make,lines]of Object.entries(cards))for(const [line,card]of Object.en
  for(const [i,g]of card.generations.entries()){
   const seen=new Set();
   for(const e of g.engines){
-   engineRows++;assert.equal(typeof e.variant,'string',`Missing public name ${make}/${line}/${i}`);assert(e.variant.trim(),`Empty public name ${make}/${line}/${i}`);assert.equal(normalizeVariant(e.variant),e.variant,`Malformed public name ${make}/${line}/${i}`);assert(balancedBrackets(e.variant),`Unbalanced brackets ${make}/${line}/${i}: ${e.variant}`);
+   engineRows++;assert.equal(typeof e.variant,'string',`Missing public name ${make}/${line}/${i}`);assert(e.variant.trim(),`Empty public name ${make}/${line}/${i}`);assert(e.variant.length<=40,`Public engine name exceeds 40 characters ${make}/${line}/${i}: ${e.variant}`);assert.equal(normalizeVariant(e.variant),e.variant,`Malformed public name ${make}/${line}/${i}`);assert(balancedBrackets(e.variant),`Unbalanced brackets ${make}/${line}/${i}: ${e.variant}`);
    for(const kw of powerValues(e))if(e.variant){const key=`${e.variant.toLowerCase()}|${kw}`;assert(!seen.has(key),`Duplicate public name/power ${make}/${line}/${i}/${key}`);seen.add(key);}
    if(e.sourceScope?.generationEvidence)assert.equal(evidenceProblem(g,i,e),null,`Invalid import evidence ${make}/${line}/${i}`);
   }
