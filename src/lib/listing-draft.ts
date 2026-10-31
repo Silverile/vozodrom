@@ -1,3 +1,4 @@
+import GENERATION_ALIASES from "@/data/catalog/generation-id-aliases.json";
 import { REGIONS } from "./catalog";
 import { cleanEquipment } from "./equipment";
 import { getCity } from "./geo";
@@ -68,6 +69,19 @@ export function cleanDraft(v: Draft): Draft {
 
 /** Stable id of a line's generation: its code, or its years when the catalogue has no code. */
 export const generationId = (g: { code: string | null; from: number | null; to: number | null }) => g.code ?? `${g.from ?? "?"}–${g.to ?? "?"}`;
+
+/**
+ * The line's generation a saved listing names. Year ids change when the catalogue re-dates or merges
+ * a generation, so old ids go through the catalogue's aliases first; a code the maker reused (W463)
+ * is resolved by the listing's year.
+ */
+export function generationOf(draft: Pick<Draft, "brand" | "generation" | "year">, line: ModelLine) {
+  if (!draft.generation) return undefined;
+  const alias = GENERATION_ALIASES.aliases.find((a) => a.makeSlug === draft.brand && a.lineSlug === line.slug && a.from === draft.generation);
+  const id = alias?.to ?? draft.generation;
+  const found = line.generations.filter((g) => generationId(g) === id);
+  return found.length > 1 ? found.filter((g) => coversYear(g, draft.year)).pop() ?? found[0] : found[0];
+}
 
 /** The draft's model line: by slug, or by name for listings saved before slugs were stored. */
 export function lineOf(draft: Pick<Draft, "brand" | "model">): ModelLine | undefined {

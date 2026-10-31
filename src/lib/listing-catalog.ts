@@ -38,15 +38,23 @@ const FUEL: Record<string, ListingFuel> = {
 /**
  * The catalogue card's generation for a generation of the model list. Their codes differ for some
  * lines ("GB/IB" in the list, "GB" on the card), so codes are compared part by part, then years.
+ * A code can be reused by the maker (Mercedes W463 in 1990 and 2018): then the years decide, and
+ * the listing's year when given.
  */
 export function cardGeneration<T extends { code: string | null; from: number | null; to: number | null }>(
   g: { code: string | null; from: number | null; to: number | null },
   cards: T[],
+  year?: number,
 ): T | undefined {
   const parts = (code: string | null) => (code ?? "").split(/[\s/,]+/).filter(Boolean).map((p) => p.toLowerCase());
   const mine = parts(g.code);
+  const sameCode = cards.filter((c) => c.code !== null && c.code === g.code);
   return (
-    cards.find((c) => c.code !== null && c.code === g.code) ??
+    (sameCode.length > 1
+      ? sameCode.find((c) => g.from !== null && c.from === g.from) ??
+        (year !== undefined ? sameCode.filter((c) => coversYear(c, year)).pop() : undefined)
+      : undefined) ??
+    sameCode[0] ??
     cards.find((c) => parts(c.code).some((p) => mine.includes(p))) ??
     (g.from !== null ? cards.find((c) => c.from === g.from && (c.to === g.to || g.to === null || c.to === null)) : undefined) ??
     (g.to !== null ? cards.find((c) => c.code === null && c.to === g.to && c.from !== null) : undefined)

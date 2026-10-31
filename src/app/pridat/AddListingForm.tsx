@@ -123,7 +123,7 @@ export function AddListingForm() {
   // The catalogue card's generation: matched to the chosen one, else the one built in the year
   // (some generations of the model list have no years, the cards usually do).
   const cardGen =
-    (chosenGeneration && cardGeneration(chosenGeneration, cardGenerations)) ??
+    (chosenGeneration && cardGeneration(chosenGeneration, cardGenerations, draft.year || undefined)) ??
     (draft.year ? cardGenerations.filter((g) => g.from !== null && coversYear(g, draft.year)).pop() : undefined);
   const bodies = (cardGen?.bodies.length ? cardGen.bodies : line?.bodyTypes.length ? line.bodyTypes : Object.keys(BODY_KEYS)).filter((b) => b in BODY_KEYS);
   const hintWords = engineHint.toLowerCase().split(/\s+/).filter(Boolean);
