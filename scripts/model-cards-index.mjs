@@ -55,6 +55,7 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         trunkL: g.trunkL ?? null,
         markets: g.markets ?? [],
         trims: g.trims ?? [],
+        ...(g.equipmentLines?.length ? { equipmentLines: g.equipmentLines } : {}),
         photo: photoOf(g.photo),
         sources: g.sources ?? [],
       })),

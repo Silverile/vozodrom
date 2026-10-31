@@ -35,7 +35,10 @@ for(const c of cards) for(const g of c.generations){
   assert(g.from==null||g.to==null||g.from<=g.to);
   assert(g.sources.length);
 }
-for(const slug of ['80','100','200','r8','a7']) assert.equal(review[`audi--${slug}`],'pending_review');
+for(const slug of ['80','100','200','r8','a7']) {
+  assert.equal(review[`audi--${slug}--0`],'pending_review');
+  assert.equal(review[`audi--${slug}`],undefined);
+}
 // Execute the actual TypeScript resolver against the actual generated browser index.
 const exports={};
 const source=stripTypeScriptTypes(fs.readFileSync('src/lib/makes.ts','utf8'))

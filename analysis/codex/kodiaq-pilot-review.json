@@ -1,0 +1,69 @@
+{
+  "asOf": "2026-10-31",
+  "scope": "CZ and European manufacturer-source snapshots; not a worldwide/year-by-year completeness certification",
+  "generations": 2,
+  "facelifts": 1,
+  "engineFamilies": [
+    4,
+    4
+  ],
+  "technicalVersionRows": [
+    24,
+    9
+  ],
+  "equipmentLineRows": [
+    14,
+    6
+  ],
+  "snapshotCounts": {
+    "2017-05-29": 9,
+    "2019-03": 7,
+    "2018-10-01": 1,
+    "2021-06-28": 7,
+    "2024-10-24": 6,
+    "2026-10-26": 2,
+    "2026-10-22": 1
+  },
+  "sources": {
+    "launch": "https://cdn.skoda-storyboard.com/2016/08/TD-KODIAQ-en.pdf",
+    "mid": "https://cdn.skoda-storyboard.com/2019/03/Skoda_Kodiaq_technickeudaje.pdf",
+    "rs1": "https://cdn.skoda-storyboard.com/2018/10/TD-KODIAQ-RS-diesel-cz.pdf",
+    "facelift": "https://cdn.skoda-storyboard.com/2021/06/TD_KODIAQ_en.pdf",
+    "rsFl": "https://cdn.skoda-storyboard.com/2021/06/TD_KODIAQ_RS_en.pdf",
+    "second": "https://cdn.skoda-storyboard.com/2024/11/TD-Kodiaq-en_83435dd3.pdf",
+    "newCZ": "https://autos.skoda-auto.cz/novinky/nabidku-modelu-skoda-kodiaq-rozsiruji-nove-vybavove-verze-top-selection,-laurin-klement-a-plug-in",
+    "newDE": "https://www.skoda-media.de/press/detail/4692/",
+    "newGlobal": "https://www.skoda-storyboard.com/en/models/kodiaq/kodiaq-celebrates-10-years-with-laurin-klement-version-and-more-powerful-plug-in-hybrid/",
+    "firstCZ": "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/nova-skoda-kodiaq-prodej-v-ceske-republice-zahajen/",
+    "sportline": "https://www.skoda-storyboard.com/en/press-releases/skoda-kodiaq-sportline-sporty-dynamic-appearance-want-stand/",
+    "scout": "https://www.skoda-storyboard.com/cs/tiskove-zpravy-archiv/skoda-kodiaq-scout-robustni-vzhled-podtrhuje-jizdni-vlastnosti-v-terenu/",
+    "lk": "https://www.skoda-storyboard.com/en/press-releases/skoda-kodiaq-lk-top-version-large-suv-celebrates-world-premiere-geneva/",
+    "flLines": "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-kodiaq-dynamic-press-launch-press-kit/skoda-kodiaq-the-successful-suv-gets-an-update/",
+    "gen2Lines": "https://www.skoda-storyboard.com/en/press-kits/skoda-kodiaq-press-kit/exterior-powerful-appearance-and-first-elements-of-the-new-modern-solid-design-language/",
+    "gen2RS": "https://www.skoda-storyboard.com/en/press-kits/skoda-kodiaq-press-kit/kodiaq-rs-sports-variant-offers-even-more-dynamic-performance-in-its-second-generation/",
+    "topDiesel": "https://www.skoda-storyboard.com/de/pressemitteilungen-archive/modelljahr-2021-bringt-zahlreiche-neuerungen-fuer-die-skoda-modellpalette/"
+  },
+  "remaining": [
+    "Exact production start/end months for each technical combination remain unknown; availabilityEvidence supplies dated observations instead.",
+    "Seven-seat, equipment-dependent mass/performance combinations are not exhaustively expanded.",
+    "2026 mHEV 118 kW: DE confirmed, Czech availability/precise gearbox and drive not independently confirmed.",
+    "200 kW PHEV: CZ L&K confirmed; DE RS confirmed separately. New gearbox gear count and exact displacement not copied from the older 150 kW version.",
+    "Regional special editions and engines outside Europe require a separate rollout; Kodiaq GT remains its existing separate model identity.",
+    "Web PDF screenshot calls returned no viewable image payload and local Poppler/Python were unavailable; column mappings were checked against extracted tables and manufacturer prose."
+  ],
+  "equipmentSchema": {
+    "field": "generations[].equipmentLines[]",
+    "fields": [
+      "id",
+      "name",
+      "kind",
+      "from",
+      "to",
+      "availabilityEvidence[{date,stage,markets,sources}]",
+      "sources",
+      "noteCs"
+    ],
+    "dateRule": "from/to are optional confirmed production endpoints; absence means unknown. availabilityEvidence is a source-dated offer/announcement, never a continuous interval.",
+    "rsRule": "RS is a performance-line linked via trims[].equipmentLineIds to documented technical configurations, not a generation."
+  }
+}

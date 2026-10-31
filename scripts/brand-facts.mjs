@@ -29,7 +29,8 @@ for (const [slug, p] of Object.entries(periods)) {
   for (const kind of ["cars", "motorcycles"]) {
     if (p[`${kind}From`] > p[`${kind}To`]) throw new Error(`Reversed ${slug}.${kind} period`);
   }
-  if (!periodFields.slice(0, 4).some((key) => key in p) || !p.periodSources?.length || !p.periodSources.every((url) => /^https:\/\//.test(url)) || !/^\d{4}-\d{2}-\d{2}$/.test(p.periodVerifiedAt)) throw new Error(`Missing production provenance: ${slug}`);
+  // A sourced note-only record documents unresolved bounds; it must not invent years.
+  if ((!periodFields.slice(0, 4).some((key) => key in p) && !p.periodNoteCs?.trim()) || !p.periodSources?.length || !p.periodSources.every((url) => /^https:\/\//.test(url)) || !/^\d{4}-\d{2}-\d{2}$/.test(p.periodVerifiedAt)) throw new Error(`Missing production provenance: ${slug}`);
 }
 function withPeriods(facts) {
   for (const [slug, factsForMake] of Object.entries(facts)) {
@@ -50,7 +51,7 @@ if (process.argv.includes("--periods-only") || process.argv.includes("--check-pe
   } else writeFileSync(output, expected);
   const scope = makes.filter((m) => m.defunct && m.sections.includes("auto"));
   const complete = scope.filter((m) => periods[m.slug]?.carsFrom != null && periods[m.slug]?.carsTo != null).length;
-  const partial = scope.filter((m) => periods[m.slug] && !(periods[m.slug].carsFrom != null && periods[m.slug].carsTo != null)).length;
+  const partial = scope.filter((m) => (periods[m.slug]?.carsFrom != null || periods[m.slug]?.carsTo != null) && !(periods[m.slug].carsFrom != null && periods[m.slug].carsTo != null)).length;
   console.log(`Defunct auto production periods: ${complete} complete, ${partial} partial, ${scope.length - complete - partial} unknown / ${scope.length}; ${Object.keys(periods).length} makes with reviewed bounds overall`);
   process.exit(0);
 }
