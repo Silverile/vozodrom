@@ -1,0 +1,31 @@
+{
+  "file": "scripts/stats/match.py",
+  "line": 164,
+  "input": {
+    "make": "mercedes-benz",
+    "model": "380",
+    "year": 1935
+  },
+  "aliases": [
+    {
+      "line": "mannheim",
+      "productionBounds": [
+        null,
+        null
+      ]
+    },
+    {
+      "line": "380-500k-540k",
+      "productionBounds": [
+        null,
+        null
+      ]
+    }
+  ],
+  "verifiedResults": {
+    "PYTHONHASHSEED_0": "mannheim",
+    "PYTHONHASHSEED_8": "380-500k-540k"
+  },
+  "reason": "Equal sort keys after set(same) leave ambiguous line choice dependent on hash iteration order.",
+  "action": "Separate matcher repair: do not invent dates or silently choose an undated family. Recompute historic Mercedes lines afterward."
+}

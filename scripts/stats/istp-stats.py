@@ -21,11 +21,13 @@ from match import Matcher
 KM_BIN = 10_000
 DROP = 2_000
 matcher = None
+selected_makes = None
 
 
-def init():
-    global matcher
+def init(makes=None):
+    global matcher, selected_makes
     matcher = Matcher()
+    selected_makes = set(makes) if makes else None
 
 
 def local(tag):
@@ -67,7 +69,7 @@ def parse_day(path):
             if rec.get("DruhProhlidky") != "Pravidelná":
                 continue
             make = matcher.make(rec.get("Znacka", ""))
-            if not make:
+            if not make or (selected_makes and make not in selected_makes):
                 continue
             reg = rec.get("DatumPrvniRegistrace", "")[:4]
             year = int(reg) if reg.isdigit() else None
@@ -131,7 +133,10 @@ if __name__ == "__main__":
     parser.add_argument("--out-dir")
     parser.add_argument("--workers", type=int, default=min(30, os.cpu_count() or 4))
     parser.add_argument("--skip-unmatched-output", action="store_true")
+    parser.add_argument("--makes", nargs="+", help="Recompute selected makes only; never publish the partial index")
     args = parser.parse_args()
+    if args.makes and not args.out_dir:
+        parser.error("--makes requires an explicit --out-dir for partial aggregates")
     data = args.data
     days = sorted(os.listdir(os.path.join(data, "istp", "days")))
     days = [os.path.join(data, "istp", "days", d) for d in days if d.endswith(".xml.gz")]
@@ -140,7 +145,7 @@ if __name__ == "__main__":
     if not days:
         raise SystemExit("No inspection input files")
     total, last, start, unmatched = {}, {}, time.time(), defaultdict(int)  # last: vin hash -> [key, last km, readings, dropped]
-    with Pool(args.workers, initializer=init) as pool:
+    with Pool(args.workers, initializer=init, initargs=(args.makes,)) as pool:
         for i, (part, readings, um) in enumerate(pool.imap(parse_day, days, chunksize=1)):
             merge(total, part)
             for k, n in um.items():

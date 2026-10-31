@@ -51,7 +51,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data")
     parser.add_argument("--out-dir")
+    parser.add_argument("--makes", nargs="+", help="Recompute selected makes only")
     args = parser.parse_args()
+    if args.makes and not args.out_dir:
+        parser.error("--makes requires an explicit --out-dir for partial aggregates")
     data = args.data
     m = Matcher()
     start = time.time()
@@ -69,7 +72,7 @@ if __name__ == "__main__":
             if row["Status"] != "PROVOZOVANÉ":
                 continue
             make = m.make(row["Tovární značka"])
-            if not make:
+            if not make or (args.makes and make not in args.makes):
                 continue
             # newer records often leave "Rok výroby" empty; the first registration is the next best year
             y = row["Rok výroby"]

@@ -788,18 +788,7 @@
       "cardPresent": true,
       "generationCount": 10,
       "announcedOnlyGenerations": [],
-      "generationsWithoutEngines": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "generationsWithoutEngines": [],
       "generationsWithEnginePowerGaps": [],
       "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled."
     },
@@ -72362,5 +72351,18 @@
     "remainingWave1Lines": 256,
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
-  }
+  },
+  "activePhase": "structure-pass",
+  "structurePasses": [
+    {
+      "report": "analysis/codex/structure-pass/batch-1.json",
+      "validation": "analysis/codex/structure-pass/validation.json",
+      "selectedLines": 50,
+      "changedLines": 8,
+      "dateEdits": 13,
+      "removedPseudoGenerations": 4,
+      "engineRowsAdded": 86,
+      "remainingSelectedLines": 42
+    }
+  ]
 }
