@@ -1,0 +1,4614 @@
+{
+  "schemaVersion": 1,
+  "batch": 4,
+  "wave": 1,
+  "baselineRevision": "7fdef7a6c09084326221d2b139a33c0fbb43e74c",
+  "countsBefore": {
+    "lines": 4809,
+    "cards": 4648,
+    "linesWithoutCard": 161,
+    "generations": 6735,
+    "generationsWithEngines": 1896,
+    "generationsWithEngineRowsWithoutPower": 607,
+    "generationsWithTechnicalVersions": 2112,
+    "generationsWithEquipmentLines": 32,
+    "generationsWithFacelifts": 804
+  },
+  "lines": [
+    {
+      "make": "kia",
+      "line": "rio",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "0109646f393869013bd3f27885f6f7fe73a1a715a838090a0b520a70310d30bf",
+      "afterHash": "0109646f393869013bd3f27885f6f7fe73a1a715a838090a0b520a70310d30bf",
+      "sourceFile": "src/data/catalog/model-cards/kia.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Kia_Rio",
+          "canonical": "https://en.wikipedia.org/wiki/Kia_Rio",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "ford",
+      "line": "escort",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "08ddaaa7b89e20e0dfa030ce7fb50da44b777e60624f25fc2ff1aa9f1774d29d",
+      "afterHash": "08ddaaa7b89e20e0dfa030ce7fb50da44b777e60624f25fc2ff1aa9f1774d29d",
+      "sourceFile": "src/data/model-cards/ford.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381752010",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Escort_(Europe)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "fiat",
+      "line": "panda",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "d122de84a524ac4e6e22e62a6f995ae840343e33692fafe14e8729b80f4e63a7",
+      "afterHash": "98376029d4eb813659d94989ff4df798371ff1c1896b1a0da44d853c415236e7",
+      "sourceFile": "src/data/catalog/model-cards/fiat.json",
+      "enginesAdded": 1,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "petrol-lpg",
+          "cc": 1242,
+          "litres": 1.2,
+          "kw": 44,
+          "variant": "1.2 Fire 8V GPL (LPG)",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Fiat_Panda"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fiat_Panda",
+          "canonical": "https://en.wikipedia.org/wiki/Fiat_Panda",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "peugeot",
+      "line": "208",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "6c4a5f1091386ed1b36aa5bba690b21e8db1ef4dd2056589c48ab3315a9549d0",
+      "afterHash": "e5362ede3381caf902ca7c6d868dcbba269c72a3a2ba4900b5fee9e0b4562893",
+      "sourceFile": "src/data/catalog/model-cards/peugeot.json",
+      "enginesAdded": 19,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1,
+          "kw": 50,
+          "variant": "1.0 VTi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 60,
+          "variant": "1.2 VTi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.4,
+          "kw": 70,
+          "variant": "1.4 VTi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 88,
+          "variant": "1.6 VTi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 114,
+          "variant": "1.6 THP",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.4,
+          "kw": 50,
+          "variant": "1.4 HDi/e-HDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 68,
+          "variant": "1.6 e-HDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 50,
+          "variant": "1.2 Puretech",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 61,
+          "variant": "1.2 Puretech",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 81,
+          "variant": "1.2 Puretech",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 153,
+          "variant": "1.6 THP",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.5,
+          "kw": 75,
+          "variant": "1.5 BlueHDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 55,
+          "variant": "1.6 BlueHDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 74,
+          "variant": "1.6 BlueHDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 88,
+          "variant": "1.6 BlueHDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 55,
+          "variant": "1.2 PureTech 75 S&S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 74,
+          "variant": "1.2 PureTech 100 S&S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 96,
+          "variant": "1.2 PureTech 130 EAT8 S&S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.5,
+          "kw": 75,
+          "variant": "1.5 BlueHDi 100",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381713353"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381713353",
+          "canonical": "https://en.wikipedia.org/wiki/Peugeot_208",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?title=Peugeot_208&oldid=1381713353",
+          "canonical": "https://en.wikipedia.org/wiki/Peugeot_208",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mazda",
+      "line": "cx-5",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "24948d97d6e72ffa5590d437c5787cef53179f38f86801d364ae1f1a05c3ce1d",
+      "afterHash": "24948d97d6e72ffa5590d437c5787cef53179f38f86801d364ae1f1a05c3ce1d",
+      "sourceFile": "src/data/catalog/model-cards/mazda.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/wiki/Mazda_CX-5",
+          "canonical": "https://de.wikipedia.org/wiki/Mazda_CX-5",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1379166699",
+          "canonical": "https://en.wikipedia.org/wiki/Mazda_CX-5",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mazda_CX-5",
+          "canonical": "https://en.wikipedia.org/wiki/Mazda_CX-5",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-v",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "6d5af37498b0de8b64a5b717bf94385a5acc5fa880c0e7bcc8a6402de4fb0230",
+      "afterHash": "520acffa309285aa6389a50e1e1d05fec1fcb0a67cc3d3f0d6ac61fdc8e97b71",
+      "sourceFile": "src/data/catalog/model-cards/mercedes-benz.json",
+      "enginesAdded": 2,
+      "added": [
+        {
+          "generation": 2,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 150,
+          "variant": "EQV 300",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 85,
+          "variant": "eVito",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378299744"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        2
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378299744",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_Vito",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "hyundai",
+      "line": "i10",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "6ba46450100c20a05eebfc20adc424ff9e51013e64c36ea856c28df2f9e38570",
+      "afterHash": "9f689de098a555e1a0c00d82140f5f51ed7109ffd5c7617c16cc146a49f6aebf",
+      "sourceFile": "src/data/model-cards/hyundai.json",
+      "enginesAdded": 4,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 61,
+          "variant": "1.2L Kappa MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374782192"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.1,
+          "kw": 52,
+          "variant": "1.1L U2 CRDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374782192"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1,
+          "kw": 49,
+          "variant": "1.0L Kappa II MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374782192"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.2,
+          "kw": 55,
+          "variant": "1.2L U II CRDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374782192"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        1,
+        2
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1374782192",
+          "canonical": "https://en.wikipedia.org/wiki/Hyundai_i10",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "skoda",
+      "line": "1203",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "f2aa2df1b32203d1c60e9f234c586443acbbd682662fa811865a40c7202d3a55",
+      "afterHash": "f2aa2df1b32203d1c60e9f234c586443acbbd682662fa811865a40c7202d3a55",
+      "sourceFile": "src/data/catalog/model-cards/skoda.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1312792836",
+          "canonical": "https://en.wikipedia.org/wiki/%C5%A0koda_1203",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "peugeot",
+      "line": "3008",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "5e5efe40f478dd70faebe0b67469570dd847ca17103ab14ad11251e14c4b6090",
+      "afterHash": "b64935417fe22507b854dd8374ff2c6ffa115559cf4e6163ebe54d01c84736a4",
+      "sourceFile": "src/data/catalog/model-cards/peugeot.json",
+      "enginesAdded": 6,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1199,
+          "litres": 1.2,
+          "kw": 96,
+          "variant": "1.2 e-THP 2015–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 88,
+          "variant": "1.6 VTi 2009–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 115,
+          "variant": "1.6 THP 2009–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 81,
+          "variant": "HDi 110 2009–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 110,
+          "variant": "HDi 150 2009–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 120,
+          "variant": "HDi 163 2009–2016",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378039811"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378039811",
+          "canonical": "https://en.wikipedia.org/wiki/Peugeot_3008",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?title=Peugeot_3008&oldid=1378039811",
+          "canonical": "https://en.wikipedia.org/wiki/Peugeot_3008",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "toyota",
+      "line": "proace-city",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "f89982d452ccb52a170b760fd406aabd13af620ead74f97a637b3d0c42feb322",
+      "afterHash": "656f9108f275c2838b1a341a7378e9f98e6c3304ef9eb13bfbe1aeb8aba34127",
+      "sourceFile": "src/data/model-cards/toyota.json",
+      "enginesAdded": 1,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1499,
+          "litres": 1.5,
+          "kw": 75,
+          "variant": "1.5 Diesel",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=256073910"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=256073910",
+          "canonical": "https://de.wikipedia.org/wiki/Toyota_Proace_City",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381608041",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_ProAce_City",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_Berlingo#Third_generation_(K9;_2018)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "audi",
+      "line": "q7",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "84744ff7fcde89388df4d91cc1fc5b3238ca013a62d6cd840cfd6bc207804557",
+      "afterHash": "819c2fed3700e76378dbe0a5ab673f870c4687c61f27b7c65eb724def787e342",
+      "sourceFile": "src/data/catalog/model-cards/audi.json",
+      "enginesAdded": 17,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3.6,
+          "kw": 206,
+          "variant": "3.6 FSI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 4.2,
+          "kw": 257,
+          "variant": "4.2 FSI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 171,
+          "variant": "3.0 TDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 177,
+          "variant": "3.0 TDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 4.2,
+          "kw": 240,
+          "variant": "4.2 TDi BTR",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 5.9,
+          "kw": 368,
+          "variant": "5.9 TDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3,
+          "kw": 200,
+          "variant": "3.0 TFSI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3,
+          "kw": 245,
+          "variant": "3.0 TFSI quattro S-Line",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 4.2,
+          "kw": 250,
+          "variant": "4.2 TDI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 6,
+          "kw": 368,
+          "variant": "6.0 TDI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 185,
+          "variant": "2.0 TFSI (45 TFSI)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3,
+          "kw": 245,
+          "variant": "3.0 TFSI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3,
+          "kw": 250,
+          "variant": "3.0 TFSI (55 TFSI)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 270,
+          "variant": "2.0 TFSI e-tron",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 160,
+          "variant": "3.0 TDI ultra",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 200,
+          "variant": "3.0 TDI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 285,
+          "variant": "3.0 TDI e-tron",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381435749"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381435749",
+          "canonical": "https://en.wikipedia.org/wiki/Audi_Q7",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "vivaro",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "cd8ec0e82c2b3359c3c81f5c2a5ec54a98a27abe1372e6235738635089b6daf3",
+      "afterHash": "5494c26ac3e39798f66f9550083b84b7ba82106abe077fa1c66c53509f626a91",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 21,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 88,
+          "variant": "2.0",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.9,
+          "kw": 59,
+          "variant": "1.9 dCi",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 1.9,
+          "kw": 74,
+          "variant": "1.9 dCi",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 66,
+          "variant": "2.0 dCi",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 85,
+          "variant": "2.0 dCi",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2.5,
+          "kw": 110,
+          "variant": "2.5 dCi",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_A"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 i.e.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 66,
+          "variant": "90 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 88,
+          "variant": "120 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 96,
+          "variant": "130 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 100,
+          "variant": "140 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 120,
+          "variant": "165 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 67,
+          "variant": "95 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 86,
+          "variant": "115 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 89,
+          "variant": "120 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 112,
+          "variant": "150 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 132,
+          "variant": "180 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 100,
+          "variant": "Electric",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1499,
+          "litres": 1.5,
+          "kw": 88,
+          "variant": "1.5 BlueHDI/ Multijet 120",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2184,
+          "litres": 2.2,
+          "kw": 110,
+          "variant": "2.2 BlueHDI/ Multijet 150",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2184,
+          "litres": 2.2,
+          "kw": 132,
+          "variant": "2.2 BlueHDI/ Multijet 180",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Opel_Vivaro_C"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1368027302",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vivaro",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vivaro_A",
+          "canonical": "https://en.wikipedia.org/wiki/Renault_Trafic#Opel_Vivaro_A",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vivaro_B",
+          "canonical": "https://en.wikipedia.org/wiki/Renault_Trafic#X82",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vivaro_C",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_Jumpy#Mk3",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vivaro",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vivaro",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vivaro_A",
+          "canonical": "https://en.wikipedia.org/wiki/Renault_Trafic#Opel_Vivaro_A",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "hyundai",
+      "line": "santa-fe",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "172bbc4d91a9eb33e63aaaee15c9bd958feb39b5ae16883ba96c67888e1ecc4b",
+      "afterHash": "fbfcb3951c71ddf8449dfff446f46d0edb8a0a006cfee8fcfb8e4eb08a241bf5",
+      "sourceFile": "src/data/model-cards/hyundai.json",
+      "enginesAdded": 6,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2.4,
+          "kw": 127,
+          "variant": "Theta II 2.4 MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2.4,
+          "kw": 138,
+          "variant": "Theta II 2.4 GDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3.5,
+          "kw": 206,
+          "variant": "Lambda II 3.5 MPI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 197,
+          "variant": "Theta II 2.0 T-GDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2.4,
+          "kw": 129,
+          "variant": "Theta II 2.4 MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3.3,
+          "kw": 199,
+          "variant": "Lambda II 3.3 MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381703072"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        1,
+        2
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381703072",
+          "canonical": "https://en.wikipedia.org/wiki/Hyundai_Santa_Fe",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "vectra",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "11573c33c67417e84a89b1b265907ba2dd829ccf9c7492a2d42c052606d5ec36",
+      "afterHash": "11573c33c67417e84a89b1b265907ba2dd829ccf9c7492a2d42c052606d5ec36",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380530160",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vectra",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vectra_B",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vectra#Vectra_B_.281995.E2.80.932002.29",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vectra_C",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vectra#Vectra_C_(2002–2008)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Vectra",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Vectra",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "toyota",
+      "line": "c-hr",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "9820180429082d2f8d6853253837722c304400e946295cfd5724457b1791e325",
+      "afterHash": "9820180429082d2f8d6853253837722c304400e946295cfd5724457b1791e325",
+      "sourceFile": "src/data/model-cards/toyota.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380473313",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_C-HR",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "bmw",
+      "line": "rada-1",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "3724b68efd1f706613b21b63dca3b28bc9837d5b06a49d12ac30a900d84d52d0",
+      "afterHash": "3724b68efd1f706613b21b63dca3b28bc9837d5b06a49d12ac30a900d84d52d0",
+      "sourceFile": "src/data/catalog/model-cards/bmw.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378024554",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_1_Series",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/BMW_1_Series_(F70)",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_1_Series_(F70)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "bmw",
+      "line": "x1",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "90d984af38e107ffbb670fbf7168ca788cee084b7f76b23938bd60c9ca6a5fa1",
+      "afterHash": "58a31b4ed1cd25e71231e8d1ad2854d57566e0f78022929fd8f1551e60fa3aa4",
+      "sourceFile": "src/data/catalog/model-cards/bmw.json",
+      "enginesAdded": 2,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 150,
+          "variant": "Battery electric",
+          "sources": [
+            "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 140,
+          "variant": "Battery electric",
+          "sources": [
+            "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378756448",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_X1",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/BMW_X1_(E84)",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_X1_(E84)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/BMW_X1_(F48)",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_X1_(F48)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/BMW_X1_(U11)",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_X1_(U11)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/BMW_X1_(U11)",
+          "canonical": "https://en.wikipedia.org/wiki/BMW_X1_(U11)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "insignia",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "507b017496de7d713c23f709be03b7d14684d5e278cdcc0dd17cef14dc1cdc82",
+      "afterHash": "249a5c5e7c5835025814427a99746b1d34a282f7f057dc5d3f16e3f8ab3a342c",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 28,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1364,
+          "litres": 1.4,
+          "kw": 103,
+          "variant": "1.4 Turbo S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 85,
+          "variant": "1.6 VVT",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 132,
+          "variant": "1.6 Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1796,
+          "litres": 1.8,
+          "kw": 103,
+          "variant": "1.8 VVT",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 162,
+          "variant": "2.0 Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 184,
+          "variant": "2.0 Turbo 4x4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 2792,
+          "litres": 2.8,
+          "kw": 191,
+          "variant": "2.8T 4x4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 2792,
+          "litres": 2.8,
+          "kw": 239,
+          "variant": "2.8T 4x4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 81,
+          "variant": "2.0 CDTI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 96,
+          "variant": "2.0 CDTI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 118,
+          "variant": "2.0 CDTI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 143,
+          "variant": "2.0 CDTI Bi-Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 125,
+          "variant": "1.6 SIDI Turbo S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 88,
+          "variant": "1.6 CDTI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 100,
+          "variant": "1.6 CDTI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 88,
+          "variant": "2.0 CDTI ecoFLEX S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 CDTI ecoFLEX S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 120,
+          "variant": "2.0 CDTI ecoFLEX S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 125,
+          "variant": "2.0 CDTI ecoFLEX S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1490,
+          "litres": 1.5,
+          "kw": 103,
+          "variant": "1.5 EcoTec Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1490,
+          "litres": 1.5,
+          "kw": 121,
+          "variant": "1.5 EcoTec Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 191,
+          "variant": "2.0 EcoTec Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 3564,
+          "litres": 3.6,
+          "kw": 235,
+          "variant": "3.6 SIDI LGX",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1496,
+          "litres": 1.5,
+          "kw": 90,
+          "variant": "1.5 CDTI S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 81,
+          "variant": "1.6 CDTI S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 100,
+          "variant": "1.6 CDTI S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 125,
+          "variant": "2.0 CDTI S/S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1956,
+          "litres": 2,
+          "kw": 154,
+          "variant": "2.0 CDTI BiTurbo S/S 4x4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1381712526"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381712526",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Insignia",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Insignia_B",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Insignia#Z18",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Insignia",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Insignia",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "ford",
+      "line": "tourneo-custom",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "92d45b279066b5b575cdffd756b57168a1e750115d44fb87a3d98fb61267488f",
+      "afterHash": "13f20d323624273b98e39bc67a82bb86aad98c33a3f32cfe48d92f04ead551a3",
+      "sourceFile": "src/data/model-cards/ford.json",
+      "enginesAdded": 1,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2.2,
+          "kw": 92,
+          "variant": "2.2 L Duratorq",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374524642"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1374524642",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Transit_Custom",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "toyota",
+      "line": "avensis",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "4a401c814133ed628501f189f7988c9d0d45bdad11eb847467361a546d8ec449",
+      "afterHash": "4a401c814133ed628501f189f7988c9d0d45bdad11eb847467361a546d8ec449",
+      "sourceFile": "src/data/model-cards/toyota.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1376819525",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Avensis",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "ford",
+      "line": "ranger",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "afa627895780823f4310ccfa701161652c4ccd992c7beb7f4fd5fbaaf22e87bb",
+      "afterHash": "afa627895780823f4310ccfa701161652c4ccd992c7beb7f4fd5fbaaf22e87bb",
+      "sourceFile": "src/data/model-cards/ford.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1375968356",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Ranger_(Americas)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1375383769",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Ranger_(international)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ford_Ranger_(P375)",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)#P375",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ford_Ranger_(P703)",
+          "canonical": "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)#P703",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "citroen",
+      "line": "c5",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "7a61973e8d80d9761a5fcb9fdd932e3b81724bbed1ff51af0ff43e281860e2ad",
+      "afterHash": "1fbbe835937a7c1d6c26db66a3f00cc028b01afbd3f3edc4470bd61274f1ccce",
+      "sourceFile": "src/data/catalog/model-cards/citroen.json",
+      "enginesAdded": 6,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 80,
+          "variant": "1.6 L DV6 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 66,
+          "variant": "2.0 L DW10 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 80,
+          "variant": "2.0 L DW10 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 100,
+          "variant": "2.0 L DW10 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2179,
+          "litres": 2.2,
+          "kw": 98,
+          "variant": "2.2 L DW12 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2179,
+          "litres": 2.2,
+          "kw": 125,
+          "variant": "2.2 L DW12 HDi diesel I4",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1362919000"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1362919000",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_C5",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Citroën_C5_X",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_C5_X",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Citroën_C5_Aircross",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_C5_Aircross",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Citroën_C5_X",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_C5_X",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "citroen",
+      "line": "xsara-picasso",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "6c1b2f0d0e2fa0b89b67a6b55af551fbe365dc61acb20b999f90c9ac2530e42b",
+      "afterHash": "6c1b2f0d0e2fa0b89b67a6b55af551fbe365dc61acb20b999f90c9ac2530e42b",
+      "sourceFile": "src/data/catalog/model-cards/citroen.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1360325117",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_Xsara_Picasso",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "hyundai",
+      "line": "getz",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "a65cce25961191ee1a35aee5acf7c49028f33f2186cb329b9cae33579a283977",
+      "afterHash": "a65cce25961191ee1a35aee5acf7c49028f33f2186cb329b9cae33579a283977",
+      "sourceFile": "src/data/model-cards/hyundai.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378738358",
+          "canonical": "https://en.wikipedia.org/wiki/Hyundai_Getz",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "subaru",
+      "line": "forester",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "7c180d3e8cdbefcc53deda5e6d00416b6a1ed2e57f580505d14f0ae3cf83b68f",
+      "afterHash": "852f2d4808884abda3f3c53fd08df1075b4c34a58c98c90830d1a7c396ffea1c",
+      "sourceFile": "src/data/model-cards/subaru.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1376006554",
+          "canonical": "https://en.wikipedia.org/wiki/Subaru_Forester",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mg",
+      "line": "zs",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "8659ac602eb580fb2d72d8694caaca3907b4a796f57730a13d606b8cb8f0a35d",
+      "afterHash": "8659ac602eb580fb2d72d8694caaca3907b4a796f57730a13d606b8cb8f0a35d",
+      "sourceFile": "src/data/catalog/model-cards/mg.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381047598",
+          "canonical": "https://en.wikipedia.org/wiki/MG_ZS_(crossover)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "volkswagen",
+      "line": "jetta",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "db24214a9dc3ac56d809bf66aaae62fb54507b824467f745ac828564f8d5ccaa",
+      "afterHash": "22af3754d19f57ff6c0dac6f25f52095e5132fe91480c1901ce43589fde61b51",
+      "sourceFile": "src/data/model-cards/volkswagen.json",
+      "enginesAdded": 22,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 53,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 66,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 72,
+          "variant": "1.8 Syncro",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 79,
+          "variant": "1.8 GT",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.8,
+          "kw": 100,
+          "variant": "1.8 GT 16V",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.8,
+          "kw": 74,
+          "variant": "1.8",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.8,
+          "kw": 77,
+          "variant": "1.8",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 81,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=258499701"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 74,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=258499701"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 85,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=258499701"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 96,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=258499701"
+          ]
+        },
+        {
+          "generation": 4,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.4,
+          "kw": 103,
+          "variant": "1.4 TSI",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)"
+          ]
+        },
+        {
+          "generation": 4,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.4,
+          "kw": 118,
+          "variant": "1.4 TSI",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)"
+          ]
+        },
+        {
+          "generation": 4,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 100,
+          "variant": "2.0 TDI (PD)",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)"
+          ]
+        },
+        {
+          "generation": 5,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_VI"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1498,
+          "litres": 1.5,
+          "kw": 116,
+          "variant": "1.5 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_VII"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 169,
+          "variant": "2.0 TSI GLI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Jetta_VII"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1498,
+          "litres": 1.5,
+          "kw": 83,
+          "variant": "1.5",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Bora_(2018)"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1197,
+          "litres": 1.2,
+          "kw": 85,
+          "variant": "1.2 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Bora_(2018)"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1498,
+          "litres": 1.5,
+          "kw": 85,
+          "variant": "1.5",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Bora_(2018)"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "petrol",
+          "cc": 1498,
+          "litres": 1.5,
+          "kw": 118,
+          "variant": "1.5 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Bora_(2018)"
+          ]
+        },
+        {
+          "generation": 6,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 100,
+          "variant": "e-Bora",
+          "sources": [
+            "https://de.wikipedia.org/wiki/VW_Bora_(2018)"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=259055524",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_I",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Jetta_II",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_II",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Jetta_V",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_V",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Jetta_VI",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_VI",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Jetta_VII",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_VII",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=267586867",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=259055615",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_II",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Jetta_II",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_II",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=258250971",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Vento",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=258499701",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Bora",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Bora_(2018)",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Bora_(2018)",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=252998782",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_V",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=259172288",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_VI",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=257478424",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Jetta_VII",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/VW_Bora_(2018)",
+          "canonical": "https://de.wikipedia.org/wiki/VW_Bora_(2018)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1369593657",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A1)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A5)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A6)",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A6)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1369449287",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A2)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1368188592",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Vento_(A3)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A7)",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta_(A7)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380227978",
+          "canonical": "https://en.wikipedia.org/wiki/Volkswagen_Jetta",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "glc",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "41f7f433853709884c6011b836c878093ec0b69fa17bfa534974cbf0049b759f",
+      "afterHash": "c1a9d9902e81a0363bf8c642d3e571090fe11e8b9c1ed5261ec237a25a41d6ed",
+      "sourceFile": "src/data/catalog/model-cards/mercedes-benz.json",
+      "enginesAdded": 11,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 145,
+          "variant": "GLC 200 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 155,
+          "variant": "GLC 300",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 190,
+          "variant": "GLC 300 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 245,
+          "variant": "GLC 300e 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 2996,
+          "litres": 3,
+          "kw": 287,
+          "variant": "AMG GLC 43 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 3982,
+          "litres": 4,
+          "kw": 350,
+          "variant": "AMG GLC 63 4MATIC+",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 3982,
+          "litres": 4,
+          "kw": 375,
+          "variant": "AMG GLC 63 S 4MATIC+",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1950,
+          "litres": 1.9,
+          "kw": 120,
+          "variant": "GLC 200d / GLC 200d 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1950,
+          "litres": 1.9,
+          "kw": 143,
+          "variant": "GLC 220d 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1950,
+          "litres": 1.9,
+          "kw": 180,
+          "variant": "GLC 300d 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2925,
+          "litres": 2.9,
+          "kw": 243,
+          "variant": "GLC 400d 4MATIC",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1377658797"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1377658797",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_GLC",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1367247239",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "skoda",
+      "line": "octavia-1959",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "021c1fdc0844c54045e57d395130af13735a0dda73deab82edeec357050b8f99",
+      "afterHash": "021c1fdc0844c54045e57d395130af13735a0dda73deab82edeec357050b8f99",
+      "sourceFile": "src/data/catalog/model-cards/skoda.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1361998993",
+          "canonical": "https://en.wikipedia.org/wiki/%C5%A0koda_Octavia_(1959)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "jeep",
+      "line": "grand-cherokee",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "33ab89df79c1136e5e20bc2dd754dae0b1f0d3420a80bb77ee980fa9f7605b8a",
+      "afterHash": "809f6e9475ca4fcf8a7c9b655b21326e6332a8517b31cab2eceb97e6c538bdec",
+      "sourceFile": "src/data/catalog/model-cards/jeep.json",
+      "enginesAdded": 1,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2.5,
+          "kw": 86,
+          "variant": "2.5 L TURBO DIESEL",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1379414294"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1363149644",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(ZJ)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WK2)",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WK2)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1379414294",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1353397512",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WJ)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WJ)",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WJ)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381208780",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WK)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1379590021",
+          "canonical": "https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee_(WK2)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "toyota",
+      "line": "yaris-cross",
+      "status": "already-covered",
+      "reason": "No new distinct documented engine/power rows.",
+      "beforeHash": "e06cbf82f27b3c027b6c207b82448bd98287b6f836f80dbce98a799df9c82163",
+      "afterHash": "e06cbf82f27b3c027b6c207b82448bd98287b6f836f80dbce98a799df9c82163",
+      "sourceFile": "src/data/model-cards/toyota.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?title=Toyota_Yaris_Cross&oldid=270329273",
+          "canonical": "https://de.wikipedia.org/wiki/Toyota_Yaris_Cross",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?title=Toyota_Yaris_Cross&oldid=1377659374",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross_(XP210)",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross#XP210",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross_(AC200)",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Yaris_Cross#AC200",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "skoda",
+      "line": "enyaq",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "d612622dc9fdb1d2a468ba4cf11040d0bbf06b31a3dfc76de09add5bdd8be2f9",
+      "afterHash": "d612622dc9fdb1d2a468ba4cf11040d0bbf06b31a3dfc76de09add5bdd8be2f9",
+      "sourceFile": "src/data/catalog/model-cards/skoda.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1367795135",
+          "canonical": "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq",
+          "canonical": "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "hyundai",
+      "line": "kona",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "b2fd77f33b3c14acd16b49220cc3e1e41ccaf7ba845e2f9ea8b5dff37f0b09d3",
+      "afterHash": "c1e4c43793d911c76cd93d7752edee9b7afda8605f100c93537e9eeabb2761e8",
+      "sourceFile": "src/data/model-cards/hyundai.json",
+      "enginesAdded": 2,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 1.6,
+          "kw": 146,
+          "variant": "1.6 L Smartstream G1.6 T-GDi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380230232"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 110,
+          "variant": "2.0 L Nu MPi",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380230232"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380230232",
+          "canonical": "https://en.wikipedia.org/wiki/Hyundai_Kona",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "dacia",
+      "line": "jogger",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "bfba537a698f681ad6aa1b9a81def5b9982baebdd235fcc5e74d2855641768a9",
+      "afterHash": "bfba537a698f681ad6aa1b9a81def5b9982baebdd235fcc5e74d2855641768a9",
+      "sourceFile": "src/data/catalog/model-cards/dacia.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": []
+    },
+    {
+      "make": "wartburg",
+      "line": "353",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "1b69a7a0c0e204119c1caa68a95754d8cb8ddb2bcb6678bd481fa4b7cc1ce53e",
+      "afterHash": "1b69a7a0c0e204119c1caa68a95754d8cb8ddb2bcb6678bd481fa4b7cc1ce53e",
+      "sourceFile": "src/data/model-cards/wartburg.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=270602641",
+          "canonical": "https://de.wikipedia.org/wiki/Wartburg_353",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381344544",
+          "canonical": "https://en.wikipedia.org/wiki/Wartburg_353",
+          "error": null
+        },
+        {
+          "url": "https://cs.wikipedia.org/w/index.php?oldid=26229310",
+          "canonical": "https://cs.wikipedia.org/wiki/Wartburg_353",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "mokka",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "af64d60e285c1a15a039bee73ffce46bcaa8224afbaf031c3615ae01b9a3cf9c",
+      "afterHash": "34d2e0ed81119d16503ef285eef7acb377bca8314370b72cece097c286a6868d",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 12,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1364,
+          "litres": 1.4,
+          "kw": 103,
+          "variant": "1.4L VVT MPI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1399,
+          "litres": 1.4,
+          "kw": 112,
+          "variant": "1.4L VVT DI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 85,
+          "variant": "1.6L VVT MPI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1796,
+          "litres": 1.8,
+          "kw": 103,
+          "variant": "1.8L VVT MPI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 81,
+          "variant": "1.6L CDTI ecoFLEX",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 100,
+          "variant": "1.6L CDTI Turbo ecoFLEX",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1686,
+          "litres": 1.7,
+          "kw": 96,
+          "variant": "1.7L CDTI ecoFLEX",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1199,
+          "litres": 1.2,
+          "kw": 74,
+          "variant": "1.2L VVT DI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1199,
+          "litres": 1.2,
+          "kw": 100,
+          "variant": "1.2L VVT DI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1199,
+          "litres": 1.2,
+          "kw": 96,
+          "variant": "1.2L VVT DI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1199,
+          "litres": 1.2,
+          "kw": 107,
+          "variant": "1.2L VVT DI Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1499,
+          "litres": 1.5,
+          "kw": 81,
+          "variant": "1.5L Turbo",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373342989"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1373342989",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Mokka",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Mokka",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Mokka",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "trida-b",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "89737ee28e062c33423d9c36b960f8f7c71ba92191718bcf43fb21ca58ce8bc1",
+      "afterHash": "46eb7bbe3faac8588f2cbd5a603f15ef8f2fc203953c285385e508b4efe181c9",
+      "sourceFile": "src/data/catalog/model-cards/mercedes-benz.json",
+      "enginesAdded": 9,
+      "added": [
+        {
+          "generation": 1,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 132,
+          "variant": "B-Class Electric Drive",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1332,
+          "litres": 1.3,
+          "kw": 80,
+          "variant": "B 160",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1332,
+          "litres": 1.3,
+          "kw": 100,
+          "variant": "B 180",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1332,
+          "litres": 1.3,
+          "kw": 120,
+          "variant": "B 200",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 140,
+          "variant": "B 220",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 165,
+          "variant": "B 250",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1950,
+          "litres": 1.9,
+          "kw": 110,
+          "variant": "B 200 d",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1950,
+          "litres": 1.9,
+          "kw": 140,
+          "variant": "B 220 d",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1991,
+          "litres": 2,
+          "kw": 85,
+          "variant": "B 180 d",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1375606435"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        1,
+        2
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1375606435",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W245)",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class#First_generation_(W245;_2005)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1375606526",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)",
+          "canonical": "https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mitsubishi",
+      "line": "outlander",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "0cd646a5210b8fcdfe5eb85fca9ec5ab3aec2399511a986a1708c2fd18505d85",
+      "afterHash": "0cd646a5210b8fcdfe5eb85fca9ec5ab3aec2399511a986a1708c2fd18505d85",
+      "sourceFile": "src/data/catalog/model-cards/mitsubishi.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381888385",
+          "canonical": "https://en.wikipedia.org/wiki/Mitsubishi_Outlander",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "crossland",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "86f574774d8e0cb01a9129c0938d3aabec19d08caaed3917be25f91d20e7ea41",
+      "afterHash": "86f574774d8e0cb01a9129c0938d3aabec19d08caaed3917be25f91d20e7ea41",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1360947777",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Crossland",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "seat",
+      "line": "toledo",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "25ca0e6d3e9002ceccf35bc4e18bf942b52329bb4d9d3b3646528e0b5eda3f68",
+      "afterHash": "4f518ea51467c6158eb5efe4e929bbf31a2a02786744eb393a138fd3b1c6c45f",
+      "sourceFile": "src/data/model-cards/seat.json",
+      "enginesAdded": 50,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 54,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 52,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 55,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 74,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 65,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 66,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 92,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 98,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 85,
+          "variant": "2.0",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 110,
+          "variant": "2.0",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 50,
+          "variant": "1.9 D",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 47,
+          "variant": "1.9 D",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 55,
+          "variant": "1.9 TD",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 66,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 81,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_I"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 94,
+          "variant": "1.8",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1390,
+          "litres": 1.4,
+          "kw": 55,
+          "variant": "1.4",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 74,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 77,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 92,
+          "variant": "1.8",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 1781,
+          "litres": 1.8,
+          "kw": 132,
+          "variant": "1.8 T",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 2324,
+          "litres": 2.3,
+          "kw": 110,
+          "variant": "2.3V5 10V",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "petrol",
+          "cc": 2324,
+          "litres": 2.3,
+          "kw": 125,
+          "variant": "2.3V5 20V",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 66,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 81,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 96,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 1,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 110,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_II"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1390,
+          "litres": 1.4,
+          "kw": 63,
+          "variant": "1.4",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1595,
+          "litres": 1.6,
+          "kw": 75,
+          "variant": "1.6",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1798,
+          "litres": 1.8,
+          "kw": 118,
+          "variant": "1.8 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 110,
+          "variant": "2.0 FSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 147,
+          "variant": "2.0 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 77,
+          "variant": "1.9 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 100,
+          "variant": "2.0 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 TDI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 125,
+          "variant": "2.0 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_III"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 85,
+          "variant": "1.6 MPI",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1374746566"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 999,
+          "litres": 1,
+          "kw": 70,
+          "variant": "1.0 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 999,
+          "litres": 1,
+          "kw": 81,
+          "variant": "1.0 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1198,
+          "litres": 1.2,
+          "kw": 55,
+          "variant": "1.2 MPI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1197,
+          "litres": 1.2,
+          "kw": 63,
+          "variant": "1.2 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1197,
+          "litres": 1.2,
+          "kw": 66,
+          "variant": "1.2 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1197,
+          "litres": 1.2,
+          "kw": 77,
+          "variant": "1.2 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1197,
+          "litres": 1.2,
+          "kw": 81,
+          "variant": "1.2 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1390,
+          "litres": 1.4,
+          "kw": 90,
+          "variant": "1.4 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "petrol",
+          "cc": 1395,
+          "litres": 1.4,
+          "kw": 92,
+          "variant": "1.4 TSI",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1422,
+          "litres": 1.4,
+          "kw": 66,
+          "variant": "1.4 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 66,
+          "variant": "1.6 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 77,
+          "variant": "1.6 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        },
+        {
+          "generation": 3,
+          "fuel": "diesel",
+          "cc": 1598,
+          "litres": 1.6,
+          "kw": 85,
+          "variant": "1.6 TDI DPF",
+          "sources": [
+            "https://de.wikipedia.org/wiki/Seat_Toledo_IV"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=198050969",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Toledo",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Seat_Toledo_I",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Toledo_I",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Seat_Toledo_II",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Toledo_II",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Seat_Toledo_III",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Toledo_III",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Seat_Toledo_IV",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Toledo_IV",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1374746566",
+          "canonical": "https://en.wikipedia.org/wiki/SEAT_Toledo",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "mini",
+      "line": "cooper",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "15846c3baa00cf99d3e20f62b58d7977c6bcfdfa44f5d7b702134051c1cb841a",
+      "afterHash": "67f00518c5dd91b9fbfa062ee7637638bbc43e580dd5d8b065df566e772a921d",
+      "sourceFile": "src/data/catalog/model-cards/mini.json",
+      "enginesAdded": 10,
+      "added": [
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1198,
+          "litres": 1.2,
+          "kw": 55,
+          "variant": "One First",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1198,
+          "litres": 1.2,
+          "kw": 75,
+          "variant": "One",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1499,
+          "litres": 1.5,
+          "kw": 100,
+          "variant": "Cooper",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 141,
+          "variant": "Cooper S",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 170,
+          "variant": "John Cooper Works",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "petrol",
+          "cc": 1998,
+          "litres": 2,
+          "kw": 225,
+          "variant": "JCW GP",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1496,
+          "litres": 1.5,
+          "kw": 70,
+          "variant": "One D",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1496,
+          "litres": 1.5,
+          "kw": 85,
+          "variant": "Cooper D",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "diesel",
+          "cc": 1995,
+          "litres": 2,
+          "kw": 125,
+          "variant": "Cooper SD",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        },
+        {
+          "generation": 2,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 135,
+          "variant": "Cooper SE",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378389791"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        2
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1378389791",
+          "canonical": "https://en.wikipedia.org/wiki/Mini_Hatch",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mini_Hatch",
+          "canonical": "https://en.wikipedia.org/wiki/Mini_Hatch",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380915282",
+          "canonical": "https://en.wikipedia.org/wiki/Mini",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "toyota",
+      "line": "hilux",
+      "status": "already-covered",
+      "reason": "No new distinct documented engine/power rows.",
+      "beforeHash": "82575060fcabfbcbef13e63d0a690606d79d780124dee94205444c325ab4f1f3",
+      "afterHash": "82575060fcabfbcbef13e63d0a690606d79d780124dee94205444c325ab4f1f3",
+      "sourceFile": "src/data/model-cards/toyota.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        7,
+        8
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=271254054",
+          "canonical": "https://de.wikipedia.org/wiki/Toyota_Hilux",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1381837686",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Hilux",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_Hilux_(N30)",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Hilux#N30",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_Hilux_(N50)",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Hilux#N50",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Toyota_Hilux_(N80)",
+          "canonical": "https://en.wikipedia.org/wiki/Toyota_Hilux#N80",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "citroen",
+      "line": "jumpy",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "b62f0274c49a01048bd29b69bc71b07105cc4d74b3dd2e3488f5f28ad743d906",
+      "afterHash": "09495374b7ac60c5a3f0452fde4c72e6b730701db41e7dfe97cd0c313572e11d",
+      "sourceFile": "src/data/catalog/model-cards/citroen.json",
+      "enginesAdded": 21,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1581,
+          "litres": 1.6,
+          "kw": 58,
+          "variant": "1.6 i.e.",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 100,
+          "variant": "2.0 i.e.",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1905,
+          "litres": 1.9,
+          "kw": 51,
+          "variant": "1.9 D",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1905,
+          "litres": 1.9,
+          "kw": 68,
+          "variant": "1.9 TD",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 69,
+          "variant": "2.0 JTD",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 80,
+          "variant": "2.0 JTD",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 i.e.",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 66,
+          "variant": "90 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 88,
+          "variant": "120 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 96,
+          "variant": "130 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 100,
+          "variant": "140 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 120,
+          "variant": "165 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 67,
+          "variant": "95 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1560,
+          "litres": 1.6,
+          "kw": 86,
+          "variant": "115 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 89,
+          "variant": "120 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 112,
+          "variant": "150 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1997,
+          "litres": 2,
+          "kw": 132,
+          "variant": "180 Multijet",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "electric",
+          "cc": null,
+          "litres": null,
+          "kw": 100,
+          "variant": "Electric",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1499,
+          "litres": 1.5,
+          "kw": 88,
+          "variant": "1.5 BlueHDI/ Multijet 120",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2184,
+          "litres": 2.2,
+          "kw": 110,
+          "variant": "2.2 BlueHDI/ Multijet 150",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 2184,
+          "litres": 2.2,
+          "kw": 132,
+          "variant": "2.2 BlueHDI/ Multijet 180",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1380480296"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380480296",
+          "canonical": "https://en.wikipedia.org/wiki/Citro%C3%ABn_Jumpy",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "seat",
+      "line": "altea",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "1c797c70c80cb8016a78528749e382d9723ec969e504776e0d9eede130da1eeb",
+      "afterHash": "7629e83eda46bfc57100d03a9d7603c9695099998eac6251d258e26da5f449eb",
+      "sourceFile": "src/data/model-cards/seat.json",
+      "enginesAdded": 7,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1798,
+          "litres": 1.8,
+          "kw": 118,
+          "variant": "1.8 TSI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": 1984,
+          "litres": 2,
+          "kw": 110,
+          "variant": "2.0 FSI",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 66,
+          "variant": "1.9 TDI (PD)",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1896,
+          "litres": 1.9,
+          "kw": 77,
+          "variant": "1.9 TDI (PD)",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 100,
+          "variant": "2.0 TDI (PD)",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 103,
+          "variant": "2.0 TDI (PD)",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": 1968,
+          "litres": 2,
+          "kw": 125,
+          "variant": "2.0 TDI (PD)",
+          "sources": [
+            "https://de.wikipedia.org/w/index.php?oldid=262892423"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://de.wikipedia.org/w/index.php?oldid=262892423",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Altea",
+          "error": null
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Seat_Altea_XL",
+          "canonical": "https://de.wikipedia.org/wiki/Seat_Altea_XL",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1379549999",
+          "canonical": "https://en.wikipedia.org/wiki/SEAT_Altea",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/SEAT_Altea_Prototipo",
+          "canonical": "https://en.wikipedia.org/wiki/SEAT_Altea_Prototipo",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "opel",
+      "line": "movano",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "3df29a21d9e0ee7f2c72d47baf24ced0f448ca7b635d30310e024091a61bae41",
+      "afterHash": "3df29a21d9e0ee7f2c72d47baf24ced0f448ca7b635d30310e024091a61bae41",
+      "sourceFile": "src/data/catalog/model-cards/opel.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1374841632",
+          "canonical": "https://en.wikipedia.org/wiki/Renault_Master",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Opel_Movano",
+          "canonical": "https://en.wikipedia.org/wiki/Opel_Movano",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Renault_Master",
+          "canonical": "https://en.wikipedia.org/wiki/Renault_Master",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "audi",
+      "line": "q5",
+      "status": "engines-added",
+      "reason": null,
+      "beforeHash": "4424faf672bc21a2c6a509fe1c95593b5dc6d88965fb7438662aa47514002b92",
+      "afterHash": "60f9be9ded8650611b5950482bc518fa9c6885ff03c90186cd0e7279a59e6d4f",
+      "sourceFile": "src/data/catalog/model-cards/audi.json",
+      "enginesAdded": 13,
+      "added": [
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 132,
+          "variant": "2.0 TFSI quattro (180PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 155,
+          "variant": "2.0 TFSI quattro (211PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 2,
+          "kw": 165,
+          "variant": "2.0 TFSI quattro (225PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3.2,
+          "kw": 199,
+          "variant": "3.2 FSI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "petrol",
+          "cc": null,
+          "litres": 3,
+          "kw": 200,
+          "variant": "3.0 TFSI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 105,
+          "variant": "2.0 TDI (143PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 125,
+          "variant": "2.0 TDI quattro (170PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 177,
+          "variant": "3.0 TDI quattro",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 110,
+          "variant": "Q5 2.0 TDI (150PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 2,
+          "kw": 130,
+          "variant": "Q5 2.0 TDI quattro (177PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 180,
+          "variant": "Q5 3.0 TDI quattro (245PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 190,
+          "variant": "Q5 3.0 TDI clean diesel quattro (258PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        },
+        {
+          "generation": 0,
+          "fuel": "diesel",
+          "cc": null,
+          "litres": 3,
+          "kw": 230,
+          "variant": "SQ5 3.0 TDI quattro (313PS)",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1373497931"
+          ]
+        }
+      ],
+      "generationStructureChanged": false,
+      "parsedGenerations": [
+        0
+      ],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1373497931",
+          "canonical": "https://en.wikipedia.org/wiki/Audi_Q5",
+          "error": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Audi_Q5_e-tron",
+          "canonical": "https://en.wikipedia.org/wiki/Audi_Q5_e-tron",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "ssangyong-kgm",
+      "line": "korando",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "95d865f456adf909f3716763c59845962235b98f2025c966ffdbaf6cd721f573",
+      "afterHash": "95d865f456adf909f3716763c59845962235b98f2025c966ffdbaf6cd721f573",
+      "sourceFile": "src/data/model-cards/ssangyong-kgm.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1382571165",
+          "canonical": "https://en.wikipedia.org/wiki/SsangYong_Korando",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "suzuki",
+      "line": "ignis",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "39a5b2f7fd5bd950b33452a8b4b062fb109b1b660edc204788060ab469e12d8d",
+      "afterHash": "39a5b2f7fd5bd950b33452a8b4b062fb109b1b660edc204788060ab469e12d8d",
+      "sourceFile": "src/data/model-cards/suzuki.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1380461595",
+          "canonical": "https://en.wikipedia.org/wiki/Suzuki_Ignis",
+          "error": null
+        }
+      ]
+    },
+    {
+      "make": "lada",
+      "line": "2103",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "8b1fd00bba365483d93667c7c417804caf2759e8fdb88fde9dd1e08daa3ce2cf",
+      "afterHash": "8b1fd00bba365483d93667c7c417804caf2759e8fdb88fde9dd1e08daa3ce2cf",
+      "sourceFile": "src/data/catalog/model-cards/lada.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": []
+    },
+    {
+      "make": "fiat",
+      "line": "125",
+      "status": "no-source",
+      "reason": "No usable table with unambiguous generation, fuel, size and explicit kW.",
+      "beforeHash": "a699cb4493c07d1cb9d5dcabe8f15f3565de91a6394036b909a00da03f635b81",
+      "afterHash": "a699cb4493c07d1cb9d5dcabe8f15f3565de91a6394036b909a00da03f635b81",
+      "sourceFile": "src/data/catalog/model-cards/fiat.json",
+      "enginesAdded": 0,
+      "added": [],
+      "generationStructureChanged": false,
+      "parsedGenerations": [],
+      "remainingGaps": "Structure, chronology, facelifts, body types and equipment unchanged; missing or ambiguous engine tables remain unfilled.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fiat_125",
+          "canonical": "https://en.wikipedia.org/wiki/Fiat_125",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "attempted": 50,
+    "touched": 24,
+    "enginesAdded": 272,
+    "noSource": 24,
+    "alreadyCovered": 2,
+    "generationsAdded": 0,
+    "generationsRemoved": 0,
+    "faceliftsAdded": 0,
+    "listingIdChanges": 0,
+    "statsRebuildRequired": false
+  },
+  "validation": {
+    "result": "PASS",
+    "batches": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "attemptedLines": 250,
+    "touchedLines": 124,
+    "engineRowsAdded": 1802,
+    "baselineCardsNormalized": 35,
+    "baselineOnlyNormalized": 30,
+    "untouchedSourceCardsUnchanged": 4494,
+    "untouchedGeneratedCardsUnchanged": 4494,
+    "generationStructureDatesBodiesFaceliftsPhotos": "unchanged",
+    "listingIds": "unchanged",
+    "drawingsHoldsStatistics": "byte-identical",
+    "drawingEntriesChecked": 846,
+    "affectedStatisticsKeysChecked": 398,
+    "countsAfter": {
+      "lines": 4809,
+      "cards": 4648,
+      "linesWithoutCard": 161,
+      "generations": 6735,
+      "generationsWithEngines": 1962,
+      "generationsWithEngineRowsWithoutPower": 607,
+      "generationsWithTechnicalVersions": 2112,
+      "generationsWithEquipmentLines": 32,
+      "generationsWithFacelifts": 804
+    }
+  },
+  "qaRevision": "Excluded experimental/concept tables; badge-aware generation attribution; nominal litre parser rejects embedded model badges.",
+  "validationScope": "whole-current-session"
+}

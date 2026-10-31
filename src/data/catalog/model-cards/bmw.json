@@ -11706,8 +11706,71 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "availablePowerKw": [
+              150
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Battery electric",
+            "sources": [
+              "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
+            ],
+            "sourceScope": {
+              "tableIndex": 3,
+              "tableSection": "BMW iX1 ",
+              "variantYears": null,
+              "originalVariant": "Battery electric",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "BMW X1 (U11)",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Battery electric",
+            "sources": [
+              "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
+            ],
+            "sourceScope": {
+              "tableIndex": 3,
+              "tableSection": "BMW iX1 ",
+              "variantYears": null,
+              "originalVariant": "Battery electric",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "BMW X1 (U11)",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -11746,13 +11809,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1378756448",
-          "https://www.wikidata.org/wiki/Q746980"
+          "https://www.wikidata.org/wiki/Q746980",
+          "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1378756448",
-      "https://www.wikidata.org/wiki/Q746980"
+      "https://www.wikidata.org/wiki/Q746980",
+      "https://en.wikipedia.org/wiki/BMW_X1_(U11)"
     ],
     "needsReview": [
       {
@@ -11769,10 +11834,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

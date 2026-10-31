@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {normalizeVariant,normalizeEngineRows,nonEuropeanMarket,evidenceProblem} from './engine-throughput-policy.mjs';
+for(const [raw,want]of [['Motor.9',null],['Engine',null],['Benzin 1.2 ecoFLEX.1','1.2 ecoFLEX'],['Diesel 1.3 CDTI.1','1.3 CDTI'],['1.0 MPI.3','1.0 MPI'],['Cupra VZ 2.0 TSI.1','Cupra VZ 2.0 TSI'],['FM2.6 CR CD BSVI.2','FM2.6 CR CD BSVI'],['M102.922','M102.922']])assert.equal(normalizeVariant(raw),want);
+assert.equal(normalizeEngineRows([{variant:'1.6 TDI',powerKwMin:77,powerKwMax:77},{variant:'1.6 TDI.2',powerKwMin:77,powerKwMax:77}]).length,1);
+const ranges=normalizeEngineRows([{variant:'2.0 TSI',availablePowerKw:[150],powerKwMin:150,powerKwMax:150},{variant:'2.0 TSI',availablePowerKw:[150,180],powerKwMin:150,powerKwMax:180}]);assert.deepEqual(ranges[1].availablePowerKw,[180]);
+assert(nonEuropeanMarket('Only in Thailand, not in Europe'));assert(!nonEuropeanMarket('European version, not sold in Thailand'));
+const g={name:'Sharan II',code:'II (7N)',from:2010,to:2022};
+const e={variant:'1.9 TDI',sourceScope:{generationEvidence:{method:'generation-heading',generationIndex:1,anchor:'First generation (7M; 1995–2010)',fromYear:1995,toYear:2010,rowFromYear:null,rowToYear:null}}};
+assert.match(evidenceProblem(g,1,e),/anchor contradicts/);
+e.sourceScope.generationEvidence={method:'row-years',generationIndex:1,anchor:'Engines',fromYear:2012,toYear:2018,rowFromYear:2012,rowToYear:2018};assert.equal(evidenceProblem(g,1,e),null);
+e.variant='Motor.1';assert.match(evidenceProblem(g,1,e),/Malformed/);
+console.log('PASS: 8 names, 2 deduplication, 2 market and 3 validator evidence cases');
