@@ -3,14 +3,14 @@
 Reads <data>/istp/days/*.xml.gz in date order and writes <data>/out/istp-agg.json with, per key
 "make|line|gen" (line and gen may be empty), for regular inspections only:
   ages:     {age: [inspections, failed (result 2 or 3), unfit (result 3)]}, age = inspection year - first registration year
-  defects:  {code (first three levels): [count, A, B, C]}, with: inspections having any defect
+  defects:  {code (first three levels): [inspections, A, B, C]}, most severe level per code/inspection
   km:       {age: {bin: count}}, odometer in 10 000 km bins
   rollback: [VINs with at least two readings, VINs whose odometer dropped by more than 2 000 km]
 VINs are used only in memory (hashed) to follow one vehicle across inspections; nothing per vehicle is written.
 
-Usage: py scripts/stats/istp-stats.py <data dir> [max files]
+Usage: py scripts/stats/istp-stats.py <data dir> [max files] [--out-dir DIR] [--workers N]
 """
-import gzip, hashlib, json, os, sys, time
+import argparse, gzip, hashlib, json, os, sys, time
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from multiprocessing import Pool
@@ -30,6 +30,19 @@ def init():
 
 def local(tag):
     return tag.rsplit("}", 1)[-1]
+
+
+def unique_defects(defects):
+    """One three-level code per inspection; preserve the most severe valid A/B/C level."""
+    seen = {}
+    for kod, sev in defects:
+        code = ".".join(kod.split(".")[:3])
+        if not code:
+            continue
+        rank = {"A": 1, "B": 2, "C": 3}
+        if code not in seen or rank.get(sev, 0) > rank.get(seen[code], 0):
+            seen[code] = sev
+    return seen
 
 
 def parse_day(path):
@@ -73,16 +86,13 @@ def parse_day(path):
                 row[1] += 1
             if res == "3":
                 row[2] += 1
-            # Vysledek repeats the technical defects; count each code once per inspection
-            seen = set()
-            for kod, sev in rec["defects"]:
-                code = ".".join(kod.split(".")[:3])
-                if not code or (code, sev) in seen:
-                    continue
-                seen.add((code, sev))
+            # Result sections may repeat a code, including at different severity levels.
+            seen = unique_defects(rec["defects"])
+            for code, sev in seen.items():
                 d = a["defects"][code]
                 d[0] += 1
-                d[1 + "ABC".find(sev)] += 1 if sev in ("A", "B", "C") else 0
+                if sev in ("A", "B", "C"):
+                    d[1 + "ABC".find(sev)] += 1
             if seen:
                 a["with"] += 1
             km = rec.get("Odometr", "")
@@ -115,13 +125,22 @@ def merge(into, part):
 
 
 if __name__ == "__main__":
-    data = sys.argv[1]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("data")
+    parser.add_argument("max_files", nargs="?", type=int)
+    parser.add_argument("--out-dir")
+    parser.add_argument("--workers", type=int, default=min(30, os.cpu_count() or 4))
+    parser.add_argument("--skip-unmatched-output", action="store_true")
+    args = parser.parse_args()
+    data = args.data
     days = sorted(os.listdir(os.path.join(data, "istp", "days")))
     days = [os.path.join(data, "istp", "days", d) for d in days if d.endswith(".xml.gz")]
-    if len(sys.argv) > 2:
-        days = days[: int(sys.argv[2])]
+    if args.max_files is not None:
+        days = days[:args.max_files]
+    if not days:
+        raise SystemExit("No inspection input files")
     total, last, start, unmatched = {}, {}, time.time(), defaultdict(int)  # last: vin hash -> [key, last km, readings, dropped]
-    with Pool(min(30, os.cpu_count() or 4), initializer=init) as pool:
+    with Pool(args.workers, initializer=init) as pool:
         for i, (part, readings, um) in enumerate(pool.imap(parse_day, days, chunksize=1)):
             merge(total, part)
             for k, n in um.items():
@@ -143,9 +162,11 @@ if __name__ == "__main__":
             roll[key][1] += dropped
     for key, r in roll.items():
         total.setdefault(key, {"ages": {}, "defects": {}, "with": 0, "km": {}})["rollback"] = r
-    os.makedirs(os.path.join(data, "out"), exist_ok=True)
+    output = args.out_dir or os.path.join(data, "out")
+    os.makedirs(output, exist_ok=True)
     meta = {"from": os.path.basename(days[0])[:10], "to": os.path.basename(days[-1])[:10], "days": len(days)}
-    json.dump({"meta": meta, "keys": total}, open(os.path.join(data, "out", "istp-agg.json"), "w", encoding="utf8"))
+    json.dump({"meta": meta, "keys": total}, open(os.path.join(output, "istp-agg.json"), "w", encoding="utf8"))
     top = sorted(unmatched.items(), key=lambda x: -x[1])[:400]
-    json.dump(top, open(os.path.join(data, "out", "istp-unmatched.json"), "w", encoding="utf8"), ensure_ascii=False, indent=0)
+    if not args.skip_unmatched_output:
+        json.dump(top, open(os.path.join(output, "istp-unmatched.json"), "w", encoding="utf8"), ensure_ascii=False, indent=0)
     print(f"done: {len(days)} days, {len(total)} keys, {len(last):,} vehicles, {time.time() - start:.0f} s")

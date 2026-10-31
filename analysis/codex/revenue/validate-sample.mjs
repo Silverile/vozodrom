@@ -35,6 +35,9 @@ for(const line of sample.lines){
   for(const x of g.mileageByExactAge){assert(x.p25Km<=x.medianKm&&x.medianKm<=x.p75Km);assert.equal(x.validOdometerReadingCount,null);mileageRows++;}
   assert.equal(g.topDefects.length,Math.min(5,s.stk.defects.length));
   assert.deepEqual(g.topDefects.map(x=>[x.code,x.occurrencesPerInspection]),s.stk.defects.slice(0,5).map(x=>[x.code,x.share]));
+  for(const d of g.topDefects){assert.equal(d.share,d.occurrencesPerInspection);assert.equal(d.unit,'share-of-regular-inspections-with-code');assert(d.share>=0&&d.share<=1);}
+  assert.deepEqual(g.mileageForGuide.map(x=>x.age),[5,8,10,12,15]);
+  for(const row of g.mileageForGuide){const exact=g.mileageByExactAge.find(x=>x.age===row.age);if(exact)assert.deepEqual(row,exact);else assert.equal(row.medianKm,null);}
   ageRows+=g.failureByExactAge.length;defects+=g.topDefects.length;
  }
 }

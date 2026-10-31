@@ -11,15 +11,21 @@ one summary for the make, each model line and each generation:
 Privacy: only aggregates; any group or age row with fewer than MIN_N vehicles or inspections is left out.
 Usage: py scripts/stats/build-stats.py <data dir>
 """
-import json, os, sys
+import argparse, json, os, sys
 from collections import Counter, defaultdict
 from datetime import date
 
 MIN_N = 30
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
-data = sys.argv[1]
-rsv = json.load(open(os.path.join(data, "out", "rsv-agg.json"), encoding="utf8"))
-istp = json.load(open(os.path.join(data, "out", "istp-agg.json"), encoding="utf8"))
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("data")
+parser.add_argument("--aggregates-dir")
+parser.add_argument("--out-dir")
+args = parser.parse_args()
+data = args.data
+aggregates = args.aggregates_dir or os.path.join(data, "out")
+rsv = json.load(open(os.path.join(aggregates, "rsv-agg.json"), encoding="utf8"))
+istp = json.load(open(os.path.join(aggregates, "istp-agg.json"), encoding="utf8"))
 labels_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stk-defects.json")
 labels = json.load(open(labels_path, encoding="utf8"))["codes"] if os.path.exists(labels_path) else {}
 THIS_YEAR = date.today().year
@@ -159,7 +165,7 @@ for lv in set(fleets) | set(stks):
     else:
         node["gens"][gen] = entry
 
-out_dir = os.path.join(ROOT, "src", "data", "stats")
+out_dir = args.out_dir or os.path.join(ROOT, "src", "data", "stats")
 os.makedirs(out_dir, exist_ok=True)
 meta = {"stk": istp["meta"], "register": rsv["meta"], "minN": MIN_N}
 for make, d in files.items():

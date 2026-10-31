@@ -10,7 +10,7 @@ Nothing per vehicle is written.
 
 Usage: py scripts/stats/rsv-stats.py <data dir>
 """
-import csv, json, os, sys, time
+import argparse, csv, json, os, sys, time
 from collections import Counter, defaultdict
 from datetime import date
 
@@ -48,7 +48,11 @@ def day(s):
 
 
 if __name__ == "__main__":
-    data = sys.argv[1]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("data")
+    parser.add_argument("--out-dir")
+    args = parser.parse_args()
+    data = args.data
     m = Matcher()
     start = time.time()
     countries = {}
@@ -90,7 +94,8 @@ if __name__ == "__main__":
                 c = countries.get(row["PČV"])
                 if c:
                     a["countries"][c] += 1
-    os.makedirs(os.path.join(data, "out"), exist_ok=True)
+    output = args.out_dir or os.path.join(data, "out")
+    os.makedirs(output, exist_ok=True)
     out = {k: {**v, "years": dict(v["years"]), "fuel": dict(v["fuel"]), "colors": dict(v["colors"].most_common(12)), "countries": dict(v["countries"].most_common(10))} for k, v in agg.items()}
-    json.dump({"meta": {"file": "vypisvozidel.csv", "built": date.today().isoformat()}, "keys": out}, open(os.path.join(data, "out", "rsv-agg.json"), "w", encoding="utf8"), ensure_ascii=False)
+    json.dump({"meta": {"file": "vypisvozidel.csv", "built": date.today().isoformat()}, "keys": out}, open(os.path.join(output, "rsv-agg.json"), "w", encoding="utf8"), ensure_ascii=False)
     print(f"done: {len(out)} keys, {sum(v['n'] for v in out.values()):,} vehicles in operation, {time.time() - start:.0f} s")

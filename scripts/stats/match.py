@@ -97,7 +97,7 @@ class Matcher:
             card = cards.get(l["makeSlug"], {}).get(l["slug"])
             gens = card["generations"] if card else l.get("generations") or []
             self.gens[(l["makeSlug"], l["slug"])] = [
-                (g.get("from"), g.get("to"), set(re.findall(r"\(([A-Z0-9]{2,4})\)", (g.get("code") or "") + " " + (g.get("name") or ""))))
+                (None if g.get("dateBasis") == "announcement" else g.get("from"), g.get("to"), set(re.findall(r"\(([A-Z0-9]{2,4})\)", (g.get("code") or "") + " " + (g.get("name") or ""))))
                 for g in gens
             ]
         for make, v in self.lines.items():

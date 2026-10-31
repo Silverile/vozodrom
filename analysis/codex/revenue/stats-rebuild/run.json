@@ -1,0 +1,65 @@
+{
+  "baselineRevision": "f49ffd9edb6fa1a4df2feeb385f6e26bb2dd6589",
+  "python": "C:/Program Files/FreeCAD 1.0/bin/python.exe",
+  "rawInput": "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+  "rawDays": 1094,
+  "catalog": [
+    {
+      "file": "src/data/makes-index.json",
+      "sha256": "c40ac271041b151f7ce2667f7ee33b6f67d71d9dd40e81a3bf7fbbcc582a6a8f"
+    },
+    {
+      "file": "src/data/catalog/model-lines-auto.json",
+      "sha256": "bf8e735252ba359dabd0f85e3aa3fa1dc2c94c1679ec6b44917e31ffa28578f0"
+    },
+    {
+      "file": "src/data/model-cards-index.json",
+      "sha256": "725864cadb63329623c2ef27316a05d0bb51a643fa72ee52cc8dad925df407ed"
+    }
+  ],
+  "state": "promoted",
+  "jobs": {
+    "istp": {
+      "pid": 30704,
+      "args": [
+        "scripts/stats/istp-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--out-dir",
+        "analysis/codex/revenue/stats-rebuild/staged/out",
+        "--workers",
+        "16",
+        "--skip-unmatched-output"
+      ],
+      "status": "complete",
+      "log": "analysis/codex/revenue/stats-rebuild/staged/istp.log",
+      "exitCode": 0
+    },
+    "rsv": {
+      "pid": 30428,
+      "args": [
+        "scripts/stats/rsv-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--out-dir",
+        "analysis/codex/revenue/stats-rebuild/staged/out"
+      ],
+      "status": "complete",
+      "log": "analysis/codex/revenue/stats-rebuild/staged/rsv.log",
+      "exitCode": 0
+    },
+    "build": {
+      "pid": 21800,
+      "args": [
+        "scripts/stats/build-stats.py",
+        "C:\\Workspace\\Projects\\CF\\vozodrom-data",
+        "--aggregates-dir",
+        "analysis/codex/revenue/stats-rebuild/staged/out",
+        "--out-dir",
+        "analysis/codex/revenue/stats-rebuild/staged/stats"
+      ],
+      "status": "complete",
+      "log": "analysis/codex/revenue/stats-rebuild/staged/build.log",
+      "exitCode": 0
+    }
+  },
+  "validationReport": "analysis/codex/revenue/stats-rebuild/comparison.json"
+}

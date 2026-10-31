@@ -2,7 +2,7 @@
 
 Pracovní ukázka k posouzení; neposílat jako certifikovaný podklad pro ocenění či pojistnou sazbu. Žádný údaj není odhadem budoucích nákladů na opravy.
 
-Zdroj: IS TP + registr silničních vozidel (Ministerstvo dopravy ČR). Prohlídky 2023-10-12 až 2026-10-11; agregát registru sestaven 2026-10-27, referenční datum výpisu neověřeno.
+Zdroj: IS TP + registr silničních vozidel (Ministerstvo dopravy ČR). Prohlídky 2023-10-12 až 2026-10-11; agregát registru sestaven 2026-10-31, referenční datum výpisu neověřeno.
 [Dokumentace IS TP](https://istp.data.md.gov.cz/resources/istp/opendata/documentation/istp-opendata-schemas-ProhlidkaSeznam-v1.pdf) · [Registr](https://www.dataovozidlech.cz/)
 
 JSON obsahuje všechny dostupné věky a top 5 závad každé generace. Nájezd níže vybírá věk nejbližší 10 letům (při shodě mladší); jde o kvartily odečtů při prohlídkách.
@@ -27,11 +27,11 @@ JSON obsahuje všechny dostupné věky a top 5 závad každé generace. Nájezd 
 
 Míry nevyhovujících prohlídek (výsledek 2/3); vážená aproximace ze zaokrouhlených vstupů. „—“ znamená chybějící vzorek.
 
-Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky dané generace:
+Top závady — podíl pravidelných prohlídek s daným kódem (každý kód jednou za prohlídku); všechny věky dané generace:
 
-- **Octavia I:** 4.1.1 Stav a funkce světlometů (16,73 %); 2.1.3 Stav pákového mechanismu řízení (13,07 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (11,65 %); 1.1.12 Brzdové hadice (10,92 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (8,74 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
-- **Octavia II:** 4.1.1 Stav a funkce světlometů (13,05 %); 2.1.3 Stav pákového mechanismu řízení (8,63 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,68 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (6,02 %); 1.1.12 Brzdové hadice (5,31 %).
-- **Octavia III:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (4,05 %); 4.1.1 Stav a funkce světlometů (2,20 %); 2.1.3 Stav pákového mechanismu řízení (1,46 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (0,97 %); 6.2.10 Kryty kol a systémy proti rozstřiku (0,65 %).
+- **Octavia I:** 4.1.1 Stav a funkce světlometů (16,58 %); 2.1.3 Stav pákového mechanismu řízení (12,95 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (11,63 %); 1.1.12 Brzdové hadice (10,89 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (8,74 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
+- **Octavia II:** 4.1.1 Stav a funkce světlometů (12,93 %); 2.1.3 Stav pákového mechanismu řízení (8,60 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,68 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (6,01 %); 1.1.12 Brzdové hadice (5,30 %).
+- **Octavia III:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (4,05 %); 4.1.1 Stav a funkce světlometů (2,19 %); 2.1.3 Stav pákového mechanismu řízení (1,45 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (0,97 %); 6.2.10 Kryty kol a systémy proti rozstřiku (0,65 %).
 - **Octavia IV:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (2,58 %); 4.1.1 Stav a funkce světlometů (0,38 %); 5.2.3 Kola a pneumatiky – pneumatiky (0,30 %); 2.1.3 Stav pákového mechanismu řízení (0,27 %); 5.2.2 Disky / ráfky kola (0,20 %).
 
 ## Fabia
@@ -54,12 +54,12 @@ Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky da
 
 Míry nevyhovujících prohlídek (výsledek 2/3); vážená aproximace ze zaokrouhlených vstupů. „—“ znamená chybějící vzorek.
 
-Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky dané generace:
+Top závady — podíl pravidelných prohlídek s daným kódem (každý kód jednou za prohlídku); všechny věky dané generace:
 
-- **Fabia I:** 4.1.1 Stav a funkce světlometů (23,80 %); 1.1.12 Brzdové hadice (9,84 %); 2.1.3 Stav pákového mechanismu řízení (9,32 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (7,09 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,33 %).
-- **Fabia II:** 4.1.1 Stav a funkce světlometů (8,59 %); 2.1.3 Stav pákového mechanismu řízení (5,11 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (4,59 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (4,10 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (3,18 %).
+- **Fabia I:** 4.1.1 Stav a funkce světlometů (23,50 %); 1.1.12 Brzdové hadice (9,79 %); 2.1.3 Stav pákového mechanismu řízení (9,24 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (7,08 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,33 %).
+- **Fabia II:** 4.1.1 Stav a funkce světlometů (8,51 %); 2.1.3 Stav pákového mechanismu řízení (5,08 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (4,59 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (4,10 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (3,17 %).
 - **Fabia III:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (2,07 %); 4.1.1 Stav a funkce světlometů (1,21 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (0,71 %); 2.1.3 Stav pákového mechanismu řízení (0,63 %); 8.2.1 Emise zážehových motorů (0,59 %).
-- **Fabia IV:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (1,60 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (0,37 %); 4.1.1 Stav a funkce světlometů (0,35 %); 8.2.1 Emise zážehových motorů (0,27 %); 2.1.3 Stav pákového mechanismu řízení (0,20 %).
+- **Fabia IV:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (1,60 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (0,36 %); 4.1.1 Stav a funkce světlometů (0,35 %); 8.2.1 Emise zážehových motorů (0,27 %); 2.1.3 Stav pákového mechanismu řízení (0,20 %).
 
 ## Golf
 
@@ -89,16 +89,23 @@ Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky da
 
 Míry nevyhovujících prohlídek (výsledek 2/3); vážená aproximace ze zaokrouhlených vstupů. „—“ znamená chybějící vzorek.
 
-Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky dané generace:
+Top závady — podíl pravidelných prohlídek s daným kódem (každý kód jednou za prohlídku); všechny věky dané generace:
 
-- **Golf I:** 2.1.3 Stav pákového mechanismu řízení (8,10 %); 1.1.12 Brzdové hadice (7,91 %); 4.1.1 Stav a funkce světlometů (6,92 %). Řádek věku 30 zahrnuje i všechna starší vozidla. Zveřejněný agregát obsahuje jen 3 kódy závad nad minimálním počtem; chybějící pořadí nedoplňujeme.
-- **Golf II:** 1.1.12 Brzdové hadice (8,70 %); 2.1.3 Stav pákového mechanismu řízení (8,50 %); 4.1.1 Stav a funkce světlometů (7,98 %); 1.1.11 Brzdová potrubí (6,68 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (6,60 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
-- **Golf III:** 2.1.3 Stav pákového mechanismu řízení (11,42 %); 1.1.12 Brzdové hadice (11,09 %); 4.1.1 Stav a funkce světlometů (10,51 %); 1.1.11 Brzdová potrubí (8,40 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (7,95 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
-- **Golf IV:** 2.1.3 Stav pákového mechanismu řízení (12,46 %); 4.1.1 Stav a funkce světlometů (10,70 %); 1.1.12 Brzdové hadice (10,50 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (9,84 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (8,30 %).
-- **Golf V:** 4.1.1 Stav a funkce světlometů (16,92 %); 2.1.3 Stav pákového mechanismu řízení (10,07 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (6,91 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,80 %); 1.1.12 Brzdové hadice (5,97 %).
-- **Golf VI:** 4.1.1 Stav a funkce světlometů (12,02 %); 2.1.3 Stav pákového mechanismu řízení (5,29 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (5,00 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (3,47 %); 6.2.10 Kryty kol a systémy proti rozstřiku (2,67 %).
-- **Golf VII:** 4.1.1 Stav a funkce světlometů (3,58 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (3,01 %); 2.1.3 Stav pákového mechanismu řízení (1,11 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (0,57 %); 6.2.10 Kryty kol a systémy proti rozstřiku (0,53 %).
+- **Golf I:** 2.1.3 Stav pákového mechanismu řízení (8,10 %); 1.1.12 Brzdové hadice (7,91 %); 4.1.1 Stav a funkce světlometů (6,72 %). Řádek věku 30 zahrnuje i všechna starší vozidla. Zveřejněný agregát obsahuje jen 3 kódy závad nad minimálním počtem; chybějící pořadí nedoplňujeme.
+- **Golf II:** 1.1.12 Brzdové hadice (8,70 %); 2.1.3 Stav pákového mechanismu řízení (8,50 %); 4.1.1 Stav a funkce světlometů (7,98 %); 1.1.11 Brzdová potrubí (6,60 %); 1.1.6 Ovladač parkovací brzdy, ovládací páka, západka parkovací brzdy, elektrická parkovací… (6,60 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
+- **Golf III:** 2.1.3 Stav pákového mechanismu řízení (11,39 %); 1.1.12 Brzdové hadice (11,04 %); 4.1.1 Stav a funkce světlometů (10,47 %); 1.1.11 Brzdová potrubí (8,17 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (7,94 %). Řádek věku 30 zahrnuje i všechna starší vozidla.
+- **Golf IV:** 2.1.3 Stav pákového mechanismu řízení (12,39 %); 4.1.1 Stav a funkce světlometů (10,59 %); 1.1.12 Brzdové hadice (10,49 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (9,84 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (8,29 %).
+- **Golf V:** 4.1.1 Stav a funkce světlometů (16,73 %); 2.1.3 Stav pákového mechanismu řízení (10,04 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (6,90 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (6,79 %); 1.1.12 Brzdové hadice (5,96 %).
+- **Golf VI:** 4.1.1 Stav a funkce světlometů (11,94 %); 2.1.3 Stav pákového mechanismu řízení (5,28 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (5,00 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (3,46 %); 6.2.10 Kryty kol a systémy proti rozstřiku (2,66 %).
+- **Golf VII:** 4.1.1 Stav a funkce světlometů (3,56 %); 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (3,01 %); 2.1.3 Stav pákového mechanismu řízení (1,11 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (0,57 %); 6.2.10 Kryty kol a systémy proti rozstřiku (0,53 %).
 - **Golf VIII:** 3.2.1 Prasklé nebo poškrábané zasklení nebo některé zasklení chybí (2,01 %); 4.1.1 Stav a funkce světlometů (0,40 %); 2.1.3 Stav pákového mechanismu řízení (0,30 %); 4.7.1 Stav a funkce osvětlení zadní tabulky registrační značky (0,25 %); 5.2.3 Kola a pneumatiky – pneumatiky (0,22 %).
+
+## JSON pro B2B i průvodce Kupuji ojetinu 2026
+
+Dosavadní kořen lines → generations a pole ageBuckets, failureByExactAge, mileageByExactAge zůstávají. Přidána audiences, defectMetric a deprecatedFields; jde o aditivní rozšíření schemaVersion 1.
+topDefects[].share je nyní podíl prohlídek s jedinečným třístupňovým kódem; starší occurrencesPerInspection zůstává jako kompatibilní alias téže hodnoty. unit popisuje novou správnou jednotku.
+mileageForGuide obsahuje přesně věky 5, 8, 10, 12 a 15 let. Chybějící věk má null a missingReason; nedosazujeme nejbližší věk. facelifts, engines a technicalSources pocházejí z karty generace a jejích zdrojů, nikoli ze STK.
+Pro B2C použít generační srovnání a náměty na fyzickou kontrolu; STK data nepřevádět na individuální verdikt, opravu konkrétního motoru ani jistotu nájezdu. Výběr vhodných pokynů a technických údajů před publikací ověřit.
 
 ## Metodika a omezení
 
@@ -108,8 +115,8 @@ Top závady — výskyty kódu/závažnosti na 100 prohlídek; všechny věky da
 - Věk = kalendářní rok prohlídky minus rok první registrace; pipeline omezuje věk na 30, proto 30 znamená 30 a více let. Nejde o přesný věk v den prohlídky.
 - Věkové skupiny jsou vážené počtem prohlídek ze zveřejněných řádků byAge. Míry vstupují zaokrouhlené na 4 desetinná místa: výsledek skupiny je aproximace, nikoli podíl z přesných původních počtů neúspěchů. Nezveřejněné malé/neurčené věkové skupiny nejsou dopočítávány.
 - Kvartily nájezdu jsou středy 10 000km intervalů. Počty platných odečtů pro konkrétní věk nejsou ve finálním agregátu uchovány; uvádíme null. Kvartily různých věků neslučujeme, nelze z nich vypočítat kvartil věkové skupiny.
-- Top závady jsou převzaty ze stávajícího agregátu. Podíl je počet výskytů kombinace kód/závažnost na prohlídku: při témže třímístném kódu ve více závažnostech se může prohlídka započítat vícekrát. Neoznačovat jako procento unikátních vozů s vadou.
+- Top závady: podíl pravidelných prohlídek, při kterých byl daný třístupňový kód zjištěn. Každý kód se v jedné prohlídce počítá právě jednou; pro rozdělení A/B/C se ponechává nejvyšší závažnost. Jedno vozidlo může mít v období více prohlídek, nejde o podíl unikátních vozů.
 - Datum built u registru je datum sestavení agregátu, nikoli prokázané datum referenčního výpisu. Referenční datum registru zůstává neověřeno. Žádné osobní údaje ani jednotlivá VIN nejsou součástí ukázky.
 - Nesrovnávat hrubé míry různě starých generací jako žebříček spolehlivosti. Nejmladší vozy s časnou pravidelnou prohlídkou mohou být zvláštní, nereprezentativní skupinou.
 
-Před placenou dodávkou: audit generačního přiřazení, sjednocení závad na unikátní prohlídku, ověření referenčního data registru a dohoda o použití s odběratelem.
+Před placenou dodávkou: audit generačního přiřazení, ověření referenčního data registru a dohoda o použití s odběratelem.
