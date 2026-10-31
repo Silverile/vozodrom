@@ -70,10 +70,17 @@ export function evidenceProblem(g,index,e){
  if(nonEuropeanMarket([scope.originalVariant,scope.variantYears,scope.tableSection,scope.rowNotes].filter(Boolean).join(' ')))return 'Explicit non-European market row';
  const ev=scope.generationEvidence;
  if(!ev||ev.generationIndex!==index)return 'Missing/wrong source generation evidence';
- if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production'].includes(ev.method))return 'Unknown attribution method';
+ if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production','series-number-article'].includes(ev.method))return 'Unknown attribution method';
  if(ev.rowFromYear!=null&&!(ev.rowFromYear>=g.from&&ev.rowToYear<=(g.to??2026)))return 'Engine row years contradict generation';
  if(ev.fromYear!=null&&ev.fromYear>(g.to??2026))return 'Source starts after generation';
  if(ev.toYear!=null&&ev.toYear<g.from)return 'Source ends before generation';
+ if(ev.method==='series-number-article'){
+  if(!/^\d{3}$/.test(ev.seriesNumber??''))return 'Missing article series number';
+  if(!new RegExp(`\\b[WRCAVXH]${ev.seriesNumber}\\b`).test(g.code??''))return 'Article series number contradicts generation';
+  if(!new RegExp(`Mercedes-Benz (?:Baureihe |[WRCAVXH] ?)${ev.seriesNumber}\\b`).test(ev.anchor??''))return 'Article title contradicts series number';
+  if(!(e.sources??[]).some(u=>new RegExp(`/Mercedes-Benz_(?:Baureihe_|[WRCAVXH]_?)${ev.seriesNumber}(?:$|#)`).test(decodeURI(u))))return 'Source URL does not identify the series';
+  return null;
+ }
  if(ev.method.startsWith('row-years'))return ev.rowFromYear==null?'Row-year attribution without row years':null;
  if(ev.fromYear==null||Math.abs(ev.fromYear-g.from)>1){
   const words=s=>new Set(s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().match(/[A-Z0-9]+/g)??[]);

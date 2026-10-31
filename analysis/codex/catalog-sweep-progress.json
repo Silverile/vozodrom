@@ -72738,7 +72738,7 @@
     "remainingWave1Generations": 550,
     "report": "analysis/codex/engine-throughput/secondary-source-progress.json"
   },
-  "activePhase": "wave-1 second-source engines, then wave 2; BMW/class badge routing corrected and six makes rebuilt",
+  "activePhase": "wave-1 second-source engines",
   "structurePasses": [
     {
       "report": "analysis/codex/structure-pass/batch-1.json",
@@ -72906,7 +72906,7 @@
     ],
     "scope": "Six audited badge namespaces only; other model matchers and statistics proven unchanged from 00206d5"
   },
-  "secondSourceQueue": "analysis/codex/badge-routing/wave-1-second-source-queue.json",
+  "secondSourceQueue": "analysis/codex/second-source-engines/queue.json",
   "globalMatcherCoverage": {
     "inventoryMakes": 432,
     "coveredMakes": 432,
@@ -72945,5 +72945,16 @@
     "report": "analysis/codex/badge-routing/report.json",
     "regression": "analysis/codex/badge-routing/regression.json",
     "validation": "analysis/codex/badge-routing/validation.json"
+  },
+  "secondSourceProgress": {
+    "snapshot": "analysis/codex/badge-routing/wave-1-second-source-queue.json",
+    "visited": 100,
+    "filled": 73,
+    "unresolved": 27,
+    "unvisited": 426,
+    "enginesAdded": 734,
+    "lastBatch": 1,
+    "report": "analysis/codex/second-source-engines/report-1.json",
+    "validation": "analysis/codex/second-source-engines/validation-1.json"
   }
 }
