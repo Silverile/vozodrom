@@ -80,8 +80,10 @@ def detail(tree,url,item,gen_title,span,gen_url=None):
     ev={'method':'specification-page','anchor':generation,'fromYear':span[0],'toYear':span[1],'generationIndex':item['generationIndex'],'rowFromYear':start,'rowToYear':end or start}
     scope={'tableSection':'Vehicle Engine Technical Data','variantYears':date_text or str(start),'originalVariant':title,'powerBasis':'explicit total electric output' if power_label=='TOTAL ELECTRIC POWER' else 'explicit vehicle Horsepower field in kW; no conversion','specificationPage':proof,'generationEvidence':ev}
     return {'fuel':fuel,'displacementCc':cc,'displacementLitresNominal':None if cc is None else round(cc/1000,1),'powerKwMin':kw,'powerKwMax':kw,'availablePowerKw':[kw],'powerRangeCoverage':'documented-versions-only','variant':variant,'sources':[url],'sourceScope':scope},None
-def research(item):
+def research(item,max_models=2,max_generation_pages=20,max_details=3):
     if item['engines'] or not item.get('from'):return item
+    if RATE_LIMITED:
+        item=json.loads(json.dumps(item));item['specFallbackStatus']='not-queried-after-rate-limit';item['reason']='Specification fallback deferred after HTTP 429; not proof of an absent page.';return item
     item=json.loads(json.dumps(item));item['specFallbackStatus']='attempted-no-match';attempts=item['attempts'];g=r.INDEX[item['make']][item['line']]['generations'][item['generationIndex']]
     brand=BRANDS.get(item['make'],MAKES[item['make']]).replace(' ','-');url=BASE+'/car-specs/'+brand+'-models'
     def fetch(u):
@@ -101,13 +103,13 @@ def research(item):
         tail=urllib.parse.unquote(u.rsplit('/',1)[-1]);tail=re.sub('^'+re.escape(brand)+'-','',tail,flags=re.I)
         if compact(tail) in model_names(item) and ('-models/' in u or re.search(r'/M\d+/',u)):models.append(u)
     if not models:a['error']='No exact model link in specification-site brand index';item['reason']=a['error'];return item
-    for model in list(dict.fromkeys(models))[:2]:
+    for model in list(dict.fromkeys(models))[:max_models]:
         mt,ma=fetch(model)
         if mt is None:continue
         genurls=[model] if re.search(r'/M\d+/',model) else [u for u,text in links(mt) if re.search(r'/'+re.escape(brand)+r'/M\d+/',u,re.I) and any(n and n in compact(urllib.parse.unquote(u.rsplit('/',1)[-1])) for n in model_names(item))]
         codes={c for c in r.t.token(g.get('code') or '') if re.search(r'\d',c)}
         genurls.sort(key=lambda u:-len(codes&r.t.token(urllib.parse.unquote(u.rsplit('/',1)[-1]))))
-        for gu in list(dict.fromkeys(genurls))[:20]:
+        for gu in list(dict.fromkeys(genurls))[:max_generation_pages]:
             gt,ga=fetch(gu)
             if gt is None:continue
             heading=r.t.clean(gt.xpath('string(//h1)'));span=production(gt)
@@ -121,7 +123,7 @@ def research(item):
                 for u,text in links(table):
                     if re.search(r'/'+re.escape(brand)+r'/\d+/[^/]+\.html$',u,re.I):specifications.append(u)
             gen_title=re.sub(r'^'+re.escape(brand.replace('-',' '))+r'\s+|\s+Specs$','',heading,flags=re.I)
-            for su in list(dict.fromkeys(specifications))[:3]:
+            for su in list(dict.fromkeys(specifications))[:max_details]:
                 st,sa=fetch(su)
                 if st is None:continue
                 engine,reason=detail(st,su,item,gen_title,span,gu);sa['error']=reason;sa['usableRows']=int(engine is not None)

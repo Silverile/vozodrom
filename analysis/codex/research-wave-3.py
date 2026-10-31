@@ -3,9 +3,12 @@ import importlib.util, pathlib, re, time, sys, copy, subprocess, urllib.parse
 spec=importlib.util.spec_from_file_location('r','analysis/codex/second-source-engines.py');r=importlib.util.module_from_spec(spec);spec.loader.exec_module(r)
 root=next((a[7:] for a in sys.argv if a.startswith('--root=')),'analysis/codex/wave-3/batch-1');pathlib.Path(root).mkdir(parents=True,exist_ok=True)
 t=r.t;r.INDEX=t.load('src/data/model-cards-index.json')
+ms=importlib.util.spec_from_file_location('spec_site','analysis/codex/spec-site-engines.py');ss=importlib.util.module_from_spec(ms);ms.loader.exec_module(ss);ss.r=r
+ss.BRANDS.update({'austin-motor-company':'Austin','bristol-cars':'Bristol','bugatti-automobiles':'Bugatti','automobili-pininfarina':'Pininfarina','avatr-technology':'Avatr','avions-voisin':'Voisin','auto-union':'Auto-Union'})
+make_names={x['slug']:x['name'] for x in t.load('src/data/makes-index.json')}
 if pathlib.Path(root+'/queue.json').exists():queue=t.load(root+'/queue.json')
 else:
- audit=t.load('analysis/codex/catalog-completeness-audit.json');progress=t.load('analysis/codex/wave-3/progress.json') if pathlib.Path('analysis/codex/wave-3/progress.json').exists() else {};visited=set(progress.get('visitedIds',[]));queue={'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'lines':[{'makeSlug':x['makeSlug'],'lineSlug':x['lineSlug'],'fleetN':x['fleetN']} for x in audit['lines'] if not x['fleetN'] and x['makeSlug']+'/'+x['lineSlug'] not in visited][:200]};t.write(root+'/queue.json',queue)
+ audit=t.load('analysis/codex/catalog-completeness-audit.json');progress=t.load('analysis/codex/wave-3/progress.json') if pathlib.Path('analysis/codex/wave-3/progress.json').exists() else {};visited=set(progress.get('visitedIds',[]));queue={'baselineRevision':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'lines':[{'makeSlug':x['makeSlug'],'lineSlug':x['lineSlug'],'fleetN':x['fleetN']} for x in audit['lines'] if not x['fleetN'] and x['makeSlug']+'/'+x['lineSlug'] not in visited][:400]};t.write(root+'/queue.json',queue)
 if '--merge' in sys.argv:
  shards=[t.load(root+'/research-shard-'+str(i)+'.json') for i in range(4)]
  assert all(x['complete'] and not x.get('rateLimited') for x in shards)
@@ -86,10 +89,11 @@ for row_index,row in enumerate(queue['lines']):
   urls=list(dict.fromkeys([*g.get('sources',[]),*card.get('sources',[])]))
   wiki=[u for u in urls if re.match(r'https://(?:en|de|cs)\.wikipedia.org/',u)]
   brands={'abarth':'Abarth','ac-cars':'AC','acura':'Acura','adler':'Adler','aiways':'Aiways','aixam':'Aixam','alfa-romeo':'Alfa Romeo','alpina':'Alpina','alpine':'Alpine','amc':'AMC','arcfox':'Arcfox','ariel':'Ariel','aro':'ARO','artega':'Artega','aston-martin':'Aston Martin','audi':'Audi'}
-  model=re.sub(r'\s*\(\d{4}\)\s*$','',card['name']);brand=brands.get(make,make.replace('-',' ').title());title=model if model.lower().startswith(brand.lower()+' ') else brand+' '+model
+  brands.update({'austin-motor-company':'Austin','bristol-cars':'Bristol','bugatti-automobiles':'Bugatti','automobili-pininfarina':'Pininfarina','avatr-technology':'Avatr','auto-union':'Auto Union'})
+  model=re.sub(r'\s*\(\d{4}\)\s*$','',card['name']);brand=brands.get(make,make_names.get(make,make.replace('-',' ').title()));title=model if model.lower().startswith(brand.lower()+' ') else brand+' '+model
   dedicated='https://en.wikipedia.org/wiki/'+urllib.parse.quote(title.replace(' ','_'),safe='_()/,-')
   proposed=['https://de.wikipedia.org/wiki/Alpina_'+card['name'].replace(' ','_')] if make=='alpina' else []
-  leads=list(dict.fromkeys([*proposed,dedicated,*wiki[:2],*urls[:1]]))[:4];selected=None
+  leads=list(dict.fromkeys([*proposed,dedicated,*wiki[:2]]))[:3];selected=None
   for url in leads:
    if url not in t.cache:time.sleep(1.5)
    tree,canonical,error=t.fetch(url);a={'url':url,'canonical':canonical,'error':error};attempts.append(a)
@@ -130,6 +134,10 @@ for row_index,row in enumerate(queue['lines']):
      if not e:e=combustion_from_box(production[0],url,gi,g,title)
      if e:item['engines']=[e]
    item['source']=url
+  if not limited and not item['engines'] and not g.get('engines') and g.get('from') and g.get('dateBasis')!='announcement':
+   r.INDEX[make][line]=card
+   fallback=ss.research({'make':make,'line':line,'generationIndex':gi,'from':g.get('from'),'to':g.get('to'),'engines':[],'attempts':[]},max_models=1,max_generation_pages=2,max_details=1)
+   item['engines']=fallback['engines'];item['specAttempts']=fallback['attempts'];item['specFallbackStatus']=fallback.get('specFallbackStatus');item['specReason']=fallback.get('reason')
   gens.append(item)
  result={'id':id,'name':card['name'],'attempts':attempts,'pages':list(pages.values()),'generations':gens,'rateLimited':limited};results.append(result)
  pending=[v for k,v in done.items() if k not in {x['id'] for x in results} and any(i%total==shard and q['makeSlug']+'/'+q['lineSlug']==k for i,q in enumerate(queue['lines']))]
