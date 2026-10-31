@@ -1,0 +1,195 @@
+{
+  "status": "complete",
+  "baseline": "00206d5",
+  "affectedMakes": [
+    "audi",
+    "bmw",
+    "mercedes-benz",
+    "peugeot",
+    "saab",
+    "volvo"
+  ],
+  "syntheticCases": 167,
+  "unaffectedMakeMatchers": 211,
+  "unaffectedLookups": 29371,
+  "makeTotalsPreserved": true,
+  "lineMetricsChanged": 45,
+  "emptyGenerationExceptions": 21,
+  "highlights": [
+    {
+      "id": "bmw/rada-1",
+      "fleetBefore": 11315,
+      "fleetAfter": 11716,
+      "inspectionsBefore": 29548,
+      "inspectionsAfter": 30396
+    },
+    {
+      "id": "bmw/rada-2",
+      "fleetBefore": 3950,
+      "fleetAfter": 2463,
+      "inspectionsBefore": 7295,
+      "inspectionsAfter": 4628
+    },
+    {
+      "id": "bmw/rada-2-active-tourer",
+      "fleetBefore": null,
+      "fleetAfter": 1675,
+      "inspectionsBefore": null,
+      "inspectionsAfter": 2442
+    },
+    {
+      "id": "bmw/rada-2-gran-tourer",
+      "fleetBefore": null,
+      "fleetAfter": 1151,
+      "inspectionsBefore": null,
+      "inspectionsAfter": 2065
+    },
+    {
+      "id": "bmw/rada-3",
+      "fleetBefore": 32702,
+      "fleetAfter": 60225,
+      "inspectionsBefore": 69830,
+      "inspectionsAfter": 131501
+    },
+    {
+      "id": "bmw/rada-4",
+      "fleetBefore": 3374,
+      "fleetAfter": 5207,
+      "inspectionsBefore": 6911,
+      "inspectionsAfter": 8958
+    },
+    {
+      "id": "bmw/rada-5",
+      "fleetBefore": 38026,
+      "fleetAfter": 39413,
+      "inspectionsBefore": 82451,
+      "inspectionsAfter": 85219
+    },
+    {
+      "id": "bmw/rada-6",
+      "fleetBefore": 2393,
+      "fleetAfter": 2606,
+      "inspectionsBefore": 5793,
+      "inspectionsAfter": 6247
+    },
+    {
+      "id": "bmw/rada-7",
+      "fleetBefore": 6073,
+      "fleetAfter": 6270,
+      "inspectionsBefore": 11947,
+      "inspectionsAfter": 12183
+    },
+    {
+      "id": "mercedes-benz/trida-c",
+      "fleetBefore": 21190,
+      "fleetAfter": 22028,
+      "inspectionsBefore": 44564,
+      "inspectionsAfter": 49507
+    },
+    {
+      "id": "mercedes-benz/trida-e",
+      "fleetBefore": 25553,
+      "fleetAfter": 27444,
+      "inspectionsBefore": 47975,
+      "inspectionsAfter": 56048
+    },
+    {
+      "id": "mercedes-benz/trida-s",
+      "fleetBefore": 7251,
+      "fleetAfter": 7764,
+      "inspectionsBefore": 12751,
+      "inspectionsAfter": 14496
+    },
+    {
+      "id": "saab/9-3",
+      "fleetBefore": 2320,
+      "fleetAfter": 2328,
+      "inspectionsBefore": 5692,
+      "inspectionsAfter": 5730
+    },
+    {
+      "id": "saab/9-5",
+      "fleetBefore": 1589,
+      "fleetAfter": 1601,
+      "inspectionsBefore": 3828,
+      "inspectionsAfter": 3870
+    },
+    {
+      "id": "volvo/240",
+      "fleetBefore": 105,
+      "fleetAfter": 300,
+      "inspectionsBefore": 167,
+      "inspectionsAfter": 266
+    }
+  ],
+  "bmw3Generations": [
+    {
+      "index": 0,
+      "name": "Řada 3 (E21)",
+      "code": "E21",
+      "from": 1975,
+      "to": 1983,
+      "fleetBefore": 471,
+      "fleetAfter": 754
+    },
+    {
+      "index": 1,
+      "name": "Řada 3 (E30)",
+      "code": "E30",
+      "from": 1982,
+      "to": 1994,
+      "fleetBefore": 1797,
+      "fleetAfter": 2338
+    },
+    {
+      "index": 2,
+      "name": "Řada 3 (E36)",
+      "code": "E36",
+      "from": 1990,
+      "to": 2000,
+      "fleetBefore": 3969,
+      "fleetAfter": 5186
+    },
+    {
+      "index": 3,
+      "name": "Řada 3 (E46)",
+      "code": "E46",
+      "from": 1997,
+      "to": 2006,
+      "fleetBefore": 10334,
+      "fleetAfter": 16757
+    },
+    {
+      "index": 4,
+      "name": "Řada 3 (E90)",
+      "code": "E90",
+      "from": 2004,
+      "to": 2013,
+      "fleetBefore": 10837,
+      "fleetAfter": 19760
+    },
+    {
+      "index": 5,
+      "name": "Řada 3 (F30)",
+      "code": "F30",
+      "from": 2011,
+      "to": 2020,
+      "fleetBefore": 3176,
+      "fleetAfter": 8475
+    },
+    {
+      "index": 6,
+      "name": "Řada 3 (G20)",
+      "code": "G20",
+      "from": 2018,
+      "to": null,
+      "fleetBefore": 2118,
+      "fleetAfter": 6955
+    }
+  ],
+  "limitations": [
+    "Bare Mercedes 300/350 outside historic production periods do not uniquely identify E/S/SL; no class is guessed.",
+    "Missing production dates and first-registration year proxies remain limitations.",
+    "New aliases come from existing public catalogue names/aliases and explicit chassis codes; this is not a complete decoder of all register spellings."
+  ]
+}
