@@ -19,6 +19,10 @@ assert synthetic(2005,{'only':(2000,2010)})=='only'
 assert synthetic(2026,{'only':(2000,None)})=='only'
 assert synthetic(2026,{'only':(None,None)})=='only'
 m=Matcher()
+assert m.generation('mini','cooper',2024,'J01')==3
+assert m.generation('mini','cooper',2024,'F66')==4
+assert m.generation('mini','cooper',2024,'PREFIXJ01SUFFIX')==4
+assert m.generation('wuling-motors','rongguang',2026,'CF510V')==1
 assert m.line('mercedes-benz','300',1985) is None
 assert m.line('mercedes-benz','350',2005) is None
 assert m.line('mercedes-benz','300',1926)=='300-350-predvalecne'

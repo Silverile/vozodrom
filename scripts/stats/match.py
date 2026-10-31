@@ -101,7 +101,9 @@ class Matcher:
             card = cards.get(l["makeSlug"], {}).get(l["slug"])
             gens = card["generations"] if card else l.get("generations") or []
             self.gens[(l["makeSlug"], l["slug"])] = [
-                (None if g.get("dateBasis") == "announcement" else g.get("from"), g.get("to"), set(re.findall(r"\(([A-Z0-9]{2,4})\)", (g.get("code") or "") + " " + (g.get("name") or ""))))
+                (None if g.get("dateBasis") == "announcement" else g.get("from"), g.get("to"),
+                 set(re.findall(r"\b[A-Z0-9]{2,10}\b", (g.get("code") or "").upper()))
+                 | set(re.findall(r"\(([A-Z0-9]{2,4})\)", (g.get("code") or "") + " " + (g.get("name") or ""))))
                 for g in gens
             ]
             if l['makeSlug'] in ('bmw', 'mercedes-benz'):
@@ -341,7 +343,10 @@ class Matcher:
                 return regional[0]
             hits = [i for i in hits if i not in regional]
         if len(hits) > 1 and type_text:
-            t = set(re.findall(r"[A-Z0-9]{2,4}", fold(type_text)))
+            # Match complete chassis tokens, including codes longer than four
+            # characters. Splitting identifiers into four-character fragments
+            # loses bare J01/CF510V and can create accidental partial matches.
+            t = set(re.findall(r"\b[A-Z0-9]{2,10}\b", fold(type_text)))
             coded = [i for i in hits if gens[i][2] & t]
             if len(coded) == 1:
                 return coded[0]

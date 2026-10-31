@@ -1030,8 +1030,8 @@
         "code": null,
         "name": "A32 – I30",
         "from": 1995,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1999,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "sedan"
@@ -1051,7 +1051,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nInfiniti I30, nikoli dřívější japonský Nissan Cefiro."
         },
         "trunkL": null,
         "markets": [],
@@ -1059,13 +1059,15 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_I"
-        ]
+          "https://en.wikipedia.org/wiki/Infiniti_I",
+          "https://en.wikipedia.org/wiki/Nissan_Cefiro"
+        ],
+        "dateBasis": "production"
       },
       {
         "code": null,
         "name": "A33 – I30 / I35",
-        "from": null,
+        "from": 1999,
         "to": 2004,
         "productionStatus": "ended",
         "facelift": null,
@@ -1095,8 +1097,10 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_I"
-        ]
+          "https://en.wikipedia.org/wiki/Infiniti_I",
+          "https://www.automobile-catalog.com/curve/2000/2166290/infiniti_i30.html"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
@@ -1722,13 +1726,14 @@
     "generations": [
       {
         "code": null,
-        "name": "F31 – kupé",
+        "name": "M30 (F31)",
         "from": 1989,
         "to": 1992,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [],
         "bodyTypes": [
-          "kupe"
+          "kupe",
+          "kabriolet"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -1745,7 +1750,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nSouběžné karoserie a varianty společné podvozkové generace; dílčí období jsou zachována v podkladech."
         },
         "trunkL": null,
         "markets": [],
@@ -1753,43 +1758,81 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_M"
-        ]
-      },
-      {
-        "code": null,
-        "name": "F31 – kabriolet",
-        "from": null,
-        "to": 1992,
-        "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": [
-          "kabriolet"
+          "https://en.wikipedia.org/wiki/Infiniti_M",
+          "https://www.auto-forever.com/voitures/infiniti-m30-convertible/"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": 2616
-        },
-        "specificationScope": {
-          "market": "source-production",
-          "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
-        },
-        "trunkL": null,
-        "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
-        "photo": null,
-        "trims": null,
-        "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_M"
+        "dateBasis": "production",
+        "bodyVariants": [
+          {
+            "code": null,
+            "name": "F31 – kupé",
+            "from": 1989,
+            "to": 1992,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "kupe"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": 4796,
+              "width": 1689,
+              "height": 1321,
+              "wheelbase": 2616
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_M"
+            ]
+          },
+          {
+            "code": null,
+            "name": "F31 – kabriolet",
+            "from": 1991,
+            "to": 1992,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": 2616
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_M",
+              "https://www.auto-forever.com/voitures/infiniti-m30-convertible/"
+            ],
+            "dateBasis": "production"
+          }
         ]
       }
     ],
@@ -3327,13 +3370,14 @@
     "generations": [
       {
         "code": null,
-        "name": "V36 – přejmenované kupé",
-        "from": null,
+        "name": "Q60 I (V36)",
+        "from": 2013,
         "to": 2015,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [],
         "bodyTypes": [
-          "kupe"
+          "kupe",
+          "kabriolet"
         ],
         "engines": null,
         "engineCoverage": "unknown",
@@ -3350,7 +3394,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nOznačení Q60 od 2013; původní karoserie Infiniti G se vyráběly dříve.\nSouběžné karoserie a varianty společné podvozkové generace; dílčí období jsou zachována v podkladech."
         },
         "trunkL": null,
         "markets": [],
@@ -3359,42 +3403,79 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Infiniti_Q60"
-        ]
-      },
-      {
-        "code": null,
-        "name": "V36 – přejmenovaný kabriolet",
-        "from": null,
-        "to": 2015,
-        "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": [
-          "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": 4656,
-          "width": 1852,
-          "height": 1400,
-          "wheelbase": 2850
-        },
-        "specificationScope": {
-          "market": "source-production",
-          "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
-        },
-        "trunkL": null,
-        "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
-        "photo": null,
-        "trims": null,
-        "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_Q60"
+        "dateBasis": "production",
+        "bodyVariants": [
+          {
+            "code": null,
+            "name": "V36 – přejmenované kupé",
+            "from": 2013,
+            "to": 2015,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "kupe"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": 4651,
+              "width": 1824,
+              "height": null,
+              "wheelbase": 2850
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nOznačení Q60 od 2013; původní karoserie Infiniti G se vyráběly dříve."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_Q60"
+            ],
+            "dateBasis": "production"
+          },
+          {
+            "code": null,
+            "name": "V36 – přejmenovaný kabriolet",
+            "from": 2013,
+            "to": 2015,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "kabriolet"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": 4656,
+              "width": 1852,
+              "height": 1400,
+              "wheelbase": 2850
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nOznačení Q60 od 2013; původní karoserie Infiniti G se vyráběly dříve."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_Q60"
+            ],
+            "dateBasis": "production"
+          }
         ]
       },
       {
@@ -3611,11 +3692,11 @@
     "generations": [
       {
         "code": null,
-        "name": "Y51 – Q70",
+        "name": "Q70 / Q70L (Y51)",
         "from": 2013,
         "to": 2019,
         "productionStatus": "ended",
-        "facelift": null,
+        "facelift": [],
         "bodyTypes": [
           "sedan"
         ],
@@ -3634,7 +3715,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nSouběžné karoserie a varianty společné podvozkové generace; dílčí období jsou zachována v podkladech."
         },
         "trunkL": null,
         "markets": [],
@@ -3642,43 +3723,81 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_Q70"
-        ]
-      },
-      {
-        "code": null,
-        "name": "Y51 – Q70L",
-        "from": null,
-        "to": 2019,
-        "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": [
-          "sedan"
+          "https://en.wikipedia.org/wiki/Infiniti_Q70",
+          "https://static.nhtsa.gov/odi/rcl/2024/RMISC-24V470-6303.pdf"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": null,
-          "width": 1845,
-          "height": 1509,
-          "wheelbase": 3051
-        },
-        "specificationScope": {
-          "market": "source-production",
-          "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
-        },
-        "trunkL": null,
-        "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
-        "photo": null,
-        "trims": null,
-        "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_Q70"
+        "dateBasis": "production",
+        "bodyVariants": [
+          {
+            "code": null,
+            "name": "Y51 – Q70",
+            "from": 2013,
+            "to": 2019,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "sedan"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": 4945,
+              "width": 1845,
+              "height": 1509,
+              "wheelbase": 2900
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_Q70"
+            ]
+          },
+          {
+            "code": null,
+            "name": "Y51 – Q70L",
+            "from": 2014,
+            "to": 2019,
+            "productionStatus": "ended",
+            "facelift": null,
+            "bodyTypes": [
+              "sedan"
+            ],
+            "engineCoverage": "unknown",
+            "drivetrains": null,
+            "transmissions": null,
+            "dimensionsMm": {
+              "length": null,
+              "width": 1845,
+              "height": 1509,
+              "wheelbase": 3051
+            },
+            "specificationScope": {
+              "market": "source-production",
+              "modelYear": null,
+              "variant": null,
+              "bodyType": null,
+              "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+            },
+            "trunkL": null,
+            "markets": [],
+            "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+            "photo": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Infiniti_Q70",
+              "https://static.nhtsa.gov/odi/rcl/2024/RMISC-24V470-6303.pdf"
+            ],
+            "dateBasis": "production"
+          }
         ]
       }
     ],

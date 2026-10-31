@@ -1,0 +1,21 @@
+{
+  "severity": "medium",
+  "file": "src/lib/listing-context.ts",
+  "line": 74,
+  "relatedFile": "src/lib/listing-catalog.ts",
+  "relatedLine": 49,
+  "claim": "A 2019 W463 stored generation id selects the 1990–2018 generation because both selection steps take the first exact code match.",
+  "reproduction": {
+    "year": 2019,
+    "generationId": "W463",
+    "firstMatch": {
+      "from": 1990,
+      "to": 2018
+    },
+    "yearCompatible": {
+      "from": 2018,
+      "to": 2024
+    }
+  },
+  "suggestedFix": "Filter candidates by listing year and prefer the exact selected code/from/to tuple in cardGeneration before a code-only fallback; retain old stored ids."
+}
