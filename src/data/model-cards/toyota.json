@@ -28402,12 +28402,7 @@
             "gears": 1
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1920,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -28438,7 +28433,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1380480296",
           "https://de.wikipedia.org/w/index.php?oldid=270220591",
-          "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240916-Proace-Tech-Specs.pdf"
+          "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240916-Proace-Tech-Specs.pdf",
+          "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
         ],
         "trims": [
           {
@@ -28818,13 +28814,143 @@
               "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240916-Proace-Tech-Specs.pdf"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "mpv",
+            "label": "Verso Family, 8 míst (2022)",
+            "dimensionsMm": {
+              "length": 4959,
+              "width": 1920,
+              "height": 1910,
+              "wheelbase": 3275
+            },
+            "trunkL": 603,
+            "noteCs": "Verso Family Medium, všech osm míst v použití, podle britského továrního technického listu 03/2022. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Kufr VDA po horní hranu sedadel, nikoli po střechu. Rozporný údaj Shuttle 700/507 l se nepoužívá.",
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "Van",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4959,
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ],
+            "anchor": "Factory UK March 2022 technical sheet PDF p.2, Medium Family 8 seats up, top-of-seats VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Verso Family, 8 míst (2022)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1920,
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ],
+            "anchor": "Factory UK March 2022 technical sheet PDF p.2, Medium Family 8 seats up, top-of-seats VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Verso Family, 8 míst (2022)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1910,
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ],
+            "anchor": "Factory UK March 2022 technical sheet PDF p.2, Medium Family 8 seats up, top-of-seats VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Verso Family, 8 míst (2022)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 3275,
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ],
+            "anchor": "Factory UK March 2022 technical sheet PDF p.2, Medium Family 8 seats up, top-of-seats VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Verso Family, 8 míst (2022)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 603,
+            "sources": [
+              "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
+            ],
+            "anchor": "Factory UK March 2022 technical sheet PDF p.2, Medium Family 8 seats up, top-of-seats VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Verso Family, 8 míst (2022)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1920,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Verso Family, 8 míst (2022)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Van",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380480296",
       "https://de.wikipedia.org/w/index.php?oldid=270220591",
-      "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240916-Proace-Tech-Specs.pdf"
+      "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/240916-Proace-Tech-Specs.pdf",
+      "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/220321M-Proace-Verso-Tech-Spec.pdf"
     ],
     "needsReview": [
       {
@@ -28960,12 +29086,7 @@
             "gears": 1
           }
         ],
-        "dimensionsMm": {
-          "length": 4403,
-          "width": 1848,
-          "height": null,
-          "wheelbase": 2785
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -28996,7 +29117,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381608041",
           "https://de.wikipedia.org/w/index.php?oldid=256073910",
-          "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/241007-Proace-City-Tech-Specs.pdf"
+          "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/241007-Proace-City-Tech-Specs.pdf",
+          "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
         ],
         "trims": [
           {
@@ -29424,13 +29546,192 @@
               "https://www.auto-data.net/en/toyota-proace-city-facelift-2024-l1-4-door-50-kwh-136hp-electric-56758"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "dodavka",
+            "label": "L1 (2019)",
+            "dimensionsMm": {
+              "length": 4403,
+              "width": 1848,
+              "height": null,
+              "wheelbase": 2785
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka podle tovární zprávy při uvedení 04/2019. Šířka bez zrcátek. Výška je zde rozpětí podle provedení; technický list a katalog 10/2024 se ve výšce navíc rozcházejí, proto se jediná neuvádí. Nákladový objem není osobní kufr.",
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "L2 (2019)",
+            "dimensionsMm": {
+              "length": 4753,
+              "width": 1848,
+              "height": null,
+              "wheelbase": 2975
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka podle tovární zprávy při uvedení 04/2019. Šířka bez zrcátek. Výška je zde rozpětí podle provedení; technický list a katalog 10/2024 se ve výšce navíc rozcházejí, proto se jediná neuvádí. Nákladový objem není osobní kufr.",
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ]
+          },
+          {
+            "bodyType": "mpv",
+            "label": "Verso",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4403,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1 (2019)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1848,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1 (2019)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2785,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1 (2019)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4753,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2 (2019)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1848,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2 (2019)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2975,
+            "sources": [
+              "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
+            ],
+            "anchor": "Factory launch release 18 April 2019, PRINCIPAL DIMENSIONS PROACE CITY VAN",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2 (2019)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4403,
+            "width": 1848,
+            "height": null,
+            "wheelbase": 2785
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "L1 (2019)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Launch reference gives min/max; 2024 factory brochure gives 1860 mm while technical sheet gives 1880 mm, without matched configuration mapping."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "L2 (2019)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Launch reference gives min/max; 2024 factory brochure gives 1860 mm while technical sheet gives 1880 mm, without matched configuration mapping."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 2,
+              "label": "Verso",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381608041",
       "https://de.wikipedia.org/w/index.php?oldid=256073910",
-      "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/241007-Proace-City-Tech-Specs.pdf"
+      "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/241007-Proace-City-Tech-Specs.pdf",
+      "https://media.toyota.co.uk/the-toyota-proace-city-a-new-compact-van-to-strengthen-toyotas-lcv-line-up/"
     ],
     "needsReview": [
       {

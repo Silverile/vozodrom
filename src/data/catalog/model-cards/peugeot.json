@@ -20324,12 +20324,7 @@
             "gears": 6
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -20419,6 +20414,159 @@
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only",
           "transmissions": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "dodavka",
+            "label": "L1 po faceliftu (2015)",
+            "dimensionsMm": {
+              "length": 4380,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "trunkL": null,
+            "noteCs": "Skříňový Partner po faceliftu podle tovární zprávy 2015. Délka je převod výrobcem zaokrouhlených metrů; ostatní vnější rozměry nebyly potvrzeny. Nákladový objem není osobní kufr.",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "L2 po faceliftu (2015)",
+            "dimensionsMm": {
+              "length": 4630,
+              "width": null,
+              "height": null,
+              "wheelbase": null
+            },
+            "trunkL": null,
+            "noteCs": "Skříňový Partner po faceliftu podle tovární zprávy 2015. Délka je převod výrobcem zaokrouhlených metrů; ostatní vnější rozměry nebyly potvrzeny. Nákladový objem není osobní kufr.",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ]
+          },
+          {
+            "bodyType": "mpv",
+            "label": "Tepee",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4380,
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ],
+            "anchor": "Factory 2015 release, Nützliche Leistungen, two van lengths 4.38/4.63m",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1 po faceliftu (2015)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4630,
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ],
+            "anchor": "Factory 2015 release, Nützliche Leistungen, two van lengths 4.38/4.63m",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2 po faceliftu (2015)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only",
+            "transmissions": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "L1 po faceliftu (2015)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "L2 po faceliftu (2015)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 2,
+              "label": "Tepee",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+                }
+              ]
+            }
+          ]
         }
       },
       {

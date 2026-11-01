@@ -879,12 +879,7 @@
             "gears": 4
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": 2400
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe / historical",
           "modelYear": null,
@@ -892,7 +887,7 @@
           "bodyType": "sedan",
           "noteCs": "Rozměry a zavazadlový prostor pro sedan 1000 MB. Původní souhrnná anglická stránka uváděla 4200/1610/1400; rozporné rozměry zůstávají k ověření."
         },
-        "trunkL": 340,
+        "trunkL": null,
         "markets": [
           "Europe"
         ],
@@ -1102,6 +1097,131 @@
         ],
         "generationFactCoverage": {
           "transmissions": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "sedan",
+            "label": "1000 MB, přední kufr",
+            "dimensionsMm": {
+              "length": 4170,
+              "width": 1620,
+              "height": 1390,
+              "wheelbase": null
+            },
+            "trunkL": 220,
+            "noteCs": "Čtyřdveřový 1000 MB. Rozměry jsou převod výrobcem zaokrouhlených metrů na mm. Uvedených 220 l patří pouze přednímu kufru; nejde o součet s prostorem za zadními sedadly. Rozvor nebyl v tomto podkladu potvrzen.",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/"
+            ]
+          },
+          {
+            "bodyType": "kupe",
+            "label": "MBX",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4170,
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/"
+            ],
+            "anchor": "Factory anniversary release 19 March 2019, compact exterior dimensions and front luggage compartment",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "1000 MB, přední kufr"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1620,
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/"
+            ],
+            "anchor": "Factory anniversary release 19 March 2019, compact exterior dimensions and front luggage compartment",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "1000 MB, přední kufr"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1390,
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/"
+            ],
+            "anchor": "Factory anniversary release 19 March 2019, compact exterior dimensions and front luggage compartment",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "1000 MB, přední kufr"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 220,
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/55-years-of-the-skoda-1000-mb-the-first-czech-mass-produced-car-celebrates-its-anniversary/"
+            ],
+            "anchor": "Factory anniversary release 19 March 2019, compact exterior dimensions and front luggage compartment",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "1000 MB, přední kufr"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": 2400
+          },
+          "previousTrunkL": 340,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "transmissions": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "1000 MB, přední kufr",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Wheelbase not established in the matched manufacturer reference."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "MBX",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+                }
+              ]
+            }
+          ]
         }
       }
     ],

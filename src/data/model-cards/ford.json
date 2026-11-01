@@ -12019,12 +12019,7 @@
             "gears": 5
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1685,
-          "height": null,
-          "wheelbase": 2486
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -12032,7 +12027,7 @@
           "bodyType": null,
           "noteCs": "Na anglické Wikipedii vedena jako 5. generace. Rozměry z Wikipedie (délka a výška se liší dle verze). Sedan vyráběn jen pro mimoevropské trhy."
         },
-        "trunkL": 284,
+        "trunkL": null,
         "markets": [
           "Europe"
         ],
@@ -12053,7 +12048,8 @@
           ]
         },
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1367304682"
+          "https://en.wikipedia.org/w/index.php?oldid=1367304682",
+          "https://www.ford-fiesta-club.de/Fiesta05.pdf"
         ],
         "trims": [
           {
@@ -12391,7 +12387,123 @@
               "https://en.wikipedia.org/w/index.php?oldid=1367304682"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "3/5 dveří po faceliftu",
+            "dimensionsMm": {
+              "length": 3924,
+              "width": 1685,
+              "height": null,
+              "wheelbase": 2486
+            },
+            "trunkL": null,
+            "noteCs": "Hatchback po faceliftu podle německého továrního technického listu. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Výška je uvedena v rozpětí podle provedení, jediná se nevybírá. Základní kufr s konkrétní rezervou nebyl potvrzen.",
+            "sources": [
+              "https://www.ford-fiesta-club.de/Fiesta05.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "Van",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3924,
+            "sources": [
+              "https://www.ford-fiesta-club.de/Fiesta05.pdf"
+            ],
+            "anchor": "Original Ford German technical sheet, TECHNISCHE DATEN 3/5-door columns",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří po faceliftu"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1685,
+            "sources": [
+              "https://www.ford-fiesta-club.de/Fiesta05.pdf"
+            ],
+            "anchor": "Original Ford German technical sheet, TECHNISCHE DATEN 3/5-door columns",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří po faceliftu"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2486,
+            "sources": [
+              "https://www.ford-fiesta-club.de/Fiesta05.pdf"
+            ],
+            "anchor": "Original Ford German technical sheet, TECHNISCHE DATEN 3/5-door columns",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří po faceliftu"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1685,
+            "height": null,
+            "wheelbase": 2486
+          },
+          "previousTrunkL": 284,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "3/5 dveří po faceliftu",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory height ranges differ by door count/equipment; no matched scalar reference."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "Van",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "code": "Mk7 (B299)",
@@ -12503,12 +12615,7 @@
             "gears": 6
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": 2489
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -12537,7 +12644,8 @@
           ]
         },
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1352531799"
+          "https://en.wikipedia.org/w/index.php?oldid=1352531799",
+          "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
         ],
         "trims": [
           {
@@ -12959,7 +13067,199 @@
               "https://en.wikipedia.org/w/index.php?oldid=1352531799"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "3/5 dveří, opravná sada (2011)",
+            "dimensionsMm": {
+              "length": 3950,
+              "width": 1722,
+              "height": 1481,
+              "wheelbase": null
+            },
+            "trunkL": 295,
+            "noteCs": "Běžný hatchback podle britského továrního katalogu MY2011.75, bez Sport a stylingového paketu. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Výška je výrobcem uvedené maximum; kufr ISO 3832 při pěti místech. Rozvor v tabulce není.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "hatchback",
+            "label": "3/5 dveří, ocelová rezerva (2011)",
+            "dimensionsMm": {
+              "length": 3950,
+              "width": 1722,
+              "height": 1481,
+              "wheelbase": null
+            },
+            "trunkL": 281,
+            "noteCs": "Běžný hatchback podle britského továrního katalogu MY2011.75, bez Sport a stylingového paketu. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Výška je výrobcem uvedené maximum; kufr ISO 3832 při pěti místech. Rozvor v tabulce není.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "Van",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3950,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, opravná sada (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1722,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, opravná sada (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1481,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, opravná sada (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 295,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, opravná sada (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 3950,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, ocelová rezerva (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1722,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, ocelová rezerva (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1481,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, ocelová rezerva (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 281,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf"
+            ],
+            "anchor": "PDF p.29 / printed p.55, standard 3/5-door Dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří, ocelová rezerva (2011)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": 2489
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "3/5 dveří, opravná sada (2011)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Wheelbase not established in the matched manufacturer reference."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "3/5 dveří, ocelová rezerva (2011)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Wheelbase not established in the matched manufacturer reference."
+                }
+              ]
+            },
+            {
+              "variantIndex": 2,
+              "label": "Van",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Factory hatchback reference does not establish matching Van figures."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Factory hatchback reference does not establish matching Van figures."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory hatchback reference does not establish matching Van figures."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Factory hatchback reference does not establish matching Van figures."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Factory hatchback reference does not establish matching Van figures."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "code": "Mk8",
@@ -14178,7 +14478,9 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381323353",
-      "https://en.wikipedia.org/w/index.php?oldid=1381090822"
+      "https://en.wikipedia.org/w/index.php?oldid=1381090822",
+      "https://xr793.com/wp-content/uploads/2022/09/2011.75-Ford-Fiesta-UK.pdf",
+      "https://www.ford-fiesta-club.de/Fiesta05.pdf"
     ],
     "needsReview": [
       {
@@ -14319,12 +14621,7 @@
             "gears": 4
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": 2615
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -14332,7 +14629,7 @@
           "bodyType": "hatchback",
           "noteCs": "Rozměry porovnány mezi Wikipedií a auto-data.net; při rozporu ponecháno prázdné. Motory odvozeny z vybraných verzí, nabídka není úplná."
         },
-        "trunkL": 350,
+        "trunkL": null,
         "markets": [
           "Europe"
         ],
@@ -14354,7 +14651,8 @@
         },
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1368679914",
-          "https://www.auto-data.net/en/ford-focus-hatchback-i-generation-1650"
+          "https://www.auto-data.net/en/ford-focus-hatchback-i-generation-1650",
+          "https://fordclubsweden.se/forum/download/file.php?id=50844"
         ],
         "trims": [
           {
@@ -14693,7 +14991,247 @@
               "https://en.wikipedia.org/w/index.php?oldid=1368679914"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "3/5 dveří (1998–1999)",
+            "dimensionsMm": {
+              "length": 4152,
+              "width": 1695,
+              "height": 1430,
+              "wheelbase": 2615
+            },
+            "trunkL": 350,
+            "noteCs": "Evropský Focus před faceliftem podle továrního technického listu 08/1998; sedan a kombi přišly na trh na jaře 1999. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. U hatchbacku a sedanu základní kufr VDA. Údaj kombi 1580 l nemá v tabulce bezpečně určenou polohu sedadel a není použit jako základní kufr.",
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ]
+          },
+          {
+            "bodyType": "sedan",
+            "label": "4 dveře (1998–1999)",
+            "dimensionsMm": {
+              "length": 4362,
+              "width": 1695,
+              "height": 1430,
+              "wheelbase": 2615
+            },
+            "trunkL": 490,
+            "noteCs": "Evropský Focus před faceliftem podle továrního technického listu 08/1998; sedan a kombi přišly na trh na jaře 1999. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. U hatchbacku a sedanu základní kufr VDA. Údaj kombi 1580 l nemá v tabulce bezpečně určenou polohu sedadel a není použit jako základní kufr.",
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "kombi při uvedení (1998–1999)",
+            "dimensionsMm": {
+              "length": 4438,
+              "width": 1695,
+              "height": 1441,
+              "wheelbase": 2615
+            },
+            "trunkL": null,
+            "noteCs": "Evropský Focus před faceliftem podle továrního technického listu 08/1998; sedan a kombi přišly na trh na jaře 1999. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. U hatchbacku a sedanu základní kufr VDA. Údaj kombi 1580 l nemá v tabulce bezpečně určenou polohu sedadel a není použit jako základní kufr.",
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4152,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří (1998–1999)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1695,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří (1998–1999)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1430,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří (1998–1999)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2615,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří (1998–1999)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 350,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5 dveří (1998–1999)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4362,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (1998–1999)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1695,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (1998–1999)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1430,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (1998–1999)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2615,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (1998–1999)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 490,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (1998–1999)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 4438,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "kombi při uvedení (1998–1999)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1695,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "kombi při uvedení (1998–1999)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.height",
+            "value": 1441,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "kombi při uvedení (1998–1999)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2615,
+            "sources": [
+              "https://fordclubsweden.se/forum/download/file.php?id=50844"
+            ],
+            "anchor": "Original Ford Sweden August 1998 technical specification, PDF p.3, body drawings and VDA luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "kombi při uvedení (1998–1999)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": 2615
+          },
+          "previousTrunkL": 350,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "3/5 dveří (1998–1999)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "4 dveře (1998–1999)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 2,
+              "label": "kombi při uvedení (1998–1999)",
+              "unconfirmed": [
+                {
+                  "field": "trunkL",
+                  "reason": "Estate figure 1580 l not safely identified as seats-up basic luggage; maximum volume excluded."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "code": "Mk II (C307)",
@@ -17555,7 +18093,8 @@
       "https://en.wikipedia.org/wiki/Ford_Focus_(third_generation)",
       "https://en.wikipedia.org/wiki/Ford_Focus_(fourth_generation)",
       "https://www.scribd.com/document/75321256/Focus-April-2008",
-      "https://manuals.plus/m/e74b5e031ab0f9bf9d7acaeda304765a6e359b0e2544d0a0f0719dcfcfca78ee"
+      "https://manuals.plus/m/e74b5e031ab0f9bf9d7acaeda304765a6e359b0e2544d0a0f0719dcfcfca78ee",
+      "https://fordclubsweden.se/forum/download/file.php?id=50844"
     ],
     "needsReview": [
       {
@@ -23101,12 +23640,7 @@
             "gears": 5
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1812,
-          "height": null,
-          "wheelbase": 2754
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": null,
@@ -23136,7 +23670,8 @@
         },
         "sources": [
           "https://de.wikipedia.org/w/index.php?oldid=268812777",
-          "https://en.wikipedia.org/w/index.php?oldid=1369489124"
+          "https://en.wikipedia.org/w/index.php?oldid=1369489124",
+          "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
         ],
         "trims": [
           {
@@ -23467,7 +24002,253 @@
               "https://de.wikipedia.org/w/index.php?oldid=268812777"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "sedan",
+            "label": "4 dveře (2005)",
+            "dimensionsMm": {
+              "length": 4731,
+              "width": 1812,
+              "height": 1429,
+              "wheelbase": 2754
+            },
+            "trunkL": 500,
+            "noteCs": "Běžné provedení podle britského továrního katalogu 05/2005, nikoli ST nebo stylingový paket. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Kufr VDA, pět míst; u sedanu a liftbacku s malou ocelovou rezervou, u kombi výška bez ližin.",
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ]
+          },
+          {
+            "bodyType": "liftback",
+            "label": "5 dveří (2005)",
+            "dimensionsMm": {
+              "length": 4731,
+              "width": 1812,
+              "height": 1429,
+              "wheelbase": 2754
+            },
+            "trunkL": 500,
+            "noteCs": "Běžné provedení podle britského továrního katalogu 05/2005, nikoli ST nebo stylingový paket. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Kufr VDA, pět míst; u sedanu a liftbacku s malou ocelovou rezervou, u kombi výška bez ližin.",
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "bez střešních ližin (2005)",
+            "dimensionsMm": {
+              "length": 4804,
+              "width": 1812,
+              "height": 1441,
+              "wheelbase": 2754
+            },
+            "trunkL": 540,
+            "noteCs": "Běžné provedení podle britského továrního katalogu 05/2005, nikoli ST nebo stylingový paket. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Kufr VDA, pět míst; u sedanu a liftbacku s malou ocelovou rezervou, u kombi výška bez ližin.",
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4731,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (2005)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1812,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (2005)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1429,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (2005)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2754,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (2005)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 500,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "4 dveře (2005)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4731,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 dveří (2005)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1812,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 dveří (2005)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1429,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 dveří (2005)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2754,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 dveří (2005)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 500,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 dveří (2005)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 4804,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez střešních ližin (2005)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1812,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez střešních ližin (2005)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.height",
+            "value": 1441,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez střešních ližin (2005)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2754,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez střešních ližin (2005)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "trunkL",
+            "value": 540,
+            "sources": [
+              "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
+            ],
+            "anchor": "Original Ford UK MY2005.5 brochure, printed pp.52–53, exterior dimensions and five-seat luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez střešních ližin (2005)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1812,
+            "height": null,
+            "wheelbase": 2754
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "4 dveře (2005)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "5 dveří (2005)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 2,
+              "label": "bez střešních ližin (2005)",
+              "unconfirmed": []
+            }
+          ]
+        }
       },
       {
         "code": "Mk4 (BA7)",
@@ -25764,7 +26545,8 @@
       "https://en.wikipedia.org/w/index.php?oldid=1381365644",
       "https://en.wikipedia.org/w/index.php?oldid=1361372966",
       "https://en.wikipedia.org/w/index.php?oldid=1381419935",
-      "https://pdfcoffee.com/ford-mondeo-sales-brochure-june-2007-pdf-free.html"
+      "https://pdfcoffee.com/ford-mondeo-sales-brochure-june-2007-pdf-free.html",
+      "https://www.scribd.com/doc/82207569/Ford-Mondeo-Sales-Brochure-May-2005"
     ],
     "needsReview": [
       {
@@ -42339,12 +43121,7 @@
             "gears": 1
           }
         ],
-        "dimensionsMm": {
-          "length": 4972,
-          "width": 1986,
-          "height": null,
-          "wheelbase": 2933
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": 2013,
@@ -42376,7 +43153,8 @@
           "https://en.wikipedia.org/w/index.php?oldid=1374524642",
           "http://web.archive.org/web/20240316190544/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit%20Custom/FordTransitCustom2017_Overview_EU.pdf",
           "http://web.archive.org/web/20240316185632/https://media.ford.com/content/dam/fordmedia/Europe/de/2018/00_Roadshow2018/A%20Texte/20_Ford_Custom-Familie.pdf",
-          "http://web.archive.org/web/20251013030505/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit/FordTransitEcoBlue_TechSpecs_EU.pdf"
+          "http://web.archive.org/web/20251013030505/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit/FordTransitEcoBlue_TechSpecs_EU.pdf",
+          "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
         ],
         "trims": [
           {
@@ -42685,7 +43463,276 @@
               "http://web.archive.org/web/20240316190544/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit%20Custom/FordTransitCustom2017_Overview_EU.pdf"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "dodavka",
+            "label": "L1H1 po faceliftu (2018)",
+            "dimensionsMm": {
+              "length": 4973,
+              "width": 1986,
+              "height": null,
+              "wheelbase": 2933
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka po faceliftu podle britského továrního katalogu 2018. Šířka bez zrcátek a klik. Výška je podle nosnosti a zatížení uvedena v rozpětí; jediná se nevybírá. Nákladový prostor není osobní kufr.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "L1H2 po faceliftu (2018)",
+            "dimensionsMm": {
+              "length": 4973,
+              "width": 1986,
+              "height": null,
+              "wheelbase": 2933
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka po faceliftu podle britského továrního katalogu 2018. Šířka bez zrcátek a klik. Výška je podle nosnosti a zatížení uvedena v rozpětí; jediná se nevybírá. Nákladový prostor není osobní kufr.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "L2H1 po faceliftu (2018)",
+            "dimensionsMm": {
+              "length": 5340,
+              "width": 1986,
+              "height": null,
+              "wheelbase": 3300
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka po faceliftu podle britského továrního katalogu 2018. Šířka bez zrcátek a klik. Výška je podle nosnosti a zatížení uvedena v rozpětí; jediná se nevybírá. Nákladový prostor není osobní kufr.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "L2H2 po faceliftu (2018)",
+            "dimensionsMm": {
+              "length": 5340,
+              "width": 1986,
+              "height": null,
+              "wheelbase": 3300
+            },
+            "trunkL": null,
+            "noteCs": "Skříňová dodávka po faceliftu podle britského továrního katalogu 2018. Šířka bez zrcátek a klik. Výška je podle nosnosti a zatížení uvedena v rozpětí; jediná se nevybírá. Nákladový prostor není osobní kufr.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4973,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1986,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2933,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4973,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H2 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1986,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H2 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2933,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L1H2 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 5340,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1986,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 3300,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H1 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.length",
+            "value": 5340,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H2 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.width",
+            "value": 1986,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H2 po faceliftu (2018)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.wheelbase",
+            "value": 3300,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
+            ],
+            "anchor": "PDF p.24 / printed pp.44–45, Van/Double Cab-in-Van dimensions",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "L2H2 po faceliftu (2018)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4972,
+            "width": 1986,
+            "height": null,
+            "wheelbase": 2933
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "L1H1 po faceliftu (2018)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory laden/unladen height range depends on payload and configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "L1H2 po faceliftu (2018)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory laden/unladen height range depends on payload and configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 2,
+              "label": "L2H1 po faceliftu (2018)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory laden/unladen height range depends on payload and configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            },
+            {
+              "variantIndex": 3,
+              "label": "L2H2 po faceliftu (2018)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory laden/unladen height range depends on payload and configuration."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial cargo volume is not passenger luggage capacity."
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "code": "II",
@@ -43096,7 +44143,8 @@
       "http://web.archive.org/web/20240316190544/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit%20Custom/FordTransitCustom2017_Overview_EU.pdf",
       "http://web.archive.org/web/20240316185632/https://media.ford.com/content/dam/fordmedia/Europe/de/2018/00_Roadshow2018/A%20Texte/20_Ford_Custom-Familie.pdf",
       "http://web.archive.org/web/20251013030505/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Transit/FordTransitEcoBlue_TechSpecs_EU.pdf",
-      "http://web.archive.org/web/20220923125206/https://media.ford.com/content/dam/fordmedia/Europe/documents/en/2022/transit_custom_range_EU.pdf"
+      "http://web.archive.org/web/20220923125206/https://media.ford.com/content/dam/fordmedia/Europe/documents/en/2022/transit_custom_range_EU.pdf",
+      "https://xr793.com/wp-content/uploads/2020/09/2018-Ford-Transit-Custom-UK.pdf"
     ],
     "needsReview": [
       {

@@ -2218,12 +2218,7 @@
             "gears": 6
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Dacia / Europe unless noted",
           "modelYear": null,
@@ -2302,6 +2297,118 @@
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only",
           "transmissions": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "mpv",
+            "label": "5 míst (2017)",
+            "dimensionsMm": {
+              "length": null,
+              "width": null,
+              "height": null,
+              "wheelbase": 2810
+            },
+            "trunkL": 800,
+            "noteCs": "Pětimístný Dokker podle tovární tiskové zprávy 05/2017. Rozvor je převod výrobcem zaokrouhlených 2,81 m; základní kufr VDA se vzpřímenými opěradly. Ostatní vnější rozměry nebyly v tomto podkladu potvrzeny.",
+            "sources": [
+              "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "Van",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2810,
+            "sources": [
+              "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+            ],
+            "anchor": "Factory release 11 May 2017, chassis 2.81m and VDA basic luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 míst (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 800,
+            "sources": [
+              "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+            ],
+            "anchor": "Factory release 11 May 2017, chassis 2.81m and VDA basic luggage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "5 míst (2017)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only",
+            "transmissions": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "5 míst (2017)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "Van",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+                }
+              ]
+            }
+          ]
         }
       }
     ],
@@ -6046,12 +6153,7 @@
             "gears": 5
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Dacia / Europe unless noted",
           "modelYear": null,
@@ -6118,6 +6220,132 @@
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only",
           "transmissions": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "kombi",
+            "label": "MCV Stepway (2019)",
+            "dimensionsMm": {
+              "length": 4528,
+              "width": 1761,
+              "height": null,
+              "wheelbase": 2635
+            },
+            "trunkL": 573,
+            "noteCs": "Logan MCV Stepway podle irského továrního katalogu 2019. Šířka bez zrcátek. Údaje platí pro uvedené referenční provedení, nikoli pro všechny roky a výbavy. Kufr se vzpřímenými zadními opěradly. Výška 1559/1590 mm není v listu jednoznačně přiřazena provedení s ližinami či bez nich.",
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ]
+          },
+          {
+            "bodyType": "sedan",
+            "label": "Logan",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Rozměry ani základní kufr pro toto provedení nebyly bezpečně potvrzeny. Údaje jiné karoserie se nepřenášejí."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4528,
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ],
+            "anchor": "Factory Irish brochure PDF p.10, Dimensions and boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "MCV Stepway (2019)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1761,
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ],
+            "anchor": "Factory Irish brochure PDF p.10, Dimensions and boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "MCV Stepway (2019)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2635,
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ],
+            "anchor": "Factory Irish brochure PDF p.10, Dimensions and boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "MCV Stepway (2019)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 573,
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ],
+            "anchor": "Factory Irish brochure PDF p.10, Dimensions and boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "MCV Stepway (2019)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only",
+            "transmissions": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "MCV Stepway (2019)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Factory table lists unladen height 1559/1590 mm without a matched scalar equipment mapping."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "Logan",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+                }
+              ]
+            }
+          ]
         }
       },
       {

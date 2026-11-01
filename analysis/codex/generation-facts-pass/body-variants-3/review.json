@@ -1,0 +1,3818 @@
+[
+  {
+    "make": "volkswagen",
+    "line": "transporter",
+    "index": 5,
+    "generation": "T6 (Typ SG/SH)",
+    "from": 2015,
+    "to": 2024,
+    "bodyTypes": [
+      "dodavka",
+      "mpv",
+      "pickup"
+    ],
+    "genFleet": 19876,
+    "lineFleet": 85572,
+    "missing": [
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "trunkL"
+    ],
+    "variants": 4,
+    "variantCells": 20,
+    "filledVariantCells": 6,
+    "leftNullVariantCells": 14,
+    "originalTargetGaps": 1,
+    "originalTargetFieldsWithAnyFigure": [],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "Shuttle S, krátký rozvor (2020)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "Shuttle S, krátký rozvor (2020)",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established; seats-removed cargo volume excluded."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Shuttle S, dlouhý rozvor (2020)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Shuttle S, dlouhý rozvor (2020)",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established; seats-removed cargo volume excluded."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "skříňová dodávka",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "T6.1 factory dimension PDF unavailable (404); no transfer of Shuttle dimensions to a panel van."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "skříňová dodávka",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "T6.1 factory dimension PDF unavailable (404); no transfer of Shuttle dimensions to a panel van."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "skříňová dodávka",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "T6.1 factory dimension PDF unavailable (404); no transfer of Shuttle dimensions to a panel van."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "skříňová dodávka",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "T6.1 factory dimension PDF unavailable (404); no transfer of Shuttle dimensions to a panel van."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "skříňová dodávka",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "T6.1 factory dimension PDF unavailable (404); no transfer of Shuttle dimensions to a panel van."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "pickup",
+        "label": "valník / nástavba",
+        "field": "dimensionsMm.length",
+        "reasonCode": "cab-or-body-builder-dependent",
+        "reason": "Cab and body-builder dependent; matched complete vehicle dimensions not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "pickup",
+        "label": "valník / nástavba",
+        "field": "dimensionsMm.width",
+        "reasonCode": "cab-or-body-builder-dependent",
+        "reason": "Cab and body-builder dependent; matched complete vehicle dimensions not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "pickup",
+        "label": "valník / nástavba",
+        "field": "dimensionsMm.height",
+        "reasonCode": "cab-or-body-builder-dependent",
+        "reason": "Cab and body-builder dependent; matched complete vehicle dimensions not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "pickup",
+        "label": "valník / nástavba",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "cab-or-body-builder-dependent",
+        "reason": "Cab and body-builder dependent; matched complete vehicle dimensions not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "pickup",
+        "label": "valník / nástavba",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Cab and body-builder dependent; matched complete vehicle dimensions not established."
+      }
+    ]
+  },
+  {
+    "make": "bmw",
+    "line": "rada-3",
+    "index": 4,
+    "generation": "E90",
+    "from": 2004,
+    "to": 2013,
+    "bodyTypes": [
+      "kombi",
+      "sedan",
+      "kupe",
+      "kabriolet"
+    ],
+    "genFleet": 19760,
+    "lineFleet": 60225,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 6,
+    "variantCells": 30,
+    "filledVariantCells": 29,
+    "leftNullVariantCells": 1,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 5,
+        "bodyType": "kabriolet",
+        "label": "E93, střecha otevřená (2007)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "open-roof-height-not-confirmed",
+        "reason": "No matched height with roof open; closed-roof height not transferred."
+      }
+    ]
+  },
+  {
+    "make": "volkswagen",
+    "line": "golf",
+    "index": 5,
+    "generation": "VI (5K)",
+    "from": 2008,
+    "to": 2016,
+    "bodyTypes": [
+      "hatchback",
+      "kombi",
+      "kabriolet"
+    ],
+    "genFleet": 19351,
+    "lineFleet": 179194,
+    "missing": [
+      "dimensionsMm.width",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.width",
+      "trunkL"
+    ],
+    "variants": 4,
+    "variantCells": 20,
+    "filledVariantCells": 15,
+    "leftNullVariantCells": 5,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.width",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 3,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Cabriolet factory figure not established; hatchback dimensions and luggage excluded."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Cabriolet factory figure not established; hatchback dimensions and luggage excluded."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Cabriolet factory figure not established; hatchback dimensions and luggage excluded."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Cabriolet factory figure not established; hatchback dimensions and luggage excluded."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Cabriolet factory figure not established; hatchback dimensions and luggage excluded."
+      }
+    ]
+  },
+  {
+    "make": "dacia",
+    "line": "dokker",
+    "index": 0,
+    "generation": "Dokker / Dokker Van",
+    "from": 2012,
+    "to": 2021,
+    "bodyTypes": [
+      "mpv",
+      "dodavka"
+    ],
+    "genFleet": 19157,
+    "lineFleet": 19157,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://presse.dacia.de/dacia-prasentiert-genugsamen-familienfreund-dokker-1/?lang=deu",
+      "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 2,
+    "leftNullVariantCells": 8,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "5 míst (2017)",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "5 míst (2017)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "5 míst (2017)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Matching European Van factory dimensions unavailable; passenger Dokker data not transferred."
+      }
+    ]
+  },
+  {
+    "make": "kia",
+    "line": "ceed",
+    "index": 0,
+    "generation": "ED",
+    "from": 2006,
+    "to": 2012,
+    "bodyTypes": [
+      "hatchback",
+      "kombi"
+    ],
+    "genFleet": 18094,
+    "lineFleet": 59185,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://manualzz.com/doc/56102512/kia-2010-ceed-specification",
+      "https://www.meinbezirk.at/innsbruck/c-motor/kia-ceed-das-beste-aus-zwei-welten_a95006"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 9,
+    "leftNullVariantCells": 6,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "5dveřový (2010–2012)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Handbook width 1790 mm not explicitly defined as excluding mirrors in the reviewed table."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "5dveřový (2010–2012)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "hatchback",
+        "label": "pro_cee’d, 3dveřový (2010–2012)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Handbook width 1790 mm not explicitly defined as excluding mirrors in the reviewed table."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "hatchback",
+        "label": "pro_cee’d, 3dveřový (2010–2012)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "SW, bez ližin (2010–2012)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Handbook width 1790 mm not explicitly defined as excluding mirrors in the reviewed table."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "SW, bez ližin (2010–2012)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      }
+    ]
+  },
+  {
+    "make": "renault",
+    "line": "megane",
+    "index": 0,
+    "generation": "X64",
+    "from": 1995,
+    "to": 2003,
+    "bodyTypes": [
+      "hatchback",
+      "sedan",
+      "kombi",
+      "kupe",
+      "kabriolet"
+    ],
+    "genFleet": 17791,
+    "lineFleet": 84624,
+    "missing": [
+      "dimensionsMm.height",
+      "trunkL",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.auto-redaktion.de/page/15"
+    ],
+    "targetFields": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "variants": 5,
+    "variantCells": 25,
+    "filledVariantCells": 3,
+    "leftNullVariantCells": 22,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kupe",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kupe",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kupe",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kupe",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "kupe",
+        "label": "referenční provedení nepotvrzeno",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed original September 1998 multi-body price list does not contain matched numeric dimension/luggage tables; Cabriolet 2001 data not transferred."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "kabriolet",
+        "label": "po faceliftu (2001)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Factory table does not explicitly establish mirror convention for width 1698 mm."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "kabriolet",
+        "label": "po faceliftu (2001)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      }
+    ]
+  },
+  {
+    "make": "citroen",
+    "line": "berlingo",
+    "index": 0,
+    "generation": "Berlingo I – původní evropská nabídka",
+    "from": 1996,
+    "to": 2008,
+    "bodyTypes": [
+      "mpv",
+      "dodavka"
+    ],
+    "genFleet": 17358,
+    "lineFleet": 54244,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.valeoservice.com/en-com/techassist/vehicle/P-8955?country=DE",
+      "https://www.scribd.com/doc/19937698/2004-c2-c3-c3-pluriel-xsara-picasso-berlingo"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 4,
+    "leftNullVariantCells": 6,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "Multispace po faceliftu (2006)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Factory width 1724 mm has no explicit mirror convention in the reviewed table."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "First",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Multispace passenger reference not transferred to a commercial First van; matched van source remains unconfirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "First",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Multispace passenger reference not transferred to a commercial First van; matched van source remains unconfirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "First",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Multispace passenger reference not transferred to a commercial First van; matched van source remains unconfirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "First",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Multispace passenger reference not transferred to a commercial First van; matched van source remains unconfirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "First",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Multispace passenger reference not transferred to a commercial First van; matched van source remains unconfirmed."
+      }
+    ]
+  },
+  {
+    "make": "skoda",
+    "line": "1000-1100-mb",
+    "index": 0,
+    "generation": "1000 / 1100 MB – modelová rodina",
+    "from": 1964,
+    "to": 1969,
+    "bodyTypes": [
+      "sedan",
+      "kupe"
+    ],
+    "genFleet": 17345,
+    "lineFleet": 17345,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-1100-mbx-1967-1969/"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 4,
+    "leftNullVariantCells": 6,
+    "originalTargetGaps": 3,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "sedan",
+        "label": "1000 MB, přední kufr",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kupe",
+        "label": "MBX",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kupe",
+        "label": "MBX",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kupe",
+        "label": "MBX",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kupe",
+        "label": "MBX",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kupe",
+        "label": "MBX",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory MBX historical release establishes identity but no matched numerical dimensions/luggage; sedan values not transferred."
+      }
+    ]
+  },
+  {
+    "make": "kia",
+    "line": "ceed",
+    "index": 1,
+    "generation": "JD",
+    "from": 2012,
+    "to": 2018,
+    "bodyTypes": [
+      "hatchback",
+      "kombi"
+    ],
+    "genFleet": 17161,
+    "lineFleet": 59185,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 14,
+    "leftNullVariantCells": 1,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 1,
+        "bodyType": "hatchback",
+        "label": "pro_cee’d, 3dveřový (2015)",
+        "field": "dimensionsMm.length",
+        "reasonCode": "conflicting-or-questionable-factory-reference",
+        "reason": "Factory 3-door length 4505 mm conflicts with its own 900+2650+760 mm overhang/wheelbase figures; no corrected value inferred."
+      }
+    ]
+  },
+  {
+    "make": "ford",
+    "line": "fiesta",
+    "index": 5,
+    "generation": "Mk7 (B299)",
+    "from": 2008,
+    "to": 2017,
+    "bodyTypes": [
+      "hatchback",
+      "dodavka"
+    ],
+    "genFleet": 16821,
+    "lineFleet": 39109,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 8,
+    "leftNullVariantCells": 7,
+    "originalTargetGaps": 4,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "3/5 dveří, opravná sada (2011)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "hatchback",
+        "label": "3/5 dveří, ocelová rezerva (2011)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory hatchback reference does not establish matching Van figures."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory hatchback reference does not establish matching Van figures."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory hatchback reference does not establish matching Van figures."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory hatchback reference does not establish matching Van figures."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Factory hatchback reference does not establish matching Van figures."
+      }
+    ]
+  },
+  {
+    "make": "bmw",
+    "line": "rada-3",
+    "index": 3,
+    "generation": "E46",
+    "from": 1997,
+    "to": 2006,
+    "bodyTypes": [
+      "hatchback",
+      "kombi",
+      "sedan",
+      "kupe",
+      "kabriolet"
+    ],
+    "genFleet": 16758,
+    "lineFleet": 60225,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains"
+    ],
+    "filled": [
+      "drivetrains"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.press.bmwgroup.com/usa/article/detail/T0021977EN_US/press-kit-my-2001%3A-bmw-3-series%3A-new-engines-available-all-wheel-drive-and-an-expanded-model-range-enhance-a-unique-award-winning-line"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 5,
+    "variantCells": 25,
+    "filledVariantCells": 25,
+    "leftNullVariantCells": 0,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "nulls": []
+  },
+  {
+    "make": "ford",
+    "line": "focus",
+    "index": 0,
+    "generation": "Mk I (C170)",
+    "from": 1998,
+    "to": 2005,
+    "bodyTypes": [
+      "hatchback",
+      "sedan",
+      "kombi"
+    ],
+    "genFleet": 16152,
+    "lineFleet": 104913,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 14,
+    "leftNullVariantCells": 1,
+    "originalTargetGaps": 3,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "kombi při uvedení (1998–1999)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Estate figure 1580 l not safely identified as seats-up basic luggage; maximum volume excluded."
+      }
+    ]
+  },
+  {
+    "make": "volkswagen",
+    "line": "golf-plus-line-models-auto-slug-golf-plus-has-no-line-or-card",
+    "index": 0,
+    "generation": "Golf Plus",
+    "from": 2004,
+    "to": 2014,
+    "bodyTypes": [
+      "hatchback",
+      "mpv"
+    ],
+    "genFleet": 15882,
+    "lineFleet": 15882,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.volkswagen.co.uk/idhub/content/dam/onehub_pkw/importers/gb/downloads/brochures/used-cars/golf-plus/vw_golf_plus_aug_2011.pdf"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 8,
+    "leftNullVariantCells": 2,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "Golf Plus (2011)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Luggage with a matched sliding rear-seat position not established."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Golf Plus (2011)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Luggage with a matched sliding rear-seat position not established."
+      }
+    ]
+  },
+  {
+    "make": "ford",
+    "line": "mondeo",
+    "index": 2,
+    "generation": "Mk3 (B4Y/B5Y/BWY)",
+    "from": 2000,
+    "to": 2007,
+    "bodyTypes": [
+      "sedan",
+      "liftback",
+      "kombi"
+    ],
+    "genFleet": 15088,
+    "lineFleet": 59228,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 15,
+    "leftNullVariantCells": 0,
+    "originalTargetGaps": 3,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "nulls": []
+  },
+  {
+    "make": "audi",
+    "line": "a4",
+    "index": 3,
+    "generation": "B8 (8K)",
+    "from": 2007,
+    "to": 2016,
+    "bodyTypes": [
+      "kombi",
+      "sedan"
+    ],
+    "genFleet": 14608,
+    "lineFleet": 39992,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 10,
+    "leftNullVariantCells": 0,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "nulls": []
+  },
+  {
+    "make": "renault",
+    "line": "clio",
+    "index": 2,
+    "generation": "X85",
+    "from": 2005,
+    "to": 2012,
+    "bodyTypes": [
+      "hatchback",
+      "kombi"
+    ],
+    "genFleet": 14562,
+    "lineFleet": 48400,
+    "missing": [
+      "trunkL",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.testdriven.co.uk/renault-unveils-2009-clio-range/amp/"
+    ],
+    "targetFields": [
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 12,
+    "leftNullVariantCells": 3,
+    "originalTargetGaps": 1,
+    "originalTargetFieldsWithAnyFigure": [
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "trunkL"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "3/5 dveří (2012)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kombi",
+        "label": "Grandtour, s podlahou",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kombi",
+        "label": "Grandtour, podlaha vyjmuta",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      }
+    ]
+  },
+  {
+    "make": "toyota",
+    "line": "proace",
+    "index": 1,
+    "generation": "MPY (II)",
+    "from": 2016,
+    "to": null,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 14477,
+    "lineFleet": 14576,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 5,
+    "leftNullVariantCells": 5,
+    "originalTargetGaps": 4,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Verso passenger specifications not transferred to a commercial Van; matched Van reference not confirmed."
+      }
+    ]
+  },
+  {
+    "make": "seat",
+    "line": "leon",
+    "index": 2,
+    "generation": "5F",
+    "from": 2012,
+    "to": 2020,
+    "bodyTypes": [
+      "hatchback",
+      "kombi"
+    ],
+    "genFleet": 14455,
+    "lineFleet": 29142,
+    "missing": [
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 8,
+    "leftNullVariantCells": 2,
+    "originalTargetGaps": 1,
+    "originalTargetFieldsWithAnyFigure": [
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "trunkL"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "5 dveří, běžné provedení (2017)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "kombi",
+        "label": "ST, běžné provedení (2017)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      }
+    ]
+  },
+  {
+    "make": "ford",
+    "line": "fiesta",
+    "index": 4,
+    "generation": "Mk6",
+    "from": 2002,
+    "to": 2008,
+    "bodyTypes": [
+      "hatchback",
+      "dodavka"
+    ],
+    "genFleet": 13974,
+    "lineFleet": 39109,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.height"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.height"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 3,
+    "leftNullVariantCells": 7,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "3/5 dveří po faceliftu",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory height ranges differ by door count/equipment; no matched scalar reference."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "3/5 dveří po faceliftu",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Matched Fiesta Van reference not established; hatchback specifications not transferred."
+      }
+    ]
+  },
+  {
+    "make": "ford",
+    "line": "transit-custom",
+    "index": 0,
+    "generation": "I (V362)",
+    "from": 2012,
+    "to": 2023,
+    "bodyTypes": [
+      "dodavka"
+    ],
+    "genFleet": 13737,
+    "lineFleet": 17533,
+    "missing": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "variants": 4,
+    "variantCells": 20,
+    "filledVariantCells": 12,
+    "leftNullVariantCells": 8,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1H1 po faceliftu (2018)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory laden/unladen height range depends on payload and configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1H1 po faceliftu (2018)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L1H2 po faceliftu (2018)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory laden/unladen height range depends on payload and configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L1H2 po faceliftu (2018)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "L2H1 po faceliftu (2018)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory laden/unladen height range depends on payload and configuration."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "L2H1 po faceliftu (2018)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "dodavka",
+        "label": "L2H2 po faceliftu (2018)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory laden/unladen height range depends on payload and configuration."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "dodavka",
+        "label": "L2H2 po faceliftu (2018)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      }
+    ]
+  },
+  {
+    "make": "audi",
+    "line": "a3",
+    "index": 1,
+    "generation": "8P",
+    "from": 2003,
+    "to": 2013,
+    "bodyTypes": [
+      "hatchback",
+      "kabriolet"
+    ],
+    "genFleet": 13480,
+    "lineFleet": 22025,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf",
+      "https://de.motor1.com/reviews/164052/mit-schicken-wings-frisch-gemachter-audi-a3-sportback-20-tdi-im-test/"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 10,
+    "leftNullVariantCells": 5,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 2,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed A3/S3 hatchback factory brochure does not cover Cabriolet; no transfer from another body."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed A3/S3 hatchback factory brochure does not cover Cabriolet; no transfer from another body."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed A3/S3 hatchback factory brochure does not cover Cabriolet; no transfer from another body."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed A3/S3 hatchback factory brochure does not cover Cabriolet; no transfer from another body."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "kabriolet",
+        "label": "Cabriolet",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed A3/S3 hatchback factory brochure does not cover Cabriolet; no transfer from another body."
+      }
+    ]
+  },
+  {
+    "make": "citroen",
+    "line": "berlingo",
+    "index": 2,
+    "generation": "K9",
+    "from": 2018,
+    "to": null,
+    "bodyTypes": [
+      "mpv",
+      "dodavka"
+    ],
+    "genFleet": 13435,
+    "lineFleet": 54244,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf",
+      "https://www.sueverkruep.de/citroen/wp-content/uploads/sites/6/2019/11/Preisliste_Berlingo_16.pdf"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 5,
+    "variantCells": 25,
+    "filledVariantCells": 20,
+    "leftNullVariantCells": 5,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger M/XL dimensions not transferred to Berlingo Van; matched commercial configuration not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger M/XL dimensions not transferred to Berlingo Van; matched commercial configuration not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger M/XL dimensions not transferred to Berlingo Van; matched commercial configuration not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger M/XL dimensions not transferred to Berlingo Van; matched commercial configuration not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Van",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Passenger M/XL dimensions not transferred to Berlingo Van; matched commercial configuration not established."
+      }
+    ]
+  },
+  {
+    "make": "mercedes-benz",
+    "line": "sprinter",
+    "index": 1,
+    "generation": "W906",
+    "from": 2006,
+    "to": 2018,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 13001,
+    "lineFleet": 26570,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf",
+      "https://www.mercedes-fans.de/magazin/sternstunde/mehr-als-ein-facelift-2013-mercedes-benz-sprinter-313-cdi-kastenwagen-fahrbericht-der-transporter-mit-stern-im-test-von-mercedes-fans-de.6056"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 10,
+    "variantCells": 50,
+    "filledVariantCells": 36,
+    "leftNullVariantCells": 14,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1H1 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L1H2 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "dodavka",
+        "label": "L2H1 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "dodavka",
+        "label": "L2H2 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "L2H3 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 5,
+        "bodyType": "dodavka",
+        "label": "L3H2 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 6,
+        "bodyType": "dodavka",
+        "label": "L3H3 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 7,
+        "bodyType": "dodavka",
+        "label": "L4H2 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 8,
+        "bodyType": "dodavka",
+        "label": "L4H3 (2014)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 9,
+        "bodyType": "mpv",
+        "label": "Crewbus",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Panel-van drawing does not establish a matching Crewbus roof, seating and luggage reference."
+      },
+      {
+        "variantIndex": 9,
+        "bodyType": "mpv",
+        "label": "Crewbus",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Panel-van drawing does not establish a matching Crewbus roof, seating and luggage reference."
+      },
+      {
+        "variantIndex": 9,
+        "bodyType": "mpv",
+        "label": "Crewbus",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Panel-van drawing does not establish a matching Crewbus roof, seating and luggage reference."
+      },
+      {
+        "variantIndex": 9,
+        "bodyType": "mpv",
+        "label": "Crewbus",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Panel-van drawing does not establish a matching Crewbus roof, seating and luggage reference."
+      },
+      {
+        "variantIndex": 9,
+        "bodyType": "mpv",
+        "label": "Crewbus",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Panel-van drawing does not establish a matching Crewbus roof, seating and luggage reference."
+      }
+    ]
+  },
+  {
+    "make": "volkswagen",
+    "line": "caddy",
+    "index": 3,
+    "generation": "IV (Typ SA)",
+    "from": 2015,
+    "to": 2020,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 12976,
+    "lineFleet": 61913,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 8,
+    "leftNullVariantCells": 7,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "krátký (2016)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "Maxi (2016)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Life",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed commercial Caddy brochure covers panel van/Kombi, not a matched passenger Life seating reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Life",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed commercial Caddy brochure covers panel van/Kombi, not a matched passenger Life seating reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Life",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed commercial Caddy brochure covers panel van/Kombi, not a matched passenger Life seating reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Life",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed commercial Caddy brochure covers panel van/Kombi, not a matched passenger Life seating reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Life",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Reviewed commercial Caddy brochure covers panel van/Kombi, not a matched passenger Life seating reference."
+      }
+    ]
+  },
+  {
+    "make": "renault",
+    "line": "megane",
+    "index": 3,
+    "generation": "XFB",
+    "from": 2015,
+    "to": null,
+    "bodyTypes": [
+      "hatchback",
+      "kombi",
+      "sedan"
+    ],
+    "genFleet": 12920,
+    "lineFleet": 84624,
+    "missing": [
+      "trunkL",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://cdn.group.renault.com/ren/sk/pdf/pricelists/megane-grandtour-price.pdf.asset.pdf/51fb8c1877.pdf"
+    ],
+    "targetFields": [
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 14,
+    "leftNullVariantCells": 1,
+    "originalTargetGaps": 1,
+    "originalTargetFieldsWithAnyFigure": [
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "hatchback",
+        "label": "po faceliftu (2021)",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      }
+    ]
+  },
+  {
+    "make": "toyota",
+    "line": "proace-city",
+    "index": 0,
+    "generation": "K9",
+    "from": 2019,
+    "to": null,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 12600,
+    "lineFleet": 12600,
+    "missing": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 6,
+    "leftNullVariantCells": 9,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 (2019)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Launch reference gives min/max; 2024 factory brochure gives 1860 mm while technical sheet gives 1880 mm, without matched configuration mapping."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 (2019)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 (2019)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Launch reference gives min/max; 2024 factory brochure gives 1860 mm while technical sheet gives 1880 mm, without matched configuration mapping."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 (2019)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Verso",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Verso",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Verso",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Verso",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Verso",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Van reference does not establish passenger Verso dimensions or luggage with occupied rows."
+      }
+    ]
+  },
+  {
+    "make": "mercedes-benz",
+    "line": "trida-v",
+    "index": 2,
+    "generation": "W447",
+    "from": 2014,
+    "to": null,
+    "bodyTypes": [
+      "mpv"
+    ],
+    "genFleet": 12581,
+    "lineFleet": 13100,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
+      "https://presse.mercedes-benz.at/news-modellpflege-fuer-die-mercedes-benz-grossraumlimousine?id=78900&l=deutsch&menueid=10705"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 10,
+    "leftNullVariantCells": 5,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.wheelbase"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "kompakt (2016)",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established for a matched seating layout."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "dlouhá (2016)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "dlouhá (2016)",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established for a matched seating layout."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "extra dlouhá (2016)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "extra dlouhá (2016)",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established for a matched seating layout."
+      }
+    ]
+  },
+  {
+    "make": "volkswagen",
+    "line": "caddy",
+    "index": 4,
+    "generation": "V (Typ SB)",
+    "from": 2020,
+    "to": null,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 12322,
+    "lineFleet": 61913,
+    "missing": [
+      "dimensionsMm.length",
+      "trunkL"
+    ],
+    "filled": [],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [],
+    "targetFields": [
+      "dimensionsMm.length",
+      "trunkL"
+    ],
+    "variants": 5,
+    "variantCells": 25,
+    "filledVariantCells": 16,
+    "leftNullVariantCells": 9,
+    "originalTargetGaps": 2,
+    "originalTargetFieldsWithAnyFigure": [
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "mpv",
+        "label": "Life, 5 míst",
+        "field": "dimensionsMm.length",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory diagram has 4500/4601 and 4853/4954 mm length measures without a safely established equipment mapping."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Life, 7 míst",
+        "field": "dimensionsMm.length",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory diagram has 4500/4601 and 4853/4954 mm length measures without a safely established equipment mapping."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Maxi, 5 míst",
+        "field": "dimensionsMm.length",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory diagram has 4500/4601 and 4853/4954 mm length measures without a safely established equipment mapping."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "mpv",
+        "label": "Maxi, 7 míst",
+        "field": "dimensionsMm.length",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory diagram has 4500/4601 and 4853/4954 mm length measures without a safely established equipment mapping."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Cargo",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger Caddy Life dimensions not transferred to Cargo; matched complete commercial reference not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Cargo",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger Caddy Life dimensions not transferred to Cargo; matched complete commercial reference not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Cargo",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger Caddy Life dimensions not transferred to Cargo; matched complete commercial reference not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Cargo",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Passenger Caddy Life dimensions not transferred to Cargo; matched complete commercial reference not established."
+      },
+      {
+        "variantIndex": 4,
+        "bodyType": "dodavka",
+        "label": "Cargo",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Passenger Caddy Life dimensions not transferred to Cargo; matched complete commercial reference not established."
+      }
+    ]
+  },
+  {
+    "make": "audi",
+    "line": "a6",
+    "index": 2,
+    "generation": "4F",
+    "from": 2004,
+    "to": 2011,
+    "bodyTypes": [
+      "sedan",
+      "kombi"
+    ],
+    "genFleet": 12190,
+    "lineFleet": 32226,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 10,
+    "leftNullVariantCells": 0,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "nulls": []
+  },
+  {
+    "make": "renault",
+    "line": "trafic",
+    "index": 1,
+    "generation": "X83",
+    "from": 2001,
+    "to": 2015,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 12125,
+    "lineFleet": 24847,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://presse.renault.de/mehr-komfort-weniger-verbrauch-1/?lang=deu"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 5,
+    "leftNullVariantCells": 10,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1H1 (2012)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Wheelbase not established in the matched manufacturer reference."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1H1 (2012)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Combi, krátký rozvor",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Combi, krátký rozvor",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Combi, krátký rozvor",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "mpv",
+        "label": "Combi, krátký rozvor",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Combi, dlouhý rozvor",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Combi, dlouhý rozvor",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Combi, dlouhý rozvor",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Combi, dlouhý rozvor",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Matched dimensions not established in the reviewed source."
+      }
+    ]
+  },
+  {
+    "make": "dacia",
+    "line": "logan",
+    "index": 1,
+    "generation": "L52/K52",
+    "from": 2012,
+    "to": 2020,
+    "bodyTypes": [
+      "sedan",
+      "kombi"
+    ],
+    "genFleet": 11995,
+    "lineFleet": 24756,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-bodies",
+        "reason": "Generace zahrnuje více doložených karoserií. Dominantní karoserie a její rozvor nejsou určeny; jednotlivá verze se nezobecňuje na celou rodinu."
+      }
+    ],
+    "sourcesAdded": [
+      "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf",
+      "https://businessmotoring.co.uk/dacia-logan-mcv-car-review-a-proper-estate-for-22-a-month-company-car-tax-and-well-under-10k/3/"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 2,
+    "variantCells": 10,
+    "filledVariantCells": 4,
+    "leftNullVariantCells": 6,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "kombi",
+        "label": "MCV Stepway (2019)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory table lists unladen height 1559/1590 mm without a matched scalar equipment mapping."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "Logan",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "Logan",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "Logan",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "Logan",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "sedan",
+        "label": "Logan",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "MCV Stepway factory brochure does not establish a matched European sedan reference."
+      }
+    ]
+  },
+  {
+    "make": "renault",
+    "line": "trafic",
+    "index": 2,
+    "generation": "X82",
+    "from": 2014,
+    "to": null,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 11802,
+    "lineFleet": 24847,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "transmissions"
+    ],
+    "filled": [
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://media.renault.at/935/article/1972"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 4,
+    "variantCells": 20,
+    "filledVariantCells": 8,
+    "leftNullVariantCells": 12,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length",
+      "dimensionsMm.wheelbase"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [
+      "dimensionsMm.length",
+      "dimensionsMm.wheelbase"
+    ],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1, před faceliftem",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Owner manual only establishes 2283 mm external width; width excluding mirrors not established."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1, před faceliftem",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory unladen height ranges, without one matched scalar reference."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1, před faceliftem",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2, před faceliftem",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Owner manual only establishes 2283 mm external width; width excluding mirrors not established."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2, před faceliftem",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory unladen height ranges, without one matched scalar reference."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2, před faceliftem",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "L1, před faceliftem",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Owner manual only establishes 2283 mm external width; width excluding mirrors not established."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "L1, před faceliftem",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory unladen height ranges, without one matched scalar reference."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "L1, před faceliftem",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "mpv",
+        "label": "L2, před faceliftem",
+        "field": "dimensionsMm.width",
+        "reasonCode": "body-width-without-mirrors-not-confirmed",
+        "reason": "Owner manual only establishes 2283 mm external width; width excluding mirrors not established."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "mpv",
+        "label": "L2, před faceliftem",
+        "field": "dimensionsMm.height",
+        "reasonCode": "factory-range-without-matched-reference",
+        "reason": "Factory unladen height ranges, without one matched scalar reference."
+      },
+      {
+        "variantIndex": 3,
+        "bodyType": "mpv",
+        "label": "L2, před faceliftem",
+        "field": "trunkL",
+        "reasonCode": "passenger-seating-layout-not-confirmed",
+        "reason": "Passenger luggage capacity behind occupied rows not established."
+      }
+    ]
+  },
+  {
+    "make": "peugeot",
+    "line": "partner",
+    "index": 1,
+    "generation": "B9",
+    "from": 2008,
+    "to": 2018,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
+    "genFleet": 11699,
+    "lineFleet": 22436,
+    "missing": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL",
+      "drivetrains",
+      "transmissions"
+    ],
+    "filled": [
+      "drivetrains",
+      "transmissions"
+    ],
+    "remaining": [
+      {
+        "field": "dimensionsMm.length",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.width",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.height",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "dimensionsMm.wheelbase",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      },
+      {
+        "field": "trunkL",
+        "code": "multiple-wheelbases-or-commercial-layouts",
+        "reason": "Osobní/užitková provedení, více délek, rozvorů nebo střech a nástaveb; dominantní konfigurace z českých agregátů není doložena. Nákladový objem v m³ se nepřevádí na osobní kufr."
+      }
+    ],
+    "sourcesAdded": [
+      "https://www.completecar.ie/car-reviews/article/Peugeot/Partner/Partner_Tepee/834/4722/2015-Peugeot-Partner-Tepee-review.html",
+      "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+    ],
+    "targetFields": [
+      "dimensionsMm.length",
+      "dimensionsMm.width",
+      "dimensionsMm.height",
+      "dimensionsMm.wheelbase",
+      "trunkL"
+    ],
+    "variants": 3,
+    "variantCells": 15,
+    "filledVariantCells": 2,
+    "leftNullVariantCells": 13,
+    "originalTargetGaps": 5,
+    "originalTargetFieldsWithAnyFigure": [
+      "dimensionsMm.length"
+    ],
+    "originalTargetFieldsFullyPopulatedAcrossNamedVariants": [],
+    "nulls": [
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 po faceliftu (2015)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 po faceliftu (2015)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 po faceliftu (2015)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 0,
+        "bodyType": "dodavka",
+        "label": "L1 po faceliftu (2015)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 po faceliftu (2015)",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 po faceliftu (2015)",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 po faceliftu (2015)",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Not established for this exact body/layout in the reviewed manufacturer reference; no transfer from another configuration."
+      },
+      {
+        "variantIndex": 1,
+        "bodyType": "dodavka",
+        "label": "L2 po faceliftu (2015)",
+        "field": "trunkL",
+        "reasonCode": "commercial-cargo-or-body-dependent",
+        "reason": "Commercial cargo volume is not passenger luggage capacity."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Tepee",
+        "field": "dimensionsMm.length",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Tepee",
+        "field": "dimensionsMm.width",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Tepee",
+        "field": "dimensionsMm.height",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Tepee",
+        "field": "dimensionsMm.wheelbase",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+      },
+      {
+        "variantIndex": 2,
+        "bodyType": "mpv",
+        "label": "Tepee",
+        "field": "trunkL",
+        "reasonCode": "reference-fact-not-confirmed",
+        "reason": "Factory release gives ambiguous 675–3000 l alongside seven seats; occupied third-row luggage not established and not inferred."
+      }
+    ]
+  }
+]
