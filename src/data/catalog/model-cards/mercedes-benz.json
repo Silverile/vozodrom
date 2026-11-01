@@ -11827,7 +11827,9 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -11851,12 +11853,26 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
+          "https://media.mercedes-benz.com/en/article/33e42655-6865-486a-ae87-2416a8fa6706"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://media.mercedes-benz.com/en/article/33e42655-6865-486a-ae87-2416a8fa6706"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "EQV and V-Class2024 / MPVs",
+            "noteCs": "Vlastní osobní elektrickávětevEQV; užitkovýeVito se neslučuje."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
+      "https://media.mercedes-benz.com/en/article/33e42655-6865-486a-ae87-2416a8fa6706"
     ],
     "needsReview": [
       {
@@ -11873,10 +11889,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

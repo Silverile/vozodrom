@@ -7828,7 +7828,7 @@
         "dimensionsMm": {
           "length": 3705,
           "width": 1610,
-          "height": null,
+          "height": 1410,
           "wheelbase": 2400
         },
         "specificationScope": {
@@ -7860,7 +7860,8 @@
         },
         "sources": [
           "https://de.wikipedia.org/w/index.php?oldid=269841223",
-          "https://en.wikipedia.org/w/index.php?oldid=1381163628"
+          "https://en.wikipedia.org/w/index.php?oldid=1381163628",
+          "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-1-profile-19468"
         ],
         "trims": [
           {
@@ -8116,7 +8117,32 @@
               "https://en.wikipedia.org/w/index.php?oldid=1381163628"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.height",
+            "value": 1410,
+            "sources": [
+              "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-1-profile-19468"
+            ],
+            "method": "manufacturer-standard-body-profile",
+            "anchor": "GolfI Type17 / standard body /3705×1610×1410",
+            "noteCs": "Základní a hlavní karoserie hatchback Type17; výška1410 mm doplňuje existující sadu3705/1610/2400 odpovídající ranému standardnímu provedení. Neplatí automaticky pro GTI/GTD nebo Cabriolet. Nejde o minimum/maximální rozměr rodiny.",
+            "scope": {
+              "bodyType": "hatchback",
+              "version": "standard Type17, early body matching existing length3705",
+              "excludes": [
+                "GTI",
+                "GTD",
+                "Cabriolet"
+              ],
+              "widthBasis": "body without mirrors"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.height": "standard-body-reference"
+        }
       },
       {
         "code": "II (Typ 19E / 1G)",
@@ -8229,9 +8255,9 @@
         ],
         "dimensionsMm": {
           "length": 3985,
-          "width": null,
+          "width": 1665,
           "height": 1415,
-          "wheelbase": null
+          "wheelbase": 2475
         },
         "specificationScope": {
           "market": "Europe",
@@ -8262,7 +8288,8 @@
         },
         "sources": [
           "https://de.wikipedia.org/w/index.php?oldid=269841081",
-          "https://en.wikipedia.org/w/index.php?oldid=1376577672"
+          "https://en.wikipedia.org/w/index.php?oldid=1376577672",
+          "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-2-profile-19471"
         ],
         "trims": [
           {
@@ -8519,7 +8546,53 @@
               "https://en.wikipedia.org/w/index.php?oldid=1376577672"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.width",
+            "value": 1665,
+            "sources": [
+              "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-2-profile-19471"
+            ],
+            "method": "manufacturer-standard-body-profile",
+            "anchor": "GolfII19E / standard body /3985×1665×1415 /wheelbase2475",
+            "noteCs": "Hlavní standardní hatchbackGolfII, stejný rozsah jako existující délka3985 a výška1415. Country, Rallye a G60Limited mají jiné rozměry a nejsou do skaláru promíchány.",
+            "scope": {
+              "bodyType": "hatchback",
+              "version": "standard GolfII19E",
+              "excludes": [
+                "Country",
+                "G60 Rallye",
+                "G60 Limited"
+              ],
+              "widthBasis": "body without mirrors"
+            }
+          },
+          {
+            "field": "dimensionsMm.wheelbase",
+            "value": 2475,
+            "sources": [
+              "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-2-profile-19471"
+            ],
+            "method": "manufacturer-standard-body-profile",
+            "anchor": "GolfII19E / standard body /3985×1665×1415 /wheelbase2475",
+            "noteCs": "Hlavní standardní hatchbackGolfII, stejný rozsah jako existující délka3985 a výška1415. Country, Rallye a G60Limited mají jiné rozměry a nejsou do skaláru promíchány.",
+            "scope": {
+              "bodyType": "hatchback",
+              "version": "standard GolfII19E",
+              "excludes": [
+                "Country",
+                "G60 Rallye",
+                "G60 Limited"
+              ],
+              "widthBasis": "body without mirrors"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.width": "standard-body-reference",
+          "dimensionsMm.wheelbase": "standard-body-reference"
+        }
       },
       {
         "code": "III (1H)",
@@ -13752,7 +13825,9 @@
       "https://de.wikipedia.org/wiki/VW_Golf_VIII",
       "https://de.wikipedia.org/wiki/VW_Golf_IV",
       "https://de.wikipedia.org/wiki/VW_Golf_VI",
-      "https://de.wikipedia.org/wiki/VW_Golf_VII"
+      "https://de.wikipedia.org/wiki/VW_Golf_VII",
+      "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-1-profile-19468",
+      "https://www.volkswagen-newsroom.com/en/vehicle-data-golf-2-profile-19471"
     ],
     "needsReview": [
       {
@@ -13790,10 +13865,6 @@
       {
         "field": "generations[0].trims[*].topSpeedKmh",
         "noteCs": "de.wiki a en.wiki se u Golfu I liší ve Vmax o 1–5 km/h; sporné hodnoty nastaveny na null."
-      },
-      {
-        "field": "generations[1].dimensionsMm.wheelbase",
-        "noteCs": "Rozvor Golfu II: de.wiki 2475 mm, en.wiki 2470 mm."
       },
       {
         "field": "generations[1].trims[2].to",

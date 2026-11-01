@@ -268,7 +268,9 @@
         "to": 2004,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
         "engines": [
           {
             "variant": "0.4 Diesel",
@@ -325,6 +327,18 @@
           "https://archives-catalogues-automobiles.fr/laurentbunnik/0aix0001.html",
           "https://manualmachine.com/aixam/400/7119192-user-manual/",
           "https://typenscheine.ch/fr/Info/6AA702"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://manualmachine.com/aixam/400/7119192-user-manual/"
+            ],
+            "method": "body-taxonomy-mapping",
+            "anchor": "Aixam-Mega original parts catalogue /4001997–2004 /page32 /hayon",
+            "noteCs": "Původní katalogAixam-Mega s výklopnou zadnístěnou. Normalizace karoserie na hatchback nemění právníkategorii čtyřkolky."
+          }
         ]
       }
     ],
@@ -344,10 +358,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

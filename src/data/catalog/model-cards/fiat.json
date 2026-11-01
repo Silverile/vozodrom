@@ -891,7 +891,11 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi",
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -934,13 +938,45 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_124",
-          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+          "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "1241966 berlina/Familiare /1967SportCoupe",
+            "noteCs": "Vlastní rodinná historie sedanu, kombi a kupé. SportSpider je zde veden jako samostatnálinie124-spider a nepřipojuje se podruhé."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "1241966 berlina/Familiare /1967SportCoupe",
+            "noteCs": "Vlastní rodinná historie sedanu, kombi a kupé. SportSpider je zde veden jako samostatnálinie124-spider a nepřipojuje se podruhé."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "1241966 berlina/Familiare /1967SportCoupe",
+            "noteCs": "Vlastní rodinná historie sedanu, kombi a kupé. SportSpider je zde veden jako samostatnálinie124-spider a nepřipojuje se podruhé."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_124",
-      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+      "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
     ],
     "needsReview": [
       {
@@ -965,10 +1001,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1037,7 +1069,9 @@
         "to": 1985,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "engines": [
           {
             "variant": "1.4 Twin Cam",
@@ -1254,7 +1288,20 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_124_Sport_Spider"
+          "https://en.wikipedia.org/wiki/Fiat_124_Sport_Spider",
+          "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "kabriolet",
+            "sources": [
+              "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "124 SportSpider1966 / Pininfarina",
+            "noteCs": "Vlastní historie původníhoSportSpider; odlišeno od pozdějšího348."
+          }
         ]
       },
       {
@@ -1264,7 +1311,9 @@
         "to": 2019,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -1338,14 +1387,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
-          "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
+          "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
+          "https://www.media.stellantis.com/uploads/nl/NL/SYSTEM_ARCHIVE/2015/FIAT/Schede_Tecniche/151118_Fiat_124-Spider_Technical-Sheet_ENG.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "kabriolet",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/nl/NL/SYSTEM_ARCHIVE/2015/FIAT/Schede_Tecniche/151118_Fiat_124-Spider_Technical-Sheet_ENG.pdf"
+            ],
+            "method": "manufacturer-technical-sheet",
+            "anchor": "Factory124Spider technical sheet /Body Style Roadster /Summer2016",
+            "noteCs": "Původní technický list nového348 s pevným označenímRoadster; Abarth není novoukaroserií."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
       "https://en.wikipedia.org/wiki/Fiat_124_Sport_Spider",
-      "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)"
+      "https://de.wikipedia.org/wiki/Fiat_124_Spider_(2016)",
+      "https://www.media.stellantis.com/es-es/fiat/press/sesenta-anos-del-fiat-124-el-legado-del-primer-world-car-que-revoluciono-la-movilidad",
+      "https://www.media.stellantis.com/uploads/nl/NL/SYSTEM_ARCHIVE/2015/FIAT/Schede_Tecniche/151118_Fiat_124-Spider_Technical-Sheet_ENG.pdf"
     ],
     "needsReview": [
       {
@@ -1358,10 +1422,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1414,10 +1474,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1951,7 +2007,10 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -1994,13 +2053,38 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_127",
-          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+          "https://historicdb.fia.com/sites/default/files/car_attachment/1601053201/homologation_form_number_5414_group_a.pdf",
+          "https://www.motorsportmagazine.com/archive/article/may-1972/58/small-car-topics/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://historicdb.fia.com/sites/default/files/car_attachment/1601053201/homologation_form_number_5414_group_a.pdf"
+            ],
+            "method": "factory-homologation-document",
+            "anchor": "Factory/FIA127Special127A/S3 /3portes et hayon",
+            "noteCs": "Původní homologace výslovně rozlišuje třídveřovou verzi s výklopnou zadnístěnou od dvoudveřové. Nedokládá hatchback u všech výrobníchlet."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.motorsportmagazine.com/archive/article/may-1972/58/small-car-topics/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original MotorSport May1972 Fiat127 road test /two-door saloon",
+            "noteCs": "Přímý dobový silniční test rané dvoudveřové127 s pevným zadním oknem a samostatným víkem zavazadel; pozdější verze s hayon je doložena samostatně."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_127",
-      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+      "https://historicdb.fia.com/sites/default/files/car_attachment/1601053201/homologation_form_number_5414_group_a.pdf",
+      "https://www.motorsportmagazine.com/archive/article/may-1972/58/small-car-topics/"
     ],
     "needsReview": [
       {
@@ -2025,10 +2109,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2097,7 +2177,12 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kombi",
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -2140,13 +2225,58 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_128",
-          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+          "https://manualzz.com/doc/5847675/fiat-128-automobile-manuale-d-uso-e-manutenzione",
+          "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe",
+          "https://www.motorsportmagazine.com/archive/article/august-1976/44/the-fiat-128-3p/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.motorsportmagazine.com/archive/article/august-1976/44/the-fiat-128-3p/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original MotorSport August1976 Fiat1283P road test /three-door hatchback",
+            "noteCs": "Přímý dobový test výslovně popisuje třídveřový hatchback a funkci zadnístěny;3P je odlišena od staršího128SportCoupe."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://manualzz.com/doc/5847675/fiat-128-automobile-manuale-d-uso-e-manutenzione"
+            ],
+            "method": "archived-factory-manual",
+            "anchor": "Factory128 use/maintenance manual / BERLINA2PORTE and FAMILIARE",
+            "noteCs": "Původní návodFiat výslovně odlišuje sedan a kombi. LicenčníZastava101 není přidána."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://manualzz.com/doc/5847675/fiat-128-automobile-manuale-d-uso-e-manutenzione"
+            ],
+            "method": "archived-factory-manual",
+            "anchor": "Factory128 use/maintenance manual / BERLINA2PORTE and FAMILIARE",
+            "noteCs": "Původní návodFiat výslovně odlišuje sedan a kombi. LicenčníZastava101 není přidána."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Heritage / predecessor Fiat128Coupe discontinued1980",
+            "noteCs": "Vlastní historieFiatCoupé výslovně připomíná starší128Coupé; nejde o novější175."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_128",
-      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+      "https://manualzz.com/doc/5847675/fiat-128-automobile-manuale-d-uso-e-manutenzione",
+      "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe",
+      "https://www.motorsportmagazine.com/archive/article/august-1976/44/the-fiat-128-3p/"
     ],
     "needsReview": [
       {
@@ -2171,10 +2301,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2542,7 +2668,10 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -2585,13 +2714,38 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_131",
-          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+          "https://www.media.stellantis.com/es-es/fiat/press/50-anos-del-fiat-131-la-berlina-que-gano-el-mundial-de-rallies-y-llevo-con-orgullo-el-nombre-de-mirafiori"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.media.stellantis.com/es-es/fiat/press/50-anos-del-fiat-131-la-berlina-que-gano-el-mundial-de-rallies-y-llevo-con-orgullo-el-nombre-de-mirafiori"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Fiat1311974 / berlina",
+            "noteCs": "Vlastní výroční historie konkrétní131; dvoudveřováRacing/Abarth není automaticky kupé."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "FIAT - 131 Familiare/Panorama (131_) 03/75→12/84",
+            "noteCs": "Vlastní katalog výrobce komponentů: přesně označená karoserie a generace. Rozsah aplikace dílů není přenesen do let výroby."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_131",
-      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://www.media.stellantis.com/es-es/fiat/press/50-anos-del-fiat-131-la-berlina-que-gano-el-mundial-de-rallies-y-llevo-con-orgullo-el-nombre-de-mirafiori"
     ],
     "needsReview": [
       {
@@ -2616,10 +2770,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5952,7 +6102,9 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -5994,12 +6146,26 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_500L"
+          "https://en.wikipedia.org/wiki/Fiat_500L",
+          "https://www.media.stellantis.com/uk-en/fiat/press/fiat-500l-500-goes-large-press-pack"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/fiat-500l-500-goes-large-press-pack"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "500L2013 / five-door mini-MPV",
+            "noteCs": "Vlastní uvedení500L. Living/Trekking ani pojmenování500 nepřidává automaticky další typ karoserie."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_500L"
+      "https://en.wikipedia.org/wiki/Fiat_500L",
+      "https://www.media.stellantis.com/uk-en/fiat/press/fiat-500l-500-goes-large-press-pack"
     ],
     "needsReview": [
       {
@@ -6020,10 +6186,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6092,7 +6254,9 @@
         "to": 2024,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -6270,13 +6434,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_500X",
-          "https://de.wikipedia.org/wiki/Fiat_500X"
+          "https://de.wikipedia.org/wiki/Fiat_500X",
+          "https://www.media.stellantis.com/uploads/pl/model-pricelist/500xcennik-63efba8c87f63.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/pl/model-pricelist/500xcennik-63efba8c87f63.pdf"
+            ],
+            "method": "manufacturer-price-list",
+            "anchor": "Factory500X price list2023 / compact SUV",
+            "noteCs": "Vlastní evropský ceník500X; ne500L ani500 hatchback."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_500X",
-      "https://de.wikipedia.org/wiki/Fiat_500X"
+      "https://de.wikipedia.org/wiki/Fiat_500X",
+      "https://www.media.stellantis.com/uploads/pl/model-pricelist/500xcennik-63efba8c87f63.pdf"
     ],
     "needsReview": [
       {
@@ -6289,10 +6467,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -11438,7 +11612,9 @@
         "to": 2005,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -11532,13 +11708,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Barchetta",
-          "https://www.ultimatespecs.com/car-specs/Fiat/41428/Fiat-Barchetta-18-16v.html"
+          "https://www.ultimatespecs.com/car-specs/Fiat/41428/Fiat-Barchetta-18-16v.html",
+          "https://www.media.stellantis.com/uk-en/fiat/press/restyled-barchetta-sportscar-in-uk"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "kabriolet",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/restyled-barchetta-sportscar-in-uk"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Restyled Barchetta2003 / convertible roadster",
+            "noteCs": "Vlastní dobová modernizace původníBarchetta."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Barchetta",
-      "https://www.ultimatespecs.com/car-specs/Fiat/41428/Fiat-Barchetta-18-16v.html"
+      "https://www.ultimatespecs.com/car-specs/Fiat/41428/Fiat-Barchetta-18-16v.html",
+      "https://www.media.stellantis.com/uk-en/fiat/press/restyled-barchetta-sportscar-in-uk"
     ],
     "needsReview": [
       {
@@ -11551,10 +11741,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -13725,7 +13911,9 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -13767,12 +13955,26 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Cinquecento"
+          "https://en.wikipedia.org/wiki/Fiat_Cinquecento",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/cinquecento/170/253574/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/cinquecento/170/253574/"
+            ],
+            "method": "motoring-club-technical-catalogue",
+            "anchor": "Cinquecento1701993 / Schrägheck",
+            "noteCs": "Vlastní katalogADAC proCinquecento170; nejde o500312/332."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Cinquecento"
+      "https://en.wikipedia.org/wiki/Fiat_Cinquecento",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/cinquecento/170/253574/"
     ],
     "needsReview": [
       {
@@ -13793,10 +13995,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -13865,7 +14063,9 @@
         "to": 2000,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kupe"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -13999,13 +14199,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Coupé",
-          "https://de.wikipedia.org/wiki/Fiat_Coup%C3%A9"
+          "https://de.wikipedia.org/wiki/Fiat_Coup%C3%A9",
+          "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "FiatCoupe175 / Fiat sport coupe programme1993",
+            "noteCs": "Vlastní historie samostatného uzavřeného sportovníhoCoupé; Barchetta není připojena."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Coupé",
-      "https://de.wikipedia.org/wiki/Fiat_Coup%C3%A9"
+      "https://de.wikipedia.org/wiki/Fiat_Coup%C3%A9",
+      "https://www.stellantisheritage.com/en-uk/heritage/stories/fiat-coupe"
     ],
     "needsReview": [
       {
@@ -14018,10 +14232,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18208,7 +18418,9 @@
         "to": 2019,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "pickup"
+        ],
         "engines": [
           {
             "fuel": "diesel",
@@ -18267,13 +18479,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Fullback",
-          "https://www.ultimatespecs.com/car-specs/Fiat/106787/Fiat-Fullback-Double-Cab-LX-24-181HP-4x4-Euro-6.html"
+          "https://www.ultimatespecs.com/car-specs/Fiat/106787/Fiat-Fullback-Double-Cab-LX-24-181HP-4x4-Euro-6.html",
+          "https://www.media.stellantis.com/it-it/fiat-professional/press/arriva-in-italia-fullback-il-pick-up-1-ton-di-fiat-professional"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "pickup",
+            "sources": [
+              "https://www.media.stellantis.com/it-it/fiat-professional/press/arriva-in-italia-fullback-il-pick-up-1-ton-di-fiat-professional"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Fullback2016 / pick-up",
+            "noteCs": "Vlastní evropská premiéra, konfigurace kabiny nemění základní typ karoserie."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Fullback",
-      "https://www.ultimatespecs.com/car-specs/Fiat/106787/Fiat-Fullback-Double-Cab-LX-24-181HP-4x4-Euro-6.html"
+      "https://www.ultimatespecs.com/car-specs/Fiat/106787/Fiat-Fullback-Double-Cab-LX-24-181HP-4x4-Euro-6.html",
+      "https://www.media.stellantis.com/it-it/fiat-professional/press/arriva-in-italia-fullback-il-pick-up-1-ton-di-fiat-professional"
     ],
     "needsReview": [
       {
@@ -18286,10 +18512,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18504,7 +18726,9 @@
         "to": 2012,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -18598,13 +18822,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Idea",
-          "https://www.ultimatespecs.com/car-specs/Fiat/782/Fiat-Idea-12-16v.html"
+          "https://www.ultimatespecs.com/car-specs/Fiat/782/Fiat-Idea-12-16v.html",
+          "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-idea-in-uk"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-idea-in-uk"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Idea2004 / mini-MPV",
+            "noteCs": "Vlastní evropská premiéra samostatnéIdea; LanciaMusa není další karoserie."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Idea",
-      "https://www.ultimatespecs.com/car-specs/Fiat/782/Fiat-Idea-12-16v.html"
+      "https://www.ultimatespecs.com/car-specs/Fiat/782/Fiat-Idea-12-16v.html",
+      "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-idea-in-uk"
     ],
     "needsReview": [
       {
@@ -18617,10 +18855,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18689,7 +18923,9 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -18715,12 +18951,26 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Linea"
+          "https://en.wikipedia.org/wiki/Fiat_Linea",
+          "https://www.media.stellantis.com/br-en/fiat/press/new-fiat-linea"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.media.stellantis.com/br-en/fiat/press/new-fiat-linea"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Linea2008 / new sedan",
+            "noteCs": "Vlastní uvedení stejné modelové rodinyLinea; regionální motory ani rozměry se nepřenášejí."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Linea"
+      "https://en.wikipedia.org/wiki/Fiat_Linea",
+      "https://www.media.stellantis.com/br-en/fiat/press/new-fiat-linea"
     ],
     "needsReview": [
       {
@@ -18741,10 +18991,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -19426,7 +19672,9 @@
         "to": 2010,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol-cng",
@@ -19501,12 +19749,26 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Multipla"
+          "https://en.wikipedia.org/wiki/Fiat_Multipla",
+          "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-multipla-in-uk"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-multipla-in-uk"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Multipla2004 / mid-size MPV",
+            "noteCs": "Vlastní modernizace Multipla1998–2010. Marketingové second generation není použito ke změně generační struktury."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Multipla"
+      "https://en.wikipedia.org/wiki/Fiat_Multipla",
+      "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-multipla-in-uk"
     ],
     "needsReview": [
       {
@@ -19519,10 +19781,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -24848,7 +25106,10 @@
         "to": 1990,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "diesel",
@@ -25003,12 +25264,35 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Regata"
+          "https://en.wikipedia.org/wiki/Fiat_Regata",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "FIAT - REGATA Sedan (138_) 09/83→08/95",
+            "noteCs": "Vlastní katalog výrobce komponentů: přesně označená karoserie a generace. Rozsah aplikace dílů není přenesen do let výroby."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "FIAT - REGATA Weekend (138_) 06/83→08/95",
+            "noteCs": "Vlastní katalog výrobce komponentů: přesně označená karoserie a generace. Rozsah aplikace dílů není přenesen do let výroby."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Regata"
+      "https://en.wikipedia.org/wiki/Fiat_Regata",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
@@ -25021,10 +25305,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -25093,7 +25373,10 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -25120,13 +25403,38 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Ritmo",
-          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+          "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+          "https://www.valeoservice.de/de/techassist/vehicle/P-2593"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.valeoservice.de/de/techassist/vehicle/P-2593"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "RITMO138 /1.9TD / Aufbauart Schrägheck",
+            "noteCs": "Vlastní katalogValeo přiřazuje hatchback původnímuRitmo138, ne pozdějšímuBravo198 prodávanému pod názvemRitmo."
+          },
+          {
+            "bodyType": "kabriolet",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "FIAT - RITMO Convertible (138_) 10/79→07/89",
+            "noteCs": "Vlastní katalog výrobce komponentů: přesně označená karoserie a generace. Rozsah aplikace dílů není přenesen do let výroby."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Ritmo",
-      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
+      "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://www.valeoservice.de/de/techassist/vehicle/P-2593"
     ],
     "needsReview": [
       {
@@ -25151,10 +25459,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -26077,7 +26381,9 @@
         "to": 2014,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "diesel",
@@ -26135,13 +26441,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Sedici",
-          "https://de.wikipedia.org/wiki/Fiat_Sedici"
+          "https://de.wikipedia.org/wiki/Fiat_Sedici",
+          "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-sedici-in-the-uk"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-sedici-in-the-uk"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Sedici UK2006 / compact SUV",
+            "noteCs": "Vlastní evropská premiéra Sedici; Suzuki SX4 není automaticky další karoserií."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Sedici",
-      "https://de.wikipedia.org/wiki/Fiat_Sedici"
+      "https://de.wikipedia.org/wiki/Fiat_Sedici",
+      "https://www.media.stellantis.com/uk-en/fiat/press/new-fiat-sedici-in-the-uk"
     ],
     "needsReview": [
       {
@@ -26154,10 +26474,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -26230,7 +26546,9 @@
         "to": 2010,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -26304,13 +26622,27 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Seicento",
-          "https://de.wikipedia.org/wiki/Fiat_Seicento"
+          "https://de.wikipedia.org/wiki/Fiat_Seicento",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/seicento/187/253569/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/seicento/187/253569/"
+            ],
+            "method": "motoring-club-technical-catalogue",
+            "anchor": "Seicento187 0.9SX1998 / Schrägheck",
+            "noteCs": "Vlastní technický katalog ADAC s výslovným typem karoserie."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Seicento",
-      "https://de.wikipedia.org/wiki/Fiat_Seicento"
+      "https://de.wikipedia.org/wiki/Fiat_Seicento",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/seicento/187/253569/"
     ],
     "needsReview": [
       {
@@ -26323,10 +26655,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -27692,7 +28020,9 @@
         "to": 1994,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "dodavka"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -27718,7 +28048,20 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Talento"
+          "https://en.wikipedia.org/wiki/Fiat_Talento",
+          "https://www.media.stellantis.com/it-it/fiat-professional/press/buon-35-compleanno-ducato"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://www.media.stellantis.com/it-it/fiat-professional/press/buon-35-compleanno-ducato"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Ducato first series / shortened Talento1988/1989",
+            "noteCs": "Vlastní historie užitkovéhoDucato a zkrácenéTalento; data začátku výroby zde nejsou upravována."
+          }
         ]
       },
       {
@@ -27728,7 +28071,9 @@
         "to": 2020,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "dodavka"
+        ],
         "engines": [
           {
             "fuel": "diesel",
@@ -27806,13 +28151,28 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Talento",
-          "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html"
+          "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html",
+          "https://www.media.stellantis.com/uk-en/fiat-professional/talento-2014-2022"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/talento-2014-2022"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Talento2016 / Trade Van Driver Awards2017",
+            "noteCs": "Vlastní produktový archiv konkrétní novéTalento; nejde o původníDucato-derived."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Talento",
-      "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html"
+      "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html",
+      "https://www.media.stellantis.com/it-it/fiat-professional/press/buon-35-compleanno-ducato",
+      "https://www.media.stellantis.com/uk-en/fiat-professional/talento-2014-2022"
     ],
     "needsReview": [
       {
@@ -27825,10 +28185,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -27889,10 +28245,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -27961,7 +28313,10 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -28003,12 +28358,37 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Tempra"
+          "https://en.wikipedia.org/wiki/Fiat_Tempra",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+          "https://vitalsuspensions.it/wp-content/uploads/2024/05/catalogo-molle-di-carico-osrav-1.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://vitalsuspensions.it/wp-content/uploads/2024/05/catalogo-molle-di-carico-osrav-1.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "OSRAV / Tempra159 Berlina and Weekend",
+            "noteCs": "Vlastní katalog výrobce podvozkových dílů odděluje sedan od kombi; provedeníMarengo není osobní sedan."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "FIAT - TEMPRA S.W. (159_) 04/90→07/96",
+            "noteCs": "Vlastní katalog výrobce komponentů: přesně označená karoserie a generace. Rozsah aplikace dílů není přenesen do let výroby."
+          }
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Tempra"
+      "https://en.wikipedia.org/wiki/Fiat_Tempra",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://vitalsuspensions.it/wp-content/uploads/2024/05/catalogo-molle-di-carico-osrav-1.pdf"
     ],
     "needsReview": [
       {
@@ -28029,10 +28409,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -29597,7 +29973,9 @@
         "to": 2002,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -29746,7 +30124,20 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Ulysse",
-          "https://en.wikipedia.org/wiki/Eurovans#Fiat_Ulysse"
+          "https://en.wikipedia.org/wiki/Eurovans#Fiat_Ulysse",
+          "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-ulysse"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-ulysse"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Ulysse2002 / new MPV succeeds original1994",
+            "noteCs": "Vlastní premiéra2002 výslovně označuje původní i novouUlysse za MPV."
+          }
         ]
       },
       {
@@ -29756,7 +30147,9 @@
         "to": 2010,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -29920,7 +30313,20 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Ulysse",
-          "https://en.wikipedia.org/wiki/Eurovans#Fiat_Ulysse"
+          "https://en.wikipedia.org/wiki/Eurovans#Fiat_Ulysse",
+          "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-ulysse"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-ulysse"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Ulysse2002 / new MPV succeeds original1994",
+            "noteCs": "Vlastní premiéra2002 výslovně označuje původní i novouUlysse za MPV."
+          }
         ]
       },
       {
@@ -29930,7 +30336,9 @@
         "to": null,
         "productionStatus": "unknown",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "mpv"
+        ],
         "engines": [
           {
             "fuel": "diesel",
@@ -29988,14 +30396,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_Ulysse",
-          "https://de.wikipedia.org/wiki/Fiat_Ulysse"
+          "https://de.wikipedia.org/wiki/Fiat_Ulysse",
+          "https://www.media.stellantis.com/uk-en/fiat-professional/press/new-fiat-professional-scudo-and-new-fiat-ulysse"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/new-fiat-professional-scudo-and-new-fiat-ulysse"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "New Ulysse2021 announcement / Hordain2022 / MPV",
+            "noteCs": "Vlastní nová osobníUlysse odlišena od souběžnéScudo."
+          }
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Ulysse",
       "https://en.wikipedia.org/wiki/Eurovans#Fiat_Ulysse",
-      "https://de.wikipedia.org/wiki/Fiat_Ulysse"
+      "https://de.wikipedia.org/wiki/Fiat_Ulysse",
+      "https://www.media.stellantis.com/em-en/fiat/press/new-fiat-ulysse",
+      "https://www.media.stellantis.com/uk-en/fiat-professional/press/new-fiat-professional-scudo-and-new-fiat-ulysse"
     ],
     "needsReview": [
       {
@@ -30008,10 +30431,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -30068,10 +30487,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -30132,10 +30547,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -1317,7 +1317,16 @@
         "drivetrains": [
           "rwd"
         ],
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 4
+          },
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": 4160,
           "width": 1595,
@@ -1834,8 +1843,47 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_105_BJ_1978_(Foto_Hilarmont)_(1).JPG",
           "https://cs.wikipedia.org/w/index.php?oldid=26245159",
           "https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf",
-          "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
-        ]
+          "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php",
+          "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-120-gls-1976-1990/"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-120-gls-1976-1990/"
+            ],
+            "method": "manufacturer-museum-specification",
+            "anchor": "Skoda120GLS museum profile /four-speed gearbox",
+            "noteCs": "Vlastní profil muzejní120GLS potvrzuje čtyřstupňovou převodovku běžné manuální řady. Tento počet není přenesen na125L.",
+            "scope": {
+              "version": "120 GLS"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
+            ],
+            "method": "original-owner-road-test",
+            "anchor": "Original owner road test /125L1989 /five manually selected forward ratios",
+            "noteCs": "Prvotní zkušenost autora s jeho sériově zakoupenou125L: řazení pětky a pět jednotlivých dopředných převodů jsou popsány přímo. Není použita pouhá převodovka příbuzné130 ani komunitní doporučení přestavby.",
+            "scope": {
+              "version": "125 L",
+              "modelYear": 1989
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
@@ -1843,7 +1891,8 @@
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_105_BJ_1978_(Foto_Hilarmont)_(1).JPG",
       "https://cs.wikipedia.org/w/index.php?oldid=26245159",
       "https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf",
-      "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php"
+      "https://auta5p.eu/zkusenosti/skoda_125/skoda-125-test.php",
+      "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-120-gls-1976-1990/"
     ],
     "needsReview": [
       {
@@ -1868,10 +1917,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -11713,7 +11758,9 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": [
           {
             "type": "manual",
@@ -12270,6 +12317,26 @@
           "trunkL": [
             "https://cs.wikipedia.org/w/index.php?oldid=26215791"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006) / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "RS 1.9 TDI-PD 96 kW Euro IV (UK 05/2006)",
+              "source": "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf",
+              "sha256": "179fd2114f0a4c629fa8a25935fe3aeb8baa694d142608a0fd34806acf722d88"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only"
         }
       },
       {
@@ -15273,7 +15340,9 @@
           }
         ],
         "engineCoverage": "partial",
-        "drivetrains": null,
+        "drivetrains": [
+          "fwd"
+        ],
         "transmissions": [
           {
             "type": "manual",
@@ -15301,7 +15370,7 @@
           "bodyType": null,
           "noteCs": "Souhrn ze zdroje pro generaci. Regionální verze, výbavy a roky nejsou úplně rozlišeny; nejde o úplný seznam kombinací."
         },
-        "trunkL": null,
+        "trunkL": 380,
         "markets": [
           "Europe"
         ],
@@ -15327,7 +15396,8 @@
           "https://en.wikipedia.org/w/index.php?oldid=1381766516",
           "https://commons.wikimedia.org/wiki/File:Skoda_Fabia_IV_IMG_5307.jpg",
           "https://commons.wikimedia.org/wiki/File:Škoda_Fabia_IV_1X7A7110.jpg",
-          "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043="
+          "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=",
+          "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/"
         ],
         "trims": [
           {
@@ -15926,7 +15996,44 @@
               "https://autos.skoda-auto.cz/modely/fabia"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043="
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 MPI 59 kW / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "1.0 MPI 59 kW",
+              "source": "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=",
+              "sha256": "99163f3f49a8411a27f5b16ace877acc708a2426a9fbaff1b09fe1ee2103a5d7"
+            }
+          },
+          {
+            "field": "trunkL",
+            "value": 380,
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/"
+            ],
+            "method": "manufacturer-launch-specification",
+            "anchor": "Fourth-generationFabia2021 / boot capacity380l",
+            "noteCs": "Jediná sériová osobní karoserieFabiaIV: pětidveřový hatchback. Vlastní uvedení potvrzuje základní kufr380l, nikoli maximum po sklopení opěradel.",
+            "scope": {
+              "bodyType": "hatchback",
+              "modelYear": 2021,
+              "market": "Europe",
+              "measurementBasis": "manufacturer normal boot capacity; method not stated"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "trunkL": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -15954,7 +16061,8 @@
       "https://webapps.skoda-auto.sk/Cenniky-a-katalogy/techdata/Skoda_Fabia_technickeudaje.pdf?202410241043=",
       "https://cdn.skoda-storyboard.com/2021/04/SKODA_FABIA_Historie_modelu.pdf",
       "https://www.skoda-auto.com/_doc/764cfeca-e933-425e-b1cd-dc0a2056fcfe",
-      "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/"
+      "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/",
+      "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/"
     ],
     "needsReview": [
       {
@@ -16059,10 +16167,6 @@
       },
       {
         "field": "generations[0].engines[5].variant",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].drivetrains",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -16314,10 +16418,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[3].drivetrains",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[3].specificationScope.modelYear",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -16327,10 +16427,6 @@
       },
       {
         "field": "generations[3].specificationScope.bodyType",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[3].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -28633,7 +28729,10 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
         "transmissions": [
           {
             "type": "manual",
@@ -29476,6 +29575,36 @@
           "trunkL": [
             "https://cdn.skoda-storyboard.com/2016/09/160905-Series-production-of-best-selling-%C5%A0KODA-OCTAVIA-began-20-years-ago.pdf"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.8 20V – liftback (1996) / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "1.8 20V – liftback (1996)",
+              "source": "https://www.auto.cz/test-skoda-octavia-1-8-20v-slx-4",
+              "sha256": "79b62dafad00ea729e187ccdf920c1729295a9648b1a759b03b26de8cb355cfc"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/20-years-of-skoda-octavia-jubilee-for-the-heart-of-the-brand/"
+            ],
+            "method": "manufacturer-generation-history",
+            "anchor": "OctaviaCombi I / all-wheel drive1999",
+            "noteCs": "Vlastní historie první moderníOctavia výslovně potvrzuje4×4 od1999. Pohon zadních kol není odvozen z historickéOctavie1959."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only"
         }
       },
       {
@@ -29920,7 +30049,10 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
         "transmissions": [
           {
             "type": "manual",
@@ -30394,7 +30526,37 @@
               ]
             }
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.2 TSI 77 kW - liftback 6MT (2011) / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "1.2 TSI 77 kW - liftback 6MT (2011)",
+              "source": "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf",
+              "sha256": "8f472326125129c53484794e39a0d375d6f352ea02e868b525bb8ba87a64003b"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "method": "archived-factory-brochure",
+            "anchor": "FactoryOctavia2011 / OctaviaCombi with Haldex4 /4-wheel drive",
+            "noteCs": "Vlastní dobový prospekt výslovně zobrazuje a popisuje pohonCombi4×4 druhé moderníOctavia."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only"
+        }
       },
       {
         "code": "III (5E)",
@@ -30992,7 +31154,10 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
         "transmissions": [
           {
             "type": "manual",
@@ -32435,7 +32600,42 @@
               ]
             }
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 TSI 85 kW - liftback 6MT (2017) / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "1.0 TSI 85 kW - liftback 6MT (2017)",
+              "source": "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf",
+              "sha256": "aca7868cc7577cd23780e01c2493bca737363ad83ecf425144f8c0bab52cf709"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "RS 2.0 TDI 135 kW – 6st. DSG 4×4 (2017-03-07) / drive",
+            "noteCs": "Potvrzený druh pohonu konkrétní ověřené verze stejného pokolení. Seznam uvádí doložené varianty, nikoli úplný výrobníprogram.",
+            "technicalVersionProof": {
+              "name": "RS 2.0 TDI 135 kW – 6st. DSG 4×4 (2017-03-07)",
+              "source": "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf",
+              "sha256": "72b63a44a708fe1a70dae2efc4d96d60005ef419cb209617c1eda85d38d9cd45"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only"
+        }
       },
       {
         "code": "IV (NX)",
@@ -34335,10 +34535,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[1].engines[0].displacementCc",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -34464,10 +34660,6 @@
       },
       {
         "field": "generations[1].engines[7].variant",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[1].drivetrains",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -34632,10 +34824,6 @@
       },
       {
         "field": "generations[2].engines[8].variant",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[2].drivetrains",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -36859,7 +37047,12 @@
         "to": 1946,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "dodavka",
+          "kupe",
+          "kabriolet"
+        ],
         "engines": [
           {
             "variant": "Popular Monte Carlo",
@@ -37145,7 +37338,59 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Popular_(1939).jpg",
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Popular_420_1.JPG",
           "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/",
-          "https://www.skoda-storyboard.com/en/press-releases/skoda-popular-monte-carlo-1936-1939-the-elegant-model-with-rally-dna/"
+          "https://www.skoda-storyboard.com/en/press-releases/skoda-popular-monte-carlo-1936-1939-the-elegant-model-with-rally-dna/",
+          "https://cdn.skoda-storyboard.com/2016/03/160126-SKODA-Popular-Automotive-Icon-Celebrated-First-Rally-Success-80-Years-Ago.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/03/160126-SKODA-Popular-Automotive-Icon-Celebrated-First-Rally-Success-80-Years-Ago.pdf"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Popular1934 /four-seater saloon, Tudor and semi-convertible",
+            "noteCs": "Vlastní historie původníhoPopular doplňuje běžný sedan k již potvrzeným sportovnímMonteCarlo; rodina není omezena na sedmdesát speciálníchsportovních vozů."
+          },
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/03/160126-SKODA-Popular-Automotive-Icon-Celebrated-First-Rally-Success-80-Years-Ago.pdf"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Popular1934–1946 /delivery van version",
+            "noteCs": "Vlastní historie modelovérodiny výslovně uvádí i dodávkovou karoserii; pojemTudor není zaměněn za kupé."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Popular Monte Carlo – kupé",
+            "noteCs": "Karoserie již ověřené technické verze stejného pokolení; nepřenáší její jiné údaje.",
+            "technicalVersionProof": {
+              "name": "Popular Monte Carlo – kupé",
+              "bodyType": "kupe",
+              "source": "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/",
+              "sha256": "3f2b8c85072611176d245bdd9539556e23b4f86a0eb88d2c4659667c6099f149"
+            }
+          },
+          {
+            "bodyType": "kabriolet",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Popular Monte Carlo – roadster",
+            "noteCs": "Karoserie již ověřené technické verze stejného pokolení; nepřenáší její jiné údaje.",
+            "technicalVersionProof": {
+              "name": "Popular Monte Carlo – roadster",
+              "bodyType": "kabriolet",
+              "source": "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/",
+              "sha256": "2f2aeb019921d976dd3372c1be56a9f07f9bc5ee67597ed8396431d31513886b"
+            }
+          }
         ]
       }
     ],
@@ -37154,7 +37399,8 @@
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Popular_(1939).jpg",
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Popular_420_1.JPG",
       "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-popular-monte-carlo-1936-1939/",
-      "https://www.skoda-storyboard.com/en/press-releases/skoda-popular-monte-carlo-1936-1939-the-elegant-model-with-rally-dna/"
+      "https://www.skoda-storyboard.com/en/press-releases/skoda-popular-monte-carlo-1936-1939-the-elegant-model-with-rally-dna/",
+      "https://cdn.skoda-storyboard.com/2016/03/160126-SKODA-Popular-Automotive-Icon-Celebrated-First-Rally-Success-80-Years-Ago.pdf"
     ],
     "needsReview": [
       {
@@ -37167,10 +37413,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -44033,7 +44275,7 @@
         "dimensionsMm": {
           "length": 4803,
           "width": 1765,
-          "height": null,
+          "height": 1469,
           "wheelbase": 2803
         },
         "specificationScope": {
@@ -44043,7 +44285,7 @@
           "bodyType": null,
           "noteCs": "Souhrn ze zdroje pro generaci. Regionální verze, výbavy a roky nejsou úplně rozlišeny; nejde o úplný seznam kombinací."
         },
-        "trunkL": null,
+        "trunkL": 462,
         "markets": [
           "Europe"
         ],
@@ -44387,7 +44629,48 @@
               ]
             }
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.height",
+            "value": 1469,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2004-Skoda-Superb-UK.pdf"
+            ],
+            "method": "archived-factory-brochure",
+            "anchor": "FactorySuperb UK2004 / Measurements /height1469 unloaded",
+            "noteCs": "Jediná hlavní karoserie prvníSuperb: standardní sedan s bází2803. Výška nezatíženého vozu1469 mm z výrobního prospektu doplňuje shodnou existující sadu4803/1765/2803. Není převzata z další generace.",
+            "scope": {
+              "bodyType": "sedan",
+              "modelYear": 2004,
+              "market": "UK",
+              "wheelbaseMm": 2803,
+              "loadBasis": "unloaded vehicle",
+              "widthBasis": "body without mirrors"
+            }
+          },
+          {
+            "field": "trunkL",
+            "value": 462,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2004-Skoda-Superb-UK.pdf"
+            ],
+            "method": "archived-factory-brochure",
+            "anchor": "FactorySuperb UK2004 / Measurements /Boot capacity462l",
+            "noteCs": "Standardní sedan prvníSuperb, dobový nominální objem kufru462l. Zdroj neurčuje metodikuVDA/SAE, proto se žádná nedoplňuje; nejde o maximální prostor po přestavbě interiéru.",
+            "scope": {
+              "bodyType": "sedan",
+              "modelYear": 2004,
+              "market": "UK",
+              "wheelbaseMm": 2803,
+              "measurementBasis": "manufacturer nominal boot capacity; method not stated"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.height": "standard-body-reference",
+          "trunkL": "standard-body-reference"
+        }
       },
       {
         "code": "II (3T)",
@@ -47061,10 +47344,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -47074,10 +47353,6 @@
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
