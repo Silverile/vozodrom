@@ -316,8 +316,53 @@
           "suv",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "6.2 V8",
+            "fuel": "petrol",
+            "displacementCc": 6162,
+            "displacementLitresNominal": 6.2,
+            "powerKwMin": 293,
+            "powerKwMax": 293,
+            "availablePowerKw": [
+              293
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.rockcrawler.com/features/newsshorts/07march/hummer/h2.asp"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "6.2 V8 6AT SUV standard suspension",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "6.2 V8 6AT SUV standard suspension",
+                "source": "https://www.rockcrawler.com/features/newsshorts/07march/hummer/h2.asp",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 6162,
+                  "cylinders": 8,
+                  "powerKw": 293,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "11c315debaabdc524837725beca7103d3d6da17c513c4ebbb490668583ac91c1"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "H2",
+                "fromYear": 2002,
+                "toYear": 2009,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená specifikace; úplné období nabídky není ověřeno. Předběžný výkon 293 kW před konečnou certifikací SAE. Moment 574 Nm se rozchází s pozdějšími 563 Nm: null. Hmotnost 6614 lb / 3017 kg a rozsah jediné uvedené délky v souhrnném listu nejsou bezpečně přiřaditelné přesné karoserii: null. Výška pro standardní podvozek, nikoli vzduchový. Převodovka odvozená pro zadní pohon neznamená pohon pouze zadních kol; vůz má rozdělovací převodovku a 4WD."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -464,10 +509,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

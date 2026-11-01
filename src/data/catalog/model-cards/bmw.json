@@ -30957,8 +30957,96 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "XM 50e",
+            "fuel": "petrol-phev",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 350,
+            "powerKwMax": 350,
+            "availablePowerKw": [
+              350
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmw.de/content/dam/bmw/marketDE/bmw_de/new-vehicles/pricelists/preisliste-bmwxm.pdf.coredownload.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "XM 50e",
+              "noteCs": "Německý tovární ceník srpen 2026, výkon Gesamtfahrzeugantrieb a objem ve stejných sloupcích.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XM",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "XM Label",
+            "fuel": "petrol-phev",
+            "displacementCc": 4395,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 550,
+            "powerKwMax": 550,
+            "availablePowerKw": [
+              550
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmw.de/content/dam/bmw/marketDE/bmw_de/new-vehicles/pricelists/preisliste-bmwxm.pdf.coredownload.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "XM Label",
+              "noteCs": "Německý tovární ceník srpen 2026, výkon Gesamtfahrzeugantrieb a objem ve stejných sloupcích.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XM",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "XM",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.4,
+            "powerKwMin": 480,
+            "powerKwMax": 480,
+            "availablePowerKw": [
+              480
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-xm-m-hybrid-system.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "XM",
+              "noteCs": "Původní vlastní XM, výslovná System power 480 kW. Není sečten výkon ICE a elektromotoru ani domýšlen přesný cm³.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XM",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -30997,13 +31085,17 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381666087",
-          "https://www.wikidata.org/wiki/Q109967114"
+          "https://www.wikidata.org/wiki/Q109967114",
+          "https://www.bmw.de/content/dam/bmw/marketDE/bmw_de/new-vehicles/pricelists/preisliste-bmwxm.pdf.coredownload.pdf",
+          "https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-xm-m-hybrid-system.html"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381666087",
-      "https://www.wikidata.org/wiki/Q109967114"
+      "https://www.wikidata.org/wiki/Q109967114",
+      "https://www.bmw.de/content/dam/bmw/marketDE/bmw_de/new-vehicles/pricelists/preisliste-bmwxm.pdf.coredownload.pdf",
+      "https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-xm-m-hybrid-system.html"
     ],
     "needsReview": [
       {
@@ -31020,10 +31112,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -31073,6 +31161,10 @@
       {
         "field": "scope",
         "reason": "Částečný historický a technický přehled. Dosavadní katalogová rodina a vybraný technický list mohou mít překrývající se časový rozsah; agregát není další konstrukční generací."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

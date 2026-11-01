@@ -3244,8 +3244,67 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.4 S",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.4,
+            "powerKwMin": 157,
+            "powerKwMax": 157,
+            "availablePowerKw": [
+              157
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Jaguar_S-Type_(1963)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.4 S",
+              "noteCs": "Pouze původní 1963–1968, výslovné kW vlastních 3.4 S/3.8 S; přesný cm³ ani norma výkonu zde nejsou doplněny odhadem.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "PůvodníS-Type",
+                "fromYear": 1963,
+                "toYear": 1968,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "3.8 S",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.8,
+            "powerKwMin": 164,
+            "powerKwMax": 164,
+            "availablePowerKw": [
+              164
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Jaguar_S-Type_(1963)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.8 S",
+              "noteCs": "Pouze původní 1963–1968, výslovné kW vlastních 3.4 S/3.8 S; přesný cm³ ani norma výkonu zde nejsou doplněny odhadem.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "PůvodníS-Type",
+                "fromYear": 1963,
+                "toYear": 1968,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3267,7 +3326,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Jaguar_S-Type_(1963)"
+          "https://en.wikipedia.org/wiki/Jaguar_S-Type_(1963)",
+          "https://de.wikipedia.org/wiki/Jaguar_S-Type_(1963)"
         ]
       },
       {
@@ -3327,7 +3387,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Jaguar_S-Type_(1963)",
       "https://en.wikipedia.org/wiki/Jaguar_S-Type_(1999)",
-      "https://www.ultimatespecs.com/car-specs/Jaguar/1849/Jaguar-S-Type-25-V6.html"
+      "https://www.ultimatespecs.com/car-specs/Jaguar/1849/Jaguar-S-Type-25-V6.html",
+      "https://de.wikipedia.org/wiki/Jaguar_S-Type_(1963)"
     ],
     "needsReview": [
       {
@@ -3340,10 +3401,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3429,6 +3486,14 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

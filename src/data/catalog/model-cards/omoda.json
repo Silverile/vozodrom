@@ -750,8 +750,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "9 SHS-P",
+            "fuel": "petrol-phev",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 395,
+            "powerKwMax": 395,
+            "availablePowerKw": [
+              395
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://omoda-jaecoo.cz/skladove-vozy/omoda9shs-mn2c9euecst/pdf/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "9 SHS-P – český technický list",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "9 SHS-P – český technický list",
+                "source": "https://omoda-jaecoo.cz/skladove-vozy/omoda9shs-mn2c9euecst/pdf/",
+                "engine": {
+                  "fuel": "petrol-phev",
+                  "displacementCc": 1499,
+                  "cylinders": 4,
+                  "powerKw": 395,
+                  "powerStandard": "Systémový výkon podle českého technického listu.",
+                  "torqueNm": null
+                },
+                "sha256": "770543d02dfbe7b60e5a1f5024deb3d54b85d96cf8052cd68292be4dacb10c82"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "9 SHS-P / C9",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Česká konfigurace 1.5 TGDI, 3DHT, baterie 34,46 kWh. Systémový moment ponechán null kvůli rozdílným zveřejněným údajům; nepřebírány britské hodnoty jiné homologace."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "awd"
         ],
@@ -872,10 +917,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

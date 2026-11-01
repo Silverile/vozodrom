@@ -38,6 +38,10 @@ def production(tree):
 def generation_fit(g,name,span):
     if not span or not g.get('from'):return False
     if span[0]>(g.get('to') or 2026) or span[1] and span[1]<g['from']:return False
+    target=set(re.findall(r'\b[A-Z]{1,3}[0-9]{2,3}\b',(g.get('code') or '').upper()))
+    source=set(re.findall(r'\b[A-Z]{1,3}[0-9]{2,3}\b',name.upper()))
+    numbered_series=any(re.search(r'\bBR\s*'+re.sub(r'^[A-Z]+','',code)+r'\b',name,re.I) for code in target)
+    if target and source and not target&source and not numbered_series:return False
     codes={c for c in r.t.token(g.get('code') or '') if re.search(r'\d',c)}
     if codes&r.t.token(name):return True
     return abs(span[0]-g['from'])<=1

@@ -2190,8 +2190,67 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.4",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 33,
+            "powerKwMax": 33,
+            "availablePowerKw": [
+              33
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Moskwitsch-403"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.4",
+              "noteCs": "Vlastní 403, původní 33 kW a výslovně popsaná modernizace 1964 na 37 kW. Objem uveden pouze nominálně, neodhadován cm³.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "403 – modelová rodina",
+                "fromYear": 1962,
+                "toYear": 1965,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.4",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 37,
+            "powerKwMax": 37,
+            "availablePowerKw": [
+              37
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Moskwitsch-403"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.4",
+              "noteCs": "Vlastní 403, původní 33 kW a výslovně popsaná modernizace 1964 na 37 kW. Objem uveden pouze nominálně, neodhadován cm³.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "403 – modelová rodina",
+                "fromYear": 1962,
+                "toYear": 1965,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2214,7 +2273,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Moskvitch_402",
-          "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019"
+          "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019",
+          "https://de.wikipedia.org/wiki/Moskwitsch-403"
         ],
         "fieldSources": {
           "from": [
@@ -2225,7 +2285,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Moskvitch_402",
-      "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019"
+      "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019",
+      "https://de.wikipedia.org/wiki/Moskwitsch-403"
     ],
     "needsReview": [
       {
@@ -2238,10 +2299,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2291,6 +2348,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []

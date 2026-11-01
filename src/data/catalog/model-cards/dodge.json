@@ -12158,8 +12158,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.8 CRD",
+            "fuel": "diesel",
+            "displacementCc": 2776,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/INT_DG_Nitro_T.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "2.8 CRD 6MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "2.8 CRD 6MT",
+                "source": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/INT_DG_Nitro_T.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 2776,
+                  "cylinders": 4,
+                  "powerKw": 130,
+                  "powerStandard": "Manufacturer DIN specification",
+                  "torqueNm": 410
+                },
+                "sha256": "8c1ab0ae34767a3c1fbb31ca00ee3cd610a208c67b82d76e7f9332c81f69ed33"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Nitro",
+                "fromYear": 2006,
+                "toYear": 2011,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Evropský list 1. 9. 2009. Mechanicky volitelný pohon 4×4 je v omezeném katalogovém slovníku veden jako awd; neznamená trvalý mezinápravový diferenciál. Moment se liší podle převodovky. Přesný objem tohoto zdroje 2776 cm³ se nezaměňuje s jinými katalogy uvádějícími 2777."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -12381,7 +12426,6 @@
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Dodge_Nitro",
-          "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/INT_DG_Nitro_T.pdf",
           "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/INT_DG_Nitro_T.pdf"
         ],
         "fieldSources": {
@@ -12415,10 +12459,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

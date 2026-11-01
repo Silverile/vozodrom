@@ -93,6 +93,9 @@ export function evidenceProblem(g,index,e){
  if(ev.fromYear!=null&&ev.fromYear>(g.to??2026))return 'Source starts after generation';
  if(ev.toYear!=null&&ev.toYear<g.from)return 'Source ends before generation';
  if(ev.method==='specification-page'){
+   const chassis=s=>new Set((s??'').toUpperCase().match(/\b[A-Z]{1,3}[0-9]{2,3}\b/g)??[]),target=chassis(g.code),source=chassis(ev.anchor);
+   const numberedSeries=[...target].some(code=>new RegExp('\\bBR\\s*'+code.replace(/^[A-Z]+/,'')+'\\b','i').test(ev.anchor??''));
+   if(target.size&&source.size&&![...target].some(code=>source.has(code))&&!numberedSeries)return 'Specification chassis contradicts catalogue generation';
   const p=scope.specificationPage;
   if(!p||!(e.sources??[]).includes(p.url)||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/\d+\/[^/?#]+\.html$/.test(p.url??''))return 'Missing specification-page source';
   if(!p.title||!p.generation||p.generation!==ev.anchor||p.generationProductionFrom!==ev.fromYear||p.generationProductionTo!==ev.toYear)return 'Specification generation evidence mismatch';
