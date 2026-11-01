@@ -2920,19 +2920,118 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Sobol",
+        "code": "2217 / 2310 / 2752",
+        "name": "Sobol (2217 / 2310 / 2752)",
         "from": 1998,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
+        "facelift": [
+          {
+            "year": 2003,
+            "note": "Modernizovaná původní konstrukce.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZ_Sobol"
+            ],
+            "productionYear": 2003
+          },
+          {
+            "year": 2010,
+            "note": "Únor 2010: zahájena výroba modernizované rodiny Business.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZ_Sobol"
+            ],
+            "productionYear": 2010
+          }
+        ],
         "bodyTypes": [
           "dodavka",
           "mpv",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "2.3 ZMZ-406",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZ_Sobol"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "2.3 ZMZ-406",
+              "noteCs": "Původní rodina Sobol; objemy a paliva doloženy, konkrétní výkon bez přesné tovární tabulky není doplněn.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "2217 / 2310 / 2752",
+                "fromYear": 1998,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.9 UMZ-4216",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZ_Sobol"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "2.9 UMZ-4216",
+              "noteCs": "Původní rodina Sobol; objemy a paliva doloženy, konkrétní výkon bez přesné tovární tabulky není doplněn.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "2217 / 2310 / 2752",
+                "fromYear": 1998,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.8 Cummins Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZ_Sobol"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "2.8 Cummins Diesel",
+              "noteCs": "Původní rodina Sobol; objemy a paliva doloženy, konkrétní výkon bez přesné tovární tabulky není doplněn.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "2217 / 2310 / 2752",
+                "fromYear": 1998,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2946,7 +3045,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Původní Sobol/Business a nová konstrukce NN jsou souběžné rodiny. Datum ukončení není doloženo; modernizace Business 2010 není samostatná generace."
         },
         "trunkL": null,
         "markets": [
@@ -2956,83 +3055,295 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/GAZ_Sobol",
-          "https://www.kommersant.ru/doc/8462216"
-        ]
+          "https://en.wikipedia.org/wiki/GAZ_Sobol"
+        ],
+        "dateBasis": "production",
+        "drawingStage": 2
+      },
+      {
+        "code": "NN",
+        "name": "Sobol (NN)",
+        "from": 2022,
+        "to": null,
+        "productionStatus": "unknown",
+        "facelift": null,
+        "bodyTypes": [
+          "dodavka",
+          "mpv"
+        ],
+        "engines": [
+          {
+            "variant": "2.5 G31C Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ru.wikipedia.org/wiki/Соболь_NEXT"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "2.5 G31C Diesel",
+              "noteCs": "Sobol NN; 150 PS / 110 kW přímo uvedeno, nominální 2.5 l se nepovažuje za ověření přesného zdvihového objemu v cm³.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "NN",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Původní Sobol/Business a nová konstrukce NN jsou souběžné rodiny. Datum ukončení není doloženo; modernizace Business 2010 není samostatná generace."
+        },
+        "trunkL": null,
+        "markets": [
+          "Soviet Union / Russia; export variants require separate verification"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://ru.wikipedia.org/wiki/Соболь_NEXT"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/GAZ_Sobol",
-      "https://www.kommersant.ru/doc/8462216"
+      "https://www.kommersant.ru/doc/8462216",
+      "https://ru.wikipedia.org/wiki/Соболь_NEXT"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].to",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].productionStatus",
+        "reason": "Původní Sobol/Business a nová konstrukce NN jsou souběžné rodiny. Datum ukončení není doloženo; modernizace Business 2010 není samostatná generace."
+      },
+      {
+        "field": "generations[1].productionStatus",
+        "reason": "Původní Sobol/Business a nová konstrukce NN jsou souběžné rodiny. Datum ukončení není doloženo; modernizace Business 2010 není samostatná generace."
       }
     ]
   },

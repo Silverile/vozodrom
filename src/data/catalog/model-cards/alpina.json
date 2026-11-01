@@ -6335,14 +6335,102 @@
     "generations": [
       {
         "code": "E30",
-        "name": "C2 2.5/2.7",
+        "name": "C2 (E30)",
         "from": 1985,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1987,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "C2 2.5",
+            "fuel": "petrol",
+            "displacementCc": 2552,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 136,
+            "powerKwMax": 136,
+            "availablePowerKw": [
+              136
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.alpina-archive.com/?page_id=9237"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "C2 2.5",
+              "noteCs": "Tovární C2 na základě E30; nejsou přeneseny jiné modely Alpina ani výkony původního BMW motoru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "E30",
+                "fromYear": 1985,
+                "toYear": 1987,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "C2 2.7",
+            "fuel": "petrol",
+            "displacementCc": 2693,
+            "displacementLitresNominal": 2.7,
+            "powerKwMin": 154,
+            "powerKwMax": 154,
+            "availablePowerKw": [
+              154
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.alpina-archive.com/?page_id=9237"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "C2 2.7",
+              "noteCs": "Tovární C2 na základě E30; nejsou přeneseny jiné modely Alpina ani výkony původního BMW motoru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "E30",
+                "fromYear": 1985,
+                "toYear": 1987,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "C2 2.7 KAT",
+            "fuel": "petrol",
+            "displacementCc": 2693,
+            "displacementLitresNominal": 2.7,
+            "powerKwMin": 149,
+            "powerKwMax": 149,
+            "availablePowerKw": [
+              149
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.alpina-archive.com/?page_id=9237"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "C2 2.7 KAT",
+              "noteCs": "Tovární C2 na základě E30; nejsou přeneseny jiné modely Alpina ani výkony původního BMW motoru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "E30",
+                "fromYear": 1985,
+                "toYear": 1987,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6356,7 +6444,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Vybrané doložené konstrukční rodiny. Souběžná kupé a sedany nebo opakovaně použitá jména nejsou tvrzením nepřerušené posloupnosti nástupců."
+          "noteCs": "C2 2.5 (1985–1986) a C2 2.7 (1986–1987) jsou vývojové motorizace stejné rodiny E30. Úplná modelově specifická nabídka karoserií není v použité tabulce doložena."
         },
         "trunkL": null,
         "markets": [
@@ -6366,86 +6454,102 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://fr.wikipedia.org/wiki/Alpina_(automobile)",
+          "https://www.alpina-archive.com/?page_id=9237",
           "https://en.wikipedia.org/wiki/Alpina"
-        ]
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Alpina",
-      "https://www.alpina-archive.com/?page_id=9237"
+      "https://www.alpina-archive.com/?page_id=9237",
+      "https://fr.wikipedia.org/wiki/Alpina_(automobile)"
     ],
     "needsReview": [
       {
-        "field": "scope",
-        "reason": "Historický přehled je částečný: chybí úplné ročníkové výbavy, všechny dílčí varianty a přímé primární ověření části výrobních mezníků."
-      },
-      {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ]
   },

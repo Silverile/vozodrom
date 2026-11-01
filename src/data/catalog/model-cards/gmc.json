@@ -3364,8 +3364,8 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Savana",
+        "code": "GMT600 / GMT610",
+        "name": "Savana (GMT600 / GMT610)",
         "from": 1996,
         "to": null,
         "productionStatus": "unknown",
@@ -3374,8 +3374,63 @@
           "dodavka",
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "4.3 V6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Chevrolet_Express"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "4.3 V6",
+              "noteCs": "Společně popsaná tovární nabídka Express/Savana; objemy doloženy, výkon přesné varianty zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT600 / GMT610",
+                "fromYear": 1996,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.0 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Chevrolet_Express"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.0 V8",
+              "noteCs": "Společně popsaná tovární nabídka Express/Savana; objemy doloženy, výkon přesné varianty zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT600 / GMT610",
+                "fromYear": 1996,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3389,7 +3444,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Savana je sourozenec Express; jedna konstrukční rodina s modernizací 2003. Konec výroby nebyl doložen."
         },
         "trunkL": null,
         "markets": [
@@ -3399,83 +3454,130 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Express",
           "https://en.wikipedia.org/wiki/GMC_(automobile)",
           "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
-        ]
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/GMC_(automobile)",
-      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
+      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54",
+      "https://en.wikipedia.org/wiki/Chevrolet_Express"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].productionStatus",
+        "reason": "Savana je sourozenec Express; jedna konstrukční rodina s modernizací 2003. Konec výroby nebyl doložen."
       }
     ]
   },
@@ -6726,17 +6828,105 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "Yukon",
-        "from": 1992,
-        "to": null,
-        "productionStatus": "unknown",
+        "code": "GMT400",
+        "name": "Yukon (GMT400)",
+        "from": 1991,
+        "to": 2000,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "5.7 TBI V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.7,
+            "powerKwMin": 149,
+            "powerKwMax": 149,
+            "availablePowerKw": [
+              149
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.7 TBI V8",
+              "noteCs": "Tovární provedení původního globálního Yukon; diesel pouze pro dvoudveřové 4WD, nikoli potvrzená česká nabídka.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT400",
+                "fromYear": 1991,
+                "toYear": 2000,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5.7 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.7,
+            "powerKwMin": 190,
+            "powerKwMax": 190,
+            "availablePowerKw": [
+              190
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.7 Vortec V8",
+              "noteCs": "Tovární provedení původního globálního Yukon; diesel pouze pro dvoudveřové 4WD, nikoli potvrzená česká nabídka.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT400",
+                "fromYear": 1991,
+                "toYear": 2000,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.5 Turbo Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": 134,
+            "powerKwMax": 134,
+            "availablePowerKw": [
+              134
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.5 Turbo Diesel",
+              "noteCs": "Tovární provedení původního globálního Yukon; diesel pouze pro dvoudveřové 4WD, nikoli potvrzená česká nabídka.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT400",
+                "fromYear": 1991,
+                "toYear": 2000,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6750,7 +6940,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
         },
         "trunkL": null,
         "markets": [
@@ -6760,83 +6950,1123 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/GMC_(automobile)",
-          "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
-        ]
+          "https://en.wikipedia.org/wiki/GMC_Yukon"
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "GMT820",
+        "name": "Yukon (GMT820)",
+        "from": 1999,
+        "to": 2005,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "4.8 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.8,
+            "powerKwMin": 205,
+            "powerKwMax": 205,
+            "availablePowerKw": [
+              205
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "4.8 Vortec V8",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "4.8 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.8,
+            "powerKwMin": 213,
+            "powerKwMax": 213,
+            "availablePowerKw": [
+              213
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "4.8 Vortec V8",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5.3 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 213,
+            "powerKwMax": 213,
+            "availablePowerKw": [
+              213
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.3 Vortec V8",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5.3 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.3 Vortec V8",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.0 V8 Denali",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 239,
+            "powerKwMax": 239,
+            "availablePowerKw": [
+              239
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.0 V8 Denali",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.0 V8 Denali",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 242,
+            "powerKwMax": 242,
+            "availablePowerKw": [
+              242
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.0 V8 Denali",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.0 V8 Denali",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 250,
+            "powerKwMax": 250,
+            "availablePowerKw": [
+              250
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.0 V8 Denali",
+              "noteCs": "Globální tovární provedení Yukon; 6.0 jen Denali. Tabulka používá modelové roky, které se nepřevádějí na hranice výrobní generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT820",
+                "fromYear": 1999,
+                "toYear": 2005,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
+        },
+        "trunkL": null,
+        "markets": [
+          "North America; other markets only when explicitly specified"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/GMC_Yukon"
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "GMT900",
+        "name": "Yukon (GMT900)",
+        "from": 2005,
+        "to": 2014,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "4.8 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.8,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "4.8 Vortec V8",
+              "noteCs": "Globální tovární Yukon. Nejsou převzaty hodnoty jen pro Tahoe LTZ, E85 ani samotný spalovací motor hybridu jako výkon systému.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT900",
+                "fromYear": 2005,
+                "toYear": 2014,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5.3 Vortec V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 239,
+            "powerKwMax": 239,
+            "availablePowerKw": [
+              239
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.3 Vortec V8",
+              "noteCs": "Globální tovární Yukon. Nejsou převzaty hodnoty jen pro Tahoe LTZ, E85 ani samotný spalovací motor hybridu jako výkon systému.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT900",
+                "fromYear": 2005,
+                "toYear": 2014,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.2 V8 Denali",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.2,
+            "powerKwMin": 301,
+            "powerKwMax": 301,
+            "availablePowerKw": [
+              301
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.2 V8 Denali",
+              "noteCs": "Globální tovární Yukon. Nejsou převzaty hodnoty jen pro Tahoe LTZ, E85 ani samotný spalovací motor hybridu jako výkon systému.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMT900",
+                "fromYear": 2005,
+                "toYear": 2014,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
+        },
+        "trunkL": null,
+        "markets": [
+          "North America; other markets only when explicitly specified"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/GMC_Yukon"
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "GMTK2UG",
+        "name": "Yukon (GMTK2UG)",
+        "from": 2014,
+        "to": 2019,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "5.3 EcoTec3 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 265,
+            "powerKwMax": 265,
+            "availablePowerKw": [
+              265
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.3 EcoTec3 V8",
+              "noteCs": "Vybrané doložené provedení; dostupnost závisí na trhu a roce, nikoli potvrzený český ceník.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMTK2UG",
+                "fromYear": 2014,
+                "toYear": 2019,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.2 EcoTec3 V8 Denali",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.2,
+            "powerKwMin": 313,
+            "powerKwMax": 313,
+            "availablePowerKw": [
+              313
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.2 EcoTec3 V8 Denali",
+              "noteCs": "Vybrané doložené provedení; dostupnost závisí na trhu a roce, nikoli potvrzený český ceník.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMTK2UG",
+                "fromYear": 2014,
+                "toYear": 2019,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
+        },
+        "trunkL": null,
+        "markets": [
+          "North America; other markets only when explicitly specified"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/GMC_Yukon"
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "GMTT1UG",
+        "name": "Yukon (GMTT1UG)",
+        "from": 2020,
+        "to": null,
+        "productionStatus": "unknown",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "5.3 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "5.3 V8",
+              "noteCs": "Pátá generace Yukon: u 5.3 V8 a dieselového 3.0 ponechán výkon neověřené přesné varianty prázdný; hodnoty Tahoe nejsou automaticky přeneseny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMTT1UG",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.2 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.2,
+            "powerKwMin": 313,
+            "powerKwMax": 313,
+            "availablePowerKw": [
+              313
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "6.2 V8",
+              "noteCs": "Pátá generace Yukon: u 5.3 V8 a dieselového 3.0 ponechán výkon neověřené přesné varianty prázdný; hodnoty Tahoe nejsou automaticky přeneseny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMTT1UG",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "3.0 Duramax Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GMC_Yukon"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "3.0 Duramax Diesel",
+              "noteCs": "Pátá generace Yukon: u 5.3 V8 a dieselového 3.0 ponechán výkon neověřené přesné varianty prázdný; hodnoty Tahoe nejsou automaticky přeneseny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GMTT1UG",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
+        },
+        "trunkL": null,
+        "markets": [
+          "North America; other markets only when explicitly specified"
+        ],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/GMC_Yukon"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/GMC_(automobile)",
-      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
+      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54",
+      "https://en.wikipedia.org/wiki/GMC_Yukon"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[5].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[5].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[5].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[6].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[6].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[6].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[2].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[3].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].to",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[1].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[4].productionStatus",
+        "reason": "Výrobní roky z oddílů generací; modelové roky 1992/2000/2007/2015/2021 nejsou počátkem výroby. Yukon XL je stejná generace s delším rozvorem. Aktuální konec výroby nebyl nezávisle doložen."
       }
     ]
   },
