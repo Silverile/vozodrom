@@ -434,6 +434,11 @@ def owns_article(tree,card,make,gi):
     if ':' in title:return False
     folded=t.fold(title);joined=folded.replace(' ','')
     names=[card['name']]
+    # A spaced slash explicitly presents alternative model names, not a code
+    # such as Wolseley 6/80. Require the owning marque for these extra aliases.
+    label_aliases=re.split(r'\s+/\s+',card['name'])
+    if folded.startswith(t.fold(make.replace('-',' '))) and all(re.search('[A-Z]',t.fold(n)) for n in label_aliases):
+        names+=label_aliases
     names+=re.split(r'\s*/\s*',card['generations'][gi].get('name') or '')
     for name in names:
         n=t.fold(name)

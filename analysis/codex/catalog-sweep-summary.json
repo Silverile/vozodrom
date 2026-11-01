@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-31",
+  "asOf": "2026-11-01",
   "baselineRevision": "e827ed2aebb2342d0086739400f632be056d3cdf",
   "countsBefore": {
     "lines": 4809,
@@ -17,15 +17,15 @@
     "cards": 4753,
     "linesWithoutCard": 0,
     "generations": 6841,
-    "generationsWithEngines": 2786,
+    "generationsWithEngines": 2797,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
     "generationsWithFacelifts": 842
   },
   "engineRowsBefore": 4471,
-  "engineRowsAfter": 10153,
-  "changedPublicCards": 1402,
+  "engineRowsAfter": 10177,
+  "changedPublicCards": 1419,
   "wave1SecondSource": {
     "visited": 528,
     "filled": 274,
@@ -55,7 +55,7 @@
       "lines": 479,
       "missingCards": 0,
       "generations": 1239,
-      "emptyEngineGenerations": 256,
+      "emptyEngineGenerations": 253,
       "partialPowerGenerations": 126
     },
     {
@@ -63,7 +63,7 @@
       "lines": 627,
       "missingCards": 0,
       "generations": 945,
-      "emptyEngineGenerations": 474,
+      "emptyEngineGenerations": 473,
       "partialPowerGenerations": 67
     },
     {
@@ -71,15 +71,15 @@
       "lines": 3647,
       "missingCards": 0,
       "generations": 4657,
-      "emptyEngineGenerations": 3325,
+      "emptyEngineGenerations": 3318,
       "partialPowerGenerations": 410
     }
   ],
   "structuralSignalLines": 41,
-  "closingValidation": "analysis/codex/structure-pass-6/validation.json",
+  "closingValidation": "analysis/codex/catalog-sweep-closing-validation.json",
   "scopeNote": "Engine queues visited, not all model histories certified. Original wave-2 header lines=615 described the whole fleet wave; its 651 queued items belonged to 450 distinct lines.",
   "wave3MissingCards": {
-    "phase": "Missing-card queue closed; structural review next",
+    "phase": "Missing-card queue closed; subsequent structural/source passes completed with residual history gaps",
     "queueAtStart": 161,
     "historicallyCreatedCards": 131,
     "retiredDuplicateCards": 26,
@@ -95,7 +95,7 @@
     },
     "statisticsReport": "analysis/codex/wave-3-missing-cards-3/statistics.json",
     "validation": "analysis/codex/wave-3-missing-cards-3/validation.json",
-    "fullStructuralPassCompleted": false
+    "fullStructuralPassCompleted": true
   },
   "wave3StructuralPass": {
     "reviewed": 84,
@@ -116,20 +116,45 @@
     "remainingMechanicalSignals": 41,
     "validation": "analysis/codex/structure-pass-6/validation.json",
     "report": "analysis/codex/structure-pass-6/report.md",
-    "next": "Ordinary wave-3 batches, with explicit unresolved/scope follow-ups retained",
+    "next": "Source queues closed; remaining field and history gaps need focused research",
     "cardIndexByteDelta": 9096,
     "cardIndexGzipDelta": 1722
   },
   "wave3Ordinary": {
-    "visited": 3000,
-    "remaining": 647,
-    "batches": 8,
-    "latestBatch": "analysis/codex/wave-3/batch-8",
-    "latestChangedLines": 38,
-    "latestNewLines": 400,
+    "visited": 3647,
+    "remaining": 0,
+    "batches": 9,
+    "latestBatch": "analysis/codex/wave-3/batch-9",
+    "latestChangedLines": 24,
+    "latestNewLines": 810,
     "latestRetriedLines": 0,
-    "latestEnginesAdded": 27,
-    "latestEmptyEngineEntries": 342,
-    "fullHistoriesCertified": false
-  }
+    "latestEnginesAdded": 24,
+    "latestEmptyEngineEntries": 153,
+    "fullHistoriesCertified": false,
+    "finalFleetCoverageCatchup": 163
+  },
+  "sweepStatus": "source-queues-closed-with-residual-gaps",
+  "identityOnlyCards": [
+    "audi/a4-allroad",
+    "audi/a6-allroad",
+    "audi/rs-e-tron-gt",
+    "audi/rs-q8",
+    "audi/rs7",
+    "audi/s-e-tron-gt",
+    "audi/s1",
+    "audi/s3",
+    "audi/s4",
+    "audi/s5",
+    "audi/s6",
+    "audi/s6-e-tron",
+    "audi/s7",
+    "audi/s8",
+    "audi/sq2",
+    "audi/sq5",
+    "audi/sq6-e-tron",
+    "audi/sq7",
+    "audi/sq8",
+    "audi/sq8-e-tron",
+    "audi/tts"
+  ]
 }

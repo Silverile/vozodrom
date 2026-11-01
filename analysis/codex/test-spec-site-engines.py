@@ -32,3 +32,13 @@ e,why=m.detail(tree,url,item,'75 (F103)',(1968,1972),parent);assert e and why is
 assert m.detail(m.r.t.lxml.html.fromstring(html.replace('<td>75</td>','<td>80 (B4)</td>')),url,item,'75 (F103)',(1968,1972),parent)[0] is None
 assert m.detail(tree,url,item,'75 (F103)',(1968,1972))[0] is None
 print('PASS: abbreviated generation field requires linked table, matching chassis code and non-conflicting detail field')
+
+card={'name':'Thalia / Symbol','generations':[{'name':'Symbol II'}]}
+html=m.r.t.lxml.html.fromstring('<h1>Renault Symbol</h1>');assert m.r.owns_article(html,card,'renault',0)
+assert not m.r.owns_article(m.r.t.lxml.html.fromstring('<h1>Toyota Symbol</h1>'),card,'renault',0)
+m.r.INDEX={'renault':{'symbol':card},'wolseley-motors':{'6-80':{'name':'6/80'}}}
+assert 'SYMBOL' in m.model_names({'make':'renault','line':'symbol'})
+assert '80' not in m.model_names({'make':'wolseley-motors','line':'6-80'})
+print('PASS: explicit same-marque slash aliases; numeric model codes remain whole')
+m.r.INDEX["wolseley-motors"]["6-80"]["name"]="6 / 80"
+assert "80" not in m.model_names({"make":"wolseley-motors","line":"6-80"})

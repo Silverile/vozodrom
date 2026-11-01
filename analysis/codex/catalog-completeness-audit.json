@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-31",
+  "asOf": "2026-11-01",
   "scope": "All public line/card identities; structural gaps, not a proof that every historical generation/engine/facelift is present.",
   "priority": "Descending Czech fleet.n where supplied; unknown register counts stay null and sort after known counts. No invented zero counts.",
   "caveats": [
@@ -14,7 +14,7 @@
     "cards": 4753,
     "linesWithoutCard": 0,
     "generations": 6841,
-    "generationsWithEngines": 2786,
+    "generationsWithEngines": 2797,
     "generationsWithEngineRowsWithoutPower": 603,
     "generationsWithTechnicalVersions": 2086,
     "generationsWithEquipmentLines": 32,
@@ -246,16 +246,6 @@
         ]
       },
       {
-        "makeSlug": "renault",
-        "lineSlug": "thalia-alias-for-slug-symbol",
-        "fleetN": 21517,
-        "generationIndexes": [
-          0,
-          1,
-          2
-        ]
-      },
-      {
         "makeSlug": "honda",
         "lineSlug": "civic",
         "fleetN": 20865,
@@ -319,6 +309,14 @@
         "fleetN": 13557,
         "generationIndexes": [
           0,
+          2
+        ]
+      },
+      {
+        "makeSlug": "audi",
+        "lineSlug": "q7",
+        "fleetN": 11882,
+        "generationIndexes": [
           2
         ]
       }
@@ -10526,7 +10524,7 @@
           "from": 1999,
           "to": 2008,
           "fleetN": 9952,
-          "engineRows": 0,
+          "engineRows": 6,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -10540,7 +10538,6 @@
             "https://en.wikipedia.org/wiki/Renault_Symbol"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -10552,7 +10549,7 @@
           "from": 2008,
           "to": 2013,
           "fleetN": 11115,
-          "engineRows": 0,
+          "engineRows": 6,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -10566,7 +10563,6 @@
             "https://en.wikipedia.org/wiki/Renault_Symbol"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -10578,7 +10574,7 @@
           "from": 2013,
           "to": 2021,
           "fleetN": 450,
-          "engineRows": 0,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -10592,7 +10588,6 @@
             "https://en.wikipedia.org/wiki/Renault_Symbol"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -42646,7 +42641,7 @@
           "from": 2008,
           "to": 2014,
           "fleetN": 176,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -42660,7 +42655,6 @@
             "https://en.wikipedia.org/wiki/Ford_F-Series_(twelfth_generation)"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -48754,46 +48748,6 @@
       ]
     },
     {
-      "makeSlug": "hyundai",
-      "lineSlug": "galloper",
-      "name": "Galloper",
-      "fleetN": 594,
-      "cardPresent": true,
-      "generationCount": 1,
-      "historicalCompleteness": "not-established-by-field-presence",
-      "gaps": [
-        "generation-field-gaps"
-      ],
-      "generations": [
-        {
-          "index": 0,
-          "name": "Galloper",
-          "code": "Galloper (I/II)",
-          "from": 1991,
-          "to": null,
-          "fleetN": 594,
-          "engineRows": 2,
-          "engineRowsWithoutPower": [],
-          "technicalVersionRows": 6,
-          "technicalVersionRowsWithoutPower": [],
-          "equipmentLineRows": 0,
-          "faceliftCount": 1,
-          "expectedFaceliftCount": null,
-          "faceliftComparison": "not-compared-to-historical-sources",
-          "expectedGenerationCountForLine": null,
-          "historicalCompleteness": "not-audited",
-          "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1378307168",
-            "https://de.wikipedia.org/w/index.php?oldid=259811440",
-            "https://www.auto-data.net/en/hyundai-galloper-ii-generation-2960"
-          ],
-          "gaps": [
-            "no-equipment-line-records"
-          ]
-        }
-      ]
-    },
-    {
       "makeSlug": "dodge",
       "lineSlug": "caravan",
       "name": "Caravan / Grand Caravan",
@@ -48932,6 +48886,47 @@
           "gaps": [
             "no-engine-rows",
             "no-technical-version-rows",
+            "no-equipment-line-records"
+          ]
+        }
+      ]
+    },
+    {
+      "makeSlug": "hyundai",
+      "lineSlug": "galloper",
+      "name": "Galloper",
+      "fleetN": 593,
+      "cardPresent": true,
+      "generationCount": 1,
+      "historicalCompleteness": "not-established-by-field-presence",
+      "gaps": [
+        "generation-field-gaps"
+      ],
+      "generations": [
+        {
+          "index": 0,
+          "name": "Galloper",
+          "code": "Galloper (I/II)",
+          "from": 1991,
+          "to": 2004,
+          "fleetN": 593,
+          "engineRows": 2,
+          "engineRowsWithoutPower": [],
+          "technicalVersionRows": 6,
+          "technicalVersionRowsWithoutPower": [],
+          "equipmentLineRows": 0,
+          "faceliftCount": 1,
+          "expectedFaceliftCount": null,
+          "faceliftComparison": "not-compared-to-historical-sources",
+          "expectedGenerationCountForLine": null,
+          "historicalCompleteness": "not-audited",
+          "sources": [
+            "https://en.wikipedia.org/w/index.php?oldid=1378307168",
+            "https://de.wikipedia.org/w/index.php?oldid=259811440",
+            "https://www.auto-data.net/en/hyundai-galloper-ii-generation-2960",
+            "https://en.wikipedia.org/wiki/Hyundai_Galloper"
+          ],
+          "gaps": [
             "no-equipment-line-records"
           ]
         }
@@ -222702,7 +222697,7 @@
           "name": "iQ",
           "code": null,
           "from": 2011,
-          "to": null,
+          "to": 2013,
           "fleetN": null,
           "engineRows": 0,
           "engineRowsWithoutPower": [],
@@ -222715,7 +222710,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://static.nhtsa.gov/odi/rcl/2012/RCMN-12V528-5867.pdf"
+            "https://static.nhtsa.gov/odi/rcl/2012/RCMN-12V528-5867.pdf",
+            "https://en.wikipedia.org/wiki/Toyota_iQ#Scion_iQ"
           ],
           "gaps": [
             "no-engine-rows",
@@ -223439,7 +223435,7 @@
           "from": 1980,
           "to": 1986,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -223453,7 +223449,6 @@
             "https://en.wikipedia.org/wiki/SEAT_Marbella"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -224070,7 +224065,7 @@
           "from": 1929,
           "to": 1936,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 1,
           "technicalVersionRowsWithoutPower": [],
@@ -224086,7 +224081,6 @@
             "https://www.skoda.hr/svijet-marke/povijest-marke-skoda/skoda-vremenska-lenta"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -224530,7 +224524,7 @@
           "from": 2021,
           "to": null,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 2,
           "technicalVersionRowsWithoutPower": [
@@ -224548,7 +224542,6 @@
             "https://commons.wikimedia.org/wiki/File:2021_%C5%A0koda_Kushaq_(India)_front_view.png"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -224573,7 +224566,7 @@
           "from": 2024,
           "to": null,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 1,
           "technicalVersionRowsWithoutPower": [
@@ -224590,7 +224583,6 @@
             "https://commons.wikimedia.org/wiki/File:2025_Skoda_Kylaq.png"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -224660,7 +224652,7 @@
           "from": 2022,
           "to": null,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 2,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 2,
           "technicalVersionRowsWithoutPower": [
@@ -224678,7 +224670,6 @@
             "https://commons.wikimedia.org/wiki/File:2021_%C5%A0koda_Slavia_1.5_TSI_Style_(India)_front_view.png"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-equipment-line-records"
           ]
         }
@@ -224743,7 +224734,7 @@
           "index": 0,
           "name": "VOS – modelová rodina",
           "code": null,
-          "from": null,
+          "from": 1950,
           "to": 1952,
           "fleetN": null,
           "engineRows": 0,
@@ -224760,7 +224751,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1380842377",
-            "https://commons.wikimedia.org/wiki/File:Skoda-vos-l.jpg"
+            "https://commons.wikimedia.org/wiki/File:Skoda-vos-l.jpg",
+            "https://www.skoda-storyboard.com/en/press-releases/skoda-vehicles-served-czech-presidents-90-years/"
           ],
           "gaps": [
             "no-engine-rows",
@@ -229491,7 +229483,7 @@
           "name": "105",
           "code": null,
           "from": 1931,
-          "to": null,
+          "to": 1935,
           "fleetN": null,
           "engineRows": 1,
           "engineRowsWithoutPower": [],
@@ -229505,7 +229497,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1269278079",
-            "https://en.wikipedia.org/w/index.php?oldid=1379231786"
+            "https://en.wikipedia.org/w/index.php?oldid=1379231786",
+            "https://en.wikipedia.org/wiki/Talbot_105"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -229951,7 +229944,7 @@
           "name": "Murena",
           "code": null,
           "from": 1980,
-          "to": null,
+          "to": 1983,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [],
@@ -229965,7 +229958,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1357993613",
-            "https://de.wikipedia.org/w/index.php?oldid=266248124"
+            "https://de.wikipedia.org/w/index.php?oldid=266248124",
+            "https://en.wikipedia.org/wiki/Matra_Murena"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -229990,7 +229984,7 @@
           "name": "Rancho",
           "code": "X3010",
           "from": 1977,
-          "to": null,
+          "to": 1983,
           "fleetN": null,
           "engineRows": 1,
           "engineRowsWithoutPower": [],
@@ -230004,7 +229998,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://de.wikipedia.org/w/index.php?oldid=248984533",
-            "https://en.wikipedia.org/w/index.php?oldid=1357141609"
+            "https://en.wikipedia.org/w/index.php?oldid=1357141609",
+            "https://de.wikipedia.org/wiki/Talbot-Matra_Rancho"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -232416,7 +232411,7 @@
           "from": 1980,
           "to": null,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -232430,7 +232425,6 @@
             "https://mag.toyota.co.uk/do-you-remember-the-toyota-cressida/"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -233185,7 +233179,7 @@
           "name": "13/35",
           "code": null,
           "from": 1924,
-          "to": null,
+          "to": 1926,
           "fleetN": null,
           "engineRows": 1,
           "engineRowsWithoutPower": [],
@@ -233199,7 +233193,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1248974501",
-            "https://de.wikipedia.org/w/index.php?oldid=175602724"
+            "https://de.wikipedia.org/w/index.php?oldid=175602724",
+            "https://en.wikipedia.org/wiki/Triumph_13/35"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -235119,7 +235114,7 @@
           "name": "350i",
           "code": null,
           "from": 1983,
-          "to": null,
+          "to": 1989,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [
@@ -235137,7 +235132,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1381182712",
-            "https://de.wikipedia.org/w/index.php?oldid=262557631"
+            "https://de.wikipedia.org/w/index.php?oldid=262557631",
+            "https://en.wikipedia.org/wiki/TVR_350i"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -235163,7 +235159,7 @@
           "name": "390SE",
           "code": null,
           "from": 1984,
-          "to": null,
+          "to": 1989,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [
@@ -235181,7 +235177,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1380893966",
-            "https://de.wikipedia.org/w/index.php?oldid=257537319"
+            "https://de.wikipedia.org/w/index.php?oldid=257537319",
+            "https://en.wikipedia.org/wiki/TVR_390SE"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -235245,7 +235242,7 @@
           "name": "420 SEAC / 450 SEAC",
           "code": null,
           "from": 1986,
-          "to": null,
+          "to": 1988,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [
@@ -235264,7 +235261,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1370459120"
+            "https://en.wikipedia.org/w/index.php?oldid=1370459120",
+            "https://en.wikipedia.org/wiki/TVR_420_SEAC"
           ],
           "gaps": [
             "engine-rows-without-power",
@@ -235290,7 +235288,7 @@
           "name": "Cerbera",
           "code": null,
           "from": 1996,
-          "to": null,
+          "to": 2006,
           "fleetN": null,
           "engineRows": 3,
           "engineRowsWithoutPower": [],
@@ -235306,7 +235304,8 @@
           "historicalCompleteness": "not-audited",
           "sources": [
             "https://en.wikipedia.org/w/index.php?oldid=1342188708",
-            "https://de.wikipedia.org/w/index.php?oldid=252141668"
+            "https://de.wikipedia.org/w/index.php?oldid=252141668",
+            "https://en.wikipedia.org/wiki/TVR_Cerbera"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -240844,7 +240843,7 @@
           "name": "Fétish",
           "code": null,
           "from": 2004,
-          "to": null,
+          "to": 2007,
           "fleetN": null,
           "engineRows": 1,
           "engineRowsWithoutPower": [],
@@ -241934,7 +241933,7 @@
           "from": 1955,
           "to": 1974,
           "fleetN": null,
-          "engineRows": 0,
+          "engineRows": 1,
           "engineRowsWithoutPower": [],
           "technicalVersionRows": 0,
           "technicalVersionRowsWithoutPower": [],
@@ -241951,7 +241950,6 @@
             "https://www.volkswagen-newsroom.com/en/karmann-ghia-3614"
           ],
           "gaps": [
-            "no-engine-rows",
             "no-technical-version-rows",
             "no-equipment-line-records"
           ]
@@ -244096,7 +244094,7 @@
           "name": "Wartburg-Motorwagen",
           "code": null,
           "from": 1898,
-          "to": null,
+          "to": 1903,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [],
@@ -244111,7 +244109,8 @@
           "sources": [
             "https://de.wikipedia.org/w/index.php?oldid=253322104",
             "https://de.wikipedia.org/w/index.php?oldid=271379065",
-            "https://en.wikipedia.org/w/index.php?oldid=1379741810"
+            "https://en.wikipedia.org/w/index.php?oldid=1379741810",
+            "https://de.wikipedia.org/wiki/Wartburg-Motorwagen"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -244328,7 +244327,7 @@
           "name": "Macchiato",
           "code": null,
           "from": 2021,
-          "to": null,
+          "to": 2023,
           "fleetN": null,
           "engineRows": 2,
           "engineRowsWithoutPower": [],
@@ -244344,7 +244343,8 @@
             "https://de.wikipedia.org/w/index.php?oldid=262071222",
             "https://en.wikipedia.org/w/index.php?oldid=1346912833",
             "https://www.chinaservicesinfo.com/s/202109/30/WS61556ee5498e6a12c1206607/gmws-hybrid-wey-macchiato-hits-market.html",
-            "https://en.wikipedia.org/wiki/Wey_(marque)"
+            "https://en.wikipedia.org/wiki/Wey_(marque)",
+            "https://en.wikipedia.org/wiki/Wey_Macchiato"
           ],
           "gaps": [
             "no-equipment-line-records"
@@ -249094,7 +249094,7 @@
           "index": 0,
           "name": "EV80",
           "code": null,
-          "from": null,
+          "from": 2018,
           "to": null,
           "fleetN": null,
           "engineRows": 1,
@@ -249108,7 +249108,8 @@
           "expectedGenerationCountForLine": null,
           "historicalCompleteness": "not-audited",
           "sources": [
-            "https://en.wikipedia.org/w/index.php?oldid=1362334359"
+            "https://en.wikipedia.org/w/index.php?oldid=1362334359",
+            "https://en.wikipedia.org/wiki/Wuling_EV80"
           ],
           "gaps": [
             "no-equipment-line-records"

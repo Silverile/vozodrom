@@ -11,6 +11,8 @@ LAST_FETCH=0;RATE_LIMITED=False
 def compact(x):return re.sub(r'[^A-Z0-9]','',r.t.fold(x))
 def model_names(item):
     card=r.INDEX[item['make']][item['line']];names={compact(card['name']),compact(item['line'])}
+    label_aliases=re.split(r'\s+/\s+',card['name'])
+    if all(re.search('[A-Z]',r.t.fold(n)) for n in label_aliases):names|={compact(name) for name in label_aliases}
     if item['make']=='mercedes-benz':names|={compact(re.sub(r'^trida-','',item['line'])+'-Class')}
     if item['make']=='ds-automobiles':names|={compact(card['name'].replace('DS ',''))}
     return names

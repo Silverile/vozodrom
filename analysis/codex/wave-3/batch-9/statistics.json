@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "rawRecomputedMakes": [
+    "hyundai"
+  ],
+  "fullVinHistoryProcessed": true,
+  "fullHistorySelection": "analysis/codex/wave-3/batch-9/full-history-selection.json",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-11-01"
+    }
+  },
+  "snapshotMetadataPreserved": true,
+  "executionMetadata": [
+    {
+      "make": "hyundai",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    }
+  ],
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPopulatedLineLostAllGenerations": true,
+  "makeReports": [
+    {
+      "make": "hyundai",
+      "fleet": 307579,
+      "inspections": 640663,
+      "fleetCohorts": 53,
+      "inspectionCohorts": 48,
+      "rollbackBefore": {
+        "vehicles": 217598,
+        "share": 0.0064
+      },
+      "rollbackAfter": {
+        "vehicles": 217598,
+        "share": 0.0064
+      }
+    }
+  ],
+  "lineChanges": [
+    {
+      "id": "hyundai/galloper",
+      "fleetBefore": 594,
+      "fleetAfter": 593,
+      "inspectionsBefore": 1123,
+      "inspectionsAfter": 1118,
+      "generationKeysBefore": [
+        "0"
+      ],
+      "generationKeysAfter": [
+        "0"
+      ]
+    }
+  ],
+  "publishedChangedMakeFiles": [
+    "src/data/stats/hyundai.json"
+  ],
+  "rawAggregateSha256": {
+    "istp-agg.json": "02ddbbca09582a87025e106553c92b909fccfd77d9d76c175b1cd79ec58b429c",
+    "rsv-agg.json": "7cea6d797b3ab90df1817b56686dd8ac04f24dbbd94adb8e4499c9f5c31b13bb"
+  },
+  "outputSha256": {
+    "src/data/stats/hyundai.json": "23b28e5c80a8d3c5220b2e214b18417b3c316f15181e613975ddcdc042ffe4ce",
+    "src/data/stats/index.json": "bf8e772f9d27ac607d42c37ed5ead14ea43b4fbb4f524644b5089dfd0f8f117f",
+    "src/data/listing-stats.json": "f3a1db7e8daf5ea3d3f2600f7d6746d6858e687954fe625618763207ba3ccaaf"
+  }
+}

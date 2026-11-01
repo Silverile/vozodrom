@@ -48,7 +48,7 @@ for (const make of [...new Set([...Object.keys(lines), ...Object.keys(cards)])].
 rows.sort((a,b) => (b.fleetN ?? -1)-(a.fleetN ?? -1) || a.makeSlug.localeCompare(b.makeSlug) || a.lineSlug.localeCompare(b.lineSlug));
 const gens = rows.flatMap(r => r.generations);
 const result = {
-  schemaVersion:1,asOf:'2026-10-31',
+  schemaVersion:1,asOf:new Date().toISOString().slice(0,10),
   scope:'All public line/card identities; structural gaps, not a proof that every historical generation/engine/facelift is present.',
   priority:'Descending Czech fleet.n where supplied; unknown register counts stay null and sort after known counts. No invented zero counts.',
   caveats:['Register generation counts use existing ordinal mappings and are ranking evidence, not verification of historical generation identity.', 'No facelift record is not evidence that a facelift is missing: source comparison is required.', 'Equipment lines are distinct from technical engine/gearbox/drive versions.', 'A model absent from both indexes cannot be discovered by this internal audit.'],
