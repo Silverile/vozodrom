@@ -2251,8 +2251,59 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1769,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 84,
+            "powerKwMax": 84,
+            "availablePowerKw": [
+              84
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Nissan/6675/Nissan-Almera-Tino-18.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2000 - 2003)",
+              "originalVariant": "Nissan Almera Tino 1.8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Nissan/6675/Nissan-Almera-Tino-18.html",
+                "title": "Nissan Almera Tino 1.8 Specs",
+                "modelAliases": [
+                  "ALMERATINO"
+                ],
+                "generation": "Almera Tino",
+                "generationFieldPresent": false,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Nissan/M1091/Almera-Tino",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Almera Tino",
+                "generationProductionFrom": 2000,
+                "generationProductionTo": 2006,
+                "variantDateText": "(2000 - 2003)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "114 PS / 112 HP / 84 kW@ 5600 rpm",
+                "displacementText": "1769 cm3 / 108 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Almera Tino",
+                "fromYear": 2000,
+                "toYear": 2006,
+                "generationIndex": 0,
+                "rowFromYear": 2000,
+                "rowToYear": 2003
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2291,13 +2342,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379932443",
-          "https://www.wikidata.org/wiki/Q2092725"
+          "https://www.wikidata.org/wiki/Q2092725",
+          "https://www.ultimatespecs.com/car-specs/Nissan/6675/Nissan-Almera-Tino-18.html"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1379932443",
-      "https://www.wikidata.org/wiki/Q2092725"
+      "https://www.wikidata.org/wiki/Q2092725",
+      "https://www.ultimatespecs.com/car-specs/Nissan/6675/Nissan-Almera-Tino-18.html"
     ],
     "needsReview": [
       {
@@ -2310,10 +2363,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6235,8 +6284,241 @@
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.9 dCi",
+            "fuel": "diesel",
+            "displacementCc": 1870,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 60,
+            "powerKwMax": 60,
+            "availablePowerKw": [
+              60
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.9 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.2 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2188,
+            "displacementLitresNominal": 2.2,
+            "powerKwMin": 66,
+            "powerKwMax": 66,
+            "availablePowerKw": [
+              66
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.2 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2463,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 73,
+            "powerKwMax": 73,
+            "availablePowerKw": [
+              73
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2463,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 74,
+            "powerKwMax": 74,
+            "availablePowerKw": [
+              74
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2463,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 84,
+            "powerKwMax": 84,
+            "availablePowerKw": [
+              84
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2463,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "availablePowerKw": [
+              88
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2463,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 107,
+            "powerKwMax": 107,
+            "availablePowerKw": [
+              107
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "3.0 dCi",
+            "fuel": "diesel",
+            "displacementCc": 2953,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 100,
+            "powerKwMax": 100,
+            "availablePowerKw": [
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Nissan_Interstar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.0 dCi",
+              "noteCs": "Pouze vlastní první Interstar, nikoli automatický přenos motorů z Renaultu Master nebo dalšího Interstaru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Interstar I (Renault Master II)",
+                "fromYear": 2002,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6260,7 +6542,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1374841632",
           "https://www.wikidata.org/wiki/Q1993688",
-          "https://www.nissan-global.com/EN/DOCUMENT/PDF/AR/2002/ar2002.pdf"
+          "https://www.nissan-global.com/EN/DOCUMENT/PDF/AR/2002/ar2002.pdf",
+          "https://de.wikipedia.org/wiki/Nissan_Interstar"
         ],
         "fieldSources": {
           "name": [
@@ -6396,7 +6679,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1374841632",
-      "https://www.wikidata.org/wiki/Q1993688"
+      "https://www.wikidata.org/wiki/Q1993688",
+      "https://de.wikipedia.org/wiki/Nissan_Interstar"
     ],
     "needsReview": [
       {
@@ -6413,10 +6697,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18096,8 +18376,59 @@
           "dodavka",
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 81,
+            "powerKwMax": 81,
+            "availablePowerKw": [
+              81
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "2.8t dCi 110",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Nissan/147851/Nissan-Primastar-L1H1-CrewCab-28t-dCi-110.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2021 - )",
+              "originalVariant": "Nissan Primastar L1H1 CrewCab 2.8t dCi 110 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Nissan/147851/Nissan-Primastar-L1H1-CrewCab-28t-dCi-110.html",
+                "title": "Nissan Primastar L1H1 CrewCab 2.8t dCi 110 Specs",
+                "modelAliases": [
+                  "PRIMASTAR"
+                ],
+                "generation": "Primastar (4/J4) - 2022 New Model",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Nissan/M15284/Primastar-L1H1-CrewCab",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Primastar L1H1 CrewCab",
+                "generationProductionFrom": 2021,
+                "generationProductionTo": null,
+                "variantDateText": "(2021 - )",
+                "fuelText": " Diesel Inline 4",
+                "bodyText": "Van",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "110 PS / 109 HP / 81 kW@ 3500 rpm",
+                "displacementText": "1997 cm3 / 121.9 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Primastar (4/J4) - 2022 New Model",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": 2021,
+                "rowToYear": 2021
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -18119,7 +18450,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1380485047"
+          "https://en.wikipedia.org/w/index.php?oldid=1380485047",
+          "https://www.ultimatespecs.com/car-specs/Nissan/147851/Nissan-Primastar-L1H1-CrewCab-28t-dCi-110.html"
         ],
         "fieldSources": {
           "from": [
@@ -18136,7 +18468,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380485047",
-      "https://www.wikidata.org/wiki/Q1412098"
+      "https://www.wikidata.org/wiki/Q1412098",
+      "https://www.ultimatespecs.com/car-specs/Nissan/147851/Nissan-Primastar-L1H1-CrewCab-28t-dCi-110.html"
     ],
     "needsReview": [
       {
@@ -18197,10 +18530,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

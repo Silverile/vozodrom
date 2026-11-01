@@ -350,6 +350,12 @@ class Matcher:
             coded = [i for i in hits if gens[i][2] & t]
             if len(coded) == 1:
                 return coded[0]
+        if make == 'audi' and line == 'sq7' and any('G8' in gens[i][2] for i in hits):
+            # The overseas G8 overlaps the European 4M in 2026. A year alone
+            # does not identify an imported G8, even after 4M production ends.
+            tokens = set(re.findall(r"\b[A-Z0-9]{2,10}\b", fold(type_text)))
+            coded = [i for i in hits if gens[i][2] & tokens]
+            return coded[0] if len(coded) == 1 else None
         # These badges cover distinct contemporary European and overseas cars.
         # An explicit chassis token above takes priority. For year-only Czech
         # records, retain the European family while it was still in production.

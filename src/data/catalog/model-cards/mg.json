@@ -5049,8 +5049,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "Hybrid+",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 143,
+            "powerKwMax": 143,
+            "availablePowerKw": [
+              143
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.mgmotor.eu/images/model/brochure/MG3_Hybrid_Brochure_Digital.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Hybrid+ Standard",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Hybrid+ Standard",
+                "source": "https://cdn.mgmotor.eu/images/model/brochure/MG3_Hybrid_Brochure_Digital.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 143,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "34d9bc6c36d4289db20e3d215be033c4786706bcb7c25a5c8f00862ec6d15dc9"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "ZP22",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Nezatížená hmotnost unladen mass z evropské brožury červen 2024. Výkon143 kW je systémový podle původní tiskové zprávy; spalovací motor75 kW/128 Nm a elektromotor100 kW nejsou sčítány. Přesné výrobní období této varianty není ověřeno; vybrané verze nejsou úplným seznamem výbav."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5353,10 +5398,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5491,6 +5532,14 @@
       {
         "field": "generations[2].trims[2].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

@@ -19,8 +19,51 @@
           "dodavka",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "B 1000",
+            "fuel": "petrol",
+            "displacementCc": 991,
+            "displacementLitresNominal": 1,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "B 1000 – sbírkový osmimístný vůz 1971",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "B 1000 – sbírkový osmimístný vůz 1971",
+                "source": "https://www.whz.de/fileadmin/service/historische_sammlung/kraftfahrzeug/docs/barkas_b_1000.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 991,
+                  "cylinders": 3,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "55f8ea606e5d6f55ed93c5de184372e6ab5ec82d6a3ff50d2218de9bd53a5ee4"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "B 1000 – dvoudobá rodina",
+                "fromYear": 1961,
+                "toYear": 1990,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výslovně exemplář1971 podle technické sbírky Westsächsische Hochschule Zwickau. List uvádí zatížení7osob+135kg; není přeneseno na všechny skříňové vozy či valníky. Výkon46PS nebyl přepočten na kW. Spotřeba7,3–13,5 je křivka TGL39-852, nikoli jeden kombinovaný údaj."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "fwd"
         ],
@@ -152,8 +195,51 @@
           "dodavka",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "B 1000-1 Pritschenwagen",
+            "fuel": "petrol",
+            "displacementCc": 1272,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://fahrzeugseiten.de/Nutzfahrzeuge/IFA/Barkas_B1000/barkas_b1000.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "B 1000-1 Pritschenwagen – čtyřtaktní valník",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "B 1000-1 Pritschenwagen – čtyřtaktní valník",
+                "source": "https://fahrzeugseiten.de/Nutzfahrzeuge/IFA/Barkas_B1000/barkas_b1000.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1272,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "9788befbe1095ef50b49623558a07ebeb2860482ff70b7098b2bcb118c077314"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "B 1000-1 – čtyřdobá modernizace",
+                "fromYear": 1990,
+                "toYear": 1991,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Sekundární přehled je výslovně označen Pritschenwagen. Hmotnost a rychlost patří této karoserii; rozměry sdílené v souhrnné tabulce nebyly přeneseny bez jasného časového/karosářského přiřazení. Motor58PS nebyl matematicky převáděn na kW."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "fwd"
         ],
@@ -257,7 +343,8 @@
         ],
         "sources": [
           "https://de.wikipedia.org/wiki/Barkas_B_1000",
-          "https://en.wikipedia.org/wiki/Barkas_B_1000-1"
+          "https://en.wikipedia.org/wiki/Barkas_B_1000-1",
+          "https://fahrzeugseiten.de/Nutzfahrzeuge/IFA/Barkas_B1000/barkas_b1000.html"
         ]
       }
     ],
@@ -295,10 +382,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -391,10 +474,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -500,6 +579,22 @@
       {
         "field": "generations[1].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

@@ -58,7 +58,14 @@ def install(e):
   chosen=e.choose_gen(card,title,[],row['sources'][0])
   if chosen is not None:
    title_tokens=e.token(title);g=card['generations'][chosen];ct=e.codes(g)
-   explicit=bool(ct&title_tokens)
+   # A model word (e.g. "Sport") or a model-wide production interval is not
+   # a chassis identity. Otherwise a generic article can force later engines
+   # into its first generation and erase contradictory row dates.
+   identities=e.token(g.get('code') or '')-e.token(card['name'])
+   if len(card['generations'])>1:
+    common=set.intersection(*(e.token(x.get('code') or '') for x in card['generations']))
+    identities-=common
+   explicit=bool(identities&title_tokens)
    number=re.search(r'\b(\d{1,2})\.\s*Generation',title,re.I)
    romans=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI']
    if number and 1<=int(number[1])<=len(romans):explicit|=romans[int(number[1])-1] in ct

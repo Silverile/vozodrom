@@ -14216,8 +14216,96 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "HYBRID 180",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 132,
+            "powerKwMax": 132,
+            "availablePowerKw": [
+              132
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-408-ab-sofort-bestellbar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "HYBRID 180",
+              "noteCs": "Vlastní evropský fastback 408 P54, výslovné systémové hodnoty PHEV 132/165 kW. Nesčítají se hodnoty spalovacího a elektrického motoru; přesný cm³ tento zdroj neuvádí.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P54",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "HYBRID 225",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 165,
+            "powerKwMax": 165,
+            "availablePowerKw": [
+              165
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-408-ab-sofort-bestellbar"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "HYBRID 225",
+              "noteCs": "Vlastní evropský fastback 408 P54, výslovné systémové hodnoty PHEV 132/165 kW. Nesčítají se hodnoty spalovacího a elektrického motoru; přesný cm³ tento zdroj neuvádí.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P54",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "E-408",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 157,
+            "powerKwMax": 157,
+            "availablePowerKw": [
+              157
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-e-408-peugeot-komplettiert-seine-ev-palette"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "E-408",
+              "noteCs": "Vlastní sériový evropský E-408, výkon pohonu 157 kW; nikoli nabíjecí výkon nebo prototyp.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P54",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -14244,7 +14332,9 @@
           "https://en.wikipedia.org/wiki/Peugeot_408_(crossover)",
           "https://www.largus.fr/mondial/dans-les-coulisses-de-lindustrialisation-du-crossover-peugeot-408-10956404.html",
           "https://www.meinauto.de/news/2026/01/fastback-mit-feinschliff-peugeot-frischt-den-408-fuer-2026-auf",
-          "https://www.auto-motor-und-sport.de/neuheiten/peugeot-408-facelift-2026/"
+          "https://www.auto-motor-und-sport.de/neuheiten/peugeot-408-facelift-2026/",
+          "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-408-ab-sofort-bestellbar",
+          "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-e-408-peugeot-komplettiert-seine-ev-palette"
         ],
         "fieldSources": {
           "code": [
@@ -14274,7 +14364,9 @@
       "https://en.wikipedia.org/wiki/Peugeot_408_(crossover)",
       "https://www.largus.fr/mondial/dans-les-coulisses-de-lindustrialisation-du-crossover-peugeot-408-10956404.html",
       "https://www.meinauto.de/news/2026/01/fastback-mit-feinschliff-peugeot-frischt-den-408-fuer-2026-auf",
-      "https://www.auto-motor-und-sport.de/neuheiten/peugeot-408-facelift-2026/"
+      "https://www.auto-motor-und-sport.de/neuheiten/peugeot-408-facelift-2026/",
+      "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-408-ab-sofort-bestellbar",
+      "https://www.media.stellantis.com/de-de/peugeot/press/neuer-peugeot-e-408-peugeot-komplettiert-seine-ev-palette"
     ],
     "needsReview": [
       {
@@ -14283,10 +14375,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -14340,6 +14428,22 @@
       {
         "field": "coverage",
         "reason": "Průběžný částečný katalog; úplné celoživotní tabulky verzí a fotografie všech generací nejsou dokončeny."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []
@@ -17062,8 +17166,262 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0",
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 89,
+            "powerKwMax": 89,
+            "availablePowerKw": [
+              89
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0 16V",
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 97,
+            "powerKwMax": 97,
+            "availablePowerKw": [
+              97
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 16V",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0 16V",
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 100,
+            "powerKwMax": 100,
+            "availablePowerKw": [
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 16V",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0 Turbo",
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 108,
+            "powerKwMax": 108,
+            "availablePowerKw": [
+              108
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 Turbo",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.9 TD",
+            "fuel": "diesel",
+            "displacementCc": 1905,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 66,
+            "powerKwMax": 66,
+            "availablePowerKw": [
+              66
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.9 TD",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0 HDi",
+            "fuel": "diesel",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "availablePowerKw": [
+              80
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 HDi",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.1 TD",
+            "fuel": "diesel",
+            "displacementCc": 2088,
+            "displacementLitresNominal": 2.1,
+            "powerKwMin": 80,
+            "powerKwMax": 80,
+            "availablePowerKw": [
+              80
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_Evasion"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.1 TD",
+              "noteCs": "Vlastní první Eurovan: zdroj výslovně uvádí Evasion/Ulysse/Zeta/806 1994–2002. Použity společné sériové evropské verze Evasion/806, nikoli další C8/807 nebo jiné roky/dárci.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "806 – modelová rodina",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1761,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 74,
+            "powerKwMax": 74,
+            "availablePowerKw": [
+              74
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Peugeot/2049/Peugeot-806-18.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1997 - 1998)",
+              "originalVariant": "Peugeot 806 1.8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Peugeot/2049/Peugeot-806-18.html",
+                "title": "Peugeot 806 1.8 Specs",
+                "modelAliases": [
+                  "806"
+                ],
+                "generation": "806",
+                "generationFieldPresent": false,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Peugeot/M463/806",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "806",
+                "generationProductionFrom": 1994,
+                "generationProductionTo": 2002,
+                "variantDateText": "(1997 - 1998)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "100 PS / 99 HP / 74 kW@ 6000 rpm",
+                "displacementText": "1761 cm3 / 107.5 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "806",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": 1997,
+                "rowToYear": 1998
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -17087,7 +17445,9 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381874215",
           "https://www.wikidata.org/wiki/Q582767",
-          "https://en.wikipedia.org/w/index.php?title=Eurovans&oldid=1381874215"
+          "https://en.wikipedia.org/w/index.php?title=Eurovans&oldid=1381874215",
+          "https://de.wikipedia.org/wiki/Citroën_Evasion",
+          "https://www.ultimatespecs.com/car-specs/Peugeot/2049/Peugeot-806-18.html"
         ],
         "fieldSources": {
           "facelift": [
@@ -17099,7 +17459,9 @@
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381874215",
       "https://www.wikidata.org/wiki/Q582767",
-      "https://en.wikipedia.org/w/index.php?title=Eurovans&oldid=1381874215"
+      "https://en.wikipedia.org/w/index.php?title=Eurovans&oldid=1381874215",
+      "https://de.wikipedia.org/wiki/Citroën_Evasion",
+      "https://www.ultimatespecs.com/car-specs/Peugeot/2049/Peugeot-806-18.html"
     ],
     "needsReview": [
       {
@@ -17108,10 +17470,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

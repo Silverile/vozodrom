@@ -73,6 +73,8 @@ export function nonEuropeanMarket(text){
  return new RegExp(region,'i').test(text.replace(new RegExp('(?:not (?:offered |sold |available )?in|except|excluding)\\s+'+region,'ig'),''));
 }
 export function evidenceProblem(g,index,e){
+ const rawYears=[...String(e.sourceScope?.variantYears??'').matchAll(/\b(?:19|20)\d{2}\b/g)].map(m=>Number(m[0]));
+ if(rawYears.length&&(Math.max(...rawYears)<g.from||Math.min(...rawYears)>(g.to??2026)))return 'Raw engine row years do not overlap generation';
  if(typeof e.variant!=='string'||normalizeVariant(e.variant)!==e.variant)return 'Malformed engine variant name';
  const scope=e.sourceScope??{};
  if(nonEuropeanMarket([scope.originalVariant,scope.variantYears,scope.tableSection,scope.rowNotes].filter(Boolean).join(' ')))return 'Explicit non-European market row';

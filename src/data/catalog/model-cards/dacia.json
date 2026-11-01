@@ -9756,8 +9756,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "Electric 80",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 60,
+            "powerKwMax": 60,
+            "availablePowerKw": [
+              60
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Electric 80 — FR 09/2026",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Electric 80 — FR 09/2026",
+                "source": "https://media.dacia.com/new-dacia-spring-100-per-cent-electric-100-per-cent-dacia/?lang=eng",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 60,
+                  "powerStandard": null,
+                  "torqueNm": 175
+                },
+                "sha256": "56ebb6e28eb95801aafb6b03fbb9ffcd96aa2ad6d182e4479ccb7a8dc230179b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Spring II",
+                "fromYear": 2026,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Využitelná baterie LFP 27,5 kWh. Dojezd představuje nejvyšší deklarovanou hodnotu."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10010,10 +10055,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj není pro přesnou generaci a provedení ověřen; null neznamená nulu ani pokračující výrobu."
       },
       {

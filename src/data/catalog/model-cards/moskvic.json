@@ -2314,8 +2314,38 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.36 benzin",
+            "fuel": "petrol",
+            "displacementCc": 1358,
+            "displacementLitresNominal": 1.36,
+            "powerKwMin": 33,
+            "powerKwMax": 33,
+            "availablePowerKw": [
+              33
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Moskwitsch-407"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.36 benzin",
+              "noteCs": "Výslovně popsaný původní motor vlastního 407 od 1958. Pozdějších 50 PS není převzato bez potvrzení příslušné vlastní verze.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "407 – modelová rodina",
+                "fromYear": 1958,
+                "toYear": 1963,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2354,7 +2384,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Moskvitch_402",
-          "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019"
+          "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019",
+          "https://de.wikipedia.org/wiki/Moskwitsch-407"
         ],
         "fieldSources": {
           "to": [
@@ -2368,7 +2399,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Moskvitch_402",
-      "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019"
+      "https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B8%D1%87_(%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C)&oldid=155874019",
+      "https://de.wikipedia.org/wiki/Moskwitsch-407"
     ],
     "needsReview": [
       {
@@ -2381,10 +2413,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
