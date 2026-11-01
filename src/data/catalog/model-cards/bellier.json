@@ -19,8 +19,53 @@
           "hatchback",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "B8 Lombardini 480 HDI Euro 4",
+            "fuel": "diesel",
+            "displacementCc": 480,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bellier.fr/wp-content/uploads/2020/04/Brochure-B8.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "B8 Lombardini 480 HDI Euro 4 – provedení brožury",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "B8 Lombardini 480 HDI Euro 4 – provedení brožury",
+                "source": "https://www.bellier.fr/wp-content/uploads/2020/04/Brochure-B8.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 480,
+                  "cylinders": null,
+                  "powerKw": 6,
+                  "powerStandard": "CEE, podle brožury",
+                  "torqueNm": null
+                },
+                "sha256": "f4da6f649de501efdc515e29e174d236f6cb0ae94e5e556aa188583ee8a2f64a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "B8 – souhrnná řada",
+                "fromYear": 2015,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Konkrétní dieselová verze Euro 4 v nedatované brožuře uložené v adresáři 2020/04; adresář není modelový rok. Převod variátorem není nuceně označen stupňovou automatickou převodovkou. Rozvor je v nákresu 1833 mm a v tabulce 1780 mm, proto null; dvojice spotřeb 2,9/2,5 l bez jednoznačného přiřazení zůstává null."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -138,10 +183,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -2555,8 +2555,38 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "4.6 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.6,
+            "powerKwMin": 243,
+            "powerKwMax": 243,
+            "availablePowerKw": [
+              243
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "4.6 V8",
+              "noteCs": "Vlastní samostatný řádek JENSEN S-V8,4.6 243kW. Nejde o historický Interceptor ani JensenGT. Širší aplikační období neznamená změnu let skutečné sériové výroby; cm³ nejsou doplněny z ForduMustang.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "S-V8 – sériové vozy obnovené značky",
+                "fromYear": 2001,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2583,14 +2613,16 @@
           "https://joc.org.uk/jensen-models/",
           "https://www.jensenmuseum.org/jensen-production-figures-dates/",
           "https://jcca.org.au/models/",
-          "https://en.wikipedia.org/wiki/Jensen_S-V8"
+          "https://en.wikipedia.org/wiki/Jensen_S-V8",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
         ]
       }
     ],
     "sources": [
       "https://joc.org.uk/jensen-models/",
       "https://www.jensenmuseum.org/jensen-production-figures-dates/",
-      "https://jcca.org.au/models/"
+      "https://jcca.org.au/models/",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
@@ -2607,10 +2639,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2660,6 +2688,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

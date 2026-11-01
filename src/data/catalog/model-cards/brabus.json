@@ -18,8 +18,50 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "190 E V8",
+            "fuel": "petrol",
+            "displacementCc": 4973,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.brabus.com/en-int/brand/brabus-history/1980s.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "190 E V8",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "190 E V8",
+                "source": "https://www.brabus.com/en-int/brand/brabus-history/1980s.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 4973,
+                  "cylinders": 8,
+                  "powerKw": null,
+                  "torqueNm": null
+                },
+                "sha256": "785dceba6a15aa4fabb1daac7362bf1178e2d0b99da09ff6cd32535a6ab554d9"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "W201",
+                "fromYear": 1982,
+                "toYear": 1993,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -182,10 +224,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -314,10 +352,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -424,6 +458,14 @@
       {
         "field": "scope",
         "reason": "Výběr pojmenovaných projektů a přestaveb Brabus, nikoli úplný seznam všech tuningových sad. Rok prezentace není automaticky výrobní hranice."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2420,8 +2462,95 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "G V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 449,
+            "powerKwMax": 449,
+            "availablePowerKw": [
+              449
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.brabus.com/en-int/brand/brabus-history/2000s.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "G V12",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "G V12",
+                "source": "https://www.brabus.com/en-int/brand/brabus-history/2000s.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 12,
+                  "powerKw": 449,
+                  "torqueNm": null
+                },
+                "sha256": "1008725b5e2ffa341d4d11a474f9794e43ec0688beca27648c842e71275c4f80"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "W463",
+                "fromYear": 1990,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          },
+          {
+            "variant": "850 G63",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 625,
+            "powerKwMax": 625,
+            "availablePowerKw": [
+              625
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.brabus.com/en-int/brand/brabus-history/2010s.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "850 G63",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "850 G63",
+                "source": "https://www.brabus.com/en-int/brand/brabus-history/2010s.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 8,
+                  "powerKw": 625,
+                  "torqueNm": 1150
+                },
+                "sha256": "4729f3731ae84a4b5c3802d20400f325db90f01c2c2a2b011a7b7f6a788589b8"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "W463",
+                "fromYear": 1990,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -2639,8 +2768,81 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "G V12 900 6.3 Bi-Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.3,
+            "powerKwMin": 662,
+            "powerKwMax": 662,
+            "availablePowerKw": [
+              662
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.brabus.com/_Resources/Persistent/a/6/8/6/a686cd653804a75bb82aa6233beb50b0c639614f/PM%20BRABUS%20G%20V12%20900%20E.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "G V12 900 6.3 Bi-Turbo",
+              "noteCs": "Vlastní tisková zpráva BRABUS proIAA2019 výslovně novouG-Class a G V12 900 One ofTen:6.3V12/662kW. Patří kW463A od2018, nikoli předchozímuW463 do2018. Přesné cm³ nejsou doplněny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "W463A",
+                "fromYear": 2018,
+                "toYear": 2024,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "800 G63",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 588,
+            "powerKwMax": 588,
+            "availablePowerKw": [
+              588
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.brabus.com/en-int/brand/brabus-history/2010s.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "800 G63",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "800 G63",
+                "source": "https://www.brabus.com/en-int/brand/brabus-history/2010s.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 8,
+                  "powerKw": 588,
+                  "torqueNm": 1000
+                },
+                "sha256": "ec4c5a422fe55d1f74f397cffdbb945e8ffabd33ebe2b4faf4b773b9af09be2a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "W463A",
+                "fromYear": 2018,
+                "toYear": 2024,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2706,7 +2908,8 @@
         ],
         "sources": [
           "https://www.brabus.com/en-int/brand/brabus-history/2010s.html",
-          "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class"
+          "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+          "https://media.brabus.com/_Resources/Persistent/a/6/8/6/a686cd653804a75bb82aa6233beb50b0c639614f/PM%20BRABUS%20G%20V12%20900%20E.pdf"
         ],
         "dateBasis": "chassis-period"
       }
@@ -2714,7 +2917,8 @@
     "sources": [
       "https://www.brabus.com/en-int/brand/brabus-history/2000s.html",
       "https://www.brabus.com/en-int/brand/brabus-history/2010s.html",
-      "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class"
+      "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+      "https://media.brabus.com/_Resources/Persistent/a/6/8/6/a686cd653804a75bb82aa6233beb50b0c639614f/PM%20BRABUS%20G%20V12%20900%20E.pdf"
     ],
     "needsReview": [
       {
@@ -2731,10 +2935,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2847,10 +3047,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2971,10 +3167,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3098,10 +3290,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -3216,6 +3404,34 @@
       {
         "field": "scope",
         "reason": "Výběr pojmenovaných projektů a přestaveb Brabus, nikoli úplný seznam všech tuningových sad. Rok prezentace není automaticky výrobní hranice."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -5234,8 +5450,50 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "6.9 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.brabus.com/en-int/brand/brabus-history/1990s.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "6.9 V12",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "6.9 V12",
+                "source": "https://www.brabus.com/en-int/brand/brabus-history/1990s.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 12,
+                  "powerKw": null,
+                  "torqueNm": 705
+                },
+                "sha256": "bfb6192ddde215bb3608feadb58c8981d2629caacef26f2ddcc12bf367be0a4a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "R129",
+                "fromYear": 1989,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -5398,10 +5656,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5530,10 +5784,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5648,6 +5898,18 @@
       {
         "field": "scope",
         "reason": "Výběr pojmenovaných projektů a přestaveb Brabus, nikoli úplný seznam všech tuningových sad. Rok prezentace není automaticky výrobní hranice."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

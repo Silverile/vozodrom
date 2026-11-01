@@ -1,0 +1,26 @@
+[
+  {
+    "command": "node analysis/codex/rare-engines-pass/batch-5/validate.mjs",
+    "result": "PASS: 511 baseline files, 4753 cards, 80 reviewed, 57 generations / 90 rows; all non-engine facts unchanged; 52 remaining."
+  },
+  {
+    "command": "node analysis/codex/rare-engines-pass/batch-5/run-engine-audit.mjs",
+    "result": "PASS: 12627 public engine rows, zero malformed names, duplicates or import evidence errors."
+  },
+  {
+    "command": "node analysis/codex/test-engine-throughput.mjs",
+    "result": "PASS: 8 name, 2 deduplication, 2 market, 3 evidence and 7 presentation cases."
+  },
+  {
+    "command": "npm run typecheck -- --incremental false",
+    "result": "PASS: tsc --noEmit, exit 0."
+  },
+  {
+    "command": "git -c core.safecrlf=false diff --check -- src/data analysis/codex/rare-engines-pass",
+    "result": "PASS after removing trailing blank line from report."
+  },
+  {
+    "command": "Python UTF-8 / JSON validation of every batch-5 text file",
+    "result": "PASS"
+  }
+]

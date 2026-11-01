@@ -19,8 +19,40 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Battista AWD EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 1400,
+            "powerKwMax": 1400,
+            "availablePowerKw": [
+              1400
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-star-bridge-exquisite-duo-hyper-cars"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Battista AWD EV",
+              "noteCs": "Vlastní výrobní zpráva Pininfarina ze20.09.2023:oddíl Battista EdizioneNinoFarina výslovně1,400kW. Nejde o předběžný údaj prototypu2019 ani o výkon převzatý z B95 se zvláštním naladěním. Výkon čtyř motorů není dopočítán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Battista – první výrobní řada",
+                "fromYear": 2022,
+                "toYear": 2025,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "awd"
         ],
@@ -94,7 +126,8 @@
           "https://www.automobili-pininfarina.com/battista",
           "https://cdn.automobili-pininfarina.com/23022023_Battista_India_Rec_Final_EN.pdf",
           "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-concludes-monterey-car-week-with-a-celebration-of-legacy-and-vision",
-          "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-battista-targamerica-the-worlds-first-coach-built-electric-hypercar-delivered-to-a-client"
+          "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-battista-targamerica-the-worlds-first-coach-built-electric-hypercar-delivered-to-a-client",
+          "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-star-bridge-exquisite-duo-hyper-cars"
         ],
         "fieldSources": {
           "to": [
@@ -115,7 +148,8 @@
       "https://www.automobili-pininfarina.com/battista",
       "https://cdn.automobili-pininfarina.com/23022023_Battista_India_Rec_Final_EN.pdf",
       "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-concludes-monterey-car-week-with-a-celebration-of-legacy-and-vision",
-      "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-battista-targamerica-the-worlds-first-coach-built-electric-hypercar-delivered-to-a-client"
+      "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-battista-targamerica-the-worlds-first-coach-built-electric-hypercar-delivered-to-a-client",
+      "https://www.automobili-pininfarina.com/media-hub/press-releases/automobili-pininfarina-star-bridge-exquisite-duo-hyper-cars"
     ],
     "needsReview": [
       {
@@ -128,10 +162,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

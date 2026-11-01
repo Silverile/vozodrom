@@ -1495,8 +1495,36 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.0 V6 Turbo",
+            "fuel": "petrol",
+            "displacementCc": 2963,
+            "displacementLitresNominal": 3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.alpinecars.com/alpine-celebrates-its-60th-anniversary-at-frances-retromobile-show/?lang=en"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.0 V6 Turbo",
+              "noteCs": "Vlastní historie Alpine výslovně uvádí A610 a2963cm³ V6Turbo. Výkon není převáděn zhp; rok historického představení není přepsán do výrobních dat katalogu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "A610",
+                "fromYear": 1991,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -1622,10 +1650,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1708,6 +1732,14 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1730,8 +1762,96 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "V6 GT",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 116,
+            "powerKwMax": 116,
+            "availablePowerKw": [
+              116
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "V6 GT",
+              "noteCs": "Vlastní ALPINE V6 1985–1992, řádkyGT116kW a Turbo136/147kW. Přesné objemy nejsou doplněny z A610 a pozdější A110 nejsou přebírány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GTA – modelová rodina",
+                "fromYear": 1984,
+                "toYear": 1991,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "V6 Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 136,
+            "powerKwMax": 136,
+            "availablePowerKw": [
+              136
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "V6 Turbo",
+              "noteCs": "Vlastní ALPINE V6 1985–1992, řádkyGT116kW a Turbo136/147kW. Přesné objemy nejsou doplněny z A610 a pozdější A110 nejsou přebírány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GTA – modelová rodina",
+                "fromYear": 1984,
+                "toYear": 1991,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "V6 Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 147,
+            "powerKwMax": 147,
+            "availablePowerKw": [
+              147
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "V6 Turbo",
+              "noteCs": "Vlastní ALPINE V6 1985–1992, řádkyGT116kW a Turbo136/147kW. Přesné objemy nejsou doplněny z A610 a pozdější A110 nejsou přebírány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "GTA – modelová rodina",
+                "fromYear": 1984,
+                "toYear": 1991,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -1772,13 +1892,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Alpine_A610",
-          "https://media.alpinecars.com/alpine-celebrates-its-60th-anniversary-at-frances-retromobile-show/?lang=en"
+          "https://media.alpinecars.com/alpine-celebrates-its-60th-anniversary-at-frances-retromobile-show/?lang=en",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Alpine_A610",
-      "https://media.alpinecars.com/alpine-celebrates-its-60th-anniversary-at-frances-retromobile-show/?lang=en"
+      "https://media.alpinecars.com/alpine-celebrates-its-60th-anniversary-at-frances-retromobile-show/?lang=en",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
@@ -1791,10 +1913,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1836,6 +1954,30 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

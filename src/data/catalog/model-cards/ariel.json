@@ -145,8 +145,59 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1796,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Ariel/22190/Ariel-Atom-18.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2000 - )",
+              "originalVariant": "Ariel Atom 1.8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Ariel/22190/Ariel-Atom-18.html",
+                "title": "Ariel Atom 1.8 Specs",
+                "modelAliases": [
+                  "ATOM"
+                ],
+                "generation": "Atom",
+                "generationFieldPresent": false,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Ariel/M3647/Atom",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Atom",
+                "generationProductionFrom": 2000,
+                "generationProductionTo": null,
+                "variantDateText": "(2000 - )",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "Roadster",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "190 PS / 187 HP / 140 kW@ - rpm",
+                "displacementText": "1796 cm3 / 109.6 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Atom",
+                "fromYear": 2000,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": 2000,
+                "rowToYear": 2000
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -168,7 +219,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.arielmotor.co.uk/our-history/"
+          "https://www.arielmotor.co.uk/our-history/",
+          "https://www.ultimatespecs.com/car-specs/Ariel/22190/Ariel-Atom-18.html"
         ],
         "dateBasis": "successor-boundary"
       },
@@ -265,8 +317,51 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Atom 4",
+            "fuel": "petrol",
+            "displacementCc": 1996,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Atom 4 – základní Honda K20C",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Atom 4 – základní Honda K20C",
+                "source": "https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1996,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 420
+                },
+                "sha256": "a993b1da09c3c0ea6a003bd1c947b120730cf5e068a55add6757bd505b513605"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Atom 4",
+                "fromYear": 2018,
+                "toYear": null,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon je uveden pouze jako 320 bhp bez převodu do kW. Zrychlení 2,80 s je nadepsáno 0–60 mph, ale závorka uvádí 0–100 km/h; nejednoznačný údaj zůstává null. Maximální rychlost je pouze v mph."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -341,7 +436,8 @@
     ],
     "sources": [
       "https://www.arielmotor.co.uk/our-history/",
-      "https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/"
+      "https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/",
+      "https://www.ultimatespecs.com/car-specs/Ariel/22190/Ariel-Atom-18.html"
     ],
     "needsReview": [
       {
@@ -358,10 +454,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -553,10 +645,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -627,6 +715,14 @@
       {
         "field": "generations[3].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -907,8 +1003,90 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.4 Honda K24 iVTEC",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.arielmotor.co.uk/our-history/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.4 Honda K24 iVTEC",
+              "noteCs": "Vlastní historie Ariel:Nomad2015 má2.4K24, od2016 kompresor; NomadR2020 má2.0K20Z3. Zdroj uvádíbhp, nikoli kW. Přesné cm³ nejsou přebírány z dárcovské Hondy a2.3Ford novéhoNomad2 je vyloučen.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Nomad – první generace",
+                "fromYear": 2015,
+                "toYear": 2024,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.4 Honda K24 Supercharged",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.arielmotor.co.uk/our-history/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.4 Honda K24 Supercharged",
+              "noteCs": "Vlastní historie Ariel:Nomad2015 má2.4K24, od2016 kompresor; NomadR2020 má2.0K20Z3. Zdroj uvádíbhp, nikoli kW. Přesné cm³ nejsou přebírány z dárcovské Hondy a2.3Ford novéhoNomad2 je vyloučen.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Nomad – první generace",
+                "fromYear": 2015,
+                "toYear": 2024,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Nomad R 2.0 Honda K20Z3",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.arielmotor.co.uk/our-history/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Nomad R 2.0 Honda K20Z3",
+              "noteCs": "Vlastní historie Ariel:Nomad2015 má2.4K24, od2016 kompresor; NomadR2020 má2.0K20Z3. Zdroj uvádíbhp, nikoli kW. Přesné cm³ nejsou přebírány z dárcovské Hondy a2.3Ford novéhoNomad2 je vyloučen.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Nomad – první generace",
+                "fromYear": 2015,
+                "toYear": 2024,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -945,8 +1123,51 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Nomad 2",
+            "fuel": "petrol",
+            "displacementCc": 2267,
+            "displacementLitresNominal": 2.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.arielmotor.co.uk/ariel-vehicles/nomad-2/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Nomad 2 – základní Ford 2.3 ST",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Nomad 2 – základní Ford 2.3 ST",
+                "source": "https://www.arielmotor.co.uk/ariel-vehicles/nomad-2/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 2267,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 380
+                },
+                "sha256": "11d25a09b05b5beeef26db236b1d0f37eaedcb6133f854b0ef9f3012a8889ca2"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Nomad 2",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Základní konfigurace 260 bhp, nikoli volitelných 305 bhp. Údaj 0–60 mph 3,4 s má zavádějící závorku 0–100 km/h, proto zrychlení zůstává null. Šest stupňů je doloženo, typ skříně ani pohon zde nejsou domyšleny."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1042,10 +1263,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1103,10 +1320,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1192,6 +1405,50 @@
       {
         "field": "generations[1].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

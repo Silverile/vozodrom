@@ -185,8 +185,38 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.8",
+            "fuel": "petrol",
+            "displacementCc": 1798,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 92,
+            "powerKwMax": 92,
+            "availablePowerKw": [
+              92
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.boe.es/eli/es/o/2009/12/17/eha3476/dof/spa/pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.8",
+              "noteCs": "Vlastní španělská úřední tabulka2009,řádek MORGAN4/4 1.8 od2008:benzin1798cm³/92kW. Nepřebírá pozdější1.6Sport ani motorPlusFour. Údaj125PS se nepřepočítává.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "4/4 – starší konstrukční období",
+                "fromYear": 1936,
+                "toYear": 2009,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -226,7 +256,8 @@
         "sources": [
           "https://morgan-motor.com/models/past-models/",
           "https://www.morgansportscarclub.com/morgan-history-timeline",
-          "https://en.wikipedia.org/w/index.php?title=Morgan_4/4&oldid=1343890836"
+          "https://en.wikipedia.org/w/index.php?title=Morgan_4/4&oldid=1343890836",
+          "https://www.boe.es/eli/es/o/2009/12/17/eha3476/dof/spa/pdf"
         ],
         "fieldSources": {
           "to": [
@@ -292,7 +323,8 @@
     "sources": [
       "https://morgan-motor.com/models/past-models/",
       "https://www.morgansportscarclub.com/morgan-history-timeline",
-      "https://en.wikipedia.org/w/index.php?title=Morgan_4/4&oldid=1343890836"
+      "https://en.wikipedia.org/w/index.php?title=Morgan_4/4&oldid=1343890836",
+      "https://www.boe.es/eli/es/o/2009/12/17/eha3476/dof/spa/pdf"
     ],
     "needsReview": [
       {
@@ -305,10 +337,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2125,8 +2153,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0 Ford GDI",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://morgan-motor.com/models/past-models/plus-4/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 Ford GDI",
+              "noteCs": "Vlastní stránka Morgan výslovně identifikuje závěrečný klasický Plus4 2014–2020 a2.0FordGDI. Má pouzebhp; kW a přesné cm³ nejsou odvozeny. Nový BMW PlusFour naCX platformě není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Plus 4",
+                "fromYear": 1950,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2165,7 +2221,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Morgan_Plus_4",
-          "https://morgan-motor.com/models/past-models/"
+          "https://morgan-motor.com/models/past-models/",
+          "https://morgan-motor.com/models/past-models/plus-4/"
         ],
         "dateBasis": "production"
       }
@@ -2174,7 +2231,8 @@
       "https://morgan-motor.com/models/past-models/",
       "https://en.wikipedia.org/wiki/Morgan_%2B4",
       "https://www.wikidata.org/wiki/Q6911571",
-      "https://en.wikipedia.org/wiki/Morgan_Plus_4"
+      "https://en.wikipedia.org/wiki/Morgan_Plus_4",
+      "https://morgan-motor.com/models/past-models/plus-4/"
     ],
     "needsReview": [
       {
@@ -2187,10 +2245,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -2236,6 +2290,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [
@@ -3507,8 +3573,53 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 Ford Dragon",
+            "fuel": "petrol",
+            "displacementCc": 1432,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "availablePowerKw": [
+              88
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://morgan-motor.com/wp-content/uploads/Super-3-Spec-Sheet-1.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Super 3 Ford Dragon – tovární technický list",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Super 3 Ford Dragon – tovární technický list",
+                "source": "https://morgan-motor.com/wp-content/uploads/Super-3-Spec-Sheet-1.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1432,
+                  "cylinders": 3,
+                  "powerKw": 88,
+                  "powerStandard": "kW přímo v technickém listu.",
+                  "torqueNm": 150
+                },
+                "sha256": "6c39bc9c2d81289efac1a82d8113a854edcbef0e14806ddcced7dd6d8fa364e7"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Super 3 – modelová rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Technický list uvádí pouze přibližné 0–62 mph, proto přesné 0–100 km/h zůstává null. Spotřeba v mpg není převáděna; měřicí cyklus pro spotřebu není jednoznačně uveden."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3624,10 +3735,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

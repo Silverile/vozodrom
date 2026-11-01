@@ -111,8 +111,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Mono R 2.5",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bac-mono.com/news/gq-car-awards-bac-mono-r-wins-track-car-of-the-year-2021"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Mono R 2.5",
+              "noteCs": "Vlastní zpráva BAC2021 výslovně silniční MonoR s2.5litrovým motorem. Zdroj mábhp, nikoli kW; výkon ani přesné cm³ nejsou přeneseny z jinéhoMono nebo motoruFord.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "R",
+                "fromYear": 2020,
+                "toYear": 2024,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -136,7 +164,8 @@
         "sources": [
           "https://www.bac-mono.com/news/the-evolution-of-mono",
           "https://www.bac-mono.com/model-heritage-evolution",
-          "https://www.bac-mono.com/news/first-bac-mono-r-delivered-to-customer-in-outrageous-wipeout-inspired-livery"
+          "https://www.bac-mono.com/news/first-bac-mono-r-delivered-to-customer-in-outrageous-wipeout-inspired-livery",
+          "https://www.bac-mono.com/news/gq-car-awards-bac-mono-r-wins-track-car-of-the-year-2021"
         ]
       },
       {
@@ -149,8 +178,51 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Mono MY2025",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bac-mono.com/news/mono-model-year-2025-released"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Mono MY2025 – atmosférický 2,5 l",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Mono MY2025 – atmosférický 2,5 l",
+                "source": "https://www.bac-mono.com/news/mono-model-year-2025-released",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 313
+                },
+                "sha256": "2ddbcb3c2768fdd6d3ae68c8ca6dc50257740b20866152b5414b0c5aed3c954c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Mono (novější řada)",
+                "fromYear": 2023,
+                "toYear": null,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výhradně provedení MY2025 z tiskové zprávy 11. 7. 2025. Výrobce uvádí 315 bhp a nominální objem 2,5 l; přesné cm³ ani kW nejsou dopočítány. Údaje nejsou automaticky přeneseny na MY2026."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -284,7 +356,8 @@
       "https://www.bac-mono.com/news/mono-model-year-2025-released",
       "https://www.bac-mono.com/mono-cup-car-data-and-coaching-copy",
       "https://www.bac-mono.com/mono-specification",
-      "https://www.bac-mono.com/s/Upgrades-Brochure-Q2-2023.pdf"
+      "https://www.bac-mono.com/s/Upgrades-Brochure-Q2-2023.pdf",
+      "https://www.bac-mono.com/news/gq-car-awards-bac-mono-r-wins-track-car-of-the-year-2021"
     ],
     "needsReview": [
       {
@@ -432,10 +505,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -477,10 +546,6 @@
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -584,10 +649,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -626,6 +687,30 @@
       {
         "field": "generations[3].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

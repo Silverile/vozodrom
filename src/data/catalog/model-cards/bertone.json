@@ -135,8 +135,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Freeclimber II 1.6",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 73,
+            "powerKwMax": 73,
+            "availablePowerKw": [
+              73
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.autosluzby.cz/asl_katalog/asl_katalog/pdfdwnload/MahlePistonRings2015.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Freeclimber II 1.6",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Freeclimber II 1.6",
+                "source": "https://www.autosluzby.cz/asl_katalog/asl_katalog/pdfdwnload/MahlePistonRings2015.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1596,
+                  "cylinders": 4,
+                  "powerKw": 73,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "968c81ee66899ab7040d6708ef68a32199f03c57954a745ab4692dddc3d24315"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Freeclimber II",
+                "fromYear": 1992,
+                "toYear": 1993,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Identifikace konkrétní motorizace podle technického katalogu výrobce motorových dílů MAHLE2015. Časová aplikace dílu není považována za definitivní hranici automobilové výroby; neověřená převodovka a dynamika zůstávají null."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -397,10 +442,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

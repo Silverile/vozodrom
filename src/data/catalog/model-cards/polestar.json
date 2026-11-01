@@ -18,8 +18,38 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0 Hybrid",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.polestar.com/nl/polestar-1/performance/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 Hybrid",
+              "noteCs": "Vlastní nizozemská specifikace potvrzuje dvoulitrový benzinový plug-in hybrid. Nizozemská stránka uvádí448kW, britská lokalizace441kW; odlišné provedení není doloženo, proto systémový výkon zůstává prázdný. Přesné cm³ ani součet komponent nejsou odvozeny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Polestar 1",
+                "fromYear": 2019,
+                "toYear": 2021,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "awd"
         ],
@@ -130,10 +160,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -196,6 +222,18 @@
       {
         "field": "coverage",
         "reason": "Dílčí technické snímky primárních pramenů; nulové fotografie a úplná historie aktualizací či limitovaných sérií nejsou dokončeny. Převodové poměry a počet stupňů elektrických reduktorů nebyly v použitých tabulkách ověřeny, proto převodovka null."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1086,8 +1124,273 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Long range Single motor",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Long range Single motor – 400 V, prosinec 2025",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Long range Single motor – 400 V, prosinec 2025",
+                "source": "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 220,
+                  "powerStandard": null,
+                  "torqueNm": 490
+                },
+                "sha256": "439e8d4f96052236dcbbb72bef7de22ae24daa84a3bf0dff6578d7fd42b8f174"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Starší 400V soustava a 111kWh baterie; údaje modernizovaného 800V vozu se na tuto verzi nepřenášejí. Dojezd je údaj up to podle prezentace z prosince 2025."
+            }
+          },
+          {
+            "variant": "Long range Dual motor",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 360,
+            "powerKwMax": 360,
+            "availablePowerKw": [
+              360
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Long range Dual motor – 400 V, prosinec 2025",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Long range Dual motor – 400 V, prosinec 2025",
+                "source": "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 360,
+                  "powerStandard": null,
+                  "torqueNm": 840
+                },
+                "sha256": "8c982c7cdbd508a36fc87ba9ad2ed3744f02ce306cb5572a46cdc4043381ffb3"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Starší 400V soustava a 111kWh baterie; údaje modernizovaného 800V vozu se na tuto verzi nepřenášejí. Dojezd je údaj up to podle prezentace z prosince 2025."
+            }
+          },
+          {
+            "variant": "Long range Dual motor Performance",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 380,
+            "powerKwMax": 380,
+            "availablePowerKw": [
+              380
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Long range Dual motor Performance – 400 V, prosinec 2025",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Long range Dual motor Performance – 400 V, prosinec 2025",
+                "source": "https://investors.polestar.com/static-files/e88ea3e7-66d3-4332-9131-d57b1c077cac",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 380,
+                  "powerStandard": null,
+                  "torqueNm": 910
+                },
+                "sha256": "5d24a92265278e73afd4be8cc9bcdfdcb1f9a792c57fd1ac20c177310bfcdfa8"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Starší 400V soustava a 111kWh baterie; údaje modernizovaného 800V vozu se na tuto verzi nepřenášejí. Dojezd je údaj up to podle prezentace z prosince 2025."
+            }
+          },
+          {
+            "variant": "Rear motor",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 245,
+            "powerKwMax": 245,
+            "availablePowerKw": [
+              245
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.polestar.com/global/polestar-3/specifications/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Rear motor – 800 V",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Rear motor – 800 V",
+                "source": "https://www.polestar.com/global/polestar-3/specifications/",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 245,
+                  "powerStandard": null,
+                  "torqueNm": 480
+                },
+                "sha256": "77226242922028a51135a803dab3bbede5b2d215ffaebaa307f8d4f9141ddbda"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Výrobce uvádí spotřebu 17.6–21.6 kWh/100 km. Dojezd je výslovně range target. 800V soustava není samostatnou generací."
+            }
+          },
+          {
+            "variant": "Dual motor",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 400,
+            "powerKwMax": 400,
+            "availablePowerKw": [
+              400
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.polestar.com/global/polestar-3/specifications/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Dual motor – 800 V",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Dual motor – 800 V",
+                "source": "https://www.polestar.com/global/polestar-3/specifications/",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 400,
+                  "powerStandard": null,
+                  "torqueNm": 740
+                },
+                "sha256": "87e4da4ff760e2db87e6328385b750c528ec131b7053ab84057b9203a75c4211"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Výrobce uvádí spotřebu 19.1–23.4 kWh/100 km. Dojezd je výslovně range target. 800V soustava není samostatnou generací."
+            }
+          },
+          {
+            "variant": "Performance",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 500,
+            "powerKwMax": 500,
+            "availablePowerKw": [
+              500
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.polestar.com/global/polestar-3/specifications/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Performance – 800 V",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Performance – 800 V",
+                "source": "https://www.polestar.com/global/polestar-3/specifications/",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 500,
+                  "powerStandard": null,
+                  "torqueNm": 870
+                },
+                "sha256": "14b35d7151600adf006438ce470e8a3b3ddadc556572b1bc3005ffe1a8872ee1"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Polestar 3 – první generace",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Globální metrická specifikace výrobce ověřená 27.10.2026; není závaznou českou nabídkou. Výkon je maximální výkon vozu, nikoli 30minutový homologovaný výkon. Intervaly hmotnosti a spotřeby nejsou zkráceny na jednu libovolnou hodnotu. Uvedený dojezd je deklarovaná hodnota či cíl WLTP, nikoli záruka reálného dojezdu. Výrobce uvádí spotřebu 20.6–23.4 kWh/100 km. Dojezd je výslovně range target. 800V soustava není samostatnou generací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd",
           "awd"
@@ -1416,10 +1719,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

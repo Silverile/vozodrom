@@ -1593,8 +1593,38 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "MIFA 9 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.johnmulhollandmotors.com/newmodels/MAXUS_MIFA9_Spec_Brochure_2024_MY24_050624.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "MIFA 9 EV",
+              "noteCs": "Vlastní prospekt MAXUS proUK/Irsko MY2024:maximum180kW;90kW při jiných otáčkách není druhé provedení a nepřičítá se. Čínský PHEV G90/Mifa9 není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Mifa 9",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1671,7 +1701,8 @@
           "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/",
           "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
           "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
-          "https://www.saicmaxus.co.uk/"
+          "https://www.saicmaxus.co.uk/",
+          "https://www.johnmulhollandmotors.com/newmodels/MAXUS_MIFA9_Spec_Brochure_2024_MY24_050624.pdf"
         ],
         "fieldSources": {
           "from": [
@@ -1699,7 +1730,8 @@
       "https://www.saicmaxus.co.uk/our-range/new-vans/mifa-9/",
       "https://en.wikipedia.org/w/index.php?title=Maxus_G90&oldid=1363565243",
       "https://en.wikipedia.org/w/index.php?title=Maxus&oldid=1380012543",
-      "https://www.saicmaxus.co.uk/"
+      "https://www.saicmaxus.co.uk/",
+      "https://www.johnmulhollandmotors.com/newmodels/MAXUS_MIFA9_Spec_Brochure_2024_MY24_050624.pdf"
     ],
     "needsReview": [
       {
@@ -1720,10 +1752,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2956,15 +2984,51 @@
         "bodyTypes": [
           "pickup"
         ],
-        "engines": [],
+        "engines": [
+          {
+            "variant": "eTERRON 9 AWD",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 325,
+            "powerKwMax": 325,
+            "availablePowerKw": [
+              325
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.maxus-motors.nl/assets/Uploads/Brochures/Prijslijst-eTerron-9-v2.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "eTERRON 9 AWD",
+              "noteCs": "Vlastní nizozemský ceník eTERRON9 výslovně uvádí celkových325kW, nikoli samotné125/200kW nápravy. Diesel Terron9 není doplněn bez samostatné specifikace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "SK103",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Maxus_Terron_9"
-        ]
+          "https://en.wikipedia.org/wiki/Maxus_Terron_9",
+          "https://www.maxus-motors.nl/assets/Uploads/Brochures/Prijslijst-eTerron-9-v2.pdf"
+        ],
+        "engineCoverage": "representative-documented-versions"
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Maxus_Terron_9"
-    ]
+      "https://en.wikipedia.org/wiki/Maxus_Terron_9",
+      "https://www.maxus-motors.nl/assets/Uploads/Brochures/Prijslijst-eTerron-9-v2.pdf"
+    ],
+    "needsReview": []
   },
   {
     "makeSlug": "maxus",

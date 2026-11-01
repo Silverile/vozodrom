@@ -1,0 +1,13 @@
+import fs from 'node:fs';import zlib from 'node:zlib';import assert from 'node:assert/strict';import cp from 'node:child_process';
+import{enginePresentation,normalizeEngineRows,evidenceProblem,rejectEngine}from '../../engine-throughput-policy.mjs';
+const root='analysis/codex/rare-engines-pass/batch-5',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n'),changes=read(root+'/engine-changes.json'),base=JSON.parse(zlib.gunzipSync(fs.readFileSync(root+'/baseline.json.gz'))),curated=read(root+'/curated-engines.json'),trims=read(root+'/trim-candidates.json').rows;
+for(const[id,index]of[['automobili-pininfarina/battista',0],['brabus/g-class',1],['polestar/1',0]]){
+ const[m,l]=id.split('/'),p='src/data/catalog/model-cards/'+m+'.json',cards=read(p),c=cards.find(x=>x.lineSlug===l),g=c.generations[index],change=changes.changes.find(x=>x.id===id&&x.index===index),before=base[p].find(x=>x.lineSlug===l).generations[index];assert(change);assert.deepEqual(g.engines,change.engines,'Current engine rows differ from own previous write');
+ const selected=curated.filter(x=>x.id===id&&x.index===index).map(x=>x.engine);
+ if(id==='brabus/g-class')for(const r of trims.filter(x=>x.id===id&&x.index===index&&/^800/.test(x.engine.variant))){const e=structuredClone(r.engine);e.variant='800 G63';selected.push(e);}
+ const engines=normalizeEngineRows(selected.map(enginePresentation));for(const e of engines){assert.equal(evidenceProblem(g,index,e),null);assert.equal(rejectEngine(m,l,e),null);assert.equal(e.sources.length,1);}
+ g.engines=engines;g.engineCoverage='representative-documented-versions';g.sources=[...new Set([...before.sources,...engines.flatMap(e=>e.sources)])];c.sources=[...new Set([...c.sources,...engines.flatMap(e=>e.sources)])];c.needsReview=(c.needsReview??[]).filter(x=>x.field!==`generations[${index}].engines`&&!x.field?.startsWith(`generations[${index}].engines[`));
+ for(const[j,e]of engines.entries())for(const f of['displacementCc','displacementLitresNominal','powerKwMin','powerKwMax'])if(e[f]===null&&!(e.fuel==='electric'&&f.startsWith('displacement')))c.needsReview.push({field:`generations[${index}].engines[${j}].${f}`,reason:'Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace.'});
+ change.engines=engines;write(p,cards);
+}
+changes.rows=changes.changes.reduce((n,r)=>n+r.engines.length,0);write(root+'/engine-changes.json',changes);cp.execFileSync('node',['scripts/model-cards-index.mjs'],{stdio:'inherit'});console.log({generations:changes.generations,rows:changes.rows});

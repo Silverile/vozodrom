@@ -1720,8 +1720,93 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "GT RoadsterV8 6M",
+            "fuel": "petrol",
+            "displacementCc": 5038,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ac.cars/ac-cobra-gt-roadster/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "GT RoadsterV8 6M – publikovaná specifikace",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "GT RoadsterV8 6M – publikovaná specifikace",
+                "source": "https://ac.cars/ac-cobra-gt-roadster/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 5038,
+                  "cylinders": 8,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 570
+                },
+                "sha256": "51603bd7ab06367db2ee8ad861d8cba1e3e188ee85db9fc72ebf45f7ff5457fd"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "CobraGT Roadster – moderní konstrukce",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výrobce upozorňuje na předprodukční testy a možné odchylky sériových vozů. Společná tabulka karoserie/hmotnosti se vztahuje k řadě; nepředstírá přesný výrobní ročník či výbavu konkrétního vozu. VýkonHP/PS nebyl bez ověřené normy převáděn na kW. Svarianta má v textu3,4s0–60mph a v tabulce3,4s0–100km/h, proto rozpor ponechánnull."
+            }
+          },
+          {
+            "variant": "GT RoadsterV8 S6M",
+            "fuel": "petrol",
+            "displacementCc": 5038,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ac.cars/ac-cobra-gt-roadster/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "GT RoadsterV8 S6M – publikovaná specifikace",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "GT RoadsterV8 S6M – publikovaná specifikace",
+                "source": "https://ac.cars/ac-cobra-gt-roadster/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 5038,
+                  "cylinders": 8,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 780
+                },
+                "sha256": "90d9eedff1281974ca8cbd5b8249e670f911bcc6eb33ca376bff25e6da784211"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "CobraGT Roadster – moderní konstrukce",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výrobce upozorňuje na předprodukční testy a možné odchylky sériových vozů. Společná tabulka karoserie/hmotnosti se vztahuje k řadě; nepředstírá přesný výrobní ročník či výbavu konkrétního vozu. VýkonHP/PS nebyl bez ověřené normy převáděn na kW. Svarianta má v textu3,4s0–60mph a v tabulce3,4s0–100km/h, proto rozpor ponechánnull."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -1870,10 +1955,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].dimensionsMm.length",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2000,6 +2081,22 @@
       {
         "field": "generations[0].trims",
         "reason": "Pouze vybrané manuální konfigurace; automatické varianty a homologované hodnoty spotřeby nejsou kompletně zpracovány."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

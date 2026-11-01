@@ -18,8 +18,53 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "GT 3.6 VR6 DSG",
+            "fuel": "petrol",
+            "displacementCc": 3597,
+            "displacementLitresNominal": 3.6,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.pressebox.de/a/c8d0a67ea20ff758/attachments/0389301.attachment/filename/Technische%2BDaten%2Bzum%2BArtega%2BGT.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "GT 3.6 VR6 DSG – specifikace zveřejněná 2011",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "GT 3.6 VR6 DSG – specifikace zveřejněná 2011",
+                "source": "https://cdn.pressebox.de/a/c8d0a67ea20ff758/attachments/0389301.attachment/filename/Technische%2BDaten%2Bzum%2BArtega%2BGT.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 3597,
+                  "cylinders": 6,
+                  "powerKw": 220,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "ecf02e2b98dae840d53ebbaea88cd7a45d749b3a3f3c0b8c28a640976c74e50b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "GT",
+                "fromYear": 2010,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Hodnoty z přetištěné tiskové zprávy Artega v článku označeném 2011, základní výkon a hmotnost potvrzuje samostatný technický list. Nejde o přiřazení těchto rozměrů všem raným vozům či Intro 2008. Spotřeba zůstává null: tento přetisk uvádí 9,2 l/100 km, oficiální zastoupení 9,6; bez datované homologace nelze rozpor uzavřít. Euro 5 je emisní norma, nikoli sám o sobě název jízdního cyklu."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -157,7 +202,8 @@
         ],
         "sources": [
           "https://www.artega.de/fileadmin/images/Presse/Artega_IAA_2015_Pressetext_E.pdf",
-          "https://en.wikipedia.org/wiki/Artega_GT"
+          "https://en.wikipedia.org/wiki/Artega_GT",
+          "https://cdn.pressebox.de/a/c8d0a67ea20ff758/attachments/0389301.attachment/filename/Technische%2BDaten%2Bzum%2BArtega%2BGT.pdf"
         ]
       }
     ],
@@ -191,10 +237,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

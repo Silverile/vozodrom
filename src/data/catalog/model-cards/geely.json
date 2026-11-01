@@ -2922,8 +2922,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "EX5 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 160,
+            "powerKwMax": 160,
+            "availablePowerKw": [
+              160
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://geelyautoukmedia.com/en/models/geely-ex5.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "SE — 60.22kWh",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "SE — 60.22kWh",
+                "source": "https://geelyautoukmedia.com/en/models/geely-ex5.html",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 160,
+                  "powerStandard": "Manufacturer maximum motor power",
+                  "torqueNm": 320
+                },
+                "sha256": "d870a5cd0fe7aaca9aeea173337c0cd17600288fa28419272b82c66548f2f89e"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "EX5 / Galaxy E5",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Britská specifikace tří výbav s 60,22 kWh. Dojezd je publikované maximum, nikoli minimum; výška zahrnuje podélníky. Zrychlení je pouze0–62mph a není označeno jako přesných0–100km/h. Pozdější Ultra s68,4kWh vyžaduje vlastní tabulku."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3273,10 +3318,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
