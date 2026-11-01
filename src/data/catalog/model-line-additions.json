@@ -17482,12 +17482,18 @@
     "to": 2006,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1980,
+        "to": 2006
+      }
+    ],
     "generations": [
       {
         "code": "10/11",
         "from": 1980,
         "to": 2006,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv",
@@ -17534,12 +17540,18 @@
     "to": 2006,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1972,
+        "to": 2006
+      }
+    ],
     "generations": [
       {
         "code": "24/32",
         "from": 1972,
         "to": 2006,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv",
@@ -49823,27 +49835,41 @@
     "name": "2CV",
     "makeSlug": "citroen",
     "aliases": [],
-    "bodyTypes": null,
-    "from": 1948,
+    "bodyTypes": [
+      "sedan",
+      "dodavka"
+    ],
+    "from": 1949,
     "to": 1990,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1949,
+        "to": 1990
+      }
+    ],
     "generations": [
       {
         "code": null,
-        "from": 1948,
+        "from": 1949,
         "to": 1990,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "dodavka"
+        ],
         "sources": [
+          "https://www.media.stellantis.com/fr-fr/citroen/press/historique-iconique-et-populaire-la-2-cv-fete-ses-75-ans",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV",
+      "https://www.media.stellantis.com/fr-fr/citroen/press/historique-iconique-et-populaire-la-2-cv-fete-ses-75-ans"
     ],
     "needsReview": [
       {
@@ -50392,12 +50418,18 @@
     "to": 1991,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1974,
+        "to": 1991
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1974,
         "to": 1991,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
@@ -51015,28 +51047,36 @@
       "kabriolet"
     ],
     "from": 1978,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1988,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1978,
+        "to": 1988
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1978,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1988,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "hatchback",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa",
+          "https://www.media.stellantis.com/it-it/citroen/press/quarant-anni-fa-nacque-una-nuova-citroen-visa"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa",
+      "https://www.media.stellantis.com/it-it/citroen/press/quarant-anni-fa-nacque-una-nuova-citroen-visa"
     ],
     "needsReview": [
       {
@@ -51046,10 +51086,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -152882,25 +152918,51 @@
     "to": 2023,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2006,
+        "to": 2015
+      },
+      {
+        "from": 2016,
+        "to": 2023
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "TB",
         "from": 2006,
-        "to": 2023,
+        "to": 2015,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-9"
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
+        ]
+      },
+      {
+        "code": "TC",
+        "from": 2016,
+        "to": 2023,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Mazda_CX-9",
-      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/"
+      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/",
+      "https://de.wikipedia.org/wiki/Mazda_CX-9"
     ],
     "needsReview": [
       {
@@ -187825,27 +187887,96 @@
     "name": "Firebird",
     "makeSlug": "pontiac",
     "aliases": [],
-    "bodyTypes": null,
-    "from": null,
-    "to": null,
-    "productionStatus": "unknown",
+    "bodyTypes": [
+      "kupe",
+      "kabriolet"
+    ],
+    "from": 1967,
+    "to": 2002,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1967,
+        "to": 1970
+      },
+      {
+        "from": 1970,
+        "to": 1981
+      },
+      {
+        "from": 1981,
+        "to": 1992
+      },
+      {
+        "from": 1992,
+        "to": 2002
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": null,
+        "code": "I",
+        "from": 1967,
+        "to": 1970,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "sources": [
-          "https://www.gm.com/heritage"
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "II",
+        "from": 1970,
+        "to": 1981,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "III",
+        "from": 1981,
+        "to": 1992,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird_(third_generation)",
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "IV",
+        "from": 1992,
+        "to": 2002,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://www.gm.com/heritage"
+      "https://www.gm.com/heritage",
+      "https://en.wikipedia.org/w/index.php?title=Pontiac_Firebird&oldid=1379066747",
+      "https://en.wikipedia.org/wiki/Pontiac_Firebird",
+      "https://en.wikipedia.org/wiki/Pontiac_Firebird_(third_generation)"
     ],
     "needsReview": [
       {
@@ -187855,14 +187986,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "bodyTypes",

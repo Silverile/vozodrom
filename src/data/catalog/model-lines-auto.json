@@ -11699,12 +11699,18 @@
     "to": 2006,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1980,
+        "to": 2006
+      }
+    ],
     "generations": [
       {
         "code": "10/11",
         "from": 1980,
         "to": 2006,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv",
@@ -11751,12 +11757,18 @@
     "to": 2006,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1972,
+        "to": 2006
+      }
+    ],
     "generations": [
       {
         "code": "24/32",
         "from": 1972,
         "to": 2006,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv",
@@ -47593,52 +47605,112 @@
     "productionPeriods": [
       {
         "from": 1966,
+        "to": 1969
+      },
+      {
+        "from": 1970,
+        "to": 1981
+      },
+      {
+        "from": 1981,
+        "to": 1992
+      },
+      {
+        "from": 1992,
         "to": 2002
       },
       {
         "from": 2009,
+        "to": 2015
+      },
+      {
+        "from": 2015,
         "to": 2023
       }
     ],
     "dateScope": "source-production",
     "generations": [
       {
-        "code": null,
+        "code": "I",
+        "from": 1966,
+        "to": 1969,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(first_generation)"
+        ]
+      },
+      {
+        "code": "II",
+        "from": 1970,
+        "to": 1981,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(second_generation)"
+        ]
+      },
+      {
+        "code": "III",
+        "from": 1981,
+        "to": 1992,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(third_generation)"
+        ]
+      },
+      {
+        "code": "IV",
+        "from": 1992,
+        "to": 2002,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fourth_generation)"
+        ]
+      },
+      {
+        "code": "V",
         "from": 2009,
         "to": 2015,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kupe",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1379047893"
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fifth_generation)"
         ]
       },
       {
-        "code": null,
+        "code": "VI",
         "from": 2015,
         "to": 2023,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kupe",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1380248027"
-        ]
-      },
-      {
-        "code": null,
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": [
-          "kupe",
-          "kabriolet"
-        ],
-        "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1374721592"
+          "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)"
         ]
       }
     ],
@@ -47648,16 +47720,18 @@
       "https://en.wikipedia.org/w/index.php?oldid=1374721592",
       "https://en.wikipedia.org/w/index.php?oldid=1379047893",
       "https://en.wikipedia.org/w/index.php?oldid=1380248027",
-      "https://www.wikidata.org/wiki/Q332448"
+      "https://www.wikidata.org/wiki/Q332448",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(first_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(second_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(third_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fourth_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fifth_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)"
     ],
     "needsReview": [
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
-      },
-      {
-        "field": "generations",
-        "reason": "Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation."
       },
       {
         "field": "generations[0].code",
@@ -48196,8 +48270,8 @@
     "makeSlug": "chevrolet",
     "aliases": [],
     "bodyTypes": [
-      "kupe",
-      "kabriolet"
+      "kabriolet",
+      "kupe"
     ],
     "from": 1953,
     "to": null,
@@ -48205,73 +48279,148 @@
     "productionPeriods": [
       {
         "from": 1953,
+        "to": 1962
+      },
+      {
+        "from": 1962,
+        "to": 1967
+      },
+      {
+        "from": 1967,
+        "to": 1982
+      },
+      {
+        "from": 1983,
+        "to": 1996
+      },
+      {
+        "from": 1996,
+        "to": 2004
+      },
+      {
+        "from": 2004,
+        "to": 2013
+      },
+      {
+        "from": 2013,
+        "to": 2019
+      },
+      {
+        "from": 2020,
         "to": null
       }
     ],
     "dateScope": "source-production",
     "generations": [
       {
+        "code": "C1",
+        "from": 1953,
+        "to": 1962,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C1)"
+        ]
+      },
+      {
+        "code": "C2",
+        "from": 1962,
+        "to": 1967,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C2)"
+        ]
+      },
+      {
+        "code": "C3",
+        "from": 1967,
+        "to": 1982,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C3)"
+        ]
+      },
+      {
+        "code": "C4",
+        "from": 1983,
+        "to": 1996,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C4)"
+        ]
+      },
+      {
+        "code": "C5",
+        "from": 1996,
+        "to": 2004,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C5)"
+        ]
+      },
+      {
+        "code": "C6",
+        "from": 2004,
+        "to": 2013,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C6)"
+        ]
+      },
+      {
+        "code": "C7",
+        "from": 2013,
+        "to": 2019,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+        ]
+      },
+      {
         "code": "C8",
         "from": 2020,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "current",
         "bodyTypes": [
           "kupe",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1379957155"
-        ]
-      },
-      {
-        "code": "C4",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": [
-          "kabriolet"
-        ],
-        "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1380040582"
-        ]
-      },
-      {
-        "code": "C5",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": [
-          "kupe",
-          "kabriolet"
-        ],
-        "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381090337"
-        ]
-      },
-      {
-        "code": "C6",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": [
-          "kupe",
-          "kabriolet"
-        ],
-        "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1379957616"
-        ]
-      },
-      {
-        "code": "C7",
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": [
-          "kupe",
-          "kabriolet"
-        ],
-        "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381915479"
+          "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
         ]
       }
     ],
@@ -48283,16 +48432,20 @@
       "https://en.wikipedia.org/w/index.php?oldid=1379957616",
       "https://en.wikipedia.org/w/index.php?oldid=1381915479",
       "https://en.wikipedia.org/w/index.php?oldid=1379957155",
-      "https://www.wikidata.org/wiki/Q56166"
+      "https://www.wikidata.org/wiki/Q56166",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C1)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C2)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C3)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C4)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C5)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C6)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
     ],
     "needsReview": [
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
-      },
-      {
-        "field": "generations",
-        "reason": "Partial reviewed source sequence; European launch/end dates and omitted regional/body variants still need reconciliation."
       },
       {
         "field": "generations[1].from",
@@ -54372,27 +54525,41 @@
     "name": "2CV",
     "makeSlug": "citroen",
     "aliases": [],
-    "bodyTypes": null,
-    "from": 1948,
+    "bodyTypes": [
+      "sedan",
+      "dodavka"
+    ],
+    "from": 1949,
     "to": 1990,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1949,
+        "to": 1990
+      }
+    ],
     "generations": [
       {
         "code": null,
-        "from": 1948,
+        "from": 1949,
         "to": 1990,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "dodavka"
+        ],
         "sources": [
+          "https://www.media.stellantis.com/fr-fr/citroen/press/historique-iconique-et-populaire-la-2-cv-fete-ses-75-ans",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV",
+      "https://www.media.stellantis.com/fr-fr/citroen/press/historique-iconique-et-populaire-la-2-cv-fete-ses-75-ans"
     ],
     "needsReview": [
       {
@@ -55067,18 +55234,30 @@
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 1984,
+        "to": 2006,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "dodavka"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_C15",
+          "https://en.wikipedia.org/w/index.php?oldid=1381608249",
+          "https://www.wikidata.org/wiki/Q1980591"
+        ]
+      }
+    ],
     "wikidataQid": "Q1980591",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381608249",
-      "https://www.wikidata.org/wiki/Q1980591"
+      "https://www.wikidata.org/wiki/Q1980591",
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_C15"
     ],
-    "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      }
-    ]
+    "needsReview": []
   },
   {
     "slug": "c2",
@@ -55945,12 +56124,18 @@
     "to": 1991,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1974,
+        "to": 1991
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1974,
         "to": 1991,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
@@ -56957,28 +57142,36 @@
       "kabriolet"
     ],
     "from": 1978,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1988,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1978,
+        "to": 1988
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1978,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1988,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "hatchback",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa",
+          "https://www.media.stellantis.com/it-it/citroen/press/quarant-anni-fa-nacque-una-nuova-citroen-visa"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Visa",
+      "https://www.media.stellantis.com/it-it/citroen/press/quarant-anni-fa-nacque-una-nuova-citroen-visa"
     ],
     "needsReview": [
       {
@@ -56988,10 +57181,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -58924,36 +59113,51 @@
     "makeSlug": "daewoo",
     "aliases": [],
     "bodyTypes": [
-      "hatchback",
-      "sedan"
+      "sedan",
+      "hatchback"
     ],
-    "from": null,
+    "from": 2002,
     "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "productionStatus": "ended",
+    "productionPeriods": [
+      {
+        "from": 2002,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 2002,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan",
+          "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Daewoo_Kalos",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/daewoo/kalos/1generation/995334/",
+          "https://www.anwb.nl/auto/informatie/daewoo/kalos/i/eddf42c4-25e8-df11-a731-000c29d2a1e4",
+          "https://www.ultimatespecs.com/car-specs/Daewoo/4894/Daewoo-Kalos-12.html"
+        ]
+      }
+    ],
     "wikidataQid": "Q488154",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381234081",
-      "https://www.wikidata.org/wiki/Q488154"
+      "https://www.wikidata.org/wiki/Q488154",
+      "https://en.wikipedia.org/wiki/Daewoo_Kalos",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/daewoo/kalos/1generation/995334/",
+      "https://www.anwb.nl/auto/informatie/daewoo/kalos/i/eddf42c4-25e8-df11-a731-000c29d2a1e4",
+      "https://www.ultimatespecs.com/car-specs/Daewoo/4894/Daewoo-Kalos-12.html"
     ],
     "needsReview": [
       {
         "field": "from,to",
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
-      },
-      {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -59167,36 +59371,45 @@
     "makeSlug": "daewoo",
     "aliases": [],
     "bodyTypes": [
-      "hatchback",
-      "sedan"
+      "sedan",
+      "hatchback"
     ],
-    "from": null,
+    "from": 1997,
     "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "productionStatus": "ended",
+    "productionPeriods": [
+      {
+        "from": 1997,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 1997,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan",
+          "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Daewoo_Lanos"
+        ]
+      }
+    ],
     "wikidataQid": "Q482548",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1379692017",
-      "https://www.wikidata.org/wiki/Q482548"
+      "https://www.wikidata.org/wiki/Q482548",
+      "https://en.wikipedia.org/wiki/Daewoo_Lanos"
     ],
     "needsReview": [
       {
         "field": "from,to",
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
-      },
-      {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -59213,26 +59426,41 @@
       "sedan"
     ],
     "from": 1997,
-    "to": 2002,
+    "to": null,
     "productionStatus": "ended",
     "productionPeriods": [
       {
         "from": 1997,
-        "to": 2002
+        "to": null
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 1997,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Daewoo_Leganza",
+          "http://www.darewnoo.pl/GTA/naforum/pros/u/d/211.jpg",
+          "https://www.ultimatespecs.com/car-specs/Daewoo/4881/Daewoo-Leganza-20.html"
+        ]
+      }
+    ],
     "wikidataQid": "Q494486",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1379690618",
-      "https://www.wikidata.org/wiki/Q494486"
+      "https://www.wikidata.org/wiki/Q494486",
+      "https://en.wikipedia.org/wiki/Daewoo_Leganza",
+      "http://www.darewnoo.pl/GTA/naforum/pros/u/d/211.jpg",
+      "https://www.ultimatespecs.com/car-specs/Daewoo/4881/Daewoo-Leganza-20.html"
     ],
     "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      },
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
@@ -97735,15 +97963,40 @@
       "suv"
     ],
     "from": 2011,
-    "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "to": 2016,
+    "productionStatus": "ended",
+    "productionPeriods": [
+      {
+        "from": 2011,
+        "to": 2016
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 2011,
+        "to": 2016,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://de.wikipedia.org/wiki/Fiat_Freemont",
+          "https://en.wikipedia.org/wiki/Fiat_Freemont",
+          "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+          "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut"
+        ]
+      }
+    ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1373618316",
-      "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm"
+      "https://www.sec.gov/Archives/edgar/data/1513153/000119312513374811/d564443ds1.htm",
+      "https://en.wikipedia.org/wiki/Fiat_Freemont",
+      "https://www.media.stellantis.com/em-en/fiat/press/fiat-freemont-international-debut",
+      "https://de.wikipedia.org/wiki/Fiat_Freemont"
     ],
     "needsReview": [
       {
@@ -97755,20 +98008,8 @@
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
       },
       {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
         "field": "wikidataQid",
         "reason": "No unique line-level match; a family/shared-platform QID is not substituted."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       }
     ]
   },
@@ -98559,14 +98800,59 @@
     ],
     "from": 2008,
     "to": null,
-    "productionStatus": "unknown",
-    "productionPeriods": null,
+    "productionStatus": "current",
+    "productionPeriods": [
+      {
+        "from": 2008,
+        "to": null
+      },
+      {
+        "from": 2026,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "225",
+        "from": 2008,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Fiorino",
+          "https://de.wikipedia.org/wiki/Fiat_Fiorino"
+        ]
+      },
+      {
+        "code": "Qubo L",
+        "from": 2026,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://www.media.stellantis.com/em-en/fiat/press/fiat-unveils-the-qubo-l-the-ultimate-family-mover-for-modern-living",
+          "https://www.media.stellantis.com/de-de/fiat/press/ab-sofort-zwei-weitere-antriebstechnologien-bestellbar-neuer-fiat-qubo-l-jetzt-auch-mit-elektro-oder-benzinmotor",
+          "https://www.media.stellantis.com/ch-de/fiat/press/der-neue-fiat-qubo-l-das-perfekte-familienfahrzeug"
+        ]
+      }
+    ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1378397609",
-      "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space"
+      "https://www.media.stellantis.com/em-en/fiat/press/qubo-fiat-s-new-free-space",
+      "https://en.wikipedia.org/wiki/Fiat_Qubo",
+      "https://en.wikipedia.org/wiki/Fiat_Fiorino",
+      "https://de.wikipedia.org/wiki/Fiat_Fiorino",
+      "https://www.media.stellantis.com/em-en/fiat/press/fiat-unveils-the-qubo-l-the-ultimate-family-mover-for-modern-living",
+      "https://www.media.stellantis.com/de-de/fiat/press/ab-sofort-zwei-weitere-antriebstechnologien-bestellbar-neuer-fiat-qubo-l-jetzt-auch-mit-elektro-oder-benzinmotor",
+      "https://www.media.stellantis.com/ch-de/fiat/press/der-neue-fiat-qubo-l-das-perfekte-familienfahrzeug"
     ],
     "needsReview": [
       {
@@ -98578,20 +98864,8 @@
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
       },
       {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
         "field": "wikidataQid",
         "reason": "No unique line-level match; a family/shared-platform QID is not substituted."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       }
     ]
   },
@@ -98909,22 +99183,52 @@
     "productionPeriods": [
       {
         "from": 1998,
+        "to": 2021
+      },
+      {
+        "from": 2020,
         "to": null
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "278",
+        "from": 1998,
+        "to": 2021,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Strada",
+          "https://de.wikipedia.org/wiki/Fiat_Strada"
+        ]
+      },
+      {
+        "code": "281",
+        "from": 2020,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fiat_Strada",
+          "https://de.wikipedia.org/wiki/Fiat_Strada"
+        ]
+      }
+    ],
     "wikidataQid": "Q2345964",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1351591207",
-      "https://www.wikidata.org/wiki/Q2345964"
+      "https://www.wikidata.org/wiki/Q2345964",
+      "https://en.wikipedia.org/wiki/Fiat_Strada",
+      "https://de.wikipedia.org/wiki/Fiat_Strada"
     ],
-    "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      }
-    ]
+    "needsReview": []
   },
   {
     "slug": "talento",
@@ -170417,31 +170721,78 @@
     "from": 2006,
     "to": null,
     "productionStatus": "current",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2006,
+        "to": 2012
+      },
+      {
+        "from": 2011,
+        "to": 2020
+      },
+      {
+        "from": 2020,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "UN",
+        "from": 2006,
+        "to": 2012,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://de.wikipedia.org/wiki/Mazda_BT-50"
+        ]
+      },
+      {
+        "code": "UP/UR",
+        "from": 2011,
+        "to": 2020,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_BT-50",
+          "https://de.wikipedia.org/wiki/Mazda_BT-50",
+          "https://www.mazda-qatar.com/vehicles/mazda-bt-50/grades/"
+        ]
+      },
+      {
+        "code": "TF",
+        "from": 2020,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_BT-50",
+          "https://mazda.com.do/modelo/modelo-bt-50/"
+        ]
+      }
+    ],
     "wikidataQid": "Q1473317",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1371177063",
       "https://www.wikidata.org/wiki/Q1473317",
-      "https://en.wikipedia.org/wiki/Mazda_BT-50"
+      "https://en.wikipedia.org/wiki/Mazda_BT-50",
+      "https://de.wikipedia.org/wiki/Mazda_BT-50",
+      "https://mazda.com.do/modelo/modelo-bt-50/",
+      "https://www.mazda-qatar.com/vehicles/mazda-bt-50/grades/"
     ],
     "needsReview": [
       {
         "field": "from,to",
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
-      },
-      {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -171065,25 +171416,51 @@
     "to": 2023,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2006,
+        "to": 2015
+      },
+      {
+        "from": 2016,
+        "to": 2023
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "TB",
         "from": 2006,
-        "to": 2023,
+        "to": 2015,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-9"
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
+        ]
+      },
+      {
+        "code": "TC",
+        "from": 2016,
+        "to": 2023,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Mazda_CX-9",
-      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/"
+      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/",
+      "https://de.wikipedia.org/wiki/Mazda_CX-9"
     ],
     "needsReview": [
       {
@@ -171397,21 +171774,71 @@
     "productionPeriods": [
       {
         "from": 1988,
+        "to": 1999
+      },
+      {
+        "from": 1999,
+        "to": 2006
+      },
+      {
+        "from": 2006,
         "to": 2016
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "LV",
+        "from": 1988,
+        "to": 1999,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://de.wikipedia.org/wiki/Mazda_MPV"
+        ]
+      },
+      {
+        "code": "LW",
+        "from": 1999,
+        "to": 2006,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://de.wikipedia.org/wiki/Mazda_MPV"
+        ]
+      },
+      {
+        "code": "LY",
+        "from": 2006,
+        "to": 2016,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
+        ]
+      }
+    ],
     "wikidataQid": "Q660703",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1377406676",
-      "https://www.wikidata.org/wiki/Q660703"
+      "https://www.wikidata.org/wiki/Q660703",
+      "https://en.wikipedia.org/wiki/Mazda_MPV",
+      "https://de.wikipedia.org/wiki/Mazda_MPV",
+      "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
     ],
     "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      },
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
@@ -196938,17 +197365,36 @@
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "R35",
+        "from": 2007,
+        "to": 2025,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_GT-R",
+          "https://en.wikipedia.org/w/index.php?oldid=1381712200",
+          "https://www.wikidata.org/wiki/Q499109",
+          "https://en.wikipedia.org/w/index.php?oldid=1382339318",
+          "https://de.wikipedia.org/wiki/Nissan_GT-R",
+          "https://faq2.nissan.co.jp/faq/show/9043?site_domain=default"
+        ]
+      }
+    ],
     "wikidataQid": "Q499109",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381712200",
-      "https://www.wikidata.org/wiki/Q499109"
+      "https://www.wikidata.org/wiki/Q499109",
+      "https://en.wikipedia.org/w/index.php?oldid=1382339318",
+      "https://de.wikipedia.org/wiki/Nissan_GT-R",
+      "https://en.wikipedia.org/wiki/Nissan_GT-R",
+      "https://faq2.nissan.co.jp/faq/show/9043?site_domain=default"
     ],
     "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      },
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
@@ -197580,7 +198026,10 @@
       "Evalia",
       "e-NV200"
     ],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "dodavka",
+      "mpv"
+    ],
     "from": 2009,
     "to": null,
     "productionStatus": "current",
@@ -197591,20 +198040,36 @@
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 2009,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "dodavka",
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_NV200",
+          "https://en.wikipedia.org/w/index.php?oldid=1375934343",
+          "https://www.wikidata.org/wiki/Q1394779",
+          "https://de.wikipedia.org/wiki/Nissan_NV200"
+        ]
+      }
+    ],
     "wikidataQid": "Q1394779",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1375934343",
-      "https://www.wikidata.org/wiki/Q1394779"
+      "https://www.wikidata.org/wiki/Q1394779",
+      "https://de.wikipedia.org/wiki/Nissan_NV200",
+      "https://en.wikipedia.org/wiki/Nissan_NV200"
     ],
     "needsReview": [
       {
         "field": "bodyTypes",
         "reason": "European editorial body selection needs model-specific corroboration; generic/shared source body facts do not confirm every selected style."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -197814,30 +198279,109 @@
     "from": 1985,
     "to": null,
     "productionStatus": "current",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1985,
+        "to": 1995
+      },
+      {
+        "from": 1995,
+        "to": 2004
+      },
+      {
+        "from": 2004,
+        "to": 2014
+      },
+      {
+        "from": 2012,
+        "to": 2020
+      },
+      {
+        "from": 2021,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "WD21",
+        "from": 1985,
+        "to": 1995,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Pathfinder"
+        ]
+      },
+      {
+        "code": "R50",
+        "from": 1995,
+        "to": 2004,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Pathfinder"
+        ]
+      },
+      {
+        "code": "R51",
+        "from": 2004,
+        "to": 2014,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Pathfinder"
+        ]
+      },
+      {
+        "code": "R52",
+        "from": 2012,
+        "to": 2020,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Pathfinder",
+          "https://de.wikipedia.org/wiki/Nissan_Pathfinder"
+        ]
+      },
+      {
+        "code": "R53",
+        "from": 2021,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Pathfinder",
+          "https://de.wikipedia.org/wiki/Nissan_Pathfinder"
+        ]
+      }
+    ],
     "wikidataQid": "Q1419007",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381290043",
-      "https://www.wikidata.org/wiki/Q1419007"
+      "https://www.wikidata.org/wiki/Q1419007",
+      "https://de.wikipedia.org/wiki/Nissan_Pathfinder",
+      "https://en.wikipedia.org/wiki/Nissan_Pathfinder"
     ],
     "needsReview": [
       {
         "field": "from,to",
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
-      },
-      {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -197851,36 +198395,163 @@
     "makeSlug": "nissan",
     "aliases": [],
     "bodyTypes": [
-      "suv"
+      "suv",
+      "dodavka",
+      "pickup"
     ],
     "from": 1951,
     "to": null,
     "productionStatus": "current",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1951,
+        "to": 1960
+      },
+      {
+        "from": 1960,
+        "to": 1980
+      },
+      {
+        "from": 1980,
+        "to": 2002
+      },
+      {
+        "from": 1987,
+        "to": 1998
+      },
+      {
+        "from": 1997,
+        "to": 2024
+      },
+      {
+        "from": 2010,
+        "to": 2026
+      },
+      {
+        "from": 2024,
+        "to": null
+      }
+    ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "4W60",
+        "from": 1951,
+        "to": 1960,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "dodavka",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "60",
+        "from": 1960,
+        "to": 1980,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "dodavka",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "160/260",
+        "from": 1980,
+        "to": 2002,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "dodavka",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "Y60",
+        "from": 1987,
+        "to": 1998,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "Y61",
+        "from": 1997,
+        "to": 2024,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv",
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "Y62",
+        "from": 2010,
+        "to": 2026,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol",
+          "https://de.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      },
+      {
+        "code": "Y63",
+        "from": 2024,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Patrol"
+        ]
+      }
+    ],
     "wikidataQid": "Q1141487",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381332651",
       "https://www.wikidata.org/wiki/Q1141487",
-      "https://en.wikipedia.org/w/index.php?oldid=1382582029"
+      "https://en.wikipedia.org/w/index.php?oldid=1382582029",
+      "https://en.wikipedia.org/wiki/Nissan_Patrol",
+      "https://de.wikipedia.org/wiki/Nissan_Patrol"
     ],
     "needsReview": [
       {
         "field": "from,to",
         "reason": "Badge-specific European production chronology is unresolved; a shared/global/renamed article must not supply another model’s dates."
-      },
-      {
-        "field": "from",
-        "reason": "No single defensible production interval for the selected line in the retained facts."
-      },
-      {
-        "field": "to",
-        "reason": "End year/current production not established. Null here does not confirm ongoing production."
-      },
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
       },
       {
         "field": "scope",
@@ -198700,17 +199371,30 @@
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": null,
+        "from": 1986,
+        "to": 2001,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "dodavka"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Nissan_Trade",
+          "https://en.wikipedia.org/w/index.php?oldid=1264257561",
+          "https://www.wikidata.org/wiki/Q1993842"
+        ]
+      }
+    ],
     "wikidataQid": "Q1993842",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1264257561",
-      "https://www.wikidata.org/wiki/Q1993842"
+      "https://www.wikidata.org/wiki/Q1993842",
+      "https://en.wikipedia.org/wiki/Nissan_Trade"
     ],
     "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      },
       {
         "field": "scope",
         "reason": "European-market name selection; source-production bounds can include global production. Regional successors and badge phases are not certified for Czech availability."
@@ -206322,22 +207006,54 @@
     "productionPeriods": [
       {
         "from": 1978,
+        "to": 1986
+      },
+      {
+        "from": 1987,
         "to": 1993
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "A",
+        "from": 1978,
+        "to": 1986,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Opel_Senator",
+          "https://de.wikipedia.org/wiki/Opel_Senator"
+        ]
+      },
+      {
+        "code": "B",
+        "from": 1987,
+        "to": 1993,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Opel_Senator",
+          "https://de.wikipedia.org/wiki/Opel_Senator"
+        ]
+      }
+    ],
     "wikidataQid": "Q964775",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1381762452",
-      "https://www.wikidata.org/wiki/Q964775"
+      "https://www.wikidata.org/wiki/Q964775",
+      "https://en.wikipedia.org/wiki/List_of_Opel_vehicles",
+      "https://www.ultimatespecs.com/car-specs/Opel/318/Opel-Senator-A-20-E.html",
+      "https://en.wikipedia.org/wiki/Opel_Senator",
+      "https://de.wikipedia.org/wiki/Opel_Senator"
     ],
-    "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      }
-    ]
+    "needsReview": []
   },
   {
     "slug": "signum",
@@ -206573,18 +207289,46 @@
       }
     ],
     "dateScope": "source-production",
-    "generations": null,
+    "generations": [
+      {
+        "code": "A",
+        "from": 1994,
+        "to": 2000,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Opel_Tigra",
+          "https://de.wikipedia.org/wiki/Opel_Tigra"
+        ]
+      },
+      {
+        "code": "B",
+        "from": 2004,
+        "to": 2009,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Opel_Tigra",
+          "https://de.wikipedia.org/wiki/Opel_Tigra_TwinTop"
+        ]
+      }
+    ],
     "wikidataQid": "Q653699",
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1373876175",
-      "https://www.wikidata.org/wiki/Q653699"
+      "https://www.wikidata.org/wiki/Q653699",
+      "https://en.wikipedia.org/wiki/List_of_Opel_vehicles",
+      "https://de.wikipedia.org/wiki/Opel_Tigra",
+      "https://en.wikipedia.org/wiki/Opel_Tigra",
+      "https://de.wikipedia.org/wiki/Opel_Tigra_TwinTop"
     ],
-    "needsReview": [
-      {
-        "field": "generations",
-        "reason": "Generation boundaries/codes have not been reconciled for European variants; see factual candidates in model-line-evidence.json. Facelifts are not invented as generations."
-      }
-    ]
+    "needsReview": []
   },
   {
     "slug": "vectra",
@@ -216275,21 +217019,87 @@
     "name": "Firebird",
     "makeSlug": "pontiac",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "kupe",
+      "kabriolet"
+    ],
     "from": 1967,
     "to": 2002,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1967,
+        "to": 1970
+      },
+      {
+        "from": 1970,
+        "to": 1981
+      },
+      {
+        "from": 1981,
+        "to": 1992
+      },
+      {
+        "from": 1992,
+        "to": 2002
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": null,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": null,
+        "code": "I",
+        "from": 1967,
+        "to": 1970,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
         "sources": [
-          "https://www.gm.com/heritage"
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "II",
+        "from": 1970,
+        "to": 1981,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "III",
+        "from": 1981,
+        "to": 1992,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird_(third_generation)",
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
+        ]
+      },
+      {
+        "code": "IV",
+        "from": 1992,
+        "to": 2002,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kupe",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontiac_Firebird"
         ]
       }
     ],
@@ -216298,7 +217108,9 @@
       "https://www.gm.com/heritage",
       "https://www.wikidata.org/wiki/Q40990",
       "https://www.nbcnews.com/id/wbna34224218",
-      "https://en.wikipedia.org/w/index.php?title=Pontiac_Firebird&oldid=1379066747"
+      "https://en.wikipedia.org/w/index.php?title=Pontiac_Firebird&oldid=1379066747",
+      "https://en.wikipedia.org/wiki/Pontiac_Firebird",
+      "https://en.wikipedia.org/wiki/Pontiac_Firebird_(third_generation)"
     ],
     "needsReview": [
       {
@@ -216308,14 +217120,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "bodyTypes",

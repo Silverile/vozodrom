@@ -10441,17 +10441,47 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "BT-50 – přehled řady",
+        "code": "UN",
+        "name": "BT-50 (UN)",
         "from": 2006,
-        "to": null,
-        "productionStatus": "current",
+        "to": 2012,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.5 MZR-CD",
+            "fuel": "diesel",
+            "displacementCc": 2499,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 105,
+            "powerKwMax": 105,
+            "availablePowerKw": [
+              105
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mazda_BT-50"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "2.5 MZR-CD",
+              "noteCs": "Selected documented version; no assumed current Czech-market availability.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "UN",
+                "fromYear": 2006,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10465,7 +10495,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
         },
         "trunkL": null,
         "markets": [],
@@ -10473,9 +10503,7 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1371177063",
-          "https://www.wikidata.org/wiki/Q1473317",
-          "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          "https://de.wikipedia.org/wiki/Mazda_BT-50"
         ],
         "fieldSources": {
           "from": [
@@ -10487,81 +10515,373 @@
           "marketNotesCs": [
             "https://en.wikipedia.org/wiki/Mazda_BT-50"
           ]
-        }
+        },
+        "dateBasis": "production"
+      },
+      {
+        "code": "UP/UR",
+        "name": "BT-50 (UP/UR)",
+        "from": 2011,
+        "to": 2020,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "pickup"
+        ],
+        "engines": [
+          {
+            "variant": "3.2 Diesel",
+            "fuel": "diesel",
+            "displacementCc": 3198,
+            "displacementLitresNominal": 3.2,
+            "powerKwMin": 147,
+            "powerKwMax": 147,
+            "availablePowerKw": [
+              147
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mazda-qatar.com/vehicles/mazda-bt-50/grades/"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "3.2 Diesel",
+              "noteCs": "Selected documented version; no assumed current Czech-market availability.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "UP/UR",
+                "fromYear": 2011,
+                "toYear": 2020,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Tři generace: UN (2006–2011), UP/UR (2011–2020) a TF (od 2020, odvozená od Isuzu D-Max). Souhrnný záznam řady, generace nejsou rozepsány.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_BT-50",
+          "https://de.wikipedia.org/wiki/Mazda_BT-50",
+          "https://www.mazda-qatar.com/vehicles/mazda-bt-50/grades/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ]
+        },
+        "dateBasis": "production"
+      },
+      {
+        "code": "TF",
+        "name": "BT-50 (TF)",
+        "from": 2020,
+        "to": null,
+        "productionStatus": "current",
+        "facelift": null,
+        "bodyTypes": [
+          "pickup"
+        ],
+        "engines": [
+          {
+            "variant": "3.0 Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://mazda.com.do/modelo/modelo-bt-50/"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "3.0 Diesel",
+              "noteCs": "Selected documented version; no assumed current Czech-market availability.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "TF",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Tři generace: UN (2006–2011), UP/UR (2011–2020) a TF (od 2020, odvozená od Isuzu D-Max). Souhrnný záznam řady, generace nejsou rozepsány.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_BT-50",
+          "https://mazda.com.do/modelo/modelo-bt-50/"
+        ],
+        "fieldSources": {
+          "from": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ],
+          "marketNotesCs": [
+            "https://en.wikipedia.org/wiki/Mazda_BT-50"
+          ]
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1371177063",
-      "https://www.wikidata.org/wiki/Q1473317"
+      "https://www.wikidata.org/wiki/Q1473317",
+      "https://de.wikipedia.org/wiki/Mazda_BT-50",
+      "https://en.wikipedia.org/wiki/Mazda_BT-50",
+      "https://mazda.com.do/modelo/modelo-bt-50/",
+      "https://www.mazda-qatar.com/vehicles/mazda-bt-50/grades/"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].to",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       }
     ],
     "aliases": []
@@ -14359,17 +14679,47 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "CX-9",
+        "code": "TB",
+        "name": "CX-9 (TB)",
         "from": 2006,
-        "to": 2023,
+        "to": 2015,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.7 V6",
+            "fuel": "petrol",
+            "displacementCc": 3726,
+            "displacementLitresNominal": 3.7,
+            "powerKwMin": 204,
+            "powerKwMax": 204,
+            "availablePowerKw": [
+              204
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mazda_CX-9"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "3.7 V6",
+              "noteCs": "Technical table rating; selected documented version.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "TB",
+                "fromYear": 2006,
+                "toYear": 2015,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -14383,7 +14733,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
         },
         "trunkL": null,
         "markets": [],
@@ -14391,78 +14741,209 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_CX-9"
-        ]
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "TC",
+        "name": "CX-9 (TC)",
+        "from": 2016,
+        "to": 2023,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "2.5 Skyactiv-G Turbo",
+            "fuel": "petrol",
+            "displacementCc": 2488,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 170,
+            "powerKwMax": 170,
+            "availablePowerKw": [
+              170
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mazda_CX-9"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "2.5 Skyactiv-G Turbo",
+              "noteCs": "Selected documented market version, not every octane/market output.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "TC",
+                "fromYear": 2016,
+                "toYear": 2023,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_CX-9",
+          "https://de.wikipedia.org/wiki/Mazda_CX-9"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Mazda_CX-9",
-      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/"
+      "https://es.mazda-press.com/about-mazda/history/archivo-de-modelos-internacionales/",
+      "https://de.wikipedia.org/wiki/Mazda_CX-9"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       }
     ]
   },
@@ -15114,17 +15595,47 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "MPV – přehled řady",
+        "code": "LV",
+        "name": "MPV (LV)",
         "from": 1988,
-        "to": 2016,
+        "to": 1999,
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.0 V6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 113,
+            "powerKwMax": 113,
+            "availablePowerKw": [
+              113
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mazda_MPV"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "3.0 V6",
+              "noteCs": "Selected documented version; no assumed current Czech-market availability.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LV",
+                "fromYear": 1988,
+                "toYear": 1999,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -15138,7 +15649,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
         },
         "trunkL": null,
         "markets": [],
@@ -15146,85 +15657,399 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1377406676",
-          "https://www.wikidata.org/wiki/Q660703",
-          "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://de.wikipedia.org/wiki/Mazda_MPV"
         ],
         "fieldSources": {
           "productionStatus": [
             "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
           ]
-        }
+        },
+        "dateBasis": "production"
+      },
+      {
+        "code": "LW",
+        "name": "MPV (LW)",
+        "from": 1999,
+        "to": 2006,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
+        "engines": [
+          {
+            "variant": "2.0 Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 100,
+            "powerKwMax": 100,
+            "availablePowerKw": [
+              100
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mazda_MPV"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "2.0 Diesel",
+              "noteCs": "Selected documented version; no assumed current Czech-market availability.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LW",
+                "fromYear": 1999,
+                "toYear": 2006,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://de.wikipedia.org/wiki/Mazda_MPV"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        },
+        "dateBasis": "production"
+      },
+      {
+        "code": "LY",
+        "name": "MPV (LY)",
+        "from": 2006,
+        "to": 2016,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
+        "engines": [
+          {
+            "variant": "2.3 MZR",
+            "fuel": "petrol",
+            "displacementCc": 2260,
+            "displacementLitresNominal": 2.3,
+            "powerKwMin": 120,
+            "powerKwMax": 120,
+            "availablePowerKw": [
+              120
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "2.3 MZR",
+              "noteCs": "Mazda manufacturer specification; net output.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LY",
+                "fromYear": 2006,
+                "toYear": 2016,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.3 MZR DISI Turbo",
+            "fuel": "petrol",
+            "displacementCc": 2260,
+            "displacementLitresNominal": 2.3,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented engine fact from the generation article or manufacturer specification",
+              "originalVariant": "2.3 MZR DISI Turbo",
+              "noteCs": "Mazda manufacturer specification; net output.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LY",
+                "fromYear": 2006,
+                "toYear": 2016,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Rozsah vychází z dřívějšího zdrojovaného seznamu; jednotlivé trhy a verze nejsou úplně doloženy.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mazda_MPV",
+          "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
+        ],
+        "fieldSources": {
+          "productionStatus": [
+            "https://en.wikipedia.org/wiki/List_of_Mazda_vehicles"
+          ]
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1377406676",
-      "https://www.wikidata.org/wiki/Q660703"
+      "https://www.wikidata.org/wiki/Q660703",
+      "https://en.wikipedia.org/wiki/Mazda_MPV",
+      "https://de.wikipedia.org/wiki/Mazda_MPV",
+      "https://newsroom.mazda.com/en/publicity/release/2006/200602/060202.html"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[2].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       }
     ],
     "aliases": []
