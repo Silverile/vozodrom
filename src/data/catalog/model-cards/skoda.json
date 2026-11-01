@@ -11970,12 +11970,7 @@
             "gears": 4
           }
         ],
-        "dimensionsMm": {
-          "length": 3960,
-          "width": 1646,
-          "height": null,
-          "wheelbase": 2462
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe / historical",
           "modelYear": null,
@@ -11983,7 +11978,7 @@
           "bodyType": "hatchback",
           "noteCs": "Základní hatchback Fabia I. Šířka 1646/1650 mm a výška 1451/1450 mm nejsou mezi zdroji sjednoceny, proto null. RS má vlastní rozměry a nesdílí výšku základní verze."
         },
-        "trunkL": 260,
+        "trunkL": null,
         "markets": [
           "Europe"
         ],
@@ -12016,7 +12011,8 @@
           "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/",
           "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181",
           "https://en.wikipedia.org/wiki/%C5%A0koda_Fabia",
-          "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual"
+          "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual",
+          "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
         ],
         "trims": [
           {
@@ -12548,7 +12544,250 @@
         ],
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only",
-          "dimensionsMm.width": "common-body-component"
+          "dimensionsMm.width": "moved-to-body-variant-references"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "po faceliftu (2006)",
+            "dimensionsMm": {
+              "length": 3970,
+              "width": 1646,
+              "height": 1451,
+              "wheelbase": 2462
+            },
+            "trunkL": 260,
+            "noteCs": "Běžné provedení po faceliftu, nikoli RS. Rozměry a kufr se zadními sedadly vzpřímenými podle britského katalogu 05/2006; šířka bez zrcátek.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "po faceliftu (2006)",
+            "dimensionsMm": {
+              "length": 4232,
+              "width": 1646,
+              "height": 1452,
+              "wheelbase": 2462
+            },
+            "trunkL": 426,
+            "noteCs": "Běžné provedení po faceliftu, nikoli RS. Rozměry a kufr se zadními sedadly vzpřímenými podle britského katalogu 05/2006; šířka bez zrcátek.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "sedan",
+            "label": "po faceliftu (2007)",
+            "dimensionsMm": {
+              "length": 4232,
+              "width": 1646,
+              "height": 1449,
+              "wheelbase": 2462
+            },
+            "trunkL": null,
+            "noteCs": "Rozměry sedanu podle návodu 05/2007. Kufr pro toto referenční provedení nebyl v použitém podkladu ověřen; údaj z tiskové zprávy k uvedení v roce 2001 se sem nepřenáší.",
+            "sources": [
+              "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3970,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Hatch dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1646,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Hatch dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1451,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Hatch dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2462,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Hatch dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 260,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, ŠkodaFabia Hatch, Luggage storage space, rear seat upright:260",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4232,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Estate dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1646,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Estate dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1452,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Estate dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2462,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, Measurements: standard Estate dimension diagram and upright-seat luggage table",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 426,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf"
+            ],
+            "anchor": "PDF p.7, ŠkodaFabia Estate, Luggage storage space, rear seat upright:426",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 4232,
+            "sources": [
+              "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
+            ],
+            "anchor": "Owner’s manual 05/2007, viewer p.201, Dimensions: SEDAN column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2007)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1646,
+            "sources": [
+              "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
+            ],
+            "anchor": "Owner’s manual 05/2007, viewer p.201, Dimensions: SEDAN column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2007)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.height",
+            "value": 1449,
+            "sources": [
+              "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
+            ],
+            "anchor": "Owner’s manual 05/2007, viewer p.201, Dimensions: SEDAN column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2007)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2462,
+            "sources": [
+              "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html"
+            ],
+            "anchor": "Owner’s manual 05/2007, viewer p.201, Dimensions: SEDAN column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (2007)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 3960,
+            "width": 1646,
+            "height": null,
+            "wheelbase": 2462
+          },
+          "previousTrunkL": 260,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only",
+            "dimensionsMm.width": "common-body-component"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "po faceliftu (2006)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "po faceliftu (2006)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 2,
+              "label": "po faceliftu (2007)",
+              "unconfirmed": [
+                {
+                  "field": "trunkL",
+                  "reason": "Reference-specific luggage capacity not confirmed; the2001 launch release refers to a shorter4222mm car."
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -12946,12 +13185,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1642,
-          "height": 1498,
-          "wheelbase": 2460
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -14390,7 +14624,178 @@
               ]
             }
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "standardní podvozek (katalog 2009)",
+            "dimensionsMm": {
+              "length": 3992,
+              "width": 1642,
+              "height": 1498,
+              "wheelbase": 2462
+            },
+            "trunkL": 315,
+            "noteCs": "Běžný hatchback, nikoli RS nebo GreenLine. Výška při pohotovostní hmotnosti, šířka bez zrcátek, zadní opěradla vzpřímená; referencí je katalog 04/2009.",
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "standardní podvozek (katalog 2009)",
+            "dimensionsMm": {
+              "length": 4239,
+              "width": 1642,
+              "height": 1498,
+              "wheelbase": 2462
+            },
+            "trunkL": 505,
+            "noteCs": "Běžné Combi, nikoli RS, Scout nebo GreenLine. Výška při pohotovostní hmotnosti, šířka bez zrcátek, zadní opěradla vzpřímená; katalog 04/2009.",
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3992,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1642,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1498,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2462,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 315,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4239,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia Combi exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1642,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia Combi exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1498,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia Combi exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2462,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia Combi exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 505,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_Catalogue_ENG_2008.pdf"
+            ],
+            "anchor": "PDF p.17 / printed pp.32–33, Fabia Combi exterior dimensions and luggage storage",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "standardní podvozek (katalog 2009)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1642,
+            "height": 1498,
+            "wheelbase": 2460
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "standardní podvozek (katalog 2009)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "standardní podvozek (katalog 2009)",
+              "unconfirmed": []
+            }
+          ]
+        }
       },
       {
         "code": "III (NJ)",
@@ -14639,12 +15044,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1732,
-          "height": null,
-          "wheelbase": 2470
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -14681,7 +15081,8 @@
           "https://cdn.skoda-storyboard.com/2018/08/TD-FABIA-petrol_EN.pdf",
           "https://cdn.skoda-storyboard.com/2021/04/SKODA_FABIA_Historie_modelu.pdf",
           "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/",
-          "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf"
+          "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf",
+          "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
         ],
         "trims": [
           {
@@ -15496,7 +15897,180 @@
           }
         ],
         "generationFactCoverage": {
-          "dimensionsMm.width": "common-body-component"
+          "dimensionsMm.width": "moved-to-body-variant-references"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "před faceliftem (2017)",
+            "dimensionsMm": {
+              "length": 3992,
+              "width": 1732,
+              "height": 1467,
+              "wheelbase": 2470
+            },
+            "trunkL": 330,
+            "noteCs": "Běžný hatchback před faceliftem, technický list 7. 3. 2017. Šířka bez zrcátek a výška při pohotovostní hmotnosti; kufr se vzpřímenými opěradly.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "před faceliftem (2017)",
+            "dimensionsMm": {
+              "length": 4257,
+              "width": 1732,
+              "height": 1467,
+              "wheelbase": 2470
+            },
+            "trunkL": 530,
+            "noteCs": "Běžné Combi před faceliftem, technický list 7. 3. 2017. Šířka bez zrcátek a výška při pohotovostní hmotnosti; kufr se vzpřímenými opěradly.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3992,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.99, ŠKODA FABIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1732,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.99, ŠKODA FABIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1467,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.99, ŠKODA FABIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2470,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.99, ŠKODA FABIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 330,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.99, ŠKODA FABIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4257,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.105, ŠKODA FABIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1732,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.105, ŠKODA FABIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1467,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.105, ŠKODA FABIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2470,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.105, ŠKODA FABIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 530,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.105, ŠKODA FABIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "před faceliftem (2017)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1732,
+            "height": null,
+            "wheelbase": 2470
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "dimensionsMm.width": "common-body-component"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "před faceliftem (2017)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "před faceliftem (2017)",
+              "unconfirmed": []
+            }
+          ]
         }
       },
       {
@@ -16297,7 +16871,9 @@
       "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/",
       "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/",
       "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual",
-      "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf"
+      "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf",
+      "https://www.manualslib.com/manual/375235/Skoda-Fabia-05-2007.html",
+      "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
     ],
     "needsReview": [
       {
@@ -18791,12 +19367,7 @@
             "gears": 5
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1635,
-          "height": 1415,
-          "wheelbase": 2450
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe / historical",
           "modelYear": null,
@@ -18804,7 +19375,7 @@
           "bodyType": "hatchback",
           "noteCs": "Přehled se vztahuje k hatchbacku. Délka 3855/3883 mm podle modernizace není sloučena; kombi má zavazadlový prostor 447 l. Původní interní označení podkladu: Felicia — základní řada."
         },
-        "trunkL": 272,
+        "trunkL": null,
         "markets": [
           "Europe"
         ],
@@ -18832,7 +19403,8 @@
           "https://www.skoda-storyboard.com/en/press-releases/celebrating-30-years-of-the-skoda-felicia-the-brands-first-model-under-the-vw-groups-wing/",
           "https://cs.wikipedia.org/w/index.php?oldid=26136151",
           "https://cs.wikipedia.org/wiki/%C5%A0koda_Felicia",
-          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf"
+          "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf",
+          "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
         ],
         "trims": [
           {
@@ -19559,7 +20131,247 @@
               "https://www.skoda-storyboard.com/en/press-releases/celebrating-30-years-of-the-skoda-felicia-the-brands-first-model-under-the-vw-groups-wing/"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "po faceliftu (pozdní návod)",
+            "dimensionsMm": {
+              "length": 3883,
+              "width": 1635,
+              "height": 1415,
+              "wheelbase": 2450
+            },
+            "trunkL": 272,
+            "noteCs": "Pozdní tovární návod: šířka bez zrcátek, přibližná výška prázdného vozidla; základní kufr. Údaje nejsou pro původní předfaceliftovou příď.",
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "po faceliftu (pozdní návod)",
+            "dimensionsMm": {
+              "length": 4237,
+              "width": 1635,
+              "height": 1420,
+              "wheelbase": 2450
+            },
+            "trunkL": 447,
+            "noteCs": "Pozdní tovární návod: šířka bez zrcátek, přibližná výška prázdného vozidla; základní kufr. Údaje nejsou pro původní předfaceliftovou příď.",
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ]
+          },
+          {
+            "bodyType": "pickup",
+            "label": "bez nástavby (pozdní návod)",
+            "dimensionsMm": {
+              "length": 4115,
+              "width": 1635,
+              "height": 1440,
+              "wheelbase": 2450
+            },
+            "trunkL": null,
+            "noteCs": "Pick-up bez nástavby; výška prázdného vozidla. Objem nákladové korby do výše postranic se nevydává za osobní kufr.",
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3883,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1635,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1415,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2450,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 272,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4237,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA COMBI column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1635,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA COMBI column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1420,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA COMBI column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2450,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA COMBI column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 447,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, FELICIA COMBI column",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu (pozdní návod)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 4115,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, PICKUP column and footnotes1,3",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez nástavby (pozdní návod)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1635,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, PICKUP column and footnotes1,3",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez nástavby (pozdní návod)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.height",
+            "value": 1440,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, PICKUP column and footnotes1,3",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez nástavby (pozdní návod)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2450,
+            "sources": [
+              "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
+            ],
+            "anchor": "Printed p.146, TECHNICKÉ ÚDAJE, Rozměry, PICKUP column and footnotes1,3",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "bez nástavby (pozdní návod)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1635,
+            "height": 1415,
+            "wheelbase": 2450
+          },
+          "previousTrunkL": 272,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "po faceliftu (pozdní návod)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "po faceliftu (pozdní návod)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 2,
+              "label": "bez nástavby (pozdní návod)",
+              "unconfirmed": [
+                {
+                  "field": "trunkL",
+                  "reason": "Commercial open cargo-bed volume is not passenger luggage capacity."
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "sources": [
@@ -19570,7 +20382,8 @@
       "https://cs.wikipedia.org/w/index.php?oldid=26136151",
       "https://cs.wikipedia.org/wiki/%C5%A0koda_Felicia",
       "https://docar.cz/navody-k-obsluze/Skoda/navod-k-obsluze-skoda-felicia.pdf",
-      "https://www.skoda-storyboard.com/en/press-releases/celebrating-30-years-of-the-skoda-felicia-the-brands-first-model-under-the-vw-groups-wing/"
+      "https://www.skoda-storyboard.com/en/press-releases/celebrating-30-years-of-the-skoda-felicia-the-brands-first-model-under-the-vw-groups-wing/",
+      "https://skodafeliciafun.co.uk/Felicia_UsersManualCz.pdf"
     ],
     "needsReview": [
       {
@@ -30404,12 +31217,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": 4569,
-          "width": 1769,
-          "height": null,
-          "wheelbase": 2578
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -30885,6 +31693,179 @@
         ],
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "Liftback (katalog 2011)",
+            "dimensionsMm": {
+              "length": 4569,
+              "width": 1769,
+              "height": 1462,
+              "wheelbase": 2578
+            },
+            "trunkL": 585,
+            "noteCs": "Běžný liftback s předním pohonem, katalog 2011. Kufr je základní uspořádání podle schématu katalogu; velikost se může lišit podle rezervního kola a palivové soustavy.",
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "Combi (katalog 2011)",
+            "dimensionsMm": {
+              "length": 4569,
+              "width": 1769,
+              "height": 1468,
+              "wheelbase": 2578
+            },
+            "trunkL": 605,
+            "noteCs": "Běžné Combi s předním pohonem, nikoli Scout či GreenLine. Základní kufr podle katalogu 2011; rezervní kolo a palivová soustava mohou objem změnit.",
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4569,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.20, Octavia technical specifications and dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (katalog 2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1769,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.20, Octavia technical specifications and dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (katalog 2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1462,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.20, Octavia technical specifications and dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (katalog 2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2578,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.20, Octavia technical specifications and dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (katalog 2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 585,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.20, Octavia technical specifications and dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (katalog 2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4569,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.21, Octavia Combi technical specifications and FWD dimension drawing; p.7 basic luggage arrangement",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi (katalog 2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1769,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.21, Octavia Combi technical specifications and FWD dimension drawing; p.7 basic luggage arrangement",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi (katalog 2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1468,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.21, Octavia Combi technical specifications and FWD dimension drawing; p.7 basic luggage arrangement",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi (katalog 2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2578,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.21, Octavia Combi technical specifications and FWD dimension drawing; p.7 basic luggage arrangement",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi (katalog 2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 605,
+            "sources": [
+              "https://www.aastaauto.ee/files/modelfiles/Octavia_kataloog_2011_ENG.pdf"
+            ],
+            "anchor": "PDF p.21, Octavia Combi technical specifications and FWD dimension drawing; p.7 basic luggage arrangement",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi (katalog 2011)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4569,
+            "width": 1769,
+            "height": null,
+            "wheelbase": 2578
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Liftback (katalog 2011)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Combi (katalog 2011)",
+              "unconfirmed": []
+            }
+          ]
         }
       },
       {
@@ -31505,12 +32486,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1814,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -32964,6 +33940,179 @@
         ],
         "generationFactCoverage": {
           "drivetrains": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "Liftback po faceliftu (2017)",
+            "dimensionsMm": {
+              "length": 4670,
+              "width": 1814,
+              "height": 1461,
+              "wheelbase": 2686
+            },
+            "trunkL": 590,
+            "noteCs": "Běžný liftback po faceliftu, přední pohon, technický list 7. 3. 2017. Nikoli RS, Scout, G-TEC ani 4×4; zadní opěradla vzpřímená.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "Combi po faceliftu (2017)",
+            "dimensionsMm": {
+              "length": 4667,
+              "width": 1814,
+              "height": 1465,
+              "wheelbase": 2686
+            },
+            "trunkL": 610,
+            "noteCs": "Běžné Combi po faceliftu, přední pohon, technický list 7. 3. 2017. Nikoli RS, Scout, G-TEC ani 4×4; zadní opěradla vzpřímená.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4670,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.38, ŠKODA OCTAVIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1814,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.38, ŠKODA OCTAVIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1461,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.38, ŠKODA OCTAVIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2686,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.38, ŠKODA OCTAVIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 590,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.38, ŠKODA OCTAVIA Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4667,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.60, ŠKODA OCTAVIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1814,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.60, ŠKODA OCTAVIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1465,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.60, ŠKODA OCTAVIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2686,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.60, ŠKODA OCTAVIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 610,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.60, ŠKODA OCTAVIA COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2017)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1814,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "drivetrains": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Liftback po faceliftu (2017)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Combi po faceliftu (2017)",
+              "unconfirmed": []
+            }
+          ]
         }
       },
       {
@@ -33307,12 +34456,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": 4689,
-          "width": 1829,
-          "height": 1470,
-          "wheelbase": 2686
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "Europe",
           "modelYear": 2025,
@@ -34740,7 +35884,178 @@
               "https://www.skoda-auto.cz/novinky/novinky-detail/2024-07-18-modernizovana-skoda-octavia-ma-kompletni-cesky-cenik-na-trh-vstupuje-sportovni-varianta-rs"
             ]
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "Liftback po faceliftu (2024)",
+            "dimensionsMm": {
+              "length": 4698,
+              "width": 1829,
+              "height": 1470,
+              "wheelbase": 2686
+            },
+            "trunkL": 600,
+            "noteCs": "Technický list 05/2024 pro Essence, Selection a Sportline. Šířka bez zrcátek, výška při pohotovostní hmotnosti, základní kufr se vzpřímenými opěradly; nikoli RS, iV či G-TEC.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "Combi po faceliftu (2024)",
+            "dimensionsMm": {
+              "length": 4698,
+              "width": 1829,
+              "height": 1468,
+              "wheelbase": 2686
+            },
+            "trunkL": 640,
+            "noteCs": "Technický list 05/2024 pro Essence, Selection a Sportline. Šířka bez zrcátek, výška při pohotovostní hmotnosti, základní kufr se vzpřímenými opěradly; nikoli RS, iV či G-TEC.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4698,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.2, Octavia petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1829,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.2, Octavia petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1470,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.2, Octavia petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2686,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.2, Octavia petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 600,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.2, Octavia petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4698,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.11, Octavia Combi petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1829,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.11, Octavia Combi petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1468,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.11, Octavia Combi petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2686,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.11, Octavia Combi petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2024)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 640,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/05/Octavia_technical_data_EN_842ba18d.pdf"
+            ],
+            "anchor": "PDF p.11, Octavia Combi petrol engines; Essence, Selection and Sportline reference",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2024)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4689,
+            "width": 1829,
+            "height": 1470,
+            "wheelbase": 2686
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Liftback po faceliftu (2024)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Combi po faceliftu (2024)",
+              "unconfirmed": []
+            }
+          ]
+        }
       }
     ],
     "sources": [
@@ -39090,12 +40405,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": 1706,
-          "height": null,
-          "wheelbase": 2602
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -39131,7 +40441,8 @@
           "https://commons.wikimedia.org/wiki/File:2014_Skoda_Rapid_SE_Connect_TSi_1.2_Front.jpg",
           "https://commons.wikimedia.org/wiki/File:2013_Skoda_Rapid_S_TSi.jpg",
           "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf",
-          "https://en.wikipedia.org/wiki/Škoda_Rapid_(India)"
+          "https://en.wikipedia.org/wiki/Škoda_Rapid_(India)",
+          "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
         ],
         "trims": [
           {
@@ -39743,7 +41054,178 @@
               ]
             }
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "Liftback (2017)",
+            "dimensionsMm": {
+              "length": 4483,
+              "width": 1706,
+              "height": 1461,
+              "wheelbase": 2602
+            },
+            "trunkL": 550,
+            "noteCs": "Pětidveřový liftback, technický list 7. 3. 2017. Šířka bez zrcátek, výška při pohotovostní hmotnosti, zadní opěradla vzpřímená.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          },
+          {
+            "bodyType": "hatchback",
+            "label": "Spaceback (2017)",
+            "dimensionsMm": {
+              "length": 4304,
+              "width": 1706,
+              "height": 1459,
+              "wheelbase": 2602
+            },
+            "trunkL": 415,
+            "noteCs": "Kratší Spaceback, technický list 7. 3. 2017. Šířka bez zrcátek, výška při pohotovostní hmotnosti, zadní opěradla vzpřímená. Stejný klíč karoserie neznamená stejné rozměry.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4483,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.87, ŠKODA RAPID Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1706,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.87, ŠKODA RAPID Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1461,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.87, ŠKODA RAPID Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2602,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.87, ŠKODA RAPID Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (2017)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 550,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.87, ŠKODA RAPID Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4304,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.93, ŠKODA RAPID SPACEBACK Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Spaceback (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1706,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.93, ŠKODA RAPID SPACEBACK Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Spaceback (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1459,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.93, ŠKODA RAPID SPACEBACK Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Spaceback (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2602,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.93, ŠKODA RAPID SPACEBACK Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Spaceback (2017)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 415,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "anchor": "PDF p.93, ŠKODA RAPID SPACEBACK Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Spaceback (2017)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": 1706,
+            "height": null,
+            "wheelbase": 2602
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Liftback (2017)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Spaceback (2017)",
+              "unconfirmed": []
+            }
+          ]
+        }
       }
     ],
     "sources": [
@@ -39752,7 +41234,8 @@
       "https://commons.wikimedia.org/wiki/File:2014_Skoda_Rapid_SE_Connect_TSi_1.2_Front.jpg",
       "https://commons.wikimedia.org/wiki/File:2013_Skoda_Rapid_S_TSi.jpg",
       "https://cdn.skoda-storyboard.com/2016/05/RAPID-en.pdf",
-      "https://en.wikipedia.org/wiki/Škoda_Rapid_(India)"
+      "https://en.wikipedia.org/wiki/Škoda_Rapid_(India)",
+      "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
     ],
     "needsReview": [
       {
@@ -41736,12 +43219,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": 4205,
-          "width": 1684,
-          "height": 1607,
-          "wheelbase": 2617
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -41775,7 +43253,8 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Roomster_front_20070918.jpg",
           "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542",
           "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf",
-          "https://en.wikipedia.org/wiki/%C5%A0koda_Roomster"
+          "https://en.wikipedia.org/wiki/%C5%A0koda_Roomster",
+          "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
         ],
         "trims": [
           {
@@ -42387,7 +43866,172 @@
               ]
             }
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "mpv",
+            "label": "po faceliftu, sedadla v R-bodě (2011)",
+            "dimensionsMm": {
+              "length": 4214,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": 2621
+            },
+            "trunkL": 509,
+            "noteCs": "Běžný osobní Roomster, katalog 05/2011, nikoli Scout. Kufr bez rezervního kola, sedadlo v základním R-bodě, opěradlo 23,5°, do výše zadního plata; posuv sedadel jinak mění objem na 480–560 l.",
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ]
+          },
+          {
+            "bodyType": "dodavka",
+            "label": "Praktik po faceliftu (2011)",
+            "dimensionsMm": {
+              "length": 4213,
+              "width": 1684,
+              "height": 1607,
+              "wheelbase": 2620
+            },
+            "trunkL": null,
+            "noteCs": "Dvoumístný Praktik po faceliftu podle českého katalogu 05/2011. Šířka bez zrcátek; ložný objem se nepřevádí na osobní kufr. Délka a rozvor jsou ověřeny pro Praktik, nikoli převzaty z osobního Roomsteru.",
+            "sources": [
+              "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4214,
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.15, Technické údaje, dimension drawing and luggage footnote****",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu, sedadla v R-bodě (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1684,
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.15, Technické údaje, dimension drawing and luggage footnote****",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu, sedadla v R-bodě (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1607,
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.15, Technické údaje, dimension drawing and luggage footnote****",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu, sedadla v R-bodě (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2621,
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.15, Technické údaje, dimension drawing and luggage footnote****",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu, sedadla v R-bodě (2011)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 509,
+            "sources": [
+              "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.15, Technické údaje, dimension drawing and luggage footnote****",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "po faceliftu, sedadla v R-bodě (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4213,
+            "sources": [
+              "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.4, Czech factory brochure05/2011, Praktik exterior dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Praktik po faceliftu (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1684,
+            "sources": [
+              "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.4, Czech factory brochure05/2011, Praktik exterior dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Praktik po faceliftu (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1607,
+            "sources": [
+              "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.4, Czech factory brochure05/2011, Praktik exterior dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Praktik po faceliftu (2011)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2620,
+            "sources": [
+              "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
+            ],
+            "anchor": "PDF p.4, Czech factory brochure05/2011, Praktik exterior dimension drawing",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Praktik po faceliftu (2011)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4205,
+            "width": 1684,
+            "height": 1607,
+            "wheelbase": 2617
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "po faceliftu, sedadla v R-bodě (2011)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Praktik po faceliftu (2011)",
+              "unconfirmed": [
+                {
+                  "field": "trunkL",
+                  "reason": "Two-seat commercial cargo compartment; passenger trunk not applicable."
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "sources": [
@@ -42395,7 +44039,8 @@
       "https://www.wikidata.org/wiki/Q392071",
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Roomster_front_20070918.jpg",
       "https://www.skodaclub.bg/forum/applications/core/interface/file/attachment.php?id=62542",
-      "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf"
+      "https://skodaroomster.eu/pdf/roomster-katalog-05-2011.pdf",
+      "https://skodaroomster.eu/pdf/praktik/praktik-katalog-05-2011.pdf"
     ],
     "needsReview": [
       {
@@ -45301,12 +46946,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": 4838,
-          "width": 1817,
-          "height": 1462,
-          "wheelbase": 2761
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -45449,7 +47089,178 @@
               ]
             }
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "sedan",
+            "label": "Twindoor po faceliftu (2013)",
+            "dimensionsMm": {
+              "length": 4833,
+              "width": 1817,
+              "height": 1462,
+              "wheelbase": 2761
+            },
+            "trunkL": 595,
+            "noteCs": "Twindoor je v této kartě veden pod klíčem sedan. Běžný podvozek po faceliftu 2013, nikoli GreenLine; kufr bez rezervního kola, zadní opěradla vzpřímená.",
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "Combi po faceliftu (2013)",
+            "dimensionsMm": {
+              "length": 4833,
+              "width": 1817,
+              "height": 1511,
+              "wheelbase": 2761
+            },
+            "trunkL": 633,
+            "noteCs": "Běžné Combi po faceliftu 2013, nikoli GreenLine; kufr bez rezervního kola, zadní opěradla vzpřímená. Rezervní kolo podle katalogu zmenšuje objem o 30 l.",
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4833,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.38–43, Technické údaje – Superb, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Twindoor po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1817,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.38–43, Technické údaje – Superb, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Twindoor po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1462,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.38–43, Technické údaje – Superb, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Twindoor po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2761,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.38–43, Technické údaje – Superb, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Twindoor po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 595,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.38–43, Technické údaje – Superb, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Twindoor po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4833,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.44–47, Technické údaje – Superb Combi, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1817,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.44–47, Technické údaje – Superb Combi, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1511,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.44–47, Technické údaje – Superb Combi, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2761,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.44–47, Technické údaje – Superb Combi, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2013)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 633,
+            "sources": [
+              "https://static.cream.sk/araver.sk/webroots/www/content/mediagallery/araver_system/file/article/file/11172.pdf"
+            ],
+            "anchor": "PDF pp.44–47, Technické údaje – Superb Combi, Vonkajší rozměry and luggage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi po faceliftu (2013)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4838,
+            "width": 1817,
+            "height": 1462,
+            "wheelbase": 2761
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Twindoor po faceliftu (2013)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Combi po faceliftu (2013)",
+              "unconfirmed": []
+            }
+          ]
+        }
       },
       {
         "code": "III (3V)",
@@ -45807,12 +47618,7 @@
             "gears": 7
           }
         ],
-        "dimensionsMm": {
-          "length": 4861,
-          "width": 1864,
-          "height": 1468,
-          "wheelbase": 2841
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -45845,7 +47651,8 @@
           "https://commons.wikimedia.org/wiki/File:Skoda_Superb_162TSI,_2018_front.jpg",
           "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf",
           "https://www.skoda-storyboard.com/en/press-kits/skoda-superb-press-kit/design-even-more-exquisite-look-and-a-new-adventurer/",
-          "https://www.skoda-storyboard.com/en/models/superb/king-of-space-and-long-distance-travel-skoda-superb-celebrates-25-years/"
+          "https://www.skoda-storyboard.com/en/models/superb/king-of-space-and-long-distance-travel-skoda-superb-celebrates-25-years/",
+          "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
         ],
         "trims": [
           {
@@ -46736,7 +48543,178 @@
               ]
             }
           }
-        ]
+        ],
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "Liftback před faceliftem (2016)",
+            "dimensionsMm": {
+              "length": 4861,
+              "width": 1864,
+              "height": 1468,
+              "wheelbase": 2841
+            },
+            "trunkL": 625,
+            "noteCs": "Běžný liftback podle továrního technického listu 2016, nikoli SportLine nebo iV. Výška při pohotovostní hmotnosti, šířka bez zrcátek; zadní opěradla vzpřímená.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "Combi před faceliftem (2016)",
+            "dimensionsMm": {
+              "length": 4856,
+              "width": 1864,
+              "height": 1477,
+              "wheelbase": 2841
+            },
+            "trunkL": 660,
+            "noteCs": "Běžné Combi podle továrního technického listu 2016, nikoli SportLine nebo iV. Výška při pohotovostní hmotnosti, šířka bez zrcátek; zadní opěradla vzpřímená.",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ]
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 4861,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.width",
+            "value": 1864,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1468,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2841,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "trunkL",
+            "value": 625,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Liftback před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4856,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.width",
+            "value": 1864,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1477,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2841,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi před faceliftem (2016)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 660,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
+            ],
+            "anchor": "PDF p.2, ŠKODA SUPERB COMBI Diesel engines, Outside dimensions and Storage capacity",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "Combi před faceliftem (2016)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": 4861,
+            "width": 1864,
+            "height": 1468,
+            "wheelbase": 2841
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": null
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "Liftback před faceliftem (2016)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 1,
+              "label": "Combi před faceliftem (2016)",
+              "unconfirmed": []
+            }
+          ]
+        }
       },
       {
         "code": "IV (3Y)",
@@ -47569,7 +49547,8 @@
       "https://www.skoda-storyboard.com/de/modelle-de/superb-de/rueckspiegel-20-jahre-skoda-superb/",
       "https://www.skoda-storyboard.com/en/models/superb/king-of-space-and-long-distance-travel-skoda-superb-celebrates-25-years/",
       "https://www.skoda-storyboard.com/en/skoda-world/a-beautiful-estate-and-a-unique-sedan-superb-ii-designers-look-back/",
-      "https://www.skoda-storyboard.com/en/press-kits/skoda-superb-press-kit/design-even-more-exquisite-look-and-a-new-adventurer/"
+      "https://www.skoda-storyboard.com/en/press-kits/skoda-superb-press-kit/design-even-more-exquisite-look-and-a-new-adventurer/",
+      "https://cdn.skoda-storyboard.com/2016/05/TD-SUPERB-COMBI-en.pdf"
     ],
     "needsReview": [
       {

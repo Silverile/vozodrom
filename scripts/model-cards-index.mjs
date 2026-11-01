@@ -10,6 +10,7 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 const sizesFile = new URL("../src/data/photo-sizes.json", import.meta.url);
 const sizes = existsSync(sizesFile) ? JSON.parse(readFileSync(sizesFile, "utf8")) : {};
 const aspectOf = (size) => (size ? Math.round((size[0] / size[1]) * 100) / 100 : null);
+const bodyKeys = new Set(["hatchback", "liftback", "sedan", "kombi", "suv", "mpv", "dodavka", "kupe", "kabriolet", "pickup"]);
 const photoOf = (p) =>
   p
     ? {
@@ -54,6 +55,16 @@ for (const [dir, name] of dirs.flatMap((dir) => (existsSync(dir) ? readdirSync(d
         transmissions: g.transmissions ?? [],
         dimensionsMm: g.dimensionsMm ?? null,
         trunkL: g.trunkL ?? null,
+        // Older raw cards use this name for nested generation records (bodyTypes[], no bodyType).
+        // Only the explicit CardBodyVariant shape is suitable for the public size consumer.
+        ...(g.bodyVariants?.some((v) => bodyKeys.has(v.bodyType)) ? { bodyVariants: g.bodyVariants.filter((v) => bodyKeys.has(v.bodyType)).map((v) => ({
+          bodyType: v.bodyType,
+          ...(v.label != null ? { label: v.label } : {}),
+          dimensionsMm: v.dimensionsMm ?? null,
+          trunkL: v.trunkL ?? null,
+          ...(v.noteCs != null ? { noteCs: v.noteCs } : {}),
+          ...(v.sources?.length ? { sources: v.sources } : {}),
+        })) } : {}),
         markets: g.markets ?? [],
         trims: g.trims ?? [],
         ...(g.equipmentLines?.length ? { equipmentLines: g.equipmentLines } : {}),

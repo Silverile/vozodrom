@@ -4144,12 +4144,7 @@
             "gears": 5
           }
         ],
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
+        "dimensionsMm": null,
         "specificationScope": {
           "market": "source-production",
           "modelYear": null,
@@ -4243,7 +4238,9 @@
           "https://en.wikipedia.org/w/index.php?title=Peugeot_206&oldid=1378201727",
           "https://en.wikipedia.org/wiki/Peugeot_206",
           "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf",
-          "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf"
+          "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf",
+          "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf",
+          "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
         ],
         "fieldSources": {
           "facelift": [
@@ -4389,6 +4386,338 @@
         "generationFactCoverage": {
           "transmissions": "documented-variants-only",
           "drivetrains": "documented-variants-only"
+        },
+        "bodyVariants": [
+          {
+            "bodyType": "hatchback",
+            "label": "3/5dveřový (katalog 2006)",
+            "dimensionsMm": {
+              "length": 3822,
+              "width": null,
+              "height": 1433,
+              "wheelbase": 2445
+            },
+            "trunkL": null,
+            "noteCs": "Referenční hatchback podle britského katalogu 04/2006. Šířka je uvedena jen jako rozpětí 1652–1673 mm podle verze; jednotlivá hodnota a kufr nebyly potvrzeny.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "kombi",
+            "label": "SW (katalog 2006)",
+            "dimensionsMm": {
+              "length": 4028,
+              "width": null,
+              "height": 1460,
+              "wheelbase": 2442
+            },
+            "trunkL": 313,
+            "noteCs": "Britský katalog 04/2006, běžné SW. Šířka je uvedena jen jako rozpětí 1652–1673 mm podle verze; základní kufr je továrních 313 dm³, tedy 313 l.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "kabriolet",
+            "label": "CC, střecha zavřená (2006)",
+            "dimensionsMm": {
+              "length": 3835,
+              "width": 1673,
+              "height": 1373,
+              "wheelbase": 2442
+            },
+            "trunkL": 410,
+            "noteCs": "206 CC podle britského katalogu 2006. Šířka bez zrcátek; zavřená střecha, objem kufru podle továrního údaje VDA.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "kabriolet",
+            "label": "CC, střecha složená (2006)",
+            "dimensionsMm": {
+              "length": 3835,
+              "width": 1673,
+              "height": null,
+              "wheelbase": 2442
+            },
+            "trunkL": 175,
+            "noteCs": "206 CC s otevřenou střechou podle britského katalogu 2006. Šířka bez zrcátek; objem kufru podle továrního údaje VDA. Výška otevřeného provedení není zvlášť potvrzena.",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ]
+          },
+          {
+            "bodyType": "sedan",
+            "label": "sedan",
+            "dimensionsMm": null,
+            "trunkL": null,
+            "noteCs": "Sedan není obsažen v použitých evropských katalozích 206/SW a 206 CC. Rozměry ani kufr se nepřebírají z hatchbacku."
+          }
+        ],
+        "bodyVariantEvidence": [
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.length",
+            "value": 3822,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29, Colours and dimensions,206 block",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5dveřový (katalog 2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.height",
+            "value": 1433,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29, Colours and dimensions,206 block",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5dveřový (katalog 2006)"
+          },
+          {
+            "variantIndex": 0,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2445,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29, Colours and dimensions,206 block",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "3/5dveřový (katalog 2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.length",
+            "value": 4028,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29,206SW dimensions; PDF p.7 / printed p.13, SW basic boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "SW (katalog 2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.height",
+            "value": 1460,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29,206SW dimensions; PDF p.7 / printed p.13, SW basic boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "SW (katalog 2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2442,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29,206SW dimensions; PDF p.7 / printed p.13, SW basic boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "SW (katalog 2006)"
+          },
+          {
+            "variantIndex": 1,
+            "field": "trunkL",
+            "value": 313,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf"
+            ],
+            "anchor": "PDF p.15 / printed pp.28–29,206SW dimensions; PDF p.7 / printed p.13, SW basic boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "SW (katalog 2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.length",
+            "value": 3835,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; coupé configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha zavřená (2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.width",
+            "value": 1673,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; coupé configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha zavřená (2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.height",
+            "value": 1373,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; coupé configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha zavřená (2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2442,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; coupé configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha zavřená (2006)"
+          },
+          {
+            "variantIndex": 2,
+            "field": "trunkL",
+            "value": 410,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; coupé configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha zavřená (2006)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.length",
+            "value": 3835,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; cabriolet configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha složená (2006)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.width",
+            "value": 1673,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; cabriolet configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha složená (2006)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "dimensionsMm.wheelbase",
+            "value": 2442,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; cabriolet configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha složená (2006)"
+          },
+          {
+            "variantIndex": 3,
+            "field": "trunkL",
+            "value": 175,
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
+            ],
+            "anchor": "PDF p.11 / printed pp.20–21, Colours and dimensions; cabriolet configuration boot volume",
+            "method": "Reviewed original manufacturer brochure/manual/press release; named body/layout reference",
+            "scope": "CC, střecha složená (2006)"
+          }
+        ],
+        "bodyVariantMigration": {
+          "previousDimensionsMm": {
+            "length": null,
+            "width": null,
+            "height": null,
+            "wheelbase": null
+          },
+          "previousTrunkL": null,
+          "reasonCs": "Rozměry a kufr jsou nyní vedeny u výslovně určených karoserií a provedení. Původní nespecifikované hodnoty se uchovávají zde pro audit; nejsou automaticky přeneseny do jiné verze.",
+          "previousGenerationFactCoverage": {
+            "transmissions": "documented-variants-only",
+            "drivetrains": "documented-variants-only"
+          }
+        },
+        "bodyVariantCoverage": {
+          "scope": "documented-reference-variants-only",
+          "notExhaustive": true,
+          "variants": [
+            {
+              "variantIndex": 0,
+              "label": "3/5dveřový (katalog 2006)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Factory gives1652–1673mm model-dependent range; no model-to-width mapping confirmed."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Not established in reviewed factory brochure."
+                }
+              ]
+            },
+            {
+              "variantIndex": 1,
+              "label": "SW (katalog 2006)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Factory gives1652–1673mm model-dependent range; no model-to-width mapping confirmed."
+                }
+              ]
+            },
+            {
+              "variantIndex": 2,
+              "label": "CC, střecha zavřená (2006)",
+              "unconfirmed": []
+            },
+            {
+              "variantIndex": 3,
+              "label": "CC, střecha složená (2006)",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Closed-roof overall height not transferred to the roof-retracted configuration."
+                }
+              ]
+            },
+            {
+              "variantIndex": 4,
+              "label": "sedan",
+              "unconfirmed": [
+                {
+                  "field": "dimensionsMm.length",
+                  "reason": "Regional sedan not covered by reviewed European factory brochures."
+                },
+                {
+                  "field": "dimensionsMm.width",
+                  "reason": "Regional sedan not covered by reviewed European factory brochures."
+                },
+                {
+                  "field": "dimensionsMm.height",
+                  "reason": "Regional sedan not covered by reviewed European factory brochures."
+                },
+                {
+                  "field": "dimensionsMm.wheelbase",
+                  "reason": "Regional sedan not covered by reviewed European factory brochures."
+                },
+                {
+                  "field": "trunkL",
+                  "reason": "Regional sedan not covered by reviewed European factory brochures."
+                }
+              ]
+            }
+          ]
         }
       }
     ],
@@ -4399,7 +4728,9 @@
       "https://en.wikipedia.org/w/index.php?title=Peugeot_206&oldid=1378201727",
       "https://en.wikipedia.org/wiki/Peugeot_206",
       "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf",
-      "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf"
+      "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf",
+      "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-UK.pdf",
+      "https://xr793.com/wp-content/uploads/2022/12/2006-Peugeot-206-CC-UK.pdf"
     ],
     "needsReview": [
       {
