@@ -1,4 +1,5 @@
 import cardIndex from "@/data/model-cards-index.json";
+import { applyEdits, builtEditsOf } from "./catalog-edits";
 
 // Model cards: generations, engines, trims and Commons photos per model line
 // (src/data/catalog/model-cards/ via scripts/model-cards-index.mjs). Unknown values are null.
@@ -177,8 +178,10 @@ export interface ModelCard {
 
 const CARDS = cardIndex as unknown as Record<string, Record<string, ModelCard>>;
 
-export function cardOf(makeSlug: string, lineSlug: string): ModelCard | undefined {
-  return CARDS[makeSlug]?.[lineSlug];
+/** The model card with admins' text corrections applied (lib/catalog-edits); edits: false gives the data as built. */
+export function cardOf(makeSlug: string, lineSlug: string, { edits = true } = {}): ModelCard | undefined {
+  const card = CARDS[makeSlug]?.[lineSlug];
+  return card && (edits ? applyEdits(card, builtEditsOf(makeSlug, lineSlug)) : card);
 }
 
 // Commons serves thumbnails only in standard widths; others answer 400.

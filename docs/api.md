@@ -46,6 +46,33 @@ Všechny cesty končí lomítkem (web má `trailingSlash`); bez něj Next přesm
 | `GET /api/zpravy/token/` | přihlášený | token pro WebSocket (60 s) + počet nepřečtených |
 | `GET /ws/zpravy?token=` (WebSocket) | držitel tokenu | události `{ type: "message", conversationId, message }` a `{ type: "unread", total }`; klient posílá `ping` |
 
+## Garáž a deníky
+
+| Metoda a cesta | Kdo | Co |
+|---|---|---|
+| `POST /api/garaz/` | přihlášený | `{ data: CarData }` → `{ id }`; max. 30 aut |
+| `PATCH /api/garaz/[id]/` | majitel, moderátor | `{ data, former }` |
+| `DELETE /api/garaz/[id]/` | majitel, moderátor | smaže auto i s deníkem a fotkami |
+| `POST`/`DELETE`/`PATCH /api/garaz/[id]/fotky/` | majitel | fotka (tělo, `?w=&h=`), `?klic=`, `{ order }`; max. 20 |
+| `POST /api/garaz/[id]/zapisy/` | majitel | `{ title, body, category, costCzk, mileageKm, happenedOn }` → `{ id }`; max. 20 za den |
+| `PATCH`/`DELETE /api/zapisy/[id]/` | autor, moderátor | úprava / smazání zápisu |
+| `POST`/`DELETE`/`PATCH /api/zapisy/[id]/fotky/` | autor | fotky zápisu jako u auta |
+| `GET /api/deniky/?znacka=&model=&tema=&pred=&pocet=` | kdokoli | nejnovější veřejné zápisy (pro blok v katalogu); cache 60 s |
+| `POST /api/deniky/reakce/` | přihlášený | `{ what: car-like \| follow \| entry-like, id, on }` → `{ count }`; ne u vlastního obsahu |
+| `POST /api/deniky/komentare/` | přihlášený | `{ entryId, body }` ≤ 2000 znaků; max. 30 za hodinu; autor zápisu dostane oznámení |
+| `DELETE /api/deniky/komentare/?id=` | autor, moderátor | smaže komentář |
+| `POST /api/deniky/hlaseni/` | přihlášený | `{ kind: car \| entry \| comment, id, reason }`; max. 10 za hodinu |
+| `POST /api/admin/komunita/` | moderátor | `{ kind, id, action: hide \| restore \| dismiss, reason }` |
+
+## Katalog
+
+| Metoda a cesta | Kdo | Co |
+|---|---|---|
+| `GET /api/katalog/[make]/[line]/` | kdokoli | generace pro formuláře (karoserie, motory, převodovky) |
+| `GET /api/katalog/opravy/` | kdokoli | aktuální opravy textů katalogu (čte je build) |
+| `POST /api/admin/katalog/` | admin | `{ makeSlug, lineSlug, genIndex, field, value }` uloží opravu |
+| `POST /api/admin/katalog/publikovat/` | admin | spustí nasazení (GitHub workflow) |
+
 ## Interní
 
 | Metoda a cesta | Kdo | Co |

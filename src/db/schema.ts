@@ -1,4 +1,5 @@
-import { boolean, index, jsonb, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
+import { boolean, index, integer, jsonb, pgTable, primaryKey, text, timestamp } from "drizzle-orm/pg-core";
+import type { CarData } from "@/lib/garage";
 import type { Draft } from "@/lib/listing-draft";
 import type { Messenger } from "@/lib/listing-status";
 
@@ -198,4 +199,141 @@ export const message = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index("message_conversation_idx").on(t.conversationId, t.createdAt)],
+);
+
+// ---------------------------------------------------------------------------------------------
+// Garage and logbooks: owners keep a page for each of their cars and write what they repaired,
+// changed or spent. Public at once; moderators hide what is reported.
+
+/** A car in its owner's garage. The vehicle fields stay one JSON object, checked by cleanCarData. */
+export const garageCar = pgTable(
+  "garage_car",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    /** copies of data.brand and data.model, for the logbook feed's filters */
+    makeSlug: text("make_slug").notNull(),
+    lineSlug: text("line_slug").notNull(),
+    data: jsonb("data").$type<CarData>().notNull(),
+    photos: jsonb("photos").$type<ListingPhoto[]>().notNull().default([]),
+    /** a car the owner had before; it keeps its page and logbook */
+    former: boolean("former").notNull().default(false),
+    /** hidden by a moderator; the owner still sees it, with the reason */
+    hiddenReason: text("hidden_reason"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("garage_car_user_idx").on(t.userId), index("garage_car_line_idx").on(t.makeSlug, t.lineSlug)],
+);
+
+/** One logbook entry about a car: a repair, a service, a change, a trip. */
+export const logEntry = pgTable(
+  "log_entry",
+  {
+    id: text("id").primaryKey(),
+    carId: text("car_id").notNull().references(() => garageCar.id, { onDelete: "cascade" }),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    title: text("title").notNull(),
+    body: text("body").notNull().default(""),
+    /** ENTRY_CATEGORIES key */
+    category: text("category").notNull(),
+    /** what it cost in CZK, as the owner states it */
+    costCzk: integer("cost_czk"),
+    mileageKm: integer("mileage_km"),
+    /** the day it happened, YYYY-MM-DD */
+    happenedOn: text("happened_on").notNull(),
+    photos: jsonb("photos").$type<ListingPhoto[]>().notNull().default([]),
+    hiddenReason: text("hidden_reason"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("log_entry_car_idx").on(t.carId, t.happenedOn), index("log_entry_created_idx").on(t.createdAt)],
+);
+
+export const entryComment = pgTable(
+  "entry_comment",
+  {
+    id: text("id").primaryKey(),
+    entryId: text("entry_id").notNull().references(() => logEntry.id, { onDelete: "cascade" }),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    body: text("body").notNull(),
+    hiddenReason: text("hidden_reason"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("entry_comment_entry_idx").on(t.entryId, t.createdAt)],
+);
+
+/** Likes of logbook entries. */
+export const entryLike = pgTable(
+  "entry_like",
+  {
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    entryId: text("entry_id").notNull().references(() => logEntry.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.entryId] }), index("entry_like_entry_idx").on(t.entryId)],
+);
+
+/** Likes of cars ("líbí se"). */
+export const carLike = pgTable(
+  "car_like",
+  {
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    carId: text("car_id").notNull().references(() => garageCar.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.carId] }), index("car_like_car_idx").on(t.carId)],
+);
+
+/** Followers of a car get a notification about each new logbook entry. */
+export const carFollow = pgTable(
+  "car_follow",
+  {
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    carId: text("car_id").notNull().references(() => garageCar.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.carId] }), index("car_follow_car_idx").on(t.carId)],
+);
+
+export const COMMUNITY_TARGETS = ["car", "entry", "comment"] as const;
+export type CommunityTarget = (typeof COMMUNITY_TARGETS)[number];
+
+/** Reports of garage cars, logbook entries and comments by signed-in users; moderators hide or dismiss. */
+export const communityReport = pgTable(
+  "community_report",
+  {
+    id: text("id").primaryKey(),
+    kind: text("kind").$type<CommunityTarget>().notNull(),
+    targetId: text("target_id").notNull(),
+    userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+    reason: text("reason").notNull(),
+    /** open | hidden (the content was hidden) | dismissed */
+    status: text("status").$type<"open" | "hidden" | "dismissed">().notNull().default("open"),
+    decidedBy: text("decided_by").references(() => user.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    decidedAt: timestamp("decided_at", { withTimezone: true }),
+  },
+  (t) => [index("community_report_status_idx").on(t.status, t.createdAt), index("community_report_target_idx").on(t.kind, t.targetId)],
+);
+
+// ---------------------------------------------------------------------------------------------
+// Catalogue edits by admins. The catalogue is built from files into static pages; an edit is
+// stored here at once and reaches the pages with the next deploy (the build fetches them).
+
+export const catalogEdit = pgTable(
+  "catalog_edit",
+  {
+    id: text("id").primaryKey(),
+    makeSlug: text("make_slug").notNull(),
+    lineSlug: text("line_slug").notNull(),
+    /** index of the generation in the model card; null for the model line itself */
+    genIndex: integer("gen_index"),
+    /** CATALOG_EDIT_FIELDS key */
+    field: text("field").notNull(),
+    value: text("value").notNull(),
+    authorId: text("author_id").references(() => user.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("catalog_edit_line_idx").on(t.makeSlug, t.lineSlug, t.createdAt)],
 );

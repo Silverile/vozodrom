@@ -2,7 +2,7 @@
 // reviews, forums and news. Each section shows its own sub-brand next to the logo
 // ("vozodrom AUTO", "vozodrom DÍLY", "vozodrom FÓRUM").
 
-export type SectionKey = "auto" | "technika" | "moto" | "dily" | "pneu" | "recenze" | "forum" | "novinky";
+export type SectionKey = "auto" | "technika" | "moto" | "dily" | "pneu" | "recenze" | "deniky" | "forum" | "novinky";
 
 export interface Section {
   key: SectionKey;
@@ -24,6 +24,7 @@ export const SECTIONS: Section[] = [
   { key: "dily", group: "market", label: "Díly", brand: "DÍLY", href: "/dily/", paths: ["/dily"] },
   { key: "pneu", group: "market", label: "Pneumatiky", brand: "PNEU", href: "/pneumatiky/", paths: ["/pneumatiky"] },
   { key: "recenze", group: "community", label: "Recenze majitelů", brand: "RECENZE", href: "/recenze/", paths: ["/recenze"] },
+  { key: "deniky", group: "community", label: "Deníky aut", brand: "DENÍKY", href: "/deniky/", paths: ["/deniky", "/garaz"] },
   { key: "forum", group: "community", label: "Fórum", brand: "FÓRUM", href: "/forum/", paths: ["/forum"] },
   { key: "novinky", group: "community", label: "Novinky a rady", brand: "NOVINKY", href: "/novinky/", paths: ["/novinky"] },
 ];

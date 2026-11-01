@@ -6,6 +6,7 @@ import { CatalogImage } from "@/components/CatalogImage";
 import { ModelListingCount } from "@/components/ModelListingCount";
 import { OpenOnHash } from "@/components/OpenOnHash";
 import { PartnerOffers } from "@/components/PartnerOffers";
+import { OwnerLogbooks } from "@/components/OwnerLogbooks";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
@@ -622,6 +623,8 @@ export default async function ModelPage({ params }: { params: Params }) {
           </div>
         </>
       )}
+
+      <OwnerLogbooks make={brandSlug} line={modelSlug} name={title} />
 
       <p className="mt-10 text-xs text-[var(--color-muted)] max-w-3xl">
         Technické údaje z Wikipedie, Wikidat a materiálů výrobce (fakta, vlastní texty); roky jsou roky výroby. Neznámé údaje necháváme prázdné.

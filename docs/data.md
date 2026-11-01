@@ -74,6 +74,23 @@ generací řady, generace (povinná, když roku odpovídá víc generací), karo
 převodovka, nájezd (povinný), cena ≥ 1 000 Kč, místo, VIN (nepovinný; když je, 17 znaků bez I/O/Q). Rok mimo
 roky výroby celé řady se odmítne; generace bez let v katalogu rok neblokuje.
 
+**Garáž a deníky** (`src/lib/garage.ts`, `garage-store.ts`):
+
+| Tabulka | Co |
+|---|---|
+| `garage_car` | auto v garáži: `c-…`, `data` = JSON `CarData` (značka, model, generace, přezdívka, roky, motor, VIN a SPZ, příběh), `photos`, `former` (bývalé auto), `make_slug`/`line_slug` pro filtry |
+| `log_entry` | zápis v deníku: `e-…`, auto, nadpis, text, téma (`ENTRY_CATEGORIES`), `cost_czk`, `mileage_km`, `happened_on`, `photos` |
+| `entry_comment` | komentáře k zápisům (`k-…`) |
+| `entry_like`, `car_like`, `car_follow` | „líbí se“ zápisu a autu, sledování auta (sledující dostane zprávu o novém zápisu) |
+| `community_report` | hlášení auta, zápisu nebo komentáře přihlášeným uživatelem; `open` · `hidden` · `dismissed` |
+
+Auta, zápisy a komentáře jsou veřejné hned. Moderátor je skryje s důvodem (`hidden_reason`); autor je dál vidí
+i s důvodem. VIN vidí jen majitel, SPZ jen když ji majitel ukáže. Veřejné stránky ukazují jméno zkráceně („Jana N.“).
+Fotky jsou v R2 pod `garaz/c-…/` a `deniky/e-…/`.
+
+**`catalog_edit`** — opravy textů katalogu od administrátorů (popis modelu, název generace, poznámka k rokům).
+Každé uložení je nový řádek, platí nejnovější; prázdná hodnota = text katalogu. Viz [Katalog](#opravy-katalogu).
+
 ## Migrace
 
 - Změna: upravit `src/db/schema.ts` → `npm run db:generate -- --name popis` → zkontrolovat SQL v `drizzle/`.
@@ -105,3 +122,16 @@ roky výroby celé řady se odmítne; generace bez let v katalogu rok neblokuje.
 
 `src/lib/listings.ts` generuje smyšlené inzeráty (VIN `TESTVZD…`), `src/data/feeds/` obsahuje ukázkový feed
 dealera. Odhad ceny vůči trhu (`src/lib/market.ts`) zatím počítá z těchto testovacích inzerátů.
+
+## Opravy katalogu
+
+Stránky katalogu jsou statické, opravy se do nich dostanou při sestavení:
+
+1. Administrátor uloží opravu v `/admin/obsah/` (tabulka `catalog_edit`).
+2. Před buildem `scripts/fetch-catalog-edits.mjs` (npm `prebuild`, jen na CI) stáhne aktuální opravy z
+   `https://vozodrom.cz/api/katalog/opravy/` do `src/data/catalog-edits.json`; když web neodpoví, build pokračuje
+   s verzí v repozitáři.
+3. `cardOf` v `src/lib/modelCards.ts` je aplikuje na karty (`src/lib/catalog-edits.ts`).
+4. „Publikovat na web“ spustí workflow nasazení přes GitHub API (secret `GITHUB_DEPLOY_TOKEN`, viz provoz).
+   Opravy jdou na web i s každým jiným nasazením.
+

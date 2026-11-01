@@ -11,7 +11,7 @@ const NAV = [
   { href: "/admin/uzivatele/", label: "Uživatelé", admin: true },
   { href: "/admin/inzeraty/", label: "Inzeráty", admin: false },
   { href: "/admin/hlaseni/", label: "Hlášení (DSA)", admin: false },
-  { href: "/admin/komunita/", label: "Fórum a recenze", admin: false },
+  { href: "/admin/komunita/", label: "Komunita", admin: false },
   { href: "/admin/obsah/", label: "Katalog a novinky", admin: true },
 ];
 

@@ -5,7 +5,7 @@ import type { ListingPhoto } from "@/db/schema";
 import { photoUrl } from "@/lib/listing-status";
 import { resizePhoto } from "@/lib/photo-resize";
 
-// Photos of a saved listing: upload (resized in the browser, location data removed), order, main
+// Photos of a saved listing (or a garage car, a logbook entry): upload (resized in the browser, location data removed), order, main
 // photo and delete. Every change is saved at once; used by the listing form and the listing's page
 // in the account.
 
@@ -21,13 +21,18 @@ async function call(url: string, method: string, body?: unknown): Promise<string
   return ((await response.json().catch(() => ({}))) as { error?: string }).error ?? "Akce se nepovedla.";
 }
 
-export function PhotoManager({ listingId, photos, editable, onChange }: {
+export function PhotoManager({ listingId, photos, editable, onChange, api, emptyText }: {
   listingId: string;
   photos: ListingPhoto[];
   editable: boolean;
   onChange: (photos: ListingPhoto[]) => void;
+  /** endpoints of other photo owners (garage car, logbook entry); listings use /api/inzeraty/<id>/ */
+  api?: { photos: string; order: string };
+  emptyText?: string;
 }) {
   const base = `/api/inzeraty/${listingId}/`;
+  const photosUrl = api?.photos ?? `${base}fotky/`;
+  const orderUrl = api?.order ?? base;
   const [busy, setBusy] = useState(false);
   const [progress, setProgress] = useState("");
   const [error, setError] = useState("");
@@ -45,7 +50,7 @@ export function PhotoManager({ listingId, photos, editable, onChange }: {
       setProgress(`Nahrávám ${i + 1} / ${chosen.length}…`);
       try {
         const { blob, width, height } = await resizePhoto(file);
-        const response = await fetch(`${base}fotky/?w=${width}&h=${height}`, { method: "POST", headers: { "content-type": blob.type }, body: blob });
+        const response = await fetch(`${photosUrl}?w=${width}&h=${height}`, { method: "POST", headers: { "content-type": blob.type }, body: blob });
         const result = (await response.json().catch(() => ({}))) as ListingPhoto & { error?: string };
         if (!response.ok) throw new Error(result.error ?? "Nahrání se nepovedlo.");
         current = [...current, result];
@@ -65,7 +70,7 @@ export function PhotoManager({ listingId, photos, editable, onChange }: {
     const previous = photos;
     onChange(next);
     setBusy(true);
-    const problem = await call(base, "PATCH", { order: next.map((p) => p.key) });
+    const problem = await call(orderUrl, "PATCH", { order: next.map((p) => p.key) });
     setBusy(false);
     if (problem) {
       onChange(previous);
@@ -83,7 +88,7 @@ export function PhotoManager({ listingId, photos, editable, onChange }: {
   async function remove(key: string) {
     setBusy(true);
     setError("");
-    const problem = await call(`${base}fotky/?klic=${encodeURIComponent(key)}`, "DELETE");
+    const problem = await call(`${photosUrl}?klic=${encodeURIComponent(key)}`, "DELETE");
     setBusy(false);
     if (problem) setError(problem);
     else onChange(photos.filter((x) => x.key !== key));
@@ -111,7 +116,7 @@ export function PhotoManager({ listingId, photos, editable, onChange }: {
         )}
       </div>
       {photos.length === 0 ? (
-        <p className="text-sm text-[var(--color-muted)]">Přidejte alespoň jednu fotku. Fotky před nahráním zmenšíme a odstraníme z nich údaje o poloze.</p>
+        <p className="text-sm text-[var(--color-muted)]">{emptyText ?? "Přidejte alespoň jednu fotku."} Fotky před nahráním zmenšíme a odstraníme z nich údaje o poloze.</p>
       ) : (
         <ul className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {photos.map((p, i) => (

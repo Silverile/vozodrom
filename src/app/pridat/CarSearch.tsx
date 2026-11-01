@@ -103,7 +103,7 @@ function search(query: string): Suggestion[] {
   return out.slice(0, 8);
 }
 
-export function CarSearch({ onPick }: { onPick: (pick: CarPick) => void }) {
+export function CarSearch({ onPick, label = "Jaké auto prodáváte?" }: { onPick: (pick: CarPick) => void; label?: string }) {
   const id = useId();
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -119,7 +119,7 @@ export function CarSearch({ onPick }: { onPick: (pick: CarPick) => void }) {
 
   return (
     <div className="sm:col-span-2 relative scroll-mt-28">
-      <label htmlFor={`${id}-q`} className="font-semibold">Jaké auto prodáváte?</label>
+      <label htmlFor={`${id}-q`} className="font-semibold">{label}</label>
       <input
         id={`${id}-q`}
         className="input mt-1 scroll-mt-28"

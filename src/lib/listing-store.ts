@@ -11,6 +11,7 @@ import { notify, notifyStaff } from "./chat";
 import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
 import { marketEstimate, roughMarketPrice } from "./market";
 import { reviewListing } from "./moderation";
+import { deletePhotos, storePhoto } from "./photo-store";
 import { toListing } from "./user-listings";
 
 // Server side of user listings: who may do what in which status, and the photos in R2.
@@ -26,7 +27,6 @@ import { toListing } from "./user-listings";
 export type ListingRow = typeof listing.$inferSelect;
 
 export const MAX_PHOTOS = 20;
-export const MAX_PHOTO_BYTES = 3 * 1024 * 1024;
 
 export class ListingError extends Error {
   constructor(public status: number, message: string) {
@@ -213,25 +213,11 @@ export async function deleteListing(session: Session, id: string) {
   if (row.photos.length) await env.PHOTOS.delete(row.photos.map((p) => p.key));
 }
 
-/** Detects the real image type from the first bytes; the browser always sends JPEG or WebP. */
-function imageType(bytes: Uint8Array): "image/jpeg" | "image/webp" | null {
-  if (bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return "image/jpeg";
-  const ascii = (from: number, to: number) => String.fromCharCode(...bytes.slice(from, to));
-  if (ascii(0, 4) === "RIFF" && ascii(8, 12) === "WEBP") return "image/webp";
-  return null;
-}
-
 export async function addPhoto(session: Session, id: string, body: ArrayBuffer, width: number, height: number): Promise<ListingPhoto> {
   const row = await listingFor(session, id);
   if (row.status === "withdrawn") throw new ListingError(409, "Ke staženému inzerátu nelze přidávat fotky.");
   if (row.photos.length >= MAX_PHOTOS) throw new ListingError(409, `Nejvýše ${MAX_PHOTOS} fotek.`);
-  if (body.byteLength === 0 || body.byteLength > MAX_PHOTO_BYTES) throw new ListingError(413, "Fotka je příliš velká.");
-  const type = imageType(new Uint8Array(body, 0, Math.min(12, body.byteLength)));
-  if (!type) throw new ListingError(415, "Nahrajte fotku ve formátu JPEG nebo WebP.");
-  if (!(width > 0 && width <= 4096 && height > 0 && height <= 4096)) throw new ListingError(400, "Neplatné rozměry fotky.");
-  const photo: ListingPhoto = { key: `inzeraty/${id}/${generateRandomString(16, "a-z", "0-9")}.${type === "image/webp" ? "webp" : "jpg"}`, width, height };
-  const { env } = getCloudflareContext();
-  await env.PHOTOS.put(photo.key, body, { httpMetadata: { contentType: type, cacheControl: "public, max-age=31536000, immutable" } });
+  const photo = await storePhoto(`inzeraty/${id}`, body, width, height);
   // Appending in SQL keeps parallel uploads from overwriting each other; the count is checked again there.
   const [updated] = await getDb()
     .update(listing)
@@ -239,7 +225,7 @@ export async function addPhoto(session: Session, id: string, body: ArrayBuffer, 
     .where(and(eq(listing.id, id), sql`jsonb_array_length(${listing.photos}) < ${MAX_PHOTOS}`))
     .returning({ id: listing.id });
   if (!updated) {
-    await env.PHOTOS.delete(photo.key);
+    await deletePhotos([photo.key]);
     throw new ListingError(409, `Nejvýše ${MAX_PHOTOS} fotek.`);
   }
   return photo;

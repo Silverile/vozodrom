@@ -25,6 +25,7 @@ Konfigurace Workeru je v `wrangler.jsonc` (bindingy, domény, proměnné, cron).
 | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | Worker secrets | přihlášení přes Google (projekt „vozodrom“ v Google Cloud, redirect `https://vozodrom.cz/api/auth/callback/google`) |
 | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | GitHub Actions secrets | nasazení (šablona tokenu „Edit Cloudflare Workers“, platnost 1 rok) |
 | `NEXT_PUBLIC_GA_ID` | workflow | GA4 `G-2D6CJ8T7NY`, načte se jen se souhlasem |
+| `GITHUB_DEPLOY_TOKEN` | Worker secret | tlačítko „Publikovat na web“ v `/admin/obsah/` spustí nasazení; fine-grained token jen pro repozitář vozodrom s oprávněním „Actions: Read and write“. Bez něj se opravy katalogu dostanou na web s nejbližším jiným nasazením |
 
 Worker secret se nastaví příkazem `npx wrangler secret put NÁZEV --name vozodrom` (hodnota se zadá interaktivně).
 Lokální hodnoty jsou v `.dev.vars` (vzor `.dev.vars.example`, soubor se necommituje).

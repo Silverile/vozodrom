@@ -44,6 +44,7 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 **Aplikace (`src/app/`)**
 
 - `katalog/`, `inzeraty/` (statické), `inzerat/[id]` (inzeráty uživatelů), `pridat/` (formulář),
+  `garaz/` (garáž majitele a psaní deníku), `deniky/` (veřejné deníky aut: přehled zápisů, stránka auta a zápisu),
   `ucet/` (účet, zprávy, správa inzerátu), `admin/` (uživatelé, inzeráty, hlášení), `prihlaseni/`,
   `zapomenute-heslo/`, `nove-heslo/`, `foto/[...key]` (fotky z R2), `api/` (viz [API](api.md)).
 - Ostatní rubriky (`technika`, `moto`, `dily`, `pneumatiky`, `forum`, `recenze`, `novinky`) jsou zatím
@@ -64,6 +65,9 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 | `listing-context.ts` | k inzerátu uživatele najde generaci v katalogu, odpovídající motor a verzi a data z registru/STK |
 | `account-lists.ts` | oblíbené a uložená hledání uživatele |
 | `mail.ts` | odeslání e-mailu (Cloudflare Email Service; lokálně jen výpis) |
+| `garage-store.ts` | garáž a deníky: auta, zápisy, fotky, „líbí se“, sledování, komentáře, hlášení a moderace |
+| `photo-store.ts` | kontrola a uložení fotek do R2 (inzeráty, auta v garáži, zápisy) |
+| `catalog-edit-store.ts` | opravy textů katalogu od administrátorů a spuštění nasazení |
 
 **Sdílené (prohlížeč i server)**: `listing-draft.ts` (typ a kontrola formuláře inzerátu — stejná pravidla
 v prohlížeči i na serveru), `listing-catalog.ts` (karoserie, paliva, mapování katalogu), `listing-status.ts`

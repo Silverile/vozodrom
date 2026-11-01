@@ -13,6 +13,7 @@ import {
 } from "@/lib/listing-draft";
 import { getMake, makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { createStore } from "@/lib/storage";
+import { useCardGenerations } from "@/lib/use-card-generations";
 import type { Listing } from "@/lib/types";
 import { EQUIPMENT, EQUIPMENT_GROUPS, equipmentLabels, equipmentMatches } from "@/lib/equipment";
 import { CarSearch } from "./CarSearch";
@@ -43,24 +44,6 @@ const STEPS: { title: string; fields: DraftField[] }[] = [
 /** Photos, contact and publishing come after the data steps; see PhotosStep. */
 const PHOTOS = STEPS.length;
 const TITLES = [...STEPS.map((s) => s.title), "Fotky a zveřejnění"];
-
-/** Catalogue generations (bodies, engines, gearboxes, photo) of a model line, fetched per line. */
-function useCardGenerations(make: string, line: string | undefined): FormGeneration[] {
-  const [state, setState] = useState<{ key: string; generations: FormGeneration[] }>({ key: "", generations: [] });
-  const key = line ? `${make}/${line}` : "";
-  useEffect(() => {
-    if (!key) return;
-    let cancelled = false;
-    fetch(`/api/katalog/${key}/`)
-      .then((r) => (r.ok ? (r.json() as Promise<{ generations: FormGeneration[] }>) : { generations: [] }))
-      .then((data) => !cancelled && setState({ key, generations: data.generations }))
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [key]);
-  return state.key === key ? state.generations : [];
-}
 
 /** False while rendering on the server and hydrating, so the stored draft is not read too early. */
 const useHydrated = () => useSyncExternalStore(() => () => {}, () => true, () => false);

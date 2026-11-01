@@ -188,6 +188,15 @@ export function AccountClient({ user, staff, listings }: { user: { name: string;
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/garaz/"
+                className="w-full flex items-center gap-2 rounded-lg px-3 py-2 text-sm whitespace-nowrap text-[var(--color-muted)] hover:bg-[var(--color-field)] hover:text-[var(--color-ink)]"
+              >
+                <span className="w-5 text-center"><Icon name="generations" /></span>
+                Moje garáž
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
