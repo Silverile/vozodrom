@@ -16838,8 +16838,19 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 9
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -17182,12 +17193,55 @@
           "https://www.media.stellantis.com/uk-en/fiat-professional/press/the-new-fiat-ducato-more-technology-more-efficiency-more-value",
           "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato",
           "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC",
-          "https://de.wikipedia.org/wiki/Fiat_Ducato"
+          "https://de.wikipedia.org/wiki/Fiat_Ducato",
+          "https://www.media.stellantis.com/uk-en/fiat-professional/press/legendary-ducato-celebrates-its-35th-birthday"
         ],
         "fieldSources": {
           "bodyTypes": [
             "https://de.wikipedia.org/wiki/Fiat_Ducato"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "1 June 2021, Powertrains: six speed manual; nine speed automatic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 9
+            },
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "1 June 2021, Powertrains: six speed manual; nine speed automatic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.media.stellantis.com/uk-en/fiat-professional/press/legendary-ducato-celebrates-its-35th-birthday"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2016 Fiat Professional UK: 2006 Ducato was the first front-wheel-drive van with17m3",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
         }
       }
     ],
@@ -17196,7 +17250,8 @@
       "https://www.media.stellantis.com/uk-en/fiat-professional/press/the-new-fiat-ducato-more-technology-more-efficiency-more-value",
       "https://www.media.stellantis.com/uk-en/fiat-professional/press/fiat-professional-opens-orders-for-the-new-ducato",
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/fiat/ducato/?sort=SORTING_DESC",
-      "https://de.wikipedia.org/wiki/Fiat_Ducato"
+      "https://de.wikipedia.org/wiki/Fiat_Ducato",
+      "https://www.media.stellantis.com/uk-en/fiat-professional/press/legendary-ducato-celebrates-its-35th-birthday"
     ],
     "needsReview": [
       {
@@ -17309,14 +17364,6 @@
       },
       {
         "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

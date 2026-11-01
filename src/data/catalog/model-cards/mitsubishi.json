@@ -443,13 +443,33 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 6
+          },
+          {
+            "type": "cvt",
+            "gears": null
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
+          "length": 4295,
+          "width": 1770,
+          "height": 1615,
+          "wheelbase": 2670
         },
         "specificationScope": {
           "market": "source-production",
@@ -458,7 +478,7 @@
           "bodyType": null,
           "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace.\nPřibližná hranice hlavní evropské řady podle příchodu nástupce; jiné karoserie a trhy mohou pokračovat déle."
         },
-        "trunkL": null,
+        "trunkL": 442,
         "markets": [],
         "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
         "photo": {
@@ -742,9 +762,194 @@
           "https://en.wikipedia.org/wiki/Mitsubishi_ASX",
           "https://cdn.uc.assets.prezly.com/07c188da-7339-4f94-9f80-98cf0515e725/-/inline/no/gdl-mitsubishi-liste-de-prix-12-2019.pdf",
           "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
-          "https://de.wikipedia.org/wiki/Mitsubishi_ASX"
+          "https://de.wikipedia.org/wiki/Mitsubishi_ASX",
+          "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf",
+          "https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2019/20190212_1.html"
         ],
-        "dateBasis": "successor-boundary"
+        "dateBasis": "successor-boundary",
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://cdn.uc.assets.prezly.com/07c188da-7339-4f94-9f80-98cf0515e725/-/inline/no/gdl-mitsubishi-liste-de-prix-12-2019.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "2.0 Invite MT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "2.0 Invite MT",
+              "source": "https://cdn.uc.assets.prezly.com/07c188da-7339-4f94-9f80-98cf0515e725/-/inline/no/gdl-mitsubishi-liste-de-prix-12-2019.pdf",
+              "sha256": "9f9045889176d199a29d255b63de7dc81889e863105194ecf031e1e6b82d4a45"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.6 MIVEC Inform 2WD 5MT / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.6 MIVEC Inform 2WD 5MT",
+              "source": "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
+              "sha256": "d276f3fe8d548ffbd390c9a01e373d984a9d4fe9e346fd64f4a6228a79723adc"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.6 DI-D Intense 2WD 6MT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.6 DI-D Intense 2WD 6MT",
+              "source": "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
+              "sha256": "43df1bfbc0e57521bec1f0ab3f92cc3646307a633244906f470350f0b8ad3f8d"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.6 DI-D Intense 4WD 6MT / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.6 DI-D Intense 4WD 6MT",
+              "source": "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
+              "sha256": "b086bb420250926b5bc724f2a69f42ac1415a85a6dc1f9bf672cebd56df8b3ed"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "2.2 DI-D Intense 4WD 6AT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "2.2 DI-D Intense 4WD 6AT",
+              "source": "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
+              "sha256": "f7866dc635ae53132a3f2f95ac1811e7b94f1d77d0f3708c222ac286a7414006"
+            }
+          },
+          {
+            "field": "dimensionsMm.length",
+            "value": 4295,
+            "sources": [
+              "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "UK factory MY11 brochure p.21 Dimensions: all1.6/1.8DI-D2WD/4WD columns4295x1770x1615; wheelbase2670",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie ASXI MY2011, společné rozměry všech uvedených pohonů; základní výška bez příslušenství, nikoli pozdější facelift",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.width",
+            "value": 1770,
+            "sources": [
+              "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "UK factory MY11 brochure p.21 Dimensions: all1.6/1.8DI-D2WD/4WD columns4295x1770x1615; wheelbase2670",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie ASXI MY2011, společné rozměry všech uvedených pohonů; základní výška bez příslušenství, nikoli pozdější facelift",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.height",
+            "value": 1615,
+            "sources": [
+              "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "UK factory MY11 brochure p.21 Dimensions: all1.6/1.8DI-D2WD/4WD columns4295x1770x1615; wheelbase2670",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie ASXI MY2011, společné rozměry všech uvedených pohonů; základní výška bez příslušenství, nikoli pozdější facelift",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.wheelbase",
+            "value": 2670,
+            "sources": [
+              "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "UK factory MY11 brochure p.21 Dimensions: all1.6/1.8DI-D2WD/4WD columns4295x1770x1615; wheelbase2670",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie ASXI MY2011, společné rozměry všech uvedených pohonů; základní výška bez příslušenství, nikoli pozdější facelift",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "trunkL",
+            "value": 442,
+            "sources": [
+              "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "UK factory MY11 brochure p.21 Cargo capacity min. lts VDA442 in all four engine/drive columns",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "ASXI MY2011, pět sedadel a vzpřímená zadní opěradla; společná hodnota všech2WD/4WD sloupců tohoto podkladu",
+              "measurementBasis": "l; standardní poloha zadních sedadel, nezvětšený zavazadlový prostor"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "cvt",
+              "gears": null
+            },
+            "sources": [
+              "https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2019/20190212_1.html"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "12February2019, European MY2020 ASX2.0: INVECS-III CVT with6-speed SportsMode; simulated ratios are not forward gear count",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only",
+          "dimensionsMm.length": "standard-body-reference",
+          "dimensionsMm.width": "standard-body-reference",
+          "dimensionsMm.height": "standard-body-reference",
+          "dimensionsMm.wheelbase": "standard-body-reference",
+          "trunkL": "standard-body-reference"
+        }
       },
       {
         "code": "ASX – Renault Captur příbuzná rodina",
@@ -1112,7 +1317,9 @@
       "https://mitsubishi-motors.si/wp-content/uploads/2024/09/Novi-ASX_25MY_katalog_web.pdf",
       "https://cdn.uc.assets.prezly.com/07c188da-7339-4f94-9f80-98cf0515e725/-/inline/no/gdl-mitsubishi-liste-de-prix-12-2019.pdf",
       "https://www.mitsubishi-motors.bg/ckfinder/userfiles/files/LAST_170117-MME-ASX-BUL-MY17_v3.pdf",
-      "https://de.wikipedia.org/wiki/Mitsubishi_ASX"
+      "https://de.wikipedia.org/wiki/Mitsubishi_ASX",
+      "https://cdn.sgpetch.co.uk/content/vehicle_media/Mitsubishi/ASX_pdf_brochure.pdf",
+      "https://www.mitsubishi-motors.com/en/newsroom/newsrelease/2019/20190212_1.html"
     ],
     "needsReview": [
       {
@@ -1132,30 +1339,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1165,10 +1348,6 @@
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

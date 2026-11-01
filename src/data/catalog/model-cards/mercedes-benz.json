@@ -23612,8 +23612,24 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "awd",
+          "rwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -23635,7 +23651,9 @@
         "sources": [
           "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
           "https://en.wikipedia.org/w/index.php?oldid=1382071911",
-          "https://de.wikipedia.org/wiki/Mercedes-Benz_Sprinter"
+          "https://de.wikipedia.org/wiki/Mercedes-Benz_Sprinter",
+          "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf",
+          "https://www.mercedes-fans.de/magazin/sternstunde/mehr-als-ein-facelift-2013-mercedes-benz-sprinter-313-cdi-kastenwagen-fahrbericht-der-transporter-mit-stern-im-test-von-mercedes-fans-de.6056"
         ],
         "fieldSources": {
           "from": [
@@ -23647,6 +23665,71 @@
           "productionStatus": [
             "https://en.wikipedia.org/w/index.php?oldid=1382071911"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.15 Comfort/Suspension: optional all-wheel drive with low-range",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "pp.20–22 technical footnote2: ECO Gear6manual; petrolNSG3706manual/NAGW5A3805auto;7G-TRONIC PLUS7auto",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 5
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "pp.20–22 technical footnote2: ECO Gear6manual; petrolNSG3706manual/NAGW5A3805auto;7G-TRONIC PLUS7auto",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 7
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "pp.20–22 technical footnote2: ECO Gear6manual; petrolNSG3706manual/NAGW5A3805auto;7G-TRONIC PLUS7auto",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "rwd",
+            "sources": [
+              "https://www.mercedes-fans.de/magazin/sternstunde/mehr-als-ein-facelift-2013-mercedes-benz-sprinter-313-cdi-kastenwagen-fahrbericht-der-transporter-mit-stern-im-test-von-mercedes-fans-de.6056"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2013 Sprinter313CDI test / Antrieb: Hinterradantrieb",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       },
       {
@@ -23945,7 +24028,9 @@
     "sources": [
       "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
       "https://de.wikipedia.org/wiki/Mercedes-Benz_Sprinter",
-      "https://www.ultimatespecs.com/car-specs/Mercedes-Benz/135178/Mercedes-Benz-Sprinter-2019-L1H1-FWD-211-CDI-30t.html"
+      "https://www.ultimatespecs.com/car-specs/Mercedes-Benz/135178/Mercedes-Benz-Sprinter-2019-L1H1-FWD-211-CDI-30t.html",
+      "https://xr793.com/wp-content/uploads/2022/12/2013-Mercedes-Benz-Sprinter-UK.pdf",
+      "https://www.mercedes-fans.de/magazin/sternstunde/mehr-als-ein-facelift-2013-mercedes-benz-sprinter-313-cdi-kastenwagen-fahrbericht-der-transporter-mit-stern-im-test-von-mercedes-fans-de.6056"
     ],
     "needsReview": [
       {
@@ -24010,14 +24095,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -47244,8 +47321,24 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "awd",
+          "rwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 7
+          },
+          {
+            "type": "automatic",
+            "gears": 9
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -47628,7 +47721,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
           "https://en.wikipedia.org/w/index.php?oldid=1378299744",
-          "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf"
+          "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
+          "https://presse.mercedes-benz.at/news-modellpflege-fuer-die-mercedes-benz-grossraumlimousine?id=78900&l=deutsch&menueid=10705"
         ],
         "fieldSources": {
           "from": [
@@ -47637,6 +47731,86 @@
           "productionStatus": [
             "https://en.wikipedia.org/w/index.php?oldid=1378299744"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "V 200 d kompakt 6MT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "V 200 d kompakt 6MT",
+              "source": "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
+              "sha256": "5d5296c2aab0a701b4c4112d92cbba3b906b9b46d4ba23f6e59af8b0bd1fdb00"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 7
+            },
+            "sources": [
+              "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "V 200 d kompakt 7G-TRONIC PLUS / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "V 200 d kompakt 7G-TRONIC PLUS",
+              "source": "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
+              "sha256": "fc0c19ac8bf8b9e432eb1392f7b4fe2640f1dd42aeb83141dab36cf4d74994d0"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "V 200 d 4MATIC kompakt / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "V 200 d 4MATIC kompakt",
+              "source": "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
+              "sha256": "9fc61a9e4fde81529aec821af22288fb2813f60a074a8cfc02bf6b7f36a82d1a"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "rwd",
+            "sources": [
+              "https://presse.mercedes-benz.at/news-modellpflege-fuer-die-mercedes-benz-grossraumlimousine?id=78900&l=deutsch&menueid=10705"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Manufacturer2019 W447 facelift release: all engines standard Hinterradantrieb, optional4MATIC",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 9
+            },
+            "sources": [
+              "https://presse.mercedes-benz.at/news-modellpflege-fuer-die-mercedes-benz-grossraumlimousine?id=78900&l=deutsch&menueid=10705"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Manufacturer2019 W447 facelift release: new9G-TRONIC automatic transmission; European orders fromMarch2019",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
         }
       }
     ],
@@ -47645,7 +47819,8 @@
       "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
       "https://blog.le-parnass.com/catalogue_pdf/mercedes-benz_v-class_201609_g.pdf",
       "https://de.wikipedia.org/wiki/Mercedes-Benz_W_638",
-      "https://en.wikipedia.org/wiki/Mercedes-Benz_Vito"
+      "https://en.wikipedia.org/wiki/Mercedes-Benz_Vito",
+      "https://presse.mercedes-benz.at/news-modellpflege-fuer-die-mercedes-benz-grossraumlimousine?id=78900&l=deutsch&menueid=10705"
     ],
     "needsReview": [
       {
@@ -47786,14 +47961,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

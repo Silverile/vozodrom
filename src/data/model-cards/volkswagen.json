@@ -4650,8 +4650,27 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -4892,8 +4911,77 @@
           "https://en.wikipedia.org/w/index.php?oldid=1381720054",
           "https://de.wikipedia.org/wiki/VW_Caddy",
           "https://www.volkswagen-comerciales.es/comunicacion/2021/02/05/el-nuevo-caddy-presenta-la-gama-mas-completa-para-uso-profesional-y-de-ocio-e-introduce-asistentes-a-la-conduccion-ineditos-en-su-segmento/",
-          "https://de.wikipedia.org/wiki/VW_Caddy_(Typ_2K)"
-        ]
+          "https://de.wikipedia.org/wiki/VW_Caddy_(Typ_2K)",
+          "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW UK Caddy November2015, Engine and gearbox data: Front wheel drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW UK November2015 diesel/petrol technical tables:5/6manual,6/7dual clutchDSG",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW UK November2015 diesel/petrol technical tables:5/6manual,6/7dual clutchDSG",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 6
+            },
+            "sources": [
+              "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW UK November2015 diesel/petrol technical tables:5/6manual,6/7dual clutchDSG",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW UK November2015 diesel/petrol technical tables:5/6manual,6/7dual clutchDSG",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "V (Typ SB)",
@@ -5804,7 +5892,8 @@
       "https://www.volkswagen-newsroom.com/en/caddy-i-19821992-19678",
       "https://www.volkswagen-comerciales.es/comunicacion/2021/02/05/el-nuevo-caddy-presenta-la-gama-mas-completa-para-uso-profesional-y-de-ocio-e-introduce-asistentes-a-la-conduccion-ineditos-en-su-segmento/",
       "https://de.wikipedia.org/w/index.php?oldid=253218787",
-      "https://de.wikipedia.org/wiki/VW_Caddy_(Typ_2K)"
+      "https://de.wikipedia.org/wiki/VW_Caddy_(Typ_2K)",
+      "https://manuals.plus/m/8f2898cbce0cca4d6455d6096e019d26fe91815b0a0f6e1587e0e63fbce2a847"
     ],
     "needsReview": [
       {
@@ -43067,8 +43156,8 @@
         "dimensionsMm": {
           "length": 4527,
           "width": 1829,
-          "height": null,
-          "wheelbase": null
+          "height": 1659,
+          "wheelbase": 2791
         },
         "specificationScope": {
           "market": "Europe",
@@ -43101,7 +43190,8 @@
         "sources": [
           "https://de.wikipedia.org/w/index.php?title=VW_Touran_II&oldid=271307741",
           "https://en.wikipedia.org/w/index.php?title=Volkswagen_Touran&oldid=1379521963",
-          "https://de.wikipedia.org/wiki/VW_Touran_II"
+          "https://de.wikipedia.org/wiki/VW_Touran_II",
+          "https://www.volkswagen.se/idhub/content/dam/onehub_pkw/importers/se/hjalp-och-support/broschyrer/touran/002.touran-modellbroschyr-aug2016.download.pdf"
         ],
         "trims": [
           {
@@ -43610,7 +43700,43 @@
               "https://www.volkswagen.cz/dam/files/download/cdfe2aa01f1aea10b0322a5001b7d5ea83f05e78/11de2f59b9e6bfda265e9560e240c5aa/cf40f793-03f1-4364-8578-d95d027e87c9/20250609_Touran_kompletni-cenik"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.height",
+            "value": 1659,
+            "sources": [
+              "https://www.volkswagen.se/idhub/content/dam/onehub_pkw/importers/se/hjalp-och-support/broschyrer/touran/002.touran-modellbroschyr-aug2016.download.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW factory Swedish Touran August2016, pp.26–27 technical dimension drawings:1659 and2791",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "mpv",
+              "reference": "Standardní evropská karoserie TouranII2016 odpovídající uložené délce4527 a šířce1829; nepřebírají se rozměry podvozkových odchylek",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.wheelbase",
+            "value": 2791,
+            "sources": [
+              "https://www.volkswagen.se/idhub/content/dam/onehub_pkw/importers/se/hjalp-och-support/broschyrer/touran/002.touran-modellbroschyr-aug2016.download.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "VW factory Swedish Touran August2016, pp.26–27 technical dimension drawings:1659 and2791",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "mpv",
+              "reference": "Standardní evropská karoserie TouranII2016 odpovídající uložené délce4527 a šířce1829; nepřebírají se rozměry podvozkových odchylek",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.height": "standard-body-reference",
+          "dimensionsMm.wheelbase": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -43618,7 +43744,8 @@
       "https://de.wikipedia.org/w/index.php?title=VW_Touran_I&oldid=271307685",
       "https://de.wikipedia.org/w/index.php?title=VW_Touran_II&oldid=271307741",
       "https://de.wikipedia.org/wiki/VW_Touran_I",
-      "https://de.wikipedia.org/wiki/VW_Touran_II"
+      "https://de.wikipedia.org/wiki/VW_Touran_II",
+      "https://www.volkswagen.se/idhub/content/dam/onehub_pkw/importers/se/hjalp-och-support/broschyrer/touran/002.touran-modellbroschyr-aug2016.download.pdf"
     ],
     "needsReview": [
       {
@@ -43636,10 +43763,6 @@
       {
         "field": "generations[0].to",
         "noteCs": "de/en.wikipedia uvádějí konec výroby 2016 (Čína); evropský model nahrazen v květnu 2015."
-      },
-      {
-        "field": "generations[1].dimensionsMm",
-        "noteCs": "Rozvor: de.wikipedia 2786 mm, en.wikipedia 2791 mm, auto-data.net 2786/2791 mm podle roku; výška 1628–1674 mm. Ponecháno prázdné."
       },
       {
         "field": "generations[1].facelift",

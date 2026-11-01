@@ -2205,8 +2205,19 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2246,14 +2257,60 @@
         "sources": [
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Dokker",
-          "https://de.wikipedia.org/wiki/Dacia_Dokker"
-        ]
+          "https://de.wikipedia.org/wiki/Dacia_Dokker",
+          "https://presse.dacia.de/dacia-prasentiert-genugsamen-familienfreund-dokker-1/?lang=deu",
+          "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://presse.dacia.de/dacia-prasentiert-genugsamen-familienfreund-dokker-1/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Bewährtes5-Gang-Schaltgetriebe: all engines drive front wheels",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://presse.dacia.de/dacia-prasentiert-genugsamen-familienfreund-dokker-1/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Bewährtes5-Gang-Schaltgetriebe: all engines5manual at launch",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Dokker Blue dCi75/95:6-Gang-Schaltbox; petrol5manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
       "https://www.dacia.ro/despre-dacia/istoric.html",
       "https://en.wikipedia.org/wiki/Dacia_Dokker",
-      "https://de.wikipedia.org/wiki/Dacia_Dokker"
+      "https://de.wikipedia.org/wiki/Dacia_Dokker",
+      "https://presse.dacia.de/dacia-prasentiert-genugsamen-familienfreund-dokker-1/?lang=deu",
+      "https://presse.dacia.de/dacia-dokker-familienfreund-mit-grossem-platzangebot/?lang=deu"
     ],
     "needsReview": [
       {
@@ -2270,14 +2327,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2508,8 +2557,20 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2550,13 +2611,67 @@
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Duster",
           "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
-          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog",
+          "https://presse.dacia.de/duster-startet-ab-11900-euro/?lang=deu",
+          "https://presse.dacia.de/robustes-suv-modell-zum-erschwinglichen-preis/?lang=deu"
         ],
         "fieldSources": {
           "facelift": [
             "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
             "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://presse.dacia.de/duster-startet-ab-11900-euro/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2010: Duster4x2 front-wheel drive and selectable4x4",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://presse.dacia.de/duster-startet-ab-11900-euro/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2010: Duster4x2 front-wheel drive and selectable4x4",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://presse.dacia.de/duster-startet-ab-11900-euro/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2010: Duster4x4 new6-Gang-Schaltgetriebe",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://presse.dacia.de/robustes-suv-modell-zum-erschwinglichen-preis/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2011:1.6 16VLPG105/1.6 16V105/dCi90 with front drive:5-Gang-Schaltgetriebe",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       },
       {
@@ -2722,8 +2837,20 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 6
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -3036,13 +3163,81 @@
           "https://en.wikipedia.org/wiki/Dacia_Duster",
           "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
           "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
-          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog",
+          "https://presse.dacia.de/dacia-duster-kompakt-suv-mit-neuem-gesicht-1/?lang=deu"
         ],
         "fieldSources": {
           "facelift": [
             "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
             "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "TCe 90 4x2 — UK 07/2024 / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "TCe 90 4x2 — UK 07/2024",
+              "source": "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
+              "sha256": "25a1a4a845a99004b7d6cbdb337dffde0700725b64bcf22bbaf9eb0b0a82fc16"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "TCe 90 4x2 — UK 07/2024 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "TCe 90 4x2 — UK 07/2024",
+              "source": "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
+              "sha256": "25a1a4a845a99004b7d6cbdb337dffde0700725b64bcf22bbaf9eb0b0a82fc16"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 6
+            },
+            "sources": [
+              "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "TCe 150 EDC 4x2 — UK 07/2024 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "TCe 150 EDC 4x2 — UK 07/2024",
+              "source": "https://cdn.group.renault.com/dac/gb/transversal-assets/brochures/model-brochures/Duster-eBrochure.pdf.asset.pdf/aeea58b3b6.pdf",
+              "sha256": "8e36f43e73e887a860311822b764586211f2f3189e00af361b0ce7a81dd53d5c"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://presse.dacia.de/dacia-duster-kompakt-suv-mit-neuem-gesicht-1/?lang=deu"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Second-generation Duster facelift2021: TCe1504x4 and variable all-wheel drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       },
       {
@@ -3800,19 +3995,14 @@
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/dacia/duster/?redirectId=quer.autokatalog",
       "https://presse.dacia.de/dacia-prasentiert-aktualisierten-duster-auf-der-iaa/?lang=deu",
       "https://presse.dacia.de/dacia-duster-mit-neuem-look-und-neuem-multimedia-angebot/?lang=deu",
-      "https://media.dacia.com/dacia-develops-its-industral-plan-and-goes-on-the-offensive-in-the-c-segment/"
+      "https://media.dacia.com/dacia-develops-its-industral-plan-and-goes-on-the-offensive-in-the-c-segment/",
+      "https://presse.dacia.de/dacia-duster-kompakt-suv-mit-neuem-gesicht-1/?lang=deu",
+      "https://presse.dacia.de/duster-startet-ab-11900-euro/?lang=deu",
+      "https://presse.dacia.de/robustes-suv-modell-zum-erschwinglichen-preis/?lang=deu"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3841,14 +4031,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5855,8 +6037,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -5896,9 +6085,40 @@
         "sources": [
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Logan",
-          "https://www.ultimatespecs.com/car-specs/Dacia/64384/Dacia-Logan-2-12-75HP.html"
+          "https://www.ultimatespecs.com/car-specs/Dacia/64384/Dacia-Logan-2-12-75HP.html",
+          "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf",
+          "https://businessmotoring.co.uk/dacia-logan-mcv-car-review-a-proper-estate-for-22-a-month-company-car-tax-and-well-under-10k/3/"
         ],
-        "dateBasis": "production"
+        "dateBasis": "production",
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Factory Irish LoganMCV Stepway2019 brochure / Gearbox / Drive type: Front-wheel drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://businessmotoring.co.uk/dacia-logan-mcv-car-review-a-proper-estate-for-22-a-month-company-car-tax-and-well-under-10k/3/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original road test23December2013:1.5dCi90,5-speed manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "LJI",
@@ -6542,7 +6762,9 @@
       "https://en.wikipedia.org/wiki/Dacia_Logan",
       "https://media.dacia.com/wp-content/uploads/2022/07/ae5568b4eb3dda3938d1e233fa4900ba-keeexed.pdf",
       "https://de.wikipedia.org/wiki/Dacia_Logan",
-      "https://www.ultimatespecs.com/car-specs/Dacia/64384/Dacia-Logan-2-12-75HP.html"
+      "https://www.ultimatespecs.com/car-specs/Dacia/64384/Dacia-Logan-2-12-75HP.html",
+      "https://cdn.group.renault.com/dac/ie/transversal-assets/brochures/model-brochures/logan-mcv-stepway-oct.pdf",
+      "https://businessmotoring.co.uk/dacia-logan-mcv-car-review-a-proper-estate-for-22-a-month-company-car-tax-and-well-under-10k/3/"
     ],
     "needsReview": [
       {
@@ -6603,14 +6825,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7674,8 +7888,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -7899,9 +8120,39 @@
         "sources": [
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Sandero",
-          "https://presse.dacia.de/neuer-dacia-sandero-und-sandero-stepway-feiern-premiere-in-paris/?lang=deu"
+          "https://presse.dacia.de/neuer-dacia-sandero-und-sandero-stepway-feiern-premiere-in-paris/?lang=deu",
+          "https://www.independent.co.uk/life-style/motoring/road-tests/dacia-sandero-ambiance-1-2-8454471.html"
         ],
-        "fieldSources": {}
+        "fieldSources": {},
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.independent.co.uk/life-style/motoring/road-tests/dacia-sandero-ambiance-1-2-8454471.html"
+            ],
+            "method": "original-road-test",
+            "anchor": "John Simister original road test24January2013, Transmission: five-speed gearbox, front-wheel drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.independent.co.uk/life-style/motoring/road-tests/dacia-sandero-ambiance-1-2-8454471.html"
+            ],
+            "method": "original-road-test",
+            "anchor": "John Simister original road test24January2013, Transmission: five-speed gearbox",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "BJI",
@@ -8096,8 +8347,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "cvt",
+            "gears": null
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -8715,14 +8981,85 @@
           "https://www.dacia.ro/despre-dacia/istoric.html",
           "https://en.wikipedia.org/wiki/Dacia_Sandero",
           "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf"
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "SCe 65 — FR 06/2022 / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "SCe 65 — FR 06/2022",
+              "source": "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf",
+              "sha256": "46938fcead8f985d6658fd95ff69f1e02bfe2a30a4a873d5dda5c03843eb1c83"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "SCe 65 — FR 06/2022 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "SCe 65 — FR 06/2022",
+              "source": "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf",
+              "sha256": "46938fcead8f985d6658fd95ff69f1e02bfe2a30a4a873d5dda5c03843eb1c83"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Stepway TCe 90 — FR 06/2022 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "Stepway TCe 90 — FR 06/2022",
+              "source": "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf",
+              "sha256": "0cc4015748c0911d96bb48ba23e7a7e65df318e52473b0dabada4a6e604210c3"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "cvt",
+              "gears": null
+            },
+            "sources": [
+              "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2022-06-15 technical sheet / TCe90CVT / Type continuous variation / Number of forward gears: dash",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
       "https://www.dacia.ro/despre-dacia/istoric.html",
       "https://en.wikipedia.org/wiki/Dacia_Sandero",
       "https://www.media.dacia.com/wp-content/uploads/2022/07/08f707cf52f86dc7ae62ab61ff61071c-keeexed.pdf",
-      "https://presse.dacia.de/neuer-dacia-sandero-und-sandero-stepway-feiern-premiere-in-paris/?lang=deu"
+      "https://presse.dacia.de/neuer-dacia-sandero-und-sandero-stepway-feiern-premiere-in-paris/?lang=deu",
+      "https://www.independent.co.uk/life-style/motoring/road-tests/dacia-sandero-ambiance-1-2-8454471.html"
     ],
     "needsReview": [
       {
@@ -8771,14 +9108,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9031,14 +9360,6 @@
       },
       {
         "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

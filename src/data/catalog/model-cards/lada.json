@@ -272,8 +272,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "rwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -315,8 +322,38 @@
           "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
           "https://www.lada-image.ru/about/for_press/news/lada_50_let_istorii_/",
           "https://en.wikipedia.org/w/index.php?title=VAZ-2101&oldid=1380727946",
-          "https://de.wikipedia.org/wiki/WAS-2101"
-        ]
+          "https://de.wikipedia.org/wiki/WAS-2101",
+          "https://www.veteranzsiguli.hu/wp-content/uploads/2020/12/MOTOR-ROAD-TEST-1974-08-03-Lada-1200.pdf"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "rwd",
+            "sources": [
+              "https://www.veteranzsiguli.hu/wp-content/uploads/2020/12/MOTOR-ROAD-TEST-1974-08-03-Lada-1200.pdf"
+            ],
+            "method": "original-road-test",
+            "anchor": "Motor original road test3August1974, Brakes: front engine/rear wheel drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.veteranzsiguli.hu/wp-content/uploads/2020/12/MOTOR-ROAD-TEST-1974-08-03-Lada-1200.pdf"
+            ],
+            "method": "original-road-test",
+            "anchor": "Motor original road test3August1974, Transmission; ratio table1st/2nd/3rd/Top and reverse",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
@@ -324,7 +361,8 @@
       "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
       "https://www.lada-image.ru/about/for_press/news/lada_50_let_istorii_/",
       "https://en.wikipedia.org/w/index.php?title=VAZ-2101&oldid=1380727946",
-      "https://de.wikipedia.org/wiki/WAS-2101"
+      "https://de.wikipedia.org/wiki/WAS-2101",
+      "https://www.veteranzsiguli.hu/wp-content/uploads/2020/12/MOTOR-ROAD-TEST-1974-08-03-Lada-1200.pdf"
     ],
     "needsReview": [
       {
@@ -337,14 +375,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

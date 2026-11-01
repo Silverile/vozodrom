@@ -3943,8 +3943,28 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -3982,8 +4002,88 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1381780546"
-        ]
+          "https://en.wikipedia.org/w/index.php?oldid=1381780546",
+          "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf",
+          "https://de.motor1.com/reviews/164052/mit-schicken-wings-frisch-gemachter-audi-a3-sportback-20-tdi-im-test/"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A3 / A3 Sportback price and technical tables (excluding S3); 5/6 manual and 6/7 S tronic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A3 / A3 Sportback price and technical tables (excluding S3); 5/6 manual and 6/7 S tronic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 6
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A3 / A3 Sportback price and technical tables (excluding S3); 5/6 manual and 6/7 S tronic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A3 / A3 Sportback price and technical tables (excluding S3); 5/6 manual and 6/7 S tronic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://de.motor1.com/reviews/164052/mit-schicken-wings-frisch-gemachter-audi-a3-sportback-20-tdi-im-test/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2008 A3 Sportback2.0TDI road test: tested front-wheel-drive S tronic; quattro all-wheel-drive comparison",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://de.motor1.com/reviews/164052/mit-schicken-wings-frisch-gemachter-audi-a3-sportback-20-tdi-im-test/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2008 A3 Sportback2.0TDI road test: tested front-wheel-drive S tronic; quattro all-wheel-drive comparison",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
+        }
       },
       {
         "code": "8V",
@@ -4531,7 +4631,9 @@
       "https://www.audi.com/en/press-releases/30-years-of-the-audi-a3-three-decades-of-vorsprung-in-the-premium-compact-segment-18368",
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a3/",
       "https://de.wikipedia.org/wiki/Audi_A3_8L",
-      "https://de.wikipedia.org/wiki/Audi_A3_8Y"
+      "https://de.wikipedia.org/wiki/Audi_A3_8Y",
+      "https://xr793.com/wp-content/uploads/2022/10/2008-Audi-A3-S3-UK.pdf",
+      "https://de.motor1.com/reviews/164052/mit-schicken-wings-frisch-gemachter-audi-a3-sportback-20-tdi-im-test/"
     ],
     "needsReview": [
       {
@@ -4592,14 +4694,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6685,8 +6779,28 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "cvt",
+            "gears": null
+          },
+          {
+            "type": "automatic",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -6727,13 +6841,92 @@
           "https://en.wikipedia.org/w/index.php?oldid=1371883197",
           "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
           "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE",
-          "https://www.audi.pl/pl/stories/styl-zycia/30-lecie-audi-a4-kultowego-modelu-lat-90/"
+          "https://www.audi.pl/pl/stories/styl-zycia/30-lecie-audi-a4-kultowego-modelu-lat-90/",
+          "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
         ],
         "fieldSources": {
           "from": [
             "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
             "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Transmissions: front-wheel-drive multitronic; A4 2.0 TDI/3.0 TDI quattro (excluding S4/allroad)",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Transmissions: front-wheel-drive multitronic; A4 2.0 TDI/3.0 TDI quattro (excluding S4/allroad)",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A4 Saloon/Avant prices and Transmissions: 6 manual, multitronic CVT, 6 tiptronic, 7 S tronic; virtual CVT ratios are not gear counts",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "cvt",
+              "gears": null
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A4 Saloon/Avant prices and Transmissions: 6 manual, multitronic CVT, 6 tiptronic, 7 S tronic; virtual CVT ratios are not gear counts",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 6
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A4 Saloon/Avant prices and Transmissions: 6 manual, multitronic CVT, 6 tiptronic, 7 S tronic; virtual CVT ratios are not gear counts",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "A4 Saloon/Avant prices and Transmissions: 6 manual, multitronic CVT, 6 tiptronic, 7 S tronic; virtual CVT ratios are not gear counts",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       },
       {
@@ -7252,7 +7445,8 @@
       "https://en.wikipedia.org/w/index.php?oldid=1371883197",
       "https://www.wikidata.org/wiki/Q758729",
       "https://emea-dam.audi.com/adobe/assets/urn%3Aaaid%3Aaem%3A2c86ef17-e470-4619-9f60-f11c758a8d79/original/as/Typenliste_Audi_i_Size_online.pdf",
-      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE"
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/audi/a4/?filter=NONE",
+      "https://xr793.com/wp-content/uploads/2022/10/2009-Audi-A4-S4-UK.pdf"
     ],
     "needsReview": [
       {
@@ -7405,14 +7599,6 @@
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -11596,8 +11782,24 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd",
+          "awd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "cvt",
+            "gears": null
+          },
+          {
+            "type": "automatic",
+            "gears": 6
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -11638,8 +11840,74 @@
           "https://en.wikipedia.org/w/index.php?oldid=1381900656",
           "https://www.audi.pl/pl/stories/technologia/audi-a6-rozwoj-i-ewolucja-kultowego-modelu/",
           "https://cs.wikipedia.org/wiki/Audi_A6",
-          "https://en.wikipedia.org/wiki/Audi_A6"
-        ]
+          "https://en.wikipedia.org/wiki/Audi_A6",
+          "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Audi UK 2007 brochure pp.7,16: front-wheel-drive models, quattro available on selected A6",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "awd",
+            "sources": [
+              "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Audi UK 2007 brochure pp.7,16: front-wheel-drive models, quattro available on selected A6",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Audi UK 2007 brochure pp.20–23 A6 technical tables and Transmissions: manual6, multitronic CVT, tiptronic6; excluding S6",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "cvt",
+              "gears": null
+            },
+            "sources": [
+              "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Audi UK 2007 brochure pp.20–23 A6 technical tables and Transmissions: manual6, multitronic CVT, tiptronic6; excluding S6",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 6
+            },
+            "sources": [
+              "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Audi UK 2007 brochure pp.20–23 A6 technical tables and Transmissions: manual6, multitronic CVT, tiptronic6; excluding S6",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "4G",
@@ -12534,7 +12802,8 @@
       "https://cs.wikipedia.org/wiki/Audi_A6",
       "https://en.wikipedia.org/wiki/Audi_A6",
       "https://www.servicesolutions.mahle.com/media/service-solutions-eu/product-lines/topnews/topnews-mahle_en-4.pdf",
-      "https://de.wikipedia.org/wiki/Audi_A6_C8"
+      "https://de.wikipedia.org/wiki/Audi_A6_C8",
+      "https://manuals.plus/m/de1f13deb4ee1322d66c716e8f7cb1e52eef4d52a4781fe749555956a56414a5"
     ],
     "needsReview": [
       {
@@ -12639,14 +12908,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

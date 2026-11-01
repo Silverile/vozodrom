@@ -2194,8 +2194,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2234,9 +2249,66 @@
           "https://en.wikipedia.org/wiki/Kia_Ceed",
           "https://www.kia.com/se/aga/support/instruktionsbocker/ceed/",
           "https://en.wikipedia.org/w/index.php?title=Kia_Ceed&oldid=1380825792",
-          "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)"
+          "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)",
+          "https://manualzz.com/doc/56102512/kia-2010-ceed-specification",
+          "https://www.meinbezirk.at/innsbruck/c-motor/kia-ceed-das-beste-aus-zwei-welten_a95006"
         ],
-        "drawingStage": 1
+        "drawingStage": 1,
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://manualzz.com/doc/56102512/kia-2010-ceed-specification"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Kia Motors Ireland VEHICLE SPECIFICATION2010:1.4 5manual;1.6 auto4;1.6CRDi5/6manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://manualzz.com/doc/56102512/kia-2010-ceed-specification"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Kia Motors Ireland VEHICLE SPECIFICATION2010:1.4 5manual;1.6 auto4;1.6CRDi5/6manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 4
+            },
+            "sources": [
+              "https://manualzz.com/doc/56102512/kia-2010-ceed-specification"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Kia Motors Ireland VEHICLE SPECIFICATION2010:1.4 5manual;1.6 auto4;1.6CRDi5/6manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.meinbezirk.at/innsbruck/c-motor/kia-ceed-das-beste-aus-zwei-welten_a95006"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original first-generation2007 Cee’d1.6CRDi road test: Antrieb Frontantrieb; SW/ProCee’d still forthcoming",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
+        }
       },
       {
         "code": "JD",
@@ -2362,8 +2434,19 @@
           }
         ],
         "engineCoverage": "partial",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2666,7 +2749,64 @@
           "https://press.kia.com/ie/en/home/media-resouces/press-kits/motoshows/2015/frankfurt_2015.html",
           "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-kits/motoshows/2012/paris-motor-show-2012-en.html"
         ],
-        "drawingStage": 1
+        "drawingStage": 1,
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.4 MPI100PS /6MT – bez ISG / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.4 MPI100PS /6MT – bez ISG",
+              "source": "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html",
+              "sha256": "3a4db3a395d84807f31d6cd1522a2b2e7a4e4c2355961d4bc341a8197ab7b975"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.4 MPI100PS /6MT – bez ISG / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.4 MPI100PS /6MT – bez ISG",
+              "source": "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html",
+              "sha256": "3a4db3a395d84807f31d6cd1522a2b2e7a4e4c2355961d4bc341a8197ab7b975"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.6 CRDi136PS /7DCT – bez ISG / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.6 CRDi136PS /7DCT – bez ISG",
+              "source": "https://preprod2-press.kia.com/content/kiapress/ie/en/home/media-resouces/press-releases/2015/15_08_31_35---kia-ceed-upgrade.html",
+              "sha256": "320f92b158e7027bdecedf30e4c4e77da38e5d67bce70c30c2625cf5b2ae2f99"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "CD",
@@ -2888,8 +3028,19 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
           "length": 4310,
           "width": 1800,
@@ -3259,7 +3410,64 @@
             ]
           }
         ],
-        "drawingStage": 0
+        "drawingStage": 0,
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 T-GDi 120PS 6MT / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 T-GDi 120PS 6MT",
+              "source": "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf",
+              "sha256": "eb5906340f065e1e5ba363db4cc7d4ca0db7e56c7cb88ecd43d6139c7c261450"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 T-GDi 120PS 6MT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 T-GDi 120PS 6MT",
+              "source": "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf",
+              "sha256": "eb5906340f065e1e5ba363db4cc7d4ca0db7e56c7cb88ecd43d6139c7c261450"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.4 T-GDi 140PS 7DCT / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.4 T-GDi 140PS 7DCT",
+              "source": "https://press.kia.com/content/dam/kiapress/IE/pressreleases/Ceed-Launch-September-2018/Ceed-press-release.pdf",
+              "sha256": "3de7081d84e2108fef86741f7a8aa24a351bd5f5a581edb54c49bf40ec2de7d4"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
@@ -3272,7 +3480,9 @@
       "https://press.kia.com/ie/en/home/media-resouces/press-kits/motoshows/2015/frankfurt_2015.html",
       "https://prod2-press.kia.com/eu/en/home/media-resouces/press-releases/2021/Kia-Ceed-range-gets-extensive-design-tech-and-powertrain-upgrades.html",
       "https://www.carbuyer.co.uk/kia/ceed/303374/new-2021-kia-ceed-prices-revealed",
-      "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)"
+      "https://de.wikipedia.org/wiki/Kia_cee%E2%80%99d_(ED)",
+      "https://manualzz.com/doc/56102512/kia-2010-ceed-specification",
+      "https://www.meinbezirk.at/innsbruck/c-motor/kia-ceed-das-beste-aus-zwei-welten_a95006"
     ],
     "needsReview": [
       {

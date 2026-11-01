@@ -1643,8 +1643,19 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 8
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -1826,6 +1837,63 @@
           "facelift": [
             "https://en.wikipedia.org/w/index.php?title=Peugeot_2008&oldid=1379120589"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.2 PureTech 100 BVM6 – UK MY2023 / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.2 PureTech 100 BVM6 – UK MY2023",
+              "source": "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf",
+              "sha256": "a0989a392dd68c7f5ea005aa8dd918dc3ec81c6f38df97e2d951e01799006524"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.2 PureTech 100 BVM6 – UK MY2023 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.2 PureTech 100 BVM6 – UK MY2023",
+              "source": "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf",
+              "sha256": "a0989a392dd68c7f5ea005aa8dd918dc3ec81c6f38df97e2d951e01799006524"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 8
+            },
+            "sources": [
+              "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.2 PureTech 130 EAT8 – UK MY2023 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.2 PureTech 130 EAT8 – UK MY2023",
+              "source": "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf",
+              "sha256": "6763a13bfa54951e682d31087ac81ad6990c91a81455ed552799d194ca94c8ec"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       }
     ],
@@ -1899,14 +1967,6 @@
       },
       {
         "field": "generations[1].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4075,8 +4135,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -4174,7 +4241,9 @@
           "https://www.wikidata.org/wiki/Q207976",
           "https://www.media.stellantis.com/em-en/peugeot/press/peugeot-e-208-50-years-of-electric-heritage-and-25-million-peugeot-city-cars",
           "https://en.wikipedia.org/w/index.php?title=Peugeot_206&oldid=1378201727",
-          "https://en.wikipedia.org/wiki/Peugeot_206"
+          "https://en.wikipedia.org/wiki/Peugeot_206",
+          "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf",
+          "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf"
         ],
         "fieldSources": {
           "facelift": [
@@ -4286,7 +4355,41 @@
               "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "2.0 16V CC 100 kW – 5st. manuál (2006-04) / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "2.0 16V CC 100 kW – 5st. manuál (2006-04)",
+              "source": "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf",
+              "sha256": "ecba2f174ed8aafad7290175932787889c5ee1b0841862824fa5bdce62c7ae20"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf"
+            ],
+            "method": "original-road-test",
+            "anchor": "ADAC original April2004 road test / Technische Daten: Frontantrieb",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
+        }
       }
     ],
     "sources": [
@@ -4294,7 +4397,9 @@
       "https://www.wikidata.org/wiki/Q207976",
       "https://www.media.stellantis.com/em-en/peugeot/press/peugeot-e-208-50-years-of-electric-heritage-and-25-million-peugeot-city-cars",
       "https://en.wikipedia.org/w/index.php?title=Peugeot_206&oldid=1378201727",
-      "https://en.wikipedia.org/wiki/Peugeot_206"
+      "https://en.wikipedia.org/wiki/Peugeot_206",
+      "https://xr793.com/wp-content/uploads/2023/07/2006-Peugeot-206-206-CC-AUS.pdf",
+      "https://assets.adac.de/image/upload/Autodatenbank/Autotest/AT3448_Peugeot_206_90_ESP_Pr%C3%A9mium/Peugeot_206_90_ESP_Pr%C3%A9mium.pdf"
     ],
     "needsReview": [
       {
@@ -4303,14 +4408,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4581,8 +4678,19 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -4622,12 +4730,56 @@
           "https://www.wikidata.org/wiki/Q222775",
           "https://www.media.stellantis.com/em-en/peugeot/press/peugeot-e-208-50-years-of-electric-heritage-and-25-million-peugeot-city-cars",
           "https://en.wikipedia.org/w/index.php?title=Peugeot_207&oldid=1374596211",
-          "https://de.wikipedia.org/wiki/Peugeot_207"
+          "https://de.wikipedia.org/wiki/Peugeot_207",
+          "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_207_2008.pdf",
+          "https://de.motor1.com/reviews/168983/peugeot-207-im-test-der-lowe-mit-den-zwei-gesichtern/"
         ],
         "fieldSources": {
           "facelift": [
             "https://en.wikipedia.org/w/index.php?title=Peugeot_207&oldid=1374596211"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_207_2008.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.10 Transmission: 5 speed manual; 4 speed auto-adaptive automatic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_207_2008.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.10 Transmission: 5 speed manual; 4 speed auto-adaptive automatic",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://de.motor1.com/reviews/168983/peugeot-207-im-test-der-lowe-mit-den-zwei-gesichtern/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2006 launch road test / Antrieb: Frontantrieb",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
         }
       }
     ],
@@ -4636,7 +4788,9 @@
       "https://www.wikidata.org/wiki/Q222775",
       "https://www.media.stellantis.com/em-en/peugeot/press/peugeot-e-208-50-years-of-electric-heritage-and-25-million-peugeot-city-cars",
       "https://en.wikipedia.org/w/index.php?title=Peugeot_207&oldid=1374596211",
-      "https://de.wikipedia.org/wiki/Peugeot_207"
+      "https://de.wikipedia.org/wiki/Peugeot_207",
+      "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_207_2008.pdf",
+      "https://de.motor1.com/reviews/168983/peugeot-207-im-test-der-lowe-mit-den-zwei-gesichtern/"
     ],
     "needsReview": [
       {
@@ -4649,14 +4803,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9470,8 +9616,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -9510,7 +9671,10 @@
           "https://en.wikipedia.org/w/index.php?oldid=1380622488",
           "https://www.wikidata.org/wiki/Q215227",
           "https://en.wikipedia.org/w/index.php?title=Peugeot_307&oldid=1380622488",
-          "https://en.wikipedia.org/wiki/Peugeot_307"
+          "https://en.wikipedia.org/wiki/Peugeot_307",
+          "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_Estate_2008.pdf",
+          "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_CC_2008.pdf",
+          "https://www.autoplenum.de/auto/tests/peugeot-307-cc-mit-neuem-look-und-erstmals-mit-diesel-id228"
         ],
         "fieldSources": {
           "facelift": [
@@ -9519,6 +9683,61 @@
           "marketNotesCs": [
             "https://en.wikipedia.org/w/index.php?title=Peugeot_307&oldid=1380622488"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_Estate_2008.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.6, Transmission:5speed manual marked for all three listed Estate engines",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_CC_2008.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Technical specification / Transmission:6speed manualHDi136;4speed Auto Adaptive Automatic2.0petrol",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_CC_2008.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Technical specification / Transmission:6speed manualHDi136;4speed Auto Adaptive Automatic2.0petrol",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.autoplenum.de/auto/tests/peugeot-307-cc-mit-neuem-look-und-erstmals-mit-diesel-id228"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2005 Peugeot307CC2.0HDi launch drive: Antrieb Frontantrieb",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
         }
       }
     ],
@@ -9526,7 +9745,10 @@
       "https://en.wikipedia.org/w/index.php?oldid=1380622488",
       "https://www.wikidata.org/wiki/Q215227",
       "https://en.wikipedia.org/w/index.php?title=Peugeot_307&oldid=1380622488",
-      "https://en.wikipedia.org/wiki/Peugeot_307"
+      "https://en.wikipedia.org/wiki/Peugeot_307",
+      "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_Estate_2008.pdf",
+      "https://www.allcarcentral.com/peugeot_UK_pdf/Peugeot_307_CC_2008.pdf",
+      "https://www.autoplenum.de/auto/tests/peugeot-307-cc-mit-neuem-look-und-erstmals-mit-diesel-id228"
     ],
     "needsReview": [
       {
@@ -9535,14 +9757,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18922,8 +19136,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "automated-manual",
+            "gears": 6
+          },
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "manual",
+            "gears": 6
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -18944,7 +19173,9 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?title=Citro%C3%ABn_Berlingo&oldid=1381608041",
-          "https://de.wikipedia.org/wiki/Peugeot_Partner"
+          "https://de.wikipedia.org/wiki/Peugeot_Partner",
+          "https://www.completecar.ie/car-reviews/article/Peugeot/Partner/Partner_Tepee/834/4722/2015-Peugeot-Partner-Tepee-review.html",
+          "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
         ],
         "fieldSources": {
           "code": [
@@ -18962,6 +19193,61 @@
           "facelift": [
             "https://en.wikipedia.org/w/index.php?title=Citro%C3%ABn_Berlingo&oldid=1381608041"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.completecar.ie/car-reviews/article/Peugeot/Partner/Partner_Tepee/834/4722/2015-Peugeot-Partner-Tepee-review.html"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original18May2015 PartnerTepee drive: GripControl operates while driving only front wheels",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automated-manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2015 BlueHDi100S&S EGS6: electronically controlled six-speed gearbox",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2015 motor list: VTi98/120 and BlueHDi75/100 Fünfgang-Schaltgetriebe; BlueHDi120 Sechsgang-Schaltgetriebe",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "2015 motor list: VTi98/120 and BlueHDi75/100 Fünfgang-Schaltgetriebe; BlueHDi120 Sechsgang-Schaltgetriebe",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       },
       {
@@ -19084,7 +19370,9 @@
       "https://www.wikidata.org/wiki/Q898614",
       "https://en.wikipedia.org/w/index.php?title=Citro%C3%ABn_Berlingo&oldid=1381608041",
       "https://de.wikipedia.org/wiki/Peugeot_Partner",
-      "https://www.ultimatespecs.com/car-specs/Peugeot/129994/Peugeot-Partner-3-e-Partner-50kWh-136.html"
+      "https://www.ultimatespecs.com/car-specs/Peugeot/129994/Peugeot-Partner-3-e-Partner-50kWh-136.html",
+      "https://www.completecar.ie/car-reviews/article/Peugeot/Partner/Partner_Tepee/834/4722/2015-Peugeot-Partner-Tepee-review.html",
+      "https://www.media.stellantis.com/de-de/peugeot/press/die-neuen-peugeot-partner-und-partner-tepee-robust-und-technisch-durchdacht"
     ],
     "needsReview": [
       {
@@ -19133,14 +19421,6 @@
       },
       {
         "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -21056,8 +21336,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -21071,7 +21358,8 @@
         "sources": [
           "https://de.wikipedia.org/wiki/Fiat_Ducato",
           "https://www.media.stellantis.com/at-de/peugeot/press/der-neue-peugeot-boxer-neue-qualitaten-im-dienst-der-businesskunden",
-          "https://www.media.stellantis.com/em-en/peugeot/press/new-peugeot-boxer-with-at8-automatic-gearbox-more-comfort-and-efficiency-for-professionals"
+          "https://www.media.stellantis.com/em-en/peugeot/press/new-peugeot-boxer-with-at8-automatic-gearbox-more-comfort-and-efficiency-for-professionals",
+          "https://www.smov.co.uk/pdf/boxer-pricing-and-spec-FEB2016.pdf"
         ],
         "specificationScope": {
           "market": "European-production",
@@ -21096,6 +21384,35 @@
           "code": [
             "https://de.wikipedia.org/wiki/Fiat_Ducato"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.smov.co.uk/pdf/boxer-pricing-and-spec-FEB2016.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Peugeot factory UK specifications February2016, Technical Specification / Driven Wheels: Front",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.smov.co.uk/pdf/boxer-pricing-and-spec-FEB2016.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Peugeot factory UK specifications February2016, Technical Specification / 6 speed manual",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
         }
       }
     ],
@@ -21103,7 +21420,8 @@
       "https://de.wikipedia.org/wiki/Fiat_Ducato",
       "https://en.wikipedia.org/wiki/Fiat_Ducato",
       "https://www.media.stellantis.com/at-de/peugeot/press/der-neue-peugeot-boxer-neue-qualitaten-im-dienst-der-businesskunden",
-      "https://www.media.stellantis.com/em-en/peugeot/press/new-peugeot-boxer-with-at8-automatic-gearbox-more-comfort-and-efficiency-for-professionals"
+      "https://www.media.stellantis.com/em-en/peugeot/press/new-peugeot-boxer-with-at8-automatic-gearbox-more-comfort-and-efficiency-for-professionals",
+      "https://www.smov.co.uk/pdf/boxer-pricing-and-spec-FEB2016.pdf"
     ],
     "needsReview": [
       {
@@ -21128,14 +21446,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "V této rešerši nedoplněno; neznámé hodnoty nejsou odhadovány."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "V této rešerši nedoplněno; neznámé hodnoty nejsou odhadovány."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "V této rešerši nedoplněno; neznámé hodnoty nejsou odhadovány."
       },
       {

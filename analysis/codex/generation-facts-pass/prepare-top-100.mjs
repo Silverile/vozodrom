@@ -1,0 +1,11 @@
+import fs from 'node:fs';import zlib from 'node:zlib';import assert from 'node:assert/strict';
+const root='analysis/codex/generation-facts-pass/top-100',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n'),cards=read('src/data/model-cards-index.json'),rows=[];
+assert(!fs.existsSync(root+'/selection.json'));fs.mkdirSync(root,{recursive:true});
+export const missing=g=>[...['length','width','height','wheelbase'].filter(f=>g.dimensionsMm?.[f]==null).map(f=>'dimensionsMm.'+f),...(g.trunkL==null?['trunkL']:[]),...(!g.drivetrains?.length?['drivetrains']:[]),...(!g.transmissions?.length?['transmissions']:[])];
+for(const[make,lines]of Object.entries(cards)){const p='src/data/stats/'+make+'.json',stats=fs.existsSync(p)?read(p):{};for(const[line,c]of Object.entries(lines))for(const[index,g]of c.generations.entries()){
+ const genFleet=stats[line]?.gens?.[index]?.fleet?.n??0,fields=missing(g);if(genFleet>0&&fields.length)rows.push({make,line,index,generation:g.code??g.name,from:g.from,to:g.to,bodyTypes:g.bodyTypes,genFleet,lineFleet:stats[line]?.fleet?.n??0,missing:fields});
+}}
+rows.sort((a,b)=>b.genFleet-a.genFleet||a.make.localeCompare(b.make)||a.line.localeCompare(b.line)||a.index-b.index);const selected=rows.slice(0,100);assert.equal(selected.length,100);
+const old=JSON.parse(zlib.gunzipSync(fs.readFileSync('analysis/codex/generation-facts-pass/batch-2/baseline.json.gz'))),base=Object.fromEntries(Object.keys(old).map(p=>[p,read(p)]));fs.writeFileSync(root+'/baseline.json.gz',zlib.gzipSync(JSON.stringify(base)));
+const fields=['dimensionsMm.length','dimensionsMm.width','dimensionsMm.height','dimensionsMm.wheelbase','trunkL','drivetrains','transmissions'];
+write(root+'/selection.json',selected);write(root+'/baseline-counts.json',{selectionBasis:'Freeze the top100 currently incomplete generations by their own CZ genFleet, descending; never replenish when a selected generation becomes complete.',eligibleBeforeCap:rows.length,generations:100,slots:700,missingSlots:selected.reduce((n,r)=>n+r.missing.length,0),byField:Object.fromEntries(fields.map(f=>[f,{missing:selected.filter(r=>r.missing.includes(f)).length,filled:100-selected.filter(r=>r.missing.includes(f)).length}])),cutoffGenFleet:selected.at(-1).genFleet});console.log(read(root+'/baseline-counts.json'));

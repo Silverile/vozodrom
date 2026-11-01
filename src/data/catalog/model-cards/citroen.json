@@ -1679,8 +1679,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -1721,9 +1728,40 @@
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
           "https://www.media.stellantis.com/uk-en/citroen/press/citroen-celebrates-30-years-of-berlingo-with-new-collection-trim-announced",
           "https://www.tuev-verband.de/fileadmin/user_upload/Content_local/2025_TUEV-Report_Nutzfahrzeuge.pdf",
-          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo"
+          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
+          "https://www.valeoservice.com/en-com/techassist/vehicle/P-8955?country=DE",
+          "https://www.scribd.com/doc/19937698/2004-c2-c3-c3-pluriel-xsara-picasso-berlingo"
         ],
-        "fieldSources": {}
+        "fieldSources": {},
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.valeoservice.com/en-com/techassist/vehicle/P-8955?country=DE"
+            ],
+            "method": "component-manufacturer-application",
+            "anchor": "Valeo component-manufacturer application: Berlingo/First MF1.8iMFLFX1997–2002, DriveType Front-Wheel Drive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.scribd.com/doc/19937698/2004-c2-c3-c3-pluriel-xsara-picasso-berlingo"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Original Citroën2004 Vehicle Technical Handbook / Berlingo petrol5-seater / MA5 5-speed gearbox",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": null,
@@ -1961,8 +1999,15 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2003,9 +2048,39 @@
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
           "https://www.media.stellantis.com/uk-en/citroen/press/citroen-celebrates-30-years-of-berlingo-with-new-collection-trim-announced",
           "https://www.tuev-verband.de/fileadmin/user_upload/Content_local/2025_TUEV-Report_Nutzfahrzeuge.pdf",
-          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo"
+          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
+          "https://de.motor1.com/reviews/167109/grosser-aber-auch-teurer-neuer-citroen-berlingo-wird-fast-zum-van/"
         ],
-        "fieldSources": {}
+        "fieldSources": {},
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://de.motor1.com/reviews/167109/grosser-aber-auch-teurer-neuer-citroen-berlingo-wird-fast-zum-van/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2008 launch road test / Antrieb: Frontantrieb",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://de.motor1.com/reviews/167109/grosser-aber-auch-teurer-neuer-citroen-berlingo-wird-fast-zum-van/"
+            ],
+            "method": "original-road-test",
+            "anchor": "Original2008 launch road test: all five launch engines with Fünfgang-Schaltgetriebe",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only"
+        }
       },
       {
         "code": "K9",
@@ -2120,8 +2195,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "automatic",
+            "gears": 8
+          },
+          {
+            "type": "single-speed",
+            "gears": 1
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -2294,7 +2384,9 @@
           "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/citroen/berlingo/",
           "https://service.citroen.com/ddb/index.html",
           "https://ftptic.audatex.es/AudatexDocBase/Actual/lista.pdf",
-          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo"
+          "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
+          "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf",
+          "https://www.sueverkruep.de/citroen/wp-content/uploads/sites/6/2019/11/Preisliste_Berlingo_16.pdf"
         ],
         "equipmentLines": [
           {
@@ -2350,7 +2442,77 @@
             ]
           }
         ],
-        "fieldSources": {}
+        "fieldSources": {},
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Berlingo III M Feel PureTech 110 BVM6 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "Berlingo III M Feel PureTech 110 BVM6",
+              "source": "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf",
+              "sha256": "2d84c2ae82df8851ac8b8ab8e5f56cbaf0326c09fbec2b5aff5d610e1fc044a0"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": 8
+            },
+            "sources": [
+              "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Berlingo III M Feel BlueHDi 130 EAT8 / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "Berlingo III M Feel BlueHDi 130 EAT8",
+              "source": "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf",
+              "sha256": "c59c78b119a085aec0e9b6b2dd26bbefc20c23115d1fc2813af828fbce1aca88"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "single-speed",
+              "gears": 1
+            },
+            "sources": [
+              "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "ë-Berlingo III M Feel 100kW 50kWh / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "ë-Berlingo III M Feel 100kW 50kWh",
+              "source": "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/Berlingo-price-and-specification-guide.pdf",
+              "sha256": "b12c6ab85c8dd9d1086ca4a3b773a3d1e8191d84b29bfab24692e63d747be3af"
+            }
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://www.sueverkruep.de/citroen/wp-content/uploads/sites/6/2019/11/Preisliste_Berlingo_16.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Citroën Deutschland factory price/specification guide1July2020, Kraftübertragung / Antrieb: Frontantrieb, M/XL",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
+        }
       }
     ],
     "sources": [
@@ -2363,7 +2525,11 @@
       "https://service.citroen.com/ddb/index.html",
       "https://ftptic.audatex.es/AudatexDocBase/Actual/lista.pdf",
       "https://en.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
-      "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo"
+      "https://de.wikipedia.org/wiki/Citro%C3%ABn_Berlingo",
+      "https://de.motor1.com/reviews/167109/grosser-aber-auch-teurer-neuer-citroen-berlingo-wird-fast-zum-van/",
+      "https://www.valeoservice.com/en-com/techassist/vehicle/P-8955?country=DE",
+      "https://www.scribd.com/doc/19937698/2004-c2-c3-c3-pluriel-xsara-picasso-berlingo",
+      "https://www.sueverkruep.de/citroen/wp-content/uploads/sites/6/2019/11/Preisliste_Berlingo_16.pdf"
     ],
     "needsReview": [
       {
@@ -2384,14 +2550,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2432,14 +2590,6 @@
       },
       {
         "field": "generations[1].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2485,14 +2635,6 @@
       {
         "field": "generations[2].facelift",
         "reason": "Dolozena cast modernizaci; uplnost seznamu a presne trzni zavedeni zbyva overit."
-      },
-      {
-        "field": "generations[2].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
         "field": "generations[2].dimensionsMm.length",
@@ -4669,8 +4811,23 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automated-manual",
+            "gears": 5
+          },
+          {
+            "type": "automatic",
+            "gears": null
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -4693,8 +4850,66 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381289086",
-          "https://de.wikipedia.org/wiki/Citro%C3%ABn_C3"
-        ]
+          "https://de.wikipedia.org/wiki/Citro%C3%ABn_C3",
+          "https://xr793.com/wp-content/uploads/2022/09/2005-Citroen-C3-Tech-Specs-UK.pdf",
+          "https://auto-preisliste.de/wp-content/uploads/2025/10/2002-09_preisliste_citroen_c3.pdf",
+          "https://xr793.com/wp-content/uploads/2022/09/2004-Citroen-Car-Price-List-UK.pdf"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2005-Citroen-C3-Tech-Specs-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Citroën UK July2005 factory product/technical specifications: Five speed manual; Five speed SensoDrive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automated-manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2005-Citroen-C3-Tech-Specs-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Citroën UK July2005 factory product/technical specifications: Five speed manual; Five speed SensoDrive",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://auto-preisliste.de/wp-content/uploads/2025/10/2002-09_preisliste_citroen_c3.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Citroën factory German September2002 technical sheet, Antrieb: Frontantrieb (search-indexed original table; direct PDF access403)",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automatic",
+              "gears": null
+            },
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/09/2004-Citroen-Car-Price-List-UK.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Citroën UK April2004 factory price list p.2: C3 1.4i SX Auto; forward gear count not stated here and remains null",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "drivetrains": "documented-variants-only"
+        }
       },
       {
         "code": "SC",
@@ -5596,7 +5811,10 @@
       "https://autocatalogarchive.com/wp-content/uploads/2017/02/Citroen-C3-2017-UK.pdf",
       "https://data.citroen.cz/web/pdf/ceniky/Novy_Citroen_C3_cenik.pdf",
       "https://data.citroen.cz/web/pdf/ceniky/Akcni_cenik_Novy_Citroen_C3.pdf",
-      "https://de.wikipedia.org/wiki/Citro%C3%ABn_C3"
+      "https://de.wikipedia.org/wiki/Citro%C3%ABn_C3",
+      "https://xr793.com/wp-content/uploads/2022/09/2005-Citroen-C3-Tech-Specs-UK.pdf",
+      "https://auto-preisliste.de/wp-content/uploads/2025/10/2002-09_preisliste_citroen_c3.pdf",
+      "https://xr793.com/wp-content/uploads/2022/09/2004-Citroen-Car-Price-List-UK.pdf"
     ],
     "needsReview": [
       {
@@ -5617,14 +5835,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

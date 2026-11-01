@@ -75,7 +75,12 @@
         "drivetrains": [
           "rwd"
         ],
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": 4155,
           "width": 1620,
@@ -494,14 +499,34 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1329339041",
           "https://commons.wikimedia.org/wiki/File:Skoda_S100_Greensted.jpg",
-          "https://cs.wikipedia.org/w/index.php?oldid=26216420"
-        ]
+          "https://cs.wikipedia.org/w/index.php?oldid=26216420",
+          "https://www.garaz.cz/clanek/testy-youngtimery-veterany-sest-skodovek-na-jednom-miste-klasicka-hundrtka-bok-po-boku-s-mladsimi-sourozenci-21008432"
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.garaz.cz/clanek/testy-youngtimery-veterany-sest-skodovek-na-jednom-miste-klasicka-hundrtka-bok-po-boku-s-mladsimi-sourozenci-21008432"
+            ],
+            "method": "original-road-test",
+            "anchor": "Martin Tolar original comparison drive30June2022, Škoda100L/110L/110LS, Stará známá technika: four-speed fully synchronized gearbox",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only"
+        }
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1329339041",
       "https://commons.wikimedia.org/wiki/File:Skoda_S100_Greensted.jpg",
-      "https://cs.wikipedia.org/w/index.php?oldid=26216420"
+      "https://cs.wikipedia.org/w/index.php?oldid=26216420",
+      "https://www.garaz.cz/clanek/testy-youngtimery-veterany-sest-skodovek-na-jednom-miste-klasicka-hundrtka-bok-po-boku-s-mladsimi-sourozenci-21008432"
     ],
     "needsReview": [
       {
@@ -526,10 +551,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -852,7 +873,12 @@
         "drivetrains": [
           "rwd"
         ],
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 4
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
@@ -1053,6 +1079,29 @@
           "trunkL": [
             "https://cs.wikipedia.org/w/index.php?oldid=26215787"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 4
+            },
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-1100-mbx-1967-1969/"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1100 MBX De Luxe / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1100 MBX De Luxe",
+              "source": "https://www.skoda-storyboard.com/en/press-kits/classic-days-2026-press-kit/skoda-1100-mbx-1967-1969/",
+              "sha256": "434af01bcea793bdf890571940f323535d1db072c19c3bbfd132b0391caf4923"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only"
         }
       }
     ],
@@ -1079,10 +1128,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].transmissions",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -4622,12 +4667,19 @@
           }
         ],
         "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "rr"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
+          "length": 4200,
+          "width": 1610,
+          "height": 1400,
           "wheelbase": null
         },
         "specificationScope": {
@@ -5262,7 +5314,8 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_130_GL.JPG",
           "https://cs.wikipedia.org/w/index.php?oldid=26245159",
           "https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf",
-          "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
+          "https://cs.wikipedia.org/wiki/%C5%A0koda_130",
+          "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
         ],
         "fieldSources": {
           "from": [
@@ -5271,6 +5324,83 @@
           "to": [
             "https://cs.wikipedia.org/wiki/%C5%A0koda_130"
           ]
+        },
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "rr",
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.1 Characteristics: rear axle drive; engine behind rear axle",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.1 The Škoda 130 obtained a five-speed gearbox",
+            "noteCs": "Potvrzené možnosti v citovaném evropském podkladu; seznam nemusí pokrývat všechny roky a trhy."
+          },
+          {
+            "field": "dimensionsMm.length",
+            "value": 4200,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.1 Dimensions; closed five-seat sedan",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "sedan",
+              "reference": "Sériový sedan 130/135/136; tovární historický profil",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.width",
+            "value": 1610,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.1 Dimensions; closed five-seat sedan",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "sedan",
+              "reference": "Sériový sedan 130/135/136; tovární historický profil",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.height",
+            "value": 1400,
+            "sources": [
+              "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.1 Dimensions; closed five-seat sedan",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "sedan",
+              "reference": "Sériový sedan 130/135/136; tovární historický profil",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only",
+          "dimensionsMm.length": "standard-body-reference",
+          "dimensionsMm.width": "standard-body-reference",
+          "dimensionsMm.height": "standard-body-reference"
         }
       }
     ],
@@ -5278,7 +5408,8 @@
       "https://en.wikipedia.org/w/index.php?oldid=1381472650",
       "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_130_GL.JPG",
       "https://cs.wikipedia.org/w/index.php?oldid=26245159",
-      "https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf"
+      "https://auta5p.eu/zkusenosti/skoda_125/skoda-105-136-navod.pdf",
+      "https://www.allcarcentral.com/Skoda_pdf/Skoda_130_135_136_%28Type_742_746%29_1984_1990.pdf"
     ],
     "needsReview": [
       {
@@ -5307,26 +5438,6 @@
       },
       {
         "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].drivetrains",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -8303,13 +8414,24 @@
           }
         ],
         "engineCoverage": "representative-documented-versions",
-        "drivetrains": null,
-        "transmissions": null,
+        "drivetrains": [
+          "fwd"
+        ],
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 5
+          },
+          {
+            "type": "automated-manual",
+            "gears": 5
+          }
+        ],
         "dimensionsMm": {
           "length": null,
           "width": null,
           "height": null,
-          "wheelbase": null
+          "wheelbase": 2420
         },
         "specificationScope": {
           "market": "source-production",
@@ -8318,7 +8440,7 @@
           "bodyType": null,
           "noteCs": "Souhrn ze zdroje pro generaci. Regionální verze, výbavy a roky nejsou úplně rozlišeny; nejde o úplný seznam kombinací. Původní interní označení podkladu: Citigo — základní řada."
         },
-        "trunkL": null,
+        "trunkL": 251,
         "markets": [
           "Europe"
         ],
@@ -8555,7 +8677,96 @@
               ]
             }
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "drivetrains",
+            "value": "fwd",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 MPI 44 kW 5MT 3-door (03/2017) / drivetrains",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 MPI 44 kW 5MT 3-door (03/2017)",
+              "source": "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf",
+              "sha256": "6d2c2ecd7e7d38f0ab5b81f8a260414802ce485a0a2b381a85e6b47cb64ccbb3"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 MPI 44 kW 5MT 3-door (03/2017) / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 MPI 44 kW 5MT 3-door (03/2017)",
+              "source": "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf",
+              "sha256": "6d2c2ecd7e7d38f0ab5b81f8a260414802ce485a0a2b381a85e6b47cb64ccbb3"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "automated-manual",
+              "gears": 5
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 MPI 44 kW ASG 3-door (03/2017) / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 MPI 44 kW ASG 3-door (03/2017)",
+              "source": "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf",
+              "sha256": "e5e9f5edc56b67403c870267b7d7340ff3e076f03e3bfdad3cd601eb6740485c"
+            }
+          },
+          {
+            "field": "dimensionsMm.wheelbase",
+            "value": 2420,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "CITIGO petrol technical data: wheelbase2420, both3/5door; G-TEC2421 excluded",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "hatchback",
+              "reference": "Benzinové Citigo2017, společný rozvor3/5dveřového hatchbacku; benzin tvoří84.58% flotily generace dle src/data/stats/skoda.json; G-TEC má2421mm",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "trunkL",
+            "value": 251,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2017/03/170307-Geneva-2017-Press-Kit.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "CITIGO petrol technical data / Storage capacity251l",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "hatchback",
+              "reference": "Benzinové Citigo3/5dveří, bez sklopení zadních opěradel; benzin tvoří84.58% flotily generace dle src/data/stats/skoda.json; CNG/elektrické objemy se nezobecňují",
+              "measurementBasis": "l; standardní poloha zadních sedadel, nezvětšený zavazadlový prostor"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "drivetrains": "documented-variants-only",
+          "transmissions": "documented-variants-only",
+          "dimensionsMm.wheelbase": "standard-body-reference",
+          "trunkL": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -8583,14 +8794,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[0].drivetrains",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[0].dimensionsMm.length",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -8603,10 +8806,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[0].specificationScope.modelYear",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -8616,10 +8815,6 @@
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -11777,7 +11972,7 @@
         ],
         "dimensionsMm": {
           "length": 3960,
-          "width": null,
+          "width": 1646,
           "height": null,
           "wheelbase": 2462
         },
@@ -11820,7 +12015,8 @@
           "https://www.allcarcentral.com/Skoda_pdf/Skoda_Fabia_RS_2003_2007.pdf",
           "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/skoda/fabia/1generation-facelift/995589/",
           "https://www.auto.cz/test-skoda-fabia-junior-cena-jako-zaklinadlo-1181",
-          "https://en.wikipedia.org/wiki/%C5%A0koda_Fabia"
+          "https://en.wikipedia.org/wiki/%C5%A0koda_Fabia",
+          "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual"
         ],
         "trims": [
           {
@@ -12333,10 +12529,26 @@
               "source": "https://xr793.com/wp-content/uploads/2022/09/2006-Skoda-Fabia-Specs-Prices-UK.pdf",
               "sha256": "179fd2114f0a4c629fa8a25935fe3aeb8baa694d142608a0fd34806acf722d88"
             }
+          },
+          {
+            "field": "dimensionsMm.width",
+            "value": 1646,
+            "sources": [
+              "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Factory FabiaI manual, p.206 Dimensions: Fabia/Combi/Sedan/RS widths all1646",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "hatchback/kombi/sedan",
+              "reference": "Šířka bez zrcátek je společná všem čtyřem sériovým karosářským provedením v tovární tabulce; výšky se liší",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
           }
         ],
         "generationFactCoverage": {
-          "drivetrains": "documented-variants-only"
+          "drivetrains": "documented-variants-only",
+          "dimensionsMm.width": "common-body-component"
         }
       },
       {
@@ -14429,7 +14641,7 @@
         ],
         "dimensionsMm": {
           "length": null,
-          "width": null,
+          "width": 1732,
           "height": null,
           "wheelbase": 2470
         },
@@ -14468,7 +14680,8 @@
           "https://commons.wikimedia.org/wiki/File:2014_Skoda_Fabia_III_Typ_NJ3_1.2_TSI_Style_Metall-Grau-Metallic_Vorderansicht.jpg",
           "https://cdn.skoda-storyboard.com/2018/08/TD-FABIA-petrol_EN.pdf",
           "https://cdn.skoda-storyboard.com/2021/04/SKODA_FABIA_Historie_modelu.pdf",
-          "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/"
+          "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/",
+          "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf"
         ],
         "trims": [
           {
@@ -15264,7 +15477,27 @@
               "https://www.skoda-auto.cz/_doc/b0aa0eb4-90e0-4637-b3d5-d97d978cecca"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.width",
+            "value": 1732,
+            "sources": [
+              "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "Factory Czech Fabia/Fabia Combi brochure12/2016, final technical drawings: both body widths1732",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "hatchback/kombi",
+              "reference": "Šířka bez zrcátek společná základnímu hatchbacku i kombi; rozdílné délky/výšky se nepřebírají",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.width": "common-body-component"
+        }
       },
       {
         "code": "IV (PJ)",
@@ -16062,7 +16295,9 @@
       "https://cdn.skoda-storyboard.com/2021/04/SKODA_FABIA_Historie_modelu.pdf",
       "https://www.skoda-auto.com/_doc/764cfeca-e933-425e-b1cd-dc0a2056fcfe",
       "https://www.skoda-storyboard.com/en/press-kits/design-and-technology-update-for-the-skoda-fabia/exterior-new-design-features-for-a-more-distinctive-appearance/",
-      "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/"
+      "https://www.skoda-storyboard.com/en/press-kits/the-new-skoda-fabia-media-launch-press-kit/the-skoda-fabia-setting-a-new-benchmark-in-its-segment/",
+      "https://www.manualslib.fr/manual/584883/Skoda-Fabia-2007.html?page=206#manual",
+      "https://www.autocentrum.cz/data/File/2017/SKODA/fabia-fabia-combi-katalog.pdf"
     ],
     "needsReview": [
       {
@@ -16358,10 +16593,6 @@
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
-        "field": "generations[2].dimensionsMm.width",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
         "field": "generations[2].dimensionsMm.height",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
@@ -16460,10 +16691,6 @@
       {
         "field": "scope",
         "reason": "Keep aggregate record null; new datedEuroIV sample5.3 separates revisions. Older2003UKbrochure5.1 remains another publication value, not universal conflict resolver."
-      },
-      {
-        "field": "generations[0].dimensionsMm.width",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
         "field": "generations[0].dimensionsMm.height",
@@ -21566,7 +21793,7 @@
           "bodyType": null,
           "noteCs": "Souhrn ze zdroje pro generaci. Regionální verze, výbavy a roky nejsou úplně rozlišeny; nejde o úplný seznam kombinací. Původní interní označení podkladu: Kamiq — základní řada."
         },
-        "trunkL": null,
+        "trunkL": 400,
         "markets": [
           "Europe"
         ],
@@ -22248,7 +22475,27 @@
               "https://www.skoda-auto.cz/novinky/novinky-detail/2024-01-29-skoda-auto-zahajila-vyrobu-modernizovanych-modelu-scala-a-kamiq"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "trunkL",
+            "value": 400,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/01/TD-Kamiq-en_e3841ce1.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.2 Storage capacity: 400 l",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Kamiq 2024, standardní evropská benzinová karoserie; bez sklopení opěradel",
+              "measurementBasis": "l; standardní poloha zadních sedadel, nezvětšený zavazadlový prostor"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "trunkL": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -22339,10 +22586,6 @@
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -23169,9 +23412,18 @@
           "fwd",
           "awd"
         ],
-        "transmissions": null,
+        "transmissions": [
+          {
+            "type": "manual",
+            "gears": 6
+          },
+          {
+            "type": "dual-clutch",
+            "gears": 7
+          }
+        ],
         "dimensionsMm": {
-          "length": null,
+          "length": 4390,
           "width": 1841,
           "height": null,
           "wheelbase": null
@@ -23764,7 +24016,64 @@
               "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "manual",
+              "gears": 6
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.0 TSI 81 kW – 6st. manuál (2022-04-04) / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.0 TSI 81 kW – 6st. manuál (2022-04-04)",
+              "source": "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf",
+              "sha256": "1caf5241cfe6134333bd4ee28f4ccb479eafb70b871668631fe39ba7f6a31081"
+            }
+          },
+          {
+            "field": "transmissions",
+            "value": {
+              "type": "dual-clutch",
+              "gears": 7
+            },
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.5 TSI 110 kW – 7st. dvouspojkový automat (2022-04-04) / transmissions",
+            "noteCs": "Doložená technická verze stejného pokolení. Jde o seznam potvrzených možností, nikoli tvrzení o úplnosti nabídky ve všech letech a zemích.",
+            "technicalVersionProof": {
+              "name": "1.5 TSI 110 kW – 7st. dvouspojkový automat (2022-04-04)",
+              "source": "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf",
+              "sha256": "5067bb24206ea63d5549a8090d042a45d5af6bcb02c3991156ff27ab1cb90cb3"
+            }
+          },
+          {
+            "field": "dimensionsMm.length",
+            "value": 4390,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-KAROQ-petrol-en.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.2 Outside dimensions / length",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní Karoq po modernizaci 2022; délka běžné evropské karoserie",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "transmissions": "documented-variants-only",
+          "dimensionsMm.length": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -23780,14 +24089,6 @@
       {
         "field": "generations[0].specificationScope",
         "reason": "Shared/regional source specifications require European badge/variant reconciliation."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
         "field": "generations[0].dimensionsMm.height",
@@ -23995,9 +24296,9 @@
           }
         ],
         "dimensionsMm": {
-          "length": null,
+          "length": 4697,
           "width": 1882,
-          "height": null,
+          "height": 1655,
           "wheelbase": 2791
         },
         "specificationScope": {
@@ -26248,7 +26549,43 @@
             "noteCs": "Rok označuje doloženou nabídku nebo představení, nikoli potvrzený začátek a konec výroby této výbavy."
           }
         ],
-        "drawingStage": 0
+        "drawingStage": 0,
+        "generationFactEvidence": [
+          {
+            "field": "dimensionsMm.length",
+            "value": 4697,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/08/TD-KODIAQ-en.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.2 Outside dimensions: 4697 / 1882 / 1655 / 2791; 5 seater {7 seater}",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie Kodiaq I 2017; uvedená výška společná 5/7místným verzím v tabulce",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          },
+          {
+            "field": "dimensionsMm.height",
+            "value": 1655,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2016/08/TD-KODIAQ-en.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.2 Outside dimensions: 4697 / 1882 / 1655 / 2791; 5 seater {7 seater}",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "suv",
+              "reference": "Standardní evropská karoserie Kodiaq I 2017; uvedená výška společná 5/7místným verzím v tabulce",
+              "measurementBasis": "mm; šířka bez zrcátek"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "dimensionsMm.length": "standard-body-reference",
+          "dimensionsMm.height": "standard-body-reference"
+        }
       },
       {
         "code": null,
@@ -27292,14 +27629,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
@@ -42563,7 +42892,7 @@
           "bodyType": null,
           "noteCs": "Souhrn ze zdroje pro generaci. Regionální verze, výbavy a roky nejsou úplně rozlišeny; nejde o úplný seznam kombinací. Původní interní označení podkladu: Scala — základní řada."
         },
-        "trunkL": null,
+        "trunkL": 467,
         "markets": [
           "Europe"
         ],
@@ -43266,7 +43595,27 @@
               "https://www.skoda-auto.cz/novinky/novinky-detail/2024-04-02-skoda-auto-oslavuje-hokejove-mistrovstvi-sveta-v-cesku-akcnimi-modely-drive"
             ]
           }
-        ]
+        ],
+        "generationFactEvidence": [
+          {
+            "field": "trunkL",
+            "value": 467,
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2024/01/TD-Scala-en_8e7b3fcc.pdf"
+            ],
+            "method": "manufacturer-document",
+            "anchor": "p.2 Storage capacity: 467 l",
+            "noteCs": "Referenční standardní karoserie; podmínky a měřicí základ jsou uvedeny v rozsahu údaje.",
+            "scope": {
+              "bodyType": "hatchback",
+              "reference": "Scala 2024, standardní pětidveřová benzinová karoserie; bez sklopení opěradel",
+              "measurementBasis": "l; standardní poloha zadních sedadel, nezvětšený zavazadlový prostor"
+            }
+          }
+        ],
+        "generationFactCoverage": {
+          "trunkL": "standard-body-reference"
+        }
       }
     ],
     "sources": [
@@ -43377,10 +43726,6 @@
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
-      },
-      {
-        "field": "generations[0].trunkL",
         "reason": "Value not established for this field/scope; null does not mean zero or no available variant."
       },
       {
