@@ -8,6 +8,13 @@ export function normalizeVariant(value){
  return /^(?:motor(?:en)?|engine(?:s)?|benzin|diesel|petrol|gasoline|ottomotor(?:en)?|unnamed(?::.*)?)$/i.test(v)?null:v||null;
 }
 export const powerValues=e=>[...new Set((e.availablePowerKw?.length?e.availablePowerKw:[e.powerKwMin,e.powerKwMax]).filter(Number.isFinite))];
+export function normalizeImportedVariant(make,line,engine){
+ let v=normalizeVariant(engine.variant);if(!v)return v;
+ v=v.replace(/\s+(?:Manual|Automatic|Auto|Steptronic|Stepspeed|Tiptronic)$/i,'').trim();
+ if(make==='mercedes-benz'&&line==='w114-w115')v=v.replace(/\s+Long$/i,'').replace(/^230\.6$/,'230').replace(/^280 CE$/,'280 E').replace(/^(\d{3}) C$/,'$1');
+ if(/^(?:\d+(?:st|nd|rd|th) Anniversary|RWD|FWD|AWD|2WD|4WD)$/i.test(v))v=labelFromStoredFacts(engine);
+ return v;
+}
 const folded=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 export function balancedBrackets(value){
  const stack=[],pairs={')':'(',']':'[','}':'{'};
@@ -122,6 +129,8 @@ export function evidenceProblem(g,index,e){
 }
 export function rejectEngine(make,line,engine){
  const v=engine.variant.toUpperCase();
+ const s=engine.sourceScope??{};
+ if(make==='maruti-suzuki'&&(engine.sources??[]).some(u=>/wikipedia\.org\/wiki\/Suzuki_|ultimatespecs\.com\/car-specs\/Suzuki\//i.test(u))&&!/\bMaruti\b/i.test([s.tableSection,s.rowNotes,s.articleTitle,s.originalVariant,s.specificationPage?.title].filter(Boolean).join(' ')))return 'Shared Suzuki source needs explicit Maruti version attribution';
  if(/\bmotorsport\b|\brally(?:ing)?\b/i.test(engine.sourceScope?.tableSection??''))return 'Motorsport section is not a road-car engine specification';
  if(/CONCEPT|PROTOTYP|EXPERIMENTAL|IMPULS/.test(v+' '+(engine.sourceScope?.tableSection??'').toUpperCase()))return 'Experimental/concept version';
  if(make==='audi'&&/^a[3468]$/.test(line)&&new RegExp(`\\bR?S${line.slice(1)}\\b`).test(v))return 'Explicit S/RS sibling badge has its own catalogue line';

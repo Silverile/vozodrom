@@ -1,6 +1,6 @@
 // Ordinary wave research is staged separately from mutations. One root per batch.
 import fs from 'node:fs';import cp from 'node:child_process';import crypto from 'node:crypto';import assert from 'node:assert/strict';
-import {normalizeVariant,powerValues,evidenceProblem,balancedBrackets,labelFromStoredFacts,rejectEngine} from './engine-throughput-policy.mjs';
+import {normalizeVariant,powerValues,evidenceProblem,balancedBrackets,labelFromStoredFacts,rejectEngine,normalizeImportedVariant} from './engine-throughput-policy.mjs';
 const root=process.argv.find(a=>a.startsWith('--root='))?.slice(7)??'analysis/codex/wave-3/batch-1';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n'),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 const queue=read(root+'/queue.json'),research=read(root+'/research.json'),index=read('src/data/model-cards-index.json');
@@ -28,7 +28,7 @@ for(const r of research.lines){const [make,line]=r.id.split('/'),owner=owners.ge
    else{assert(candidate.bodyEvidence?.url);g.bodyTypes=decision.bodyTypes??candidate.changes.bodyTypes;g.sources=[...new Set([...(g.sources??[]),candidate.bodyEvidence.url])];changes.push({index:i,kind:'bodyTypes',after:g.bodyTypes,evidence:candidate.bodyEvidence});}
   }
   const seen=new Set((g.engines??[]).flatMap(e=>powerValues(e).map(kw=>e.variant.toLowerCase()+'|'+kw)));
-  for(const raw of candidate.engines){let e=structuredClone(raw);e.variant=normalizeVariant(e.variant);if(/^Cabrio\s+\d/i.test(e.variant??''))e.variant=e.variant.replace(/^Cabrio\s+/i,'');if(!e.variant||e.variant.length>40||!balancedBrackets(e.variant)||/^(?:Hardtop|Softtop|\d+\s+Porte)$|\b(?:Limousine|Touring|Universal|Coup[eé])$/i.test(e.variant))e.variant=labelFromStoredFacts(e);if(!e.variant||e.variant.length>40||!balancedBrackets(e.variant)){rejected.push({id:r.id,index:i,kind:'engine',reason:'No short technical name'});continue;}
+  for(const raw of candidate.engines){let e=structuredClone(raw);e.variant=normalizeImportedVariant(make,line,e);if(/^Cabrio\s+\d/i.test(e.variant??''))e.variant=e.variant.replace(/^Cabrio\s+/i,'');if(!e.variant||e.variant.length>40||!balancedBrackets(e.variant)||/^(?:Hardtop|Softtop|\d+\s+Porte)$|\b(?:Limousine|Touring|Universal|Coup[eé])$/i.test(e.variant))e.variant=labelFromStoredFacts(e);if(!e.variant||e.variant.length>40||!balancedBrackets(e.variant)){rejected.push({id:r.id,index:i,kind:'engine',reason:'No short technical name'});continue;}
    const reason=(g.from==null?'Generation start remains unresolved after date review':null)??evidenceProblem(g,i,e)??rejectEngine(make,line,e);if(reason){rejected.push({id:r.id,index:i,kind:'engine',variant:e.variant,reason});continue;}
    // Infobox fallback must contain a single explicit vehicle output and recorded fuel evidence.
    const scope=e.sourceScope;

@@ -10,8 +10,11 @@ html='<table><tr><th>Production</th><td><div>1993–2007</div><div>2011–2013</
 text=ns['observations'](t.lxml.html.fromstring(html))[0]['fields']['Production'];assert ns['spans'](text) is None
 assert ns['spans']('1970–1973')==[1970,1973];assert ns['spans']('2024–present')==[2024,None]
 assert ns['spans']('2020 prototype') is None
+assert ns['spans']('2020')==[2020,None]  # a lone year does not prove production ended
 print('PASS: adjacent production periods remain separate; pickup extensions and interrupted production cannot silently form one automatic range')
 
 assert ns['bodies']('5-door coupe SUV')==['suv']
 assert ns['bodies']('2-door coupe')==['kupe']
+assert ns['bodies']('Cargo Van Crew Van Pickup Cab Chassis Minibus')==['pickup','dodavka']
+assert ns['bodies']('5-door liftback')==['liftback']
 print('PASS: coupe SUV is one SUV body; a standalone coupe remains a coupe')

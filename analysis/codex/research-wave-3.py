@@ -27,13 +27,15 @@ def spans(text):
  if max(years)>2026 or min(years)<1800:return None
  current=bool(re.search(r'present|current|seit|dosud|současnost',text,re.I))
  if len(years)==1 and not current and not re.fullmatch(r'\s*(?:18|19|20)\d{2}(?:\s*\([^)]*\))?\s*',text):return None
- return [min(years),None if current else max(years)]
+ return [min(years),None if current or len(years)==1 else max(years)]
 
 def bodies(text):
  out=[]
  for pattern,key in [(r'station wagon|estate|kombi','kombi'),(r'hatchback|schrägheck','hatchback'),(r'sedan|saloon|limousine','sedan'),(r'roadster|convertible|cabriolet|cabrio|spider|barchetta','kabriolet'),(r'coup[eé]|berlinetta','kupe'),(r'\bSUV\b|sport.?utility|geländewagen|crossover','suv'),(r'\bMPV\b|minivan','mpv'),(r'pick.?up','pickup')]:
   if re.search(pattern,text,re.I):out.append(key)
  if 'suv' in out and 'kupe' in out and re.search(r'coup[eé]\s*SUV|SUV\s*coup[eé]',text,re.I):out.remove('kupe')
+ if re.search(r'\bvan\b|\bminibus\b|cab chassis',text,re.I):out.append('dodavka')
+ if re.search(r'\bliftback\b',text,re.I):out.append('liftback')
  return out
 
 def observations(tree):
