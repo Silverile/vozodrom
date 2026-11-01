@@ -4126,7 +4126,10 @@
         "to": 1981,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "dodavka",
+          "mpv"
+        ],
         "engines": [
           {
             "variant": "1203",
@@ -4410,7 +4413,35 @@
           "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG",
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
           "https://cdn.skoda-storyboard.com/2018/09/180914-50-years-of-the-%C5%A0KODA-1203-Reliable-all-round-van-with-cult-status.pdf",
-          "https://de.wikipedia.org/wiki/Škoda_1203"
+          "https://de.wikipedia.org/wiki/Škoda_1203",
+          "https://www.skoda-storyboard.com/en/press-releases/skoda-1203-marking-55-years-since-the-iconic-series-debut/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1203 – původní dodávka",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "1203 – původní dodávka",
+              "bodyType": "dodavka",
+              "source": "https://cdn.skoda-storyboard.com/2023/01/CZ_Skoda-Auto-Rok-2023-je-plny-zajimavych-vyroci_d8526d74.pdf",
+              "sha256": "10e2516fa2263dfa1e73ad6fd702222620e647c074a8c93193832912721e83a3"
+            }
+          },
+          {
+            "bodyType": "mpv",
+            "sources": [
+              "https://www.skoda-storyboard.com/en/press-releases/skoda-1203-marking-55-years-since-the-iconic-series-debut/"
+            ],
+            "method": "body-taxonomy-mapping",
+            "anchor": "1203 / eight-seater minibus Standard and DeLuxe",
+            "noteCs": "Vlastní historie osmimístného minibusu téže rodiny. V desetipoložkové taxonomii osobních vozů je mapován jako MPV; valník se nepřevádí na pickup."
+          }
         ]
       }
     ],
@@ -4420,7 +4451,8 @@
       "https://commons.wikimedia.org/wiki/File:%C5%A0KODA_1203.JPG",
       "https://commons.wikimedia.org/wiki/File:%C5%A0koda-1203-sanitn%C3%AD_Doln%C3%AD-Kaln%C3%A1-P1040342.jpg",
       "https://cdn.skoda-storyboard.com/2018/09/180914-50-years-of-the-%C5%A0KODA-1203-Reliable-all-round-van-with-cult-status.pdf",
-      "https://de.wikipedia.org/wiki/Škoda_1203"
+      "https://de.wikipedia.org/wiki/Škoda_1203",
+      "https://www.skoda-storyboard.com/en/press-releases/skoda-1203-marking-55-years-since-the-iconic-series-debut/"
     ],
     "needsReview": [
       {
@@ -4433,10 +4465,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
@@ -37356,7 +37384,9 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "dodavka"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -37862,6 +37892,24 @@
           "https://commons.wikimedia.org/wiki/File:20221030_159_Naxos.jpg",
           "https://www.aastaauto.ee/files/modelfiles/Praktik_hinnakiri_RUS.pdf",
           "https://en.wikipedia.org/wiki/%C5%A0koda_Roomster"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://cs.wikipedia.org/w/index.php?oldid=20610870"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.2 HTP 51 kW 5M – 14palcová kola (2011)",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "1.2 HTP 51 kW 5M – 14palcová kola (2011)",
+              "bodyType": "dodavka",
+              "source": "https://cs.wikipedia.org/w/index.php?oldid=20610870",
+              "sha256": "09acbf1b55ce0501e5692cb0f2fdef98243f2f494849acbd9ed1ffd3b029d4e5"
+            }
+          }
         ]
       }
     ],
@@ -37891,10 +37939,6 @@
       },
       {
         "field": "generations[0].code",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {

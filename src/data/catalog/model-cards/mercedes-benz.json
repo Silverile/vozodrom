@@ -5932,7 +5932,10 @@
         "to": 2019,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -6422,7 +6425,30 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1376100598"
+          "https://en.wikipedia.org/w/index.php?oldid=1376100598",
+          "https://www.mercedes-benz.jp/news/release/2013/20130724_1_e.pdf",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.mercedes-benz.jp/news/release/2013/20130724_1_e.pdf"
+            ],
+            "method": "body-taxonomy-mapping",
+            "anchor": "CLA first-generation / July2013 / four-door coupe",
+            "noteCs": "ČtyřdveřovéCoupé s odděleným víkem zavazadelníku je v taxonomii inzerce řazeno jako sedan, stejně jakoCLS; ShootingBrake je kombi. Jde o normalizaci karoserie, nikoli o tvrzení výrobce, že používá slovo sedan."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MERCEDES-BENZ - CLA Shooting Brake (X117) 01/15→03/19",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -6432,7 +6458,10 @@
         "to": 2025,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -7096,7 +7125,35 @@
         ],
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1376100598",
-          "https://media.mercedes-benz.com/article/5bec6be2-772b-475f-a99f-013c8fcdb4de"
+          "https://media.mercedes-benz.com/article/5bec6be2-772b-475f-a99f-013c8fcdb4de",
+          "https://www.mercedesonlease.co.uk/wp-content/uploads/2019/07/cla-coupe-shooting-brake.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.mercedesonlease.co.uk/wp-content/uploads/2019/07/cla-coupe-shooting-brake.pdf"
+            ],
+            "method": "body-taxonomy-mapping",
+            "anchor": "Factory CLA Coupe/ShootingBrake June2019 production",
+            "noteCs": "ČtyřdveřovéCoupé s odděleným víkem zavazadelníku je v taxonomii inzerce řazeno jako sedan, stejně jakoCLS; ShootingBrake je kombi. Jde o normalizaci karoserie, nikoli o tvrzení výrobce, že používá slovo sedan."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://media.mercedes-benz.com/article/5bec6be2-772b-475f-a99f-013c8fcdb4de"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "CLA 180 X118 Shooting Brake",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "CLA 180 X118 Shooting Brake",
+              "bodyType": "kombi",
+              "source": "https://media.mercedes-benz.com/article/5bec6be2-772b-475f-a99f-013c8fcdb4de",
+              "sha256": "d1d301b3fa6810e372e4fc3034e216f718ba7da751a433bed02dbe372b0b6e75"
+            }
+          }
         ]
       },
       {
@@ -7106,7 +7163,10 @@
         "to": null,
         "productionStatus": "current",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "electric",
@@ -7192,13 +7252,35 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1376100598",
-          "https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_174/178"
+          "https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_174/178",
+          "https://media.mercedes-benz.com/en/article/634e7912-d659-461a-8c19-b622458b02bf"
         ],
         "fieldSources": {
           "productionStatus": [
             "https://en.wikipedia.org/w/index.php?oldid=1376100598"
           ]
-        }
+        },
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://media.mercedes-benz.com/en/article/634e7912-d659-461a-8c19-b622458b02bf"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "New CLA Saloon2025 / ShootingBrake Europe2026",
+            "noteCs": "Vlastní novýCLA Saloon a ShootingBrake sdílejí přední část; kombi vstoupilo do evropské série2026. Není převzato z předchozíhoX118."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://media.mercedes-benz.com/en/article/634e7912-d659-461a-8c19-b622458b02bf"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "New CLA Saloon2025 / ShootingBrake Europe2026",
+            "noteCs": "Vlastní novýCLA Saloon a ShootingBrake sdílejí přední část; kombi vstoupilo do evropské série2026. Není převzato z předchozíhoX118."
+          }
+        ]
       }
     ],
     "sources": [
@@ -7206,7 +7288,11 @@
       "https://www.wikidata.org/wiki/Q2571085",
       "https://en.wikipedia.org/wiki/List_of_Mercedes-Benz_vehicles",
       "https://media.mercedes-benz.com/article/5bec6be2-772b-475f-a99f-013c8fcdb4de",
-      "https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_174/178"
+      "https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_174/178",
+      "https://www.mercedes-benz.jp/news/release/2013/20130724_1_e.pdf",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://www.mercedesonlease.co.uk/wp-content/uploads/2019/07/cla-coupe-shooting-brake.pdf",
+      "https://media.mercedes-benz.com/en/article/634e7912-d659-461a-8c19-b622458b02bf"
     ],
     "needsReview": [
       {
@@ -7215,10 +7301,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7267,10 +7349,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7767,10 +7845,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -11879,7 +11953,9 @@
         "to": 2019,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -12208,7 +12284,20 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1376343798"
+          "https://en.wikipedia.org/w/index.php?oldid=1376343798",
+          "https://media.mbusa.com/news/the-mercedes-benz-compact-car-family"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://media.mbusa.com/news/the-mercedes-benz-compact-car-family"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "GLA first presented2013 / compact SUV",
+            "noteCs": "Vlastní historie kompaktní rodiny2016 výslovně odděluje SUVGLA od CLA a hatchbackuA-Class."
+          }
         ]
       },
       {
@@ -12218,7 +12307,9 @@
         "to": 2026,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -12644,7 +12735,25 @@
             "https://en.wikipedia.org/w/index.php?oldid=1382382541"
           ]
         },
-        "dateBasis": "successor-boundary"
+        "dateBasis": "successor-boundary",
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://media.mercedes-benz.com/article/d08c8e88-b3c0-458c-8662-d95632d28364"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "GLA 200 H247 7G-DCT",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "GLA 200 H247 7G-DCT",
+              "bodyType": "suv",
+              "source": "https://media.mercedes-benz.com/article/d08c8e88-b3c0-458c-8662-d95632d28364",
+              "sha256": "fb36a0927da8337d6717e1143d73a87a2cdd1514f6c96e1cd8866b0fba108dcb"
+            }
+          }
+        ]
       },
       {
         "code": null,
@@ -12787,7 +12896,8 @@
       "https://media.mercedes-benz.com/article/d08c8e88-b3c0-458c-8662-d95632d28364",
       "https://en.wikipedia.org/w/index.php?oldid=1382382541",
       "https://en.wikipedia.org/wiki/Mercedes-Benz_GLA",
-      "https://media.mercedes-benz.com/en/article/22b96b64-a441-4fad-a22a-bc41718aded7"
+      "https://media.mercedes-benz.com/en/article/22b96b64-a441-4fad-a22a-bc41718aded7",
+      "https://media.mbusa.com/news/the-mercedes-benz-compact-car-family"
     ],
     "needsReview": [
       {
@@ -12796,10 +12906,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -12852,10 +12958,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

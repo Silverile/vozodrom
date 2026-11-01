@@ -2203,7 +2203,10 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "variant": "1.3 MZR ZJ",
@@ -2725,7 +2728,29 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381407537",
           "https://pliki.elektroda.pl/1059664,mazda3_fl_english.html",
-          "https://en.wikipedia.org/wiki/Mazda3"
+          "https://en.wikipedia.org/wiki/Mazda3",
+          "https://newsroom.mazda.com/en/about/speech/1658/index.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://newsroom.mazda.com/en/about/speech/1658/index.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "2003 Frankfurt Mazda3 launch",
+            "noteCs": "Vlastní premiéra2003 rozlišuje pětidveřový hatchback a čtyřdveřový sedan."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://newsroom.mazda.com/en/about/speech/1658/index.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "2003 Frankfurt Mazda3 launch",
+            "noteCs": "Vlastní premiéra2003 rozlišuje pětidveřový hatchback a čtyřdveřový sedan."
+          }
         ]
       },
       {
@@ -2735,7 +2760,10 @@
         "to": 2013,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -3207,7 +3235,35 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1381407537",
           "https://www.ausmotive.com/downloads/Mazda/Mazda3-facelift-Oct2011.pdf",
-          "https://de.wikipedia.org/wiki/Mazda3"
+          "https://de.wikipedia.org/wiki/Mazda3",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.ausmotive.com/downloads/Mazda/Mazda3-facelift-Oct2011.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "1.6 MZR MT",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "1.6 MZR MT",
+              "bodyType": "hatchback",
+              "source": "https://www.ausmotive.com/downloads/Mazda/Mazda3-facelift-Oct2011.pdf",
+              "sha256": "789d2214ed54ee6ac4ade0488b878cc92733c6f41c827b7dd56803e116da33a0"
+            }
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 3 Saloon (BL) 12/08→12/14",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -3230,7 +3286,10 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "variant": "sedan 1.5 Skyactiv G 74 kW manual",
@@ -4153,7 +4212,40 @@
           "name": [
             "https://en.wikipedia.org/wiki/Mazda3"
           ]
-        }
+        },
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "hatchback 1.5 Skyactiv G 74 kW manual",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "hatchback 1.5 Skyactiv G 74 kW manual",
+              "bodyType": "hatchback",
+              "source": "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf",
+              "sha256": "3d79e3bc20d43c18880332e5a14f9c372e2261d8d10ea35289faa4e19f778f0e"
+            }
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "sedan 1.5 Skyactiv G 74 kW manual",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "sedan 1.5 Skyactiv G 74 kW manual",
+              "bodyType": "sedan",
+              "source": "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf",
+              "sha256": "5b03f0aa93fa187636b6b3c87bb0fea0c9aa686ea6328503021bdb2e0c133c84"
+            }
+          }
+        ]
       },
       {
         "code": "BP",
@@ -4162,7 +4254,10 @@
         "to": null,
         "productionStatus": "current",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -4529,6 +4624,39 @@
           "https://en.wikipedia.org/w/index.php?oldid=1381407537",
           "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p4/2.01.25/m3/mazda3-ps-guide-jan25.pdf",
           "https://de.wikipedia.org/wiki/Mazda3"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p4/2.01.25/m3/mazda3-ps-guide-jan25.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "2.5 e-Skyactiv G 140 MT",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "2.5 e-Skyactiv G 140 MT",
+              "bodyType": "hatchback",
+              "source": "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p4/2.01.25/m3/mazda3-ps-guide-jan25.pdf",
+              "sha256": "6efb99baa84f675f52aaa06410bfa2ee2b908ca23622ebdde1a3b64d9cf477e9"
+            }
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p4/2.01.25/m3/mazda3-ps-guide-jan25.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "Sedan 2.0 e-Skyactiv X 186 manual",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "Sedan 2.0 e-Skyactiv X 186 manual",
+              "bodyType": "sedan",
+              "source": "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p4/2.01.25/m3/mazda3-ps-guide-jan25.pdf",
+              "sha256": "a97c406f6ad6986a5efc35b25afb39c9d99b9773348377cd2da3d52a97fc271f"
+            }
+          }
         ]
       }
     ],
@@ -4539,15 +4667,13 @@
       "https://pliki.elektroda.pl/1059664,mazda3_fl_english.html",
       "https://www.ausmotive.com/downloads/Mazda/Mazda3-facelift-Oct2011.pdf",
       "https://www.ausmotive.com/downloads/Mazda/Mazda3-press-kit-July2013.pdf",
-      "https://de.wikipedia.org/wiki/Mazda3"
+      "https://de.wikipedia.org/wiki/Mazda3",
+      "https://newsroom.mazda.com/en/about/speech/1658/index.html",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5051,10 +5177,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5208,10 +5330,6 @@
       },
       {
         "field": "generations[1].trims[3].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5543,10 +5661,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -5855,7 +5969,13 @@
         "to": 1977,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi",
+          "dodavka",
+          "kupe",
+          "pickup"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -5879,7 +5999,57 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Familia"
+          "https://en.wikipedia.org/wiki/Mazda_Familia",
+          "https://www.mazda.com/en/about/history/1920-1979/",
+          "https://mazdamediapacks.com/en/heritage/gallery/mazda-history.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://mazdamediapacks.com/en/heritage/gallery/mazda-history.html"
+            ],
+            "method": "manufacturer-production-image",
+            "anchor": "Familia Sedan4tuerig1964",
+            "noteCs": "Vlastní historický fotografický archiv výrobce výslovně pojmenovává čtyřdveřovýsedan1964."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1920-1979/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Familia1963van/1964wagon and pickup/1965coupe",
+            "noteCs": "Vlastní časová osa před řadou323FA; doplňují se jen pojmenované původní karoserie. PozdějšíNissanAD rebadge není přenášen."
+          },
+          {
+            "bodyType": "dodavka",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1920-1979/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Familia1963van/1964wagon and pickup/1965coupe",
+            "noteCs": "Vlastní časová osa před řadou323FA; doplňují se jen pojmenované původní karoserie. PozdějšíNissanAD rebadge není přenášen."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1920-1979/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Familia1963van/1964wagon and pickup/1965coupe",
+            "noteCs": "Vlastní časová osa před řadou323FA; doplňují se jen pojmenované původní karoserie. PozdějšíNissanAD rebadge není přenášen."
+          },
+          {
+            "bodyType": "pickup",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1920-1979/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Familia1963van/1964wagon and pickup/1965coupe",
+            "noteCs": "Vlastní časová osa před řadou323FA; doplňují se jen pojmenované původní karoserie. PozdějšíNissanAD rebadge není přenášen."
+          }
         ]
       },
       {
@@ -5889,7 +6059,10 @@
         "to": 1980,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "kombi"
+        ],
         "engines": [
           {
             "variant": "1000",
@@ -6002,7 +6175,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Familia",
-          "https://de.wikipedia.org/wiki/Mazda_323"
+          "https://de.wikipedia.org/wiki/Mazda_323",
+          "https://www.insidemazda.co.uk/2020/04/30/mazdas-hatchback-pioneer-the-original-mazda-323/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.insidemazda.co.uk/2020/04/30/mazdas-hatchback-pioneer-the-original-mazda-323/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Mazda323 1977 hatchback / 1978 station wagon",
+            "noteCs": "Vlastní evropská historie rozlišuje první exportní323 FA od pozdějšího předokolkovéhoBD; wagon od1978."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.insidemazda.co.uk/2020/04/30/mazdas-hatchback-pioneer-the-original-mazda-323/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Mazda323 1977 hatchback / 1978 station wagon",
+            "noteCs": "Vlastní evropská historie rozlišuje první exportní323 FA od pozdějšího předokolkovéhoBD; wagon od1978."
+          }
         ]
       },
       {
@@ -6012,7 +6207,10 @@
         "to": 1985,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -6036,7 +6234,29 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Familia"
+          "https://en.wikipedia.org/wiki/Mazda_Familia",
+          "https://www2.mazda.com/en/stories/craftmanship/greatcar/p13.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www2.mazda.com/en/stories/craftmanship/greatcar/p13.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Fifth Familia / 323 June-September1980",
+            "noteCs": "Vlastní japonské číslováníFamilia je jiné než exportní323:rok1980 odpovídáBD, hatchback i sedan."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www2.mazda.com/en/stories/craftmanship/greatcar/p13.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Fifth Familia / 323 June-September1980",
+            "noteCs": "Vlastní japonské číslováníFamilia je jiné než exportní323:rok1980 odpovídáBD, hatchback i sedan."
+          }
         ]
       },
       {
@@ -6046,7 +6266,11 @@
         "to": 1989,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kombi"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -6070,7 +6294,38 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Familia"
+          "https://en.wikipedia.org/wiki/Mazda_Familia",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 323 III Hatchback (BF) 08/85→07/04",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 323 III Sedan (BF) 08/85→07/04",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 323 III Station Wagon (BW) 01/86→10/98",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -6080,7 +6335,10 @@
         "to": 1994,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "variant": "1.7 diesel",
@@ -6151,7 +6409,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Familia",
-          "https://de.wikipedia.org/wiki/Mazda_323"
+          "https://de.wikipedia.org/wiki/Mazda_323",
+          "https://www2.mazda.com/en/100th/cars/detail_015_familia7th.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www2.mazda.com/en/100th/cars/detail_015_familia7th.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Seventh Familia / 1989 BG",
+            "noteCs": "Vlastní modelový profil uvádí tří/pětidveřový hatchback a čtyřdveřovýsedan. Jde oBG, nikoli následný BA."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www2.mazda.com/en/100th/cars/detail_015_familia7th.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Seventh Familia / 1989 BG",
+            "noteCs": "Vlastní modelový profil uvádí tří/pětidveřový hatchback a čtyřdveřovýsedan. Jde oBG, nikoli následný BA."
+          }
         ]
       },
       {
@@ -6161,7 +6441,10 @@
         "to": 1998,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "variant": "1.7 diesel",
@@ -6216,7 +6499,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Familia",
-          "https://de.wikipedia.org/wiki/Mazda_323"
+          "https://de.wikipedia.org/wiki/Mazda_323",
+          "https://www.mazda.com/en/about/history/1990-1999/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1990-1999/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "June1994 eighth Familia",
+            "noteCs": "Vlastní historie uvádí hatchbackNeo a sedan při uvedení osméFamilia1994, což je BA. Převzatý staršíBF/BW wagon není odvozen jako novýBA."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.mazda.com/en/about/history/1990-1999/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "June1994 eighth Familia",
+            "noteCs": "Vlastní historie uvádí hatchbackNeo a sedan při uvedení osméFamilia1994, což je BA. Převzatý staršíBF/BW wagon není odvozen jako novýBA."
+          }
         ]
       },
       {
@@ -6226,7 +6531,10 @@
         "to": 2003,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -6403,7 +6711,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Familia",
-          "https://de.wikipedia.org/wiki/Mazda_323"
+          "https://de.wikipedia.org/wiki/Mazda_323",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 323 ASTINA VI Hatchback (BJ) 09/98→07/04",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 323 PROTEGÉ VI Saloon (BJ) 05/98→07/04",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       }
     ],
@@ -6411,7 +6741,14 @@
       "https://en.wikipedia.org/w/index.php?oldid=1378340166",
       "https://www.wikidata.org/wiki/Q513292",
       "https://en.wikipedia.org/wiki/Mazda_Familia",
-      "https://de.wikipedia.org/wiki/Mazda_323"
+      "https://de.wikipedia.org/wiki/Mazda_323",
+      "https://www.mazda.com/en/about/history/1920-1979/",
+      "https://mazdamediapacks.com/en/heritage/gallery/mazda-history.html",
+      "https://www.insidemazda.co.uk/2020/04/30/mazdas-hatchback-pioneer-the-original-mazda-323/",
+      "https://www2.mazda.com/en/stories/craftmanship/greatcar/p13.html",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://www2.mazda.com/en/100th/cars/detail_015_familia7th.html",
+      "https://www.mazda.com/en/about/history/1990-1999/"
     ],
     "needsReview": [
       {
@@ -6420,10 +6757,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6483,10 +6816,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6536,10 +6865,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6599,10 +6924,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6659,10 +6980,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[4].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[4].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6708,10 +7025,6 @@
       },
       {
         "field": "generations[5].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[5].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6764,10 +7077,6 @@
       },
       {
         "field": "generations[6].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[6].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -8482,7 +8791,10 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -9128,6 +9440,39 @@
           "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf",
           "https://en.wikipedia.org/wiki/Mazda6_(third_generation)",
           "https://de.wikipedia.org/wiki/Mazda6"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "sedan 2.0 Skyactiv G 107 kW manual",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "sedan 2.0 Skyactiv G 107 kW manual",
+              "bodyType": "sedan",
+              "source": "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf",
+              "sha256": "83a67ee1a203306aabfb983251abb96de06fd20f592aa2f6732f665e6863c14f"
+            }
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "kombi 2.0 Skyactiv G 107 kW manual",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "kombi 2.0 Skyactiv G 107 kW manual",
+              "bodyType": "kombi",
+              "source": "https://media-assets.mazda.eu/raw/upload/mazdacz/globalassets/pdfs/ceniky11-22/cenik-mazda6-2023.pdf",
+              "sha256": "2b26bf8e75a70b67c91a7ad2981f62a7f8c876b23d65f6a1fe3d2e1b3fb2b281"
+            }
+          }
         ]
       }
     ],
@@ -9490,10 +9835,6 @@
       },
       {
         "field": "generations[1].trims[6].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9881,7 +10222,10 @@
         "to": 1978,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -9905,7 +10249,29 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Capella"
+          "https://en.wikipedia.org/wiki/Mazda_Capella",
+          "https://www.mazda.com/en/about/history/greatcar/capella/01/"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.mazda.com/en/about/history/greatcar/capella/01/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Original Capella May1970",
+            "noteCs": "Vlastní prvníCapella1970, původní řada před exportním626CB; dvoudveřovékupé a čtyřdveřovýsedan."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.mazda.com/en/about/history/greatcar/capella/01/"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "Original Capella May1970",
+            "noteCs": "Vlastní prvníCapella1970, původní řada před exportním626CB; dvoudveřovékupé a čtyřdveřovýsedan."
+          }
         ]
       },
       {
@@ -9915,7 +10281,10 @@
         "to": 1982,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -9939,7 +10308,29 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Capella"
+          "https://en.wikipedia.org/wiki/Mazda_Capella",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 I Sedan (CB) 09/78→10/82",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 I Coupe 09/78→12/82",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -9949,7 +10340,11 @@
         "to": 1987,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kupe"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -9973,7 +10368,38 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Mazda_Capella"
+          "https://en.wikipedia.org/wiki/Mazda_Capella",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 II Hatchback (GC) 11/82→05/93",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 II Sedan (GC) 11/82→05/93",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 II Coupe (GC) 09/82→10/87",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -9983,7 +10409,12 @@
         "to": 1997,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kombi",
+          "kupe"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -10130,7 +10561,47 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Capella",
-          "https://de.wikipedia.org/wiki/Mazda_626"
+          "https://de.wikipedia.org/wiki/Mazda_626",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 III Hatchback (GD) 06/87→05/92",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 III Sedan (GD) 06/87→05/92",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 III Station Wagon (GV) 09/87→10/98",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kupe",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 III Coupe (GD) 06/87→05/92",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -10140,7 +10611,10 @@
         "to": 1997,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan"
+        ],
         "engines": [
           {
             "variant": "1.8 (FP)",
@@ -10327,7 +10801,29 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Capella",
-          "https://de.wikipedia.org/wiki/Mazda_626"
+          "https://de.wikipedia.org/wiki/Mazda_626",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 IV Hatchback (GE) 08/91→08/98",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 IV Sedan (GE) 08/91→08/98",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       },
       {
@@ -10337,7 +10833,11 @@
         "to": 2002,
         "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kombi"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -10484,7 +10984,38 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mazda_Capella",
-          "https://de.wikipedia.org/wiki/Mazda_626"
+          "https://de.wikipedia.org/wiki/Mazda_626",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "hatchback",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 V Hatchback (GF) 05/97→12/02",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "sedan",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 V Sedan (GF) 05/97→05/06",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          },
+          {
+            "bodyType": "kombi",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "method": "supplier-application-heading",
+            "anchor": "MAZDA - 626 V Station Wagon (GW) 01/98→05/03",
+            "noteCs": "Vlastní aplikační záhlaví se shodným modelem a generací; širší data náhradních dílů nejsou přenesena do výroby."
+          }
         ]
       }
     ],
@@ -10492,7 +11023,9 @@
       "https://en.wikipedia.org/w/index.php?oldid=1371740356",
       "https://www.wikidata.org/wiki/Q1542973",
       "https://en.wikipedia.org/wiki/Mazda_Capella",
-      "https://de.wikipedia.org/wiki/Mazda_626"
+      "https://de.wikipedia.org/wiki/Mazda_626",
+      "https://www.mazda.com/en/about/history/greatcar/capella/01/",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
@@ -10501,10 +11034,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10564,10 +11093,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -10621,10 +11146,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10684,10 +11205,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -10740,10 +11257,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[4].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[4].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -10789,10 +11302,6 @@
       },
       {
         "field": "generations[5].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[5].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -16750,7 +17259,9 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -16825,7 +17336,20 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379166699",
           "https://en.wikipedia.org/wiki/Mazda_CX-5",
-          "https://de.wikipedia.org/wiki/Mazda_CX-5"
+          "https://de.wikipedia.org/wiki/Mazda_CX-5",
+          "https://newsroom.mazda.com/en/publicity/release/2011/201104/110418a.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://newsroom.mazda.com/en/publicity/release/2011/201104/110418a.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "First CX-5 / 2011 Frankfurt debut",
+            "noteCs": "Vlastní první sériový CX-5 je výslovně kompaktní crossoverSUV, nikoli konceptMinagi."
+          }
         ]
       },
       {
@@ -16849,7 +17373,9 @@
             "photo": null
           }
         ],
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -17388,6 +17914,24 @@
           "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf",
           "https://en.wikipedia.org/wiki/Mazda_CX-5",
           "https://de.wikipedia.org/wiki/Mazda_CX-5"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf"
+            ],
+            "method": "reviewed-technical-version",
+            "anchor": "2.0 e-Skyactiv G 165 MT",
+            "noteCs": "Karoserie výslovně uložené ověřené technické verze téhož pokolení; nepřenáší její rozměry na celou rodinu.",
+            "technicalVersionProof": {
+              "name": "2.0 e-Skyactiv G 165 MT",
+              "bodyType": "suv",
+              "source": "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf",
+              "sha256": "2062495dfbfffc12bb2310a548b7010281f398658b0fdaca13dd89872bf72447"
+            }
+          }
         ]
       },
       {
@@ -17397,7 +17941,9 @@
         "to": null,
         "productionStatus": "current",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "suv"
+        ],
         "engines": [
           {
             "fuel": "petrol",
@@ -17455,7 +18001,20 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1379166699",
-          "https://de.wikipedia.org/wiki/Mazda_CX-5"
+          "https://de.wikipedia.org/wiki/Mazda_CX-5",
+          "https://newsroom.mazda.com/en/publicity/release/2025/202507/250710a.html"
+        ],
+        "bodyTypeCoverage": "documented-variants-only",
+        "bodyTypeEvidence": [
+          {
+            "bodyType": "suv",
+            "sources": [
+              "https://newsroom.mazda.com/en/publicity/release/2025/202507/250710a.html"
+            ],
+            "method": "manufacturer-body-style",
+            "anchor": "All-new CX-5 / July2025 Europe",
+            "noteCs": "Vlastní třetí generace CX-5 představena vEvropě2025 jako crossoverSUV."
+          }
         ]
       }
     ],
@@ -17463,15 +18022,13 @@
       "https://en.wikipedia.org/w/index.php?oldid=1379166699",
       "https://www.wikidata.org/wiki/Q1580031",
       "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy159/p3/1.10.24/cx-5/cx-5-price-and-spec-oct24.pdf",
-      "https://de.wikipedia.org/wiki/Mazda_CX-5"
+      "https://de.wikipedia.org/wiki/Mazda_CX-5",
+      "https://newsroom.mazda.com/en/publicity/release/2011/201104/110418a.html",
+      "https://newsroom.mazda.com/en/publicity/release/2025/202507/250710a.html"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -17520,10 +18077,6 @@
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -17840,10 +18393,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].bodyTypes",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
