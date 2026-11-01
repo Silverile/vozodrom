@@ -3216,8 +3216,59 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 125,
+            "powerKwMax": 125,
+            "availablePowerKw": [
+              125
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "120Ah",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/BMW/114723/BMW-i3-120Ah.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2017 - )",
+              "originalVariant": "BMW i3 120Ah Specs",
+              "powerBasis": "explicit total electric output",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/BMW/114723/BMW-i3-120Ah.html",
+                "title": "BMW i3 120Ah Specs",
+                "modelAliases": [
+                  "I3"
+                ],
+                "generation": "i3 (I01) - New Model",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/BMW/M10167/i3",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "i3",
+                "generationProductionFrom": 2013,
+                "generationProductionTo": 2022,
+                "variantDateText": "(2017 - )",
+                "fuelText": "Electric  ",
+                "bodyText": "Hatchback",
+                "powerLabel": "TOTAL ELECTRIC POWER",
+                "powerText": "170 PS / 168 HP / 125 kW",
+                "displacementText": ""
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "i3 (I01) - New Model",
+                "fromYear": 2013,
+                "toYear": 2022,
+                "generationIndex": 0,
+                "rowFromYear": 2017,
+                "rowToYear": 2017
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3257,14 +3308,16 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1380956321",
           "https://en.wikipedia.org/w/index.php?oldid=1377175695",
-          "https://www.wikidata.org/wiki/Q796785"
+          "https://www.wikidata.org/wiki/Q796785",
+          "https://www.ultimatespecs.com/car-specs/BMW/114723/BMW-i3-120Ah.html"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1380956321",
       "https://en.wikipedia.org/w/index.php?oldid=1377175695",
-      "https://www.wikidata.org/wiki/Q796785"
+      "https://www.wikidata.org/wiki/Q796785",
+      "https://www.ultimatespecs.com/car-specs/BMW/114723/BMW-i3-120Ah.html"
     ],
     "needsReview": [
       {
@@ -3277,10 +3330,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -29091,8 +29140,67 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "40 xDrive",
+            "fuel": "petrol-mhev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 294,
+            "powerKwMax": 294,
+            "availablePowerKw": [
+              294
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmwgroup.com/en/news/general/2026/the-new-bmw-x5.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented European production powertrain",
+              "originalVariant": "40 xDrive",
+              "noteCs": "Vlastní jmenovité výkony nového X5 od sériového náběhu 08/2026. Přesný objem zdroj neuvádí. Pozdější iX5 a PHEV nejsou ztotožněny s aktuálně zahájenými verzemi.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "G65",
+                "fromYear": 2026,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "40d xDrive",
+            "fuel": "diesel-mhev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 230,
+            "powerKwMax": 230,
+            "availablePowerKw": [
+              230
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmwgroup.com/en/news/general/2026/the-new-bmw-x5.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented European production powertrain",
+              "originalVariant": "40d xDrive",
+              "noteCs": "Vlastní jmenovité výkony nového X5 od sériového náběhu 08/2026. Přesný objem zdroj neuvádí. Pozdější iX5 a PHEV nejsou ztotožněny s aktuálně zahájenými verzemi.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "G65",
+                "fromYear": 2026,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -29143,6 +29251,22 @@
       {
         "field": "scope",
         "reason": "Částečný historický a technický přehled. Dosavadní katalogová rodina a vybraný technický list mohou mít překrývající se časový rozsah; agregát není další konstrukční generací."
+      },
+      {
+        "field": "generations[4].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

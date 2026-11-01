@@ -1295,8 +1295,51 @@
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Classic R/T 5.7 HEMI V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.7,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/br-pt/ram/press/ram-lanca-serie-especial-para-os-amantes-do-v8-a-classic-r-t"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Classic R/T 5.7 HEMI V8",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Classic R/T 5.7 HEMI V8",
+                "source": "https://www.media.stellantis.com/br-pt/ram/press/ram-lanca-serie-especial-para-os-amantes-do-v8-a-classic-r-t",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 8,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 556
+                },
+                "sha256": "99f03e455828a5eefbeb8054590f62614503c9ede0a2a1cd0a0afd94cb45f230"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "DS – 1500 / Classic",
+                "fromYear": 2008,
+                "toYear": 2024,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Doložený roční nebo dokumentační snímek konkrétního trhu; výrobní interval motorizace nebyl potvrzen. Nominální litry, HP/CV a kgfm se bez dalšího nepovažují za přesné cm³, kW a Nm. Tovární údaj výkonu je 400 cv, bez převodu na kW."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1844,10 +1887,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2485,6 +2524,18 @@
       {
         "field": "coverage",
         "reason": "Částečný soupis osobně využitelných pick-upů značky Ram; nejde o vyčerpávající seznam všech kabin, trhů, modelových roků ani homologací."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

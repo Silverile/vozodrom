@@ -11167,8 +11167,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "Hybrid+",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 145,
+            "powerKwMax": 145,
+            "availablePowerKw": [
+              145
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mgmotor-slovakia.sk/UserFiles/ceniky/SK%202026/Cennik_MG_ZS_Hybrid%2B_16_1_2026.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Hybrid+ Essential",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Hybrid+ Essential",
+                "source": "https://www.mgmotor-slovakia.sk/UserFiles/ceniky/SK%202026/Cennik_MG_ZS_Hybrid%2B_16_1_2026.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 145,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "50218dfea55900b6dd2530dda396a3ba4d1ebf61cc992d6ba1ea54f0dc23ef60"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "ZS32",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Provozní hmotnost podle slovenského ceníku16.1.2026, bez dopočtu řidiče.145 kW je kombinovaný systémový výkon; nominální1,5 l se nepřevádí na přesný objem. Přesné výrobní období této varianty není ověřeno; vybrané verze nejsou úplným seznamem výbav."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -11544,10 +11589,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -11686,6 +11727,14 @@
       {
         "field": "generations[1].trims[2].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

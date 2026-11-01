@@ -1395,8 +1395,61 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 2497,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 121,
+            "powerKwMax": 121,
+            "availablePowerKw": [
+              121
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "2.5 V6",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Kia/4262/Kia-Carnival-I-25-V6.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1999 - 2002)",
+              "originalVariant": "Kia Carnival I 2.5 V6 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Kia/4262/Kia-Carnival-I-25-V6.html",
+                "title": "Kia Carnival I 2.5 V6 Specs",
+                "modelAliases": [
+                  "CARNIVAL",
+                  "CARNIVALSEDONA",
+                  "SEDONA"
+                ],
+                "generation": "Carnival 1 (KV)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Kia/M648/Carnival-I",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Carnival I",
+                "generationProductionFrom": 1998,
+                "generationProductionTo": 2006,
+                "variantDateText": "(1999 - 2002)",
+                "fuelText": " Petrol V 6",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "165 PS / 163 HP / 121 kW@ 6500 rpm",
+                "displacementText": "2497 cm3 / 152.4 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Carnival 1 (KV)",
+                "fromYear": 1998,
+                "toYear": 2006,
+                "generationIndex": 0,
+                "rowFromYear": 1999,
+                "rowToYear": 2002
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1434,7 +1487,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Carnival"
+          "https://en.wikipedia.org/wiki/Kia_Carnival",
+          "https://www.ultimatespecs.com/car-specs/Kia/4262/Kia-Carnival-I-25-V6.html"
         ]
       },
       {
@@ -1643,7 +1697,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Kia_Carnival",
-      "https://de.wikipedia.org/wiki/Kia_Carnival"
+      "https://de.wikipedia.org/wiki/Kia_Carnival",
+      "https://www.ultimatespecs.com/car-specs/Kia/4262/Kia-Carnival-I-25-V6.html"
     ],
     "needsReview": [
       {
@@ -1656,10 +1711,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5897,8 +5948,67 @@
           "sedan",
           "hatchback"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.0 T-GDi MHEV",
+            "fuel": "petrol-mhev",
+            "displacementCc": null,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 84.5,
+            "powerKwMax": 84.5,
+            "availablePowerKw": [
+              84.5
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://eu-www.kia.com/be/fr/modeles/k4/specs/"
+            ],
+            "sourceScope": {
+              "tableSection": "Own-model European engine fact",
+              "originalVariant": "1.0 T-GDi MHEV",
+              "noteCs": "Vlastní evropské varianty K4 z belgické specifikace. Silnější 1.6 má v témže prameni nekonzistentních 132/133 kW a zůstává mimo výběr; hybridní komponenty se nesčítají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "K4 (CL4)",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.6 T-GDi",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://eu-www.kia.com/be/fr/modeles/k4/specs/"
+            ],
+            "sourceScope": {
+              "tableSection": "Own-model European engine fact",
+              "originalVariant": "1.6 T-GDi",
+              "noteCs": "Vlastní evropské varianty K4 z belgické specifikace. Silnější 1.6 má v témže prameni nekonzistentních 132/133 kW a zůstává mimo výběr; hybridní komponenty se nesčítají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "K4 (CL4)",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -5936,7 +6046,8 @@
         },
         "trims": [],
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_K4"
+          "https://en.wikipedia.org/wiki/Kia_K4",
+          "https://eu-www.kia.com/be/fr/modeles/k4/specs/"
         ],
         "equipmentLines": [],
         "specificationReferences": [
@@ -5969,7 +6080,8 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Kia_K4"
+      "https://en.wikipedia.org/wiki/Kia_K4",
+      "https://eu-www.kia.com/be/fr/modeles/k4/specs/"
     ],
     "needsReview": [
       {
@@ -5986,10 +6098,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6053,10 +6161,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6103,6 +6207,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
       }
     ]
   },
@@ -8956,8 +9068,61 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 999,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 45,
+            "powerKwMax": 45,
+            "availablePowerKw": [
+              45
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.0",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Kia/4293/Kia-Picanto-10.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2004 - 2008)",
+              "originalVariant": "Kia Picanto 1.0 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Kia/4293/Kia-Picanto-10.html",
+                "title": "Kia Picanto 1.0 Specs",
+                "modelAliases": [
+                  "MORNING",
+                  "PICANTO",
+                  "PICANTOMORNING"
+                ],
+                "generation": "Picanto 1 (SA)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Kia/M658/Picanto",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Picanto",
+                "generationProductionFrom": 2004,
+                "generationProductionTo": 2011,
+                "variantDateText": "(2004 - 2008)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "Hatchback",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "61 PS / 60 HP / 45 kW@ 5600 rpm",
+                "displacementText": "d 999 cm3 / - cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Picanto 1 (SA)",
+                "fromYear": 2004,
+                "toYear": 2011,
+                "generationIndex": 0,
+                "rowFromYear": 2004,
+                "rowToYear": 2008
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -8997,7 +9162,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Kia_Picanto",
           "https://eu-www.kia.com/eut/service/kia-service-5p0/",
-          "https://en.wikipedia.org/w/index.php?title=Kia_Picanto&oldid=1378583401"
+          "https://en.wikipedia.org/w/index.php?title=Kia_Picanto&oldid=1378583401",
+          "https://www.ultimatespecs.com/car-specs/Kia/4293/Kia-Picanto-10.html"
         ]
       },
       {
@@ -9010,8 +9176,61 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 998,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 51,
+            "powerKwMax": 51,
+            "availablePowerKw": [
+              51
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.0 Basic 3 Doors",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Kia/61913/Kia-Picanto-2-10-Basic-3-Doors.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2011 - )",
+              "originalVariant": "Kia Picanto 2 1.0 Basic 3 Doors Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Kia/61913/Kia-Picanto-2-10-Basic-3-Doors.html",
+                "title": "Kia Picanto 2 1.0 Basic 3 Doors Specs",
+                "modelAliases": [
+                  "MORNING",
+                  "PICANTO",
+                  "PICANTOMORNING"
+                ],
+                "generation": "Picanto 2 (TA)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Kia/M7555/Picanto-2",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Picanto 2",
+                "generationProductionFrom": 2011,
+                "generationProductionTo": 2017,
+                "variantDateText": "(2011 - )",
+                "fuelText": " Petrol Inline 3",
+                "bodyText": "Turismo",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "69 PS / 68 HP / 51 kW@ 6200 rpm",
+                "displacementText": "998 cm3 / 60.9 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Picanto 2 (TA)",
+                "fromYear": 2011,
+                "toYear": 2017,
+                "generationIndex": 1,
+                "rowFromYear": 2011,
+                "rowToYear": 2011
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -9051,7 +9270,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Kia_Picanto",
           "https://eu-www.kia.com/eut/service/kia-service-5p0/",
-          "https://en.wikipedia.org/w/index.php?title=Kia_Picanto&oldid=1378583401"
+          "https://en.wikipedia.org/w/index.php?title=Kia_Picanto&oldid=1378583401",
+          "https://www.ultimatespecs.com/car-specs/Kia/61913/Kia-Picanto-2-10-Basic-3-Doors.html"
         ]
       },
       {
@@ -9083,8 +9303,97 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.0 MPi",
+            "fuel": "petrol",
+            "displacementCc": 998,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 49,
+            "powerKwMax": 49,
+            "availablePowerKw": [
+              49
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/All-New%20Picanto/Specifications/picanto_2017-specification.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.0 MPi 67PS 5MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.0 MPi 67PS 5MT",
+                "source": "https://www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/All-New%20Picanto/Specifications/picanto_2017-specification.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 998,
+                  "cylinders": 3,
+                  "powerKw": 49,
+                  "powerStandard": null,
+                  "torqueNm": 96
+                },
+                "sha256": "cb14d798566956f72f34e33162ad7e10da4453aee35a331ffdd63df91ad363c0"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "JA",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Britský list uvádí 0–60mph, které není zaměněno za 0–100km/h. Rozměry různých GT-Line/X-Line se nepřenášejí na neurčenou výbavu."
+            }
+          },
+          {
+            "variant": "1.25 MPi 4AT",
+            "fuel": "petrol",
+            "displacementCc": 1248,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 62,
+            "powerKwMax": 62,
+            "availablePowerKw": [
+              62
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/All-New%20Picanto/Specifications/picanto_2017-specification.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.25 MPi 84PS 4AT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.25 MPi 84PS 4AT",
+                "source": "https://www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/All-New%20Picanto/Specifications/picanto_2017-specification.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1248,
+                  "cylinders": 4,
+                  "powerKw": 62,
+                  "powerStandard": null,
+                  "torqueNm": 122
+                },
+                "sha256": "3b9a9d4406a1192c6c28794cd50d1b01eb13b818bf41fe330e1fb65a0807dc81"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "JA",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Britský list uvádí 0–60mph, které není zaměněno za 0–100km/h. Rozměry různých GT-Line/X-Line se nepřenášejí na neurčenou výbavu."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -9236,7 +9545,9 @@
       "https://eu-www.kia.com/eut/service/kia-service-5p0/",
       "https://en.wikipedia.org/w/index.php?title=Kia_Picanto&oldid=1378583401",
       "https://prod2-press.kia.com/eu/en/home/media-resouces/press-kits/products/2021/The-Kia-Picanto.html",
-      "https://press.kia.com/es/es/home/notas-de-prensa/press-releases/2023/el-nuevo-kia-picanto-aporta-un-diseno-innovador-para-que-los-con.html"
+      "https://press.kia.com/es/es/home/notas-de-prensa/press-releases/2023/el-nuevo-kia-picanto-aporta-un-diseno-innovador-para-que-los-con.html",
+      "https://www.ultimatespecs.com/car-specs/Kia/4293/Kia-Picanto-10.html",
+      "https://www.ultimatespecs.com/car-specs/Kia/61913/Kia-Picanto-2-10-Basic-3-Doors.html"
     ],
     "needsReview": [
       {
@@ -9245,10 +9556,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9300,10 +9607,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -9349,10 +9652,6 @@
       },
       {
         "field": "generations[2].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10865,8 +11164,64 @@
           "sedan",
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1248,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 62,
+            "powerKwMax": 62,
+            "availablePowerKw": [
+              62
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.2 benzin",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Kia/72136/Kia-Rio-2015-3-doors-12HPVT-Concept.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2015 - 2017)",
+              "originalVariant": "Kia Rio 2015 3-doors 1.2HPVT Concept Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Kia/72136/Kia-Rio-2015-3-doors-12HPVT-Concept.html",
+                "title": "Kia Rio 2015 3-doors 1.2HPVT Concept Specs",
+                "modelAliases": [
+                  "RIO"
+                ],
+                "generation": "Rio 3 (UB)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Kia/M7833/Rio-2015",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Rio 2015",
+                "generationProductionFrom": 2011,
+                "generationProductionTo": 2017,
+                "variantDateText": "(2015 - 2017)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "Turismo",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "84 PS / 83 HP / 62 kW@ 6000 rpm",
+                "displacementText": "1248 cm3 / 76.2 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Rio 3 (UB)",
+                "fromYear": 2011,
+                "toYear": 2017,
+                "generationIndex": 2,
+                "rowFromYear": 2015,
+                "rowToYear": 2017
+              },
+              "trimIdentityEvidence": {
+                "source": "https://preprod2-press.kia.com/es/es/home/notas-de-prensa/press-releases/2016/nuevo-kia-rio-2015.html",
+                "fact": "CONCEPT is a production trim level, explicitly distinguished from BASIC, DRIVE and EMOTION."
+              },
+              "noteCs": "Concept je doložený stupeň výbavy sériového Ria. Název motoru používá jen doložený objem a palivo; bez chybně přepsaného HPVT."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10904,7 +11259,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Rio"
+          "https://en.wikipedia.org/wiki/Kia_Rio",
+          "https://www.ultimatespecs.com/car-specs/Kia/72136/Kia-Rio-2015-3-doors-12HPVT-Concept.html"
         ]
       },
       {
@@ -11135,7 +11491,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Kia_Rio",
-      "https://de.wikipedia.org/wiki/Kia_Rio"
+      "https://de.wikipedia.org/wiki/Kia_Rio",
+      "https://www.ultimatespecs.com/car-specs/Kia/72136/Kia-Rio-2015-3-doors-12HPVT-Concept.html"
     ],
     "needsReview": [
       {
@@ -11260,10 +11617,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -14457,8 +14810,59 @@
           "suv",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 94,
+            "powerKwMax": 94,
+            "availablePowerKw": [
+              94
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "2.0 16v DOHC",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Kia/4315/Kia-Sportage-1-20-16v-DOHC.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1999 - 2003)",
+              "originalVariant": "Kia Sportage 1 2.0 16v DOHC Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Kia/4315/Kia-Sportage-1-20-16v-DOHC.html",
+                "title": "Kia Sportage 1 2.0 16v DOHC Specs",
+                "modelAliases": [
+                  "SPORTAGE"
+                ],
+                "generation": "Sportage 1 (JA)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Kia/M666/Sportage-1",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Sportage 1",
+                "generationProductionFrom": 1993,
+                "generationProductionTo": 2004,
+                "variantDateText": "(1999 - 2003)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "128 PS / 126 HP / 94 kW@ 5300 rpm",
+                "displacementText": "1998 cm3 / 121.9 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Sportage 1 (JA)",
+                "fromYear": 1993,
+                "toYear": 2004,
+                "generationIndex": 0,
+                "rowFromYear": 1999,
+                "rowToYear": 2003
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -14496,7 +14900,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Sportage"
+          "https://en.wikipedia.org/wiki/Kia_Sportage",
+          "https://www.ultimatespecs.com/car-specs/Kia/4315/Kia-Sportage-1-20-16v-DOHC.html"
         ]
       },
       {
@@ -15352,8 +15757,137 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 T-GDi PHEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 195,
+            "powerKwMax": 195,
+            "availablePowerKw": [
+              195
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.kia.com/content/dam/kwcms/kme/sk/sk/assets/contents/utility/cennik-2022/1-2-2022/Kia_Cennik_Sportage_ICE_HEV_PHEV_MY22_1Q2022.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.6 T-GDi PHEV 265PS 6AT AWD",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.6 T-GDi PHEV 265PS 6AT AWD",
+                "source": "https://www.kia.com/content/dam/kwcms/kme/sk/sk/assets/contents/utility/cennik-2022/1-2-2022/Kia_Cennik_Sportage_ICE_HEV_PHEV_MY22_1Q2022.pdf",
+                "engine": {
+                  "fuel": "petrol-phev",
+                  "displacementCc": 1598,
+                  "cylinders": 4,
+                  "powerKw": 195,
+                  "powerStandard": null,
+                  "torqueNm": 350
+                },
+                "sha256": "7176a6b29dafe6bccded8d28060d291e4d408874051ab8baf21450679e913a34"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "NQ5 – evropská krátká verze",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Systémový výkon195kW ze slovenskéhoMY2022listu; evropská zpráva2022potvrzuje265PS,350Nm,6AT,AWD,0–1008.2s,WLTP1.1l/100km a elektrický dojezd70km. Hmotnost pozdějšího neurčeného britského listu nepřevzata."
+            }
+          },
+          {
+            "variant": "1.6 T-GDi HEV",
+            "fuel": "petrol-hev",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://eu-www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/The_all-new_Sportage/Specification/Sportage_specification.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.6 T-GDi HEV 226bhp 6AT FWD – UK GT-Line 18in",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.6 T-GDi HEV 226bhp 6AT FWD – UK GT-Line 18in",
+                "source": "https://eu-www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/The_all-new_Sportage/Specification/Sportage_specification.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": 1598,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 350
+                },
+                "sha256": "a5ae7d76a156f316dfc1f0d816a9aa83d88744d5e1094e8a8e2fc949476f1c8e"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "NQ5 – evropská krátká verze",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Pouze údaje britského listu pro uvedenou výbavu a kola. List uvádí226bhp, nikoli přímo výkon vkW; nepřepočítáno a nespojeno s jiným slovenským modelovým rokem.350Nm je systémová hodnota.0–60mph není0–100km/h."
+            }
+          },
+          {
+            "variant": "1.6 T-GDi HEV",
+            "fuel": "petrol-hev",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://eu-www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/The_all-new_Sportage/Specification/Sportage_specification.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.6 T-GDi HEV 226bhp 6AT AWD – UK GT-Line S 18in",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.6 T-GDi HEV 226bhp 6AT AWD – UK GT-Line S 18in",
+                "source": "https://eu-www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/The_all-new_Sportage/Specification/Sportage_specification.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": 1598,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 350
+                },
+                "sha256": "a7f61d670ec0fd99f4927c403edbb77ef044cc1e3fe0de3c716f8ee6cb47f91b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "NQ5 – evropská krátká verze",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Pouze údaje britského listu pro uvedenou výbavu a kola. List uvádí226bhp, nikoli přímo výkon vkW; nepřepočítáno a nespojeno s jiným slovenským modelovým rokem.350Nm je systémová hodnota.0–60mph není0–100km/h."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -15554,7 +16088,10 @@
       "https://press.kia.com/content/dam/kiapress/FR/Modeles/Sportage/My18/Nouveau%20Kia%20Sportage%20restyl%C3%A9.pdf",
       "https://eu-www.kia.com/eut/service/kia-service-5p0/",
       "https://en.wikipedia.org/w/index.php?title=Kia_Sportage&oldid=1380252890",
-      "https://de.wikipedia.org/wiki/Kia_Sportage"
+      "https://de.wikipedia.org/wiki/Kia_Sportage",
+      "https://www.kia.com/content/dam/kwcms/kme/sk/sk/assets/contents/utility/cennik-2022/1-2-2022/Kia_Cennik_Sportage_ICE_HEV_PHEV_MY22_1Q2022.pdf",
+      "https://eu-www.kia.com/content/dam/kwcms/kme/uk/en/assets/vehicles/The_all-new_Sportage/Specification/Sportage_specification.pdf",
+      "https://www.ultimatespecs.com/car-specs/Kia/4315/Kia-Sportage-1-20-16v-DOHC.html"
     ],
     "needsReview": [
       {
@@ -15567,10 +16104,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -15898,10 +16431,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[4].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[4].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -16164,6 +16693,22 @@
       {
         "field": "generations[4].trims[2].massBasis",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[4].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[4].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

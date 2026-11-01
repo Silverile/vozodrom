@@ -3738,14 +3738,152 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": [],
+        "engines": [
+          {
+            "variant": "1.0 TSI",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 63,
+            "powerKwMax": 63,
+            "availablePowerKw": [
+              63
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "1.0 TSI",
+              "noteCs": "Vlastní doložené provedení; přesný neověřený objem zůstává prázdný. Bez převodu koní na kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Golf Sportsvan",
+                "fromYear": 2014,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.0 TSI",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 81,
+            "powerKwMax": 81,
+            "availablePowerKw": [
+              81
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "1.0 TSI",
+              "noteCs": "Vlastní doložené provedení; přesný neověřený objem zůstává prázdný. Bez převodu koní na kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Golf Sportsvan",
+                "fromYear": 2014,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.5 TSI ACT",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 96,
+            "powerKwMax": 96,
+            "availablePowerKw": [
+              96
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "1.5 TSI ACT",
+              "noteCs": "Vlastní doložené provedení; přesný neověřený objem zůstává prázdný. Bez převodu koní na kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Golf Sportsvan",
+                "fromYear": 2014,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.5 TSI ACT",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 110,
+            "powerKwMax": 110,
+            "availablePowerKw": [
+              110
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "1.5 TSI ACT",
+              "noteCs": "Vlastní doložené provedení; přesný neověřený objem zůstává prázdný. Bez převodu koní na kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Golf Sportsvan",
+                "fromYear": 2014,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Volkswagen_Golf_Sportsvan"
-        ]
+          "https://en.wikipedia.org/wiki/Volkswagen_Golf_Sportsvan",
+          "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+        ],
+        "engineCoverage": "representative-documented-versions"
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Volkswagen_Golf_Sportsvan"
+      "https://en.wikipedia.org/wiki/Volkswagen_Golf_Sportsvan",
+      "https://www.volkswagen-newsroom.com/de/pressemitteilungen/der-golf-sportsvan-das-update-599"
+    ],
+    "needsReview": [
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      }
     ]
   },
   {

@@ -5267,8 +5267,67 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "500 Action",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/em-en/fiat/press/olivier-franois-president-of-fiat-brand-presents-the-world-premiere-of-the-new-500-3-1-and-the-entire-new-500-line-up-at-lingotto-turin"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented European production powertrain",
+              "originalVariant": "500 Action",
+              "noteCs": "Doložené jmenovité údaje této verze; bez převodu koní na kW a bez součtu elektrických a spalovacích komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "New 500 electric (332)",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "500 Passion / Icon",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 87,
+            "powerKwMax": 87,
+            "availablePowerKw": [
+              87
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/em-en/fiat/press/olivier-franois-president-of-fiat-brand-presents-the-world-premiere-of-the-new-500-3-1-and-the-entire-new-500-line-up-at-lingotto-turin"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented European production powertrain",
+              "originalVariant": "500 Passion / Icon",
+              "noteCs": "Doložené jmenovité údaje této verze; bez převodu koní na kW a bez součtu elektrických a spalovacích komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "New 500 electric (332)",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5292,7 +5351,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_New_500"
+          "https://en.wikipedia.org/wiki/Fiat_New_500",
+          "https://www.media.stellantis.com/em-en/fiat/press/olivier-franois-president-of-fiat-brand-presents-the-world-premiere-of-the-new-500-3-1-and-the-entire-new-500-line-up-at-lingotto-turin"
         ]
       }
     ],
@@ -5301,7 +5361,8 @@
       "https://en.wikipedia.org/wiki/Fiat_500_(2007)",
       "https://en.wikipedia.org/wiki/Fiat_New_500",
       "https://www.media.stellantis.com/de-de/fiat/press/power-auf-die-sauberste-art-und-weise",
-      "https://de.wikipedia.org/wiki/Fiat_Nuova_500"
+      "https://de.wikipedia.org/wiki/Fiat_Nuova_500",
+      "https://www.media.stellantis.com/em-en/fiat/press/olivier-franois-president-of-fiat-brand-presents-the-world-premiere-of-the-new-500-3-1-and-the-entire-new-500-line-up-at-lingotto-turin"
     ],
     "needsReview": [
       {
@@ -5582,10 +5643,6 @@
       },
       {
         "field": "generations[2].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9101,8 +9158,63 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "600 (633 cm³)",
+            "fuel": "petrol",
+            "displacementCc": 633,
+            "displacementLitresNominal": 0.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.stellantisheritage.com/de-de/heritage/geschichten/fiat-600"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "600 (633 cm³)",
+              "noteCs": "Vlastní klasický Fiat 600 a 600 D. Tovární historie uvádí výkon v PS; přepočet na kW není proveden. Multipla ani pozdější licenční varianty nejsou zdrojem těchto objemů.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "600 (100)",
+                "fromYear": 1955,
+                "toYear": 1972,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "600 D (767 cm³)",
+            "fuel": "petrol",
+            "displacementCc": 767,
+            "displacementLitresNominal": 0.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.stellantisheritage.com/de-de/heritage/geschichten/fiat-600"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model production engine specification",
+              "originalVariant": "600 D (767 cm³)",
+              "noteCs": "Vlastní klasický Fiat 600 a 600 D. Tovární historie uvádí výkon v PS; přepočet na kW není proveden. Multipla ani pozdější licenční varianty nejsou zdrojem těchto objemů.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "600 (100)",
+                "fromYear": 1955,
+                "toYear": 1972,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -9142,7 +9254,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_600"
+          "https://en.wikipedia.org/wiki/Fiat_600",
+          "https://www.stellantisheritage.com/de-de/heritage/geschichten/fiat-600"
         ]
       },
       {
@@ -9263,7 +9376,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_600",
       "https://en.wikipedia.org/wiki/Fiat_600_(2023)",
-      "https://de.wikipedia.org/wiki/Fiat_600_(2023)"
+      "https://de.wikipedia.org/wiki/Fiat_600_(2023)",
+      "https://www.stellantisheritage.com/de-de/heritage/geschichten/fiat-600"
     ],
     "needsReview": [
       {
@@ -9280,10 +9394,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -9393,6 +9503,22 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
       }
     ]
   },
@@ -11023,8 +11149,393 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1370,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 59,
+            "powerKwMax": 59,
+            "availablePowerKw": [
+              59
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.4 S/SX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "1.4 S/SX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "Until 1999",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1242,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": 60,
+            "powerKwMax": 60,
+            "availablePowerKw": [
+              60
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "80 SX/HSX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "80 SX/HSX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "From 1999",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1581,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 76,
+            "powerKwMax": 76,
+            "availablePowerKw": [
+              76
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "100 SX/HSX/ELX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "100 SX/HSX/ELX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "–",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1747,
+            "displacementLitresNominal": 1.7,
+            "powerKwMin": 83,
+            "powerKwMax": 83,
+            "availablePowerKw": [
+              83
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "115 ELX/HLX/GT",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "115 ELX/HLX/GT",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "–",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1747,
+            "displacementLitresNominal": 1.7,
+            "powerKwMin": 97,
+            "powerKwMax": 97,
+            "availablePowerKw": [
+              97
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Brava HGT",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "Brava HGT",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "Brava only, from 2001",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 108,
+            "powerKwMax": 108,
+            "availablePowerKw": [
+              108
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Bravo HGT",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "Bravo HGT",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "Bravo only, until 1999",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 114,
+            "powerKwMax": 114,
+            "availablePowerKw": [
+              114
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "155 HGT VIS",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines Petrol",
+              "variantYears": null,
+              "originalVariant": "155 HGT VIS",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "Bravo only, from 1999, used a plastic variable geometry intake manifold",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1929,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 48,
+            "powerKwMax": 48,
+            "availablePowerKw": [
+              48
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.9 D SX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines / Diesel engines Petrol",
+              "variantYears": null,
+              "originalVariant": "1.9 D SX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "–",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 55,
+            "powerKwMax": 55,
+            "availablePowerKw": [
+              55
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "TD 75 SX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines / Diesel engines Petrol",
+              "variantYears": null,
+              "originalVariant": "TD 75 SX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "–",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 74,
+            "powerKwMax": 74,
+            "availablePowerKw": [
+              74
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "TD 100 SX/ELX",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines / Diesel engines Petrol",
+              "variantYears": null,
+              "originalVariant": "TD 100 SX/ELX",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "–",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 77,
+            "powerKwMax": 77,
+            "availablePowerKw": [
+              77
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "JTD 105 SX/ELX/GT",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines / Diesel engines Petrol",
+              "variantYears": null,
+              "originalVariant": "JTD 105 SX/ELX/GT",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "From 1999",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "fuel": "diesel",
+            "displacementCc": 1910,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": 74,
+            "powerKwMax": 74,
+            "availablePowerKw": [
+              74
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "JTD 100 SX/ELX/GT",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Bravo_and_Brava"
+            ],
+            "sourceScope": {
+              "tableIndex": 2,
+              "tableSection": "Engines / Diesel engines Petrol",
+              "variantYears": null,
+              "originalVariant": "JTD 100 SX/ELX/GT",
+              "noteCs": "Vybraná doložená motorizace z tabulky; dostupnost se liší podle trhu a roku. Nejde o úplný český ceník.",
+              "rowNotes": "From 2001 to 2003",
+              "generationEvidence": {
+                "method": "generation-article",
+                "anchor": "Fiat Bravo and Brava (1995–2003)",
+                "fromYear": 1995,
+                "toYear": 2001,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -12051,10 +12562,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -16441,8 +16948,59 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1361,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 54,
+            "powerKwMax": 54,
+            "availablePowerKw": [
+              54
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "Combi Base 1.4",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Fiat/13651/Fiat-Fiorino-III-Combi-Base-14-75HP.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2010 - 2016)",
+              "originalVariant": "Fiat Fiorino III Combi Base 1.4 75HP Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Fiat/13651/Fiat-Fiorino-III-Combi-Base-14-75HP.html",
+                "title": "Fiat Fiorino III Combi Base 1.4 75HP Specs",
+                "modelAliases": [
+                  "FIORINO"
+                ],
+                "generation": "Fiorino Typ 225",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Fiat/M1503/Fiorino-III",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Fiorino III",
+                "generationProductionFrom": 2008,
+                "generationProductionTo": 2016,
+                "variantDateText": "(2010 - 2016)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "73 PS / 72 HP / 54 kW@ 5200 rpm",
+                "displacementText": "1361 cm3 / 83.1 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Fiorino Typ 225",
+                "fromYear": 2008,
+                "toYear": 2016,
+                "generationIndex": 2,
+                "rowFromYear": 2010,
+                "rowToYear": 2016
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -16466,7 +17024,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Fiorino"
+          "https://en.wikipedia.org/wiki/Fiat_Fiorino",
+          "https://www.ultimatespecs.com/car-specs/Fiat/13651/Fiat-Fiorino-III-Combi-Base-14-75HP.html"
         ]
       },
       {
@@ -16507,7 +17066,8 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Fiorino"
+      "https://en.wikipedia.org/wiki/Fiat_Fiorino",
+      "https://www.ultimatespecs.com/car-specs/Fiat/13651/Fiat-Fiorino-III-Combi-Base-14-75HP.html"
     ],
     "needsReview": [
       {
@@ -16652,10 +17212,6 @@
       },
       {
         "field": "generations[2].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -18645,8 +19201,59 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 652,
+            "displacementLitresNominal": 0.7,
+            "powerKwMin": 22,
+            "powerKwMax": 22,
+            "availablePowerKw": [
+              22
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "30",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Fiat/479/Fiat-Panda-30.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1980 - 1986)",
+              "originalVariant": "Fiat Panda 30 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Fiat/479/Fiat-Panda-30.html",
+                "title": "Fiat Panda 30 Specs",
+                "modelAliases": [
+                  "PANDA"
+                ],
+                "generation": "Panda 1",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Fiat/M151/Panda",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Panda",
+                "generationProductionFrom": 1980,
+                "generationProductionTo": 1986,
+                "variantDateText": "(1980 - 1986)",
+                "fuelText": " Petrol Inline 2",
+                "bodyText": "Hatchback",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "30 PS / 30 HP / 22 kW@ 5500 rpm",
+                "displacementText": "652 cm3 / 39.8 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Panda 1",
+                "fromYear": 1980,
+                "toYear": 1986,
+                "generationIndex": 0,
+                "rowFromYear": 1980,
+                "rowToYear": 1986
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -18686,7 +19293,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Panda"
+          "https://en.wikipedia.org/wiki/Fiat_Panda",
+          "https://www.ultimatespecs.com/car-specs/Fiat/479/Fiat-Panda-30.html"
         ]
       },
       {
@@ -19165,8 +19773,135 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.2 FIRE EVO II",
+            "fuel": "petrol",
+            "displacementCc": 1242,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.2 FIRE EVO II",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.2 FIRE EVO II",
+                "source": "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1242,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 102
+                },
+                "sha256": "b6131a16616aae916bb9dbcce61054c4eb313ac6bb17d182c968e7abe8851e2c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "III (319)",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon je v tomto listu vyjádřen pouze vHP; bez převodu není vyplněn výkonkW. Rozměry společné tabulky pro uvedené hatchbacky, šířka bez zrcátek. Nelze zaměnit TwinAir standard a ECOmapu."
+            }
+          },
+          {
+            "variant": "1.3 MultiJet II",
+            "fuel": "diesel",
+            "displacementCc": 1248,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.3 MultiJet II",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.3 MultiJet II",
+                "source": "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 1248,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 190
+                },
+                "sha256": "c3bf1687c571dbb785fae5c5f9dd988630106c51c63b957c1c63d684a81c5fd9"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "III (319)",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon je v tomto listu vyjádřen pouze vHP; bez převodu není vyplněn výkonkW. Rozměry společné tabulky pro uvedené hatchbacky, šířka bez zrcátek. Nelze zaměnit TwinAir standard a ECOmapu."
+            }
+          },
+          {
+            "variant": "0.9 TwinAir 85",
+            "fuel": "petrol",
+            "displacementCc": 875,
+            "displacementLitresNominal": 0.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "0.9 TwinAir 85",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "0.9 TwinAir 85",
+                "source": "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 875,
+                  "cylinders": 2,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 145
+                },
+                "sha256": "8a51021c2730b3c2969e1341088fd6b6fad69dfbf2fd27b65fb2f3aa0bfb2c57"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "III (319)",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon je v tomto listu vyjádřen pouze vHP; bez převodu není vyplněn výkonkW. Rozměry společné tabulky pro uvedené hatchbacky, šířka bez zrcátek. Nelze zaměnit TwinAir standard a ECOmapu."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -19494,7 +20229,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Fiat_Panda",
       "https://www.media.stellantis.com/uploads/ie/IR/2011/FIAT/2012_FIAT_Panda_Technical.pdf",
-      "https://xr793.com/wp-content/uploads/2023/01/2008-Fiat-Panda-UK.pdf"
+      "https://xr793.com/wp-content/uploads/2023/01/2008-Fiat-Panda-UK.pdf",
+      "https://www.ultimatespecs.com/car-specs/Fiat/479/Fiat-Panda-30.html"
     ],
     "needsReview": [
       {
@@ -19511,10 +20247,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -19742,10 +20474,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -19880,6 +20608,30 @@
       {
         "field": "generations[2].trims[2].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -26147,8 +26899,59 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "diesel",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "availablePowerKw": [
+              88
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "L1H1 1.6 MultiJet",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2016 - )",
+              "originalVariant": "Fiat Talento Combi L1H1 1.6 MultiJet 120HP Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html",
+                "title": "Fiat Talento Combi L1H1 1.6 MultiJet 120HP Specs",
+                "modelAliases": [
+                  "TALENTO"
+                ],
+                "generation": "Nuovo Talento 2016",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Fiat/M10129/Talento-Combi",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Talento Combi",
+                "generationProductionFrom": 2016,
+                "generationProductionTo": null,
+                "variantDateText": "(2016 - )",
+                "fuelText": " Diesel Inline 4",
+                "bodyText": "Van",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "120 PS / 118 HP / 88 kW@ 3500 rpm",
+                "displacementText": "1598 cm3 / 97.5 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Nuovo Talento 2016",
+                "fromYear": 2016,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": 2016,
+                "rowToYear": 2016
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -26172,12 +26975,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Talento"
+          "https://en.wikipedia.org/wiki/Fiat_Talento",
+          "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Fiat_Talento"
+      "https://en.wikipedia.org/wiki/Fiat_Talento",
+      "https://www.ultimatespecs.com/car-specs/Fiat/114599/Fiat-Talento-Combi-L1H1-16-MultiJet-120HP.html"
     ],
     "needsReview": [
       {
@@ -26258,10 +27063,6 @@
       },
       {
         "field": "generations[1].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -26471,8 +27272,59 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 1108,
+            "displacementLitresNominal": 1.1,
+            "powerKwMin": 41,
+            "powerKwMax": 41,
+            "availablePowerKw": [
+              41
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "1.1 FIRE",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Fiat/15005/Fiat-Tipo-11-FIRE.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1988 - 1991)",
+              "originalVariant": "Fiat Tipo 1.1 FIRE Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Fiat/15005/Fiat-Tipo-11-FIRE.html",
+                "title": "Fiat Tipo 1.1 FIRE Specs",
+                "modelAliases": [
+                  "TIPO"
+                ],
+                "generation": "Tipo 1",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Fiat/M6803/Tipo",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Tipo",
+                "generationProductionFrom": 1988,
+                "generationProductionTo": 1995,
+                "variantDateText": "(1988 - 1991)",
+                "fuelText": " Petrol Inline 4",
+                "bodyText": "Hatchback",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "56 PS / 55 HP / 41 kW@ 5500 rpm",
+                "displacementText": "1108 cm3 / 67.6 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Tipo 1",
+                "fromYear": 1988,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": 1988,
+                "rowToYear": 1991
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -26496,7 +27348,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Fiat_Tipo_(1988)"
+          "https://en.wikipedia.org/wiki/Fiat_Tipo_(1988)",
+          "https://www.ultimatespecs.com/car-specs/Fiat/15005/Fiat-Tipo-11-FIRE.html"
         ]
       },
       {
@@ -27125,7 +27978,8 @@
       "https://en.wikipedia.org/wiki/Fiat_Tipo",
       "https://en.wikipedia.org/wiki/Fiat_Tipo_(1988)",
       "https://en.wikipedia.org/wiki/Fiat_Tipo_(2015)",
-      "https://www.media.stellantis.com/uploads/fr/FR/2016/FIAT_/TARIFS_/Tarif_Public_FIAT_TIPO_5_portes_au_2_mai_2016.pdf"
+      "https://www.media.stellantis.com/uploads/fr/FR/2016/FIAT_/TARIFS_/Tarif_Public_FIAT_TIPO_5_portes_au_2_mai_2016.pdf",
+      "https://www.ultimatespecs.com/car-specs/Fiat/15005/Fiat-Tipo-11-FIRE.html"
     ],
     "needsReview": [
       {
@@ -27142,10 +27996,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

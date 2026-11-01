@@ -1,0 +1,32 @@
+[
+  {
+    "name": "engine audit",
+    "command": "node analysis/codex/popular-engines-pass/run-engine-audit.mjs",
+    "exit_code": 0,
+    "output": "{\"result\":\"PASS\",\"publicCards\":4753,\"engineRowsChecked\":11717,\"externalEvidenceRows\":1501,\"malformedNames\":0,\"duplicateNamePowerPairs\":0,\"importEvidenceErrors\":0,\"sharanII19TdiRows\":0,\"m102_922Normalization\":\"M102.922 unchanged (regression-tested)\",\"sharedSourcePairsReextracted\":39,\"batches\":[{\"batch\":2,\"attempted\":50,\"touched\":33,\"enginesAdded\":689,\"noSource\":14,\"alreadyCovered\":3,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":3,\"attempted\":50,\"touched\":26,\"enginesAdded\":344,\"noSource\":24,\"alreadyCovered\":0,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":4,\"attempted\":50,\"touched\":24,\"enginesAdded\":272,\"noSource\":24,\"alreadyCovered\":2,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":5,\"attempted\":50,\"touched\":21,\"enginesAdded\":288,\"noSource\":28,\"alreadyCovered\":1,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":6,\"attempted\":50,\"touched\":20,\"enginesAdded\":209,\"noSource\":29,\"alreadyCovered\":1,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":7,\"attempted\":50,\"touched\":19,\"enginesAdded\":140,\"noSource\":31,\"alreadyCovered\":0,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":8,\"attempted\":50,\"touched\":13,\"enginesAdded\":127,\"noSource\":37,\"alreadyCovered\":0,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":9,\"attempted\":50,\"touched\":11,\"enginesAdded\":70,\"noSource\":38,\"alreadyCovered\":1,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":10,\"attempted\":50,\"touched\":13,\"enginesAdded\":94,\"noSource\":37,\"alreadyCovered\":0,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":11,\"attempted\":18,\"touched\":1,\"enginesAdded\":14,\"noSource\":17,\"alreadyCovered\":0,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false},{\"batch\":12,\"attempted\":50,\"touched\":8,\"enginesAdded\":64,\"noSource\":37,\"alreadyCovered\":5,\"generationsAdded\":0,\"generationsRemoved\":0,\"faceliftsAdded\":0,\"listingIdChanges\":0,\"statsRebuildRequired\":false}]}\n"
+  },
+  {
+    "name": "technical-version proof tests",
+    "command": "node analysis/codex/popular-engines-pass/test-reviewed-trims.mjs",
+    "exit_code": 0,
+    "output": "{\"accepted\":139,\"held\":[],\"mutationRejections\":556}\n"
+  },
+  {
+    "name": "engine policy tests",
+    "command": "node analysis/codex/test-engine-throughput.mjs",
+    "exit_code": 0,
+    "output": "PASS: 8 names, 2 deduplication, 2 market, 3 validator evidence and 7 presentation cases\n"
+  },
+  {
+    "name": "TypeScript",
+    "command": "npm run typecheck -- --incremental false",
+    "exit_code": 0,
+    "output": "\n> vozodrom@0.1.0 typecheck\n> tsc --noEmit --incremental false\n\n"
+  },
+  {
+    "name": "diff whitespace",
+    "command": "git -c core.safecrlf=false diff --check",
+    "exit_code": 0,
+    "output": ""
+  }
+]

@@ -78,7 +78,15 @@ export function evidenceProblem(g,index,e){
  if(nonEuropeanMarket([scope.originalVariant,scope.variantYears,scope.tableSection,scope.rowNotes].filter(Boolean).join(' ')))return 'Explicit non-European market row';
  const ev=scope.generationEvidence;
  if(!ev||ev.generationIndex!==index)return 'Missing/wrong source generation evidence';
- if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production','series-number-article','specification-page'].includes(ev.method))return 'Unknown attribution method';
+ if(!['generation-heading','generation-article','row-years','row-years-within-table-envelope','single-generation-production','series-number-article','specification-page','reviewed-technical-version'].includes(ev.method))return 'Unknown attribution method';
+ if(ev.method==='reviewed-technical-version'){
+  const proof=scope.technicalVersionProof,trim=(g.trims??[]).find(t=>t.name===proof?.name&&(t.sources??[]).includes(proof?.source));
+  if(!trim?.engine||JSON.stringify(trim.engine)!==JSON.stringify(proof.engine)||!(e.sources??[]).includes(proof.source))return 'Reviewed technical-version proof missing or changed';
+  if(e.fuel!==trim.engine.fuel||e.displacementCc!==(trim.engine.displacementCc??null))return 'Technical-version fuel/capacity changed';
+  if(e.powerKwMin!==null&&e.powerKwMin!==trim.engine.powerKw||e.powerKwMax!==e.powerKwMin)return 'Technical-version power changed';
+  if(e.displacementLitresNominal!==null&&!trim.engine.displacementCc&&!new RegExp('\\b'+String(e.displacementLitresNominal).replace('.','[.,]')+'\\b').test(trim.name))return 'Technical-version nominal capacity not explicit';
+  return null;
+ }
  if(ev.rowFromYear!=null&&!(ev.rowFromYear>=g.from&&ev.rowToYear<=(g.to??2026)))return 'Engine row years contradict generation';
  if(ev.fromYear!=null&&ev.fromYear>(g.to??2026))return 'Source starts after generation';
  if(ev.toYear!=null&&ev.toYear<g.from)return 'Source ends before generation';

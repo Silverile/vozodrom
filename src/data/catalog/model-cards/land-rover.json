@@ -132,8 +132,123 @@
           "pickup",
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "300 Tdi",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 83,
+            "powerKwMax": 83,
+            "availablePowerKw": [
+              83
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Land_Rover_Defender"
+            ],
+            "sourceScope": {
+              "tableSection": "Original Defender: European engine chronology before the 2016 production end",
+              "originalVariant": "300 Tdi",
+              "noteCs": "Vlastní původní Defender 90/110/130. Novější přestavba Works V8 od 2018 není sériový motor tohoto výrobního období. Neověřený přesný objem a výkon verze 2.2 zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Defender 90 / 110 / 130 – původní rodina",
+                "fromYear": 1990,
+                "toYear": 2016,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Td5",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 90,
+            "powerKwMax": 90,
+            "availablePowerKw": [
+              90
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Land_Rover_Defender"
+            ],
+            "sourceScope": {
+              "tableSection": "Original Defender: European engine chronology before the 2016 production end",
+              "originalVariant": "Td5",
+              "noteCs": "Vlastní původní Defender 90/110/130. Novější přestavba Works V8 od 2018 není sériový motor tohoto výrobního období. Neověřený přesný objem a výkon verze 2.2 zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Defender 90 / 110 / 130 – původní rodina",
+                "fromYear": 1990,
+                "toYear": 2016,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.4 diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": 90,
+            "powerKwMax": 90,
+            "availablePowerKw": [
+              90
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Land_Rover_Defender"
+            ],
+            "sourceScope": {
+              "tableSection": "Original Defender: European engine chronology before the 2016 production end",
+              "originalVariant": "2.4 diesel",
+              "noteCs": "Vlastní původní Defender 90/110/130. Novější přestavba Works V8 od 2018 není sériový motor tohoto výrobního období. Neověřený přesný objem a výkon verze 2.2 zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Defender 90 / 110 / 130 – původní rodina",
+                "fromYear": 1990,
+                "toYear": 2016,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.2 diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Land_Rover_Defender"
+            ],
+            "sourceScope": {
+              "tableSection": "Original Defender: European engine chronology before the 2016 production end",
+              "originalVariant": "2.2 diesel",
+              "noteCs": "Vlastní původní Defender 90/110/130. Novější přestavba Works V8 od 2018 není sériový motor tohoto výrobního období. Neověřený přesný objem a výkon verze 2.2 zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Defender 90 / 110 / 130 – původní rodina",
+                "fromYear": 1990,
+                "toYear": 2016,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -155,7 +270,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Land_Rover_Defender"
+          "https://en.wikipedia.org/wiki/Land_Rover_Defender",
+          "https://de.wikipedia.org/wiki/Land_Rover_Defender"
         ]
       },
       {
@@ -671,7 +787,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Land_Rover_Defender",
       "https://en.wikipedia.org/wiki/Land_Rover_Defender_(L663)",
-      "https://jlrnewsroom.media/wp-content/uploads/2020/09/Land-Rover-Defender-110_TECH-DATA_21MY_090920.pdf"
+      "https://jlrnewsroom.media/wp-content/uploads/2020/09/Land-Rover-Defender-110_TECH-DATA_21MY_090920.pdf",
+      "https://de.wikipedia.org/wiki/Land_Rover_Defender"
     ],
     "needsReview": [
       {
@@ -864,10 +981,6 @@
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1245,6 +1358,38 @@
       {
         "field": "generations[4].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[3].engines[0].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].displacementLitresNominal",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[1].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[1].displacementLitresNominal",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[2].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[3].displacementCc",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[3].powerKwMin",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[3].powerKwMax",
+        "reason": "Hodnota nebyla pro tuto přesnou verzi ověřena; bez přepočtu z PS/HP a bez přenosu z jiné generace."
       }
     ]
   },
@@ -1267,8 +1412,59 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 3528,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 114,
+            "powerKwMax": 114,
+            "availablePowerKw": [
+              114
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "V8i",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Land-Rover/7465/Land-Rover-Discovery-Series-I-V8i.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1990 - 1994)",
+              "originalVariant": "Land Rover Discovery Series I V8i Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Land-Rover/7465/Land-Rover-Discovery-Series-I-V8i.html",
+                "title": "Land Rover Discovery Series I V8i Specs",
+                "modelAliases": [
+                  "DISCOVERY"
+                ],
+                "generation": "Discovery Series I",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Land-Rover/M1201/Discovery-Series-I",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Discovery Series I",
+                "generationProductionFrom": 1989,
+                "generationProductionTo": 1998,
+                "variantDateText": "(1990 - 1994)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "TT",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "155 PS / 153 HP / 114 kW@ 4750 rpm",
+                "displacementText": "3528 cm3 / 215.3 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Discovery Series I",
+                "fromYear": 1989,
+                "toYear": 1998,
+                "generationIndex": 0,
+                "rowFromYear": 1990,
+                "rowToYear": 1994
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1290,7 +1486,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Land_Rover_Discovery"
+          "https://en.wikipedia.org/wiki/Land_Rover_Discovery",
+          "https://www.ultimatespecs.com/car-specs/Land-Rover/7465/Land-Rover-Discovery-Series-I-V8i.html"
         ]
       },
       {
@@ -1303,8 +1500,59 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 3950,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 136,
+            "powerKwMax": 136,
+            "availablePowerKw": [
+              136
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "4.0 V8i",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Land-Rover/7347/Land-Rover-Discovery-Series-II-40-V8i.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2002 - 2004)",
+              "originalVariant": "Land Rover Discovery Series II 4.0 V8i Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Land-Rover/7347/Land-Rover-Discovery-Series-II-40-V8i.html",
+                "title": "Land Rover Discovery Series II 4.0 V8i Specs",
+                "modelAliases": [
+                  "DISCOVERY"
+                ],
+                "generation": "Discovery Series II",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Land-Rover/M1202/Discovery-Series-II",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Discovery Series II",
+                "generationProductionFrom": 1998,
+                "generationProductionTo": 2004,
+                "variantDateText": "(2002 - 2004)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "185 PS / 182 HP / 136 kW@ 4750 rpm",
+                "displacementText": "3950 cm3 / 241 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Discovery Series II",
+                "fromYear": 1998,
+                "toYear": 2004,
+                "generationIndex": 1,
+                "rowFromYear": 2002,
+                "rowToYear": 2004
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1326,7 +1574,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Land_Rover_Discovery"
+          "https://en.wikipedia.org/wiki/Land_Rover_Discovery",
+          "https://www.ultimatespecs.com/car-specs/Land-Rover/7347/Land-Rover-Discovery-Series-II-40-V8i.html"
         ]
       },
       {
@@ -1874,7 +2123,9 @@
       "https://en.wikipedia.org/wiki/Land_Rover_Discovery",
       "https://www.landrover.co.uk/vehicles/discovery-1-4.html",
       "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/land-rover/discovery//",
-      "https://de.wikipedia.org/wiki/Land_Rover_Discovery"
+      "https://de.wikipedia.org/wiki/Land_Rover_Discovery",
+      "https://www.ultimatespecs.com/car-specs/Land-Rover/7465/Land-Rover-Discovery-Series-I-V8i.html",
+      "https://www.ultimatespecs.com/car-specs/Land-Rover/7347/Land-Rover-Discovery-Series-II-40-V8i.html"
     ],
     "needsReview": [
       {
@@ -1887,10 +2138,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1947,10 +2194,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3287,8 +3530,59 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 3528,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 93,
+            "powerKwMax": 93,
+            "availablePowerKw": [
+              93
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "V8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Land-Rover/417/Land-Rover-Range-Rover-V8.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1970 - 1988)",
+              "originalVariant": "Land Rover Range Rover V8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Land-Rover/417/Land-Rover-Range-Rover-V8.html",
+                "title": "Land Rover Range Rover V8 Specs",
+                "modelAliases": [
+                  "RANGEROVER"
+                ],
+                "generation": "Range Rover 1 / Classic",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Land-Rover/M116/Range-Rover",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Range Rover",
+                "generationProductionFrom": 1970,
+                "generationProductionTo": 1996,
+                "variantDateText": "(1970 - 1988)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "126 PS / 124 HP / 93 kW@ 4000 rpm",
+                "displacementText": "3528 cm3 / 215.3 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Range Rover 1 / Classic",
+                "fromYear": 1970,
+                "toYear": 1996,
+                "generationIndex": 0,
+                "rowFromYear": 1970,
+                "rowToYear": 1988
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3326,7 +3620,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Range_Rover_Classic"
+          "https://en.wikipedia.org/wiki/Range_Rover_Classic",
+          "https://www.ultimatespecs.com/car-specs/Land-Rover/417/Land-Rover-Range-Rover-V8.html"
         ]
       },
       {
@@ -3339,8 +3634,59 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 3950,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 140,
+            "powerKwMax": 140,
+            "availablePowerKw": [
+              140
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "4.0 V8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Land-Rover/7398/Land-Rover-Range-Rover-(P38)-40-V8.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1994 - 1998)",
+              "originalVariant": "Land Rover Range Rover (P38) 4.0 V8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Land-Rover/7398/Land-Rover-Range-Rover-(P38)-40-V8.html",
+                "title": "Land Rover Range Rover (P38) 4.0 V8 Specs",
+                "modelAliases": [
+                  "RANGEROVER"
+                ],
+                "generation": "Range Rover (P38A/LP)",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Land-Rover/M1209/Range-Rover-(P38)",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Range Rover (P38)",
+                "generationProductionFrom": 1994,
+                "generationProductionTo": 2002,
+                "variantDateText": "(1994 - 1998)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "190 PS / 187 HP / 140 kW@ 4750 rpm",
+                "displacementText": "3950 cm3 / 241 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Range Rover (P38A/LP)",
+                "fromYear": 1994,
+                "toYear": 2002,
+                "generationIndex": 1,
+                "rowFromYear": 1994,
+                "rowToYear": 1998
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3362,7 +3708,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Range_Rover_(P38A)"
+          "https://en.wikipedia.org/wiki/Range_Rover_(P38A)",
+          "https://www.ultimatespecs.com/car-specs/Land-Rover/7398/Land-Rover-Range-Rover-(P38)-40-V8.html"
         ]
       },
       {
@@ -4180,7 +4527,9 @@
       "https://en.wikipedia.org/wiki/Range_Rover_(P38A)",
       "https://en.wikipedia.org/wiki/Range_Rover_(L322)",
       "https://en.wikipedia.org/wiki/Range_Rover_(L405)",
-      "https://en.wikipedia.org/wiki/Range_Rover_(L460)"
+      "https://en.wikipedia.org/wiki/Range_Rover_(L460)",
+      "https://www.ultimatespecs.com/car-specs/Land-Rover/417/Land-Rover-Range-Rover-V8.html",
+      "https://www.ultimatespecs.com/car-specs/Land-Rover/7398/Land-Rover-Range-Rover-(P38)-40-V8.html"
     ],
     "needsReview": [
       {
@@ -4193,10 +4542,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4249,10 +4594,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+const root='analysis/codex/popular-engines-pass',de=t=>'https://de.wikipedia.org/wiki/'+t,plan=[];
+function add(line,title,rows,note=''){plan.push({make:'audi',line,url:de(title),note,generations:rows.map(([code,from,to,bodyTypes,detail=''])=>({code,from,to,bodyTypes,source:de(title),note:detail,productionStatus:to===null?'unknown':'ended'}))});}
+add('a4-allroad','Audi_A4_allroad_quattro',[['B8',2009,2016,['kombi']],['B9',2016,2024,['kombi']]],'Pouze vlastní allroad, nikoli všechny roky A4.');
+add('a6-allroad','Audi_A6_allroad_quattro',[['C5',2000,2005,['kombi'],'První motorizace mají doloženou sérii od 02/2000; datum 1999 z obecného boxu nepřevzato.'],['C6',2006,2011,['kombi']],['C7',2012,2018,['kombi']],['C8',2019,2025,['kombi']],['C9',2026,null,['kombi']]],'Vlastní řada allroad; jiné A6 Avant nejsou automaticky součástí výrobního období.');
+add('rs-e-tron-gt','Audi_e-tron_GT',[[null,2020,null,['sedan']]],'Výrobní tabulka samostatně uvádí RS od 12/2020. Modernizace 2024 není novou konstrukční generací. Výkon běžného režimu oddělen od Launch Control.');
+add('s-e-tron-gt','Audi_e-tron_GT',[[null,2024,null,['sedan']]],'Pouze vlastní S e-tron GT od modernizace 06/2024, nikoli základní e-tron GT od 2020.');
+add('s1','Audi_S1',[['8X',2014,2018,['hatchback']]]);
+add('s3','Audi_S3',[['8L',1999,2003,['hatchback']],['8P',2006,2012,['hatchback']],['8V',2013,2020,['hatchback','sedan','kabriolet']],['8Y',2020,null,['hatchback','sedan']]]);
+add('s4','Audi_S4',[['C4',1991,1994,['sedan','kombi']],['B5',1997,2001,['sedan','kombi']],['B6',2003,2005,['sedan','kombi','kabriolet'],'Sedan/Avant do 2004; Cabriolet doložen v 2005.'],['B7',2004,null,['sedan','kombi','kabriolet'],'Prameny se rozcházejí v konci Cabrioletu 2008/2009; přesný konec celé skupiny neuzavřen.'],['B8',2008,2015,['sedan','kombi']],['B9',2016,null,['sedan','kombi'],'Německý pramen ukončuje tabulky v 2023, globální historie v 2025; neověřený společný konec ponechán prázdný.']], 'S4 C4 není automaticky celou řadou Audi 100; S5 nástupnická řada má vlastní kartu.');
+add('s5','Audi_S5',[['8T',2007,2017,['kupe','hatchback','kabriolet'],'Coupé do 2016, původní Cabriolet do 03/2017.'],['F5',2016,2024,['kupe','hatchback','kabriolet']],['FU',2024,null,['hatchback','kombi']]]);
+add('s6','Audi_S6',[['C4',1994,1997,['sedan','kombi']],['C5',1999,2005,['sedan','kombi']],['C6',2006,2010,['sedan','kombi']],['C7',2012,2018,['sedan','kombi']],['C8',2019,2025,['sedan','kombi']]]);
+add('s8','Audi_S8',[['D2',1996,2002,['sedan']],['D3',2006,2010,['sedan']],['D4',2012,2017,['sedan']],['D5',2019,2026,['sedan']]]);
+add('sq5','Audi_SQ5',[['8R',2012,2017,['suv']],['FY',2017,2024,['suv']],['GU',2024,null,['suv']]]);
+add('sq7','Audi_SQ7',[['4M',2016,2026,['suv']],['G8',2026,null,['suv'],'Samostatná neevropská větev; evropské motory původního 4M se nepřenášejí.']]);
+add('s7','Audi_A7_C7',[['C7',2012,2018,['hatchback']],['C8',2019,2025,['hatchback']]],'Pouze S7 Sportback. Dřívější A7 ani prodloužená A7L nejsou jeho generacemi.');
+plan.at(-1).generations[1].source=de('Audi_A7_C8');
+add('rs7','Audi_A7_C7',[['C7',2013,2018,['hatchback']],['C8',2019,2025,['hatchback']]],'Pouze RS7 Sportback, nikoli celé období základní A7.');
+plan.at(-1).generations[1].source=de('Audi_A7_C8');
+add('rs-q8','Audi_Q8',[[null,2019,null,['suv']]],'Modernizace a performance 2024 jsou varianty původního RS Q8, nikoli nové generace.');
+add('sq8','Audi_Q8',[[null,2019,null,['suv']]],'Vlastní SQ8 TDI/TFSI od 2019; datum základního Q8 2018 nepřevzato.');
+add('sq2','Audi_Q2',[[null,2018,2026,['suv']]],'Pouze sportovní SQ2, nikoli Q2 od 2016; vlastní tabulka SQ2 končí v 04/2026.');
+add('tts','Audi_TT',[['8J',2008,2014,['kupe','kabriolet']],['FV / 8S',2014,2023,['kupe','kabriolet']]],'První TTS patří ke konstrukci TT 8J, druhý k FV/8S. Starší TT 8N není TTS.');
+plan.at(-1).generations[0].source=de('Audi_TT_8J');plan.at(-1).generations[1].source=de('Audi_TT_FV');
+add('s6-e-tron','Audi_A6_e-tron',[[null,2024,null,['hatchback','kombi']]],'Pouze sériový S6 e-tron, nikoli koncept A6 e-tron 2021 ani spalovací S6.');
+add('sq6-e-tron','Audi_Q6_e-tron',[[null,2024,null,['suv']]],'Pouze SQ6 e-tron SUV/Sportback; koncepty ani základní Q6 nejsou jeho výrobním počátkem.');
+add('sq8-e-tron','Audi_Q8_e-tron',[[null,2023,2025,['suv']]],'Pouze SQ8 e-tron/Sportback. Starší e-tron S není automaticky stejným značkovým obdobím; Q8 e-tron od 2022 není počátkem SQ8.');
+fs.writeFileSync(root+'/audi-plan.json',JSON.stringify(plan,null,2)+'\n');console.log({models:plan.length,generations:plan.reduce((n,p)=>n+p.generations.length,0)});
