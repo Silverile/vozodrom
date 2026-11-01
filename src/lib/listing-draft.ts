@@ -73,11 +73,17 @@ export const generationId = (g: { code: string | null; from: number | null; to: 
 /**
  * The line's generation a saved listing names. Year ids change when the catalogue re-dates or merges
  * a generation, so old ids go through the catalogue's aliases first; a code the maker reused (W463)
- * is resolved by the listing's year.
+ * is resolved by the listing's year. An id that stood for the whole line (BMW 7 "1977–?") has
+ * several candidates: the year picks one, and a transition year covered by two stays unresolved.
  */
 export function generationOf(draft: Pick<Draft, "brand" | "generation" | "year">, line: ModelLine) {
   if (!draft.generation) return undefined;
   const alias = GENERATION_ALIASES.aliases.find((a) => a.makeSlug === draft.brand && a.lineSlug === line.slug && a.from === draft.generation);
+  if (alias && "candidates" in alias && alias.candidates) {
+    const ids = alias.candidates as string[];
+    const covering = line.generations.filter((g) => ids.includes(generationId(g)) && coversYear(g, draft.year));
+    return covering.length === 1 ? covering[0] : undefined;
+  }
   const id = alias?.to ?? draft.generation;
   const found = line.generations.filter((g) => generationId(g) === id);
   return found.length > 1 ? found.filter((g) => coversYear(g, draft.year)).pop() ?? found[0] : found[0];

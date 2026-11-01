@@ -1,0 +1,11 @@
+import zlib from 'node:zlib';
+﻿import fs from 'node:fs';import cp from 'node:child_process';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const root='analysis/codex/single-generation-pass',stage=root+'/staged',py='C:/Program Files/FreeCAD 1.0/bin/python.exe',raw='C:/Workspace/Projects/CF/vozodrom-data',read=p=>JSON.parse(fs.existsSync(p)?fs.readFileSync(p,'utf8'):zlib.gunzipSync(fs.readFileSync(p+'.gz')).toString('utf8')),write=(p,x)=>fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n');
+fs.mkdirSync(stage+'/aggregates',{recursive:true});const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');const inputs=Object.fromEntries(['src/data/model-cards-index.json','src/data/catalog/model-lines-auto.json','scripts/stats/match.py','scripts/stats/istp-stats.py','scripts/stats/rsv-stats.py'].map(p=>[p,hash(p)]));write(root+'/rebuild-inputs.json',inputs);
+async function run(name,args){const log=fs.openSync(stage+'/'+name+'.log','w');await new Promise((resolve,reject)=>{const p=cp.spawn(py,['-B',...args],{stdio:['ignore',log,log],windowsHide:true});p.on('error',reject);p.on('exit',code=>{fs.closeSync(log);if(code===0)resolve();else reject(Error(name+' '+code));});});console.log(name+' complete');}
+await Promise.all([run('istp',['scripts/stats/istp-stats.py',raw,'--out-dir',stage+'/aggregates','--workers','24','--skip-unmatched-output']),run('rsv',['scripts/stats/rsv-stats.py',raw,'--out-dir',stage+'/aggregates','--makes','bmw'])]);
+for(const[p,h]of Object.entries(inputs))assert.equal(hash(p),h,'Inputs changed '+p);
+// Filter after processing every make and complete VIN history, preserving cross-make readings.
+const istp=read(stage+'/aggregates/istp-agg.json');assert.equal(istp.meta.days,1094);istp.keys=Object.fromEntries(Object.entries(istp.keys).filter(([k])=>k.startsWith('bmw|')));write(stage+'/aggregates/istp-agg.json',istp);write(root+'/full-history-selection.json',{fullHistoryProcessed:true,days:istp.meta.days,selection:'bmw after all-make VIN history aggregation'});
+await run('build',['scripts/stats/build-stats.py',raw,'--aggregates-dir',stage+'/aggregates','--out-dir',stage+'/stats']);
+await import('./finalize-bmw7-stats.mjs');
