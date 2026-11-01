@@ -3713,8 +3713,69 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "4.0 V8 Twin Turbo",
+            "fuel": "petrol",
+            "displacementCc": 3996,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 478,
+            "powerKwMax": 478,
+            "availablePowerKw": [
+              478
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/history/urus"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "4.0 V8 Twin Turbo",
+              "noteCs": "Sériový původní Urus: technická specifikace výrobce uvádí 3996 cm³ a 478 kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Urus",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "SE 4.0 V8 PHEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 3996,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 588,
+            "powerKwMax": 588,
+            "availablePowerKw": [
+              588
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lamborghini/urus/1generation-facelift/335129/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "SE 4.0 V8 PHEV",
+              "noteCs": "Vlastní technická data ADAC pro evropské Urus SE: výslovný systémový výkon 588 kW. Není použit samostatný výkon spalovacího motoru 456 kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Urus",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3803,7 +3864,9 @@
           "https://www.lamborghini.com/en-en/history",
           "https://www.lamborghini.com/en-en/models/urus/urus-se",
           "https://www.audi.com/en/automobili-lamborghini-spa-5567/profile-of-lamborghini-14562",
-          "https://www.lamborghini.com/company"
+          "https://www.lamborghini.com/company",
+          "https://www.lamborghini.com/en-en/history/urus",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lamborghini/urus/1generation-facelift/335129/"
         ]
       }
     ],
@@ -3813,7 +3876,9 @@
       "https://www.lamborghini.com/en-en/models/urus/urus-se",
       "https://www.lamborghini.com/de-en/nachrichten/dynamic-debut-for-urus-se-in-nardo",
       "https://www.audi.com/en/automobili-lamborghini-spa-5567/profile-of-lamborghini-14562",
-      "https://www.lamborghini.com/company"
+      "https://www.lamborghini.com/company",
+      "https://www.lamborghini.com/en-en/history/urus",
+      "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/lamborghini/urus/1generation-facelift/335129/"
     ],
     "needsReview": [
       {
@@ -3830,10 +3895,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

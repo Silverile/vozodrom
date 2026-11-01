@@ -544,8 +544,39 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "500 Kubota Z482",
+            "fuel": "diesel",
+            "displacementCc": 479,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 9.5,
+            "powerKwMax": 9.5,
+            "availablePowerKw": [
+              9.5
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://typenscheine.ch/de/Info/6AA704-AIXAM500"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "500 Kubota Z482",
+              "noteCs": "Dokumentovaný bod: schválení CH 6AA704 z 15/04/1997 pro Aixam 500 C45VB0, 75 km/h, Z482, 479 cm³, 9.5 kW. Rok důkazu je datum homologace, nikoli tvrzení o výrobním intervalu.",
+              "generationEvidence": {
+                "method": "row-years",
+                "anchor": "500 – číselná rodina, dílčí katalogové pokrytí",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": 1997,
+                "rowToYear": 1997
+              },
+              "variantYears": "1997-1997"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -567,12 +598,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://archives-catalogues-automobiles.fr/laurentbunnik/0aix0001.html"
+          "https://archives-catalogues-automobiles.fr/laurentbunnik/0aix0001.html",
+          "https://typenscheine.ch/de/Info/6AA704-AIXAM500"
         ]
       }
     ],
     "sources": [
-      "https://archives-catalogues-automobiles.fr/laurentbunnik/0aix0001.html"
+      "https://archives-catalogues-automobiles.fr/laurentbunnik/0aix0001.html",
+      "https://typenscheine.ch/de/Info/6AA704-AIXAM500"
     ],
     "needsReview": [
       {
@@ -597,10 +630,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2622,8 +2651,38 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Scouty 400 diesel",
+            "fuel": "diesel",
+            "displacementCc": 400,
+            "displacementLitresNominal": 0.4,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://typenscheine.ch/de/Info/6AA743-AIXAMScouty400"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Scouty 400 diesel",
+              "noteCs": "Typové schválení CH 6AA743 z roku 2006 pro vlastní Scouty 400; nikoli libovolný motor ostatních Aixam.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Scouty",
+                "fromYear": 2005,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2647,7 +2706,8 @@
         "sources": [
           "https://www.aixam.com/en/french-brand/history/about-us",
           "https://www.aixam.com/ressources/pages/marque/DosPres_Aixam2010_FR_bd.pdf",
-          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
+          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
+          "https://typenscheine.ch/de/Info/6AA743-AIXAMScouty400"
         ],
         "dateBasis": "production"
       }
@@ -2655,7 +2715,8 @@
     "sources": [
       "https://www.aixam.com/ressources/pages/marque/DosPres_Aixam2010_FR_bd.pdf",
       "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
-      "https://www.aixam.com/en/french-brand/history/about-us"
+      "https://www.aixam.com/en/french-brand/history/about-us",
+      "https://typenscheine.ch/de/Info/6AA743-AIXAMScouty400"
     ],
     "needsReview": [
       {
@@ -2672,10 +2733,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {

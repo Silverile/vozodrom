@@ -63,8 +63,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5T HEV 4WD",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 209,
+            "powerKwMax": 209,
+            "availablePowerKw": [
+              209
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.balkar.cz/wp-content/uploads/2025/10/Cenik-BJ30-All-in.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5T HEV 4WD",
+              "noteCs": "Český ceník rozlišuje systémový výkon 209 kW, součet výkonů tří motorů 301 kW a spalovací motor 113 kW. Zapisuje se pouze výslovně uvedený systémový výkon. Sporný přesný objem 1489 cm³ v PDF vyžaduje další potvrzení a zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "BJ30 II",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -92,7 +124,8 @@
           "https://www.baicgroup.com.cn/baicgroup/News/NewsShort/2026/1/I1457793775144271874.html",
           "https://de.wikipedia.org/wiki/Beijing_BJ30",
           "https://en.wikipedia.org/w/index.php?title=Beijing_BJ30&oldid=1380533983",
-          "https://www.baicgroup.com.cn/baicgroup/News/NewsShort/2026/1/I1457793775177826304.html"
+          "https://www.baicgroup.com.cn/baicgroup/News/NewsShort/2026/1/I1457793775177826304.html",
+          "https://www.balkar.cz/wp-content/uploads/2025/10/Cenik-BJ30-All-in.pdf"
         ]
       }
     ],
@@ -103,7 +136,8 @@
       "https://en.wikipedia.org/w/index.php?title=Beijing_BJ30&oldid=1380533983",
       "https://www.baicgroup.com.cn/baicgroup/News/NewsShort/2026/1/I1457793775177826304.html",
       "https://www.baicgroup.com.cn/baicgroup/News/Media/2026/1/I1457793975506173952.html",
-      "https://en.wikipedia.org/wiki/BAIC_BJ30"
+      "https://en.wikipedia.org/wiki/BAIC_BJ30",
+      "https://www.balkar.cz/wp-content/uploads/2025/10/Cenik-BJ30-All-in.pdf"
     ],
     "needsReview": [
       {
@@ -181,6 +215,10 @@
       {
         "field": "generations[1]",
         "reason": "Druhá generace oddělena v průchodu round9; evropské technické verze, generační kód, facelifty a stav výroby k říjnu 2026 zůstávají neověřené."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

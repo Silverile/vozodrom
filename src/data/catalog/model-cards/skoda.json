@@ -10403,8 +10403,102 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "60 iV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 132,
+            "powerKwMax": 132,
+            "availablePowerKw": [
+              132
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "60 iV",
+              "noteCs": "Vlastní Enyaq Coupé iV, technický list 07/03/2022. Jde o deklarovaný trakční systémový výkon, nikoli kapacitu baterie nebo nabíjení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Enyaq Coupé – modelová rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "80 iV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "availablePowerKw": [
+              150
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "80 iV",
+              "noteCs": "Vlastní Enyaq Coupé iV, technický list 07/03/2022. Jde o deklarovaný trakční systémový výkon, nikoli kapacitu baterie nebo nabíjení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Enyaq Coupé – modelová rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "80x iV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 195,
+            "powerKwMax": 195,
+            "availablePowerKw": [
+              195
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "80x iV",
+              "noteCs": "Vlastní Enyaq Coupé iV, technický list 07/03/2022. Jde o deklarovaný trakční systémový výkon, nikoli kapacitu baterie nebo nabíjení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Enyaq Coupé – modelová rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10444,13 +10538,15 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1367795135",
           "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Enyaq_Coup%C3%A9_RS_1X7A6919.jpg",
-          "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq"
+          "https://en.wikipedia.org/wiki/%C5%A0koda_Enyaq",
+          "https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1367795135",
-      "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Enyaq_Coup%C3%A9_RS_1X7A6919.jpg"
+      "https://commons.wikimedia.org/wiki/File:%C5%A0koda_Enyaq_Coup%C3%A9_RS_1X7A6919.jpg",
+      "https://cdn.skoda-storyboard.com/2022/03/TD-ENYAQ-COUPE-iV-en.pdf"
     ],
     "needsReview": [
       {
@@ -10463,10 +10559,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {

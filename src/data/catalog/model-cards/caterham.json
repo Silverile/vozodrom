@@ -194,8 +194,135 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "170 0.66 Turbo",
+            "fuel": "petrol",
+            "displacementCc": 660,
+            "displacementLitresNominal": 0.66,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://caterhamcars.com/cz/models/the-range/seven-170"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "170 Suzuki660 – 5MT, standardní podvozek",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "170 Suzuki660 – 5MT, standardní podvozek",
+                "source": "https://caterhamcars.com/cz/models/the-range/seven-170",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 660,
+                  "cylinders": 3,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 116
+                },
+                "sha256": "7e08ea9aab042d14477d9c78db878cc6fc7cc57ca5549de882da13866f07dfe2"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "S3",
+                "fromYear": 1974,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výrobce uvádí84PS v technické tabulce, ale84bhp v textu; kW není odvozeno. Rozměry3180/1470/1090mm jsou standardní podvozek. Hmotnost440kg závisí na konfiguraci; nejde o garantovanou hmotnost každéhoS/R."
+            }
+          },
+          {
+            "variant": "340 2.0",
+            "fuel": "petrol",
+            "displacementCc": 1999,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://caterhamcars.com/cz/models/the-range/seven-340"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "340 Duratec1999 – 5MT, standardní podvozek",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "340 Duratec1999 – 5MT, standardní podvozek",
+                "source": "https://caterhamcars.com/cz/models/the-range/seven-340",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1999,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 175
+                },
+                "sha256": "3409bd584a3a5dd883d1f91470f1069872a4c9a5635af57be3efa144e874c2f1"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "S3",
+                "fromYear": 1974,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "168PS je publikovaný údaj, kW neodvozeno. Zrychlení je v tabulceTBC, proto null.560kg je výbavově závislá hodnota. Rozměry standardního podvozku se nepřenášejí na volitelnýLarge/SV."
+            }
+          },
+          {
+            "variant": "485 Final Edition 2.0",
+            "fuel": "petrol",
+            "displacementCc": 1999,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://caterhamcars.com/cz/models/the-range/seven-485fe"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "485 FinalEdition Duratec1999 – 5MT, standardní rozměry",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "485 FinalEdition Duratec1999 – 5MT, standardní rozměry",
+                "source": "https://caterhamcars.com/cz/models/the-range/seven-485fe",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1999,
+                  "cylinders": 4,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": 205
+                },
+                "sha256": "f7f092801aff1f437627f72c9e3e12590e322b9cd19d4067a7c4ad6eba194425"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "S3",
+                "fromYear": 1974,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "228PS bez vlastního přepočtu na kW. Hlavní výkonové údaje stránky jsou přiřazeny standardníFinalEdition, nikoli automaticky těžšíCSR. Výbavově závislá hmotnost560kg."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -645,8 +772,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "485 Final Edition 2.0",
+            "fuel": "petrol",
+            "displacementCc": 1999,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://caterhamcars.com/cz/models/the-range/seven-485fe"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "485 Final Edition 2.0",
+              "noteCs": "Výrobce výslovně nabízí 485 Final Edition ve standardním i velkém podvozku; zde velký SV. Výkon pouze v PS zůstává bez přepočtu prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "SV",
+                "fromYear": 2000,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -669,7 +824,8 @@
         "trims": null,
         "sources": [
           "https://caterhamcars.com/en/news/50-at-50",
-          "https://en.wikipedia.org/wiki/Caterham_7"
+          "https://en.wikipedia.org/wiki/Caterham_7",
+          "https://caterhamcars.com/cz/models/the-range/seven-485fe"
         ],
         "dateBasis": "production"
       },
@@ -683,8 +839,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "485 CSR Final Edition 2.0",
+            "fuel": "petrol",
+            "displacementCc": 1999,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://caterhamcars.com/cz/models/the-range/seven-485fe"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "485 CSR Final Edition 2.0",
+              "noteCs": "Vlastní 485 CSR Final Edition je na stránce výrobce odlišen od 485 standard/SV; sdílené technické údaje jsou uvedeny pro tato provedení. PS se nepřepočítávají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "CSR",
+                "fromYear": 2005,
+                "toYear": null,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -723,7 +907,8 @@
         "trims": null,
         "sources": [
           "https://caterhamcars.com/en/news/50-at-50",
-          "https://en.wikipedia.org/wiki/Caterham_7"
+          "https://en.wikipedia.org/wiki/Caterham_7",
+          "https://caterhamcars.com/cz/models/the-range/seven-485fe"
         ],
         "dateBasis": "production"
       }
@@ -791,10 +976,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -836,10 +1017,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -891,10 +1068,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -936,10 +1109,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1020,10 +1189,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1108,10 +1273,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1253,6 +1414,46 @@
       {
         "field": "generations[1].trims[1].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

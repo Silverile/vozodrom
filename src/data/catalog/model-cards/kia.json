@@ -5759,8 +5759,67 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0 16V Euro 2",
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 102,
+            "powerKwMax": 102,
+            "availablePowerKw": [
+              102
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Kia_Joice"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 16V Euro 2",
+              "noteCs": "Vlastní evropské Joice: původní Euro 2 a změna roku 2000 na Euro 3; nikoli asijská specifikace Carstar.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Joice",
+                "fromYear": 1999,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0 16V Euro 3",
+            "fuel": "petrol",
+            "displacementCc": 1997,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 88,
+            "powerKwMax": 88,
+            "availablePowerKw": [
+              88
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Kia_Joice"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 16V Euro 3",
+              "noteCs": "Vlastní evropské Joice: původní Euro 2 a změna roku 2000 na Euro 3; nikoli asijská specifikace Carstar.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Joice",
+                "fromYear": 1999,
+                "toYear": 2002,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5782,12 +5841,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Joice"
+          "https://en.wikipedia.org/wiki/Kia_Joice",
+          "https://de.wikipedia.org/wiki/Kia_Joice"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Kia_Joice"
+      "https://en.wikipedia.org/wiki/Kia_Joice",
+      "https://de.wikipedia.org/wiki/Kia_Joice"
     ],
     "needsReview": [
       {
@@ -5800,10 +5861,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

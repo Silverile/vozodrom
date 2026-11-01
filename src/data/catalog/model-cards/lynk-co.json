@@ -1453,8 +1453,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 PHEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 257,
+            "powerKwMax": 257,
+            "availablePowerKw": [
+              257
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://lynkco.sostena.lt/lynk-co-08/specs"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 PHEV",
+              "noteCs": "Evropský MY25: zdroj výslovně deklaruje systémových 257 kW, odděleně od benzinového motoru 102 kW a elektromotoru 155 kW. Výkon není dopočítán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "08 / EM-P",
+                "fromYear": 2023,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1548,10 +1580,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

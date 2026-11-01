@@ -618,8 +618,39 @@
           "dodavka",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "0.9 dvoutakt",
+            "fuel": "petrol",
+            "displacementCc": 901,
+            "displacementLitresNominal": 0.9,
+            "powerKwMin": 20.6,
+            "powerKwMax": 20.6,
+            "availablePowerKw": [
+              20.6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Barkas_V_901/2"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "0.9 dvoutakt",
+              "noteCs": "Technická tabulka vlastního Barkas V901/2 modelu 1960; nepřebírá dřívější Framo ani nástupnický B1000.",
+              "generationEvidence": {
+                "method": "row-years",
+                "anchor": "V 901/2 – období značení Barkas",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": 1960,
+                "rowToYear": 1960
+              },
+              "variantYears": "1960-1960"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -645,13 +676,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Barkas_V_901/2",
-          "https://www.ifa.cz/index.php/archiv/znacky-v-kostce/drici-z-karl-marx-stadtu"
+          "https://www.ifa.cz/index.php/archiv/znacky-v-kostce/drici-z-karl-marx-stadtu",
+          "https://de.wikipedia.org/wiki/Barkas_V_901/2"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Barkas_V_901/2",
-      "https://www.ifa.cz/index.php/archiv/znacky-v-kostce/drici-z-karl-marx-stadtu"
+      "https://www.ifa.cz/index.php/archiv/znacky-v-kostce/drici-z-karl-marx-stadtu",
+      "https://de.wikipedia.org/wiki/Barkas_V_901/2"
     ],
     "needsReview": [
       {
@@ -668,10 +701,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -447,8 +447,38 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Ami electric",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/be-fr/citroen/press/la-nouvelle-citroen-ami-effectue-ses-premiers-pas-dans-la-capitale-de-l-europe"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Ami electric",
+              "noteCs": "Vlastní evropská elektrická Ami od 2020; nikoli historický Ami 6/Ami 8.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Ami – neúplně rozlišená rodina",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -473,13 +503,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372461974",
-          "https://www.wikidata.org/wiki/Q86733857"
+          "https://www.wikidata.org/wiki/Q86733857",
+          "https://www.media.stellantis.com/be-fr/citroen/press/la-nouvelle-citroen-ami-effectue-ses-premiers-pas-dans-la-capitale-de-l-europe"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1372461974",
-      "https://www.wikidata.org/wiki/Q86733857"
+      "https://www.wikidata.org/wiki/Q86733857",
+      "https://www.media.stellantis.com/be-fr/citroen/press/la-nouvelle-citroen-ami-effectue-ses-premiers-pas-dans-la-capitale-de-l-europe"
     ],
     "needsReview": [
       {
@@ -500,10 +532,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -7516,8 +7544,94 @@
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.2 D",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.2,
+            "powerKwMin": 44,
+            "powerKwMax": 44,
+            "availablePowerKw": [
+              44
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_C35"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.2 D",
+              "noteCs": "Vlastní C35: původní motory a modernizovaný B25/637. Přesné objemy nejsou přeneseny z CX/Fiatu 242; údaj C35 LE bez doložených kW zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "C35",
+                "fromYear": 1974,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.5 D LD",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 50,
+            "powerKwMax": 50,
+            "availablePowerKw": [
+              50
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_C35"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 D LD",
+              "noteCs": "Vlastní C35: původní motory a modernizovaný B25/637. Přesné objemy nejsou přeneseny z CX/Fiatu 242; údaj C35 LE bez doložených kW zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "C35",
+                "fromYear": 1974,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Citroën_C35"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0",
+              "noteCs": "Vlastní C35: původní motory a modernizovaný B25/637. Přesné objemy nejsou přeneseny z CX/Fiatu 242; údaj C35 LE bez doložených kW zůstává prázdný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "C35",
+                "fromYear": 1974,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -7542,14 +7656,16 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Citroën_C35",
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35",
+          "https://de.wikipedia.org/wiki/Citroën_C35"
         ],
         "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35",
-      "https://en.wikipedia.org/wiki/Citroën_C35"
+      "https://en.wikipedia.org/wiki/Citroën_C35",
+      "https://de.wikipedia.org/wiki/Citroën_C35"
     ],
     "needsReview": [
       {
@@ -7558,10 +7674,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -7611,6 +7723,26 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -14919,8 +15051,92 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Dyane 425",
+            "fuel": "petrol",
+            "displacementCc": 425,
+            "displacementLitresNominal": null,
+            "powerKwMin": 13,
+            "powerKwMax": 13,
+            "availablePowerKw": [
+              13
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/ch-de/citroen/press/100-jahre-citroen-populare-kompaktlimousine-citroen-dyane-mit-markantem-design"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Dyane 425",
+              "noteCs": "Vlastní historická informace výrobce. U 602 cm³ je chronologie výkonu rozporná s dalšími zdroji, proto zůstává výkon nevyplněn.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Dyane",
+                "fromYear": 1967,
+                "toYear": 1983,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Dyane 6",
+            "fuel": "petrol",
+            "displacementCc": 602,
+            "displacementLitresNominal": 0.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/ch-de/citroen/press/100-jahre-citroen-populare-kompaktlimousine-citroen-dyane-mit-markantem-design"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Dyane 6",
+              "noteCs": "Vlastní historická informace výrobce. U 602 cm³ je chronologie výkonu rozporná s dalšími zdroji, proto zůstává výkon nevyplněn.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Dyane",
+                "fromYear": 1967,
+                "toYear": 1983,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Dyane 4",
+            "fuel": "petrol",
+            "displacementCc": 435,
+            "displacementLitresNominal": null,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.media.stellantis.com/it-it/citroen/press/citroen-dyane-l-auto-in-jeans-conquista-l-italia"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Dyane 4",
+              "noteCs": "Vlastní evropská Dyane 4 s motorem 435 cm³; výkon uvedený jen v koních není přepočítán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Dyane",
+                "fromYear": 1967,
+                "toYear": 1983,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -14945,14 +15161,18 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Citroën_Dyane",
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Dyane"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_Dyane",
+          "https://www.media.stellantis.com/ch-de/citroen/press/100-jahre-citroen-populare-kompaktlimousine-citroen-dyane-mit-markantem-design",
+          "https://www.media.stellantis.com/it-it/citroen/press/citroen-dyane-l-auto-in-jeans-conquista-l-italia"
         ],
         "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Citro%C3%ABn_Dyane",
-      "https://en.wikipedia.org/wiki/Citroën_Dyane"
+      "https://en.wikipedia.org/wiki/Citroën_Dyane",
+      "https://www.media.stellantis.com/ch-de/citroen/press/100-jahre-citroen-populare-kompaktlimousine-citroen-dyane-mit-markantem-design",
+      "https://www.media.stellantis.com/it-it/citroen/press/citroen-dyane-l-auto-in-jeans-conquista-l-italia"
     ],
     "needsReview": [
       {
@@ -14965,10 +15185,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -15018,6 +15234,30 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -15856,8 +16096,63 @@
           "dodavka",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "H 1.9",
+            "fuel": "petrol",
+            "displacementCc": 1911,
+            "displacementLitresNominal": 1.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://citroencarclub.org.uk/h-van/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "H 1.9",
+              "noteCs": "Vlastní H van: původní benzinový motor 1911 cm³ a 1628 cm³ zavedený v roce 1963. Výkon v hp není přepočítán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Type H / HY",
+                "fromYear": 1947,
+                "toYear": 1981,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "H 1600",
+            "fuel": "petrol",
+            "displacementCc": 1628,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://citroencarclub.org.uk/h-van/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "H 1600",
+              "noteCs": "Vlastní H van: původní benzinový motor 1911 cm³ a 1628 cm³ zavedený v roce 1963. Výkon v hp není přepočítán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Type H / HY",
+                "fromYear": 1947,
+                "toYear": 1981,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -15882,14 +16177,16 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Citroën_H_Van",
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_H_Van"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_H_Van",
+          "https://citroencarclub.org.uk/h-van/"
         ],
         "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Citro%C3%ABn_H_Van",
-      "https://en.wikipedia.org/wiki/Citroën_H_Van"
+      "https://en.wikipedia.org/wiki/Citroën_H_Van",
+      "https://citroencarclub.org.uk/h-van/"
     ],
     "needsReview": [
       {
@@ -15902,10 +16199,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -15955,6 +16248,22 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
