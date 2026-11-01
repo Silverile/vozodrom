@@ -5729,8 +5729,8 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": "C90",
-        "name": "Wira / Aeroback",
+        "code": null,
+        "name": "Wira",
         "from": 1993,
         "to": 2009,
         "productionStatus": "ended",
@@ -5781,7 +5781,7 @@
             "variant": "4D68"
           }
         ],
-        "engineCoverage": "partial",
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5795,7 +5795,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Jedna původní konstrukce Wira; Aeroback je karosářská varianta, ne další generace."
         },
         "trunkL": null,
         "markets": [
@@ -5805,9 +5805,9 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://en.wikipedia.org/wiki/Proton_Wira",
           "https://www.proton.com/corporate/milestones",
-          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia",
-          "https://en.wikipedia.org/wiki/Proton_Wira"
+          "https://www.proton.com/happenings/2024/october/from-saga-to-s70-proton-champions-sedan-sales-in-malaysia"
         ],
         "fieldSources": {
           "code": [
@@ -5831,7 +5831,8 @@
           "dimensionsMm.wheelbase": [
             "https://en.wikipedia.org/wiki/Proton_Wira"
           ]
-        }
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
@@ -5842,47 +5843,91 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].code",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[4].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[4].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[4].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "coverage",
-        "reason": "Dílčí katalog primárních pramenů; historické motorizace, přesné tovární intervaly a fotografie nejsou kompletní. Neověřené hodnoty ponechány null."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ]
   },

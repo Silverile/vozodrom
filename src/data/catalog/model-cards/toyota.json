@@ -4231,14 +4231,26 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": "UP10",
-        "name": "Publica — UP10",
+        "code": "UP10 / UP20",
+        "name": "Publica (UP10 / UP20)",
         "from": 1961,
-        "to": null,
-        "productionStatus": "unknown",
-        "facelift": null,
+        "to": 1969,
+        "productionStatus": "ended",
+        "facelift": [
+          {
+            "year": 1966,
+            "productionYear": null,
+            "note": "UP20: modernizace první konstrukční rodiny Publica, nikoli třetí samostatná konstrukce. Přesný okamžik zahájení sériové výroby vzhledové fáze není samostatně ověřen.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ]
+          }
+        ],
         "bodyTypes": [
-          "sedan"
+          "sedan",
+          "kombi",
+          "kabriolet",
+          "pickup"
         ],
         "engines": [
           {
@@ -4248,9 +4260,36 @@
             "powerKwMin": null,
             "powerKwMax": null,
             "variant": "U"
+          },
+          {
+            "variant": "0.8 2U",
+            "fuel": "petrol",
+            "displacementCc": 790,
+            "displacementLitresNominal": 0.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "0.8 2U",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "UP10 / UP20",
+                "fromYear": 1961,
+                "toYear": 1969,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
           }
         ],
-        "engineCoverage": "partial",
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4264,7 +4303,7 @@
           "modelYear": 1961,
           "variant": "UP10",
           "bodyType": "sedan",
-          "noteCs": "Reprezentativní provedení UP10 podle historického archivu Toyota; údaj není přenesen na všechny roky nebo dodavatelské karoserie. Zdroj udává 28 PS, nikoli číselný výkon v kW; výkon není přepočítán. Převodovka a pohon nejsou bez přesného dokladu doplněny."
+          "noteCs": "Oficiální historie Toyota rozlišuje dvě konstrukční generace. Publica Starlet má samostatnou řadu. UP20 je modernizace první konstrukční rodiny; starý rozměrový profil a technická verze platí jen pro UP10."
         },
         "trunkL": null,
         "markets": [
@@ -4368,7 +4407,8 @@
           }
         ],
         "sources": [
-          "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+          "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/pdf/vehiclelineage.pdf",
+          "https://en.wikipedia.org/wiki/Toyota_Publica"
         ],
         "fieldSources": {
           "dimensionsMm.length": [
@@ -4383,112 +4423,443 @@
           "dimensionsMm.wheelbase": [
             "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
           ]
-        }
+        },
+        "dateBasis": "production"
+      },
+      {
+        "code": "P30",
+        "name": "Publica (P30)",
+        "from": 1969,
+        "to": 1988,
+        "productionStatus": "ended",
+        "facelift": null,
+        "bodyTypes": [
+          "sedan",
+          "kombi",
+          "pickup"
+        ],
+        "engines": [
+          {
+            "variant": "0.8 2U",
+            "fuel": "petrol",
+            "displacementCc": 790,
+            "displacementLitresNominal": 0.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "0.8 2U",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P30",
+                "fromYear": 1969,
+                "toYear": 1988,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.0 2K",
+            "fuel": "petrol",
+            "displacementCc": 993,
+            "displacementLitresNominal": 1,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "1.0 2K",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P30",
+                "fromYear": 1969,
+                "toYear": 1988,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.1 K",
+            "fuel": "petrol",
+            "displacementCc": 1077,
+            "displacementLitresNominal": 1.1,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "1.1 K",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P30",
+                "fromYear": 1969,
+                "toYear": 1988,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.2 3K",
+            "fuel": "petrol",
+            "displacementCc": 1166,
+            "displacementLitresNominal": 1.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "1.2 3K",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P30",
+                "fromYear": 1969,
+                "toYear": 1988,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.3 4K-J",
+            "fuel": "petrol",
+            "displacementCc": 1290,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Toyota_Publica"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "1.3 4K-J",
+              "noteCs": "Jednotlivé doložené motorové provedení v příslušné části pramene, ne úplná paleta všech trhů. Neověřený přesný objem/výkon je prázdný; není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "P30",
+                "fromYear": 1969,
+                "toYear": 1988,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "Japan",
+          "modelYear": null,
+          "variant": "P30",
+          "bodyType": null,
+          "noteCs": "Oficiální historie Toyota rozlišuje dvě konstrukční generace. Publica Starlet má samostatnou řadu. Sedan do 1977, van do 1979, pick-up do 1988."
+        },
+        "trunkL": null,
+        "markets": [
+          "Japan"
+        ],
+        "marketNotesCs": "Japonské historické provedení; současná dostupnost v Česku ani dobová evropská nabídka nejsou tímto záznamem potvrzeny.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/pdf/vehiclelineage.pdf",
+          "https://en.wikipedia.org/wiki/Toyota_Publica"
+        ],
+        "fieldSources": {
+          "dimensionsMm.length": [
+            "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+          ],
+          "dimensionsMm.width": [
+            "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+          ],
+          "dimensionsMm.height": [
+            "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+          ],
+          "dimensionsMm.wheelbase": [
+            "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+          ]
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
-      "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html"
+      "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60011574/index.html",
+      "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/pdf/vehiclelineage.pdf",
+      "https://en.wikipedia.org/wiki/Toyota_Publica"
     ],
     "needsReview": [
       {
-        "field": "scope",
-        "reason": "Vybrané japonské historické provedení; úplnost ročníků, výbav, karoserií a exportních verzí není deklarována."
-      },
-      {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].facelift[0].productionYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].displacementLitresNominal",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].transmission.type",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].transmission.gears",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionL100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].massRangeKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].massReference",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[2].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[3].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[4].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ]
   },
@@ -4764,10 +5135,10 @@
     "generations": [
       {
         "code": "SB",
-        "name": "SB — SB",
+        "name": "SB (SB)",
         "from": 1947,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1952,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "pickup"
@@ -4782,7 +5153,7 @@
             "variant": "S"
           }
         ],
-        "engineCoverage": "partial",
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4796,7 +5167,7 @@
           "modelYear": 1947,
           "variant": "SB",
           "bodyType": "pickup",
-          "noteCs": "Reprezentativní provedení SB podle historického archivu Toyota; údaj není přenesen na všechny roky nebo dodavatelské karoserie. Zdroj udává 27 PS, nikoli číselný výkon v kW; výkon není přepočítán. Převodovka a pohon nejsou bez přesného dokladu doplněny."
+          "noteCs": "Pouze původní nákladní SB; pozdější SG ani osobní SA/SD/SF nejsou další generace SB."
         },
         "trunkL": null,
         "markets": [
@@ -4896,7 +5267,8 @@
           "dimensionsMm.wheelbase": [
             "https://www.toyota-global.com/company/history_of_toyota/75years/vehicle_lineage/car/id60007245/index.html"
           ]
-        }
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
@@ -4904,112 +5276,104 @@
     ],
     "needsReview": [
       {
-        "field": "scope",
-        "reason": "Vybrané japonské historické provedení; úplnost ročníků, výbav, karoserií a exportních verzí není deklarována."
-      },
-      {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].displacementLitresNominal",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].powerKwMin",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines[0].powerKwMax",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.powerKw",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].engine.torqueNm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].transmission.type",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].transmission.gears",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].drive",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].acceleration0to100s",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionL100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].massRangeKg",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims[0].massReference",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ]
   },

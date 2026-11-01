@@ -1146,10 +1146,10 @@
     "generations": [
       {
         "code": null,
-        "name": "Zonda – silniční Coupé a Roadster",
+        "name": "Zonda",
         "from": 1999,
-        "to": 2019,
-        "productionStatus": "ended",
+        "to": null,
+        "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": [
           "kupe",
@@ -1172,7 +1172,7 @@
             ]
           }
         ],
-        "engineCoverage": "unknown",
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -1188,7 +1188,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Původní silniční rodina Zonda, včetně F a dalších verzí. Zakázkové pozdější dokončené vozy neprokazují nepřetržitou sériovou výrobu; přesný konec zůstává prázdný. Závodní Zonda R není další silniční generací. Prázdný konec nepotvrzuje dnešní výrobu."
         },
         "trunkL": null,
         "markets": [],
@@ -1256,10 +1256,12 @@
           }
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Pagani_Zonda",
           "https://www.pagani.com/zonda-c12/",
           "https://www.pagani.com/zonda-f/",
           "https://www.pagani.com/press/pagani-at-gims-2019/",
-          "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+          "https://en.wikipedia.org/w/index.php?oldid=1374742244",
+          "https://www.ultimatespecs.com/car-specs/Pagani/15031/Pagani-Zonda-C12.html"
         ],
         "fieldSources": {
           "from": [
@@ -1274,107 +1276,102 @@
           "dimensionsMm": [
             "https://en.wikipedia.org/w/index.php?oldid=1374742244"
           ]
-        }
+        },
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://www.pagani.com/zonda-c12/",
       "https://www.pagani.com/zonda-f/",
       "https://www.pagani.com/press/pagani-at-gims-2019/",
-      "https://en.wikipedia.org/w/index.php?oldid=1374742244"
+      "https://en.wikipedia.org/w/index.php?oldid=1374742244",
+      "https://en.wikipedia.org/wiki/Pagani_Zonda",
+      "https://www.ultimatespecs.com/car-specs/Pagani/15031/Pagani-Zonda-C12.html"
     ],
     "needsReview": [
       {
         "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].from",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].engine.powerStandard",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].topSpeedKmh",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionL100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].consumptionKwh100",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeKm",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].rangeCycle",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].trims[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "scope",
-        "reason": "Tři hlavní silniční modelové rodiny; nikoli úplný soupis zakázkových kusů, speciálních sérií a verzí. Výrobní intervaly nedoloženy nezávisle na ročnících premiér."
-      },
-      {
-        "field": "generations[0].trims",
-        "reason": "Oficiální stránka C12 si odporuje mezi úvodním údajem 394 hp/570 Nm a tabulkou 331 kW/590 Nm. C12 proto nemá číselnou verzi; ověřena pouze samostatná specifikace F."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].to",
-        "reason": "Sériová výroba silničních verzí podle anglické Wikipedie 1999–2019; jednotlivé kusy na zakázku (one-off) Pagani vyrábí i později."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].specificationScope.variant",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].specificationScope.bodyType",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].from",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].to",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].engine.powerStandard",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].topSpeedKmh",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].consumptionL100",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].consumptionCycle",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].consumptionKwh100",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].rangeKm",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].rangeCycle",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].trims[0].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].productionStatus",
+        "reason": "Původní silniční rodina Zonda, včetně F a dalších verzí. Zakázkové pozdější dokončené vozy neprokazují nepřetržitou sériovou výrobu; přesný konec zůstává prázdný. Závodní Zonda R není další silniční generací. Prázdný konec nepotvrzuje dnešní výrobu."
       }
     ],
     "aliases": [
