@@ -1,0 +1,7 @@
+import fs from 'node:fs';import zlib from 'node:zlib';
+const root='analysis/codex/generation-facts-pass/body-variants-2',old='analysis/codex/generation-facts-pass/body-variants-1',read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+if(!fs.existsSync(root+'/baseline.json.gz')){const keys=Object.keys(JSON.parse(zlib.gunzipSync(fs.readFileSync(old+'/baseline.json.gz'))));fs.writeFileSync(root+'/baseline.json.gz',zlib.gzipSync(JSON.stringify(Object.fromEntries(keys.map(p=>[p,read(p)])))));}
+const queue=read(old+'/remaining-queue.json').nextBodyVariants;
+fs.writeFileSync(root+'/selection.json',JSON.stringify(queue,null,2)+'\n');
+for(const file of ['apply.mjs','validate.mjs'])if(!fs.existsSync(root+'/'+file)){let s=fs.readFileSync(old+'/'+file,'utf8').replaceAll('body-variants-1','body-variants-2');if(file==='validate.mjs'){s=s.replace('queue.length,69','queue.length,49').replace('r.targetFields.length,0),219','r.targetFields.length,0),174');s=s.replace("assert.equal(publicWithVariants.length,rows.length,", "const beforeWithVariants=Object.values(base['src/data/model-cards-index.json']).flatMap(Object.values).flatMap(c=>c.generations).filter(g=>g.bodyVariants?.length).length;assert.equal(publicWithVariants.length,beforeWithVariants+rows.length,");s=s.replace("if(g.bodyVariants?.length){assert(g.bodyVariants.every(v=>!v.bodyType));", "if(g.bodyVariants?.length&&g.bodyVariants.every(v=>!v.bodyType)){");}fs.writeFileSync(root+'/'+file,s);}
+console.log(JSON.stringify({pending:queue.length,fieldGaps:queue.reduce((n,r)=>n+r.targetFields.length,0)}));
