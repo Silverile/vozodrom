@@ -33,6 +33,7 @@ def bodies(text):
  out=[]
  for pattern,key in [(r'station wagon|estate|kombi','kombi'),(r'hatchback|schrägheck','hatchback'),(r'sedan|saloon|limousine','sedan'),(r'roadster|convertible|cabriolet|cabrio|spider|barchetta','kabriolet'),(r'coup[eé]|berlinetta','kupe'),(r'\bSUV\b|sport.?utility|geländewagen|crossover','suv'),(r'\bMPV\b|minivan','mpv'),(r'pick.?up','pickup')]:
   if re.search(pattern,text,re.I):out.append(key)
+ if 'suv' in out and 'kupe' in out and re.search(r'coup[eé]\s*SUV|SUV\s*coup[eé]',text,re.I):out.remove('kupe')
  return out
 
 def observations(tree):

@@ -47,7 +47,7 @@ for(const path of new Set(lines.map(r=>r.sourceFile)))write(path,files.get(path)
 for(const path of ['src/data/catalog/model-lines-auto.json','src/data/catalog/model-line-additions.json']){
  const ls=read(path);let touched=false;for(const l of ls){const change=lines.find(r=>r.id===l.makeSlug+'/'+l.slug);if(!change||!change.changes.some(c=>['dates','bodyTypes'].includes(c.kind)))continue;const gs=owners.get(change.id).card.generations;
   l.generations=gs.map((g,i)=>({...l.generations?.[i],code:g.code??null,from:g.from??null,to:g.to??null,productionStatus:g.productionStatus,bodyTypes:g.bodyTypes??[],sources:g.sources??[],...(g.dateBasis?{dateBasis:g.dateBasis}:{})}));
-  const starts=gs.map(g=>g.from).filter(Number.isFinite),ends=gs.map(g=>g.to).filter(Number.isFinite);l.from=starts.length?Math.min(...starts):null;l.to=gs.some(g=>g.to==null)?null:ends.length?Math.max(...ends):null;l.bodyTypes=[...new Set(gs.flatMap(g=>g.bodyTypes??[]))];l.productionStatus=gs.some(g=>g.productionStatus==='current')?'current':'ended';touched=true;
+  const starts=gs.map(g=>g.from).filter(Number.isFinite),ends=gs.map(g=>g.to).filter(Number.isFinite);l.from=starts.length?Math.min(...starts):null;l.to=gs.some(g=>g.to==null)?null:ends.length?Math.max(...ends):null;l.bodyTypes=[...new Set(gs.flatMap(g=>g.bodyTypes??[]))];l.productionStatus=gs.some(g=>g.productionStatus==='current')?'current':gs.some(g=>g.productionStatus!=='ended')?'unknown':'ended';touched=true;
  }if(touched)write(path,ls);
 }
 const aliasFile='src/data/catalog/generation-id-aliases.json',aliases=read(aliasFile);
