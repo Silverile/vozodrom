@@ -9640,8 +9640,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.8 N-series TF 135",
+            "fuel": "petrol",
+            "displacementCc": 1796,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mgownersclub.co/mg-guides/mgtf/mg-motor-mg-tf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.8 N-series TF 135",
+              "noteCs": "Vlastní historie obnoveného MG Motor TF: LE500/TF135/85th, motor N-series 1796 cm³ Euro 4. Výkon v bhp se nepřepočítává.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "TF – výrobní rodina",
+                "fromYear": 2007,
+                "toYear": 2011,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -9665,7 +9693,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373994500",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
-          "https://www.wikidata.org/wiki/Q1816606"
+          "https://www.wikidata.org/wiki/Q1816606",
+          "https://www.mgownersclub.co/mg-guides/mgtf/mg-motor-mg-tf"
         ],
         "fieldSources": {
           "productionStatus": [
@@ -9679,7 +9708,8 @@
       "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
       "https://www.wikidata.org/wiki/Q1816606",
       "https://www.mgfcar.de/mgtf/index1.htm",
-      "https://www.ultimatespecs.com/car-specs/MG/6850/MG-TF-115.html"
+      "https://www.ultimatespecs.com/car-specs/MG/6850/MG-TF-115.html",
+      "https://www.mgownersclub.co/mg-guides/mgtf/mg-motor-mg-tf"
     ],
     "needsReview": [
       {
@@ -9879,10 +9909,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -9929,6 +9955,14 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

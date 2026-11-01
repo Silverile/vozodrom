@@ -1281,8 +1281,52 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Box EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://dfmotor.cz/box/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "E1 70 kW",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "E1 70 kW",
+                "source": "https://dfmotor.cz/box/",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 70,
+                  "torqueNm": 160
+                },
+                "sha256": "886fa147ad2b936dfbd09f92b224ffc54363678cf6683f132ab46d1ee0e0a12c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Box / Nammi 01",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Česká výbava E1, baterie 31.4 kWh. Dojezd WLTP se neslučuje s odlišným CLTC; spotřeba se z kapacity a dojezdu nevypočítává."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1477,10 +1521,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2208,8 +2248,52 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5T",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 145,
+            "powerKwMax": 145,
+            "availablePowerKw": [
+              145
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://dfmotor.cz/mage/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.5T 145 kW 7DCT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.5T 145 kW 7DCT",
+                "source": "https://dfmotor.cz/mage/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 145,
+                  "torqueNm": 305
+                },
+                "sha256": "15b85e31916017ebb645714a4df1eaaf666a0fe63dab8995aa82a6d08815fa5a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Mage / Haohan",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Česká benzinová verze. Marketingový objem 1,5 l není převáděn na vymyšlený přesný objem v cm³."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2309,10 +2393,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2387,6 +2467,14 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [
@@ -2947,8 +3035,52 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5",
+            "fuel": "petrol",
+            "displacementCc": 1496,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 86,
+            "powerKwMax": 86,
+            "availablePowerKw": [
+              86
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://dong-feng.cz/cs/katalog/dongfeng/shine-aeolus"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.5 86 kW – manuální, DFM7151N1A",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.5 86 kW – manuální, DFM7151N1A",
+                "source": "https://dong-feng.cz/cs/katalog/dongfeng/shine-aeolus",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1496,
+                  "cylinders": 4,
+                  "powerKw": 86,
+                  "torqueNm": 158
+                },
+                "sha256": "d7b92a53d1c68beaf906bff8be491b08d74f622ba7d9a8a220f6c87351af639b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Shine / Yixuan",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Technický typ DFM7151N1A z české/slovenské nabídky; neplatí automaticky pro novější karoserii 4670 mm ani automatické verze."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3043,10 +3175,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

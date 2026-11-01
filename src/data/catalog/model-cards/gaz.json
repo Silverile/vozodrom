@@ -1984,8 +1984,38 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "2.12",
+            "fuel": "petrol",
+            "displacementCc": 2120,
+            "displacementLitresNominal": 2.12,
+            "powerKwMin": 40,
+            "powerKwMax": 40,
+            "availablePowerKw": [
+              40
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/GAZ-69"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.12",
+              "noteCs": "Základní GAZ-69; pozdější motor GAZ/UAZ-69M se nepřebírá.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "69",
+                "fromYear": 1953,
+                "toYear": 1956,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2009,12 +2039,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/GAZ-69"
+          "https://en.wikipedia.org/wiki/GAZ-69",
+          "https://de.wikipedia.org/wiki/GAZ-69"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/GAZ-69"
+      "https://en.wikipedia.org/wiki/GAZ-69",
+      "https://de.wikipedia.org/wiki/GAZ-69"
     ],
     "needsReview": [
       {
@@ -2027,10 +2059,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

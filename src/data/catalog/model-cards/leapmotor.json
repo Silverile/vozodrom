@@ -1857,8 +1857,53 @@
           "hatchback",
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "T03",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://lpwebsite-prod-s3cdn.leapmotor-international.com/public/en-cms/1768297184508T03_2026_01.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "T03 37.3kWh /70kW – český ceník1.1.2026",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "T03 37.3kWh /70kW – český ceník1.1.2026",
+                "source": "https://lpwebsite-prod-s3cdn.leapmotor-international.com/public/en-cms/1768297184508T03_2026_01.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 70,
+                  "powerStandard": "Maximální čistý výkon dle českého technického listu.",
+                  "torqueNm": 158
+                },
+                "sha256": "8ea7fff78b133003f1b28b6c1a6780119881d68bd900cd152d039a7a9a9c2de0"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "T03 – první rodina",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Technické parametry českého ceníku platného1.1.–31.3.2026; jiné trhy mají odlišné baterie a výkony. Dojezd395km městský není zaměněn za kombinovaný."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1968,10 +2013,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

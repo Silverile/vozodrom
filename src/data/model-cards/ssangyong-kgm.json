@@ -1401,8 +1401,38 @@
         "bodyTypes": [
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0 e-XDi",
+            "fuel": "diesel",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 114,
+            "powerKwMax": 114,
+            "availablePowerKw": [
+              114
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/SsangYong_Actyon_Sports"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 e-XDi",
+              "noteCs": "Samostatná tabulka Actyon Sports pro 2WD/4WD; benzinový motor SUV Actyon není převzat.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Actyon Sports",
+                "fromYear": 2006,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd",
           "awd"
@@ -1429,7 +1459,8 @@
         "marketNotesCs": "",
         "photo": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1372066563"
+          "https://en.wikipedia.org/w/index.php?oldid=1372066563",
+          "https://de.wikipedia.org/wiki/SsangYong_Actyon_Sports"
         ],
         "fieldSources": {
           "from": [
@@ -1455,16 +1486,13 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/w/index.php?oldid=1372066563"
+      "https://en.wikipedia.org/w/index.php?oldid=1372066563",
+      "https://de.wikipedia.org/wiki/SsangYong_Actyon_Sports"
     ],
     "needsReview": [
       {
         "field": "generations[0].photo",
         "reason": "Fotografie zatím nevybrána."
-      },
-      {
-        "field": "generations[0].engines",
-        "reason": "Motory nejsou v infoboxu; doplnit."
       }
     ]
   },

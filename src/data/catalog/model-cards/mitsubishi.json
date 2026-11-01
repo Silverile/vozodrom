@@ -10478,8 +10478,38 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "i-MiEV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 49,
+            "powerKwMax": 49,
+            "availablePowerKw": [
+              49
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Mitsubishi_i-MiEV"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "i-MiEV",
+              "noteCs": "Vlastní sériový i-MiEV: trakční elektromotor 49 kW; výkon nabíječky ani topení se nepoužívá.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "i-MiEV – výrobní rodina",
+                "fromYear": 2009,
+                "toYear": 2021,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10505,7 +10535,8 @@
           "https://www.wikidata.org/wiki/Q1129816",
           "https://www.carscoops.com/2020/10/mitsubishi-to-kill-off-the-aging-i-miev-electric-citycar-after-11-years/",
           "https://kuruma-news.jp/post/343037",
-          "https://insideevs.com/news/447077/mitsubishi-soon-to-end-imiev-production/"
+          "https://insideevs.com/news/447077/mitsubishi-soon-to-end-imiev-production/",
+          "https://de.wikipedia.org/wiki/Mitsubishi_i-MiEV"
         ],
         "fieldSources": {
           "to": [
@@ -10521,7 +10552,8 @@
       "https://www.wikidata.org/wiki/Q1129816",
       "https://www.carscoops.com/2020/10/mitsubishi-to-kill-off-the-aging-i-miev-electric-citycar-after-11-years/",
       "https://kuruma-news.jp/post/343037",
-      "https://insideevs.com/news/447077/mitsubishi-soon-to-end-imiev-production/"
+      "https://insideevs.com/news/447077/mitsubishi-soon-to-end-imiev-production/",
+      "https://de.wikipedia.org/wiki/Mitsubishi_i-MiEV"
     ],
     "needsReview": [
       {
@@ -10534,10 +10566,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

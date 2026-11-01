@@ -1474,8 +1474,51 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.8 V6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://tnmot.org/collection/pontiac-fiero-se/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "SE 2.8 V6 4MT – muzejní automobil",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "SE 2.8 V6 4MT – muzejní automobil",
+                "source": "https://tnmot.org/collection/pontiac-fiero-se/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 6,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "4be59678b0aeaee583e010609c333e3a12eb8e1a0820b81fd1b844eb133d5f5c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Fiero – rodina, úplné členění neověřeno",
+                "fromYear": 1983,
+                "toYear": 1988,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Doložený modelový rok není výrobní interval. Nominální litry, HP, lb-ft, palce, lb a 0–60 mph se bez dalšího nepřenášejí do přesných metrických polí. Muzeum uvádí 2.8 l/173 ci a čtyřstupňovou Muncie; nejedná se o všechny verze Fiero."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1561,10 +1604,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1694,6 +1733,18 @@
       {
         "field": "coverage",
         "reason": "Průběžný částečný soupis rodin. Úplné generace, chronologie a motorizace všech trhů nejsou dokončeny."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

@@ -11051,8 +11051,38 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0 TD RF-TCI",
+            "fuel": "diesel",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 64,
+            "powerKwMax": 64,
+            "availablePowerKw": [
+              64
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Kia_Retona"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0 TD RF-TCI",
+              "noteCs": "Doložená evropská dieselová verze; rozporný benzinový výkon nebyl převzat.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Retona / Cruiser",
+                "fromYear": 1998,
+                "toYear": 2003,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -11074,12 +11104,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Retona"
+          "https://en.wikipedia.org/wiki/Kia_Retona",
+          "https://de.wikipedia.org/wiki/Kia_Retona"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Kia_Retona"
+      "https://en.wikipedia.org/wiki/Kia_Retona",
+      "https://de.wikipedia.org/wiki/Kia_Retona"
     ],
     "needsReview": [
       {
@@ -11092,10 +11124,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

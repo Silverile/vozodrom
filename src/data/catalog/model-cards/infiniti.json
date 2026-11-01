@@ -134,8 +134,67 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "EX37 3.7 V6",
+            "fuel": "petrol",
+            "displacementCc": 3696,
+            "displacementLitresNominal": 3.7,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "EX37 3.7 V6",
+              "noteCs": "IDAE, evropská nabídka 2011: EX37 3696 cm³, 235 kW; nepřebírá odlišných 239 kW z americké specifikace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "J50 – EX",
+                "fromYear": 2007,
+                "toYear": 2013,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "EX30d",
+            "fuel": "diesel",
+            "displacementCc": 2993,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 175,
+            "powerKwMax": 175,
+            "availablePowerKw": [
+              175
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Infiniti_EX"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "EX30d",
+              "noteCs": "Vlastní evropská dieselová verze EX30d; nikoli pozdější motory další generace QX50.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "J50 – EX",
+                "fromYear": 2007,
+                "toYear": 2013,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -157,12 +216,16 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_EX"
+          "https://en.wikipedia.org/wiki/Infiniti_EX",
+          "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf",
+          "https://de.wikipedia.org/wiki/Infiniti_EX"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Infiniti_EX"
+      "https://en.wikipedia.org/wiki/Infiniti_EX",
+      "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf",
+      "https://de.wikipedia.org/wiki/Infiniti_EX"
     ],
     "needsReview": [
       {
@@ -175,10 +238,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -590,8 +649,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "G37 3.7 V6",
+            "fuel": "petrol",
+            "displacementCc": 3696,
+            "displacementLitresNominal": 3.7,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "G37 3.7 V6",
+              "noteCs": "IDAE, nabídka ve Španělsku v prosinci 2011, strana PDF 26; G37 sedan i kupé mají shodně doložené údaje.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "G (V36)",
+                "fromYear": 2006,
+                "toYear": 2015,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -613,7 +702,8 @@
         "photo": null,
         "trims": [],
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_G"
+          "https://en.wikipedia.org/wiki/Infiniti_G",
+          "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf"
         ],
         "dateBasis": "production",
         "equipmentLines": [],
@@ -672,7 +762,8 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Infiniti_G"
+      "https://en.wikipedia.org/wiki/Infiniti_G",
+      "https://coches.idae.es/storage/pdf/Guiasemestre22011.pdf"
     ],
     "needsReview": [
       {
@@ -872,10 +963,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -924,10 +1011,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -973,10 +1056,6 @@
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

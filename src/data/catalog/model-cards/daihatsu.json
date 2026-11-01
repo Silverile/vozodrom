@@ -7541,8 +7541,39 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.0",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1,
+            "powerKwMin": 43,
+            "powerKwMax": 43,
+            "availablePowerKw": [
+              43
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Daihatsu_Trevis"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.0",
+              "noteCs": "Výslovné evropské Trevis 2006–2009; nikoli původní japonské Mira Gino. Přesný objem není odhadnut.",
+              "generationEvidence": {
+                "method": "row-years",
+                "anchor": "Mira Gino II / evropskýTrevis",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": 2006,
+                "rowToYear": 2009
+              },
+              "variantYears": "2006-2009"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -7580,7 +7611,8 @@
         },
         "trims": null,
         "sources": [
-          "https://www.daihatsu.com/company/history/products_2000.html"
+          "https://www.daihatsu.com/company/history/products_2000.html",
+          "https://de.wikipedia.org/wiki/Daihatsu_Trevis"
         ]
       }
     ],
@@ -7590,7 +7622,8 @@
       "https://www.daihatsu.com/news/2011/11011401.html",
       "https://www.wikidata.org/wiki/Q580908",
       "https://www.daihatsuone.com/en/monokoto/017.html",
-      "https://www.daihatsu.com/company/history/products_2000.html"
+      "https://www.daihatsu.com/company/history/products_2000.html",
+      "https://de.wikipedia.org/wiki/Daihatsu_Trevis"
     ],
     "needsReview": [
       {
@@ -7666,10 +7699,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -7700,6 +7729,10 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [
