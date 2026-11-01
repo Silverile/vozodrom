@@ -88,6 +88,11 @@ export function evidenceProblem(g,index,e){
   const words=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ');
   const owns=text=>(p.modelAliases??[]).some(a=>/^[A-Z0-9]+$/.test(a)&&new RegExp(`(?<![A-Z0-9])${[...a].join('\\s*')}(?![A-Z0-9])`).test(words(text)));
   if(!owns(p.title)||!owns(p.generation))return 'Specification model title mismatch';
+  const bodies=new Set(g.bodyTypes??[]),body=p.bodyText?.trim()??'';
+  if(body&&!/^(?:-|n\/a|unknown)$/i.test(body)&&bodies.size===1){
+   if((bodies.has('convertible')||bodies.has('kabriolet'))&&!/cabrio|convertible|roadster/i.test(body))return 'Specification body contradicts convertible generation';
+   if((bodies.has('coupe')||bodies.has('kupe'))&&!/coup[eé]/i.test(body))return 'Specification body contradicts coupe generation';
+  }
   if(!['HORSEPOWER','TOTAL ELECTRIC POWER'].includes(p.powerLabel))return 'Unsupported specification power label';
   if(e.fuel==='electric'&&!/electric/i.test(p.fuelText??''))return 'Missing electric propulsion evidence';
   if(p.powerLabel==='TOTAL ELECTRIC POWER'&&e.fuel!=='electric')return 'Electric power used for combustion engine';

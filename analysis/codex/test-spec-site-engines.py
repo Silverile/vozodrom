@@ -21,6 +21,9 @@ assert m.detail(m.r.t.lxml.html.fromstring(without_generation),url,item,'iX',(20
 assert m.detail(m.r.t.lxml.html.fromstring(without_generation),url,item,'iX',(2021,None),'https://www.ultimatespecs.com/car-specs/BMW/M11969/iX')[0] is not None
 assert m.production(m.r.t.lxml.html.fromstring('<p>Production years: 2005</p>'))==(2005,None)
 m.r.INDEX['bmw']['ix']['generations'][0]['bodyTypes']=['convertible'];assert m.detail(tree,url,item,'iX',(2021,None))[0] is None
+m.r.INDEX['bmw']['ix']['generations'][0]['bodyTypes']=['kabriolet'];assert m.detail(tree,url,item,'iX',(2021,None))[0] is None
+m.r.INDEX['bmw']['ix']['generations'][0]['bodyTypes']=['kupe'];assert m.detail(tree,url,item,'iX',(2021,None))[0] is None
+assert m.detail(m.r.t.lxml.html.fromstring(html.replace('SUV / TT','Coupé')),url,item,'iX',(2021,None))[0] is not None
 print('PASS: vehicle-level electric kW, no component sum/HP conversion, hybrid rejection, production/body/model boundaries and explicit generation-index linkage')
 item={'make':'audi','line':'f103','generationIndex':0};m.r.INDEX={'audi':{'f103':{'name':'F103','generations':[{'name':'F103','code':'F103','from':1965,'to':1972}]}}}
 html='<div><h1>Audi 75 (F103) L Specs</h1><b>(1968 - 1972)</b></div><table>'+''.join('<tr><td>'+k+'</td><td>'+v+'</td></tr>' for k,v in [('Generation','75'),('Fuel Type','Petrol'),('Engine displacement','1695 cm3'),('Horsepower','75 PS / 55 kW')])+'</table>'

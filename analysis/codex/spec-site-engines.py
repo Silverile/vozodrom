@@ -76,8 +76,9 @@ def detail(tree,url,item,gen_title,span,gen_url=None):
     cc_text=rows.get('ENGINE DISPLACEMENT','');cc=None if fuel=='electric' else r.t.displacement(cc_text)
     if fuel!='electric' and cc is None:return None,'No displacement'
     body=rows.get('BODY','');wanted=set(g.get('bodyTypes') or [])
-    if wanted=={'convertible'} and not re.search(r'cabrio|convertible|roadster',body,re.I):return None,'Body variant mismatch'
-    if wanted=={'coupe'} and not re.search(r'coupe|coupé',body,re.I):return None,'Body variant mismatch'
+    body_known=body.strip().lower() not in ('','-','n/a','unknown')
+    if body_known and wanted in ({'convertible'},{'kabriolet'}) and not re.search(r'cabrio|convertible|roadster',body,re.I):return None,'Body variant mismatch'
+    if body_known and wanted in ({'coupe'},{'kupe'}) and not re.search(r'coupe|coupé',body,re.I):return None,'Body variant mismatch'
     h=tree.xpath('//h1')[0];date_text=r.t.clean(' '.join(h.getparent().xpath('./b/text()')))
     years=re.findall(r'\b(?:18|19|20)\d{2}\b',date_text)
     start=int(years[0]) if years else span[0];end=int(years[1]) if len(years)>1 else None
