@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FrontDrawing } from "@/components/FrontDrawing";
 import { formatDate, formatKm, formatNumber, formatPercent } from "@/lib/format";
 import { type ListingContext, atAge, statsPeriod } from "@/lib/listing-context";
-import { BODY_NAMES, CARD_FUEL, DRIVE, GEARBOX, yearsSpan } from "@/lib/modelCards";
+import { BODY_NAMES, CARD_FUEL, DRIVE, GEARBOX, bodyVariantName, yearsSpan } from "@/lib/modelCards";
 import type { Listing } from "@/lib/types";
 
 // What the catalogue and the public register know about the car of a user listing: its generation
@@ -63,6 +63,12 @@ export function GenerationCard({ context, makeName, brandSlug }: { context: List
             ["Motory", gen.engines.length ? gen.engines.map((e) => e.variant).filter(Boolean).join(", ") : null],
           ]}
         />
+        {size.variant && (d || size.trunkL) && (
+          <p className="text-xs text-[var(--color-muted)] sm:col-start-2">
+            Rozměry a zavazadelník: {bodyVariantName(size.variant)}
+            {size.variant.noteCs && ` · ${size.variant.noteCs}`}
+          </p>
+        )}
       </div>
 
       {(engine || trim) && (

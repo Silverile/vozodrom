@@ -4,7 +4,7 @@ import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
 import { cardGeneration, coversYear, toListingFuel } from "./listing-catalog";
 import { generationOf, lineOf, type Draft } from "./listing-draft";
-import { type CardBodyVariant, type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, sizeOf, stagesOf } from "./modelCards";
+import { type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, sizeOf, stagesOf } from "./modelCards";
 import type { Listing } from "./types";
 
 // Catalogue context for the page of a user listing: the generation the car belongs to, the catalogue
@@ -40,7 +40,7 @@ export interface ListingContext {
   engine: CardEngine | null;
   trim: CardTrim | null;
   /** size and boot of the car's body (sizeOf) */
-  size: Pick<CardBodyVariant, "dimensionsMm" | "trunkL">;
+  size: ReturnType<typeof sizeOf>;
   stats: CarStats | null;
   /** the statistics are for the generation, not only the whole line */
   statsOfGeneration: boolean;

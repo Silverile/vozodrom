@@ -256,8 +256,11 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
                 </thead>
                 <tbody>
                   {variants.map((v, i) => (
-                    <tr key={i} className="border-t border-[var(--color-line)]" title={v.noteCs ?? undefined}>
-                      <td className="py-1.5 pr-3 font-medium">{bodyVariantName(v)}</td>
+                    <tr key={i} className="border-t border-[var(--color-line)]">
+                      <td className="py-1.5 pr-3 font-medium">
+                        {bodyVariantName(v)}
+                        {v.noteCs && <span className="block text-xs font-normal text-[var(--color-muted)]">{v.noteCs}</span>}
+                      </td>
                       <td className="pr-3 whitespace-nowrap">{dims(v.dimensionsMm) ?? "—"}</td>
                       <td className="pr-3 whitespace-nowrap">{v.dimensionsMm?.wheelbase ? `${num(v.dimensionsMm.wheelbase)} mm` : "—"}</td>
                       <td className="whitespace-nowrap">{v.trunkL ? `${num(v.trunkL)} l` : "—"}</td>

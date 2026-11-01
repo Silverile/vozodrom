@@ -217,13 +217,14 @@ export const BODY_NAMES: Record<string, string> = {
 export const bodyVariantName = (v: CardBodyVariant) => [BODY_NAMES[v.bodyType] ?? v.bodyType, v.label].filter(Boolean).join(" ");
 
 /**
- * Size and boot of the car's body: the generation's own figures, or its body variant's when the
- * bodies differ. A body with several variants (van lengths) gives none, as the car's one is unknown.
+ * Size and boot of the car's body: its body variant's when the bodies differ (with the variant, whose
+ * name and note qualify the figures), otherwise the generation's own. A body with several variants
+ * (van lengths) gives the generation's figures, as the car's variant is unknown.
  */
-export function sizeOf(gen: CardGeneration, body: string): Pick<CardBodyVariant, "dimensionsMm" | "trunkL"> {
+export function sizeOf(gen: CardGeneration, body: string): Pick<CardBodyVariant, "dimensionsMm" | "trunkL"> & { variant: CardBodyVariant | null } {
   const own = (gen.bodyVariants ?? []).filter((v) => v.bodyType === body);
-  if (own.length === 1) return own[0];
-  return { dimensionsMm: gen.dimensionsMm, trunkL: gen.trunkL };
+  if (own.length === 1) return { ...own[0], variant: own[0] };
+  return { dimensionsMm: gen.dimensionsMm, trunkL: gen.trunkL, variant: null };
 }
 
 /** Plural headings for grouping a make's models by body type, in display order. */
