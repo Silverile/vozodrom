@@ -45,7 +45,7 @@ def observations(tree):
   if tag!='tr':continue
   cells=x.xpath('./th|./td')
   if len(cells)<2:continue
-  label=t.clean(cells[0].text_content());value=t.clean(' '.join(c.text_content() for c in cells[1:]))
+  label=t.clean(' '.join(cells[0].itertext()));value=t.clean(' '.join(' '.join(c.itertext()) for c in cells[1:]))
   if not re.fullmatch(r'Production|Produktion|Produktionszeitraum|Bauzeit|Výroba|Body style|Karosserie(?:versionen)?|Power output|Electric motor|Engine|Fuel|Fuel type',label,re.I):continue
   parent=x.xpath('ancestor::table')
   if not parent:continue
@@ -85,6 +85,11 @@ for row_index,row in enumerate(queue['lines']):
  if id in done:results.append(done[id]);continue
  if limited:results.append({'id':id,'rateLimited':True,'attempts':[],'generations':[],'reason':'Deferred after HTTP 429, not absence of source.'});continue
  card=copy.deepcopy(r.INDEX[make][line]);attempts=[];pages={};gens=[]
+ if row.get('retryDeferredGenerations'):
+  time.sleep(30);ss.RATE_LIMITED=False
+  with t.lock:
+   for u,v in list(t.cache.items()):
+    if 'ultimatespecs.com' in u and v[2] and '429' in v[2]:t.cache.pop(u,None)
  for gi,g in enumerate(card['generations']):
   urls=list(dict.fromkeys([*g.get('sources',[]),*card.get('sources',[])]))
   wiki=[u for u in urls if re.match(r'https://(?:en|de|cs)\.wikipedia.org/',u)]
@@ -97,6 +102,10 @@ for row_index,row in enumerate(queue['lines']):
   for url in leads:
    if url not in t.cache:time.sleep(1.5)
    tree,canonical,error=t.fetch(url);a={'url':url,'canonical':canonical,'error':error};attempts.append(a)
+   if error and '429' in error and '--retry-rate-limited' in sys.argv:
+    time.sleep(30)
+    with t.lock:t.cache.pop(url,None)
+    tree,canonical,error=t.fetch(url);a={'url':url,'canonical':canonical,'error':error,'backoffSeconds':30,'retryIndex':1};attempts.append(a)
    if error and '429' in error:limited=True;break
    if tree is None:continue
    if not r.owns_article(tree,card,make,gi):a['error']='Model ownership not established from title';continue
@@ -136,7 +145,7 @@ for row_index,row in enumerate(queue['lines']):
    item['source']=url
   if not limited and not item['engines'] and not g.get('engines') and g.get('from') and g.get('dateBasis')!='announcement':
    r.INDEX[make][line]=card
-   fallback=ss.research({'make':make,'line':line,'generationIndex':gi,'from':g.get('from'),'to':g.get('to'),'engines':[],'attempts':[]},max_models=1,max_generation_pages=2,max_details=1)
+   fallback=ss.research({'make':make,'line':line,'generationIndex':gi,'from':g.get('from'),'to':g.get('to'),'engines':[],'attempts':[]},max_models=1,max_generation_pages=2,max_details=1,retry_429_delays=(15,30) if gi in row.get('retryDeferredGenerations',[]) else ())
    item['engines']=fallback['engines'];item['specAttempts']=fallback['attempts'];item['specFallbackStatus']=fallback.get('specFallbackStatus');item['specReason']=fallback.get('reason')
   gens.append(item)
  result={'id':id,'name':card['name'],'attempts':attempts,'pages':list(pages.values()),'generations':gens,'rateLimited':limited};results.append(result)

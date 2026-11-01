@@ -55,6 +55,13 @@ def detail(tree,url,item,gen_title,span,gen_url=None):
     g=r.INDEX[item['make']][item['line']]['generations'][item['generationIndex']]
     title=r.t.clean(tree.xpath('string(//h1)'));rows=source_rows(tree);generation_field=rows.get('GENERATION','');generation=generation_field
     if not generation and gen_url and re.fullmatch(r'https://www\.ultimatespecs\.com/car-specs/[A-Za-z-]+/M\d+/[^/?#]+',gen_url):generation=gen_title
+    parent_attribution=False
+    if generation and not generation_fit(g,generation,span) and gen_url:
+        codes={c for c in r.t.token(g.get('code') or '') if re.search(r'\d',c)}
+        if codes&r.t.token(gen_title) and codes&r.t.token(title) and r.t.token(generation)<=r.t.token(gen_title) and generation_fit(g,gen_title,span):
+            # Some pages abbreviate F103's generation to the trim "75". The
+            # linked generation table and vehicle title must both identify F103.
+            generation=gen_title;parent_attribution=True
     if not title or not generation or not generation_fit(g,generation,span):return None,'Detail generation not attributable'
     brand=BRANDS.get(item['make'],MAKES[item['make']]);ct=compact(title)
     if not ct.startswith(compact(brand)) or not owns_model_text(title,model_names(item)) or not owns_model_text(generation,model_names(item)):return None,'Detail model ownership not established'
@@ -77,10 +84,11 @@ def detail(tree,url,item,gen_title,span,gen_url=None):
     if start<g['from'] or start>(g.get('to') or 2026) or end and end>(g.get('to') or 2026):return None,'Variant dates outside card generation'
     variant=short_variant(title,brand,gen_title,r.INDEX[item['make']][item['line']]['name'],cc,fuel,kw)
     proof={'url':url,'title':title,'modelAliases':sorted(model_names(item)),'generation':generation,'generationFieldPresent':bool(generation_field),'generationPageUrl':gen_url,'linkedFromGenerationEngineTable':bool(gen_url),'generationPageTitle':gen_title,'generationProductionFrom':span[0],'generationProductionTo':span[1],'variantDateText':date_text,'fuelText':arch,'bodyText':body,'powerLabel':power_label,'powerText':power_text,'displacementText':cc_text}
+    if parent_attribution:proof.update({'generationAttribution':'linked-generation-page','generationFieldText':generation_field})
     ev={'method':'specification-page','anchor':generation,'fromYear':span[0],'toYear':span[1],'generationIndex':item['generationIndex'],'rowFromYear':start,'rowToYear':end or start}
     scope={'tableSection':'Vehicle Engine Technical Data','variantYears':date_text or str(start),'originalVariant':title,'powerBasis':'explicit total electric output' if power_label=='TOTAL ELECTRIC POWER' else 'explicit vehicle Horsepower field in kW; no conversion','specificationPage':proof,'generationEvidence':ev}
     return {'fuel':fuel,'displacementCc':cc,'displacementLitresNominal':None if cc is None else round(cc/1000,1),'powerKwMin':kw,'powerKwMax':kw,'availablePowerKw':[kw],'powerRangeCoverage':'documented-versions-only','variant':variant,'sources':[url],'sourceScope':scope},None
-def research(item,max_models=2,max_generation_pages=20,max_details=3):
+def research(item,max_models=2,max_generation_pages=20,max_details=3,retry_429_delays=()):
     if item['engines'] or not item.get('from'):return item
     if RATE_LIMITED:
         item=json.loads(json.dumps(item));item['specFallbackStatus']='not-queried-after-rate-limit';item['reason']='Specification fallback deferred after HTTP 429; not proof of an absent page.';return item
@@ -92,6 +100,11 @@ def research(item,max_models=2,max_generation_pages=20,max_details=3):
         if u not in r.t.cache:
             time.sleep(max(0,1.5-(time.monotonic()-LAST_FETCH)));LAST_FETCH=time.monotonic()
         tree,canonical,error=r.t.fetch(u);a={'url':u,'canonical':canonical,'phase':'spec-site','error':error};attempts.append(a)
+        for retry_index,delay in enumerate(retry_429_delays,1):
+            if not error or '429' not in error:break
+            time.sleep(delay)
+            with r.t.lock:r.t.cache.pop(u,None)
+            tree,canonical,error=r.t.fetch(u);a={'url':u,'canonical':canonical,'phase':'spec-site','error':error,'retryIndex':retry_index,'backoffSeconds':delay};attempts.append(a)
         if error and '429' in error:RATE_LIMITED=True;item['specFallbackStatus']='rate-limited';item['reason']='Specification source returned HTTP 429; crawl stopped rather than treating rate limiting as missing data.'
         return tree,a
     tree,a=fetch(url)

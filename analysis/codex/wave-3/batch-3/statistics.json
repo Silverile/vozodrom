@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "rawRecomputedMakes": [
+    "daewoo"
+  ],
+  "fullVinHistoryProcessed": true,
+  "fullHistorySelection": "analysis/codex/wave-3/batch-3/full-history-selection.json",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-11-01"
+    }
+  },
+  "snapshotMetadataPreserved": true,
+  "executionMetadata": [
+    {
+      "make": "daewoo",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    }
+  ],
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPopulatedLineLostAllGenerations": true,
+  "makeReports": [
+    {
+      "make": "daewoo",
+      "fleet": 6111,
+      "inspections": 9187,
+      "fleetCohorts": 10,
+      "inspectionCohorts": 12,
+      "rollbackBefore": {
+        "vehicles": 3229,
+        "share": 0.0146
+      },
+      "rollbackAfter": {
+        "vehicles": 3229,
+        "share": 0.0146
+      }
+    }
+  ],
+  "lineChanges": [
+    {
+      "id": "daewoo/lublin",
+      "fleetBefore": null,
+      "fleetAfter": null,
+      "inspectionsBefore": 36,
+      "inspectionsAfter": 36,
+      "generationKeysBefore": [],
+      "generationKeysAfter": [
+        "0"
+      ]
+    }
+  ],
+  "publishedChangedMakeFiles": [
+    "src/data/stats/daewoo.json"
+  ],
+  "rawAggregateSha256": {
+    "istp-agg.json": "ecf80c6c959f3244c118f835a50e5e61ff0c14dcd793d716dc36c10bc2de2872",
+    "rsv-agg.json": "e4a969bf03f274769a731183503c0416e43502f33f1782e2985e3db396efb40c"
+  },
+  "outputSha256": {
+    "src/data/stats/daewoo.json": "5b004886ab4695a8ee0367f641c30f6ba4eed1171b502f3c6a1e3d9f5466b560",
+    "src/data/stats/index.json": "bf8e772f9d27ac607d42c37ed5ead14ea43b4fbb4f524644b5089dfd0f8f117f",
+    "src/data/listing-stats.json": "cb41246e2e4554069fabc0a7ad23a2c6e6f45691cac49bb73cff02aa73e702ca"
+  }
+}

@@ -80,7 +80,11 @@ export function evidenceProblem(g,index,e){
   if(!p||!(e.sources??[]).includes(p.url)||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/\d+\/[^/?#]+\.html$/.test(p.url??''))return 'Missing specification-page source';
   if(!p.title||!p.generation||p.generation!==ev.anchor||p.generationProductionFrom!==ev.fromYear||p.generationProductionTo!==ev.toYear)return 'Specification generation evidence mismatch';
   if(typeof p.generationFieldPresent!=='boolean')return 'Specification generation evidence kind missing';
-  if(p.generationFieldPresent===false&&(!p.linkedFromGenerationEngineTable||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/M\d+\/[^/?#]+$/.test(p.generationPageUrl??'')||p.generation!==p.generationPageTitle))return 'Missing explicit generation-table link';
+  if((p.generationFieldPresent===false||p.generationAttribution==='linked-generation-page')&&(!p.linkedFromGenerationEngineTable||!/^https:\/\/www\.ultimatespecs\.com\/car-specs\/[A-Za-z-]+\/M\d+\/[^/?#]+$/.test(p.generationPageUrl??'')||p.generation!==p.generationPageTitle))return 'Missing explicit generation-table link';
+  if(p.generationAttribution==='linked-generation-page'){
+   const tokens=s=>new Set(folded(s??'').toUpperCase().match(/[A-Z0-9]+/g)??[]),parent=tokens(p.generationPageTitle),title=tokens(p.title),raw=tokens(p.generationFieldText),codes=[...tokens(g.code)].filter(c=>/\d/.test(c));
+   if(!raw.size||![...raw].every(c=>parent.has(c))||!codes.some(c=>parent.has(c)&&title.has(c)))return 'Abbreviated generation field lacks scoped chassis-code proof';
+  }
   const words=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ');
   const owns=text=>(p.modelAliases??[]).some(a=>/^[A-Z0-9]+$/.test(a)&&new RegExp(`(?<![A-Z0-9])${[...a].join('\\s*')}(?![A-Z0-9])`).test(words(text)));
   if(!owns(p.title)||!owns(p.generation))return 'Specification model title mismatch';
