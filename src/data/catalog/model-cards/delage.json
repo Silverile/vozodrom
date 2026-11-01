@@ -4391,12 +4391,15 @@
     "generations": [
       {
         "code": "AM",
-        "name": "AM",
+        "name": "Type AM (AM)",
         "from": 1914,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1919,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -4412,7 +4415,7 @@
           "modelYear": null,
           "variant": "AM",
           "bodyType": null,
-          "noteCs": "Výrobní období podle historického klubu. Zakázkové karoserie se lišily; rozměry jednoho vozu nejsou vlastností všech podvozků této řady."
+          "noteCs": "Jedna konstrukce s karosářskými variantami."
         },
         "trunkL": null,
         "markets": [
@@ -4422,83 +4425,74 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://de.wikipedia.org/wiki/Delage_Type_AM",
           "http://delage.org/delage.html",
           "http://delage.org/data/modeles.csv"
-        ]
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "http://delage.org/delage.html",
-      "http://delage.org/data/modeles.csv"
+      "http://delage.org/data/modeles.csv",
+      "https://de.wikipedia.org/wiki/Delage_Type_AM"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "scope",
-        "reason": "Širší seznam doložených silničních rodin; technické a karosářské varianty jsou dílčí, nikoli úplná evidence všech zakázkových podvozků."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ],
     "aliases": []
@@ -6498,12 +6492,14 @@
     "generations": [
       {
         "code": "DO",
-        "name": "DO",
+        "name": "Type DO (DO)",
         "from": 1920,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1922,
+        "productionStatus": "ended",
         "facelift": null,
-        "bodyTypes": null,
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "engines": null,
         "engineCoverage": "unknown",
         "drivetrains": null,
@@ -6519,7 +6515,7 @@
           "modelYear": null,
           "variant": "DO",
           "bodyType": null,
-          "noteCs": "Výrobní období podle historického klubu. Zakázkové karoserie se lišily; rozměry jednoho vozu nejsou vlastností všech podvozků této řady."
+          "noteCs": "Jedna konstrukce s otevřenými karosářskými variantami."
         },
         "trunkL": null,
         "markets": [
@@ -6529,83 +6525,74 @@
         "photo": null,
         "trims": null,
         "sources": [
+          "https://de.wikipedia.org/wiki/Delage_Type_DO",
           "http://delage.org/delage.html",
           "http://delage.org/data/modeles.csv"
-        ]
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "http://delage.org/delage.html",
-      "http://delage.org/data/modeles.csv"
+      "http://delage.org/data/modeles.csv",
+      "https://de.wikipedia.org/wiki/Delage_Type_DO"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "scope",
-        "reason": "Širší seznam doložených silničních rodin; technické a karosářské varianty jsou dílčí, nikoli úplná evidence všech zakázkových podvozků."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       }
     ],
     "aliases": []

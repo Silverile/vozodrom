@@ -1367,17 +1367,45 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
-        "name": "e6 — souhrnná výrobní rodina",
+        "code": "I",
+        "name": "e6 (I)",
         "from": 2009,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2021,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Synchronní elektromotor",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/BYD_e6"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "Synchronní elektromotor",
+              "noteCs": "Jednotlivé doložené provedení z příslušné části pramene; neúplný výběr. Neověřená přesná kubatura nebo výkon zůstává prázdný; výkon není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "I",
+                "fromYear": 2009,
+                "toYear": 2021,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1391,7 +1419,7 @@
           "modelYear": null,
           "variant": "e6",
           "bodyType": "mpv",
-          "noteCs": "Souhrnná rodina, nikoli ověřené rozdělení všech generací. Zavedení na evropský trh a světový výrobní začátek se mohou lišit."
+          "noteCs": "I/II jsou pořadová označení generací podle pramene, nikoli doložený tovární typový kód."
         },
         "trunkL": null,
         "markets": [],
@@ -1400,7 +1428,75 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/BYD_e6"
-        ]
+        ],
+        "dateBasis": "production"
+      },
+      {
+        "code": "II",
+        "name": "e6 (II)",
+        "from": 2021,
+        "to": null,
+        "productionStatus": "unknown",
+        "facelift": null,
+        "bodyTypes": [
+          "mpv"
+        ],
+        "engines": [
+          {
+            "variant": "Elektromotor 70 kW",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/BYD_e6"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected documented production engine; see curated source fact and generation",
+              "originalVariant": "Elektromotor 70 kW",
+              "noteCs": "Jednotlivé doložené provedení z příslušné části pramene; neúplný výběr. Neověřená přesná kubatura nebo výkon zůstává prázdný; výkon není dopočítán z koní ani součtem hybridních komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "II",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production; predominantly China",
+          "modelYear": null,
+          "variant": "e6",
+          "bodyType": "mpv",
+          "noteCs": "I/II jsou pořadová označení generací podle pramene, nikoli doložený tovární typový kód. Prázdný konec neprokazuje dnešní výrobu."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/BYD_e6"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
@@ -1409,67 +1505,147 @@
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
-        "field": "scope",
-        "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+        "field": "generations[1].to",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].facelift",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].displacementLitresNominal",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].drivetrains",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].transmissions",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.length",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.width",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.height",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].dimensionsMm.wheelbase",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].specificationScope.modelYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trunkL",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].photo",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].trims",
+        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[1].productionStatus",
+        "reason": "I/II jsou pořadová označení generací podle pramene, nikoli doložený tovární typový kód. Prázdný konec neprokazuje dnešní výrobu."
       }
     ],
     "aliases": []

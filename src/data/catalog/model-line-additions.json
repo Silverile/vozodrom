@@ -4270,23 +4270,43 @@
     "name": "Model T",
     "makeSlug": "ford",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "sedan",
+      "kupe",
+      "kabriolet",
+      "pickup",
+      "dodavka"
+    ],
     "from": 1908,
     "to": 1927,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1908,
+        "to": 1927
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "T",
         "from": 1908,
         "to": 1927,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kupe",
+          "kabriolet",
+          "pickup",
+          "dodavka"
+        ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ford_Model_T",
           "https://www.thehenryford.org/collections/explore/articles/fords-model-t",
           "https://corporate.ford.com/articles/history/the-model-t.html",
-          "https://www.asme.org/about-asme/engineering-history/landmarks/233-model-t"
+          "https://www.asme.org/about-asme/engineering-history/landmarks/233-model-t",
+          "https://www.ultimatespecs.com/car-specs/Ford/20867/Ford-Model-T-.html"
         ]
       }
     ],
@@ -4295,7 +4315,8 @@
       "https://www.thehenryford.org/collections/explore/articles/fords-model-t",
       "https://corporate.ford.com/articles/history/the-model-t.html",
       "https://www.asme.org/about-asme/engineering-history/landmarks/233-model-t",
-      "https://en.wikipedia.org/wiki/Ford_Model_T"
+      "https://en.wikipedia.org/wiki/Ford_Model_T",
+      "https://www.ultimatespecs.com/car-specs/Ford/20867/Ford-Model-T-.html"
     ],
     "needsReview": [
       {
@@ -4305,10 +4326,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -34905,12 +34922,52 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2007,
+        "to": 2017
+      },
+      {
+        "from": 2017,
+        "to": 2025
+      },
+      {
+        "from": 2024,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GMT967",
         "from": 2007,
+        "to": 2017,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_Enclave"
+        ]
+      },
+      {
+        "code": "C1XX",
+        "from": 2017,
+        "to": 2025,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_Enclave"
+        ]
+      },
+      {
+        "code": "C1XX-2",
+        "from": 2024,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "suv"
@@ -34934,16 +34991,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -35326,12 +35387,69 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1999,
+        "to": 2016
+      },
+      {
+        "from": 2010,
+        "to": 2025
+      },
+      {
+        "from": 2016,
+        "to": null
+      },
+      {
+        "from": 2022,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GMT200 / GMT201",
         "from": 1999,
+        "to": 2016,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_GL8"
+        ]
+      },
+      {
+        "code": "SGM258",
+        "from": 2010,
+        "to": 2025,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_GL8"
+        ]
+      },
+      {
+        "code": "SGM358",
+        "from": 2016,
         "to": null,
+        "dateBasis": "production",
+        "productionStatus": "unknown",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_GL8"
+        ]
+      },
+      {
+        "code": "SGM458",
+        "from": 2022,
+        "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
@@ -35355,16 +35473,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -36435,19 +36557,52 @@
     "name": "Skyhawk",
     "makeSlug": "buick",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "hatchback",
+      "sedan",
+      "kupe",
+      "kombi"
+    ],
     "from": 1974,
     "to": 1989,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1974,
+        "to": 1979
+      },
+      {
+        "from": 1981,
+        "to": 1989
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "H-body",
         "from": 1974,
-        "to": 1989,
+        "to": 1979,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Buick_Skyhawk"
+        ]
+      },
+      {
+        "code": "J-body",
+        "from": 1981,
+        "to": 1989,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan",
+          "kupe",
+          "hatchback",
+          "kombi"
+        ],
         "sources": [
           "https://en.wikipedia.org/wiki/Buick_Skyhawk"
         ]
@@ -36465,10 +36620,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -37572,12 +37723,35 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2009,
+        "to": 2021
+      },
+      {
+        "from": 2021,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "I",
         "from": 2009,
+        "to": 2021,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/BYD_e6"
+        ]
+      },
+      {
+        "code": "II",
+        "from": 2021,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
@@ -37601,16 +37775,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -43784,16 +43962,39 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2009,
+        "to": 2017
+      },
+      {
+        "from": 2017,
+        "to": null
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 2009,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2017,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
           "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Changan_Alsvin"
+        ]
+      },
+      {
+        "code": null,
+        "from": 2017,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "unknown",
+        "bodyTypes": [
+          "sedan"
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Changan_Alsvin"
@@ -43815,16 +44016,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -46883,12 +47088,18 @@
     "to": 2023,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2005,
+        "to": 2023
+      }
+    ],
     "generations": [
       {
         "code": "T11",
         "from": 2005,
         "to": 2023,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv"
@@ -50304,25 +50515,33 @@
     "to": 1978,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1961,
+        "to": 1978
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1961,
         "to": 1978,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
           "kombi"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Citroën_Ami",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_Ami"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Ami"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Ami",
+      "https://en.wikipedia.org/wiki/Citroën_Ami"
     ],
     "needsReview": [
       {
@@ -50613,24 +50832,32 @@
     "to": 1992,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1974,
+        "to": 1992
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "C35",
         "from": 1974,
         "to": 1992,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "dodavka"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Citroën_C35",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_C35",
+      "https://en.wikipedia.org/wiki/Citroën_C35"
     ],
     "needsReview": [
       {
@@ -50702,27 +50929,43 @@
     "name": "C6 (1928)",
     "makeSlug": "citroen",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "sedan",
+      "kupe",
+      "kabriolet"
+    ],
     "from": 1928,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1932,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1928,
+        "to": 1932
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "C6",
         "from": 1928,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": null,
+        "to": 1932,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan",
+          "kupe",
+          "kabriolet"
+        ],
         "sources": [
+          "https://de.wikipedia.org/wiki/Citroën_C6_(1928)",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_C4_%26_C6"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_C4_%26_C6"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_C4_%26_C6",
+      "https://de.wikipedia.org/wiki/Citroën_C6_(1928)"
     ],
     "needsReview": [
       {
@@ -50732,14 +50975,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -51151,24 +51386,34 @@
     "to": 1987,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1968,
+        "to": 1987
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1968,
         "to": 1987,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kabriolet"
         ],
         "sources": [
-          "https://stellantis-media.e-gatesviluppo.net/uk-en/citroen/press/citroen-celebrates-55-years-of-the-mehari"
+          "https://www.media.stellantis.com/em-en/citroen/press/citroen-mehari-55-years-and-still-inspiring",
+          "https://stellantis-media.e-gatesviluppo.net/uk-en/citroen/press/citroen-celebrates-55-years-of-the-mehari",
+          "https://en.wikipedia.org/wiki/Citroën_Méhari"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://stellantis-media.e-gatesviluppo.net/uk-en/citroen/press/citroen-celebrates-55-years-of-the-mehari"
+      "https://stellantis-media.e-gatesviluppo.net/uk-en/citroen/press/citroen-celebrates-55-years-of-the-mehari",
+      "https://www.media.stellantis.com/em-en/citroen/press/citroen-mehari-55-years-and-still-inspiring",
+      "https://en.wikipedia.org/wiki/Citroën_Méhari"
     ],
     "needsReview": [
       {
@@ -51282,27 +51527,45 @@
     "name": "Traction Avant",
     "makeSlug": "citroen",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "sedan",
+      "kupe",
+      "kabriolet",
+      "kombi"
+    ],
     "from": 1934,
     "to": 1957,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1934,
+        "to": 1957
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1934,
         "to": 1957,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kupe",
+          "kabriolet",
+          "kombi"
+        ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Citroën_Traction_Avant",
           "https://en.wikipedia.org/wiki/Citro%C3%ABn_Traction_Avant"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Traction_Avant"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_Traction_Avant",
+      "https://en.wikipedia.org/wiki/Citroën_Traction_Avant"
     ],
     "needsReview": [
       {
@@ -51312,10 +51575,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -55047,16 +55306,22 @@
       "mpv"
     ],
     "from": 1991,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2021,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1991,
+        "to": 2021
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1991,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2021,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "dodavka",
           "mpv"
@@ -55078,10 +55343,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -55321,16 +55582,22 @@
       "pickup"
     ],
     "from": 1991,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2021,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1991,
+        "to": 2021
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1991,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2021,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "pickup"
         ],
@@ -55353,10 +55620,6 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
@@ -55375,27 +55638,35 @@
       "sedan"
     ],
     "from": 2008,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2011,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2008,
+        "to": 2011
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "J300",
         "from": 2008,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2011,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Daewoo_Lacetti_Premiere"
+          "https://en.wikipedia.org/wiki/Daewoo_Lacetti_Premiere",
+          "https://blog.gm-korea.co.kr/1339"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Daewoo_Lacetti_Premiere"
+      "https://en.wikipedia.org/wiki/Daewoo_Lacetti_Premiere",
+      "https://blog.gm-korea.co.kr/1339"
     ],
     "needsReview": [
       {
@@ -55405,10 +55676,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -55763,27 +56030,37 @@
       "suv"
     ],
     "from": 2006,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2011,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2006,
+        "to": 2011
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "C100",
         "from": 2006,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2011,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "suv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Daewoo_Winstorm"
+          "https://en.wikipedia.org/wiki/Daewoo_Winstorm",
+          "https://blog.gm-korea.co.kr/3334",
+          "https://blog.gm-korea.co.kr/1339"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Daewoo_Winstorm"
+      "https://en.wikipedia.org/wiki/Daewoo_Winstorm",
+      "https://blog.gm-korea.co.kr/3334",
+      "https://blog.gm-korea.co.kr/1339"
     ],
     "needsReview": [
       {
@@ -55793,10 +56070,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -56880,28 +57153,35 @@
     ],
     "from": 2007,
     "to": null,
-    "productionStatus": "current",
+    "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2007,
+        "to": null
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 2007,
         "to": null,
-        "productionStatus": "current",
+        "dateBasis": "production",
+        "productionStatus": "unknown",
         "bodyTypes": [
           "dodavka",
           "pickup"
         ],
         "sources": [
-          "https://www.daihatsu.com/company/databook_2024_E.pdf",
-          "https://en.wikipedia.org/wiki/Daihatsu_Gran_Max"
+          "https://en.wikipedia.org/wiki/Daihatsu_Gran_Max",
+          "https://www.daihatsu.com/company/databook_2024_E.pdf"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://www.daihatsu.com/company/databook_2024_E.pdf"
+      "https://www.daihatsu.com/company/databook_2024_E.pdf",
+      "https://en.wikipedia.org/wiki/Daihatsu_Gran_Max"
     ],
     "needsReview": [
       {
@@ -56911,14 +57191,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -56931,6 +57203,14 @@
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -57209,27 +57489,34 @@
     ],
     "from": 2009,
     "to": null,
-    "productionStatus": "current",
+    "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2009,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "S402M",
         "from": 2009,
         "to": null,
-        "productionStatus": "current",
+        "dateBasis": "production",
+        "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
         ],
         "sources": [
-          "https://www.daihatsu.com/news/2009/09022701.html",
-          "https://en.wikipedia.org/wiki/Daihatsu_Luxio"
+          "https://en.wikipedia.org/wiki/Daihatsu_Luxio",
+          "https://www.daihatsu.com/news/2009/09022701.html"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://www.daihatsu.com/news/2009/09022701.html"
+      "https://www.daihatsu.com/news/2009/09022701.html",
+      "https://en.wikipedia.org/wiki/Daihatsu_Luxio"
     ],
     "needsReview": [
       {
@@ -57239,14 +57526,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -57259,6 +57538,14 @@
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -60206,16 +60493,22 @@
       "sedan"
     ],
     "from": 1961,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1968,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1961,
+        "to": 1968
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "DR450",
         "from": 1961,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1968,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
         ],
@@ -60236,10 +60529,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -60263,12 +60552,18 @@
     "to": 1992,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1968,
+        "to": 1992
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "DS420",
         "from": 1968,
         "to": 1992,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
@@ -65204,25 +65499,33 @@
     "to": 1989,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1972,
+        "to": 1989
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1972,
         "to": 1989,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kupe",
           "kabriolet"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/De_Tomaso_Longchamp"
+          "https://en.wikipedia.org/wiki/De_Tomaso_Longchamp",
+          "https://www.ultimatespecs.com/car-specs/De-Tomaso/468/De-Tomaso-Longchamp-.html"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/De_Tomaso_Longchamp"
+      "https://en.wikipedia.org/wiki/De_Tomaso_Longchamp",
+      "https://www.ultimatespecs.com/car-specs/De-Tomaso/468/De-Tomaso-Longchamp-.html"
     ],
     "needsReview": [
       {
@@ -65362,12 +65665,18 @@
     "to": 1992,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1971,
+        "to": 1992
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1971,
         "to": 1992,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kupe"
@@ -65390,14 +65699,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -66555,20 +66856,33 @@
     "name": "Type AM",
     "makeSlug": "delage",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "sedan",
+      "kabriolet"
+    ],
     "from": 1914,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1919,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1914,
+        "to": 1919
+      }
+    ],
     "generations": [
       {
         "code": "AM",
         "from": 1914,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": null,
+        "to": 1919,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "sedan",
+          "kabriolet"
+        ],
         "sources": [
+          "https://de.wikipedia.org/wiki/Delage_Type_AM",
           "http://delage.org/delage.html",
           "http://delage.org/data/modeles.csv"
         ]
@@ -66577,7 +66891,8 @@
     "wikidataQid": null,
     "sources": [
       "http://delage.org/delage.html",
-      "http://delage.org/data/modeles.csv"
+      "http://delage.org/data/modeles.csv",
+      "https://de.wikipedia.org/wiki/Delage_Type_AM"
     ],
     "needsReview": [
       {
@@ -66587,14 +66902,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
@@ -67109,20 +67416,31 @@
     "name": "Type DO",
     "makeSlug": "delage",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "kabriolet"
+    ],
     "from": 1920,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1922,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1920,
+        "to": 1922
+      }
+    ],
     "generations": [
       {
         "code": "DO",
         "from": 1920,
-        "to": null,
-        "productionStatus": "unknown",
-        "bodyTypes": null,
+        "to": 1922,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "kabriolet"
+        ],
         "sources": [
+          "https://de.wikipedia.org/wiki/Delage_Type_DO",
           "http://delage.org/delage.html",
           "http://delage.org/data/modeles.csv"
         ]
@@ -67131,7 +67449,8 @@
     "wikidataQid": null,
     "sources": [
       "http://delage.org/delage.html",
-      "http://delage.org/data/modeles.csv"
+      "http://delage.org/data/modeles.csv",
+      "https://de.wikipedia.org/wiki/Delage_Type_DO"
     ],
     "needsReview": [
       {
@@ -67141,14 +67460,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
@@ -68945,25 +69256,31 @@
       "135 MS"
     ],
     "bodyTypes": [
+      "sedan",
       "kupe",
-      "kabriolet",
-      "sedan"
+      "kabriolet"
     ],
     "from": 1935,
     "to": 1952,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1935,
+        "to": 1952
+      }
+    ],
     "generations": [
       {
         "code": "135",
         "from": 1935,
         "to": 1952,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
+          "sedan",
           "kupe",
-          "kabriolet",
-          "sedan"
+          "kabriolet"
         ],
         "sources": [
           "https://de.wikipedia.org/wiki/Delahaye_Type_135"
@@ -69138,25 +69455,31 @@
     "makeSlug": "delahaye",
     "aliases": [],
     "bodyTypes": [
+      "sedan",
       "kupe",
-      "kabriolet",
-      "sedan"
+      "kabriolet"
     ],
     "from": 1936,
     "to": 1953,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1936,
+        "to": 1953
+      }
+    ],
     "generations": [
       {
         "code": "148",
         "from": 1936,
         "to": 1953,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
+          "sedan",
           "kupe",
-          "kabriolet",
-          "sedan"
+          "kabriolet"
         ],
         "sources": [
           "https://de.wikipedia.org/wiki/Delahaye_Type_148"
@@ -79585,28 +79908,34 @@
       "kabriolet"
     ],
     "from": 1992,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2012,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1992,
+        "to": 2012
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "D8",
         "from": 1992,
         "to": 2012,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "kabriolet"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Donkervoort",
           "https://www.donkervoort.com/en/models/heritage/d8-zetec/",
           "https://www.donkervoort.com/en/the-story-of-us/history/",
           "https://www.donkervoort.com/en/models/heritage/d8-cosworth/",
           "https://www.donkervoort.com/en/models/heritage/d8-audi-agu/",
           "https://www.donkervoort.com/en/models/heritage/d8-audi-e-gas/",
           "https://www.donkervoort.com/en/models/heritage/d8-270-rs/"
-        ],
-        "dateBasis": "successor-boundary"
+        ]
       }
     ],
     "wikidataQid": null,
@@ -79615,7 +79944,9 @@
       "https://www.donkervoort.com/en/models/heritage/d8-cosworth/",
       "https://www.donkervoort.com/en/models/heritage/d8-audi-agu/",
       "https://www.donkervoort.com/en/models/heritage/d8-audi-e-gas/",
-      "https://www.donkervoort.com/en/models/heritage/d8-270-rs/"
+      "https://www.donkervoort.com/en/models/heritage/d8-270-rs/",
+      "https://www.donkervoort.com/en/the-story-of-us/history/",
+      "https://en.wikipedia.org/wiki/Donkervoort"
     ],
     "needsReview": [
       {
@@ -79625,10 +79956,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -79672,28 +79999,36 @@
     "bodyTypes": [
       "kupe"
     ],
-    "from": 2007,
+    "from": null,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": null,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 2007,
+        "code": "D8 GT",
+        "from": null,
         "to": null,
-        "productionStatus": "ended",
+        "dateBasis": "production",
+        "productionStatus": "unknown",
         "bodyTypes": [
           "kupe"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Donkervoort",
           "https://www.donkervoort.com/en/models/heritage/d8-gt/"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://www.donkervoort.com/en/models/heritage/d8-gt/"
+      "https://www.donkervoort.com/en/models/heritage/d8-gt/",
+      "https://en.wikipedia.org/wiki/Donkervoort"
     ],
     "needsReview": [
       {
@@ -79705,16 +80040,24 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
+      },
+      {
+        "field": "from",
+        "reason": "Přesný počátek sériové výroby nebyl doložen."
       }
     ]
   },
@@ -82211,15 +82554,21 @@
       "kabriolet"
     ],
     "from": 1921,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1926,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1921,
+        "to": 1926
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "A",
         "from": 1921,
-        "to": null,
+        "to": 1926,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
@@ -82227,6 +82576,7 @@
           "kabriolet"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Duesenberg_Model_A",
           "https://acdclub.org/history/history-duesenberg/",
           "https://www.asme.org/getmedia/21dcca6f-19b7-4b1b-8d79-5f2a7484ca33/Duesenberg-Brochure-Jan25-Update.pdf"
         ]
@@ -82246,10 +82596,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -82450,20 +82796,27 @@
       "Birò Box",
       "Birò Bolt"
     ],
-    "bodyTypes": null,
-    "from": null,
+    "bodyTypes": [],
+    "from": 2009,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2009,
+        "to": null
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 2009,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [],
         "sources": [
+          "https://en.wikipedia.org/wiki/Estrima_Birò",
           "https://it.wikipedia.org/wiki/Estrima_Bir%C3%B2",
           "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf",
           "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf",
@@ -82483,7 +82836,9 @@
       "https://www.trankvile.com/wp-content/uploads/2023/12/TRANKVILE.COM-BIRO-E-PKW-TECHNICAL-SHEET.pdf",
       "https://biro.nl/wp-content/uploads/2023/09/prijslijst-2023.pdf",
       "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf",
-      "https://www.eicma.it/en/estrima-presents-the-renewed-bir%C3%B2-en/"
+      "https://www.eicma.it/en/estrima-presents-the-renewed-bir%C3%B2-en/",
+      "https://green.lulop.com/it_it/post/show/253391/biro-gets-a-brand-new-look-at-.html",
+      "https://en.wikipedia.org/wiki/Estrima_Birò"
     ],
     "needsReview": [
       {
@@ -82493,18 +82848,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -82533,6 +82876,18 @@
       {
         "field": "generations[1].bodyTypes",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
+      },
+      {
+        "field": "bodyTypes",
+        "reason": "Přesná karosářská kategorie nebyla ověřena."
       }
     ]
   },
@@ -89319,19 +89674,31 @@
     "name": "1500",
     "makeSlug": "fiat",
     "aliases": [],
-    "bodyTypes": null,
+    "bodyTypes": [
+      "sedan",
+      "kabriolet"
+    ],
     "from": 1935,
     "to": 1950,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1935,
+        "to": 1950
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1935,
         "to": 1950,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": null,
+        "bodyTypes": [
+          "sedan",
+          "kabriolet"
+        ],
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_1500_(1935)",
           "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
@@ -89351,10 +89718,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -89615,19 +89978,29 @@
     "name": "238",
     "makeSlug": "fiat",
     "aliases": [],
-    "bodyTypes": [],
-    "from": 1965,
+    "bodyTypes": [
+      "dodavka"
+    ],
+    "from": 1967,
     "to": 1983,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1967,
+        "to": 1983
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1965,
+        "code": "238",
+        "from": 1967,
         "to": 1983,
+        "dateBasis": "production",
         "productionStatus": "ended",
-        "bodyTypes": [],
+        "bodyTypes": [
+          "dodavka"
+        ],
         "sources": [
           "https://en.wikipedia.org/wiki/Fiat_238",
           "https://en.wikipedia.org/wiki/List_of_Fiat_vehicles"
@@ -89647,18 +90020,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
-        "field": "bodyTypes",
-        "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].code",
@@ -93661,26 +94022,36 @@
     "aliases": [],
     "bodyTypes": [
       "suv",
-      "dodavka"
+      "dodavka",
+      "pickup",
+      "kombi"
     ],
     "from": 1988,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1988,
+        "to": null
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1988,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "suv",
-          "dodavka"
+          "dodavka",
+          "pickup",
+          "kombi"
         ],
         "sources": [
-          "https://www.forcemotors.com/about-force/legacy/",
-          "https://en.wikipedia.org/wiki/Force_Trax"
+          "https://en.wikipedia.org/wiki/Force_Trax",
+          "https://www.forcemotors.com/about-force/legacy/"
         ]
       }
     ],
@@ -93699,16 +94070,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -94832,12 +95207,18 @@
     "to": 1991,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1967,
+        "to": 1991
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "125p",
         "from": 1967,
         "to": 1991,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
@@ -94845,13 +95226,15 @@
           "pickup"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Polski_Fiat_125p"
+          "https://en.wikipedia.org/wiki/Polski_Fiat_125p",
+          "https://www.ultimatespecs.com/car-specs/FSO/27800/FSO-125-P-1300.html"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Polski_Fiat_125p"
+      "https://en.wikipedia.org/wiki/Polski_Fiat_125p",
+      "https://www.ultimatespecs.com/car-specs/FSO/27800/FSO-125-P-1300.html"
     ],
     "needsReview": [
       {
@@ -95068,12 +95451,18 @@
     "to": 1972,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1957,
+        "to": 1972
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1957,
         "to": 1972,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
@@ -95118,12 +95507,18 @@
     "to": 1973,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1951,
+        "to": 1973
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1951,
         "to": 1973,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
@@ -95208,23 +95603,34 @@
     "makeSlug": "gaz",
     "aliases": [],
     "bodyTypes": [
-      "sedan"
+      "sedan",
+      "kabriolet",
+      "kombi"
     ],
     "from": 1959,
     "to": 1981,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1959,
+        "to": 1981
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "13",
         "from": 1959,
         "to": 1981,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
-          "sedan"
+          "sedan",
+          "kabriolet",
+          "kombi"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/GAZ-13",
           "https://museum.gaz.ru/history/gaz-history/",
           "https://ru.djvu.online/file/eQ5h63duol0Sv"
         ]
@@ -95233,7 +95639,8 @@
     "wikidataQid": null,
     "sources": [
       "https://museum.gaz.ru/history/gaz-history/",
-      "https://ru.djvu.online/file/eQ5h63duol0Sv"
+      "https://ru.djvu.online/file/eQ5h63duol0Sv",
+      "https://en.wikipedia.org/wiki/GAZ-13"
     ],
     "needsReview": [
       {
@@ -95405,18 +95812,25 @@
     "to": 1992,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1970,
+        "to": 1992
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "24 / 24-10",
         "from": 1970,
         "to": 1992,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
           "kombi"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/GAZ-24",
           "https://en.wikipedia.org/wiki/GAZ_Volga",
           "https://ru.djvu.online/file/eQ5h63duol0Sv"
         ]
@@ -95425,7 +95839,8 @@
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/GAZ_Volga",
-      "https://ru.djvu.online/file/eQ5h63duol0Sv"
+      "https://ru.djvu.online/file/eQ5h63duol0Sv",
+      "https://en.wikipedia.org/wiki/GAZ-24"
     ],
     "needsReview": [
       {
@@ -95454,17 +95869,24 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1982,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "3102",
         "from": 1982,
         "to": null,
-        "productionStatus": "ended",
+        "dateBasis": "production",
+        "productionStatus": "unknown",
         "bodyTypes": [
           "sedan"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/GAZ-3102",
           "https://museum.gaz.ru/history/gaz-history/",
           "https://www.zr.ru/content/articles/932481-volga-gaz-3102-konec-istorii/",
           "https://auto.mail.ru/article/126763-chto-posmotret-v-muzee-istorii-gaz-samoe-interesnoe/"
@@ -95475,7 +95897,8 @@
     "sources": [
       "https://museum.gaz.ru/history/gaz-history/",
       "https://www.zr.ru/content/articles/932481-volga-gaz-3102-konec-istorii/",
-      "https://auto.mail.ru/article/126763-chto-posmotret-v-muzee-istorii-gaz-samoe-interesnoe/"
+      "https://auto.mail.ru/article/126763-chto-posmotret-v-muzee-istorii-gaz-samoe-interesnoe/",
+      "https://en.wikipedia.org/wiki/GAZ-3102"
     ],
     "needsReview": [
       {
@@ -95487,16 +95910,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -98734,19 +99161,25 @@
     "to": 2021,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2006,
+        "to": 2021
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "FC / FC2 / FC3",
         "from": 2006,
         "to": 2021,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/List_of_Geely_vehicles",
-          "https://en.wikipedia.org/wiki/Geely_Vision"
+          "https://en.wikipedia.org/wiki/Geely_Vision",
+          "https://en.wikipedia.org/wiki/List_of_Geely_vehicles"
         ]
       }
     ],
@@ -99162,25 +99595,30 @@
     "makeSlug": "ginetta",
     "aliases": [],
     "bodyTypes": [
-      "kabriolet",
       "kupe"
     ],
-    "from": 1966,
+    "from": null,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": null,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1966,
+        "code": "G11",
+        "from": null,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
-          "kabriolet",
           "kupe"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ginetta",
           "https://www.ginetta.org/history",
           "https://www.ginetta.org/history/model-index",
           "https://en.wikipedia.org/wiki/Ginetta_Cars"
@@ -99191,7 +99629,8 @@
     "sources": [
       "https://www.ginetta.org/history",
       "https://www.ginetta.org/history/model-index",
-      "https://en.wikipedia.org/wiki/Ginetta_Cars"
+      "https://en.wikipedia.org/wiki/Ginetta_Cars",
+      "https://en.wikipedia.org/wiki/Ginetta"
     ],
     "needsReview": [
       {
@@ -99203,16 +99642,24 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
+      },
+      {
+        "field": "from",
+        "reason": "Přesný počátek sériové výroby nebyl doložen."
       }
     ]
   },
@@ -99272,21 +99719,28 @@
     "bodyTypes": [
       "kabriolet"
     ],
-    "from": 1958,
+    "from": null,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": null,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1958,
+        "code": "G2",
+        "from": null,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "kabriolet"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ginetta_G2",
           "https://www.ginetta.org/history",
           "https://en.wikipedia.org/wiki/Ginetta_Cars"
         ]
@@ -99295,7 +99749,8 @@
     "wikidataQid": null,
     "sources": [
       "https://www.ginetta.org/history",
-      "https://en.wikipedia.org/wiki/Ginetta_Cars"
+      "https://en.wikipedia.org/wiki/Ginetta_Cars",
+      "https://en.wikipedia.org/wiki/Ginetta_G2"
     ],
     "needsReview": [
       {
@@ -99307,16 +99762,24 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
+      },
+      {
+        "field": "from",
+        "reason": "Přesný počátek sériové výroby nebyl doložen."
       }
     ]
   },
@@ -99380,19 +99843,25 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1984,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "G26",
         "from": 1984,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "kupe"
         ],
         "sources": [
-          "https://www.ginetta.org/history",
-          "https://en.wikipedia.org/wiki/Ginetta_G26"
+          "https://en.wikipedia.org/wiki/Ginetta_G26",
+          "https://www.ginetta.org/history"
         ]
       }
     ],
@@ -99411,16 +99880,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -99433,30 +99906,37 @@
       "kabriolet"
     ],
     "from": 1985,
-    "to": 2005,
-    "productionStatus": "ended",
+    "to": null,
+    "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1985,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "G27",
         "from": 1985,
-        "to": 2005,
-        "productionStatus": "ended",
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "unknown",
         "bodyTypes": [
           "kabriolet"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ginetta_G27",
           "https://www.ginetta.org/history",
-          "https://en.wikipedia.org/wiki/Ginetta_Cars",
-          "https://en.wikipedia.org/wiki/Ginetta_G27"
+          "https://en.wikipedia.org/wiki/Ginetta_Cars"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://www.ginetta.org/history",
-      "https://en.wikipedia.org/wiki/Ginetta_Cars"
+      "https://en.wikipedia.org/wiki/Ginetta_Cars",
+      "https://en.wikipedia.org/wiki/Ginetta_G27"
     ],
     "needsReview": [
       {
@@ -99468,16 +99948,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -100004,28 +100488,36 @@
     "bodyTypes": [
       "kupe"
     ],
-    "from": 2011,
+    "from": null,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": null,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 2011,
+        "code": "G40R",
+        "from": null,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "kupe"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ginetta_G40",
           "https://www.ginetta.org/index.php/history/model-index/2010-s/g40"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://www.ginetta.org/index.php/history/model-index/2010-s/g40"
+      "https://www.ginetta.org/index.php/history/model-index/2010-s/g40",
+      "https://en.wikipedia.org/wiki/Ginetta_G40"
     ],
     "needsReview": [
       {
@@ -100037,16 +100529,24 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
+      },
+      {
+        "field": "from",
+        "reason": "Přesný počátek sériové výroby nebyl doložen."
       }
     ]
   },
@@ -100117,21 +100617,28 @@
       "pickup"
     ],
     "from": 1983,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 1988,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1983,
+        "to": 1988
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GRS Tora",
         "from": 1983,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 1988,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "kombi",
           "pickup"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Ginetta_G2",
           "https://www.ginetta.org/history",
           "https://en.wikipedia.org/wiki/Ginetta_Cars"
         ]
@@ -100140,7 +100647,8 @@
     "wikidataQid": null,
     "sources": [
       "https://www.ginetta.org/history",
-      "https://en.wikipedia.org/wiki/Ginetta_Cars"
+      "https://en.wikipedia.org/wiki/Ginetta_Cars",
+      "https://en.wikipedia.org/wiki/Ginetta_G2"
     ],
     "needsReview": [
       {
@@ -100150,10 +100658,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -100998,28 +101502,52 @@
     "bodyTypes": [
       "suv"
     ],
-    "from": 1983,
+    "from": 1982,
     "to": 2005,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1982,
+        "to": 1994
+      },
+      {
+        "from": 1994,
+        "to": 2005
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1983,
-        "to": 2005,
+        "code": "GMT330 I",
+        "from": 1982,
+        "to": 1994,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "suv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/GMC_(automobile)"
+          "https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer"
+        ]
+      },
+      {
+        "code": "GMT330 II",
+        "from": 1994,
+        "to": 2005,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "suv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/GMC_(automobile)"
+      "https://en.wikipedia.org/wiki/GMC_(automobile)",
+      "https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer"
     ],
     "needsReview": [
       {
@@ -101541,28 +102069,52 @@
     "bodyTypes": [
       "pickup"
     ],
-    "from": 1982,
+    "from": 1981,
     "to": 2004,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1981,
+        "to": 1993
+      },
+      {
+        "from": 1993,
+        "to": 2004
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1982,
-        "to": 2004,
+        "code": "GMT325 I",
+        "from": 1981,
+        "to": 1993,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "pickup"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/GMC_(automobile)"
+          "https://en.wikipedia.org/wiki/Chevrolet_S-10"
+        ]
+      },
+      {
+        "code": "GMT325 II",
+        "from": 1993,
+        "to": 2004,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_S-10"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/GMC_(automobile)"
+      "https://en.wikipedia.org/wiki/GMC_(automobile)",
+      "https://en.wikipedia.org/wiki/Chevrolet_S-10"
     ],
     "needsReview": [
       {
@@ -102083,25 +102635,33 @@
     "to": 1996,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1970,
+        "to": 1996
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1970,
         "to": 1996,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "dodavka",
           "mpv"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_van",
           "https://en.wikipedia.org/wiki/GMC_(automobile)"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/GMC_(automobile)"
+      "https://en.wikipedia.org/wiki/GMC_(automobile)",
+      "https://en.wikipedia.org/wiki/Chevrolet_van"
     ],
     "needsReview": [
       {
@@ -102565,12 +103125,18 @@
     "to": 2013,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1996,
+        "to": 2013
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1996,
         "to": 2013,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "pickup"
@@ -102700,16 +103266,22 @@
       "suv"
     ],
     "from": 2010,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2020,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2010,
+        "to": 2020
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 2010,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2020,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "suv"
         ],
@@ -102730,10 +103302,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -106906,19 +107474,25 @@
     "to": 2002,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1984,
+        "to": 2002
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1984,
         "to": 2002,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
         ],
         "sources": [
-          "https://www.dsir.gov.in/sites/default/files/2019-12/tsr071.pdf",
-          "https://en.wikipedia.org/wiki/Hindustan_Contessa"
+          "https://en.wikipedia.org/wiki/Hindustan_Contessa",
+          "https://www.dsir.gov.in/sites/default/files/2019-12/tsr071.pdf"
         ]
       }
     ],
@@ -107371,27 +107945,87 @@
     "to": 2021,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1977,
+        "to": 1988
+      },
+      {
+        "from": 1988,
+        "to": 1999
+      },
+      {
+        "from": 1999,
+        "to": 2018
+      },
+      {
+        "from": 2009,
+        "to": 2021
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "TA / TB / TC / VD / VH",
         "from": 1977,
-        "to": 2021,
+        "to": 1988,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "pickup",
           "dodavka"
         ],
         "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Acty"
+        ]
+      },
+      {
+        "code": "HA1 / HA2 / HA3 / HA4 / HA5 / HH1 / HH2 / HH3 / HH4",
+        "from": 1988,
+        "to": 1999,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup",
+          "dodavka"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Acty"
+        ]
+      },
+      {
+        "code": "HA6 / HA7 / HH5 / HH6",
+        "from": 1999,
+        "to": 2018,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup",
+          "dodavka"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Acty"
+        ]
+      },
+      {
+        "code": "HA8 / HA9",
+        "from": 2009,
+        "to": 2021,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
           "https://en.wikipedia.org/wiki/Honda_Acty",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://www.honda.co.jp/auto-archive/actytruck/2021/common/pdf/actytruck_spec_list.pdf"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Honda_Acty",
-      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+      "https://www.honda.co.jp/auto-archive/actytruck/2021/common/pdf/actytruck_spec_list.pdf"
     ],
     "needsReview": [
       {
@@ -107798,26 +108432,50 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2011,
+        "to": 2020
+      },
+      {
+        "from": 2018,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "I (DD1 / DD2)",
         "from": 2011,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2020,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "hatchback"
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_Brio",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://www.ultimatespecs.com/car-specs/Honda/14670/Honda-Brio-.html"
+        ]
+      },
+      {
+        "code": "II (DD1)",
+        "from": 2018,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "unknown",
+        "bodyTypes": [
+          "hatchback"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Brio"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Honda_Brio",
-      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+      "https://www.ultimatespecs.com/car-specs/Honda/14670/Honda-Brio-.html"
     ],
     "needsReview": [
       {
@@ -107829,16 +108487,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -108006,19 +108668,41 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2004,
+        "to": 2015
+      },
+      {
+        "from": 2015,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "RR1 / RR2 / RR3 / RR4 / RR5 / RR6",
         "from": 2004,
+        "to": 2015,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Elysion"
+        ]
+      },
+      {
+        "code": "RC1 / RC2",
+        "from": 2015,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Honda_Elysion",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/Honda_Elysion"
         ]
       }
     ],
@@ -108037,16 +108721,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -108110,26 +108798,69 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2008,
+        "to": 2016
+      },
+      {
+        "from": 2016,
+        "to": 2024
+      },
+      {
+        "from": 2024,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "GB3 / GB4 / GP3",
         "from": 2008,
+        "to": 2016,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Freed",
+          "https://www.ultimatespecs.com/car-specs/Honda/33892/Honda-Freed-15i.html"
+        ]
+      },
+      {
+        "code": "GB5 / GB6 / GB7 / GB8",
+        "from": 2016,
+        "to": 2024,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Freed"
+        ]
+      },
+      {
+        "code": "GT1 / GT2 / GT3 / GT4 / GT5 / GT6 / GT7 / GT8",
+        "from": 2024,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_Freed",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://global.honda/en/newsroom/news/2024/4240627eng-freed.html"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Honda_Freed",
-      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+      "https://www.ultimatespecs.com/car-specs/Honda/33892/Honda-Freed-15i.html",
+      "https://global.honda/en/newsroom/news/2024/4240627eng-freed.html"
     ],
     "needsReview": [
       {
@@ -108141,16 +108872,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -108346,32 +109081,80 @@
     "makeSlug": "honda",
     "aliases": [],
     "bodyTypes": [
+      "mpv",
       "hatchback"
     ],
     "from": 2011,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2011,
+        "to": 2020
+      },
+      {
+        "from": 2017,
+        "to": 2023
+      },
+      {
+        "from": 2023,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "JF1 / JF2",
         "from": 2011,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2020,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
+          "mpv",
           "hatchback"
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Honda_N-Box",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://www.honda.co.jp/auto-archive/nbox/2017/common/pdf/nbox_spec_list.pdf"
+        ]
+      },
+      {
+        "code": "JF3 / JF4",
+        "from": 2017,
+        "to": 2023,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_N-Box",
+          "https://www.honda.co.jp/auto-archive/nbox/2023/common/pdf/nbox_spec_list.pdf"
+        ]
+      },
+      {
+        "code": "JF5 / JF6",
+        "from": 2023,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "unknown",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_N-Box",
+          "https://www.honda.co.jp/Nbox/common/pdf/nbox_spec_list.pdf"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Honda_N_Box",
-      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+      "https://en.wikipedia.org/wiki/Honda_N-Box",
+      "https://www.honda.co.jp/auto-archive/nbox/2017/common/pdf/nbox_spec_list.pdf",
+      "https://www.honda.co.jp/auto-archive/nbox/2023/common/pdf/nbox_spec_list.pdf",
+      "https://www.honda.co.jp/Nbox/common/pdf/nbox_spec_list.pdf"
     ],
     "needsReview": [
       {
@@ -108383,16 +109166,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -109223,30 +110010,54 @@
     "bodyTypes": [
       "pickup"
     ],
-    "from": 2005,
+    "from": 2004,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 2004,
+        "to": 2015
+      },
+      {
+        "from": 2016,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 2005,
+        "code": "YK1",
+        "from": 2004,
+        "to": 2015,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Ridgeline_(first_generation)"
+        ]
+      },
+      {
+        "code": "YK2 / YK3",
+        "from": 2016,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "pickup"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Honda_Ridgeline",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/Honda_Ridgeline_(second_generation)"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/Honda_Ridgeline",
-      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+      "https://en.wikipedia.org/wiki/List_of_Honda_automobiles",
+      "https://en.wikipedia.org/wiki/Honda_Ridgeline_(first_generation)",
+      "https://en.wikipedia.org/wiki/Honda_Ridgeline_(second_generation)"
     ],
     "needsReview": [
       {
@@ -109258,16 +110069,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -109575,19 +110390,109 @@
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1996,
+        "to": 2001
+      },
+      {
+        "from": 2001,
+        "to": 2005
+      },
+      {
+        "from": 2005,
+        "to": 2009
+      },
+      {
+        "from": 2009,
+        "to": 2015
+      },
+      {
+        "from": 2015,
+        "to": 2022
+      },
+      {
+        "from": 2022,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "RF1 / RF2",
         "from": 1996,
+        "to": 2001,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
+        ]
+      },
+      {
+        "code": "RF3 / RF4 / RF5 / RF6 / RF7 / RF8",
+        "from": 2001,
+        "to": 2005,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
+        ]
+      },
+      {
+        "code": "RG",
+        "from": 2005,
+        "to": 2009,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
+        ]
+      },
+      {
+        "code": "RK",
+        "from": 2009,
+        "to": 2015,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
+        ]
+      },
+      {
+        "code": "RP1 / RP2 / RP3 / RP4 / RP5",
+        "from": 2015,
+        "to": 2022,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "mpv"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
+        ]
+      },
+      {
+        "code": "RP6 / RP7 / RP8",
+        "from": 2022,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "mpv"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Honda_Stepwgn",
-          "https://en.wikipedia.org/wiki/List_of_Honda_automobiles"
+          "https://en.wikipedia.org/wiki/Honda_Stepwgn"
         ]
       }
     ],
@@ -109606,16 +110511,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -110196,16 +111105,22 @@
     "bodyTypes": [
       "sedan"
     ],
-    "from": 1958,
+    "from": 1959,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1959,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1958,
+        "code": "CA72",
+        "from": 1959,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
           "sedan"
@@ -110233,16 +111148,20 @@
         "reason": "Identifikátor nebyl nezávisle ověřen."
       },
       {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
-      },
-      {
         "field": "generations[0].code",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
       },
       {
         "field": "generations[0].to",
         "reason": "Neověřený údaj v dílčím historickém katalogu; null není pokračující výroba."
+      },
+      {
+        "field": "to",
+        "reason": "Přesný konec výroby nebyl doložen."
+      },
+      {
+        "field": "productionStatus",
+        "reason": "Současná sériová výroba nebyla potvrzena."
       }
     ]
   },
@@ -110412,16 +111331,22 @@
     "bodyTypes": [
       "sedan"
     ],
-    "from": null,
-    "to": null,
-    "productionStatus": "unknown",
+    "from": 1966,
+    "to": 1981,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1966,
+        "to": 1981
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "CA770 / CA771 / CA773",
         "from": 1966,
         "to": 1981,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan"
@@ -110447,14 +111372,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "from",
-        "reason": "Začátek výroby není úplně ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
