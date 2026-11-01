@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChatEvent, ChatMessage, ConversationSummary } from "@/lib/chat";
 import { useChatEvents } from "@/lib/chat-client";
+import { Icon } from "@/components/Icon";
 
 const time = (iso: string) => {
   const d = new Date(iso);
@@ -142,7 +143,7 @@ export function Messages({
                 aria-current={c.id === openId ? "true" : undefined}
                 className="flex gap-3 px-4 py-3 border-t border-[var(--color-line)] hover:bg-[var(--color-field)] aria-[current=true]:bg-[var(--color-field)]"
               >
-                <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-field)]">{c.kind === "system" ? "🔔" : "💬"}</span>
+                <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-field)]"><Icon name={c.kind === "system" ? "notifications" : "messages"} /></span>
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center gap-2">
                     <span className={`truncate ${c.unread ? "font-bold" : "font-semibold"}`}>{c.kind === "system" ? "Vozodrom" : c.counterpart ?? "Uživatel"}</span>

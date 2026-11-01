@@ -4,6 +4,7 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { useUnread } from "@/lib/chat-client";
 import { SignInLink } from "./SignInModal";
+import { Icon } from "./Icon";
 
 // Header entries: "Přihlásit" for visitors; messages (with the unread count) and the account for
 // signed-in users. The session is read on the client so that prerendered pages stay static.
@@ -16,7 +17,7 @@ export function AccountLink() {
     <>
       {signedIn && (
         <Link href="/ucet/zpravy/" aria-label={unread ? `Zprávy, ${unread} nepřečtených` : "Zprávy"} className={linkClass}>
-          <span aria-hidden="true">✉</span>
+          <Icon name="messages" />
           <span className="hidden sm:inline"> Zprávy</span>
           {unread > 0 && (
             <span aria-hidden="true" className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 grid place-items-center rounded-full bg-[var(--color-accent)] text-white text-[11px] font-bold">

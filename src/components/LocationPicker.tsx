@@ -6,6 +6,7 @@ import { REGIONS } from "@/lib/catalog";
 import { CITIES, OPEN_LOCATION_PICKER, citiesIn, getCity, nearestCity } from "@/lib/geo";
 import { sectionOf } from "@/lib/sections";
 import { useSearchLocation } from "./LocationPills";
+import { Icon } from "./Icon";
 
 // Header control for the visitor's towns, like Drom's city switch, but several towns can be
 // chosen at once. "Use my location" asks the browser for a position and adds the nearest
@@ -77,7 +78,7 @@ export function LocationPicker() {
         className="flex items-center gap-1 px-2 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap"
         aria-label={`Místo: ${centers.length ? centers.map((c) => c.name).join(", ") : "celá ČR"}. Změnit`}
       >
-        <span aria-hidden="true">📍</span>
+        <Icon name="location" />
         <span className="hidden min-[400px]:inline max-w-24 sm:max-w-32 truncate">{first ? first.name : "Celá ČR"}</span>
         {centers.length > 1 && <span>+{centers.length - 1}</span>}
         {first && radius > 0 && <span className="hidden sm:inline">· {radius} km</span>}
@@ -103,7 +104,7 @@ export function LocationPicker() {
           </div>
           <p className="text-sm text-[var(--color-muted)]">Vyberte jedno nebo více měst. Okruh nastavíte ve výsledcích hledání.</p>
           <div className="flex flex-wrap gap-2">
-            <button className="pill" onClick={useMyPosition}>📍 Použít mou polohu</button>
+            <button className="pill" onClick={useMyPosition}><Icon name="location" /> Použít mou polohu</button>
             {selected.map((slug) => (
               <button key={slug} className="pill" data-on="true" aria-label={`Odebrat ${getCity(slug)?.name}`} onClick={() => toggle(slug)}>
                 {getCity(slug)?.name} ✕

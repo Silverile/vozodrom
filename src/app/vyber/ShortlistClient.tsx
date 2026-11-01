@@ -12,6 +12,7 @@ import { marketEstimate } from "@/lib/market";
 import { stkSignal } from "@/lib/stk";
 import { MAX_COMPARE, savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
+import { Icon } from "@/components/Icon";
 
 const MISSING = <span className="text-[var(--color-muted)] italic">neuvedeno</span>;
 
@@ -110,7 +111,7 @@ export function ShortlistClient() {
 
       {cars.length === 0 ? (
         <div className="card p-8 text-center text-[var(--color-muted)]">
-          Zatím nic. U inzerátu klikněte na ☆ a auto se objeví tady.{" "}
+          Zatím nic. U inzerátu klikněte na <Icon name="favorite" /> a auto se objeví tady.{" "}
           <Link href="/inzeraty/" className="text-[var(--color-brand)]">Přejít na inzeráty</Link>
         </div>
       ) : (

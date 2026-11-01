@@ -15,6 +15,7 @@ import { marketEstimate } from "@/lib/market";
 import { savedSearches } from "@/lib/storage";
 import { stkSignal } from "@/lib/stk";
 import type { Body, Fuel, Listing } from "@/lib/types";
+import { Icon } from "@/components/Icon";
 
 const SORTS = {
   nejnovejsi: { label: "Nejnovější", fn: (a: Listing, b: Listing) => b.postedAt.localeCompare(a.postedAt) },
@@ -427,7 +428,7 @@ export function SearchClient() {
             <div className="flex items-center gap-2">
               {chips.length > 0 && (
                 <button className="pill" data-on={isSaved} aria-pressed={isSaved} onClick={toggleSaved}>
-                  {isSaved ? "★ Uloženo" : "☆ Uložit hledání"}
+                  <Icon name={isSaved ? "favorite-filled" : "favorite"} /> {isSaved ? "Uloženo" : "Uložit hledání"}
                 </button>
               )}
               <select className="input w-auto" value={sort} onChange={(e) => update("razeni", e.target.value)} aria-label="Řazení">

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { SignInLink } from "@/components/SignInModal";
+import { Icon } from "@/components/Icon";
 
 /** "Napsat prodejci": opens the chat with the seller (sign-in first for visitors). */
 export function WriteSeller({ listingId, signedIn }: { listingId: string; signedIn: boolean }) {
@@ -10,7 +11,7 @@ export function WriteSeller({ listingId, signedIn }: { listingId: string; signed
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   if (!signedIn) {
-    return <SignInLink next={`/inzerat/${listingId}/`} className="pill w-full justify-center">✉ Napsat prodejci</SignInLink>;
+    return <SignInLink next={`/inzerat/${listingId}/`} className="pill w-full justify-center"><Icon name="messages" /> Napsat prodejci</SignInLink>;
   }
   return (
     <>
@@ -27,7 +28,7 @@ export function WriteSeller({ listingId, signedIn }: { listingId: string; signed
           else setError(result.error ?? "Konverzaci se nepodařilo otevřít.");
         }}
       >
-        ✉ Napsat prodejci
+        <Icon name="messages" /> Napsat prodejci
       </button>
       {error && <p role="alert" className="text-sm text-[var(--color-warn)]">{error}</p>}
     </>

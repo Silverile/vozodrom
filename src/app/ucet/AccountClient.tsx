@@ -13,6 +13,7 @@ import { savedSearches, shortlist } from "@/lib/storage";
 import type { Listing } from "@/lib/types";
 import type { ListingStatus } from "@/db/schema";
 import { draftStore } from "../pridat/AddListingForm";
+import { Icon } from "@/components/Icon";
 
 // Account area modelled on Drom's. Listings and favourites/saved searches (AccountSync) live in the
 // account; an unsaved form draft stays in this browser. The remaining sections explain what they will do.
@@ -27,12 +28,12 @@ export interface MyListing {
 }
 
 const SECTIONS = [
-  { key: "inzeraty", label: "Moje inzeráty", icon: "＋" },
-  { key: "zpravy", label: "Zprávy", icon: "✉" },
-  { key: "oblibene", label: "Oblíbené", icon: "☆" },
-  { key: "hlidaci-pes", label: "Hlídací pes", icon: "🔔" },
-  { key: "statistiky", label: "Statistiky", icon: "▮" },
-  { key: "vin", label: "Prověrky VIN", icon: "🔎" },
+  { key: "inzeraty", label: "Moje inzeráty", icon: "add" },
+  { key: "zpravy", label: "Zprávy", icon: "messages" },
+  { key: "oblibene", label: "Oblíbené", icon: "favorite" },
+  { key: "hlidaci-pes", label: "Hlídací pes", icon: "notifications" },
+  { key: "statistiky", label: "Statistiky", icon: "mileage" },
+  { key: "vin", label: "Prověrky VIN", icon: "search" },
 ] as const;
 type SectionKey = (typeof SECTIONS)[number]["key"];
 
@@ -88,7 +89,7 @@ function Favourites() {
   const ids = shortlist.useValue();
   const cars = ids.map(getListing).filter((l): l is Listing => Boolean(l));
   if (cars.length === 0) {
-    return <Empty title="Žádná oblíbená auta" text="U inzerátu klikněte na ☆ a auto se uloží sem." action={{ href: "/inzeraty/", label: "Přejít na inzeráty" }} />;
+    return <Empty title="Žádná oblíbená auta" text="U inzerátu klikněte na srdíčko a auto se uloží sem." action={{ href: "/inzeraty/", label: "Přejít na inzeráty" }} />;
   }
   return (
     <div className="space-y-3">
@@ -182,7 +183,7 @@ export function AccountClient({ user, staff, listings }: { user: { name: string;
                   aria-current={s.key === active ? "page" : undefined}
                   className="w-full flex items-center gap-2 rounded-lg px-3 py-2 text-sm whitespace-nowrap text-[var(--color-muted)] hover:bg-[var(--color-field)] hover:text-[var(--color-ink)] aria-[current=page]:text-[var(--color-brand)] aria-[current=page]:bg-[var(--color-field)]"
                 >
-                  <span aria-hidden="true" className="w-5 text-center">{s.icon}</span>
+                  <span className="w-5 text-center"><Icon name={s.icon} /></span>
                   {s.label}
                 </Link>
               </li>

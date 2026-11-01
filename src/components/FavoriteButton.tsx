@@ -1,6 +1,7 @@
 "use client";
 
 import { shortlist, toggleShortlist } from "@/lib/storage";
+import { Icon } from "./Icon";
 
 export function FavoriteButton({ id, label, className = "" }: { id: string; label: string; className?: string }) {
   const saved = shortlist.useValue().includes(id);
@@ -17,7 +18,7 @@ export function FavoriteButton({ id, label, className = "" }: { id: string; labe
           : "border-[var(--color-line)] bg-[var(--color-field)] text-[var(--color-muted)] hover:text-[var(--color-ink)]"
       } ${className}`}
     >
-      {saved ? "★" : "☆"}
+      <Icon name={saved ? "favorite-filled" : "favorite"} />
     </button>
   );
 }

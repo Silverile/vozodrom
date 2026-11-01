@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type City, OPEN_LOCATION_PICKER, RADII, SEARCH_PAGE, parseCityList } from "@/lib/geo";
 import { savedLocation } from "@/lib/storage";
+import { Icon } from "./Icon";
 
 // Location state shared by the header picker and every search page. On search pages the
 // towns live in the URL (shareable, saved searches: ?mesto=brno,olomouc&okruh=50; "cr" is
@@ -57,7 +58,7 @@ export function LocationPills() {
           aria-label={`Odebrat ${c.name}`}
           onClick={() => setLocation(slugs.filter((s) => s !== c.slug), radius)}
         >
-          📍 {c.name} ✕
+          <Icon name="location" /> {c.name} ✕
         </button>
       ))}
       {centers.length > 0 &&
@@ -66,7 +67,7 @@ export function LocationPills() {
             {km === 0 ? (centers.length > 1 ? "jen tato města" : "jen město") : `+${km} km`}
           </button>
         ))}
-      <button className="pill" onClick={openPicker}>{centers.length ? "+ Přidat město" : "📍 Vybrat město"}</button>
+      <button className="pill" onClick={openPicker}>{centers.length ? "+ Přidat město" : <><Icon name="location" /> Vybrat město</>}</button>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { savedSearches, shortlist } from "@/lib/storage";
+import { Icon } from "./Icon";
 
 /** Header link to /vyber/; the badge counts saved cars and saved searches, as the page shows both. */
 export function ShortlistLink() {
@@ -16,7 +17,7 @@ export function ShortlistLink() {
       title={label}
       className="px-2 sm:px-3 py-2 rounded-lg text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap"
     >
-      {total > 0 ? "★" : "☆"}
+      <Icon name={total > 0 ? "favorite-filled" : "favorite"} />
       <span className="hidden sm:inline"> Výběr</span>
       {total > 0 && <span className="ml-1 rounded-full bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-1.5 text-xs font-bold">{total}</span>}
     </Link>
