@@ -28,8 +28,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "03 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 126,
+            "powerKwMax": 126,
+            "availablePowerKw": [
+              126
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.wey-eu.com/eu/en/ora03"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "03 Pro 63,13 kWh – evropský technický přehled",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "03 Pro 63,13 kWh – evropský technický přehled",
+                "source": "https://www.wey-eu.com/eu/en/ora03",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 126,
+                  "powerStandard": null,
+                  "torqueNm": 250
+                },
+                "sha256": "903b2b7a5a5728671c811e3cee01f2e1b6225d2a92a93462ba10d1e02a55090a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "ES11",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Pouze výbava Pro a baterie 63,13 kWh z evropského přehledu. Nejde o údaje všech trhů ani verze GT; převodovka zde technicky neupřesněna."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -152,10 +197,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -261,8 +302,97 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "07 Pure EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "availablePowerKw": [
+              150
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.gwm-motor.de/technische-daten-ora-07"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "07 Pure FWD 67 kWh – Německo",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "07 Pure FWD 67 kWh – Německo",
+                "source": "https://www.gwm-motor.de/technische-daten-ora-07",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 150,
+                  "powerStandard": null,
+                  "torqueNm": 340
+                },
+                "sha256": "e2fa35daa5b9d26117a904318fd5276e9ea9347e9d6d8c50f713ceb792e6d29b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "07 / Lightning Cat",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Pure 67 kWh z německého přehledu. Označení automatic převzato od výrobce, počet převodů nepotvrzen; odlišné hongkongské rozměry a zrychlení nepoužity."
+            }
+          },
+          {
+            "variant": "07 GT AWD EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 300,
+            "powerKwMax": 300,
+            "availablePowerKw": [
+              300
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.gwm-motor.de/technische-daten-ora-07"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "07 GT AWD 86 kWh – Německo",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "07 GT AWD 86 kWh – Německo",
+                "source": "https://www.gwm-motor.de/technische-daten-ora-07",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 300,
+                  "powerStandard": "Celkový výkon dvou motorů výslovně uveden výrobcem; nikoli odhad přepočtem PS.",
+                  "torqueNm": 680
+                },
+                "sha256": "0da4a32a1e31afaeb1e00d0231a162ac15d6f9a13bab6d30b76b9c619ff8e474"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "07 / Lightning Cat",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "GT AWD 86 kWh. Čínská premiérová hodnota 4,3 s není přenesena do německé homologace s hodnotou 4,5 s."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -398,7 +528,6 @@
           "https://www.gwm-motor.de/technische-daten-ora-07",
           "https://www.gwm-motor.de/ora-07",
           "https://en.wikipedia.org/wiki/Ora_(marque)",
-          "https://en.wikipedia.org/wiki/Ora_Lightning_Cat",
           "https://en.wikipedia.org/wiki/Ora_Lightning_Cat"
         ],
         "fieldSources": {
@@ -414,7 +543,6 @@
       "https://www.gwm-motor.de/technische-daten-ora-07",
       "https://www.gwm-motor.de/ora-07",
       "https://en.wikipedia.org/wiki/Ora_(marque)",
-      "https://en.wikipedia.org/wiki/Ora_Lightning_Cat",
       "https://en.wikipedia.org/wiki/Ora_Lightning_Cat"
     ],
     "needsReview": [
@@ -432,10 +560,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

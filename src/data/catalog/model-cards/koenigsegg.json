@@ -122,8 +122,36 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "R 5.0 V8 Twin Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-agera-r"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "R 5.0 V8 Twin Turbo",
+              "noteCs": "Vlastní specifikace AgeraR uvádí5.0L V8 aFlexfuel. Výkon je pouzehp a závisí na palivu; kW a přesné cm³ zůstávají prázdné. Nejde o původníAgera neboAgeraS.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Agera R",
+                "fromYear": 2011,
+                "toYear": 2014,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -164,7 +192,8 @@
         "trims": null,
         "sources": [
           "https://www.koenigsegg.com/model/agera-r",
-          "https://www.koenigsegg.com/history"
+          "https://www.koenigsegg.com/history",
+          "https://www.koenigsegg.com/technical-specifications-agera-r"
         ]
       },
       {
@@ -178,8 +207,36 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "S 5.0 V8 Twin Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-agera-s"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "S 5.0 V8 Twin Turbo",
+              "noteCs": "Vlastní AgeraS5.0L V8,1030hp. Výkon se nepřepočítává na kW; údajeAgeraR naE85 nejsou přenášeny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Agera S",
+                "fromYear": 2012,
+                "toYear": 2014,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -204,7 +261,8 @@
         "trims": null,
         "sources": [
           "https://www.koenigsegg.com/model/agera-s",
-          "https://www.koenigsegg.com/history"
+          "https://www.koenigsegg.com/history",
+          "https://www.koenigsegg.com/technical-specifications-agera-s"
         ]
       },
       {
@@ -218,8 +276,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "RS 5.0 V8 Twin Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": 865,
+            "powerKwMax": 865,
+            "availablePowerKw": [
+              865
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-agera-rs"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RS 5.0 V8 Twin Turbo",
+              "noteCs": "Vlastní oddíl AgeraRS InternalCombustionEngine výslovně5.0L a865kW na benzinu. Starší rozporný blokPerformance960hp a volitelný1MW nejsou považovány za samostatně ověřené výkony; převodhp není použit.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Agera RS",
+                "fromYear": 2015,
+                "toYear": 2018,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -260,7 +348,8 @@
         "trims": null,
         "sources": [
           "https://www.koenigsegg.com/model/agera-rs",
-          "https://www.koenigsegg.com/history"
+          "https://www.koenigsegg.com/history",
+          "https://www.koenigsegg.com/technical-specifications-agera-rs"
         ]
       }
     ],
@@ -271,7 +360,10 @@
       "https://www.koenigsegg.com/model/agera-s",
       "https://www.koenigsegg.com/model/agera-rs",
       "https://www.koenigsegg.com/technical-specifications-agera",
-      "https://en.wikipedia.org/wiki/Koenigsegg_Agera"
+      "https://en.wikipedia.org/wiki/Koenigsegg_Agera",
+      "https://www.koenigsegg.com/technical-specifications-agera-r",
+      "https://www.koenigsegg.com/technical-specifications-agera-s",
+      "https://www.koenigsegg.com/technical-specifications-agera-rs"
     ],
     "needsReview": [
       {
@@ -395,10 +487,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -448,10 +536,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -511,10 +595,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -557,6 +637,34 @@
       {
         "field": "generations[3].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[3].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [
@@ -586,8 +694,36 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "5.0 V8 Twin Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-cc850"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.0 V8 Twin Turbo",
+              "noteCs": "Vlastní CC8505.0L V8, oddělený výkon benzinu aE85 je uveden jenhp. KWs ani přesný objem nejsou dopočítány; CCX/Jesko nejsou donory.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "CC850",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -702,10 +838,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -800,6 +932,18 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1817,8 +1961,38 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "HV8 5.0 Plug-in Hybrid",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-gemera-2023"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "HV8 5.0 Plug-in Hybrid",
+              "noteCs": "Vlastní klientská specifikace Gemera2023 potvrzuje5L HotV8 plusDarkMatter a14kWh trakční baterii.2300hp celkově není převedeno na kW; stará stránka TFG se tříválcem je vyloučena a komponenty se nesčítají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Client specification HV8",
+                "fromYear": 2026,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1889,14 +2063,16 @@
           "https://www.koenigsegg.com/model/gemera",
           "https://www.koenigsegg.com/history",
           "https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/2025-08/Annual%20Report%202024_unofficial%20translation%20ENG.pdf",
-          "https://en.wikipedia.org/wiki/Koenigsegg_Gemera"
+          "https://en.wikipedia.org/wiki/Koenigsegg_Gemera",
+          "https://www.koenigsegg.com/technical-specifications-gemera-2023"
         ]
       }
     ],
     "sources": [
       "https://www.koenigsegg.com/history",
       "https://www.koenigsegg.com/model/gemera",
-      "https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/2025-08/Annual%20Report%202024_unofficial%20translation%20ENG.pdf"
+      "https://koenigsegg-cdn-g7eehhd6f0ewcaff.z02.azurefd.net/drupal/2025-08/Annual%20Report%202024_unofficial%20translation%20ENG.pdf",
+      "https://www.koenigsegg.com/technical-specifications-gemera-2023"
     ],
     "needsReview": [
       {
@@ -1917,10 +2093,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2038,6 +2210,18 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2573,8 +2757,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "5.0 V8 Plug-in Hybrid",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.koenigsegg.com/technical-specifications-regera"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.0 V8 Plug-in Hybrid",
+              "noteCs": "Vlastní Regera5.0L V8 s elektrickou trakcí. Kombinovaný výkon je uveden jako více než1500hp/1.11MW; dolní mez není přesná vrcholná hodnota v kW, proto je prázdná. Výkony spalovacího a elektrického motoru se nesčítají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Regera",
+                "fromYear": 2016,
+                "toYear": 2022,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2692,10 +2906,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2794,6 +3004,18 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

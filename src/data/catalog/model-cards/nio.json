@@ -1229,8 +1229,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "ES8 Norway AWD EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 400,
+            "powerKwMax": 400,
+            "availablePowerKw": [
+              400
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www-cdn.eu.nio.com/officialsite/2023/05/04/683c444a-246b-43cf-9b70-dd9a5f743747/NIO_Pricelist_ES8_NO_202305.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ES8 Norway AWD EV",
+              "noteCs": "Vlastní norský ceník NIO ES8 z05/2023 výslovně ElektriskDrift400kW MaksimalYtelse. Původní čínských480kW ani pozdějšíEL8 nejsou přeneseny; výkon náprav není sečten.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "I – původní ES8",
+                "fromYear": 2018,
+                "toYear": 2023,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1319,7 +1351,8 @@
           "https://ir.nio.com/news-releases/news-release-details/nio-inc-provides-september-and-third-quarter-2025-delivery",
           "https://www.nio.com/news/20250103001",
           "https://ir.nio.com/static-files/78b0ed66-9ef3-4bce-a083-995be817eeff",
-          "https://en.wikipedia.org/wiki/Nio_ES8"
+          "https://en.wikipedia.org/wiki/Nio_ES8",
+          "https://www-cdn.eu.nio.com/officialsite/2023/05/04/683c444a-246b-43cf-9b70-dd9a5f743747/NIO_Pricelist_ES8_NO_202305.pdf"
         ],
         "fieldSources": {
           "to": [
@@ -1340,8 +1373,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "EL8 AWD EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 480,
+            "powerKwMax": 480,
+            "availablePowerKw": [
+              480
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.nio.com/sv_SE/news/202406130002"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "EL8 AWD EV",
+              "noteCs": "Vlastní evropská premiéra NIO EL8 ze13.06.2024 uvádí celkových480kW. Jde o druhou rodinu ES8/EL8, nikoli první norskýES8;180/300kW nápravy se nepřičítají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Aries",
+                "fromYear": 2023,
+                "toYear": 2025,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1387,7 +1452,8 @@
           "https://ir.nio.com/news-releases/news-release-details/nio-inc-provides-september-and-third-quarter-2025-delivery",
           "https://www.nio.com/news/20250103001",
           "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0702/2023070200011.pdf",
-          "https://en.wikipedia.org/wiki/Nio_ES8"
+          "https://en.wikipedia.org/wiki/Nio_ES8",
+          "https://www.nio.com/sv_SE/news/202406130002"
         ],
         "fieldSources": {
           "to": [
@@ -1462,7 +1528,9 @@
       "https://www.nio.com/news/20250103001",
       "https://ir.nio.com/static-files/78b0ed66-9ef3-4bce-a083-995be817eeff",
       "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0702/2023070200011.pdf",
-      "https://en.wikipedia.org/wiki/Nio_ES8"
+      "https://en.wikipedia.org/wiki/Nio_ES8",
+      "https://www-cdn.eu.nio.com/officialsite/2023/05/04/683c444a-246b-43cf-9b70-dd9a5f743747/NIO_Pricelist_ES8_NO_202305.pdf",
+      "https://www.nio.com/sv_SE/news/202406130002"
     ],
     "needsReview": [
       {
@@ -1479,10 +1547,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1603,10 +1667,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2299,8 +2359,53 @@
         "bodyTypes": [
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "ET5 Touring AWD EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 360,
+            "powerKwMax": 360,
+            "availablePowerKw": [
+              360
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://cdn-udp-public.eu.nio.com/www-nio/user-instructions/ET5-Touring/index.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "ET5 Touring 75 kWh – evropský ceník 06/2023",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "ET5 Touring 75 kWh – evropský ceník 06/2023",
+                "source": "https://cdn-udp-public.eu.nio.com/www-nio/user-instructions/ET5-Touring/index.html",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 360,
+                  "powerStandard": null,
+                  "torqueNm": 700
+                },
+                "sha256": "667dffd506bb473475af2100377bc1a9a4880904fc843853809dffc6dd321898"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "ET5 Touring / ET5T",
+                "fromYear": 2023,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Baterie označená 75 kWh, základní hmotnost podle tabulky pro tuto baterii. Šířka bez zrcátek. Datum vydání návodu a přesný modelový rok nebyly ověřeny. Údaje se nepřenášejí do modernizace ET5T 2025 ani na sedan. Evropský nizozemský ceník 06/2023 nezávisle potvrzuje stejnou baterii, hmotnost a rozměry; uvádí 360 kW a 700 Nm. Dojezd je výrobcem zveřejněné maximum pro danou baterii, nikoli zaručený dojezd každé výbavy. Spotřeba 19,3–21,6 kWh/100 km je interval, proto skalární spotřeba zůstává null."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2472,10 +2577,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

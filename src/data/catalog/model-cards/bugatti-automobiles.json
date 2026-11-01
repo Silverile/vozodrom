@@ -18,8 +18,38 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "8.0 W16 Quad Turbo",
+            "fuel": "petrol",
+            "displacementCc": 7993,
+            "displacementLitresNominal": 8,
+            "powerKwMin": 1177,
+            "powerKwMax": 1177,
+            "availablePowerKw": [
+              1177
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bugatti.imgix.net/67ffb2428dcb11c9a8dbf04a/technical-specifications-centodieci-en.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "8.0 W16 Quad Turbo",
+              "noteCs": "Vlastní technický list Centodieci,7993cm³ a1177kW. Nejde o Chiron1103kW nebo Veyron; PS se nepřepočítávají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Centodieci",
+                "fromYear": 2022,
+                "toYear": 2022,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -85,13 +115,15 @@
         ],
         "sources": [
           "https://newsroom.bugatti.com/press-releases/bugatti-delivers-the-tenth-and-final-centodieci-hyper-sports-car",
-          "https://newsroom.bugatti.com/press-releases/bugatti-centodieci-about-to-enter-production"
+          "https://newsroom.bugatti.com/press-releases/bugatti-centodieci-about-to-enter-production",
+          "https://bugatti.imgix.net/67ffb2428dcb11c9a8dbf04a/technical-specifications-centodieci-en.pdf"
         ]
       }
     ],
     "sources": [
       "https://newsroom.bugatti.com/press-releases/bugatti-delivers-the-tenth-and-final-centodieci-hyper-sports-car",
-      "https://newsroom.bugatti.com/press-releases/bugatti-centodieci-about-to-enter-production"
+      "https://newsroom.bugatti.com/press-releases/bugatti-centodieci-about-to-enter-production",
+      "https://bugatti.imgix.net/67ffb2428dcb11c9a8dbf04a/technical-specifications-centodieci-en.pdf"
     ],
     "needsReview": [
       {
@@ -104,10 +136,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -625,8 +653,67 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "GT 3.5 V12 Quad Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 411,
+            "powerKwMax": 411,
+            "availablePowerKw": [
+              411
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.bugatti.com/api/en/press-releases/pdf/bugatti-eb110-vs-chiron-super-sports-and-hyper-sports-cars-compared"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "GT 3.5 V12 Quad Turbo",
+              "noteCs": "Vlastní technická tabulka BUGATTI EB110GT/SS v továrním PDF výslovně3.5litrovýV12,411/450kW. Nepřebírá chybných441kW ze sekundárního agregátoru, nepřepočítáváhp a přesné cm³ zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "EB110 GT / Super Sport",
+                "fromYear": 1991,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "SS 3.5 V12 Quad Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 450,
+            "powerKwMax": 450,
+            "availablePowerKw": [
+              450
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.bugatti.com/api/en/press-releases/pdf/bugatti-eb110-vs-chiron-super-sports-and-hyper-sports-cars-compared"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "SS 3.5 V12 Quad Turbo",
+              "noteCs": "Vlastní technická tabulka BUGATTI EB110GT/SS v továrním PDF výslovně3.5litrovýV12,411/450kW. Nepřebírá chybných441kW ze sekundárního agregátoru, nepřepočítáváhp a přesné cm³ zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "EB110 GT / Super Sport",
+                "fromYear": 1991,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -649,13 +736,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Bugatti_EB_110",
-          "https://newsroom.bugatti.com/en/press-releases/les-110-ans-de-bugatti"
+          "https://newsroom.bugatti.com/en/press-releases/les-110-ans-de-bugatti",
+          "https://newsroom.bugatti.com/api/en/press-releases/pdf/bugatti-eb110-vs-chiron-super-sports-and-hyper-sports-cars-compared"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Bugatti_EB_110",
-      "https://newsroom.bugatti.com/en/press-releases/les-110-ans-de-bugatti"
+      "https://newsroom.bugatti.com/en/press-releases/les-110-ans-de-bugatti",
+      "https://newsroom.bugatti.com/api/en/press-releases/pdf/bugatti-eb110-vs-chiron-super-sports-and-hyper-sports-cars-compared"
     ],
     "needsReview": [
       {
@@ -668,10 +757,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -725,6 +810,14 @@
       {
         "field": "scope",
         "reason": "Historie značky sjednocena pod současným katalogovým slugem, nikoli pod jednou právnickou osobou. Neúplné karosářské větve a technické verze."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []
@@ -3883,8 +3976,52 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "16.4 W16 Quad Turbo",
+            "fuel": "petrol",
+            "displacementCc": 7993,
+            "displacementLitresNominal": 8,
+            "powerKwMin": 736,
+            "powerKwMax": 736,
+            "availablePowerKw": [
+              736
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.bugatti.com/press-releases/final-bugatti-veyron-16-4-sold-to-a-customer-in-europe"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "16.4 – původní kupé",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "16.4 – původní kupé",
+                "source": "https://newsroom.bugatti.com/press-releases/final-bugatti-veyron-16-4-sold-to-a-customer-in-europe",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 7993,
+                  "cylinders": 16,
+                  "powerKw": 736,
+                  "torqueNm": 1250
+                },
+                "sha256": "0221130f6f5b7f9240c92bebfdd0d0d7ef9fabdf336dec8b12891829b8cb8e29"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Veyron – kupé a Grand Sport",
+                "fromYear": 2005,
+                "toYear": 2015,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3971,10 +4108,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

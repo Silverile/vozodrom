@@ -415,8 +415,38 @@
           "sedan",
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5",
+            "fuel": "petrol",
+            "displacementCc": 1498,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 63,
+            "powerKwMax": 63,
+            "availablePowerKw": [
+              63
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ashika.it/en/app/src-cod/?src=20-03-385"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5",
+              "noteCs": "Vlastní evropská aplikace ASHIKA výslovně FSO LANOS1.5,A15SM,Benzina1498cm³/63kW od2004. Nejde o automatické převzetí Daewoo nebo pozdější ZAZ Sens.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "T100",
+                "fromYear": 2005,
+                "toYear": 2008,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "fwd"
         ],
@@ -440,12 +470,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Daewoo_Lanos"
+          "https://en.wikipedia.org/wiki/Daewoo_Lanos",
+          "https://ashika.it/en/app/src-cod/?src=20-03-385"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Daewoo_Lanos"
+      "https://en.wikipedia.org/wiki/Daewoo_Lanos",
+      "https://ashika.it/en/app/src-cod/?src=20-03-385"
     ],
     "needsReview": [
       {
@@ -454,10 +486,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -678,8 +706,39 @@
           "hatchback",
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 i",
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 57,
+            "powerKwMax": 57,
+            "availablePowerKw": [
+              57
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ashika.it/fr/app/src-cod/?src=20-00-000"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 i",
+              "noteCs": "Vlastní ASHIKA FSO POLONEZIII1.6i AM585,Benzina1598cm³/57kW09/1992–03/2002; použita jen část období Caro předPlus1997. Nejde o starý PolonezI ani Truck.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Polonez Caro / Atu",
+                "fromYear": 1991,
+                "toYear": 1997,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "variantYears": "1992-2002"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -703,7 +762,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/FSO_Polonez"
+          "https://en.wikipedia.org/wiki/FSO_Polonez",
+          "https://ashika.it/fr/app/src-cod/?src=20-00-000"
         ]
       },
       {
@@ -718,8 +778,39 @@
           "sedan",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 i",
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 57,
+            "powerKwMax": 57,
+            "availablePowerKw": [
+              57
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ashika.it/fr/app/src-cod/?src=20-00-000"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 i",
+              "noteCs": "Vlastní ASHIKA FSO POLONEZIII1.6i AM585,Benzina1598cm³/57kW09/1992–03/2002; zde jen část období Plus od1997. Výkon64kW ani jiné řízení vstřikování se nedoplňuje bez vlastní specifikace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Polonez Plus / Atu Plus / Kombi",
+                "fromYear": 1997,
+                "toYear": 2002,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "variantYears": "1992-2002"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -743,7 +834,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/FSO_Polonez"
+          "https://en.wikipedia.org/wiki/FSO_Polonez",
+          "https://ashika.it/fr/app/src-cod/?src=20-00-000"
         ]
       },
       {
@@ -757,8 +849,39 @@
           "pickup",
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Truck 1.6 i",
+            "fuel": "petrol",
+            "displacementCc": 1598,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 57,
+            "powerKwMax": 57,
+            "availablePowerKw": [
+              57
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://japanparts.it/es/app/src-cod/?src=FA-000S"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Truck 1.6 i",
+              "noteCs": "Vlastní samostatný řádek výrobceJapanparts FSO POLONEZ Pick-up1.6i04/1994–09/1998:benzin1598cm³/57kW. Nejde o odvození z hatchbackuCaro; přesné měsíce jsou zachovány v poznámce.",
+              "generationEvidence": {
+                "method": "row-years",
+                "anchor": "Polonez Truck – užitková větev",
+                "fromYear": null,
+                "toYear": null,
+                "generationIndex": 3,
+                "rowFromYear": 1994,
+                "rowToYear": 1998
+              },
+              "variantYears": "1994-1998"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -782,12 +905,15 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/FSO_Polonez"
+          "https://en.wikipedia.org/wiki/FSO_Polonez",
+          "https://japanparts.it/es/app/src-cod/?src=FA-000S"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/FSO_Polonez"
+      "https://en.wikipedia.org/wiki/FSO_Polonez",
+      "https://ashika.it/fr/app/src-cod/?src=20-00-000",
+      "https://japanparts.it/es/app/src-cod/?src=FA-000S"
     ],
     "needsReview": [
       {
@@ -855,10 +981,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -911,10 +1033,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].transmissions",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -964,10 +1082,6 @@
       },
       {
         "field": "generations[3].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[3].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

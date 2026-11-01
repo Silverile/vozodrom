@@ -1,0 +1,22 @@
+[
+  {
+    "command": "node analysis/codex/rare-engines-pass/batch-6/validate.mjs",
+    "result": "PASS: 511 baseline files, 4753 cards, 46 generations / 59 rows; non-engine facts unchanged except exact Brabus trim relocation; 128 consolidated deferrals; European queue empty."
+  },
+  {
+    "command": "node analysis/codex/rare-engines-pass/batch-6/run-engine-audit.mjs",
+    "result": "PASS: 12686 public engine rows, zero malformed names, duplicates or import evidence errors."
+  },
+  {
+    "command": "node analysis/codex/test-engine-throughput.mjs",
+    "result": "PASS: 8 name, 2 deduplication, 2 market, 3 evidence and 7 presentation cases."
+  },
+  {
+    "command": "npm run typecheck -- --incremental false",
+    "result": "PASS: tsc --noEmit, exit 0."
+  },
+  {
+    "command": "git -c core.safecrlf=false diff --check -- src/data analysis/codex/rare-engines-pass",
+    "result": "PASS, exit 0."
+  }
+]

@@ -2710,8 +2710,67 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V8 Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": 162,
+            "powerKwMax": 162,
+            "availablePowerKw": [
+              162
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V8 Turbo",
+              "noteCs": "Vlastní samostatná aplikační tabulka BRISTOL BEAUFIGHTER,5.9 162/168kW1982–1991. Údaje412 či Beaufort nejsou převzaty, přesné cm³ nejsou doplněny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Beaufighter",
+                "fromYear": 1980,
+                "toYear": 1993,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5.9 V8 Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": 168,
+            "powerKwMax": 168,
+            "availablePowerKw": [
+              168
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V8 Turbo",
+              "noteCs": "Vlastní samostatná aplikační tabulka BRISTOL BEAUFIGHTER,5.9 162/168kW1982–1991. Údaje412 či Beaufort nejsou převzaty, přesné cm³ nejsou doplněny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Beaufighter",
+                "fromYear": 1980,
+                "toYear": 1993,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2736,13 +2795,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Bristol_412",
-          "https://www.boc.net/cars/chrysler-engine"
+          "https://www.boc.net/cars/chrysler-engine",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Bristol_412",
-      "https://www.boc.net/cars/chrysler-engine"
+      "https://www.boc.net/cars/chrysler-engine",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
     ],
     "needsReview": [
       {
@@ -2755,10 +2816,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2808,6 +2865,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2950,8 +3015,36 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 Chrysler V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/blenheim"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 Chrysler V8",
+              "noteCs": "Vlastní historie Bristol výslovně rozlišuje Blenheim1993 a Blenheim2 1998 a popisuje5.9litrový vstřikovanýV8. Přesné cm³ a výkon nejsou přeneseny z Blenheim3 ani dárcovského Chrysleru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Blenheim 1",
+                "fromYear": 1993,
+                "toYear": 1997,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2990,8 +3083,36 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 Chrysler V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/blenheim"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 Chrysler V8",
+              "noteCs": "Vlastní historie Bristol výslovně rozlišuje Blenheim1993 a Blenheim2 1998 a popisuje5.9litrový vstřikovanýV8. Přesné cm³ a výkon nejsou přeneseny z Blenheim3 ani dárcovského Chrysleru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Blenheim 2",
+                "fromYear": 1998,
+                "toYear": 1999,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3029,8 +3150,50 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Blenheim 3",
+            "fuel": "petrol",
+            "displacementCc": 5900,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/blenheim"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Blenheim 3 – tovární specifikace 2002",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Blenheim 3 – tovární specifikace 2002",
+                "source": "https://bristol-cars.co.uk/heritage/blenheim",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 5900,
+                  "cylinders": 8,
+                  "powerKw": null,
+                  "torqueNm": null
+                },
+                "sha256": "5347cc4247b682d6926d22f10913ac918c4db5ff228761ec05d020f8607e9119"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Blenheim 3 / 3S / 3G",
+                "fromYear": 1999,
+                "toYear": 2011,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tovární údaje reprodukované současným držitelem značky. Délka a hmotnost se ve starých stránkách rozcházejí; výkon výrobce nepublikoval. Zrychlení 0–60 mph není 0–100 km/h."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3124,10 +3287,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -3184,10 +3343,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -3241,10 +3396,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3342,6 +3493,38 @@
       {
         "field": "generations[2].dimensionsMm.length",
         "reason": "Výrobce sám uváděl vzájemně rozporné délky; rovněž různé pohotovostní hmotnosti. Zachovány null."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3364,8 +3547,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 Chrysler V8",
+            "fuel": "petrol",
+            "displacementCc": 5900,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/blenheim-speedster"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 Chrysler V8",
+              "noteCs": "Vlastní tovární specifikace otevřeného BlenheimSpeedster2003 uvádí5900cm³V8. Nejde o původní prototyp s dvoulitrovým motorem ani o Bullet2016; výkon není odvozen zbhp.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Blenheim Speedster",
+                "fromYear": 2003,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3414,10 +3625,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -3471,6 +3678,14 @@
       {
         "field": "generations[0].productionStatus",
         "reason": "Malosériový otevřený Speedster na základě Blenheim 3. Archivovaná tovární tabulka 2010 uvádí 2003-current; přesný konec neověřen. Nezaměňovat s Bristol Bullet 2016."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3493,8 +3708,36 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V8 Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/603"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V8 Turbo",
+              "noteCs": "Vlastní historie výrobce výslovně odděluje turbocharged Brigand od atmosférického Britannia a uvádí5.9litrovýChryslerV8. Přesné cm³ a kW nejsou dopočítány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "603 S3",
+                "fromYear": 1982,
+                "toYear": 1994,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3520,7 +3763,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Bristol_603",
           "https://www.boc.net/cars/chrysler-engine",
-          "https://bristolownersht.com/the-cars/"
+          "https://bristolownersht.com/the-cars/",
+          "https://bristol-cars.co.uk/heritage/603"
         ],
         "dateBasis": "production"
       }
@@ -3528,7 +3772,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Bristol_603",
       "https://www.boc.net/cars/chrysler-engine",
-      "https://bristolownersht.com/the-cars/"
+      "https://bristolownersht.com/the-cars/",
+      "https://bristol-cars.co.uk/heritage/603"
     ],
     "needsReview": [
       {
@@ -3537,10 +3782,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -3590,6 +3831,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3612,8 +3865,36 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 Chrysler V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/603"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 Chrysler V8",
+              "noteCs": "Vlastní Bristol603/Britannia/Brigand:5.9litrovýV8, turbo je výslovně jenBrigand. Nejde o starší603E5.2 ani o Blenheim; přesné cm³ a výkon nejsou přeneseny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "603 S3",
+                "fromYear": 1982,
+                "toYear": 1994,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3639,7 +3920,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Bristol_603",
           "https://www.boc.net/cars/chrysler-engine",
-          "https://bristolownersht.com/the-cars/"
+          "https://bristolownersht.com/the-cars/",
+          "https://bristol-cars.co.uk/heritage/603"
         ],
         "dateBasis": "production"
       }
@@ -3647,7 +3929,8 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Bristol_603",
       "https://www.boc.net/cars/chrysler-engine",
-      "https://bristolownersht.com/the-cars/"
+      "https://bristolownersht.com/the-cars/",
+      "https://bristol-cars.co.uk/heritage/603"
     ],
     "needsReview": [
       {
@@ -3656,10 +3939,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -3709,6 +3988,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3731,8 +4022,36 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "8.0 V10",
+            "fuel": "petrol",
+            "displacementCc": 7996,
+            "displacementLitresNominal": 8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bristol-cars.co.uk/heritage/fighter"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "8.0 V10",
+              "noteCs": "Vlastní historie původního Fighter2004–2011 uvádí7996cm³ a8litrovýV10;525bhp se nepřepočítává. Nová série2026 ani oznámená verzeFighterT nejsou přeneseny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Fighter – původní výroba",
+                "fromYear": 2004,
+                "toYear": 2011,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3756,12 +4075,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Bristol_Fighter_(automobile)"
+          "https://en.wikipedia.org/wiki/Bristol_Fighter_(automobile)",
+          "https://bristol-cars.co.uk/heritage/fighter"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Bristol_Fighter_(automobile)"
+      "https://en.wikipedia.org/wiki/Bristol_Fighter_(automobile)",
+      "https://bristol-cars.co.uk/heritage/fighter"
     ],
     "needsReview": [
       {
@@ -3774,10 +4095,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3827,6 +4144,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

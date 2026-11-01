@@ -18,8 +18,40 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "Karma Range Extender",
+            "fuel": "petrol-phev",
+            "displacementCc": 1998,
+            "displacementLitresNominal": null,
+            "powerKwMin": 300,
+            "powerKwMax": 300,
+            "availablePowerKw": [
+              300
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://pubdb.bfe.admin.ch/de/publication/download/7301"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Karma Range Extender",
+              "noteCs": "Švýcarský úřední Verbrauchskatalog2014,tabulkaFISKER KARMA Standard/Sport/Chic,uvádí1998cm³ a300kW. Jde o evropskou plug-in/RangeExtender rodinu; výbavy nejsou samostatné motory, americká brožura není přenesena.191kW generátoru ani dva trakční motory nejsou přičítány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Karma – původní Fisker Automotive",
+                "fromYear": 2011,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -186,7 +218,8 @@
         "sources": [
           "https://ieahev.org/wp-content/uploads/2024/09/2011_HEVTCP-annual_report.pdf",
           "https://www.valmet-automotive.com/media/valmet-automotive-to-disassemble-fisker-karma-production-facilities/",
-          "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf"
+          "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf",
+          "https://pubdb.bfe.admin.ch/de/publication/download/7301"
         ]
       }
     ],
@@ -195,7 +228,8 @@
       "https://www.valmet-automotive.com/media/valmet-automotive-to-disassemble-fisker-karma-production-facilities/",
       "https://www.auto-brochures.com/makes/Fisker/Fisker_US%20Karma_2012.pdf",
       "https://www.manualslib.com/manual/748967/Fisker-Karma-2012.html",
-      "https://cleancities.energy.gov/files/u/projects_and_partnerships/project_material/supporting_material/255/drive-electric-florida-part-i.pdf?3cdbd8f9b5="
+      "https://cleancities.energy.gov/files/u/projects_and_partnerships/project_material/supporting_material/255/drive-electric-florida-part-i.pdf?3cdbd8f9b5=",
+      "https://pubdb.bfe.admin.ch/de/publication/download/7301"
     ],
     "needsReview": [
       {
@@ -204,10 +238,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -361,6 +391,10 @@
       {
         "field": "generations[0].trims[2].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   }

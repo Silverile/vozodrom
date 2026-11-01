@@ -25,8 +25,185 @@
           }
         ],
         "bodyTypes": [],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Birò EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Lithium Re-Move",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Lithium Re-Move",
+                "source": "https://www.biro.nl/wp-content/uploads/2018/09/use_and_maintenance_manual_03.01_22_06_2016_eng_lr.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 4,
+                  "powerStandard": "Manufacturer published total/maximum electric output",
+                  "torqueNm": null
+                },
+                "sha256": "3fb481914189f48a558237259e12638617d1b5830c87ca7fe235e38fe937a26d"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Birò",
+                "fromYear": 2009,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Návod 03.01 z22.6.2016. Hmotnosti se nepřenášejí mezi výměnným a pevným akumulátorem."
+            }
+          },
+          {
+            "variant": "Birò Bolt EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 3.8,
+            "powerKwMax": 3.8,
+            "availablePowerKw": [
+              3.8
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Bolt — dobový technický list",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Bolt — dobový technický list",
+                "source": "https://birocars.co.uk/wp-content/uploads/2020/07/Biro%CC%80-Bolt_ENG.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 3.8,
+                  "powerStandard": "Manufacturer published total/maximum electric output",
+                  "torqueNm": null
+                },
+                "sha256": "67f1ccb68339b509b04202a91098cca04f2e357437074e60bff72a4a29398a44"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Birò",
+                "fromYear": 2009,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "List uvádí odhadovaný dojezd90km, proto není uložen jako ověřený cyklus. Rozměry jsou chybně označeny cm místo zřejmě zamýšlených mm; bez dalšího potvrzení zůstávají null. Datum konkrétní specifikace není ověřeno."
+            }
+          },
+          {
+            "variant": "Birò 45 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 3.9,
+            "powerKwMax": 3.9,
+            "availablePowerKw": [
+              3.9
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Small Flat 45 Maxi",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Small Flat 45 Maxi",
+                "source": "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 3.9,
+                  "powerStandard": "Manufacturer published total/maximum electric output",
+                  "torqueNm": null
+                },
+                "sha256": "27482e675ba6aaf6f50bb6a47a2ca8eda1c052c981002364e4338d17a0b7c217"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Birò",
+                "fromYear": 2009,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "B2211; dvě zadní nábojové elektrické jednotky. Publikovaný moment311/380,5Nm není jednoznačně popsán jako systémový či moment na kole, proto torqueNm null. Spotřeba má nejednotný popis testu Euro4/Euro5 mezi materiály, proto consumptionKwh100 null."
+            }
+          },
+          {
+            "variant": "Birò 60 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 5.5,
+            "powerKwMax": 5.5,
+            "availablePowerKw": [
+              5.5
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Small Flat 60 Maxi",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Small Flat 60 Maxi",
+                "source": "https://biro.be/wp-content/uploads/2024/04/Biro-Leaflet.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 5.5,
+                  "powerStandard": "Manufacturer published total/maximum electric output",
+                  "torqueNm": null
+                },
+                "sha256": "bd54aa868e6ddce7f60c0b24af335bbcdcad5e56cda8d9e394de77f91025b0e0"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Birò",
+                "fromYear": 2009,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "B2211; dvě zadní nábojové elektrické jednotky. Publikovaný moment311/380,5Nm není jednoznačně popsán jako systémový či moment na kole, proto torqueNm null. Spotřeba má nejednotný popis testu Euro4/Euro5 mezi materiály, proto consumptionKwh100 null."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {

@@ -18,8 +18,93 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "594 cm³",
+            "fuel": "petrol",
+            "displacementCc": 594,
+            "displacementLitresNominal": null,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_126"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "126p594cm³ 4MT – přesné období verze neověřeno",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "126p594cm³ 4MT – přesné období verze neověřeno",
+                "source": "https://en.wikipedia.org/wiki/Fiat_126",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 594,
+                  "cylinders": 2,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "7b887e18e39e8458c996565afd0d2c9f7e147c6620acbe4b6d804c38bb4fbf24"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "126p – období výrobceFSM",
+                "fromYear": 1973,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          },
+          {
+            "variant": "652 cm³",
+            "fuel": "petrol",
+            "displacementCc": 652,
+            "displacementLitresNominal": null,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_126"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "126p652cm³ 4MT – přesné období verze neověřeno",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "126p652cm³ 4MT – přesné období verze neověřeno",
+                "source": "https://en.wikipedia.org/wiki/Fiat_126",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 652,
+                  "cylinders": 2,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "37fefcb63a934278e3aaf1d780ce33e8ba36217e55839f72797c937e35c74bcc"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "126p – období výrobceFSM",
+                "fromYear": 1973,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -145,8 +230,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "BIS 704 cm³",
+            "fuel": "petrol",
+            "displacementCc": 704,
+            "displacementLitresNominal": null,
+            "powerKwMin": 19,
+            "powerKwMax": 19,
+            "availablePowerKw": [
+              19
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_126"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "126BIS704cm³ 19kW 4MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "126BIS704cm³ 19kW 4MT",
+                "source": "https://en.wikipedia.org/wiki/Fiat_126",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 704,
+                  "cylinders": 2,
+                  "powerKw": 19,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "de56f2d137d611085edf22fb1c0cca742b93cf5f32fa64a021a1b67104483073"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "126 BIS",
+                "fromYear": 1987,
+                "toYear": 1991,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -231,7 +361,6 @@
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Fabryka_Samochod%C3%B3w_Ma%C5%82olitra%C5%BCowych",
-          "https://en.wikipedia.org/wiki/Fiat_126",
           "https://en.wikipedia.org/wiki/Fiat_126"
         ]
       }
@@ -252,10 +381,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -304,10 +429,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -581,6 +702,34 @@
       {
         "field": "generations[0].trims[1].engine.powerKw",
         "reason": "Článek uvádí17i18kW v odlišných částech; výkon652cm³ není zvolen odhadem."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -721,8 +870,97 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "704 cm³ bez katalyzátoru",
+            "fuel": "petrol",
+            "displacementCc": 704,
+            "displacementLitresNominal": null,
+            "powerKwMin": 23,
+            "powerKwMax": 23,
+            "availablePowerKw": [
+              23
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Cinquecento"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Cinquecento704cm³ bezkatalyzátoru",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Cinquecento704cm³ bezkatalyzátoru",
+                "source": "https://en.wikipedia.org/wiki/Fiat_Cinquecento",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 704,
+                  "cylinders": 2,
+                  "powerKw": 23,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "9a45d0c951ae8a5a2defdd316fe4a749bbaab9b212fb1f5d89ac9f9445c52c06"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Cinquecento – obdobíFSM",
+                "fromYear": 1991,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          },
+          {
+            "variant": "903 cm³",
+            "fuel": "petrol",
+            "displacementCc": 903,
+            "displacementLitresNominal": null,
+            "powerKwMin": 29,
+            "powerKwMax": 29,
+            "availablePowerKw": [
+              29
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fiat_Cinquecento"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Cinquecento903cm³",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Cinquecento903cm³",
+                "source": "https://en.wikipedia.org/wiki/Fiat_Cinquecento",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 903,
+                  "cylinders": 4,
+                  "powerKw": 29,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "c4360447dc9ca62fc5119e1d59c71fc6a21c83ae42ed6d61ac2bf6c30879c21d"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Cinquecento – obdobíFSM",
+                "fromYear": 1991,
+                "toYear": 1992,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vybraná doložená technická verze; neúplný seznam výbav a motorizací."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "fwd"
         ],
@@ -853,10 +1091,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1062,6 +1296,14 @@
       {
         "field": "generations[0].trims[1].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

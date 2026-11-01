@@ -966,8 +966,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Kohler 480 Diesel",
+            "fuel": "diesel",
+            "displacementCc": 480,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://casalini.es/gransport/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "550 GranSport Kohler480 – španělská specifikaceEuro5",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "550 GranSport Kohler480 – španělská specifikaceEuro5",
+                "source": "https://casalini.es/gransport/",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 480,
+                  "cylinders": null,
+                  "powerKw": 6,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "bccd0d4dc8e57bfcaba7f969f4cce390e4990ef3dadec3215b16b74be8fadcac"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "M20 / 550 – doložená rodina",
+                "fromYear": 2018,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Původní údaj698kg je masa total, nikoli doložená pohotovostní hmotnost; massKg zůstávánull. Zrychlení7,1s je0–40km/h, proto není vloženo do0–100. CVT nemá odhadnutý počet stupňů. Zavazadelník410/910l bez jednoznačně určené konfigurace zůstává na úrovni generace null."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1107,10 +1152,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1197,6 +1238,10 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

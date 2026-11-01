@@ -18,8 +18,53 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Life EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 57,
+            "powerKwMax": 57,
+            "availablePowerKw": [
+              57
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mezger.de/wp-content/uploads/2020/02/ego_life_produktinformationen_de_01_2020.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Life60 — leden2020",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Life60 — leden2020",
+                "source": "https://www.mezger.de/wp-content/uploads/2020/02/ego_life_produktinformationen_de_01_2020.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 57,
+                  "powerStandard": "Manufacturer peak electric output; continuous29kW",
+                  "torqueNm": null
+                },
+                "sha256": "6fa7e1c57a9f9ba9640e4af0a75f1333ee747470c2c910e593cbcaf618922853"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Life / Life Next",
+                "fromYear": 2019,
+                "toYear": 2024,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "29 kW trvalý a57 kW špičkový výkon. Zrychlení zdroj uvádí pouze0–50km/h4,7s, nikoli0–100. Life20/40 v tomto letáku ještě čekají na homologaci; nejsou doplněny z předběžných výpočtů. Netto akumulátor 21.5kWh."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -283,10 +328,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

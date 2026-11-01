@@ -552,8 +552,52 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0",
+            "fuel": "petrol",
+            "displacementCc": 1999,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 90,
+            "powerKwMax": 90,
+            "availablePowerKw": [
+              90
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/brilliance/bs6/1generation/209320/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "2.0 Deluxe 5MT – Německo",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "2.0 Deluxe 5MT – Německo",
+                "source": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/brilliance/bs6/1generation/209320/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1999,
+                  "cylinders": 4,
+                  "powerKw": 90,
+                  "torqueNm": 170
+                },
+                "sha256": "0ef9125be86a1f8eca739d880ca5017421fefb3eb6631067900d93796de7c7a7"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Zhonghua / Zunchi / BS6 / M1",
+                "fromYear": 2002,
+                "toYear": 2016,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Německá nabídka 01/2007–02/2010; nikoli celosvětové výrobní období. Výška 1430 mm pouze pro tento záznam."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -620,7 +664,8 @@
           }
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Brilliance_BS6"
+          "https://en.wikipedia.org/wiki/Brilliance_BS6",
+          "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/brilliance/bs6/1generation/209320/"
         ]
       }
     ],
@@ -647,10 +692,6 @@
       },
       {
         "field": "generations[0].facelift[2].productionYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
