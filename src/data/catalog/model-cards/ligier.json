@@ -298,8 +298,67 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "DCI 492 Révolution",
+            "fuel": "diesel",
+            "displacementCc": 480,
+            "displacementLitresNominal": null,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-IXO-REVOLUTION-ET-PROGRESS.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "DCI 492 Révolution",
+              "noteCs": "Vlastní návod IXO březen2013,REF1404428,PDF100:DCI492 Révolution480cm³,oba motory4kW a gazole. Progress je zde uveden jako500cm³, zatímco vlastní návod JSRC uvádí505cm³; přesný objemProgress proto zůstává prázdný, bez přenosu z jiné rodiny. DřívějšíDCI440 nebyl přidán bez vlastního zdroje.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Ixo",
+                "fromYear": 2010,
+                "toYear": 2014,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Progress 0.5 Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-IXO-REVOLUTION-ET-PROGRESS.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Progress 0.5 Diesel",
+              "noteCs": "Vlastní návod IXO březen2013,REF1404428,PDF100:DCI492 Révolution480cm³,oba motory4kW a gazole. Progress je zde uveden jako500cm³, zatímco vlastní návod JSRC uvádí505cm³; přesný objemProgress proto zůstává prázdný, bez přenosu z jiné rodiny. DřívějšíDCI440 nebyl přidán bez vlastního zdroje.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Ixo",
+                "fromYear": 2010,
+                "toYear": 2014,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -338,13 +397,15 @@
         "trims": null,
         "sources": [
           "https://fr.wikipedia.org/wiki/Ligier",
-          "https://ligier.pl/historia/"
+          "https://ligier.pl/historia/",
+          "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-IXO-REVOLUTION-ET-PROGRESS.pdf"
         ]
       }
     ],
     "sources": [
       "https://fr.wikipedia.org/wiki/Ligier",
-      "https://ligier.pl/historia/"
+      "https://ligier.pl/historia/",
+      "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-IXO-REVOLUTION-ET-PROGRESS.pdf"
     ],
     "needsReview": [
       {
@@ -361,10 +422,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -414,6 +471,14 @@
       {
         "field": "scope",
         "reason": "Částečné zpracování: rok uvedení není automaticky počátkem výroby; null konec neznamená pokračující výrobu. Historické podvarianty a kompletní motorizace chybí."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -436,8 +501,67 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Révolution DCI 492",
+            "fuel": "diesel",
+            "displacementCc": 480,
+            "displacementLitresNominal": null,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTITLISATION-ET-ENTRETIEN-JSRC.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Révolution DCI 492",
+              "noteCs": "Vlastní návod LigierJSRC leden2013, REF1405237, technická tabulka/PDF100:RévolutionDCI492 má480cm³, Progress505cm³, oba4kW a gazole. Číslo492 není objemcm³; starší DCI440 se nepřenáší.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "JS RC",
+                "fromYear": 2012,
+                "toYear": 2016,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Progress",
+            "fuel": "diesel",
+            "displacementCc": 505,
+            "displacementLitresNominal": null,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTITLISATION-ET-ENTRETIEN-JSRC.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Progress",
+              "noteCs": "Vlastní návod LigierJSRC leden2013, REF1405237, technická tabulka/PDF100:RévolutionDCI492 má480cm³, Progress505cm³, oba4kW a gazole. Číslo492 není objemcm³; starší DCI440 se nepřenáší.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "JS RC",
+                "fromYear": 2012,
+                "toYear": 2016,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -459,12 +583,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://fr.wikipedia.org/wiki/Ligier"
+          "https://fr.wikipedia.org/wiki/Ligier",
+          "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTITLISATION-ET-ENTRETIEN-JSRC.pdf"
         ]
       }
     ],
     "sources": [
-      "https://fr.wikipedia.org/wiki/Ligier"
+      "https://fr.wikipedia.org/wiki/Ligier",
+      "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTITLISATION-ET-ENTRETIEN-JSRC.pdf"
     ],
     "needsReview": [
       {
@@ -477,10 +603,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -534,6 +656,14 @@
       {
         "field": "scope",
         "reason": "Částečné zpracování: rok uvedení není automaticky počátkem výroby; null konec neznamená pokračující výrobu. Historické podvarianty a kompletní motorizace chybí."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2659,8 +2789,38 @@
         "productionStatus": "ended",
         "facelift": [],
         "bodyTypes": [],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "0.5 Diesel",
+            "fuel": "diesel",
+            "displacementCc": 505,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-ET-ENTRETIEN-X-TOO-1.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "0.5 Diesel",
+              "noteCs": "Vlastní návod Ligier X-Too září2004, REF08.3.638, tištěnástrana31/PDF83:505cm³,4kW,gazole. Nepřenáší novější DCI440 ani motor jiné rodinyLigier.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "X-Too / Max / R / S",
+                "fromYear": 2004,
+                "toYear": 2010,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -2684,7 +2844,8 @@
         "sources": [
           "https://fr.wikipedia.org/wiki/Ligier",
           "https://ligier.pl/historia/",
-          "https://www.franswolters.nl/brommobielen/historie/"
+          "https://www.franswolters.nl/brommobielen/historie/",
+          "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-ET-ENTRETIEN-X-TOO-1.pdf"
         ],
         "equipmentLines": [],
         "specificationReferences": [
@@ -2735,7 +2896,8 @@
     "sources": [
       "https://fr.wikipedia.org/wiki/Ligier",
       "https://ligier.pl/historia/",
-      "https://www.franswolters.nl/brommobielen/historie/"
+      "https://www.franswolters.nl/brommobielen/historie/",
+      "https://www.caen-sud.com/wp-content/uploads/2022/08/MANUEL-UTILISATION-ET-ENTRETIEN-X-TOO-1.pdf"
     ],
     "needsReview": [
       {
@@ -2752,10 +2914,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2824,10 +2982,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

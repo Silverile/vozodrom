@@ -436,8 +436,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "6.5 V12",
+            "fuel": "petrol",
+            "displacementCc": 6498,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": 566,
+            "powerKwMax": 566,
+            "availablePowerKw": [
+              566
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/masterpieces/centenario"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "6.5 V12",
+              "noteCs": "Vlastní silniční Centenario výrobce, 6498 cm³ a 566 kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Centenario",
+                "fromYear": 2016,
+                "toYear": 2017,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -478,13 +508,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lamborghini_Centenario",
-          "https://www.lamborghini.com/en-en/history"
+          "https://www.lamborghini.com/en-en/history",
+          "https://www.lamborghini.com/en-en/masterpieces/centenario"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lamborghini_Centenario",
-      "https://www.lamborghini.com/en-en/history"
+      "https://www.lamborghini.com/en-en/history",
+      "https://www.lamborghini.com/en-en/masterpieces/centenario"
     ],
     "needsReview": [
       {
@@ -497,10 +529,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -568,8 +596,90 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LP400 4.0 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/history/countach"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LP400 4.0 V12",
+              "noteCs": "Vlastní historie výrobce výslovně rozlišuje4.0/4.8/5.2. Zdroj uvádíCV, nikoli kW; přesné cm³ ani výkon nejsou odvozeny. Nový LPI800-4 patří do jiné generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Original Countach",
+                "fromYear": 1974,
+                "toYear": 1990,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "5000 S 4.8 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.8,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/history/countach"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5000 S 4.8 V12",
+              "noteCs": "Vlastní historie výrobce výslovně rozlišuje4.0/4.8/5.2. Zdroj uvádíCV, nikoli kW; přesné cm³ ani výkon nejsou odvozeny. Nový LPI800-4 patří do jiné generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Original Countach",
+                "fromYear": 1974,
+                "toYear": 1990,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Quattrovalvole 5.2 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/history/countach"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Quattrovalvole 5.2 V12",
+              "noteCs": "Vlastní historie výrobce výslovně rozlišuje4.0/4.8/5.2. Zdroj uvádíCV, nikoli kW; přesné cm³ ani výkon nejsou odvozeny. Nový LPI800-4 patří do jiné generace.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Original Countach",
+                "fromYear": 1974,
+                "toYear": 1990,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -610,7 +720,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lamborghini_Countach",
-          "https://www.lamborghini.com/en-en/history"
+          "https://www.lamborghini.com/en-en/history",
+          "https://www.lamborghini.com/en-en/history/countach"
         ],
         "dateBasis": "production"
       },
@@ -624,8 +735,40 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LPI 800-4 6.5 V12 Hybrid",
+            "fuel": "petrol-mhev",
+            "displacementCc": 6498,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": 599,
+            "powerKwMax": 599,
+            "availablePowerKw": [
+              599
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/models/few-off/countach-lpi-800-4"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LPI 800-4 6.5 V12 Hybrid",
+              "noteCs": "Výrobce výslovně uvádí kombinovaných 599 kW, nikoli 574 kW samotného V12. Superkondenzátorový mild hybrid, nejde o původní Countach.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LPI800-4",
+                "fromYear": 2021,
+                "toYear": 2022,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -663,14 +806,17 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lamborghini_Countach_LPI_800-4"
+          "https://en.wikipedia.org/wiki/Lamborghini_Countach_LPI_800-4",
+          "https://www.lamborghini.com/en-en/models/few-off/countach-lpi-800-4"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lamborghini_Countach",
       "https://www.lamborghini.com/en-en/history",
-      "https://en.wikipedia.org/wiki/Lamborghini_Countach_LPI_800-4"
+      "https://en.wikipedia.org/wiki/Lamborghini_Countach_LPI_800-4",
+      "https://www.lamborghini.com/en-en/models/few-off/countach-lpi-800-4",
+      "https://www.lamborghini.com/en-en/history/countach"
     ],
     "needsReview": [
       {
@@ -687,10 +833,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -746,10 +888,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -792,6 +930,42 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2312,8 +2486,36 @@
           "suv",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.2 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/history/lm-002"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.2 V12",
+              "noteCs": "Vlastní historie LM002 výslovně potvrzuje5.2 V12, upravený pro tento vůz. Výkon a přesné cm³ nepřebírá z Countach; prototyp Cheetah/LM001 není zahrnut.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "LM002",
+                "fromYear": 1986,
+                "toYear": 1993,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2354,13 +2556,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lamborghini_LM002",
-          "https://www.lamborghini.com/en-en/history"
+          "https://www.lamborghini.com/en-en/history",
+          "https://www.lamborghini.com/en-en/history/lm-002"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lamborghini_LM002",
-      "https://www.lamborghini.com/en-en/history"
+      "https://www.lamborghini.com/en-en/history",
+      "https://www.lamborghini.com/en-en/history/lm-002"
     ],
     "needsReview": [
       {
@@ -2373,10 +2577,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2422,6 +2622,18 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2892,8 +3104,53 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "6.5 V12 HPEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 6498.5,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": 747,
+            "powerKwMax": 747,
+            "availablePowerKw": [
+              747
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/models/revuelto-models/revuelto"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "V12 HPEV / 8DCT",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "V12 HPEV / 8DCT",
+                "source": "https://www.lamborghini.com/en-en/models/revuelto-models/revuelto",
+                "engine": {
+                  "fuel": "petrol-phev",
+                  "displacementCc": 6498.5,
+                  "cylinders": 12,
+                  "powerKw": 747,
+                  "powerStandard": "combined ICE+electric",
+                  "torqueNm": null
+                },
+                "sha256": "84d27b0aa128f166a70dd6701d82c4b7e98299598561e24fdd3079f449712df2"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Revuelto",
+                "fromYear": 2023,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Přesný objem6498.5cm³ je přímo publikovaný, nikoli dopočítaný. Systémový výkon747kW. Nejvyšší rychlost přes350km/h není přesná rovnost; torque null, protože není doložen kombinovaný moment. Šířka bez zrcátek; hmotnost suchá. Brožura2026 potvrzuje8stupňovéE-DCT, ale má jiné váženéWLTP hodnoty15.0l/100km a4.7kWh/100km; řádek zůstává výslovně specifikací brožury2024, ne aktuálním údajem2026. StaršíPDF bylo dostupné v indexovaném výřezu výrobce, přímý odkaz nyní přesměrovává."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3016,10 +3273,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -3105,8 +3358,40 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "6.5 V12 Hybrid",
+            "fuel": "petrol-mhev",
+            "displacementCc": 6498,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": 602,
+            "powerKwMax": 602,
+            "availablePowerKw": [
+              602
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/de-en/modelle/few-off/sian-fkp-37"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "6.5 V12 Hybrid",
+              "noteCs": "Vlastní technická specifikace Sián FKP37: soustava 602 kW se superkondenzátorem, ne výkon samotného V12 ani součet odvozený z komponent.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Sián FKP 37",
+                "fromYear": 2020,
+                "toYear": 2022,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3131,13 +3416,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lamborghini_Sián_FKP_37",
-          "https://www.lamborghini.com/en-en/history"
+          "https://www.lamborghini.com/en-en/history",
+          "https://www.lamborghini.com/de-en/modelle/few-off/sian-fkp-37"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lamborghini_Sián_FKP_37",
-      "https://www.lamborghini.com/en-en/history"
+      "https://www.lamborghini.com/en-en/history",
+      "https://www.lamborghini.com/de-en/modelle/few-off/sian-fkp-37"
     ],
     "needsReview": [
       {
@@ -3150,10 +3437,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3357,8 +3640,40 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "engines": [
+          {
+            "variant": "4.0 V8 HPEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 3995.2,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 677,
+            "powerKwMax": 677,
+            "availablePowerKw": [
+              677
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.lamborghini.com/en-en/models/temerario-models/temerario"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "4.0 V8 HPEV",
+              "noteCs": "Výrobce výslovně uvádí 3995.2 cm³ a kombinovaných ICE+EE 677 kW. Nikoli 588 kW pouze spalovacího motoru.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Temerario",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3447,7 +3762,8 @@
           "https://www.lamborghini.com/en-en/history",
           "https://www.lamborghini.com/en-en/models/temerario",
           "https://www.audi.com/en/automobili-lamborghini-spa-5567/profile-of-lamborghini-14562",
-          "https://www.lamborghini.com/company"
+          "https://www.lamborghini.com/company",
+          "https://www.lamborghini.com/en-en/models/temerario-models/temerario"
         ]
       }
     ],
@@ -3457,7 +3773,8 @@
       "https://www.lamborghini.com/en-en/models/temerario",
       "https://www.lamborghini.com/es-en/noticias/lamborghini-temerario-authentic-fuoriclasse",
       "https://www.audi.com/en/automobili-lamborghini-spa-5567/profile-of-lamborghini-14562",
-      "https://www.lamborghini.com/company"
+      "https://www.lamborghini.com/company",
+      "https://www.lamborghini.com/en-en/models/temerario-models/temerario"
     ],
     "needsReview": [
       {
@@ -3474,10 +3791,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

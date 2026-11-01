@@ -955,8 +955,38 @@
         "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "0.4 D",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 0.4,
+            "powerKwMin": 4,
+            "powerKwMax": 4,
+            "availablePowerKw": [
+              4
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "0.4 D",
+              "noteCs": "Vlastní aplikační přehled Continental01/2019: oddělený řádek AIXAM A721 od01/2005,0.4D 4kW. Přesné cm³ nejsou v tabulce a neodvozují se zA741.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "A721",
+                "fromYear": 2004,
+                "toYear": 2008,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -982,7 +1012,8 @@
           "https://www.aixam.com/ressources/pages/marque/DosPres_Aixam2010_FR_bd.pdf",
           "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
           "https://www.aixam.com/en/french-brand/history/about-us",
-          "https://www.leblogauto.com/actualites/actualite/aixam-une-gamme-renouvelee/"
+          "https://www.leblogauto.com/actualites/actualite/aixam-une-gamme-renouvelee/",
+          "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
         ],
         "dateBasis": "production"
       }
@@ -992,7 +1023,8 @@
       "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
       "https://www.aixam.com/en/french-brand/history/about-us",
       "https://www.leblogauto.com/actualites/actualite/aixam-une-gamme-renouvelee/",
-      "https://gsanspermis.com/aixam-a721/"
+      "https://gsanspermis.com/aixam-a721/",
+      "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
     ],
     "needsReview": [
       {
@@ -1005,10 +1037,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -1058,6 +1086,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1229,8 +1261,38 @@
         "productionStatus": "unknown",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "0.5 D",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 10,
+            "powerKwMax": 10,
+            "availablePowerKw": [
+              10
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "0.5 D",
+              "noteCs": "Vlastní aplikační přehled Continental01/2019: oddělený řádek AIXAM A751 od01/2005,0.5D 10kW. Nepřebírá4kW A721 ani nákladní Mega.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "A751",
+                "fromYear": 2004,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1253,14 +1315,16 @@
         "trims": null,
         "sources": [
           "https://www.aixam.com/ressources/pages/marque/DosPres_Aixam2010_FR_bd.pdf",
-          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
+          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
+          "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
         ],
         "dateBasis": "production"
       }
     ],
     "sources": [
       "https://www.aixam.com/ressources/pages/marque/DosPres_Aixam2010_FR_bd.pdf",
-      "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
+      "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf",
+      "https://www.continental-aftermarket.com/media/1415/katalog-sterac_cz_01-2019.pdf"
     ],
     "needsReview": [
       {
@@ -1277,10 +1341,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -1334,6 +1394,10 @@
       {
         "field": "generations[0].productionStatus",
         "reason": "Samostatná verze řady Innovation. Přesný konec výroby a karoserie zatím nepotvrzeny."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1356,8 +1420,97 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "479 cm³ Diesel",
+            "fuel": "diesel",
+            "displacementCc": 479,
+            "displacementLitresNominal": 0.5,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/en/licence-free-car-city/gto"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "City GTO Diesel479cm³ – současná zveřejněná specifikace",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "City GTO Diesel479cm³ – současná zveřejněná specifikace",
+                "source": "https://www.aixam.com/en/licence-free-car-city/gto",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 479,
+                  "cylinders": 2,
+                  "powerKw": 6,
+                  "powerStandard": null,
+                  "torqueNm": 21
+                },
+                "sha256": "946dcdcc0317a52a83d1260ba62b0a32e91ed1dbaa57226fb71dd1056e0c7677"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "City – modelová rodina od2008, nikoli jedna generace",
+                "fromYear": 2008,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "GTO je výbava modeluCity. Variátor je ve zdroji popsaný jako automatický; počet pevných převodových stupňů nebyl odvozen z jediného dopředného režimu. Rozměrová tabulka má titulek(m), avšak hodnoty2800/1500/1795; do vyjasnění jednotek nebyly převzaty."
+            }
+          },
+          {
+            "variant": "e-City EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/en/licence-free-car-e-city/gto-electric"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "City GTO Electric7.50kWh – současná zveřejněná specifikace",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "City GTO Electric7.50kWh – současná zveřejněná specifikace",
+                "source": "https://www.aixam.com/en/licence-free-car-e-city/gto-electric",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 6,
+                  "powerStandard": null,
+                  "torqueNm": 40
+                },
+                "sha256": "142345b2ccefa3983c9b8a8ce46bf4f3a742d4e2ebba8c6e26df729b56f38160"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "City – modelová rodina od2008, nikoli jedna generace",
+                "fromYear": 2008,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Elektrický pohon stejné řadyCity, nikoli nový samostatný model e-Aixam. Přesný převod nelze odvodit z údaje1drive+neutral+reverse. Elektrická spotřeba není vypočtena z kapacity baterie a dojezdu; rozměry mají v tabulce nejasný titulek jednotek."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1497,10 +1650,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1700,8 +1849,65 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "479 cm³ Diesel",
+            "fuel": "diesel",
+            "displacementCc": 479,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/en/licence-free-car-coupe/sport"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "479 cm³ Diesel",
+              "noteCs": "Vlastní evropská sériová specifikace Coupé Sport: diesel479cm³/6kW. Souhrnná rodina od2012; neznamená shodný motor všech starších provedení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Coupé – rodina od2012",
+                "fromYear": 2012,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Kubota Diesel 400",
+            "fuel": "diesel",
+            "displacementCc": 400,
+            "displacementLitresNominal": 0.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Kubota Diesel 400",
+              "noteCs": "Vlastní presskit2012, samostatná část nového Aixam Coupé výslovně uvádí400cm³ a diesel. Výkon této spalovací verze není přenesen z elektrického modelu ani jiného Aixamu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Coupé – rodina od2012",
+                "fromYear": 2012,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1724,13 +1930,17 @@
         "trims": null,
         "sources": [
           "https://www.aixam.com/ressources/pages/presse/dpaixammegafr.pdf",
-          "https://www.aixam.com/en/licence-free-car-coupe"
+          "https://www.aixam.com/en/licence-free-car-coupe",
+          "https://www.aixam.com/en/licence-free-car-coupe/sport",
+          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
         ]
       }
     ],
     "sources": [
       "https://www.aixam.com/ressources/pages/presse/dpaixammegafr.pdf",
-      "https://www.aixam.com/en/licence-free-car-coupe"
+      "https://www.aixam.com/en/licence-free-car-coupe",
+      "https://www.aixam.com/en/licence-free-car-coupe/sport",
+      "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
     ],
     "needsReview": [
       {
@@ -1747,10 +1957,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1804,6 +2010,18 @@
       {
         "field": "generations",
         "reason": "Dílčí záznam modelové rodiny nebo doloženého katalogového označení; nikoli tvrzení jediné generace. Přesné modernizace a konce výroby nebyly ověřeny."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1986,8 +2204,65 @@
         "bodyTypes": [
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "479 cm³ Diesel",
+            "fuel": "diesel",
+            "displacementCc": 479,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/en/licence-free-car-crossover/premium"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "479 cm³ Diesel",
+              "noteCs": "Vlastní evropská specifikace Crossover Premium:479cm³/6kW diesel; nejde o Crossline ani Mega. Rodina není jediné shodné provedení od2011.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Crossover – modelová rodina od2011",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "Kubota Diesel 400",
+            "fuel": "diesel",
+            "displacementCc": 400,
+            "displacementLitresNominal": 0.4,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Kubota Diesel 400",
+              "noteCs": "Vlastní presskit2012, samostatná část Crossover2místný:400cm³ diesel. ÚdajGT4místný benzin/diesel bez konkrétních parametrů se nepřenáší.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Crossover – modelová rodina od2011",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2011,14 +2286,18 @@
         "sources": [
           "https://www.aixam.com/ressources/pages/presse/dpaixammegafr.pdf",
           "https://www.aixam.com/en/licence-free-car-crossover",
-          "https://www.aixam.com/ressources/pages/Brochure_Assortiment_nov_2012.pdf"
+          "https://www.aixam.com/ressources/pages/Brochure_Assortiment_nov_2012.pdf",
+          "https://www.aixam.com/en/licence-free-car-crossover/premium",
+          "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
         ]
       }
     ],
     "sources": [
       "https://www.aixam.com/ressources/pages/presse/dpaixammegafr.pdf",
       "https://www.aixam.com/en/licence-free-car-crossover",
-      "https://www.aixam.com/ressources/pages/Brochure_Assortiment_nov_2012.pdf"
+      "https://www.aixam.com/ressources/pages/Brochure_Assortiment_nov_2012.pdf",
+      "https://www.aixam.com/en/licence-free-car-crossover/premium",
+      "https://www.aixam.com/ressources/pages/presse/dpaixammegagb.pdf"
     ],
     "needsReview": [
       {
@@ -2035,10 +2314,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2096,6 +2371,18 @@
       {
         "field": "generations[0].bodyTypes",
         "reason": "Dobový katalog2012 řadíCrossover doBREAK, proto použito katalogové kombi; moderní karosářské změny a užší členění čekají na audit."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2116,8 +2403,38 @@
         "productionStatus": "current",
         "facelift": null,
         "bodyTypes": null,
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "479 cm³ Diesel",
+            "fuel": "diesel",
+            "displacementCc": 479,
+            "displacementLitresNominal": null,
+            "powerKwMin": 6,
+            "powerKwMax": 6,
+            "availablePowerKw": [
+              6
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.aixam.com/en/easy/chic"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "479 cm³ Diesel",
+              "noteCs": "Vlastní současná evropská specifikace Easy Chic:479cm³/6kW diesel. Motor není přenesen z modeluCity, i když je technicky podobný.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Easy – novější rodina",
+                "fromYear": 2026,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2140,13 +2457,15 @@
         "trims": null,
         "sources": [
           "https://www.aixam.com/en/aixam-range",
-          "https://en.wikipedia.org/wiki/Aixam"
+          "https://en.wikipedia.org/wiki/Aixam",
+          "https://www.aixam.com/en/easy/chic"
         ]
       }
     ],
     "sources": [
       "https://www.aixam.com/en/aixam-range",
-      "https://en.wikipedia.org/wiki/Aixam"
+      "https://en.wikipedia.org/wiki/Aixam",
+      "https://www.aixam.com/en/easy/chic"
     ],
     "needsReview": [
       {
@@ -2167,10 +2486,6 @@
       },
       {
         "field": "generations[0].bodyTypes",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2228,6 +2543,10 @@
       {
         "field": "generations[0].from",
         "reason": "Rok2026 dleWikipedie, současná existence ověřena oficiální nabídkou. Přesný začátek výroby proti dubnovému uvedení na trh zatímneověřen."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

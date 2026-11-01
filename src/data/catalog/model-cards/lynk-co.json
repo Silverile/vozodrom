@@ -497,8 +497,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "02 EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 200,
+            "powerKwMax": 200,
+            "availablePowerKw": [
+              200
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://svenscar.de/wp-content/uploads/LynkCo_02_MY25_CarFeatures_Specifications_2025_EN_Web.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "02 Core Electric / RWD – MY25",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "02 Core Electric / RWD – MY25",
+                "source": "https://svenscar.de/wp-content/uploads/LynkCo_02_MY25_CarFeatures_Specifications_2025_EN_Web.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 200,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "3e40e5d4def537116ae726770884d65c98710f93f572c8117e28cff27753fe30"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "02 EV / Z20 / 20",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Core19palcová kola; ne445km a17,1kWh/100km provedení More. Přesná tabulka uvádí323Nm, původní tiskový fact-sheet343Nm; hodnota momentu bude kvůli rozporu ponechána null. Šířka se sklopenými zrcátky."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -592,10 +637,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

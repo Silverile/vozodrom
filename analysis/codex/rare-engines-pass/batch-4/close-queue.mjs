@@ -1,0 +1,25 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const root='analysis/codex/rare-engines-pass',batch=root+'/batch-4',read=p=>JSON.parse(fs.readFileSync(p,'utf8')),write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n'),prior=read(root+'/batch-3/remaining-queue.json'),selected=read(batch+'/selection.json'),changes=read(batch+'/engine-changes.json'),key=r=>(r.id??r.make+'/'+r.line)+'/'+r.index,filled=new Map(changes.changes.map(r=>[key(r),r]));
+const reasons={
+ 'bentley/turbo-r/1':'Для Turbo RT найдены противоречивые вторичные значения 297/298/300 кВт; собственная спецификация производителя именно RT не найдена. Данные Turbo R/Continental T не переносились.',
+ 'aixam/mac/0':'Открытая историческая модельная семья Mac не привязана к конкретной технической таблице; параметры Aixam City или Mega автоматически не переносились.',
+ 'aixam/roadline/0':'Найдена вторичная сводка, но собственная таблица Roadline/GT ещё не проверена. Данные соседних City/A751 не переносились.',
+ 'ligier/162-ambra/0':'Найдены общий каталог Ambra и руководство запчастей 162, но привязка топлива и конкретного исполнения к объединённой семье 1995–2002 не завершена.',
+ 'ligier/serie-7/0':'Для объединённой семьи Série7/Optima/Prima не найдена быстрая собственная техническая таблица; двигатель более поздних Ligier не переносился.',
+ 'microcar/zenn/0':'Не подтверждена продажа именно ветви ZENN в Европе. Французское происхождение Microcar-донора не подтверждает рынок канадской электрической конверсии.',
+ 'daimler-company/xj40/1':'Для длиннобазного Majestic XJ40 не найдена отдельная спецификация. Параметры стандартного XJ40 или более позднего X300 Long автоматически не переносились.'
+};
+assert.deepEqual(selected,prior.nextEuropeanScreenPass.slice(0,80));
+const completed=selected.filter(r=>filled.has(key(r))).map(r=>({...r,engineRows:filled.get(key(r)).engines.length})),deferred=selected.filter(r=>!filled.has(key(r))).map(r=>{assert(reasons[key(r)],key(r));return {...r,reason:reasons[key(r)]};}),next=prior.nextEuropeanScreenPass.slice(80);
+const byMake=Object.values(selected.reduce((a,r)=>{const b=a[r.make]??={make:r.make,reviewed:0,filled:0,rows:0,deferred:0};b.reviewed++;if(filled.has(key(r))){b.filled++;b.rows+=filled.get(key(r)).engines.length;}else b.deferred++;return a;},{}));
+const summary={generationsReviewed:selected.length,generationsFilled:completed.length,newRows:changes.rows,deferred:deferred.length,nextEuropeanScreenPass:next.length,screenPassWholeReviewed:160,screenPassWholeFilled:63+completed.length,screenPassWholeDeferred:17+deferred.length,screenPassWholeNewRows:100+changes.rows,registeredWholePassFilled:63,registeredWholePassRows:134,registeredWholePassDeferred:72,zeroWholePassFilled:80+completed.length,zeroWholePassRows:145+changes.rows,zeroWholePassDeferred:20+deferred.length,wholePassFilled:143+completed.length,wholePassNewRows:279+changes.rows,totalPublicEngineRows:12418+changes.rows,screenHeld:926,undatedHeld:679,byMake};
+write(batch+'/remaining-queue.json',{counts:summary,completed,deferred,allScreenPassCompleted:[...prior.completed,...completed],allScreenPassDeferred:[...prior.deferred,...deferred],nextEuropeanScreenPass:next});write(batch+'/summary.json',summary);
+fs.writeFileSync(batch+'/report.md',[
+ `Пакет4: рассмотрены следующие **${selected.length}** допущенных поколений по парку марки. Добавлены **${changes.rows} строк в ${completed.length} поколения**, отложены **${deferred.length}**. Дальше — **${next.length}** записей в nextEuropeanScreenPass.`,
+ '', 'Использованы собственные спецификации, пресс-релизы, руководства и каталоги применяемости производителей; также проверенные технические версии того же поколения и строгий резервный поиск спецификаций. В каждой строке один источник. Документированная выборка не означает полный моторный ряд.',
+ '', 'Сохранены различия: Brooklands Coupé/старый седан; Q60 V36/CV37; Countach/Countach LPI; бензиновые Alpina B и дизельные D; Daimler Double Six5.3/6.0 и Six/V8; DCI492 как обозначение двигателя, а не объём. У Temerario677кВт и Revuelto747кВт — мощность системы. У Countach LPI599кВт и Sián602кВт — опубликованная общая мощность суперконденсаторного mild hybrid. Мощности компонентов не складывались.',
+ '', 'В руководстве IXO Progress указан как500см³, а в руководстве JSRC —505см³. Точный объём Progress для IXO оставлен пустым, номинальный0.5 сохранён. Источник MicrocarMC1 подтверждает505см³ и дизельLDW502/M3, но не мощность: она пустая. PS/bhp не пересчитывались; точные объёмы не восстанавливались по округлённым обозначениям или двигателям BMW/Toyota.',
+ '', 'Поколения, годы, кузова, рисунки, алиасы и статистика не менялись. Перестроен индекс карточек. Сводные проверки: validation.json, qa-final.json.',
+ '', 'По маркам:', '', '| Марка | Рассмотрено | Заполнено | Строк | Отложено |', '|---|---:|---:|---:|---:|',...byMake.map(r=>`| ${r.make} | ${r.reviewed} | ${r.filled} | ${r.rows} | ${r.deferred} |`),
+ '', 'Причины переноса:', '',...deferred.map(r=>`- ${key(r)}: ${r.reason}`),''
+ ].join('\n'));console.log(summary);

@@ -3474,8 +3474,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.7 V6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 3.7,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.7 V6",
+              "noteCs": "Samostatný řádek INFINITI Q60 Convertible od10/2013, nikoli nové Q60 Coupé od2016 ani americká IPL varianta. Přesný objem není doplněn z G37.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Q60 I (V36)",
+                "fromYear": 2013,
+                "toYear": 2015,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3497,7 +3527,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_Q60"
+          "https://en.wikipedia.org/wiki/Infiniti_Q60",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
         ],
         "dateBasis": "production",
         "bodyVariants": [
@@ -3583,8 +3614,67 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.0t",
+            "fuel": "petrol",
+            "displacementCc": 1991,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 155,
+            "powerKwMax": 155,
+            "availablePowerKw": [
+              155
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www-europe.infiniti-cdn.net/content/dam/Infiniti/Brochures/BG/final/Q60_BG.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0t",
+              "noteCs": "Vlastní evropský bulharský prospekt Q60: 1991 cm³/155 kW a 2997 cm³/298 kW; nikoli americké 300hp ladění.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "CV37 – nové kupé",
+                "fromYear": 2016,
+                "toYear": 2022,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "3.0t V6",
+            "fuel": "petrol",
+            "displacementCc": 2997,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 298,
+            "powerKwMax": 298,
+            "availablePowerKw": [
+              298
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www-europe.infiniti-cdn.net/content/dam/Infiniti/Brochures/BG/final/Q60_BG.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.0t V6",
+              "noteCs": "Vlastní evropský bulharský prospekt Q60: 1991 cm³/155 kW a 2997 cm³/298 kW; nikoli americké 300hp ladění.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "CV37 – nové kupé",
+                "fromYear": 2016,
+                "toYear": 2022,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3606,12 +3696,15 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Infiniti_Q60"
+          "https://en.wikipedia.org/wiki/Infiniti_Q60",
+          "https://www-europe.infiniti-cdn.net/content/dam/Infiniti/Brochures/BG/final/Q60_BG.pdf"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Infiniti_Q60"
+      "https://en.wikipedia.org/wiki/Infiniti_Q60",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://www-europe.infiniti-cdn.net/content/dam/Infiniti/Brochures/BG/final/Q60_BG.pdf"
     ],
     "needsReview": [
       {
@@ -3628,10 +3721,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3680,10 +3769,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3773,6 +3858,10 @@
       {
         "field": "scope",
         "reason": "Přesné hranice značkového přejmenování a exportních karoserií vyžadují další primární listiny; neznámý kalendářní rok zůstává null, modelový rok není automaticky výrobní."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3795,8 +3884,38 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.2d",
+            "fuel": "diesel",
+            "displacementCc": 2143,
+            "displacementLitresNominal": 2.2,
+            "powerKwMin": 125,
+            "powerKwMax": 125,
+            "availablePowerKw": [
+              125
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.eurorepar.com/GB-en/download/536/11a1c044f5455a81477e60b2f231e029.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.2d",
+              "noteCs": "Vlastní evropská aplikace EUROREPAR výslovně Q70 2.2D 16V 170 od09/2014, diesel 2143 cm³/125 kW. M/M35h ani regionální 2.5/5.6 se nepřenáší.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Q70 / Q70L (Y51)",
+                "fromYear": 2013,
+                "toYear": 2019,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3819,7 +3938,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Infiniti_Q70",
-          "https://static.nhtsa.gov/odi/rcl/2024/RMISC-24V470-6303.pdf"
+          "https://static.nhtsa.gov/odi/rcl/2024/RMISC-24V470-6303.pdf",
+          "https://www.eurorepar.com/GB-en/download/536/11a1c044f5455a81477e60b2f231e029.pdf"
         ],
         "dateBasis": "production",
         "bodyVariants": [
@@ -3897,7 +4017,8 @@
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Infiniti_Q70"
+      "https://en.wikipedia.org/wiki/Infiniti_Q70",
+      "https://www.eurorepar.com/GB-en/download/536/11a1c044f5455a81477e60b2f231e029.pdf"
     ],
     "needsReview": [
       {
@@ -3910,10 +4031,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

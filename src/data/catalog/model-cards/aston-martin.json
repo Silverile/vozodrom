@@ -398,8 +398,38 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.33 Dual VVT-i",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.33,
+            "powerKwMin": 72,
+            "powerKwMax": 72,
+            "availablePowerKw": [
+              72
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/cygnet"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.33 Dual VVT-i",
+              "noteCs": "Vlastní britská stránka Cygnet 2011–2013: 1.33 a 72 kW. Přesný objem není přebírán z Toyoty; jednorázový V8 Cygnet2018 je vyloučen.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Cygnet",
+                "fromYear": 2011,
+                "toYear": 2013,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -423,12 +453,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.astonmartin.com/en-gb/models/past-models/cygnet"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-gb/models/past-models/cygnet"
     ],
     "needsReview": [
       {
@@ -441,10 +473,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -498,6 +526,10 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -1927,8 +1959,65 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Vantage 5.9 V12",
+            "fuel": "petrol",
+            "displacementCc": 5935,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": 309,
+            "powerKwMax": 309,
+            "availablePowerKw": [
+              309
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://autocatalogarchive.com/wp-content/uploads/2016/07/Aston-Martin-DB7-Vantage-1999-2002-.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Vantage 5.9 V12",
+              "noteCs": "Vlastní prospekt Aston Martin DB7 Vantage Coupé/Volante 1999–2002 výslovně 5935 cm³ a 309 kW. Nejde o DB7 Zagato.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "DB7",
+                "fromYear": 1994,
+                "toYear": 2003,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "3.2 Supercharged I6",
+            "fuel": "petrol",
+            "displacementCc": 3228,
+            "displacementLitresNominal": 3.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/db7"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.2 Supercharged I6",
+              "noteCs": "Vlastní silniční DB7 1994–1999: 3228 cm³. Zdroj uvádí bhp, ale ne kW, proto výkon bez přepočtu zůstává prázdný; závodní DB7 GT není zahrnut.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "DB7",
+                "fromYear": 1994,
+                "toYear": 2003,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1968,12 +2057,16 @@
         },
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://autocatalogarchive.com/wp-content/uploads/2016/07/Aston-Martin-DB7-Vantage-1999-2002-.pdf",
+          "https://www.astonmartin.com/en-gb/models/past-models/db7"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://autocatalogarchive.com/wp-content/uploads/2016/07/Aston-Martin-DB7-Vantage-1999-2002-.pdf",
+      "https://www.astonmartin.com/en-gb/models/past-models/db7"
     ],
     "needsReview": [
       {
@@ -1986,10 +2079,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2039,6 +2128,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2061,8 +2158,36 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V12 Zagato",
+            "fuel": "petrol",
+            "displacementCc": 5935,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-us/models/past-models/db7-zagato-db-ar1"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V12 Zagato",
+              "noteCs": "Vlastní odstavec DB7 Zagato, nikoli americký DB AR1. Stránka výslovně potvrzujeUK/Europe a5935 cm³; kW z440bhp nepřepočítány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "DB7 Zagato",
+                "fromYear": 2003,
+                "toYear": 2003,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2086,12 +2211,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.astonmartin.com/en-us/models/past-models/db7-zagato-db-ar1"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-us/models/past-models/db7-zagato-db-ar1"
     ],
     "needsReview": [
       {
@@ -2104,10 +2231,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2161,6 +2284,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2763,8 +2894,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "DBX707 4.0 V8",
+            "fuel": "petrol",
+            "displacementCc": 3982,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 520,
+            "powerKwMax": 520,
+            "availablePowerKw": [
+              520
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.astonmartin.com/aston-martin-dbx707-plasma-blue-full-press-kit/?lang=eng"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "2022 DBX707 — Plasma Blue press specification",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "2022 DBX707 — Plasma Blue press specification",
+                "source": "https://media.astonmartin.com/aston-martin-dbx707-plasma-blue-full-press-kit/?lang=eng",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 3982,
+                  "cylinders": 8,
+                  "powerKw": 520,
+                  "powerStandard": null,
+                  "torqueNm": 900
+                },
+                "sha256": "07f3b0fa99011ae427d0a359bbb3c111426c83a19e523b03b037e46677ceab60"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "DBX",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tovární technický list31/03/2022 pro DBX707 Plasma Blue; nepřenáší údaje na modernizaci2024. Šířka při sklopených zrcátkách není zaměněna za šířku karoserie."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2930,10 +3106,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3821,8 +3993,38 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "7.3 V12",
+            "fuel": "petrol",
+            "displacementCc": 7312,
+            "displacementLitresNominal": 7.3,
+            "powerKwMin": 559,
+            "powerKwMax": 559,
+            "availablePowerKw": [
+              559
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://astonmartins.com/wp-content/uploads/2013/01/one-77-brochure.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "7.3 V12",
+              "noteCs": "Vlastní sériový prospekt Aston Martin, part704792:7312 cm³ a 559 kW. Předběžný údaj >522 kW z jiného raného prospektu není použit.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "One-77",
+                "fromYear": 2010,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3846,12 +4048,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://astonmartins.com/wp-content/uploads/2013/01/one-77-brochure.pdf"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://astonmartins.com/wp-content/uploads/2013/01/one-77-brochure.pdf"
     ],
     "needsReview": [
       {
@@ -3864,10 +4068,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3943,8 +4143,36 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V12",
+            "fuel": "petrol",
+            "displacementCc": 5935,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/rapide"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V12",
+              "noteCs": "Vlastní Rapide 2010–2012 má 5935 cm³; stránka uvádí pouze bhp, bez přepočtu na kW. Nejde o elektrický RapidE.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Rapide",
+                "fromYear": 2010,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3985,12 +4213,14 @@
         "trims": null,
         "sources": [
           "https://www.astonmartin.com/en/models/past-models",
-          "https://en.wikipedia.org/wiki/Aston_Martin_Rapide"
+          "https://en.wikipedia.org/wiki/Aston_Martin_Rapide",
+          "https://www.astonmartin.com/en-gb/models/past-models/rapide"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-gb/models/past-models/rapide"
     ],
     "needsReview": [
       {
@@ -4007,10 +4237,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4060,6 +4286,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -4838,8 +5072,36 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V12",
+            "fuel": "petrol",
+            "displacementCc": 5935,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/v12-zagato"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V12",
+              "noteCs": "Vlastní stránka silničního V12 Zagato uvádí5935 cm³. Výkon není přenesen z mechanicky příbuzného V12 Vantage ani ze závodního Zagato.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "V12 Zagato",
+                "fromYear": 2011,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4863,12 +5125,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.astonmartin.com/en-gb/models/past-models/v12-zagato"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-gb/models/past-models/v12-zagato"
     ],
     "needsReview": [
       {
@@ -4881,10 +5145,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4938,6 +5198,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -5082,8 +5350,36 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.3 V8",
+            "fuel": "petrol",
+            "displacementCc": 5340,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.3 V8",
+              "noteCs": "Vlastní stránka V8 Coupé a LWB Volante uvádí5340 cm³. kW nejsou potvrzeny, údajbhp není převáděn; přeplňovaný Vantage se nepřebírá.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "V8 Coupé",
+                "fromYear": 1996,
+                "toYear": 2000,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5107,12 +5403,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
     ],
     "needsReview": [
       {
@@ -5125,10 +5423,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5182,6 +5476,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -5205,8 +5507,59 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 5340,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 276,
+            "powerKwMax": 276,
+            "availablePowerKw": [
+              276
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "V540",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Aston-Martin/372/Aston-Martin-V8-Vantage-(Series-I)-V540.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1977 - 1978)",
+              "originalVariant": "Aston Martin V8 Vantage (Series I) V540 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Aston-Martin/372/Aston-Martin-V8-Vantage-(Series-I)-V540.html",
+                "title": "Aston Martin V8 Vantage (Series I) V540 Specs",
+                "modelAliases": [
+                  "V8VANTAGE"
+                ],
+                "generation": "V8 Vantage Series 1 (V-540 \"Bolt-on & flip-tails\") - 1977 New Model",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Aston-Martin/M13178/V8-Vantage-(Series-I)",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "V8 Vantage (Series I)",
+                "generationProductionFrom": 1977,
+                "generationProductionTo": 1978,
+                "variantDateText": "(1977 - 1978)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "Coupé",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "375 PS / 370 HP / 276 kW@ 5800 rpm",
+                "displacementText": "5340 cm3 / 325.9 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "V8 Vantage Series 1 (V-540 \"Bolt-on & flip-tails\") - 1977 New Model",
+                "fromYear": 1977,
+                "toYear": 1978,
+                "generationIndex": 0,
+                "rowFromYear": 1977,
+                "rowToYear": 1978
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5230,12 +5583,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.ultimatespecs.com/car-specs/Aston-Martin/372/Aston-Martin-V8-Vantage-(Series-I)-V540.html"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.ultimatespecs.com/car-specs/Aston-Martin/372/Aston-Martin-V8-Vantage-(Series-I)-V540.html"
     ],
     "needsReview": [
       {
@@ -5248,10 +5603,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5327,8 +5678,36 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.3 V8",
+            "fuel": "petrol",
+            "displacementCc": 5340,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.3 V8",
+              "noteCs": "Vlastní stránka V8 Coupé a LWB Volante uvádí5340 cm³. kW nejsou potvrzeny, údajbhp není převáděn; přeplňovaný Vantage se nepřebírá.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "V8 Volante",
+                "fromYear": 1997,
+                "toYear": 2000,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5352,12 +5731,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
         ]
       }
     ],
     "sources": [
-      "https://www.astonmartin.com/en/models/past-models"
+      "https://www.astonmartin.com/en/models/past-models",
+      "https://www.astonmartin.com/en-gb/models/past-models/v8-coupe-lwb-volante"
     ],
     "needsReview": [
       {
@@ -5370,10 +5751,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5427,6 +5804,14 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -5580,8 +5965,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "6.5 V12 Hybrid",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": 6.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.astonmartin.com/aston-martin-valkyrie-hypercar-set-to-steal-the-show-at-goodwood-festival-of-speed-2021/?lang=eng"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "6.5 V12 Hybrid",
+              "noteCs": "Vlastní představení silničního Valkyrie2021:6.5 V12 s hybridním pohonem. Zdroj uvádíbhp, nikoli ověřený systémový výkonkW; ten zůstává prázdný, bez přičítání120kW elektromotoru. AMRPro a závodníLMH jsou vyloučeny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Valkyrie",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5605,12 +6020,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://media.astonmartin.com/first-aston-martin-valkyrie-customer-car-complete/?lang=eng"
+          "https://media.astonmartin.com/first-aston-martin-valkyrie-customer-car-complete/?lang=eng",
+          "https://media.astonmartin.com/aston-martin-valkyrie-hypercar-set-to-steal-the-show-at-goodwood-festival-of-speed-2021/?lang=eng"
         ]
       }
     ],
     "sources": [
-      "https://media.astonmartin.com/first-aston-martin-valkyrie-customer-car-complete/?lang=eng"
+      "https://media.astonmartin.com/first-aston-martin-valkyrie-customer-car-complete/?lang=eng",
+      "https://media.astonmartin.com/aston-martin-valkyrie-hypercar-set-to-steal-the-show-at-goodwood-festival-of-speed-2021/?lang=eng"
     ],
     "needsReview": [
       {
@@ -5627,10 +6044,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5684,6 +6097,18 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -5706,8 +6131,38 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "S 6.0 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 388,
+            "powerKwMax": 388,
+            "availablePowerKw": [
+              388
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/01/2005-Aston-Martin-Vanquish-S-V12.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "S 6.0 V12",
+              "noteCs": "Vlastní prospekt sériového VanquishS2005 výslovně388kW/520bhp. Nejde o novouVanquish2012; přesné cm³ se nepřebírají z jiného zdroje.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Vanquish",
+                "fromYear": 2001,
+                "toYear": 2007,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5747,7 +6202,8 @@
         },
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://xr793.com/wp-content/uploads/2022/01/2005-Aston-Martin-Vanquish-S-V12.pdf"
         ]
       },
       {
@@ -5761,8 +6217,67 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "6.0 V12",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 421,
+            "powerKwMax": 421,
+            "availablePowerKw": [
+              421
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "6.0 V12",
+              "noteCs": "Vlastní oddělená aplikační tabulka VANQUISH od10/2012:421/424 kW. Předchozí V12 Vanquish2001 ani nová5.2 Twin-Turbo2024 nejsou přebírány; objemcm³ v tabulce není.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Vanquish — druhá konstrukční rodina",
+                "fromYear": 2012,
+                "toYear": 2018,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "6.0 V12 AM310",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 6,
+            "powerKwMin": 424,
+            "powerKwMax": 424,
+            "availablePowerKw": [
+              424
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "6.0 V12 AM310",
+              "noteCs": "Vlastní oddělená aplikační tabulka VANQUISH od10/2012:421/424 kW. Předchozí V12 Vanquish2001 ani nová5.2 Twin-Turbo2024 nejsou přebírány; objemcm³ v tabulce není.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Vanquish — druhá konstrukční rodina",
+                "fromYear": 2012,
+                "toYear": 2018,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5802,7 +6317,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Aston_Martin_Vanquish"
+          "https://en.wikipedia.org/wiki/Aston_Martin_Vanquish",
+          "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf"
         ]
       },
       {
@@ -5816,8 +6332,36 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.2 V12 Twin-Turbo",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5.2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.astonmartin.com/aston-martin-vanquish-an-icon-returns-to-reign-supreme/?lang=eng"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.2 V12 Twin-Turbo",
+              "noteCs": "Vlastní uvedení sériového Vanquish02.09.2024,5.2 V12 Twin-Turbo. Výrobce zde uvádí835PS, nikoli kW; přesný objem ani výkon nejsou dopočteny.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Vanquish — třetí konstrukční rodina",
+                "fromYear": 2024,
+                "toYear": null,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5848,7 +6392,9 @@
     "sources": [
       "https://www.astonmartin.com/en/models/past-models",
       "https://en.wikipedia.org/wiki/Aston_Martin_Vanquish",
-      "https://media.astonmartin.com/aston-martin-vanquish-an-icon-returns-to-reign-supreme/?lang=eng"
+      "https://media.astonmartin.com/aston-martin-vanquish-an-icon-returns-to-reign-supreme/?lang=eng",
+      "https://www.continental-aftermarket.com/media/6759/continental-battery-catalogue-gb-d-f-es-it-2025.pdf",
+      "https://xr793.com/wp-content/uploads/2022/01/2005-Aston-Martin-Vanquish-S-V12.pdf"
     ],
     "needsReview": [
       {
@@ -5861,10 +6407,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5917,10 +6459,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5980,10 +6518,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[2].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[2].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6034,6 +6568,30 @@
       {
         "field": "scope",
         "reason": "Pilot historie není úplnou databází všech sérií, karoserií, výbav a homologací. Neznámý konec výroby není potvrzením aktuální výroby."
+      },
+      {
+        "field": "generations[1].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[1].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[2].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -6450,8 +7008,59 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 5340,
+            "displacementLitresNominal": 5.3,
+            "powerKwMin": 243,
+            "powerKwMax": 243,
+            "availablePowerKw": [
+              243
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "5.3 V8",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Aston-Martin/3636/Aston-Martin-Virage-53-V8.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(1988 - 1996)",
+              "originalVariant": "Aston Martin Virage 5.3 V8 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Aston-Martin/3636/Aston-Martin-Virage-53-V8.html",
+                "title": "Aston Martin Virage 5.3 V8 Specs",
+                "modelAliases": [
+                  "VIRAGE"
+                ],
+                "generation": "Virage Coupe / Volante / Vantage - 1989 New Model",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Aston-Martin/M584/Virage",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "Virage",
+                "generationProductionFrom": 1989,
+                "generationProductionTo": 1995,
+                "variantDateText": "(1988 - 1996)",
+                "fuelText": " Petrol V 8",
+                "bodyText": "Coupé",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "330 PS / 326 HP / 243 kW@ 6000 rpm",
+                "displacementText": "5340 cm3 / 325.9 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "Virage Coupe / Volante / Vantage - 1989 New Model",
+                "fromYear": 1989,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": 1988,
+                "rowToYear": 1996
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6475,7 +7084,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://www.astonmartin.com/en/models/past-models"
+          "https://www.astonmartin.com/en/models/past-models",
+          "https://www.ultimatespecs.com/car-specs/Aston-Martin/3636/Aston-Martin-Virage-53-V8.html"
         ]
       },
       {
@@ -6489,8 +7099,38 @@
           "kupe",
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "5.9 V12",
+            "fuel": "petrol",
+            "displacementCc": 5935,
+            "displacementLitresNominal": 5.9,
+            "powerKwMin": 365,
+            "powerKwMax": 365,
+            "availablePowerKw": [
+              365
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://astonmartins.com/wp-content/uploads/2013/03/VIRAGE-saver-Brochure-.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "5.9 V12",
+              "noteCs": "Vlastní prospekt Aston Martin Virage2011 Coupé/Volante uvádí5935 cm³ a365 kW. Nejde o původní V8 Virage.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Virage — nová konstrukční rodina",
+                "fromYear": 2011,
+                "toYear": 2012,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6514,13 +7154,16 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Aston_Martin_Virage"
+          "https://en.wikipedia.org/wiki/Aston_Martin_Virage",
+          "https://astonmartins.com/wp-content/uploads/2013/03/VIRAGE-saver-Brochure-.pdf"
         ]
       }
     ],
     "sources": [
       "https://www.astonmartin.com/en/models/past-models",
-      "https://en.wikipedia.org/wiki/Aston_Martin_Virage"
+      "https://en.wikipedia.org/wiki/Aston_Martin_Virage",
+      "https://astonmartins.com/wp-content/uploads/2013/03/VIRAGE-saver-Brochure-.pdf",
+      "https://www.ultimatespecs.com/car-specs/Aston-Martin/3636/Aston-Martin-Virage-53-V8.html"
     ],
     "needsReview": [
       {
@@ -6533,10 +7176,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6593,10 +7232,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
