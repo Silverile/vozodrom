@@ -123,6 +123,20 @@ export interface CardEquipmentLine {
   noteCs?: string | null;
 }
 
+/**
+ * Size and boot of one body (or wheelbase) of a generation, for generations whose bodies differ:
+ * Octavia liftback and kombi, a van's lengths. bodyType is a BODY_NAMES key; label tells apart
+ * variants of one body ("L2H2", "dlouhý rozvor").
+ */
+export interface CardBodyVariant {
+  bodyType: string;
+  label?: string | null;
+  dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null } | null;
+  trunkL: number | null;
+  noteCs?: string | null;
+  sources?: string[];
+}
+
 export interface CardGeneration {
   dateBasis?: string;
   dateNote?: string | null;
@@ -138,6 +152,8 @@ export interface CardGeneration {
   transmissions: { type: string; gears: number | null }[];
   dimensionsMm: { length: number | null; width: number | null; height: number | null; wheelbase: number | null } | null;
   trunkL: number | null;
+  /** per-body sizes when the bodies differ; the generation-wide dimensionsMm and trunkL stay empty then */
+  bodyVariants?: CardBodyVariant[];
   markets: string[];
   trims: CardTrim[];
   /**
@@ -196,6 +212,19 @@ export const BODY_NAMES: Record<string, string> = {
   pickup: "pick-up",
   dodavka: "dodávka",
 };
+
+/** "kombi", "dodávka L2H2" */
+export const bodyVariantName = (v: CardBodyVariant) => [BODY_NAMES[v.bodyType] ?? v.bodyType, v.label].filter(Boolean).join(" ");
+
+/**
+ * Size and boot of the car's body: the generation's own figures, or its body variant's when the
+ * bodies differ. A body with several variants (van lengths) gives none, as the car's one is unknown.
+ */
+export function sizeOf(gen: CardGeneration, body: string): Pick<CardBodyVariant, "dimensionsMm" | "trunkL"> {
+  const own = (gen.bodyVariants ?? []).filter((v) => v.bodyType === body);
+  if (own.length === 1) return own[0];
+  return { dimensionsMm: gen.dimensionsMm, trunkL: gen.trunkL };
+}
 
 /** Plural headings for grouping a make's models by body type, in display order. */
 export const BODY_GROUPS: [string, string][] = [

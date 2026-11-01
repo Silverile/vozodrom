@@ -22,6 +22,7 @@ import {
   type CardEngine,
   type CardGeneration,
   type CardTrim,
+  bodyVariantName,
   cardOf,
   stagesOf,
   yearsSpan,
@@ -198,13 +199,16 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
     ["Rozvor", gen.dimensionsMm?.wheelbase ? `${num(gen.dimensionsMm.wheelbase)} mm` : null],
     ["Zavazadelník", gen.trunkL ? `${num(gen.trunkL)} l` : null],
   ];
-  const shown = facts.filter(([, v]) => v);
+  // bodies of one generation can differ in size (liftback and kombi, van lengths): one row each
+  const variants = (gen.bodyVariants ?? []).filter((v) => dims(v.dimensionsMm) || v.dimensionsMm?.wheelbase || v.trunkL);
+  const perBody = new Set(variants.length ? ["Rozměry", "Rozvor", "Zavazadelník"] : []);
+  const shown = facts.filter(([k, v]) => v && !perBody.has(k));
   const columns = TRIM_COLUMNS.filter((c) => gen.trims.some((t) => c.value(t)));
 
   // catalogue rows can be empty placeholders (every field null); they are not engines to list
   const engines = gen.engines.filter((e) => e.variant || e.fuel || e.displacementCc || e.powerKwMin != null || e.powerKwMax != null);
   const lines = gen.equipmentLines ?? [];
-  const empty = shown.length === 0 && engines.length === 0 && gen.trims.length === 0 && lines.length === 0;
+  const empty = shown.length === 0 && variants.length === 0 && engines.length === 0 && gen.trims.length === 0 && lines.length === 0;
 
   return (
     <details id={id} open={open} className="group card min-w-0 p-5 scroll-mt-24">
@@ -238,6 +242,30 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
                 </div>
               ))}
             </dl>
+          )}
+          {variants.length > 0 && (
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="text-left text-[var(--color-muted)]">
+                  <tr>
+                    <th className="pb-1.5 font-medium pr-3">Karoserie</th>
+                    <th className="pb-1.5 font-medium pr-3">Rozměry (d × š × v)</th>
+                    <th className="pb-1.5 font-medium pr-3">Rozvor</th>
+                    <th className="pb-1.5 font-medium">Zavazadelník</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {variants.map((v, i) => (
+                    <tr key={i} className="border-t border-[var(--color-line)]" title={v.noteCs ?? undefined}>
+                      <td className="py-1.5 pr-3 font-medium">{bodyVariantName(v)}</td>
+                      <td className="pr-3 whitespace-nowrap">{dims(v.dimensionsMm) ?? "—"}</td>
+                      <td className="pr-3 whitespace-nowrap">{v.dimensionsMm?.wheelbase ? `${num(v.dimensionsMm.wheelbase)} mm` : "—"}</td>
+                      <td className="whitespace-nowrap">{v.trunkL ? `${num(v.trunkL)} l` : "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
           {engines.length > 0 && (
             <div className="mt-4 overflow-x-auto">

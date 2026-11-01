@@ -4,7 +4,7 @@ import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
 import { cardGeneration, coversYear, toListingFuel } from "./listing-catalog";
 import { generationOf, lineOf, type Draft } from "./listing-draft";
-import { type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, stagesOf } from "./modelCards";
+import { type CardBodyVariant, type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, sizeOf, stagesOf } from "./modelCards";
 import type { Listing } from "./types";
 
 // Catalogue context for the page of a user listing: the generation the car belongs to, the catalogue
@@ -39,6 +39,8 @@ export interface ListingContext {
   drawing: string | null;
   engine: CardEngine | null;
   trim: CardTrim | null;
+  /** size and boot of the car's body (sizeOf) */
+  size: Pick<CardBodyVariant, "dimensionsMm" | "trunkL">;
   stats: CarStats | null;
   /** the statistics are for the generation, not only the whole line */
   statsOfGeneration: boolean;
@@ -94,6 +96,7 @@ export function listingContext(listing: Listing, draft: Draft): ListingContext |
     drawing: frontDrawingId(draft.brand, line.slug, genIndex),
     engine: matchEngine(gen, listing),
     trim: matchTrim(gen, listing),
+    size: sizeOf(gen, draft.body || listing.body),
     stats: genStats ?? (statsLine ? (lineStats as CarStats) : null),
     statsOfGeneration: Boolean(genStats),
     age: new Date().getFullYear() - listing.year,

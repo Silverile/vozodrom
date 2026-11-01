@@ -28,10 +28,10 @@ function Facts({ rows }: { rows: [string, string | null | undefined][] }) {
 }
 
 export function GenerationCard({ context, makeName, brandSlug }: { context: ListingContext; makeName: string; brandSlug: string }) {
-  const { gen, card, engine, trim, stage, drawing } = context;
+  const { gen, card, engine, trim, stage, drawing, size } = context;
   const genName = gen.name?.replace(card.name, "").trim() || gen.code || `${context.genIndex + 1}. generace`;
   const title = `${makeName} ${card.name} ${genName}`;
-  const d = gen.dimensionsMm;
+  const d = size.dimensionsMm;
   const gearbox = trim?.transmission?.type
     ? `${GEARBOX[trim.transmission.type] ?? trim.transmission.type}${trim.transmission.gears ? ` ${trim.transmission.gears}st.` : ""}`
     : null;
@@ -58,7 +58,7 @@ export function GenerationCard({ context, makeName, brandSlug }: { context: List
             ["Karoserie", gen.bodyTypes.map((b) => BODY_NAMES[b] ?? b).join(", ")],
             ["Rozměry", d?.length && d.width && d.height ? `${num(d.length)} × ${num(d.width)} × ${num(d.height)} mm` : null],
             ["Rozvor", num(d?.wheelbase, " mm")],
-            ["Zavazadelník", num(gen.trunkL, " l")],
+            ["Zavazadelník", num(size.trunkL, " l")],
             ["Pohon", gen.drivetrains.map((x) => DRIVE[x] ?? x).join(", ")],
             ["Motory", gen.engines.length ? gen.engines.map((e) => e.variant).filter(Boolean).join(", ") : null],
           ]}
