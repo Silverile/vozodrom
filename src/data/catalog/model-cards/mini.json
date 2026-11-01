@@ -703,8 +703,38 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Cooper 1.3i MPI",
+            "fuel": "petrol",
+            "displacementCc": 1275,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 46,
+            "powerKwMax": 46,
+            "availablePowerKw": [
+              46
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.bmwgroup-classic.com/de/modelle/mini-klassiker/product-description-page.ad-1169-1.mini-cooper-1-3i.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "Cooper 1.3i MPI",
+              "noteCs": "Archiv výrobce: vlastní MPI Cooper 10/1996–10/2000, přesně odpovídá Mk VII. Nikoli starší karburátor nebo SPi.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Mk VII",
+                "fromYear": 1996,
+                "toYear": 2000,
+                "generationIndex": 6,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -743,7 +773,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Mini",
-          "https://www.press.bmwgroup.com/global/article/detail/T0300116EN/1959-%E2%80%93-2019-sixty-years-of-mini?language=en"
+          "https://www.press.bmwgroup.com/global/article/detail/T0300116EN/1959-%E2%80%93-2019-sixty-years-of-mini?language=en",
+          "https://www.bmwgroup-classic.com/de/modelle/mini-klassiker/product-description-page.ad-1169-1.mini-cooper-1-3i.html"
         ]
       },
       {
@@ -987,7 +1018,8 @@
       "https://www.wikidata.org/wiki/Q36024",
       "https://www.press.bmwgroup.com/global/article/detail/T0300116EN/1959-%E2%80%93-2019-sixty-years-of-mini?language=en",
       "https://www.visit-bmwgroup.com/en/mini-marks-25-years-of-modern-production/",
-      "https://en.wikipedia.org/wiki/Mini"
+      "https://en.wikipedia.org/wiki/Mini",
+      "https://www.bmwgroup-classic.com/de/modelle/mini-klassiker/product-description-page.ad-1169-1.mini-cooper-1-3i.html"
     ],
     "needsReview": [
       {
@@ -1312,10 +1344,6 @@
       },
       {
         "field": "generations[6].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[6].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2132,8 +2160,141 @@
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "One Clubvan",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 72,
+            "powerKwMax": 72,
+            "availablePowerKw": [
+              72
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "One Clubvan 6MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "One Clubvan 6MT",
+                "source": "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 72,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "b07ccc372e76d1fda458c61f85021b2dbc53e630b30984107ba79bfab5de2f23"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "R55",
+                "fromYear": 2012,
+                "toYear": 2014,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tisková zpráva výrobce 23. 6. 2012. Sériový šestistupňový manuál; příplatkový automat dieselu není smíchán se zde uvedenými jízdními údaji. Přesný objem motoru nelze získat odhadem ze zaokrouhlených 1,6 l. Rozměry platí výslovně pro Clubvan. Současná obecná patička webu o WLTP není dokladem historického cyklu 2012."
+            }
+          },
+          {
+            "variant": "Cooper Clubvan",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 90,
+            "powerKwMax": 90,
+            "availablePowerKw": [
+              90
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Cooper Clubvan 6MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Cooper Clubvan 6MT",
+                "source": "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 90,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "eae2c38613064d3b3f65cd568bc5e82ba252a9ce2de13232ed74e70eeb36c6ca"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "R55",
+                "fromYear": 2012,
+                "toYear": 2014,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tisková zpráva výrobce 23. 6. 2012. Sériový šestistupňový manuál; příplatkový automat dieselu není smíchán se zde uvedenými jízdními údaji. Přesný objem motoru nelze získat odhadem ze zaokrouhlených 1,6 l. Rozměry platí výslovně pro Clubvan. Současná obecná patička webu o WLTP není dokladem historického cyklu 2012."
+            }
+          },
+          {
+            "variant": "Cooper D Clubvan",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 82,
+            "powerKwMax": 82,
+            "availablePowerKw": [
+              82
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Cooper D Clubvan 6MT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Cooper D Clubvan 6MT",
+                "source": "https://www.press.bmwgroup.com/global/article/detail/T0127665EN/handle-with-care-deliver-in-style:-the-mini-clubvan-gets-ready-to-roll-up",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 82,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "2262e1e878acd90602a5cf58d0c8236bd6c73bdc3c605f2202faf23520c4b9b5"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "R55",
+                "fromYear": 2012,
+                "toYear": 2014,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tisková zpráva výrobce 23. 6. 2012. Sériový šestistupňový manuál; příplatkový automat dieselu není smíchán se zde uvedenými jízdními údaji. Přesný objem motoru nelze získat odhadem ze zaokrouhlených 1,6 l. Rozměry platí výslovně pro Clubvan. Současná obecná patička webu o WLTP není dokladem historického cyklu 2012."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2321,10 +2482,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2499,6 +2656,30 @@
       {
         "field": "scope",
         "reason": "Dílčí přehled modelových rodin a vybraných evropských konfigurací, nikoli úplný seznam motorů, modernizací a regionálních karoserií."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

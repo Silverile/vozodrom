@@ -2038,8 +2038,40 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 Hybrid",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "availablePowerKw": [
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy157/p2/pricing/mazda2-hybrid-price-and-spec-guide-july-2022.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 Hybrid",
+              "noteCs": "Vlastní britský průvodce Mazda2 Hybrid 2022, maximální výkon soustavy 85 kW. Přesný objem není přenesen z příbuzné Toyoty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Mazda2 Hybrid",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2062,7 +2094,8 @@
         "trims": null,
         "sources": [
           "https://uk.mazda-press.com/news/2021/2022-mazda2-hybrid/",
-          "https://en.wikipedia.org/wiki/Mazda2"
+          "https://en.wikipedia.org/wiki/Mazda2",
+          "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy157/p2/pricing/mazda2-hybrid-price-and-spec-guide-july-2022.pdf"
         ],
         "fieldSources": {
           "productionStatus": [
@@ -2074,7 +2107,8 @@
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1364000618",
       "https://www.wikidata.org/wiki/Q106244191",
-      "https://uk.mazda-press.com/news/2021/2022-mazda2-hybrid/"
+      "https://uk.mazda-press.com/news/2021/2022-mazda2-hybrid/",
+      "https://media-assets.mazda.eu/raw/upload/mazdauk/globalassets/uk/pdfs/fy157/p2/pricing/mazda2-hybrid-price-and-spec-guide-july-2022.pdf"
     ],
     "needsReview": [
       {
@@ -2083,10 +2117,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2136,6 +2166,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []

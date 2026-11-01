@@ -25345,8 +25345,40 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.4 Voltec",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 111,
+            "powerKwMax": 111,
+            "availablePowerKw": [
+              111
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://xr793.com/wp-content/uploads/2022/10/2012-Chevrolet-Volt-UK.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.4 Voltec",
+              "noteCs": "Vlastní britský prospekt Chevrolet Volt 2012: trakční výkon 111 kW. Výkon range extenderu se nepřičítá a přesný objem není převzat z Ampery.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Volt – první generace",
+                "fromYear": 2010,
+                "toYear": 2015,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -25389,7 +25421,8 @@
           "https://en.wikipedia.org/w/index.php?oldid=1379587419",
           "https://www.wikidata.org/wiki/Q927395",
           "https://investor.gm.com/static-files/88226d16-cf33-4ba8-ba1c-f9930c4f2c0b",
-          "https://www.annualreports.com/HostedData/AnnualReportArchive/g/NYSE_GM_2015.pdf"
+          "https://www.annualreports.com/HostedData/AnnualReportArchive/g/NYSE_GM_2015.pdf",
+          "https://xr793.com/wp-content/uploads/2022/10/2012-Chevrolet-Volt-UK.pdf"
         ]
       },
       {
@@ -25488,7 +25521,8 @@
       "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2016-volt.pdf",
       "https://avt.inl.gov/sites/default/files/pdf/phev/fact2016chevroletvolt.pdf",
       "https://www.chevrolet.com/discontinued-vehicles",
-      "https://en.wikipedia.org/wiki/Chevrolet_Volt_(second_generation)"
+      "https://en.wikipedia.org/wiki/Chevrolet_Volt_(second_generation)",
+      "https://xr793.com/wp-content/uploads/2022/10/2012-Chevrolet-Volt-UK.pdf"
     ],
     "needsReview": [
       {
@@ -25501,10 +25535,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -25546,6 +25576,10 @@
       {
         "field": "generations[1]",
         "reason": "Druhá generace: úplná technická data, přesné výrobní měsíce, fotografie a evropská homologace dovozů nejsou ověřeny."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

@@ -2986,8 +2986,53 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Han EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 380,
+            "powerKwMax": 380,
+            "availablePowerKw": [
+              380
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bydeurope.com/article/436"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "HAN AWD — EU2022",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "HAN AWD — EU2022",
+                "source": "https://bydeurope.com/article/436",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 380,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "c8b5eee7eb2626298f705d48aec2268ba4c51a997a31b7bbd9abd1e2ecb984ab"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Han EV — evropské uvedení2022",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Akumulátor: 85.4kWh podle zdroje; neověřeno, zda jde o využitelnou nebo celkovou kapacitu.  Úplné výrobní roky verze neověřeny. Převodovka není ve vybraném prameni samostatně popsána."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3124,10 +3169,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5450,8 +5491,40 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "DM-i",
+            "fuel": "petrol-phev",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 156,
+            "powerKwMax": 156,
+            "availablePowerKw": [
+              156
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://escoautomotive.bg/seal-5-dm-i/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "DM-i",
+              "noteCs": "Vlastní evropská nabídka Seal 5 DM-i uvádí celkových 156 kW. Nejde o 72 kW samotného ICE ani součet komponent; objem bez doplňování z čínské verze.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Destroyer 05 / Seal 5 DM-i — souhrnná výrobní rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5473,12 +5546,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/BYD_Destroyer_05"
+          "https://en.wikipedia.org/wiki/BYD_Destroyer_05",
+          "https://escoautomotive.bg/seal-5-dm-i/"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/BYD_Destroyer_05"
+      "https://en.wikipedia.org/wiki/BYD_Destroyer_05",
+      "https://escoautomotive.bg/seal-5-dm-i/"
     ],
     "needsReview": [
       {
@@ -5495,10 +5570,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5544,6 +5615,14 @@
       {
         "field": "scope",
         "reason": "Dílčí historie a vybrané evropské specifikace; souhrnná rodina není potvrzení jediné konstrukční generace. Úplný seznam čínských modelů2025–2026, faceliftů a motorizací zbývá doplnit."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [
@@ -7661,8 +7740,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "Tang EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 380,
+            "powerKwMax": 380,
+            "availablePowerKw": [
+              380
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://bydeurope.com/article/436"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "TANG AWD — EU2022",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "TANG AWD — EU2022",
+                "source": "https://bydeurope.com/article/436",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 380,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "2af194764dc4d476de1cb04e3bf5ee51c7d6060fa99cc2a3dcdc24912d4d9080"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Tang EV — evropské uvedení2022",
+                "fromYear": 2015,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Akumulátor: 86.4kWh podle zdroje; neověřeno, zda jde o využitelnou nebo celkovou kapacitu.  Úplné výrobní roky verze neověřeny. Převodovka není ve vybraném prameni samostatně popsána."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -7783,10 +7907,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

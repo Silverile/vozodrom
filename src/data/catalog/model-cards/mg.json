@@ -2252,8 +2252,36 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 TGI",
+            "fuel": "petrol",
+            "displacementCc": 1490,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_GS"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 TGI",
+              "noteCs": "Pro evropskou 1.5 zůstává výkon prázdný: tabulka zahrnuje také regionální ladění 124 kW, zatímco evropská 122 kW vyžaduje samostatné potvrzení. Regionální 2.0 není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "AS21",
+                "fromYear": 2015,
+                "toYear": 2019,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2276,13 +2304,15 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373376044",
-          "https://www.wikidata.org/wiki/Q19840427"
+          "https://www.wikidata.org/wiki/Q19840427",
+          "https://de.wikipedia.org/wiki/MG_GS"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1373376044",
-      "https://www.wikidata.org/wiki/Q19840427"
+      "https://www.wikidata.org/wiki/Q19840427",
+      "https://de.wikipedia.org/wiki/MG_GS"
     ],
     "needsReview": [
       {
@@ -2291,10 +2321,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -2344,6 +2370,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []
@@ -8630,8 +8664,38 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.9 V8",
+            "fuel": "petrol",
+            "displacementCc": 3946,
+            "displacementLitresNominal": 3.9,
+            "powerKwMin": 142,
+            "powerKwMax": 142,
+            "availablePowerKw": [
+              142
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_RV8"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "3.9 V8",
+              "noteCs": "Vlastní část MG RV8: 3946 cm³ a výslovných 142 kW v detailním popisu; nepřebírá motory původního MGB/GT V8.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "RV8 – výrobní rodina",
+                "fromYear": 1992,
+                "toYear": 1995,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -8654,7 +8718,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1373823043",
-          "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf"
+          "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
+          "https://de.wikipedia.org/wiki/MG_RV8"
         ],
         "fieldSources": {
           "productionStatus": [
@@ -8665,7 +8730,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1373823043",
-      "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf"
+      "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
+      "https://de.wikipedia.org/wiki/MG_RV8"
     ],
     "needsReview": [
       {
@@ -8678,10 +8744,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10462,8 +10524,67 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "SV 4.6 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4.6,
+            "powerKwMin": 235,
+            "powerKwMax": 235,
+            "availablePowerKw": [
+              235
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_XPower_SV"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "SV 4.6 V8",
+              "noteCs": "Doložené sériové silniční SV a SV-R; plánované Club Sport a extrémní výkon s NOS jsou vyloučeny. Přesné objemy z donorů se nepřebírají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XPower SV – výrobní rodina",
+                "fromYear": 2003,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "SV-R 5.0 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 5,
+            "powerKwMin": 283,
+            "powerKwMax": 283,
+            "availablePowerKw": [
+              283
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_XPower_SV"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "SV-R 5.0 V8",
+              "noteCs": "Doložené sériové silniční SV a SV-R; plánované Club Sport a extrémní výkon s NOS jsou vyloučeny. Přesné objemy z donorů se nepřebírají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XPower SV – výrobní rodina",
+                "fromYear": 2003,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10486,7 +10607,8 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1372238452",
-          "https://www.wikidata.org/wiki/Q1881472"
+          "https://www.wikidata.org/wiki/Q1881472",
+          "https://de.wikipedia.org/wiki/MG_XPower_SV"
         ],
         "fieldSources": {
           "productionStatus": [
@@ -10497,7 +10619,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1372238452",
-      "https://www.wikidata.org/wiki/Q1881472"
+      "https://www.wikidata.org/wiki/Q1881472",
+      "https://de.wikipedia.org/wiki/MG_XPower_SV"
     ],
     "needsReview": [
       {
@@ -10510,10 +10633,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10563,6 +10682,14 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []
@@ -11905,8 +12032,152 @@
           "hatchback",
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "ZS105 1.4",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 76,
+            "powerKwMax": 76,
+            "availablePowerKw": [
+              76
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ZS105 1.4",
+              "noteCs": "Vlastní historická ZS 2001–2005; moderní SUV ZS se nepřebírá. Výkony uvedené ve zdroji přímo v kW; přesné objemy a nejednotný dieselový výkon zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ZS (2001–2005) – výrobní rodina",
+                "fromYear": 2001,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "ZS110 1.6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 79,
+            "powerKwMax": 79,
+            "availablePowerKw": [
+              79
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ZS110 1.6",
+              "noteCs": "Vlastní historická ZS 2001–2005; moderní SUV ZS se nepřebírá. Výkony uvedené ve zdroji přímo v kW; přesné objemy a nejednotný dieselový výkon zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ZS (2001–2005) – výrobní rodina",
+                "fromYear": 2001,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "ZS120 1.8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 85,
+            "powerKwMax": 85,
+            "availablePowerKw": [
+              85
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ZS120 1.8",
+              "noteCs": "Vlastní historická ZS 2001–2005; moderní SUV ZS se nepřebírá. Výkony uvedené ve zdroji přímo v kW; přesné objemy a nejednotný dieselový výkon zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ZS (2001–2005) – výrobní rodina",
+                "fromYear": 2001,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "ZS180 2.5 V6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ZS180 2.5 V6",
+              "noteCs": "Vlastní historická ZS 2001–2005; moderní SUV ZS se nepřebírá. Výkony uvedené ve zdroji přímo v kW; přesné objemy a nejednotný dieselový výkon zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ZS (2001–2005) – výrobní rodina",
+                "fromYear": 2001,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "ZS TD 2.0",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ZS TD 2.0",
+              "noteCs": "Vlastní historická ZS 2001–2005; moderní SUV ZS se nepřebírá. Výkony uvedené ve zdroji přímo v kW; přesné objemy a nejednotný dieselový výkon zůstávají prázdné.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ZS (2001–2005) – výrobní rodina",
+                "fromYear": 2001,
+                "toYear": 2005,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -11930,7 +12201,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1377593992",
           "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
-          "https://www.wikidata.org/wiki/Q1543944"
+          "https://www.wikidata.org/wiki/Q1543944",
+          "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
         ],
         "fieldSources": {
           "productionStatus": [
@@ -11942,7 +12214,8 @@
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1377593992",
       "https://news.mgmotor.eu/wp-content/uploads/2024/03/CP-MG-Motor-partenaire-central-du-Festival-of-Speed-de-Goodwood-2024-1.pdf",
-      "https://www.wikidata.org/wiki/Q1543944"
+      "https://www.wikidata.org/wiki/Q1543944",
+      "https://de.wikipedia.org/wiki/MG_ZS_(2001)"
     ],
     "needsReview": [
       {
@@ -11955,10 +12228,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -12008,6 +12277,34 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[4].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[4].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[4].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []

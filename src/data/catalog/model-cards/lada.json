@@ -1427,8 +1427,38 @@
           "hatchback",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 8V",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 64,
+            "powerKwMax": 64,
+            "availablePowerKw": [
+              64
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Granta"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 8V",
+              "noteCs": "Reprezentativní základní exportní motor; sportovní a novější regionální verze nejsou přebírány.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Granta",
+                "fromYear": 2011,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1453,14 +1483,16 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lada_Granta",
-          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+          "https://de.wikipedia.org/wiki/Lada_Granta"
         ],
         "dateBasis": "production"
       }
     ],
     "sources": [
       "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
-      "https://en.wikipedia.org/wiki/Lada_Granta"
+      "https://en.wikipedia.org/wiki/Lada_Granta",
+      "https://de.wikipedia.org/wiki/Lada_Granta"
     ],
     "needsReview": [
       {
@@ -1477,10 +1509,6 @@
       },
       {
         "field": "generations[0].facelift[0].productionYear",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -1814,8 +1842,125 @@
           "hatchback",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 8V",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 60,
+            "powerKwMax": 60,
+            "availablePowerKw": [
+              60
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Kalina"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 8V",
+              "noteCs": "Vlastní evropská základní nabídka rodiny Kalina. Sport/NFR a nedoložené regionální stupně nejsou zahrnuty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "1117 / 1118 / 1119 / 2192 / 2194",
+                "fromYear": 2004,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.6 8V",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 64,
+            "powerKwMax": 64,
+            "availablePowerKw": [
+              64
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Kalina"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 8V",
+              "noteCs": "Vlastní evropská základní nabídka rodiny Kalina. Sport/NFR a nedoložené regionální stupně nejsou zahrnuty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "1117 / 1118 / 1119 / 2192 / 2194",
+                "fromYear": 2004,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.4 16V",
+            "fuel": "petrol",
+            "displacementCc": 1390,
+            "displacementLitresNominal": 1.4,
+            "powerKwMin": 66,
+            "powerKwMax": 66,
+            "availablePowerKw": [
+              66
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Kalina"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.4 16V",
+              "noteCs": "Vlastní evropská základní nabídka rodiny Kalina. Sport/NFR a nedoložené regionální stupně nejsou zahrnuty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "1117 / 1118 / 1119 / 2192 / 2194",
+                "fromYear": 2004,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.6 16V",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 72,
+            "powerKwMax": 72,
+            "availablePowerKw": [
+              72
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Kalina"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 16V",
+              "noteCs": "Vlastní evropská základní nabídka rodiny Kalina. Sport/NFR a nedoložené regionální stupně nejsou zahrnuty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "1117 / 1118 / 1119 / 2192 / 2194",
+                "fromYear": 2004,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1841,7 +1986,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Lada_Kalina",
           "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+          "https://de.wikipedia.org/wiki/Lada_Kalina"
         ],
         "dateBasis": "production"
       }
@@ -1849,7 +1995,8 @@
     "sources": [
       "https://reportcollection.inion.ru/reports/download/?reportId=2748",
       "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
-      "https://en.wikipedia.org/wiki/Lada_Kalina"
+      "https://en.wikipedia.org/wiki/Lada_Kalina",
+      "https://de.wikipedia.org/wiki/Lada_Kalina"
     ],
     "needsReview": [
       {
@@ -1858,10 +2005,6 @@
       },
       {
         "field": "generations[0].facelift[0].productionYear",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -2520,8 +2663,38 @@
           "hatchback",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.6 16V",
+            "fuel": "petrol",
+            "displacementCc": 1596,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": 72,
+            "powerKwMax": 72,
+            "availablePowerKw": [
+              72
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lada_Priora"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.6 16V",
+              "noteCs": "Vlastní exportní Priora 1.6 16V; jiné regionální výkonové stupně se nepřebírají.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "2170 / 2171 / 2172 / 21728",
+                "fromYear": 2007,
+                "toYear": 2018,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2547,7 +2720,8 @@
         "sources": [
           "https://en.wikipedia.org/wiki/Lada_Priora",
           "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+          "https://de.wikipedia.org/wiki/Lada_Priora"
         ],
         "dateBasis": "production"
       }
@@ -2555,7 +2729,8 @@
     "sources": [
       "https://reportcollection.inion.ru/reports/download/?reportId=2748",
       "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
-      "https://en.wikipedia.org/wiki/Lada_Priora"
+      "https://en.wikipedia.org/wiki/Lada_Priora",
+      "https://de.wikipedia.org/wiki/Lada_Priora"
     ],
     "needsReview": [
       {
@@ -2564,10 +2739,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {

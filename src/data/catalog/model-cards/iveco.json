@@ -18,8 +18,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.0 HPT",
+            "fuel": "diesel",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "3.0 HPT 4×4 – třídveřová osobní Campagnola",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "3.0 HPT 4×4 – třídveřová osobní Campagnola",
+                "source": "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 2998,
+                  "cylinders": 4,
+                  "powerKw": 130,
+                  "powerStandard": null,
+                  "torqueNm": 400
+                },
+                "sha256": "a4f06cd1b536474eeaf785b9695bb705920937193f52f29b41a1859c1c7fa29f"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Campagnola",
+                "fromYear": 2008,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Motorový objem,130kW a spotřeba z vládního přehledu; čtyřválec,400Nm a manuál s redukcí z původního časopisu Iveco. Dvanáct dopředných kombinací znamená šest stupňů s redukcí, nikoli dvanáctistupňovou převodovku. Konec nabídky2010/2011 nerozřešen."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -89,7 +134,8 @@
         ],
         "sources": [
           "https://www.iveco.com/italy/scopri-iveco/Sala-stampa/Release-Pages/PressReleasePages/2008/46",
-          "https://www.iveco.com/italy/-/media/IVECOdotcom/docs/CamionServizi/Sett-Ott2008.pdf?rev=76fec4ba90904958a134ada7c397f737"
+          "https://www.iveco.com/italy/-/media/IVECOdotcom/docs/CamionServizi/Sett-Ott2008.pdf?rev=76fec4ba90904958a134ada7c397f737",
+          "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf"
         ],
         "dateBasis": "production"
       }
@@ -114,10 +160,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro přesné provedení ověřen; prázdný konec nepotvrzuje současnou výrobu."
       },
       {
@@ -1886,8 +1928,97 @@
           "suv",
           "pickup"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "3.0 HPI",
+            "fuel": "diesel",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 107,
+            "powerKwMax": 107,
+            "availablePowerKw": [
+              107
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "3.0 HPI 4×4 – třídveřové/pětidveřové podle tabulky",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "3.0 HPI 4×4 – třídveřové/pětidveřové podle tabulky",
+                "source": "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 2998,
+                  "cylinders": 4,
+                  "powerKw": 107,
+                  "powerStandard": null,
+                  "torqueNm": 350
+                },
+                "sha256": "552fd5a7076ee393bff3c08cb4997bdde3f024032af375e17ddfddfee6fd346c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Massif",
+                "fromYear": 2008,
+                "toYear": 2011,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vládní tabulka společně uvádí3/5dveří; nejsou doplněny rozměry/hmotnosti podle jiného rozvoru. Výkon kW je výslovně publikovaný, nikoli přepočet historických koní. Čtyřválec, točivý moment a šestistupňový manuál ověřeny v tiskové sadě IVECO; dvanáct dopředných kombinací zahrnuje redukci. Pohon 4×4 je připojitelný, v režimu 4×2 jsou poháněna zadní kola. Nez?visl? dobov? technick? zpr?va Caradisiac potvrzuje 350/400 Nm a ?estistup?ovou p?evodovku."
+            }
+          },
+          {
+            "variant": "3.0 HPT",
+            "fuel": "diesel",
+            "displacementCc": 2998,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "3.0 HPT 4×4 – třídveřové/pětidveřové podle tabulky",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "3.0 HPT 4×4 – třídveřové/pětidveřové podle tabulky",
+                "source": "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf",
+                "engine": {
+                  "fuel": "diesel",
+                  "displacementCc": 2998,
+                  "cylinders": 4,
+                  "powerKw": 130,
+                  "powerStandard": null,
+                  "torqueNm": 400
+                },
+                "sha256": "68f3a668d0e7a03d238ccce8b8e3b25178ebc3aa8440732fb3ee567ec29ddcdb"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Massif",
+                "fromYear": 2008,
+                "toYear": 2011,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Vládní tabulka společně uvádí3/5dveří; nejsou doplněny rozměry/hmotnosti podle jiného rozvoru. Výkon kW je výslovně publikovaný, nikoli přepočet historických koní. Čtyřválec, točivý moment a šestistupňový manuál ověřeny v tiskové sadě IVECO; dvanáct dopředných kombinací zahrnuje redukci. Pohon 4×4 je připojitelný, v režimu 4×2 jsou poháněna zadní kola. Nez?visl? dobov? technick? zpr?va Caradisiac potvrzuje 350/400 Nm a ?estistup?ovou p?evodovku."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2024,7 +2155,8 @@
           "https://en.wikipedia.org/wiki/Iveco_Massif",
           "https://www.iveco.com/en-us/press-room/kit/Documents/Modelli_attuali/Massif_pdf.pdf",
           "https://www.valeoservice.com/en-com/techassist/vehicle/P-30757?country=AL",
-          "https://www.caradisiac.com/VUL-Iveco-Massif-la-fiche-technique-28178.htm"
+          "https://www.caradisiac.com/VUL-Iveco-Massif-la-fiche-technique-28178.htm",
+          "https://www.mise.gov.it/images/stories/energia/phpRsWLJr.pdf"
         ]
       }
     ],
@@ -2052,10 +2184,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

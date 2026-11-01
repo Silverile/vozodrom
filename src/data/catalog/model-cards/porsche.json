@@ -3277,8 +3277,53 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "4.6 V8 Hybrid",
+            "fuel": "petrol-phev",
+            "displacementCc": 4593,
+            "displacementLitresNominal": 4.6,
+            "powerKwMin": 652,
+            "powerKwMax": 652,
+            "availablePowerKw": [
+              652
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.porsche.eu/en/press-kits/Porsche-Museum/Porsche-918-Spyder.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "918 Spyder – systémový výkon",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "918 Spyder – systémový výkon",
+                "source": "https://newsroom.porsche.eu/en/press-kits/Porsche-Museum/Porsche-918-Spyder.html",
+                "engine": {
+                  "fuel": "petrol-phev",
+                  "displacementCc": 4593,
+                  "cylinders": 8,
+                  "powerKw": 652,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "d2ca22e8f952b23e703a9f33733e96154ab6cc2296fbf6bde8312c63586c36ed"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "918",
+                "fromYear": 2013,
+                "toYear": 2015,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Muzejní specifikace modelu a hybridní přehled Porsche. 652 kW je systémový výkon, nikoli samotný V8. Parametry nejsou samostatnou tabulkou Weissach; spotřeba 3,1 l/100 km NEDC není přenesena přes konflikt s intervalem 3,0–3,1 v dalších pramenech."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3385,10 +3430,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

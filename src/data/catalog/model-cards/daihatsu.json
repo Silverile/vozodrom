@@ -1593,8 +1593,97 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.3",
+            "fuel": "petrol",
+            "displacementCc": 1298,
+            "displacementLitresNominal": 1.3,
+            "powerKwMin": 64,
+            "powerKwMax": 64,
+            "availablePowerKw": [
+              64
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.autoweek.nl/autotests/artikel/daihatsu-copen-roadster-13-16v-dvvt-2006/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1.3 16V DVVT 64 kW 5MT - Europe, 2006 test specification",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1.3 16V DVVT 64 kW 5MT - Europe, 2006 test specification",
+                "source": "https://www.autoweek.nl/autotests/artikel/daihatsu-copen-roadster-13-16v-dvvt-2006/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1298,
+                  "cylinders": 4,
+                  "powerKw": 64,
+                  "powerStandard": null,
+                  "torqueNm": 120
+                },
+                "sha256": "692078e9fbdd588766fd762a012a376f6371cfea652f8f1c75738dd23bed70b4"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "L880",
+                "fromYear": 2002,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Evropsky motor 1.3 je odlisen od japonskeho turba. Delka 3395/3440 mm a hmotnost 850/925-935 kg se v pramenech lisi, proto zustavaji null. AutoWeek rozlisuje namerenych 10,6 s a tovarnich 9,0 s; zrychleni neni slouceno do jedne hodnoty. Rok specifikace neni odvozenym zacatkem vyroby."
+            }
+          },
+          {
+            "variant": "JB-DET",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 47,
+            "powerKwMax": 47,
+            "availablePowerKw": [
+              47
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.daihatsu.com/jp/news/2002/20020619-01.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "Active Top JB-DET47kW 5MT – Japan06/2002",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "Active Top JB-DET47kW 5MT – Japan06/2002",
+                "source": "https://www.daihatsu.com/jp/news/2002/20020619-01.html",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 47,
+                  "powerStandard": null,
+                  "torqueNm": 110
+                },
+                "sha256": "81516f5b1ec22460006e4dcac53cfee4ca7984d2d38c9edab65d31bca2760810"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "L880",
+                "fromYear": 2002,
+                "toYear": 2012,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Původní tisková zpráva uvádí47kW/110Nm a10–15 režim vkm/l. Hodnoty nebyly převáděny na odhad l/100km ani naWLTP. Evropské50kW/100Nm ani0–60mph se nepřenášejí na tuto japonskou verzi."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1853,10 +1942,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2067,6 +2152,14 @@
       {
         "field": "generations[1].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": []

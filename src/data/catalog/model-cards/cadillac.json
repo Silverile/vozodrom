@@ -2353,8 +2353,52 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LYRIQ EV",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 388,
+            "powerKwMax": 388,
+            "availablePowerKw": [
+              388
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://shop.cadillacanz.com/cms/models/Cadillac%20LYRIQ%20Specifications-2025.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "LYRIQ Luxury AWD – australská specifikace 2025",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "LYRIQ Luxury AWD – australská specifikace 2025",
+                "source": "https://shop.cadillacanz.com/cms/models/Cadillac%20LYRIQ%20Specifications-2025.pdf",
+                "engine": {
+                  "fuel": "electric",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 388,
+                  "torqueNm": 610
+                },
+                "sha256": "d6d9d34f6793658faffc59e72501dcd24e582b32b63d6559e3dcedfdf0896ee8"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "LYRIQ – neúplně rozlišená rodina",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Specifikační list australské Luxury AWD. Šířka 1977 mm bez zrcátek, včetně zrcátek list uvádí 2207 mm; jiné trhy a výbavy nejsou slučovány."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2422,7 +2466,8 @@
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/Cadillac_Lyriq",
-          "https://investor.gm.com/static-files/f1d52599-8aa1-4c33-a4c4-ca0b73fc7adc"
+          "https://investor.gm.com/static-files/f1d52599-8aa1-4c33-a4c4-ca0b73fc7adc",
+          "https://shop.cadillacanz.com/cms/models/Cadillac%20LYRIQ%20Specifications-2025.pdf"
         ]
       }
     ],
@@ -2446,10 +2491,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

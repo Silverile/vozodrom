@@ -3713,8 +3713,38 @@
         "bodyTypes": [
           "kabriolet"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.4 16V EDG",
+            "fuel": "petrol",
+            "displacementCc": 2360,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": 125,
+            "powerKwMax": 125,
+            "availablePowerKw": [
+              125
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://filtron.eu/de/katalog/suchergebnisse/produkt.html/k1303_filtron.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.4 16V EDG",
+              "noteCs": "Aplikační tabulka výrobce pro vlastní Flavia 2.4 16V EDG 03/2012–12/2014; nikoli motor historické Flavie.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Flavia – moderní kabriolet",
+                "fromYear": 2012,
+                "toYear": 2014,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3740,7 +3770,8 @@
         "sources": [
           "https://en.wikipedia.org/w/index.php?oldid=1375426185",
           "https://www.wikidata.org/wiki/Q944280",
-          "https://www.convertiblecarmagazine.com/buyers_guide/lancia-flavia/"
+          "https://www.convertiblecarmagazine.com/buyers_guide/lancia-flavia/",
+          "https://filtron.eu/de/katalog/suchergebnisse/produkt.html/k1303_filtron.html"
         ],
         "dateBasis": "production"
       }
@@ -3751,7 +3782,8 @@
       "https://www.stellantisheritage.com/it-it/heritage/storie/lancia-fulvia",
       "https://www.stellantisheritage.com/it-it/brand/lancia-automobili",
       "https://en.wikipedia.org/wiki/Lancia_Flavia",
-      "https://www.convertiblecarmagazine.com/buyers_guide/lancia-flavia/"
+      "https://www.convertiblecarmagazine.com/buyers_guide/lancia-flavia/",
+      "https://filtron.eu/de/katalog/suchergebnisse/produkt.html/k1303_filtron.html"
     ],
     "needsReview": [
       {
@@ -3836,10 +3868,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

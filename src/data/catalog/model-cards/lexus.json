@@ -530,8 +530,133 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "ES 300h",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 144,
+            "powerKwMax": 144,
+            "availablePowerKw": [
+              144
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ES 300h",
+              "noteCs": "Vlastní osmá generace: evropské kombinované hybridní a trakční elektrické výkony; článek odlišuje západní a východní Evropu. Přesný objem hybridu není doplněn z jiného modelu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XZ20",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 7,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "ES 350h",
+            "fuel": "petrol-hev",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 182,
+            "powerKwMax": 182,
+            "availablePowerKw": [
+              182
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ES 350h",
+              "noteCs": "Vlastní osmá generace: evropské kombinované hybridní a trakční elektrické výkony; článek odlišuje západní a východní Evropu. Přesný objem hybridu není doplněn z jiného modelu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XZ20",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 7,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "ES 350e",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 165,
+            "powerKwMax": 165,
+            "availablePowerKw": [
+              165
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ES 350e",
+              "noteCs": "Vlastní osmá generace: evropské kombinované hybridní a trakční elektrické výkony; článek odlišuje západní a východní Evropu. Přesný objem hybridu není doplněn z jiného modelu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XZ20",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 7,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "ES 500e",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 252,
+            "powerKwMax": 252,
+            "availablePowerKw": [
+              252
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "ES 500e",
+              "noteCs": "Vlastní osmá generace: evropské kombinované hybridní a trakční elektrické výkony; článek odlišuje západní a východní Evropu. Přesný objem hybridu není doplněn z jiného modelu.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XZ20",
+                "fromYear": 2025,
+                "toYear": null,
+                "generationIndex": 7,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -553,12 +678,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_ES"
+          "https://en.wikipedia.org/wiki/Lexus_ES",
+          "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Lexus_ES"
+      "https://en.wikipedia.org/wiki/Lexus_ES",
+      "https://newsroom.lexus.eu/the-all-new-lexus-es-redefining-the-luxury-sedan/"
     ],
     "needsReview": [
       {
@@ -998,10 +1125,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[7].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[7].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -1048,6 +1171,14 @@
       {
         "field": "generations[7].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[7].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[7].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -3622,8 +3753,102 @@
         "bodyTypes": [
           "kupe"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LC 500 5.0 V8",
+            "fuel": "petrol",
+            "displacementCc": 4969,
+            "displacementLitresNominal": 5,
+            "powerKwMin": 351,
+            "powerKwMax": 351,
+            "availablePowerKw": [
+              351
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_LC"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LC 500 5.0 V8",
+              "noteCs": "Vlastní tabulka LC: rané a pozdější evropské V8 a deklarovaná systémová hodnota hybridního LC500h, nikoli samotných 220 kW ICE.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Z100 – kupé",
+                "fromYear": 2017,
+                "toYear": 2026,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "LC 500 5.0 V8",
+            "fuel": "petrol",
+            "displacementCc": 4969,
+            "displacementLitresNominal": 5,
+            "powerKwMin": 341,
+            "powerKwMax": 341,
+            "availablePowerKw": [
+              341
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_LC"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LC 500 5.0 V8",
+              "noteCs": "Vlastní tabulka LC: rané a pozdější evropské V8 a deklarovaná systémová hodnota hybridního LC500h, nikoli samotných 220 kW ICE.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Z100 – kupé",
+                "fromYear": 2017,
+                "toYear": 2026,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "LC 500h 3.5",
+            "fuel": "petrol-hev",
+            "displacementCc": 3456,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 264,
+            "powerKwMax": 264,
+            "availablePowerKw": [
+              264
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_LC"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LC 500h 3.5",
+              "noteCs": "Vlastní tabulka LC: rané a pozdější evropské V8 a deklarovaná systémová hodnota hybridního LC500h, nikoli samotných 220 kW ICE.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Z100 – kupé",
+                "fromYear": 2017,
+                "toYear": 2026,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3648,7 +3873,8 @@
           "https://en.wikipedia.org/wiki/Lexus_LC",
           "https://lexus.jp/models/lc/",
           "https://www.roadandtrack.com/news/a70202730/lexus-lc-500-production-ends-august-2026/",
-          "https://lexus.jp/news/info/delivery/"
+          "https://lexus.jp/news/info/delivery/",
+          "https://de.wikipedia.org/wiki/Lexus_LC"
         ],
         "fieldSources": {
           "to": [
@@ -3739,7 +3965,8 @@
       "https://pressroom.lexus.com/lexus-celebrates-the-need-to-get-out/",
       "https://lexus.jp/models/lc/",
       "https://www.roadandtrack.com/news/a70202730/lexus-lc-500-production-ends-august-2026/",
-      "https://lexus.jp/news/info/delivery/"
+      "https://lexus.jp/news/info/delivery/",
+      "https://de.wikipedia.org/wiki/Lexus_LC"
     ],
     "needsReview": [
       {
@@ -3752,10 +3979,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4075,8 +4298,40 @@
         "bodyTypes": [
           "mpv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LM 350h",
+            "fuel": "petrol-hev",
+            "displacementCc": 2487,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 184,
+            "powerKwMax": 184,
+            "availablePowerKw": [
+              184
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240206-LM-Tech-Specs.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LM 350h",
+              "noteCs": "Vlastní britské LM druhé generace. Systémových 184 kW, nikoli 140 kW ICE nebo regionální LM500h.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "AW10",
+                "fromYear": 2023,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4098,12 +4353,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_LM"
+          "https://en.wikipedia.org/wiki/Lexus_LM",
+          "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240206-LM-Tech-Specs.pdf"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Lexus_LM"
+      "https://en.wikipedia.org/wiki/Lexus_LM",
+      "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240206-LM-Tech-Specs.pdf"
     ],
     "needsReview": [
       {
@@ -4180,10 +4437,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5283,8 +5536,97 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "NX 300h",
+            "fuel": "petrol-hev",
+            "displacementCc": 2494,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 145,
+            "powerKwMax": 145,
+            "availablePowerKw": [
+              145
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "NX300h S FWD e-CVT",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "NX300h S FWD e-CVT",
+                "source": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": 2494,
+                  "cylinders": 4,
+                  "powerKw": 145,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "0e1b9da17443441473bf71697681eada43206e5ecf8a39f91cccc62153e01f2b"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "AZ10",
+                "fromYear": 2014,
+                "toYear": 2021,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "145kW je celkový hybridní výkon;210Nm samotného motoru a270Nm elektromotoru nejsou vydávány za systémový moment. e-CVT je bez pevného počtu převodových stupňů; společná kategorieautomatic. Šířka je výslovně se sklopenými zrcátky, nikoli potvrzená čistá šířka plechové karoserie.0–62mph a imperiálnímpg nepřepočítány."
+            }
+          },
+          {
+            "variant": "NX 200t",
+            "fuel": "petrol",
+            "displacementCc": 1998,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 175,
+            "powerKwMax": 175,
+            "availablePowerKw": [
+              175
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "NX200t F Sport AWD 6AT",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "NX200t F Sport AWD 6AT",
+                "source": "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": 1998,
+                  "cylinders": 4,
+                  "powerKw": 175,
+                  "powerStandard": null,
+                  "torqueNm": 350
+                },
+                "sha256": "5805f174f5ff13db122e0541f3ca4a924e3ff2727d584c1d2b8ffc4fcdb002f1"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "AZ10",
+                "fromYear": 2014,
+                "toYear": 2021,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "NX200t byl v tomto britském podkladu výslovně pouzeF SportAWD. Šířka se sklopenými zrcátky; britské0–62mph/mpg zůstávají bez převodu."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5478,8 +5820,97 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "NX 350h",
+            "fuel": "petrol-hev",
+            "displacementCc": 2487,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 179,
+            "powerKwMax": 179,
+            "availablePowerKw": [
+              179
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://nl.lexus.be/content/dam/lexus/nmsc/belgium/local-assets/new-cars/brochures/nl/mai2022/271x210_Lexus_ListePrix_NX%20350h%20-%20450h%2B_MY0522_BNL.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "NX350h FWD e-CVT",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "NX350h FWD e-CVT",
+                "source": "https://nl.lexus.be/content/dam/lexus/nmsc/belgium/local-assets/new-cars/brochures/nl/mai2022/271x210_Lexus_ListePrix_NX%20350h%20-%20450h%2B_MY0522_BNL.pdf",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": 2487,
+                  "cylinders": null,
+                  "powerKw": 179,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "cb15c650595cdf117c07b095fedf9bbbe6041c13da3b11e55171b75131bdd480"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "AZ20",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon179/227kW je systémový, ne samotného motoru. Žádné údaje novéprozatímníNX2026nepřeneseny na tento list2022. AWDspotřeba aPHEVdojezd jsou rozsahy podle konfigurace, proto jejich jediná hodnota zůstává null. e-CVT bez pevných stupňů; neuvedený systémový moment ani hmotnost nedopočítány."
+            }
+          },
+          {
+            "variant": "NX 450h+",
+            "fuel": "petrol-phev",
+            "displacementCc": 2487,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 227,
+            "powerKwMax": 227,
+            "availablePowerKw": [
+              227
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://nl.lexus.be/content/dam/lexus/nmsc/belgium/local-assets/new-cars/brochures/nl/mai2022/271x210_Lexus_ListePrix_NX%20350h%20-%20450h%2B_MY0522_BNL.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "NX450h+ E-Four e-CVT",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "NX450h+ E-Four e-CVT",
+                "source": "https://nl.lexus.be/content/dam/lexus/nmsc/belgium/local-assets/new-cars/brochures/nl/mai2022/271x210_Lexus_ListePrix_NX%20350h%20-%20450h%2B_MY0522_BNL.pdf",
+                "engine": {
+                  "fuel": "petrol-phev",
+                  "displacementCc": 2487,
+                  "cylinders": null,
+                  "powerKw": 227,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "0ec1d5d17c2c62a2652a73187eb46077752e505f4a69c97cb93575e42aa1d625"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "AZ20",
+                "fromYear": 2021,
+                "toYear": null,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Výkon179/227kW je systémový, ne samotného motoru. Žádné údaje novéprozatímníNX2026nepřeneseny na tento list2022. AWDspotřeba aPHEVdojezd jsou rozsahy podle konfigurace, proto jejich jediná hodnota zůstává null. e-CVT bez pevných stupňů; neuvedený systémový moment ani hmotnost nedopočítány."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -5654,7 +6085,8 @@
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lexus_NX",
-      "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf"
+      "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/2015-NX-300h-and-200t-Gen1.pdf",
+      "https://nl.lexus.be/content/dam/lexus/nmsc/belgium/local-assets/new-cars/brochures/nl/mai2022/271x210_Lexus_ListePrix_NX%20350h%20-%20450h%2B_MY0522_BNL.pdf"
     ],
     "needsReview": [
       {
@@ -5667,10 +6099,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -5871,10 +6299,6 @@
       },
       {
         "field": "generations[1].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[1].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6308,8 +6732,59 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "fuel": "petrol",
+            "displacementCc": 2995,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 148,
+            "powerKwMax": 148,
+            "availablePowerKw": [
+              148
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "variant": "RX 300",
+            "sources": [
+              "https://www.ultimatespecs.com/car-specs/Lexus/7426/Lexus-RX-I-300.html"
+            ],
+            "sourceScope": {
+              "tableSection": "Vehicle Engine Technical Data",
+              "variantYears": "(2000 - 2003)",
+              "originalVariant": "Lexus RX I 300 Specs",
+              "powerBasis": "explicit vehicle Horsepower field in kW; no conversion",
+              "specificationPage": {
+                "url": "https://www.ultimatespecs.com/car-specs/Lexus/7426/Lexus-RX-I-300.html",
+                "title": "Lexus RX I 300 Specs",
+                "modelAliases": [
+                  "RX"
+                ],
+                "generation": "RX 1st Gen. (XU10) - 1999 New Model",
+                "generationFieldPresent": true,
+                "generationPageUrl": "https://www.ultimatespecs.com/car-specs/Lexus/M1220/RX-I",
+                "linkedFromGenerationEngineTable": true,
+                "generationPageTitle": "RX I",
+                "generationProductionFrom": 1998,
+                "generationProductionTo": 2003,
+                "variantDateText": "(2000 - 2003)",
+                "fuelText": " Petrol V 6",
+                "bodyText": "-",
+                "powerLabel": "HORSEPOWER",
+                "powerText": "201 PS / 198 HP / 148 kW@ 5600 rpm",
+                "displacementText": "2995 cm3 / 182.8 cu-in"
+              },
+              "generationEvidence": {
+                "method": "specification-page",
+                "anchor": "RX 1st Gen. (XU10) - 1999 New Model",
+                "fromYear": 1998,
+                "toYear": 2003,
+                "generationIndex": 0,
+                "rowFromYear": 2000,
+                "rowToYear": 2003
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6331,7 +6806,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_RX"
+          "https://en.wikipedia.org/wiki/Lexus_RX",
+          "https://www.ultimatespecs.com/car-specs/Lexus/7426/Lexus-RX-I-300.html"
         ]
       },
       {
@@ -6344,8 +6820,71 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "RX 300",
+            "fuel": "petrol",
+            "displacementCc": 2995,
+            "displacementLitresNominal": 3,
+            "powerKwMin": 150,
+            "powerKwMax": 150,
+            "availablePowerKw": [
+              150
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_RX"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 300",
+              "noteCs": "Vlastní druhá generace: výslovný německý RX300 a celkový systémový výkon RX400h. Americký RX330 není zahrnut.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XU30 – Lexus RX",
+                "fromYear": 2003,
+                "toYear": 2008,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "RX 400h",
+            "fuel": "petrol-hev",
+            "displacementCc": 3311,
+            "displacementLitresNominal": 3.3,
+            "powerKwMin": 200,
+            "powerKwMax": 200,
+            "availablePowerKw": [
+              200
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_RX"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 400h",
+              "noteCs": "Vlastní druhá generace: výslovný německý RX300 a celkový systémový výkon RX400h. Americký RX330 není zahrnut.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XU30 – Lexus RX",
+                "fromYear": 2003,
+                "toYear": 2008,
+                "generationIndex": 1,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6367,7 +6906,8 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_RX"
+          "https://en.wikipedia.org/wiki/Lexus_RX",
+          "https://de.wikipedia.org/wiki/Lexus_RX"
         ]
       },
       {
@@ -6380,8 +6920,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "RX 450h",
+            "fuel": "petrol-hev",
+            "displacementCc": 3456,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 220,
+            "powerKwMax": 220,
+            "availablePowerKw": [
+              220
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/next-generation-lexus-hybrid-drive-gives-rx-450h-all-round-advantage/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "RX450h – UK2009 hybrid AWD",
+              "powerBasis": "system",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "RX450h – UK2009 hybrid AWD",
+                "source": "https://media.lexus.co.uk/next-generation-lexus-hybrid-drive-gives-rx-450h-all-round-advantage/",
+                "engine": {
+                  "fuel": "petrol-hev",
+                  "displacementCc": 3456,
+                  "cylinders": 6,
+                  "powerKw": 220,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "897ff0c1a026d07ca87637e9cdd79673befa4559cf80dfb322902b8a6052601c"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "AL10",
+                "fromYear": 2008,
+                "toYear": 2015,
+                "generationIndex": 2,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "220kW je systémový výkon;317Nm patří samotnémuV6 a není vydáváno za celkový moment. Vybraná pohonná konfigurace, ne úplná technická specifikace všech výbav. Britské0–62mph ani imperiálnímpg nepřevedeny na metrická pole."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6461,44 +7046,40 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
-        "drivetrains": null,
-        "transmissions": null,
-        "dimensionsMm": {
-          "length": null,
-          "width": null,
-          "height": null,
-          "wheelbase": null
-        },
-        "specificationScope": {
-          "market": "source-production",
-          "modelYear": null,
-          "variant": null,
-          "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
-        },
-        "trunkL": null,
-        "markets": [],
-        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
-        "photo": null,
-        "trims": null,
-        "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_RX"
-        ]
-      },
-      {
-        "code": null,
-        "name": "AL20 – RX L",
-        "from": 2017,
-        "to": 2022,
-        "productionStatus": "ended",
-        "facelift": null,
-        "bodyTypes": [
-          "suv"
+        "engines": [
+          {
+            "variant": "RX 450h",
+            "fuel": "petrol-hev",
+            "displacementCc": 3456,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 230,
+            "powerKwMax": 230,
+            "availablePowerKw": [
+              230
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1622538920turtlstorylexusrxrxlpricelist.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 450h",
+              "noteCs": "Vlastní evropský standardní RX AL20, deklarovaný společný výkon soustavy 230 kW; nikoli samotných 193 kW ICE.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "AL20 – standardní karoserie",
+                "fromYear": 2015,
+                "toYear": 2022,
+                "generationIndex": 3,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6521,21 +7102,53 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/Lexus_RX",
-          "https://static.nhtsa.gov/odi/tsbs/2020/MC-10177611-9999.pdf"
+          "https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1622538920turtlstorylexusrxrxlpricelist.pdf"
         ]
       },
       {
         "code": null,
-        "name": "ALA10 / ALH10",
-        "from": 2022,
-        "to": null,
-        "productionStatus": "unknown",
+        "name": "AL20 – RX L",
+        "from": 2017,
+        "to": 2022,
+        "productionStatus": "ended",
         "facelift": null,
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "RX 450h L",
+            "fuel": "petrol-hev",
+            "displacementCc": 3456,
+            "displacementLitresNominal": 3.5,
+            "powerKwMin": 230,
+            "powerKwMax": 230,
+            "availablePowerKw": [
+              230
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1622538920turtlstorylexusrxrxlpricelist.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 450h L",
+              "noteCs": "Výrobce v téže tabulce výslovně uvádí i dlouhý RX L; motor není odvozen pouze z podobnosti karoserie.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "AL20 – RX L",
+                "fromYear": 2017,
+                "toYear": 2022,
+                "generationIndex": 4,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6557,13 +7170,151 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_RX"
+          "https://en.wikipedia.org/wiki/Lexus_RX",
+          "https://static.nhtsa.gov/odi/tsbs/2020/MC-10177611-9999.pdf",
+          "https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1622538920turtlstorylexusrxrxlpricelist.pdf"
+        ]
+      },
+      {
+        "code": null,
+        "name": "ALA10 / ALH10",
+        "from": 2022,
+        "to": null,
+        "productionStatus": "unknown",
+        "facelift": null,
+        "bodyTypes": [
+          "suv"
+        ],
+        "engines": [
+          {
+            "variant": "RX 350h",
+            "fuel": "petrol-hev",
+            "displacementCc": 2487,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 184,
+            "powerKwMax": 184,
+            "availablePowerKw": [
+              184
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240709-RX-Press-Pack.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 350h",
+              "noteCs": "Vlastní evropská pátá generace, technický list výrobce 2024. Pouze deklarované systémové výkony; regionální čistě benzinový RX350 není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ALA10 / ALH10",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 5,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "RX 450h+",
+            "fuel": "petrol-phev",
+            "displacementCc": 2487,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 227,
+            "powerKwMax": 227,
+            "availablePowerKw": [
+              227
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240709-RX-Press-Pack.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 450h+",
+              "noteCs": "Vlastní evropská pátá generace, technický list výrobce 2024. Pouze deklarované systémové výkony; regionální čistě benzinový RX350 není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ALA10 / ALH10",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 5,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          },
+          {
+            "variant": "RX 500h",
+            "fuel": "petrol-hev",
+            "displacementCc": 2393,
+            "displacementLitresNominal": 2.4,
+            "powerKwMin": 273,
+            "powerKwMax": 273,
+            "availablePowerKw": [
+              273
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240709-RX-Press-Pack.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "RX 500h",
+              "noteCs": "Vlastní evropská pátá generace, technický list výrobce 2024. Pouze deklarované systémové výkony; regionální čistě benzinový RX350 není přebírán.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "ALA10 / ALH10",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 5,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "powerBasis": "system",
+              "componentPowerKw": null
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
+        "drivetrains": null,
+        "transmissions": null,
+        "dimensionsMm": {
+          "length": null,
+          "width": null,
+          "height": null,
+          "wheelbase": null
+        },
+        "specificationScope": {
+          "market": "source-production",
+          "modelYear": null,
+          "variant": null,
+          "bodyType": null,
+          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+        },
+        "trunkL": null,
+        "markets": [],
+        "marketNotesCs": "Historická výroba neznamená potvrzenou současnou nabídku v Česku.",
+        "photo": null,
+        "trims": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lexus_RX",
+          "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240709-RX-Press-Pack.pdf"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/Lexus_RX",
-      "https://static.nhtsa.gov/odi/tsbs/2020/MC-10177611-9999.pdf"
+      "https://static.nhtsa.gov/odi/tsbs/2020/MC-10177611-9999.pdf",
+      "https://de.wikipedia.org/wiki/Lexus_RX",
+      "https://media.lexus.co.uk/wp-content/uploads/sites/3/2021/06/1622538920turtlstorylexusrxrxlpricelist.pdf",
+      "https://media.lexus.co.uk/wp-content/uploads/sites/3/pdf/240709-RX-Press-Pack.pdf",
+      "https://media.lexus.co.uk/next-generation-lexus-hybrid-drive-gives-rx-450h-all-round-advantage/",
+      "https://www.ultimatespecs.com/car-specs/Lexus/7426/Lexus-RX-I-300.html"
     ],
     "needsReview": [
       {
@@ -6576,10 +7327,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6639,10 +7386,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[1].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[1].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6696,10 +7439,6 @@
       },
       {
         "field": "generations[2].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[2].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6759,10 +7498,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[3].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[3].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -6816,10 +7551,6 @@
       },
       {
         "field": "generations[4].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[4].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -6880,10 +7611,6 @@
       },
       {
         "field": "generations[5].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[5].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
