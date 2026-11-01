@@ -2979,8 +2979,51 @@
           "sedan",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "První sériová Vesta Comfort 1.6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.6,
+            "powerKwMin": null,
+            "powerKwMax": null,
+            "availablePowerKw": [],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://ladarymco.com/press-releases/section_17721/110023"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "První sériová Vesta Comfort 1.6 – září2015",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "První sériová Vesta Comfort 1.6 – září2015",
+                "source": "https://ladarymco.com/press-releases/section_17721/110023",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": null,
+                  "powerStandard": null,
+                  "torqueNm": null
+                },
+                "sha256": "97f8d258084f9ff6d69ae03f2a8ded40623eed8424e1dfd8a7df07f98d60836a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Vesta",
+                "fromYear": 2015,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Tisková zpráva přímo jmenuje první sériové provedení Comfort s motorem1.6 a mechanickou převodovkou Renault. Výkon106hp není převáděn odhadem na kW; nejde o soupis všech verzí."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -3070,10 +3113,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -3203,6 +3242,18 @@
       {
         "field": "generations[0].trims[0].rangeCycle",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMin",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].powerKwMax",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

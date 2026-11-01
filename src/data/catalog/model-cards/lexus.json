@@ -1070,8 +1070,38 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "GS 300 R6",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 156,
+            "powerKwMax": 156,
+            "availablePowerKw": [
+              156
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.toyota-media.de/blog/lexus-modelle/artikel/15-jahre-lexus-gs/text"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "GS 300 R6",
+              "noteCs": "Vlastní historická tovární zpráva Toyota Deutschland: první evropský GS300 od 1993 s R6/156 kW. Přesný ani nominální objem tento odstavec neuvádí a nedopočítává se z označení 300. Amerických 168 kW ani japonský Aristo nejsou převzaty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "S140 – Lexus GS",
+                "fromYear": 1993,
+                "toYear": 1997,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -1109,7 +1139,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_GS"
+          "https://en.wikipedia.org/wiki/Lexus_GS",
+          "https://www.toyota-media.de/blog/lexus-modelle/artikel/15-jahre-lexus-gs/text"
         ]
       },
       {
@@ -1276,7 +1307,8 @@
       "https://en.wikipedia.org/wiki/Lexus_GS",
       "https://www.ultimatespecs.com/car-specs/Lexus/7415/Lexus-GS-II-300.html",
       "https://www.ultimatespecs.com/car-specs/Lexus/1813/Lexus-GS-III-300.html",
-      "https://www.ultimatespecs.com/car-specs/Lexus/65026/Lexus-GS-IV-250-Drive.html"
+      "https://www.ultimatespecs.com/car-specs/Lexus/65026/Lexus-GS-IV-250-Drive.html",
+      "https://www.toyota-media.de/blog/lexus-modelle/artikel/15-jahre-lexus-gs/text"
     ],
     "needsReview": [
       {
@@ -1289,10 +1321,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -1518,6 +1546,14 @@
       {
         "field": "generations[3].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -4219,8 +4255,38 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "LS 400 4.0 V8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 4,
+            "powerKwMin": 180,
+            "powerKwMax": 180,
+            "availablePowerKw": [
+              180
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lexus_UCF10"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "LS 400 4.0 V8",
+              "noteCs": "Vlastní první UCF10: výslovně 4.0 V8/180 kW. Regionálních 186 kW z obecného anglického infoboxu ani výkon UCF20 nezkopírován; přesný cm³ tímto odstavcem nepotvrzen.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "XF10",
+                "fromYear": 1989,
+                "toYear": 1994,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -4258,7 +4324,8 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Lexus_LS"
+          "https://en.wikipedia.org/wiki/Lexus_LS",
+          "https://de.wikipedia.org/wiki/Lexus_UCF10"
         ]
       },
       {
@@ -4479,7 +4546,8 @@
       "https://www.ultimatespecs.com/car-specs/Lexus/7423/Lexus-LS-(USF20)-400.html",
       "https://www.ultimatespecs.com/car-specs/Lexus/7425/Lexus-LS-(USF30)-430.html",
       "https://www.ultimatespecs.com/car-specs/Lexus/1816/Lexus-LS-(USF40)-460.html",
-      "https://www.ultimatespecs.com/car-specs/Lexus/114070/Lexus-LS-(XF50)-500-AWD.html"
+      "https://www.ultimatespecs.com/car-specs/Lexus/114070/Lexus-LS-(XF50)-500-AWD.html",
+      "https://de.wikipedia.org/wiki/Lexus_UCF10"
     ],
     "needsReview": [
       {
@@ -4492,10 +4560,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -4785,6 +4849,10 @@
       {
         "field": "generations[4].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

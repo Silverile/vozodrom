@@ -10337,8 +10337,38 @@
         "bodyTypes": [
           "dodavka"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "2.5 Diesel",
+            "fuel": "diesel",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.5,
+            "powerKwMin": 69,
+            "powerKwMax": 69,
+            "availablePowerKw": [
+              69
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Kia_Pregio"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.5 Diesel",
+              "noteCs": "Výslovný odstavec Pregio 1998–2005 in Europa: evropská modernizace 2003, 2.5/69 kW. Globální minibusové 2.7/3.0 nejsou přeneseny a přesný cm³ není odhadnut.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Pregio – původní výroba",
+                "fromYear": 1995,
+                "toYear": 2006,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -10376,12 +10406,14 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Kia_Pregio"
+          "https://en.wikipedia.org/wiki/Kia_Pregio",
+          "https://de.wikipedia.org/wiki/Kia_Pregio"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/wiki/Kia_Pregio"
+      "https://en.wikipedia.org/wiki/Kia_Pregio",
+      "https://de.wikipedia.org/wiki/Kia_Pregio"
     ],
     "needsReview": [
       {
@@ -10394,10 +10426,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -10443,6 +10471,10 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

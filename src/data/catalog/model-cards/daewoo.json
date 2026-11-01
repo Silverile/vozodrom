@@ -425,8 +425,125 @@
         "bodyTypes": [
           "sedan"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 66,
+            "powerKwMax": 66,
+            "availablePowerKw": [
+              66
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Daewoo_Espero"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.8",
+              "noteCs": "Vlastní seznam sériových Espero. Nejednotné údaje 1.5 a další regionální ladění nejsou použity; přesný cm³ není dopočítán z litrového označení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Espero – neúplně rozlišená rodina",
+                "fromYear": 1990,
+                "toYear": 1999,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.8",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 1.8,
+            "powerKwMin": 70,
+            "powerKwMax": 70,
+            "availablePowerKw": [
+              70
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Daewoo_Espero"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.8",
+              "noteCs": "Vlastní seznam sériových Espero. Nejednotné údaje 1.5 a další regionální ladění nejsou použity; přesný cm³ není dopočítán z litrového označení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Espero – neúplně rozlišená rodina",
+                "fromYear": 1990,
+                "toYear": 1999,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 74,
+            "powerKwMax": 74,
+            "availablePowerKw": [
+              74
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Daewoo_Espero"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0",
+              "noteCs": "Vlastní seznam sériových Espero. Nejednotné údaje 1.5 a další regionální ladění nejsou použity; přesný cm³ není dopočítán z litrového označení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Espero – neúplně rozlišená rodina",
+                "fromYear": 1990,
+                "toYear": 1999,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.0",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2,
+            "powerKwMin": 77,
+            "powerKwMax": 77,
+            "availablePowerKw": [
+              77
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Daewoo_Espero"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "2.0",
+              "noteCs": "Vlastní seznam sériových Espero. Nejednotné údaje 1.5 a další regionální ladění nejsou použity; přesný cm³ není dopočítán z litrového označení.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "Espero – neúplně rozlišená rodina",
+                "fromYear": 1990,
+                "toYear": 1999,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -466,14 +583,16 @@
         },
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/wiki/Daewoo_Espero"
+          "https://en.wikipedia.org/wiki/Daewoo_Espero",
+          "https://de.wikipedia.org/wiki/Daewoo_Espero"
         ]
       }
     ],
     "sources": [
       "https://en.wikipedia.org/w/index.php?oldid=1368806611",
       "https://www.wikidata.org/wiki/Q494447",
-      "https://en.wikipedia.org/wiki/Daewoo_Espero"
+      "https://en.wikipedia.org/wiki/Daewoo_Espero",
+      "https://de.wikipedia.org/wiki/Daewoo_Espero"
     ],
     "needsReview": [
       {
@@ -486,10 +605,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -539,6 +654,22 @@
       {
         "field": "generations[0].trims",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[2].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[3].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ],
     "aliases": [

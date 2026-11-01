@@ -18158,8 +18158,38 @@
         "bodyTypes": [
           "hatchback"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "iOn",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 49,
+            "powerKwMax": 49,
+            "availablePowerKw": [
+              49
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://static.esmartcity.es/media/2016/12/201112-peugeot-ion-ficha-tecnica.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "iOn",
+              "noteCs": "Vlastní tovární španělský technický list Peugeot iOn platný od října 2011: Eléctrico 49 kW. Nejde o prototypových 47 kW, Mitsubishi ani elektrický Partner.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "iOn – modelová rodina",
+                "fromYear": 2010,
+                "toYear": 2020,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -18184,7 +18214,8 @@
           "https://en.wikipedia.org/w/index.php?oldid=1381622598",
           "https://www.wikidata.org/wiki/Q3901207",
           "https://www.largus.fr/Peugeot_Ion_I.html",
-          "https://inovev.com/index.php/zh/market-analyses/category-blog/13459-2019-14-8"
+          "https://inovev.com/index.php/zh/market-analyses/category-blog/13459-2019-14-8",
+          "https://static.esmartcity.es/media/2016/12/201112-peugeot-ion-ficha-tecnica.pdf"
         ],
         "fieldSources": {
           "from": [
@@ -18206,7 +18237,8 @@
       "https://en.wikipedia.org/w/index.php?oldid=1381622598",
       "https://www.wikidata.org/wiki/Q3901207",
       "https://www.largus.fr/Peugeot_Ion_I.html",
-      "https://inovev.com/index.php/zh/market-analyses/category-blog/13459-2019-14-8"
+      "https://inovev.com/index.php/zh/market-analyses/category-blog/13459-2019-14-8",
+      "https://static.esmartcity.es/media/2016/12/201112-peugeot-ion-ficha-tecnica.pdf"
     ],
     "needsReview": [
       {
@@ -18219,10 +18251,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

@@ -6523,8 +6523,67 @@
         "bodyTypes": [
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "MG5 Standard Range",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://news.mgmotor.eu/wp-content/uploads/2022/02/CP-Nouveau-MG5-Le-premier-break-100-electrique-du-marche.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "MG5 Standard Range",
+              "noteCs": "Vlastní evropský elektrický kombík MG5, tovární technická tabulka 2022. Nejde o benzinový sedan MG5 ani o nabíjecí výkon 87 kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "MG5 EV – výrobní rodina",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "MG5 Long Range",
+            "fuel": "electric",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 115,
+            "powerKwMax": 115,
+            "availablePowerKw": [
+              115
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://news.mgmotor.eu/wp-content/uploads/2022/02/CP-Nouveau-MG5-Le-premier-break-100-electrique-du-marche.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "MG5 Long Range",
+              "noteCs": "Vlastní evropský elektrický kombík MG5, tovární technická tabulka 2022. Nejde o benzinový sedan MG5 ani o nabíjecí výkon 87 kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "MG5 EV – výrobní rodina",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -6546,12 +6605,14 @@
         "photo": null,
         "trims": null,
         "sources": [
-          "https://en.wikipedia.org/w/index.php?oldid=1364842071"
+          "https://en.wikipedia.org/w/index.php?oldid=1364842071",
+          "https://news.mgmotor.eu/wp-content/uploads/2022/02/CP-Nouveau-MG5-Le-premier-break-100-electrique-du-marche.pdf"
         ]
       }
     ],
     "sources": [
-      "https://en.wikipedia.org/w/index.php?oldid=1364842071"
+      "https://en.wikipedia.org/w/index.php?oldid=1364842071",
+      "https://news.mgmotor.eu/wp-content/uploads/2022/02/CP-Nouveau-MG5-Le-premier-break-100-electrique-du-marche.pdf"
     ],
     "needsReview": [
       {
@@ -6568,10 +6629,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

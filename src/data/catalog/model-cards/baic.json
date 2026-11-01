@@ -2174,8 +2174,53 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "X55 Premium 1.5T 7DCT",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 138,
+            "powerKwMax": 138,
+            "availablePowerKw": [
+              138
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://baicnz.com/models/x55/"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "X55 Premium 1.5T 7DCT – Nový Zéland",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "X55 Premium 1.5T 7DCT – Nový Zéland",
+                "source": "https://baicnz.com/models/x55/",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": null,
+                  "powerKw": 138,
+                  "powerStandard": null,
+                  "torqueNm": 305
+                },
+                "sha256": "72a19c43551b7aa327807436afa76af77c801c41584257c518d642408d34528a"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "Mofang / export X55",
+                "fromYear": 2022,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Přesný sloupec Premium v lokální tabulce BAIC; nedatovaná aktuální stránka. Parametry se nekombinují s jinou homologací a nejasně označeným výkonem138(130)kW globálních tabulek."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2297,10 +2342,6 @@
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
         "field": "generations[0].drivetrains",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
@@ -2415,6 +2456,14 @@
       {
         "field": "generations[0].trims[0].specificationScope.modelYear",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },
@@ -2575,8 +2624,39 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 Turbo",
+            "fuel": "petrol",
+            "displacementCc": 1498,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 130,
+            "powerKwMax": 130,
+            "availablePowerKw": [
+              130
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://framerusercontent.com/assets/LbOCWvAf5S0G8d2UAbMBUkhO0.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 Turbo",
+              "noteCs": "Vlastní český dovozní technický list X7 odkazovaný na baic-czechia.cz/x7, platnost 2026: zážehový 1498 cm³ a 130 kW. Není kopírováno 138 kW X55 nebo odlišná zahraniční homologace X7.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "X7",
+                "fromYear": 2020,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "primaryOwnerUrl": "https://baic-czechia.cz/x7"
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2604,7 +2684,8 @@
           "https://www.baicglobal.com/about/aboutUs",
           "https://www.baicmotor.com/Uploads/file/20200924/20200924220240_87450.pdf",
           "https://de.wikipedia.org/w/index.php?title=Beijing_X7&oldid=255982173",
-          "https://www.baicglobal.com/news/newsRelease/detail/147"
+          "https://www.baicglobal.com/news/newsRelease/detail/147",
+          "https://framerusercontent.com/assets/LbOCWvAf5S0G8d2UAbMBUkhO0.pdf"
         ]
       }
     ],
@@ -2612,7 +2693,8 @@
       "https://www.baicglobal.com/about/aboutUs",
       "https://www.baicmotor.com/Uploads/file/20200924/20200924220240_87450.pdf",
       "https://de.wikipedia.org/w/index.php?title=Beijing_X7&oldid=255982173",
-      "https://www.baicglobal.com/news/newsRelease/detail/147"
+      "https://www.baicglobal.com/news/newsRelease/detail/147",
+      "https://framerusercontent.com/assets/LbOCWvAf5S0G8d2UAbMBUkhO0.pdf"
     ],
     "needsReview": [
       {
@@ -2625,10 +2707,6 @@
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {

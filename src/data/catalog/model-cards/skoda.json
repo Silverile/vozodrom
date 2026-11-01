@@ -2867,8 +2867,52 @@
           "sedan",
           "kombi"
         ],
-        "engines": null,
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1200 typ 955",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": null,
+            "powerKwMin": 26.5,
+            "powerKwMax": 26.5,
+            "availablePowerKw": [
+              26.5
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Existing reviewed technical version in the same catalogue generation",
+              "originalVariant": "1200 typ 955",
+              "powerBasis": "Unchanged power field from reviewed technical version; no conversion or component addition.",
+              "componentPowerKw": null,
+              "technicalVersionProof": {
+                "name": "1200 typ 955",
+                "source": "https://webapps.skoda-auto.sk/Magazin/skoda_magazin_zima_2012.pdf",
+                "engine": {
+                  "fuel": "petrol",
+                  "displacementCc": null,
+                  "cylinders": 4,
+                  "powerKw": 26.5,
+                  "torqueNm": null
+                },
+                "sha256": "fef66424d804fb9a4fa67c77e70f82f30529c79f078b7e689bcb345ca1432d27"
+              },
+              "generationEvidence": {
+                "method": "reviewed-technical-version",
+                "anchor": "1200 – modelová rodina",
+                "fromYear": 1952,
+                "toYear": 1956,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              },
+              "noteCs": "Zdvihový objem není sjednocen: Wikipedia uvádí 1213 cm³, oficiální magazín 1221 cm³. Pole proto zůstává null. Údaje původního pětimístného sedanu 1200; hmotnost se nepřenáší na STW, sanitku či 1201. Zdroj neurčuje jízdní cyklus spotřeby."
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [
           "rwd"
         ],
@@ -3001,10 +3045,6 @@
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
-      },
-      {
         "field": "generations[0].transmissions",
         "reason": "Not established for this exact version/scope. Null is not zero, no equipment or confirmed continued production."
       },
@@ -3107,6 +3147,14 @@
       {
         "field": "scope",
         "reason": "Displacement conflict: Wikipedia 1213 cc versus official importer magazine 1221 cc; exact trim capacity is withheld."
+      },
+      {
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
+      },
+      {
+        "field": "generations[0].engines[0].displacementLitresNominal",
+        "reason": "Tato hodnota nebyla pro konkrétní provedení ověřena; bez přepočtu a bez přenášení z jiné generace."
       }
     ]
   },

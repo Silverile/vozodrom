@@ -18,8 +18,67 @@
         "bodyTypes": [
           "suv"
         ],
-        "engines": [],
-        "engineCoverage": "unknown",
+        "engines": [
+          {
+            "variant": "1.5 PHEV",
+            "fuel": "petrol-phev",
+            "displacementCc": 1477,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 192,
+            "powerKwMax": 192,
+            "availablePowerKw": [
+              192
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lynk_&_Co_01"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 PHEV",
+              "noteCs": "Jen vlastní evropské PHEV před a po modernizaci: výslovná Systemleistung 192/206. Čínské 2.0T/EM-F ani součet ICE a elektromotoru nejsou převzaty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "01",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "1.5 PHEV 3DHT",
+            "fuel": "petrol-phev",
+            "displacementCc": 1499,
+            "displacementLitresNominal": 1.5,
+            "powerKwMin": 206,
+            "powerKwMax": 206,
+            "availablePowerKw": [
+              206
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://de.wikipedia.org/wiki/Lynk_&_Co_01"
+            ],
+            "sourceScope": {
+              "tableSection": "Manually checked own-model European production specification",
+              "originalVariant": "1.5 PHEV 3DHT",
+              "noteCs": "Jen vlastní evropské PHEV před a po modernizaci: výslovná Systemleistung 192/206. Čínské 2.0T/EM-F ani součet ICE a elektromotoru nejsou převzaty.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "01",
+                "fromYear": 2017,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": [],
         "transmissions": [],
         "dimensionsMm": {
@@ -105,7 +164,8 @@
         "sources": [
           "https://www.lynkco.com.cn/",
           "https://en.wikipedia.org/wiki/Lynk_%26_Co",
-          "https://lynkco.musamotors.lv/lynk-co-01/specs"
+          "https://lynkco.musamotors.lv/lynk-co-01/specs",
+          "https://de.wikipedia.org/wiki/Lynk_&_Co_01"
         ],
         "equipmentLines": [],
         "specificationReferences": [
@@ -140,7 +200,8 @@
     "sources": [
       "https://www.lynkco.com.cn/",
       "https://en.wikipedia.org/wiki/Lynk_%26_Co",
-      "https://lynkco.musamotors.lv/lynk-co-01/specs"
+      "https://lynkco.musamotors.lv/lynk-co-01/specs",
+      "https://de.wikipedia.org/wiki/Lynk_&_Co_01"
     ],
     "needsReview": [
       {
@@ -157,10 +218,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
@@ -221,10 +278,6 @@
       },
       {
         "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].engines",
         "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
       },
       {
