@@ -1,0 +1,94 @@
+{
+  "status": "complete",
+  "rawRecomputedMakes": [
+    "iveco",
+    "lada"
+  ],
+  "fullVinHistoryProcessed": true,
+  "fullHistorySelection": "analysis/codex/wave-3/batch-6/full-history-selection.json",
+  "sourcePeriod": {
+    "stk": {
+      "from": "2023-10-12",
+      "to": "2026-10-11",
+      "days": 1094
+    },
+    "register": {
+      "file": "vypisvozidel.csv",
+      "built": "2026-11-01"
+    }
+  },
+  "snapshotMetadataPreserved": true,
+  "executionMetadata": [
+    {
+      "make": "iveco",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    },
+    {
+      "make": "lada",
+      "executionRegisterBuilt": "2026-11-01",
+      "publishedSnapshotBuilt": "2026-10-31"
+    }
+  ],
+  "makeTotalsPreserved": true,
+  "allPublishableRawCohortsVerified": true,
+  "noPopulatedLineLostAllGenerations": true,
+  "makeReports": [
+    {
+      "make": "iveco",
+      "fleet": 50443,
+      "inspections": 167333,
+      "fleetCohorts": 3,
+      "inspectionCohorts": 4,
+      "rollbackBefore": {
+        "vehicles": 40977,
+        "share": 0.0256
+      },
+      "rollbackAfter": {
+        "vehicles": 40977,
+        "share": 0.0256
+      }
+    },
+    {
+      "make": "lada",
+      "fleet": 168319,
+      "inspections": 14598,
+      "fleetCohorts": 5,
+      "inspectionCohorts": 6,
+      "rollbackBefore": {
+        "vehicles": 3586,
+        "share": 0.012
+      },
+      "rollbackAfter": {
+        "vehicles": 3586,
+        "share": 0.012
+      }
+    }
+  ],
+  "lineChanges": [
+    {
+      "id": "lada/granta",
+      "fleetBefore": null,
+      "fleetAfter": null,
+      "inspectionsBefore": 46,
+      "inspectionsAfter": 46,
+      "generationKeysBefore": [],
+      "generationKeysAfter": [
+        "0"
+      ]
+    }
+  ],
+  "publishedChangedMakeFiles": [
+    "src/data/stats/lada.json"
+  ],
+  "rawAggregateSha256": {
+    "istp-agg.json": "b6edb722166e64911ef7d50ef4d8424e5b3b9e76f7bdcd3b2ab5b24312af73e3",
+    "rsv-agg.json": "fce6b98aa4314ee6ae2da49851216e5a8aa5423914122465b715b8fc0daf0ab2"
+  },
+  "outputSha256": {
+    "src/data/stats/iveco.json": "8f298f7bae67a6bac53a77a5cd4d3c16afcaef0d1a9c91d69534e706a4dbaa11",
+    "src/data/stats/lada.json": "70a0c3a8f8ebe4015481129cbd4d954180dd66f86f092e003633df3fbae26bd2",
+    "src/data/stats/index.json": "bf8e772f9d27ac607d42c37ed5ead14ea43b4fbb4f524644b5089dfd0f8f117f",
+    "src/data/listing-stats.json": "b767a51813f44bbd06a3a79d3678c8fa260f25f127c395b3f30c24847310b35d"
+  }
+}

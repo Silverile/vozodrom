@@ -12,12 +12,16 @@ const lines=[],rejected=[],proofs=[],aliasChanges=[];const gid=g=>g.code??`${g.f
 for(const r of research.lines){const [make,line]=r.id.split('/'),owner=owners.get(r.id),before=index[make][line];assert(owner);const c=owner.card,changes=[];
  for(const candidate of r.generations){const i=candidate.index,g=c.generations[i],old=before.generations[i];assert(g);assert.deepEqual(candidate.before,{from:old.from,to:old.to,bodyTypes:old.bodyTypes});const decision=overrides[r.id+'/'+i]??{};
   if(candidate.changes.dates&&!decision.skipDates){
-   // Fill gaps only: introduction/prototype years and family envelopes must never replace known dates.
-   const dates=[g.from??candidate.changes.dates[0],g.to??candidate.changes.dates[1]],e=candidate.dateEvidence;
+   // Automatic candidates fill gaps. A reviewed correction must exactly match its recorded source period.
+   const e=candidate.dateEvidence,dates=decision.dates??[g.from??candidate.changes.dates[0],g.to??candidate.changes.dates[1]];
+   if(decision.dates)assert.deepEqual(decision.dates,e?.period,'Reviewed dates must match source evidence');
    const generic=/^(?:contents|inhalt|inhaltsverzeichnis)?$/i.test(e?.heading??'');
    const scopedGeneration=/generation|generace/i.test(e?.heading??'');const sectionMismatch=scopedGeneration&&(/rodin|family/i.test(g.name??'')||evidenceProblem(g,i,{variant:'Scope',sourceScope:{generationEvidence:{method:'generation-heading',anchor:e.heading,fromYear:e.period[0],toYear:e.period[1],generationIndex:i}}}));
    if((c.generations.length>1&&generic)||sectionMismatch||g.dateBasis==='announcement'||candidate.prototypeStartCaution&&g.from==null||!e||dates[0]==null||dates[1]!=null&&dates[1]<dates[0])rejected.push({id:r.id,index:i,kind:'dates',reason:'Uncertain production start, announcement or whole-family/child-generation envelope',candidate: candidate.changes.dates});
    else if(g.from!==dates[0]||g.to!==dates[1]){const prior={code:g.code,from:g.from,to:g.to};g.from=dates[0];g.to=dates[1];if(g.to!=null)g.productionStatus='ended';else if(/present|seit|current/i.test(e.productionText))g.productionStatus='current';if(decision.dateNote){g.dateBasis??='production';g.specificationScope={...g.specificationScope,noteCs:[g.specificationScope?.noteCs,decision.dateNote].filter(Boolean).join('\n')};}g.sources=[...new Set([...(g.sources??[]),e.url])];changes.push({index:i,kind:'dates',before:[old.from,old.to],after:dates,evidence:e,...(decision.dateNote?{dateNote:decision.dateNote}:{})});if(gid(prior)!==gid(g))aliasChanges.push({makeSlug:make,lineSlug:line,from:gid(prior),to:gid(g)});}
+  }
+  if(decision.dateNote&&!changes.some(x=>x.index===i&&x.kind==='dates')){
+   assert(decision.noteSource,'Note-only review needs a source URL');g.dateBasis??='production';g.specificationScope={...g.specificationScope,noteCs:[g.specificationScope?.noteCs,decision.dateNote].filter(Boolean).join('\n')};g.sources=[...new Set([...(g.sources??[]),decision.noteSource])];changes.push({index:i,kind:'dateNote',note:decision.dateNote,source:decision.noteSource});
   }
   if(candidate.changes.bodyTypes&&!g.bodyTypes?.length&&!decision.skipBodies){
    if(r.id==='arcfox/alpha-s'){rejected.push({id:r.id,index:i,kind:'bodies',reason:'Infobox SUV claim conflicts with model identity; leave absent pending explicit liftback source'});}
