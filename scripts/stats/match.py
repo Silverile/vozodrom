@@ -350,4 +350,19 @@ class Matcher:
             coded = [i for i in hits if gens[i][2] & t]
             if len(coded) == 1:
                 return coded[0]
+        # These badges cover distinct contemporary European and overseas cars.
+        # An explicit chassis token above takes priority. For year-only Czech
+        # records, retain the European family while it was still in production.
+        # Otherwise a later JDM start date moves Traveller wagons to B14,
+        # European Bluebirds to U12, or Vanette Cargo to Mazda-based S21.
+        european = {
+            ('nissan', 'sunny'): {'B10', 'B110', 'B210', 'B310', 'B11', 'B12', 'N13', 'N14', 'Y10'},
+            ('nissan', 'bluebird'): {'310', '410', '411', '510', '610', '810', '910', 'U11', 'T12', 'T72'},
+            ('nissan', 'vanette'): {'C120', 'C22', 'HC23'},
+            ('nissan', 'maxima'): {'J30', 'A32', 'A33'},
+        }.get((make, line))
+        if len(hits) > 1 and european:
+            local = [i for i in hits if gens[i][2] & european]
+            if local:
+                hits = local
         return max(hits, key=lambda i: gens[i][0]) if hits else None

@@ -2210,19 +2210,87 @@
     "coverage": "pilot-partial",
     "generations": [
       {
-        "code": null,
+        "code": "3302/2705/3221",
         "name": "GAZelle / Business",
         "from": 1994,
         "to": null,
         "productionStatus": "unknown",
-        "facelift": null,
-        "bodyTypes": [
-          "dodavka",
-          "pickup",
-          "mpv"
+        "facelift": [
+          {
+            "year": 2010,
+            "productionYear": 2010,
+            "note": "Modernizace v rámci stejné konstrukční generace.",
+            "sources": [
+              "https://en.wikipedia.org/wiki/GAZelle"
+            ]
+          }
         ],
-        "engines": null,
-        "engineCoverage": "partial",
+        "bodyTypes": [
+          "pickup",
+          "dodavka",
+          "minibus"
+        ],
+        "engines": [
+          {
+            "variant": "2.7 Evotech A275",
+            "fuel": "petrol",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.69,
+            "powerKwMin": 78.5,
+            "powerKwMax": 78.5,
+            "availablePowerKw": [
+              78.5
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected generation-specific documented engine",
+              "originalVariant": "2.7 Evotech A275",
+              "noteCs": "Czech importer brochure, engine table page 30; nominal net kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "3302/2705/3221",
+                "fromYear": 1994,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          },
+          {
+            "variant": "2.7 Evotech A2755 LPG",
+            "fuel": "petrol-lpg",
+            "displacementCc": null,
+            "displacementLitresNominal": 2.69,
+            "powerKwMin": 76.7,
+            "powerKwMax": 76.7,
+            "availablePowerKw": [
+              76.7
+            ],
+            "powerRangeCoverage": "documented-versions-only",
+            "sources": [
+              "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
+            ],
+            "sourceScope": {
+              "tableSection": "Selected generation-specific documented engine",
+              "originalVariant": "2.7 Evotech A2755 LPG",
+              "noteCs": "Czech importer brochure, engine table page 30; nominal net kW.",
+              "generationEvidence": {
+                "method": "generation-heading",
+                "anchor": "3302/2705/3221",
+                "fromYear": 1994,
+                "toYear": null,
+                "generationIndex": 0,
+                "rowFromYear": null,
+                "rowToYear": null
+              }
+            }
+          }
+        ],
+        "engineCoverage": "representative-documented-versions",
         "drivetrains": null,
         "transmissions": null,
         "dimensionsMm": {
@@ -2236,7 +2304,7 @@
           "modelYear": null,
           "variant": null,
           "bodyType": null,
-          "noteCs": "Historické údaje podle uvedených pramenů; rozsah výroby a jednotlivých trhů je výslovně omezen na doložené informace."
+          "noteCs": "Classic GAZelle and Business only; NEXT and NN already have separate catalogue lines. Sériová výroba; vybrané motorizace nejsou úplným přehledem všech trhů a let."
         },
         "trunkL": null,
         "markets": [
@@ -2247,82 +2315,105 @@
         "trims": null,
         "sources": [
           "https://en.wikipedia.org/wiki/GAZelle",
-          "https://www.kommersant.ru/doc/8462216"
-        ]
+          "https://www.kommersant.ru/doc/8462216",
+          "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
+        ],
+        "dateBasis": "production"
       }
     ],
     "sources": [
       "https://en.wikipedia.org/wiki/GAZelle",
-      "https://www.kommersant.ru/doc/8462216"
+      "https://www.kommersant.ru/doc/8462216",
+      "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
     ],
     "needsReview": [
       {
         "field": "segment",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
-      },
-      {
-        "field": "generations[0].code",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].to",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
-        "field": "generations[0].facelift",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
-        "field": "generations[0].engines",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[0].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[1].displacementCc",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.toYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowFromYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
+      },
+      {
+        "field": "generations[0].engines[1].sourceScope.generationEvidence.rowToYear",
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].drivetrains",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].transmissions",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.length",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.width",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.height",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].dimensionsMm.wheelbase",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.modelYear",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.variant",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].specificationScope.bodyType",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trunkL",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].photo",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       },
       {
         "field": "generations[0].trims",
-        "reason": "Údaj nebyl pro tento přesný model, rok a provedení ověřen; null není nula ani potvrzení další výroby."
+        "reason": "Údaj nebyl pro přesné provedení ověřen."
       }
     ]
   },

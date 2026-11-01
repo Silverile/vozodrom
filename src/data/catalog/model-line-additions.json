@@ -50613,32 +50613,44 @@
     "bodyTypes": [
       "sedan",
       "hatchback",
-      "kombi"
+      "kombi",
+      "dodavka"
     ],
     "from": 1970,
     "to": 1986,
     "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1970,
+        "to": 1986
+      }
+    ],
     "generations": [
       {
         "code": null,
         "from": 1970,
         "to": 1986,
+        "dateBasis": "production",
         "productionStatus": "ended",
         "bodyTypes": [
           "sedan",
           "hatchback",
-          "kombi"
+          "kombi",
+          "dodavka"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/Citro%C3%ABn_GS"
+          "https://en.wikipedia.org/wiki/Citro%C3%ABn_GS",
+          "https://de.wikipedia.org/wiki/Citro%C3%ABn_GS",
+          "https://www.media.stellantis.com/de-de/citroen/press/100-jahre-citroen-gs-und-cx-als-highlights-der-70er-jahre"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
-      "https://en.wikipedia.org/wiki/Citro%C3%ABn_GS"
+      "https://en.wikipedia.org/wiki/Citro%C3%ABn_GS",
+      "https://de.wikipedia.org/wiki/Citro%C3%ABn_GS",
+      "https://www.media.stellantis.com/de-de/citroen/press/100-jahre-citroen-gs-und-cx-als-highlights-der-70er-jahre"
     ],
     "needsReview": [
       {
@@ -95302,36 +95314,44 @@
     "makeSlug": "gaz",
     "aliases": [],
     "bodyTypes": [
-      "dodavka",
       "pickup",
-      "mpv"
+      "dodavka",
+      "minibus"
     ],
     "from": 1994,
     "to": null,
     "productionStatus": "unknown",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1994,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "3302/2705/3221",
         "from": 1994,
         "to": null,
+        "dateBasis": "production",
         "productionStatus": "unknown",
         "bodyTypes": [
-          "dodavka",
           "pickup",
-          "mpv"
+          "dodavka",
+          "minibus"
         ],
         "sources": [
           "https://en.wikipedia.org/wiki/GAZelle",
-          "https://www.kommersant.ru/doc/8462216"
+          "https://www.kommersant.ru/doc/8462216",
+          "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/GAZelle",
-      "https://www.kommersant.ru/doc/8462216"
+      "https://www.kommersant.ru/doc/8462216",
+      "https://www.gazeurope.eu/images/GAZ_GAZelle_Business_-_Kompletn_katalog.pdf"
     ],
     "needsReview": [
       {
@@ -95341,10 +95361,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -100839,30 +100855,126 @@
     "bodyTypes": [
       "pickup"
     ],
-    "from": 1988,
+    "from": 1986,
     "to": null,
-    "productionStatus": "unknown",
+    "productionStatus": "current",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1986,
+        "to": 2000
+      },
+      {
+        "from": 1998,
+        "to": 2007
+      },
+      {
+        "from": 2006,
+        "to": 2014
+      },
+      {
+        "from": 2013,
+        "to": 2019
+      },
+      {
+        "from": 2018,
+        "to": null
+      },
+      {
+        "from": 2026,
+        "to": null
+      }
+    ],
     "generations": [
       {
-        "code": null,
-        "from": 1988,
-        "to": null,
-        "productionStatus": "unknown",
+        "code": "GMT400",
+        "from": 1986,
+        "to": 2000,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "pickup"
         ],
         "sources": [
-          "https://en.wikipedia.org/wiki/GMC_(automobile)",
-          "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
+          "https://en.wikipedia.org/wiki/Chevrolet_C/K_(fourth_generation)"
+        ]
+      },
+      {
+        "code": "GMT800",
+        "from": 1998,
+        "to": 2007,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Silverado_(first_generation)"
+        ]
+      },
+      {
+        "code": "GMT900",
+        "from": 2006,
+        "to": 2014,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Silverado_(second_generation)"
+        ]
+      },
+      {
+        "code": "GMT K2XX",
+        "from": 2013,
+        "to": 2019,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Silverado"
+        ]
+      },
+      {
+        "code": "GMT T1XX",
+        "from": 2018,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Silverado"
+        ]
+      },
+      {
+        "code": "VI",
+        "from": 2026,
+        "to": null,
+        "dateBasis": "production",
+        "productionStatus": "current",
+        "bodyTypes": [
+          "pickup"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Chevrolet_Silverado",
+          "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/jun/0516-chevrolet-next-generation-2027-silverado.html"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://en.wikipedia.org/wiki/GMC_(automobile)",
-      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54"
+      "https://investor.gm.com/static-files/e1bb38a4-aaf9-4141-b44a-4c61c1f2ec54",
+      "https://en.wikipedia.org/wiki/Chevrolet_C/K_(fourth_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Silverado_(first_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Silverado_(second_generation)",
+      "https://en.wikipedia.org/wiki/Chevrolet_Silverado",
+      "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/jun/0516-chevrolet-next-generation-2027-silverado.html"
     ],
     "needsReview": [
       {
@@ -100872,10 +100984,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
@@ -130970,33 +131078,59 @@
     ],
     "bodyTypes": [
       "hatchback",
-      "sedan"
+      "sedan",
+      "kabriolet"
     ],
     "from": 1984,
-    "to": null,
-    "productionStatus": "unknown",
+    "to": 2013,
+    "productionStatus": "ended",
     "dateScope": "source-production",
-    "productionPeriods": null,
+    "productionPeriods": [
+      {
+        "from": 1984,
+        "to": 2011
+      },
+      {
+        "from": 1997,
+        "to": 2013
+      }
+    ],
     "generations": [
       {
-        "code": null,
+        "code": "2108/2109/21099",
         "from": 1984,
-        "to": null,
-        "productionStatus": "unknown",
+        "to": 2011,
+        "dateBasis": "production",
+        "productionStatus": "ended",
+        "bodyTypes": [
+          "hatchback",
+          "sedan",
+          "kabriolet"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lada_Samara"
+        ]
+      },
+      {
+        "code": "2113/2114/2115",
+        "from": 1997,
+        "to": 2013,
+        "dateBasis": "production",
+        "productionStatus": "ended",
         "bodyTypes": [
           "hatchback",
           "sedan"
         ],
         "sources": [
-          "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-          "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+          "https://en.wikipedia.org/wiki/Lada_Samara"
         ]
       }
     ],
     "wikidataQid": null,
     "sources": [
       "https://reportcollection.inion.ru/reports/download/?reportId=2748",
-      "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf"
+      "https://static.lada.ru/files/catalog_of_original_spare_parts_2024.pdf",
+      "https://en.wikipedia.org/wiki/Lada_Samara"
     ],
     "needsReview": [
       {
@@ -131006,10 +131140,6 @@
       {
         "field": "wikidataQid",
         "reason": "Identifikátor nebyl nezávisle ověřen."
-      },
-      {
-        "field": "to",
-        "reason": "Konec výroby není úplně ověřen; nejde o tvrzení současné výroby."
       },
       {
         "field": "generations[0].code",
