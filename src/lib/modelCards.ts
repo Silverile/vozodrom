@@ -1,4 +1,5 @@
-import cardIndex from "@/data/model-cards-index.json";
+// The site reads the slimmed copy (scripts/app-model-cards.mjs): no evidence fields, see there.
+import cardIndex from "@/data/model-cards-app.json";
 import { applyEdits, builtEditsOf } from "./catalog-edits";
 
 // Model cards: generations, engines, trims and Commons photos per model line
@@ -165,7 +166,8 @@ export interface CardGeneration {
   /** trim levels such as Active, Ambition, Style, RS; missing on most generations so far */
   equipmentLines?: CardEquipmentLine[];
   photo: CardPhoto | null;
-  sources: string[];
+  /** not in the site's copy of the index (scripts/app-model-cards.mjs) */
+  sources?: string[];
 }
 
 export interface ModelCard {
@@ -173,7 +175,7 @@ export interface ModelCard {
   segment: string | null;
   summary: string | null;
   generations: CardGeneration[];
-  sources: string[];
+  sources?: string[];
 }
 
 const CARDS = cardIndex as unknown as Record<string, Record<string, ModelCard>>;

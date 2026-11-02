@@ -100,6 +100,11 @@ Každé uložení je nový řádek, platí nejnovější; prázdná hodnota = te
 
 ## Katalog
 
+Web nečte `src/data/model-cards-index.json` přímo, ale jeho kopii `src/data/model-cards-app.json` bez důkazních polí
+(`sources`, `sourceScope`, `fieldSources`, …), kterou před `dev`, `build` a `typecheck` vyrobí
+`scripts/app-model-cards.mjs` (soubor se necommituje). Worker má limit 64 MiB nekomprimovaně a karty jsou v něm
+víckrát; plný index zůstává pro kontroly katalogu.
+
 - `src/data/catalog/` — zdrojová data (Wikidata, CC0, a ručně ověřené doplňky); licence a postup v
   [SOURCES.md](../src/data/catalog/SOURCES.md). Kurátorství probíhá v `analysis/codex/`.
 - `src/data/*-index.json` — malé indexy pro web, generované skripty `scripts/makes-index.mjs`,

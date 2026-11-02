@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/fetch-catalog-edits.mjs",
+    "predev": "node scripts/app-model-cards.mjs",
+    "prebuild": "node scripts/fetch-catalog-edits.mjs && node scripts/app-model-cards.mjs",
     "build": "next build",
     "cf:build": "opennextjs-cloudflare build",
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
@@ -15,6 +16,7 @@
     "db:migrate": "drizzle-kit migrate",
     "admin:grant": "node scripts/grant-admin.mjs",
     "admin:create": "node scripts/create-admin.mjs",
+    "pretypecheck": "node scripts/app-model-cards.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
