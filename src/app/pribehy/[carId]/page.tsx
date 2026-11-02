@@ -145,7 +145,7 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
           </div>
           <div className="card p-4 text-sm space-y-1">
             <p className="text-[var(--color-muted)]">Majitel</p>
-            <p className="font-semibold">{ownerName}</p>
+            <Link href={`/profil/${car.userId}/`} className="font-semibold hover:text-[var(--color-brand)]">{ownerName}</Link>
             {otherCars.length > 0 && (
               <p className="text-[var(--color-muted)]">
                 Další auta:{" "}

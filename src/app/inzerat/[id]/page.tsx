@@ -24,6 +24,11 @@ import { STATUS_LABEL } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
 import type { Listing } from "@/lib/types";
 import { publishedUserListings, userListingPage } from "@/lib/user-listings";
+import { GarageCarImage } from "@/components/GarageCarImage";
+import { LineGlyph } from "@/components/Icon";
+import { carTitle } from "@/lib/garage";
+import { sellerCars } from "@/lib/garage-store";
+import { photoUrl } from "@/lib/listing-status";
 import { CzechData, GenerationCard } from "./CatalogContext";
 import { PhoneReveal } from "./PhoneReveal";
 import { ReportListing } from "./ReportListing";
@@ -68,6 +73,8 @@ export default async function UserListingPage({ params }: { params: Params }) {
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
   const context = await listingContext(listing, row.data);
+  // the seller's own cars from their garage, as drive2 shows what someone drives
+  const sellerGarage = await sellerCars(row.userId);
   const makeName = getMake(listing.brandSlug)?.name ?? listing.brandSlug;
   const similar = preview ? [] : await similarTo(listing);
   const generationName = context ? context.gen.name ?? context.gen.code : model ? listing.generation : null;
@@ -152,12 +159,36 @@ export default async function UserListingPage({ params }: { params: Params }) {
           </section>
           <section className="card p-4 space-y-3">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--color-field)] text-lg" aria-hidden="true">👤</span>
-              <div>
-                <div className="font-semibold">{listing.sellerName}</div>
-                <div className="text-xs text-[var(--color-muted)]">Soukromý prodejce · vloženo {formatDate(listing.postedAt)}</div>
+              {sellerGarage[0]?.photo ? (
+                <img src={photoUrl(sellerGarage[0].photo.key)} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover bg-[var(--color-photo)]" />
+              ) : (
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[var(--color-field)] text-xl text-[var(--color-muted)]"><LineGlyph name="person" /></span>
+              )}
+              <div className="min-w-0">
+                <Link href={`/profil/${row.userId}/`} className="font-semibold hover:text-[var(--color-brand)]">{listing.sellerName}</Link>
+                <div className="text-sm text-[var(--color-muted)]">Soukromý prodejce · vloženo {formatDate(listing.postedAt)}</div>
               </div>
             </div>
+            {sellerGarage.length > 0 && (
+              <div>
+                <p className="text-sm text-[var(--color-muted)]">Jezdí s</p>
+                <ul className="mt-1.5 space-y-2">
+                  {sellerGarage.map((c) => (
+                    <li key={c.id}>
+                      <Link href={`/pribehy/${c.id}/`} className="group flex items-center gap-3">
+                        <span className="w-16 shrink-0 overflow-hidden rounded-[8px]">
+                          <GarageCarImage car={c.data} photo={c.photo} alt="" />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block font-semibold leading-tight group-hover:text-[var(--color-brand)]">{carTitle(c.data)}</span>
+                          <span className="block text-sm text-[var(--color-muted)]">{c.entries} {c.entries === 1 ? "zápis" : c.entries >= 2 && c.entries <= 4 ? "zápisy" : "zápisů"} v příběhu</span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             {row.phone ? <PhoneReveal phone={row.phone} messengers={row.messengers} /> : <p className="text-sm text-[var(--color-muted)]">Prodejce neuvedl telefon.</p>}
             {!preview && viewer?.user.id !== row.userId && <WriteSeller listingId={row.id} signedIn={Boolean(viewer)} />}
             <div className="flex items-center justify-between gap-3">

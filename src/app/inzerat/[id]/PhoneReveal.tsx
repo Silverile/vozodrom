@@ -21,7 +21,7 @@ export function PhoneReveal({ phone, messengers }: { phone: string; messengers: 
   const pretty = phone.replace(/^(\+\d{3})?(\d{3})(\d{3})(\d{3})$/, (_, cc, a, b, c) => [cc, a, b, c].filter(Boolean).join(" "));
   if (!shown) {
     return (
-      <button type="button" className="btn-cta w-full" onClick={() => setShown(true)}>
+      <button type="button" className="btn-cta flex w-full justify-center" onClick={() => setShown(true)}>
         Zobrazit kontakt
       </button>
     );
@@ -29,7 +29,7 @@ export function PhoneReveal({ phone, messengers }: { phone: string; messengers: 
   const digits = international(phone);
   return (
     <div className="space-y-2">
-      <a href={`tel:${phone}`} className="btn-cta w-full justify-center">{pretty}</a>
+      <a href={`tel:${phone}`} className="btn-cta flex w-full justify-center text-lg tabular-nums">{pretty}</a>
       {messengers.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {messengers.map((m) => (

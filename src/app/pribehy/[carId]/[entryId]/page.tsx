@@ -54,7 +54,7 @@ export default async function EntryPage({ params }: { params: Params }) {
           <header>
             <span className="chip bg-[var(--color-brand-soft)] text-[var(--color-brand)]">{ENTRY_CATEGORIES[entry.category]}</span>
             <h1 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight">{entry.title}</h1>
-            <p className="mt-1 text-sm text-[var(--color-muted)]">{ownerName} · {formatDate(entry.happenedOn)}</p>
+            <p className="mt-1 text-sm text-[var(--color-muted)]"><Link href={`/profil/${car.userId}/`} className="hover:text-[var(--color-brand)]">{ownerName}</Link> · {formatDate(entry.happenedOn)}</p>
             {entry.hiddenReason && <p className="mt-3 card p-4 text-sm bg-[var(--color-warn-soft)] text-[var(--color-warn)]">Skryto moderátorem: {entry.hiddenReason}</p>}
           </header>
 
@@ -107,7 +107,7 @@ export default async function EntryPage({ params }: { params: Params }) {
                 {comments.map((c) => (
                   <li key={c.id} className="text-sm">
                     <p>
-                      <span className="font-semibold">{c.authorName}</span>
+                      <Link href={`/profil/${c.authorId}/`} className="font-semibold hover:text-[var(--color-brand)]">{c.authorName}</Link>
                       <span className="text-[var(--color-muted)]"> · {formatDate(c.createdAt.toISOString())}</span>
                     </p>
                     {c.drives.length > 0 && <p className="text-xs text-[var(--color-muted)]">Jezdí s {c.drives.slice(0, 2).join(", ")}</p>}

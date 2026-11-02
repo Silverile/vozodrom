@@ -304,6 +304,7 @@ async function entriesCount(table: typeof entryLike | typeof entryComment, ids: 
 export interface PublicComment {
   id: string;
   body: string;
+  authorId: string;
   authorName: string;
   /** what the author drives, from their garage */
   drives: string[];
@@ -340,6 +341,7 @@ export async function entryPage(carId: string, id: string, viewer: Session | nul
       (c): PublicComment => ({
         id: c.id,
         body: c.body,
+        authorId: c.userId,
         authorName: publicName(c.name),
         drives: drives.get(c.userId) ?? [],
         createdAt: c.createdAt,
@@ -398,6 +400,68 @@ export async function ownersOf(make: string, line: string): Promise<{ cars: numb
       .where(and(visible, isNull(logEntry.hiddenReason))),
   ]);
   return { cars: cars?.n ?? 0, entries: entries?.n ?? 0 };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Owner profiles
+
+export interface ProfileCar {
+  id: string;
+  data: CarData;
+  photo: ListingPhoto | null;
+  former: boolean;
+  entries: number;
+  likes: number;
+}
+
+/** The public cars of an owner (current first), each with its entry and like counts. */
+async function publicCarsOf(userId: string): Promise<ProfileCar[]> {
+  const db = getDb();
+  const cars = await db
+    .select()
+    .from(garageCar)
+    .where(and(eq(garageCar.userId, userId), isNull(garageCar.hiddenReason)))
+    .orderBy(asc(garageCar.former), desc(garageCar.updatedAt));
+  if (!cars.length) return [];
+  const ids = cars.map((c) => c.id);
+  const [entries, likes] = await Promise.all([
+    db.select({ id: logEntry.carId, n: count() }).from(logEntry).where(and(inArray(logEntry.carId, ids), isNull(logEntry.hiddenReason))).groupBy(logEntry.carId),
+    db.select({ id: carLike.carId, n: count() }).from(carLike).where(inArray(carLike.carId, ids)).groupBy(carLike.carId),
+  ]);
+  const entriesOf = new Map(entries.map((r) => [r.id, r.n]));
+  const likesOf = new Map(likes.map((r) => [r.id, r.n]));
+  return cars.map((c) => ({ id: c.id, data: c.data, photo: c.photos[0] ?? null, former: c.former, entries: entriesOf.get(c.id) ?? 0, likes: likesOf.get(c.id) ?? 0 }));
+}
+
+/** What the seller box of a listing shows: the seller's current garage cars. */
+export async function sellerCars(userId: string): Promise<ProfileCar[]> {
+  return (await publicCarsOf(userId)).filter((c) => !c.former).slice(0, 3);
+}
+
+/** An owner's public page: name, since when, cars, newest entries and counts; null for unknown or blocked users. */
+export async function profilePage(userId: string) {
+  const db = getDb();
+  const [owner] = await db.select({ name: user.name, banned: user.banned, createdAt: user.createdAt }).from(user).where(eq(user.id, userId)).limit(1);
+  if (!owner || owner.banned) return null;
+  const cars = await publicCarsOf(userId);
+  const ids = cars.map((c) => c.id);
+  const [followers] = ids.length ? await db.select({ n: count() }).from(carFollow).where(inArray(carFollow.carId, ids)) : [{ n: 0 }];
+  const entries = ids.length
+    ? await db
+        .select({ entry: logEntry, car: garageCar })
+        .from(logEntry)
+        .innerJoin(garageCar, eq(garageCar.id, logEntry.carId))
+        .where(and(eq(logEntry.userId, userId), isNull(logEntry.hiddenReason), isNull(garageCar.hiddenReason)))
+        .orderBy(desc(logEntry.happenedOn), desc(logEntry.createdAt))
+        .limit(12)
+    : [];
+  return {
+    name: publicName(owner.name),
+    since: owner.createdAt,
+    cars,
+    followers: followers?.n ?? 0,
+    entries: entries.map(({ entry, car }) => ({ ...entry, carTitle: carTitle(car.data), photo: entry.photos[0] ?? car.photos[0] ?? null })),
+  };
 }
 
 // ---------------------------------------------------------------------------------------------

@@ -42,7 +42,7 @@ export function GenerationCard({ context, makeName, brandSlug }: { context: List
       : null;
 
   return (
-    <section className="card p-4 sm:p-5 min-w-0">
+    <section className="@container card p-4 sm:p-5 min-w-0">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="font-bold text-lg">{title}</h2>
         <span className="text-sm text-[var(--color-muted)]">
@@ -51,8 +51,8 @@ export function GenerationCard({ context, makeName, brandSlug }: { context: List
         </span>
       </div>
       {card.summary && <p className="mt-1 text-sm text-[var(--color-muted)]">{card.summary}</p>}
-      <div className={`mt-4 grid gap-5 ${drawing ? "sm:grid-cols-[minmax(0,15rem)_1fr]" : ""}`}>
-        {drawing && <FrontDrawing id={drawing} alt={title} className="rounded-xl self-start" />}
+      <div className={`mt-4 grid gap-5 ${drawing ? "@2xl:grid-cols-[minmax(0,15rem)_1fr]" : ""}`}>
+        {drawing && <FrontDrawing id={drawing} alt={title} className="rounded-xl self-start max-w-[15rem]" />}
         <Facts
           rows={[
             ["Karoserie", gen.bodyTypes.map((b) => BODY_NAMES[b] ?? b).join(", ")],
@@ -60,16 +60,21 @@ export function GenerationCard({ context, makeName, brandSlug }: { context: List
             ["Rozvor", num(d?.wheelbase, " mm")],
             ["Zavazadelník", num(size.trunkL, " l")],
             ["Pohon", gen.drivetrains.map((x) => DRIVE[x] ?? x).join(", ")],
-            ["Motory", gen.engines.length ? gen.engines.map((e) => e.variant).filter(Boolean).join(", ") : null],
           ]}
         />
-        {size.variant && (d || size.trunkL) && (
-          <p className="text-xs text-[var(--color-muted)] sm:col-start-2">
-            Rozměry a zavazadelník: {bodyVariantName(size.variant)}
-            {size.variant.noteCs && ` · ${size.variant.noteCs}`}
-          </p>
-        )}
       </div>
+      {size.variant && (d || size.trunkL) && (
+        <p className="mt-3 text-xs text-[var(--color-muted)]">
+          Rozměry a zavazadelník: {bodyVariantName(size.variant)}
+          {size.variant.noteCs && ` · ${size.variant.noteCs}`}
+        </p>
+      )}
+      {gen.engines.length > 0 && (
+        <p className="mt-3 text-sm">
+          <span className="text-[var(--color-muted)]">Motory: </span>
+          <span className="font-medium">{gen.engines.map((e) => e.variant).filter(Boolean).join(", ")}</span>
+        </p>
+      )}
 
       {(engine || trim) && (
         <div className="mt-5 rounded-[10px] bg-[var(--color-field)] p-3">
