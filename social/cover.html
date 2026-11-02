@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Facebook group cover, 1640×856. Desktop shows only the middle band (about 1640×607, y 125–732)
+     and phones crop the sides, so everything sits in that band, centred. */
+  :root { --bg: #0d0f12; --ink: #f1f3f5; --muted: #9aa3ad; --line: #c9d2dc; --brand: #2fd0a0; --brand-ink: #05261d; --accent: #ff6a2a; }
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1640px; height: 856px; background: var(--bg); color: var(--ink); font-family: Inter, sans-serif; overflow: hidden; position: relative; }
+  .words { position: absolute; top: 150px; left: 0; right: 0; text-align: center; }
+  .brand { display: inline-flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 800; letter-spacing: -0.045em; }
+  h1 { margin-top: 26px; font-size: 96px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; }
+  h1 em { font-style: normal; color: var(--brand); }
+  p { margin-top: 20px; font-size: 30px; font-weight: 500; color: var(--muted); }
+  .road { position: absolute; left: -40px; right: -40px; bottom: 136px; display: flex; align-items: flex-end; justify-content: center; gap: 0; }
+  .car { width: 290px; margin: 0 -36px; aspect-ratio: 16 / 10; background: var(--line); opacity: .85; flex: none; }
+  .car.on { background: var(--brand); opacity: 1; }
+  .ground { position: absolute; left: 0; right: 0; bottom: 135px; height: 3px; background: #262b33; }
+</style>
+</head>
+<body>
+  <div class="words">
+    <span class="brand">
+      <svg width="64" height="64" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="var(--brand)"/><path d="M8.5 15.5 L14 23 L24 9" stroke="var(--brand-ink)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="24.2" cy="8.8" r="2.6" fill="var(--accent)"/></svg>
+      vozodrom
+    </span>
+    <h1>Každé auto má <em>svůj příběh</em></h1>
+    <p>Příběhy aut od jejich majitelů · vozodrom.cz</p>
+  </div>
+  <div class="ground"></div>
+  <div class="road" id="road"></div>
+<script>
+  // Oldest to newest, the cars Czech roads have known; one is drawn in the brand colour.
+  const cars = ["skoda--1000-1100-mb--0", "trabant--601--0", "lada--2101--0", "skoda--favorit--0", "skoda--felicia--0",
+    "volkswagen--golf--3", "skoda--octavia--1", "dacia--duster--0"];
+  const on = "skoda--felicia--0";
+  const road = document.getElementById("road");
+  for (const id of cars) {
+    const el = document.createElement("div");
+    el.className = "car" + (id === on ? " on" : "");
+    const m = `url(../public/front/${id}.webp) center bottom / contain no-repeat`;
+    el.style.mask = m; el.style.webkitMask = m;
+    road.append(el);
+  }
+</script>
+</body>
+</html>

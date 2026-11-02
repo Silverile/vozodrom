@@ -12,6 +12,8 @@ import { LocationPicker } from "@/components/LocationPicker";
 import { MoreMenu } from "@/components/MoreMenu";
 import { ShortlistLink } from "@/components/ShortlistLink";
 import { THEME_BOOTSTRAP, ThemeSync } from "@/components/Theme";
+import { asset } from "@/lib/format";
+import { SOCIAL } from "@/lib/social";
 import "./globals.css";
 
 // Inter, self-hosted by next/font (no request to Google from the browser); latin-ext for Czech.
@@ -67,7 +69,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
               </span>
             </span>
-            <span className="sm:text-right">Data v prototypu jsou smyšlená.</span>
+            <span className="sm:text-right space-y-1">
+              {SOCIAL.length > 0 && (
+                <span className="flex items-center gap-3 sm:justify-end">
+                  Sledujte nás:
+                  {SOCIAL.map((s) => (
+                    <a key={s.name} href={s.href} target="_blank" rel="noopener" aria-label={s.name} title={s.name} className="rounded-full transition-opacity hover:opacity-80">
+                      <img src={asset(s.icon)} alt="" width={32} height={32} className="size-8 rounded-full" />
+                    </a>
+                  ))}
+                </span>
+              )}
+              <span className="block">Data v prototypu jsou smyšlená.</span>
+            </span>
           </div>
         </footer>
         <Analytics />
