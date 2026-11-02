@@ -26,6 +26,7 @@ export const REPORT_CATEGORY_LABEL = {
   podvod: "Podezření na podvod",
   nezakonny: "Nezákonný obsah (kradené vozidlo, padělek…)",
   nepravdive: "Nepravdivé údaje o voze",
+  deti: "Sexuální zneužívání dětí",
   jine: "Jiný důvod",
 } as const;
 

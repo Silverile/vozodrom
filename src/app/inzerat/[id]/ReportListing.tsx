@@ -4,14 +4,17 @@ import { useState } from "react";
 import { REPORT_CATEGORY_LABEL } from "@/lib/listing-status";
 
 // "Nahlásit inzerát": the notice form required for hosting services (DSA art. 16). It asks for
-// what the law expects from a notice: what is wrong and why, who reports it, and good faith.
+// what the law expects from a notice: what is wrong and why, who reports it, and good faith. A
+// notice of child sexual abuse may be anonymous (art. 16(2)(c)).
 export function ReportListing({ listingId, name, email }: { listingId: string; name: string; email: string }) {
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+  const [category, setCategory] = useState("");
+  const anonymous = category === "deti";
 
-  if (done) return <p role="status" className="text-sm text-[var(--color-good)]">Děkujeme, hlášení jsme přijali. Potvrzení a výsledek najdete {email ? "ve Zprávách" : "v e-mailu"}.</p>;
+  if (done) return <p role="status" className="text-sm text-[var(--color-good)]">Děkujeme, hlášení jsme přijali.{" "}{email ? "Potvrzení a výsledek najdete ve Zprávách." : "Pokud jste uvedli e-mail, pošleme na něj potvrzení a výsledek."}</p>;
   if (!open) {
     return (
       <button type="button" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]" onClick={() => setOpen(true)}>
@@ -47,7 +50,7 @@ export function ReportListing({ listingId, name, email }: { listingId: string; n
     >
       <h3 className="font-bold">Nahlásit inzerát</h3>
       <label className="block">Důvod
-        <select name="category" className="input mt-1" required defaultValue="">
+        <select name="category" className="input mt-1" required value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="" disabled>Vyberte</option>
           {Object.entries(REPORT_CATEGORY_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
         </select>
@@ -55,11 +58,12 @@ export function ReportListing({ listingId, name, email }: { listingId: string; n
       <label className="block">Co je s inzerátem v nepořádku a proč
         <textarea name="explanation" className="input mt-1 min-h-24" required minLength={20} maxLength={3000} />
       </label>
-      <label className="block">Jméno
-        <input name="name" className="input mt-1" required defaultValue={name} autoComplete="name" />
+      {anonymous && <p className="text-[var(--color-muted)]">U tohoto důvodu nemusíte uvádět jméno ani e-mail. Bez e-mailu vám ale nepošleme výsledek.</p>}
+      <label className="block">Jméno{anonymous && " (nepovinné)"}
+        <input name="name" className="input mt-1" required={!anonymous} defaultValue={name} autoComplete="name" />
       </label>
-      <label className="block">E-mail (pošleme na něj výsledek)
-        <input name="email" type="email" className="input mt-1" required defaultValue={email} autoComplete="email" />
+      <label className="block">E-mail{anonymous ? " (nepovinné)" : " (pošleme na něj výsledek)"}
+        <input name="email" type="email" className="input mt-1" required={!anonymous} defaultValue={email} autoComplete="email" />
       </label>
       <label className="flex gap-2 text-[var(--color-muted)]">
         <input name="goodFaith" type="checkbox" required className="mt-1" />

@@ -129,7 +129,9 @@ export const listing = pgTable(
   (t) => [index("listing_user_idx").on(t.userId), index("listing_status_idx").on(t.status, t.submittedAt)],
 );
 
-export const REPORT_CATEGORIES = ["podvod", "nezakonny", "nepravdive", "jine"] as const;
+/** "deti": sexual abuse or exploitation of children (directive 2011/93/EU art. 3-7); such a notice
+ *  may be sent without a name and e-mail (DSA art. 16(2)(c)). */
+export const REPORT_CATEGORIES = ["podvod", "nezakonny", "nepravdive", "deti", "jine"] as const;
 export type ReportCategory = (typeof REPORT_CATEGORIES)[number];
 
 /**
@@ -143,6 +145,7 @@ export const report = pgTable(
     listingId: text("listing_id").notNull().references(() => listing.id, { onDelete: "cascade" }),
     category: text("category").$type<ReportCategory>().notNull(),
     explanation: text("explanation").notNull(),
+    /** empty for an anonymous notice (category "deti") */
     notifierName: text("notifier_name").notNull(),
     notifierEmail: text("notifier_email").notNull(),
     /** set when the notifier was signed in */

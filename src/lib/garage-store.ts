@@ -33,6 +33,7 @@ import {
 } from "./garage";
 import { ListingError } from "./listing-store";
 import { deletePhotos, storePhoto } from "./photo-store";
+import { isRule, redress, statementOfReasons } from "./statement";
 
 // Server side of garages and logbooks. Cars, entries and comments are public at once; a moderator
 // hides what users report (the owner still sees it, with the reason). Owners and staff may edit
@@ -532,8 +533,9 @@ export async function deleteComment(session: Session, id: string) {
 const TARGET_TABLES = { car: garageCar, entry: logEntry, comment: entryComment } as const;
 const TARGET_LABEL: Record<CommunityTarget, string> = { car: "auto v garáži", entry: "zápis v příběhu auta", comment: "komentář" };
 
-export async function reportContent(session: Session, kind: CommunityTarget, targetId: string, reason: string) {
+export async function reportContent(session: Session, kind: CommunityTarget, targetId: string, reason: string, goodFaith: boolean) {
   const text = reason.trim().slice(0, 1000);
+  if (!goodFaith) throw new ListingError(422, "Potvrďte, že hlášení podáváte v dobré víře.");
   if (text.length < 10) throw new ListingError(422, "Popište, co je v nepořádku (alespoň 10 znaků).");
   const table = TARGET_TABLES[kind];
   if (!table) throw new ListingError(400, "Neplatné hlášení.");
@@ -566,7 +568,24 @@ export async function openCommunityReports() {
 }
 
 /** Hides (with a reason the author sees) or restores content, and closes its open reports. */
-export async function moderate(session: Session, kind: CommunityTarget, targetId: string, action: "hide" | "restore" | "dismiss", reason = "") {
+/** Where reported content lives, for the author's statement of reasons. */
+async function contentPath(kind: CommunityTarget, targetId: string): Promise<string | undefined> {
+  const db = getDb();
+  if (kind === "car") return `/pribehy/${targetId}/`;
+  if (kind === "entry") {
+    const [e] = await db.select({ carId: logEntry.carId }).from(logEntry).where(eq(logEntry.id, targetId)).limit(1);
+    return e && `/pribehy/${e.carId}/${targetId}/`;
+  }
+  const [c] = await db
+    .select({ entryId: entryComment.entryId, carId: logEntry.carId })
+    .from(entryComment)
+    .innerJoin(logEntry, eq(logEntry.id, entryComment.entryId))
+    .where(eq(entryComment.id, targetId))
+    .limit(1);
+  return c && `/pribehy/${c.carId}/${c.entryId}/#komentare`;
+}
+
+export async function moderate(session: Session, kind: CommunityTarget, targetId: string, action: "hide" | "restore" | "dismiss", reason = "", rule?: unknown) {
   if (!isStaff(session)) throw new ListingError(403, "Jen pro moderátory.");
   const table = TARGET_TABLES[kind];
   if (!table) throw new ListingError(400, "Neplatný obsah.");
@@ -576,13 +595,37 @@ export async function moderate(session: Session, kind: CommunityTarget, targetId
   if (action === "hide") {
     const text = reason.trim().slice(0, 500);
     if (text.length < 5) throw new ListingError(422, "Napište důvod skrytí, uvidí ho autor.");
+    if (!isRule(rule)) throw new ListingError(422, "Vyberte porušené pravidlo.");
+    const [reported] = await db
+      .select({ n: count() })
+      .from(communityReport)
+      .where(and(eq(communityReport.kind, kind), eq(communityReport.targetId, targetId), eq(communityReport.status, "open")));
     await db.update(table).set({ hiddenReason: text }).where(eq(table.id, targetId));
-    await notify(target.userId, `Moderátor skryl váš obsah (${TARGET_LABEL[kind]}). Důvod: ${text}`);
+    await notify(
+      target.userId,
+      statementOfReasons({
+        what: `Váš obsah (${TARGET_LABEL[kind]})`,
+        link: await contentPath(kind, targetId),
+        action: "jsme skryli; ostatní ho nevidí, vy ho vidíte i s důvodem",
+        reason: text,
+        rule,
+        flaggedBy: (reported?.n ?? 0) > 0 ? "hlášením uživatelů" : "vlastní kontrolou moderátora",
+        decidedBy: "moderátor",
+      }),
+    );
   } else if (action === "restore") {
     await db.update(table).set({ hiddenReason: null }).where(eq(table.id, targetId));
   }
-  await db
+  // Everyone who reported it learns the outcome (DSA art. 16(5)).
+  const notifiers = await db
     .update(communityReport)
     .set({ status: action === "hide" ? "hidden" : "dismissed", decidedBy: session.user.id, decidedAt: new Date() })
-    .where(and(eq(communityReport.kind, kind), eq(communityReport.targetId, targetId), eq(communityReport.status, "open")));
+    .where(and(eq(communityReport.kind, kind), eq(communityReport.targetId, targetId), eq(communityReport.status, "open")))
+    .returning({ userId: communityReport.userId });
+  const outcome = action === "hide" ? "obsah jsme skryli" : "obsah po posouzení ponecháváme zveřejněný";
+  await Promise.all(
+    [...new Set(notifiers.map((n) => n.userId))].map((userId) =>
+      notify(userId, `Výsledek vašeho hlášení (${TARGET_LABEL[kind]}): ${outcome}. ${redress()}`),
+    ),
+  );
 }

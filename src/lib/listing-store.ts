@@ -11,6 +11,7 @@ import { notify, notifyStaff } from "./chat";
 import { type Draft, cleanDraft, draftProblems, draftTitle, isDraft } from "./listing-draft";
 import { marketEstimate, roughMarketPrice } from "./market";
 import { reviewListing } from "./moderation";
+import { type RuleKey, isRule, statementOfReasons } from "./statement";
 import { deletePhotos, storePhoto } from "./photo-store";
 import { toListing } from "./user-listings";
 
@@ -125,7 +126,14 @@ const OWNER_FROM: Record<OwnerAction, ListingStatus[]> = {
 };
 const STAFF_FROM: Record<StaffAction, ListingStatus[]> = { approve: ["pending"], reject: ["pending", "published"] };
 
-export async function changeStatus(session: Session, id: string, action: string, reason?: string) {
+/** A staff rejection also names the rule broken (lib/statement RULES) and, when it settles notices,
+ *  says so: the author's statement of reasons tells how the listing came to our attention. */
+export interface Rejection {
+  rule?: unknown;
+  flaggedBy?: "hlášením uživatelů";
+}
+
+export async function changeStatus(session: Session, id: string, action: string, reason?: string, rejection: Rejection = {}) {
   if (action in OWNER_FROM) {
     const row = await listingFor(session, id);
     if (!OWNER_FROM[action as OwnerAction].includes(row.status)) throw new ListingError(409, "Tuto akci teď nelze provést.");
@@ -159,6 +167,7 @@ export async function changeStatus(session: Session, id: string, action: string,
     if (!STAFF_FROM[action as StaffAction].includes(row.status)) throw new ListingError(409, "Inzerát už mezitím změnil stav.");
     const rejectReason = action === "reject" ? reason?.trim().slice(0, 1000) : undefined;
     if (action === "reject" && !rejectReason) throw new ListingError(422, "Uveďte důvod zamítnutí.");
+    if (action === "reject" && !isRule(rejection.rule)) throw new ListingError(422, "Vyberte porušené pravidlo.");
     await getDb()
       .update(listing)
       .set({
@@ -175,7 +184,16 @@ export async function changeStatus(session: Session, id: string, action: string,
       row.userId,
       action === "approve"
         ? `Inzerát ${title} je zveřejněný.`
-        : `Inzerát ${title} jsme ${row.publishedAt ? "stáhli z webu" : "nezveřejnili"}. Důvod: ${rejectReason}`,
+        : statementOfReasons({
+            what: `Inzerát ${title}`,
+            link: `/ucet/inzerat/${id}/`,
+            action: `jsme ${row.publishedAt ? "stáhli z webu" : "nezveřejnili"}`,
+            reason: rejectReason!,
+            rule: rejection.rule as RuleKey,
+            flaggedBy: rejection.flaggedBy ?? (row.moderationFlags.length ? "automatickou kontrolou" : "vlastní kontrolou moderátora"),
+            decidedBy: "moderátor",
+            duration: "dokud inzerát neupravíte; upravený inzerát projde kontrolou znovu",
+          }),
       action === "approve" ? `/inzerat/${id}/` : `/ucet/inzerat/${id}/`,
     );
     return;
@@ -187,7 +205,20 @@ export async function changeStatus(session: Session, id: string, action: string,
 async function announceReview(row: ListingRow, flags: string[]) {
   const title = draftTitle(row.data);
   if (!flags.length) return notify(row.userId, `Inzerát ${title} je zveřejněný.`, `/inzerat/${row.id}/`);
-  await notify(row.userId, `Inzerát ${title} čeká na kontrolu moderátorem.`, `/ucet/inzerat/${row.id}/`);
+  await notify(
+    row.userId,
+    statementOfReasons({
+      what: `Inzerát ${title}`,
+      link: `/ucet/inzerat/${row.id}/`,
+      action: "zatím nezveřejníme, čeká na kontrolu moderátorem",
+      reason: `automatická kontrola v něm našla znaky, které moderátor posuzuje osobně: ${flags.join(", ")}. Neznamená to, že jde o podvod.`,
+      rule: { text: "Inzerát, který se podobá častým podvodům, nejdřív posoudí moderátor (Podmínky užívání, oddíl 5)" },
+      flaggedBy: "automatickou kontrolou",
+      decidedBy: "automaticky systém",
+      duration: "do posouzení moderátorem",
+    }),
+    `/ucet/inzerat/${row.id}/`,
+  );
   await notifyStaff(`Ke schválení: ${title} (${flags.join(", ")})`, "/admin/inzeraty/");
 }
 

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Icon } from "@/components/Icon";
 import { SignInLink } from "@/components/SignInModal";
+import { OPERATOR } from "@/lib/operator";
 
 // Interactive parts of the public logbook pages: likes and follows, comments, reports. A visitor
 // who is not signed in gets the sign-in dialog instead.
@@ -126,14 +127,26 @@ export function DeleteComment({ id }: { id: string }) {
   );
 }
 
-/** "Nahlásit" for a car, an entry or a comment: a short reason goes to the moderators. */
+/** "Nahlásit" for a car, an entry or a comment: a short reason goes to the moderators. Without an
+ *  account the notice goes by e-mail (terms section 6), so anyone can report (DSA art. 16). */
 export function ReportContent({ kind, id, signedIn, next }: { kind: "car" | "entry" | "comment"; id: string; signedIn: boolean; next: string }) {
   const [open, setOpen] = useState(false);
   const [reason, setReason] = useState("");
+  const [goodFaith, setGoodFaith] = useState(false);
   const [state, setState] = useState<"" | "busy" | "sent">("");
   const [error, setError] = useState("");
   const trigger = "text-xs text-[var(--color-muted)] hover:text-[var(--color-warn)]";
-  if (!signedIn) return <SignInLink next={next} className={trigger}>Nahlásit</SignInLink>;
+  if (!signedIn && !open) return <button type="button" className={trigger} onClick={() => setOpen(true)}>Nahlásit</button>;
+  if (!signedIn)
+    return (
+      <p className="w-full text-xs text-[var(--color-muted)]">
+        <SignInLink next={next} className="underline">Přihlaste se</SignInLink> a nahlaste obsah tady. Obsah můžete nahlásit i bez účtu na{" "}
+        {OPERATOR.email ? <a href={`mailto:${OPERATOR.email}`} className="underline">{OPERATOR.email}</a> : <a href="/podminky/#kontakt" className="underline">kontaktní e-mail</a>}.
+        Uveďte přesný odkaz, důvod a prohlášení, že jsou informace podle vašeho nejlepšího vědomí přesné a úplné. Podrobnosti najdete v{" "}
+        <a href="/podminky/#hlaseni" className="underline">podmínkách užívání</a>.{" "}
+        <button type="button" className="underline" onClick={() => setOpen(false)}>Zavřít</button>
+      </p>
+    );
   if (state === "sent") return <span role="status" className="text-xs text-[var(--color-muted)]">Nahlášeno, děkujeme.</span>;
   if (!open) return <button type="button" className={trigger} onClick={() => setOpen(true)}>Nahlásit</button>;
   return (
@@ -142,7 +155,7 @@ export function ReportContent({ kind, id, signedIn, next }: { kind: "car" | "ent
       onSubmit={async (e) => {
         e.preventDefault();
         setState("busy");
-        const result = await post("/api/deniky/hlaseni/", { kind, id, reason });
+        const result = await post("/api/deniky/hlaseni/", { kind, id, reason, goodFaith });
         if (result.ok) setState("sent");
         else {
           setState("");
@@ -152,8 +165,12 @@ export function ReportContent({ kind, id, signedIn, next }: { kind: "car" | "ent
     >
       <label htmlFor={`hlaseni-${id}`} className="text-xs text-[var(--color-muted)]">Co je v nepořádku?</label>
       <textarea id={`hlaseni-${id}`} className="input min-h-20" maxLength={1000} value={reason} onChange={(e) => setReason(e.target.value)} />
+      <label className="flex gap-2 text-xs text-[var(--color-muted)]">
+        <input type="checkbox" checked={goodFaith} onChange={(e) => setGoodFaith(e.target.checked)} className="mt-0.5" />
+        <span>Prohlašuji, že údaje v hlášení jsou podle mého nejlepšího vědomí přesné a úplné a podávám ho v dobré víře.</span>
+      </label>
       <div className="flex flex-wrap items-center gap-2">
-        <button type="submit" className="pill" disabled={state === "busy" || reason.trim().length < 10}>Odeslat hlášení</button>
+        <button type="submit" className="pill" disabled={state === "busy" || reason.trim().length < 10 || !goodFaith}>Odeslat hlášení</button>
         <button type="button" className="text-xs text-[var(--color-muted)]" onClick={() => setOpen(false)}>Zrušit</button>
         {error && <span role="alert" className="text-xs text-[var(--color-warn)]">{error}</span>}
       </div>

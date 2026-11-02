@@ -11,11 +11,13 @@ import { REPORT_CATEGORY_LABEL as CATEGORY_LABEL } from "./listing-status";
 import { ListingError, changeStatus, findListing } from "./listing-store";
 import { notify, notifyStaff } from "./chat";
 import { sendMail } from "./mail";
+import { redress, statementOfReasons } from "./statement";
 
 // Notices about listings and how they are decided (DSA art. 16 and 17):
-// - anyone can report a published listing, with a reason, name and e-mail, in good faith;
+// - anyone can report a published listing, with a reason, name and e-mail, in good faith; a notice
+//   of child sexual abuse may be anonymous (DSA art. 16(2)(c));
 // - the notifier gets a confirmation and later the decision: in the chat when signed in, else by e-mail;
-// - three open notices hide a listing until a moderator looks at it;
+// - open notices from three different notifiers hide a listing until a moderator looks at it;
 // - removing a listing shows its author the reasons in the account (no e-mail, to save the quota).
 
 /** Open notices that hide a listing until a moderator decides. */
@@ -47,8 +49,10 @@ export function parseNotice(body: unknown): NoticeInput {
   };
   if (!REPORT_CATEGORIES.includes(notice.category as ReportCategory)) throw new ListingError(422, "Vyberte důvod hlášení.");
   if (notice.explanation.length < 20) throw new ListingError(422, "Popište, co je s inzerátem v nepořádku (alespoň 20 znaků).");
-  if (!notice.name) throw new ListingError(422, "Uveďte své jméno.");
-  if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(notice.email)) throw new ListingError(422, "Uveďte platný e-mail, pošleme na něj výsledek.");
+  const anonymousAllowed = notice.category === "deti";
+  if (!notice.name && !anonymousAllowed) throw new ListingError(422, "Uveďte své jméno.");
+  if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(notice.email) && !(anonymousAllowed && !notice.email))
+    throw new ListingError(422, "Uveďte platný e-mail, pošleme na něj výsledek.");
   if (!notice.goodFaith) throw new ListingError(422, "Potvrďte, že hlášení podáváte v dobré víře.");
   return notice;
 }
@@ -58,11 +62,13 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
   const target = await findListing(notice.listingId);
   if (!target || target.status !== "published") throw new ListingError(404, "Inzerát nenalezen.");
   if (session && target.userId === session.user.id) throw new ListingError(409, "Vlastní inzerát nahlásit nelze.");
-  const [recent] = await db
-    .select({ n: count() })
-    .from(report)
-    .where(and(eq(report.notifierEmail, notice.email), gt(report.createdAt, new Date(Date.now() - 3_600_000))));
-  if ((recent?.n ?? 0) >= PER_HOUR) throw new ListingError(429, "Odeslali jste příliš mnoho hlášení, zkuste to později.");
+  if (notice.email) {
+    const [recent] = await db
+      .select({ n: count() })
+      .from(report)
+      .where(and(eq(report.notifierEmail, notice.email), gt(report.createdAt, new Date(Date.now() - 3_600_000))));
+    if ((recent?.n ?? 0) >= PER_HOUR) throw new ListingError(429, "Odeslali jste příliš mnoho hlášení, zkuste to později.");
+  }
 
   await db.insert(report).values({
     id: `r-${generateRandomString(12, "a-z", "0-9")}`,
@@ -77,7 +83,7 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
   const title = draftTitle(target.data);
   if (session) {
     await notify(session.user.id, `Hlášení k inzerátu ${title} jsme přijali a posoudíme ho. Výsledek vám napíšeme sem.`);
-  } else {
+  } else if (notice.email) {
     await sendMail({
       to: notice.email,
       subject: `Hlášení přijato: ${title}`,
@@ -86,14 +92,35 @@ export async function submitNotice(notice: NoticeInput, session: Session | null)
   }
   await notifyStaff(`Nové hlášení: ${title} (${CATEGORY_LABEL[notice.category as ReportCategory]})`, "/admin/hlaseni/");
 
-  const [open] = await db.select({ n: count() }).from(report).where(and(eq(report.listingId, target.id), eq(report.status, "open")));
-  if ((open?.n ?? 0) >= HIDE_AT) {
+  // Only distinct, identifiable notifiers count towards hiding: one person sending several notices,
+  // or anonymous notices, never hide a listing on their own; a moderator still sees them all.
+  const open = await db
+    .select({ userId: report.userId, email: report.notifierEmail, category: report.category })
+    .from(report)
+    .where(and(eq(report.listingId, target.id), eq(report.status, "open")));
+  const notifiers = new Set(open.map((n) => n.userId ?? n.email).filter(Boolean));
+  if (notifiers.size >= HIDE_AT) {
     // Hidden, not removed: the listing waits in the moderation queue with the reason.
-    await db
+    const hidden = await db
       .update(listing)
       .set({ status: "pending", moderationFlags: [...new Set([...target.moderationFlags, "opakovaně nahlášeno uživateli"])], updatedAt: new Date() })
-      .where(and(eq(listing.id, target.id), eq(listing.status, "published")));
-    await notify(target.userId, `Inzerát ${title} jsme kvůli hlášením uživatelů dočasně skryli, než ho posoudí moderátor.`, `/ucet/inzerat/${target.id}/`);
+      .where(and(eq(listing.id, target.id), eq(listing.status, "published")))
+      .returning({ id: listing.id });
+    if (!hidden.length) return;
+    await notify(
+      target.userId,
+      statementOfReasons({
+        what: `Inzerát ${title}`,
+        link: `/ucet/inzerat/${target.id}/`,
+        action: "jsme dočasně skryli",
+        reason: `K inzerátu jsme přijali alespoň ${HIDE_AT} hlášení od různých lidí (${[...new Set(open.map((r) => CATEGORY_LABEL[r.category]))].join(", ")}). Zatím jsme neposoudili jejich oprávněnost.`,
+        rule: { text: "Po opakovaných hlášeních může systém inzerát dočasně skrýt, než ho posoudí moderátor (Podmínky užívání, oddíl 6)" },
+        flaggedBy: "hlášením uživatelů",
+        decidedBy: "automaticky systém",
+        duration: "do rozhodnutí moderátora",
+      }),
+      `/ucet/inzerat/${target.id}/`,
+    );
     await notifyStaff(`Skryto po ${HIDE_AT} hlášeních: ${title}`, "/admin/hlaseni/");
   }
 }
@@ -106,7 +133,7 @@ export async function openReports(): Promise<ReportRow[]> {
  * A moderator's decision on all open notices of one listing: "remove" takes the listing down
  * (its author gets the reasons), "dismiss" keeps or restores it. Every notifier gets the outcome.
  */
-export async function decideReports(session: Session, listingId: string, decision: "remove" | "dismiss", reason: string) {
+export async function decideReports(session: Session, listingId: string, decision: "remove" | "dismiss", reason: string, rule?: unknown) {
   const text = reason.trim().slice(0, 1000);
   if (!text) throw new ListingError(422, "Napište zdůvodnění rozhodnutí.");
   const db = getDb();
@@ -116,7 +143,7 @@ export async function decideReports(session: Session, listingId: string, decisio
   if (!notices.length) throw new ListingError(409, "K inzerátu už nejsou otevřená hlášení.");
 
   if (decision === "remove" && (target.status === "published" || target.status === "pending")) {
-    await changeStatus(session, listingId, "reject", text);
+    await changeStatus(session, listingId, "reject", text, { rule, flaggedBy: "hlášením uživatelů" });
   } else if (decision === "dismiss" && target.status === "pending" && target.moderationFlags.includes("opakovaně nahlášeno uživateli")) {
     // Hidden only because of the notices: put it back online.
     await db
@@ -138,14 +165,15 @@ export async function decideReports(session: Session, listingId: string, decisio
       ? `Inzerát jsme stáhli z webu.`
       : `Inzerát jsme posoudili a ponecháváme ho zveřejněný: ${base}/inzerat/${listingId}/`;
   for (const n of notices) {
+    if (!n.userId && !n.notifierEmail) continue; // anonymous notice, nowhere to send the outcome
     if (n.userId) {
-      await notify(n.userId, `Výsledek hlášení k inzerátu ${title}: ${decision === "remove" ? "inzerát jsme stáhli z webu" : "inzerát ponecháváme zveřejněný"}. Zdůvodnění: ${text}`);
+      await notify(n.userId, `Výsledek hlášení k inzerátu ${title}: ${decision === "remove" ? "inzerát jsme stáhli z webu" : "inzerát ponecháváme zveřejněný"}. Zdůvodnění: ${text}\n${redress()}`);
       continue;
     }
     await sendMail({
       to: n.notifierEmail,
       subject: `Výsledek hlášení: ${title}`,
-      text: `Dobrý den,\n\nděkujeme za hlášení k inzerátu ${title}.\n\n${outcome}\nZdůvodnění: ${text}\n\nS rozhodnutím nesouhlasíte? Pošlete nové hlášení s doplňujícími informacemi; obrátit se můžete také na soud.`,
+      text: `Dobrý den,\n\nděkujeme za hlášení k inzerátu ${title}.\n\n${outcome}\nZdůvodnění: ${text}\n\n${redress()}`,
     }).catch(() => {});
   }
 }
