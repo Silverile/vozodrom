@@ -23,6 +23,13 @@ export interface CatalogEdit {
   value: string;
 }
 
+/** The catalogue's own texts of a model card, as the admin editor gets them. */
+export interface CardTexts {
+  name: string;
+  summary: string | null;
+  generations: { code: string | null; from: number | null; to: number | null; name: string | null; dateNote: string | null }[];
+}
+
 export const isEditField = (field: string): field is CatalogEditField => field in CATALOG_EDIT_FIELDS;
 
 /** Applies edits to one card (a copy; the card from the index stays as built). */

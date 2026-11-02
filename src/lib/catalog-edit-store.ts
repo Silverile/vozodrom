@@ -8,10 +8,12 @@ import { catalogEdit } from "@/db/schema";
 import { type Session, hasRole } from "./auth";
 import { CATALOG_EDIT_FIELDS, type CatalogEdit, isEditField } from "./catalog-edits";
 import { ListingError } from "./listing-store";
-import { cardOf } from "./modelCards";
+import { modelLinesOf } from "./makes";
 
 // Catalogue edits in the database: admins save them here (each save is kept, the newest per field
 // wins), the public list feeds the next build, and "Publikovat" starts that build on GitHub.
+// Deliberately without lib/modelCards: the model cards (~20 MB) would be bundled once more for
+// these routes and push the Worker over its size limit.
 
 const REPOSITORY = "Silverile/vozodrom";
 const WORKFLOW = "deploy-cloudflare.yml";
@@ -50,10 +52,9 @@ export async function saveEdit(session: Session, input: unknown) {
   const lineSlug = typeof b.lineSlug === "string" ? b.lineSlug : "";
   const genIndex = typeof b.genIndex === "number" && Number.isInteger(b.genIndex) ? b.genIndex : null;
   const value = typeof b.value === "string" ? b.value.trim().slice(0, 5000) : "";
-  const card = cardOf(makeSlug, lineSlug);
-  if (!field || !card) throw new ListingError(400, "Neplatná úprava.");
+  if (!field || !modelLinesOf(makeSlug).some((l) => l.slug === lineSlug)) throw new ListingError(400, "Neplatná úprava.");
   const generationField = CATALOG_EDIT_FIELDS[field].level === "generation";
-  if (generationField !== (genIndex !== null) || (genIndex !== null && !card.generations[genIndex])) throw new ListingError(400, "Neplatná generace.");
+  if (generationField !== (genIndex !== null) || (genIndex !== null && (genIndex < 0 || genIndex > 50))) throw new ListingError(400, "Neplatná generace.");
   await getDb().insert(catalogEdit).values({
     id: `o-${generateRandomString(12, "a-z", "0-9")}`,
     makeSlug,
