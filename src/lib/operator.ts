@@ -10,7 +10,7 @@ export const OPERATOR = {
   /** registered address (místo podnikání) */
   address: "",
   /** contact e-mail for users and authorities, also the DSA single point of contact (art. 11, 12) */
-  email: "",
+  email: "vozodrom@gmail.com",
 };
 
 /** When the current terms of use took effect, e.g. "1. 12. 2026"; empty until they are published. */
