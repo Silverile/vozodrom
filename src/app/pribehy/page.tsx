@@ -7,8 +7,8 @@ import { feed } from "@/lib/garage-store";
 import { getMake, makesIn, modelLinesOf } from "@/lib/makes";
 
 export const metadata: Metadata = {
-  title: "Deníky aut",
-  description: "Majitelé píšou, co na svých autech opravovali, měnili a kolik to stálo. Deníky podle značek, modelů a témat.",
+  title: "Příběhy aut",
+  description: "Majitelé píšou, co se svými auty zažili: opravy, úpravy, cesty a co všechno stály. Příběhy podle značek, modelů a témat.",
 };
 
 const PAGE = 24;
@@ -26,22 +26,22 @@ export default async function LogbooksPage({ searchParams }: { searchParams: Pro
   const items = await feed({ make: make || undefined, line: line || undefined, category: category || undefined, before: before && !Number.isNaN(before.getTime()) ? before : undefined, limit: PAGE });
   const link = (patch: Record<string, string>) => {
     const params = new URLSearchParams(Object.entries({ znacka: make, model: line, tema: category, ...patch }).filter(([, v]) => v));
-    return `/deniky/${params.size ? `?${params}` : ""}`;
+    return `/pribehy/${params.size ? `?${params}` : ""}`;
   };
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Deníky aut</h1>
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Příběhy aut</h1>
           <p className="mt-1 text-[var(--color-muted)] max-w-2xl">
-            Majitelé píšou, co na svých autech opravovali, měnili a kolik to stálo. Dobrý zdroj, než si stejné auto koupíte.
+            Majitelé píšou, co se svými auty zažili: opravy, úpravy, cesty a co všechno stály. Dobrý zdroj, než si stejné auto koupíte.
           </p>
         </div>
         <Link href="/garaz/" className="btn-cta text-sm">Moje garáž</Link>
       </div>
 
-      <form action="/deniky/" className="mt-6 card p-4 grid gap-3 sm:grid-cols-[1fr_1fr_auto] items-end">
+      <form action="/pribehy/" className="mt-6 card p-4 grid gap-3 sm:grid-cols-[1fr_1fr_auto] items-end">
         <label className="text-sm">
           Značka
           <select name="znacka" className="input mt-1" defaultValue={make}>
@@ -70,7 +70,7 @@ export default async function LogbooksPage({ searchParams }: { searchParams: Pro
       {items.length === 0 ? (
         <div className="card mt-6 p-8 text-center text-[var(--color-muted)]">
           {before ? "Starší zápisy už nejsou." : "Tady zatím nikdo nic nenapsal."}{" "}
-          <Link href="/garaz/" className="text-[var(--color-brand)]">Založte deník svého auta.</Link>
+          <Link href="/garaz/" className="text-[var(--color-brand)]">Napište příběh svého auta.</Link>
         </div>
       ) : (
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

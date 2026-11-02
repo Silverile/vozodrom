@@ -25,7 +25,7 @@ async function load(carId: string, entryId: string) {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { carId, entryId } = await params;
   const page = await load(carId, entryId);
-  if (!page) return { title: "Zápis v deníku" };
+  if (!page) return { title: "Zápis v příběhu auta" };
   return {
     title: `${page.entry.title} — ${carTitle(page.car.data)}`,
     description: page.entry.body.slice(0, 160) || undefined,
@@ -39,14 +39,14 @@ export default async function EntryPage({ params }: { params: Params }) {
   if (!page) notFound();
   const { car, entry, comments, earlier, later, viewer, ownerName, liked, signedIn } = page;
   const title = carTitle(car.data);
-  const here = `/deniky/${carId}/${entryId}/`;
+  const here = `/pribehy/${carId}/${entryId}/`;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <p className="text-sm text-[var(--color-muted)]">
-        <Link href="/deniky/" className="hover:text-[var(--color-brand)]">Deníky</Link>
+        <Link href="/pribehy/" className="hover:text-[var(--color-brand)]">Příběhy aut</Link>
         {" / "}
-        <Link href={`/deniky/${carId}/`} className="hover:text-[var(--color-brand)]">{title}</Link>
+        <Link href={`/pribehy/${carId}/`} className="hover:text-[var(--color-brand)]">{title}</Link>
       </p>
 
       <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_300px] items-start">
@@ -86,13 +86,13 @@ export default async function EntryPage({ params }: { params: Params }) {
           {(earlier || later) && (
             <nav aria-label="Další zápisy" className="grid gap-3 sm:grid-cols-2">
               {earlier ? (
-                <Link href={`/deniky/${carId}/${earlier.id}/`} className="card p-4 hover:border-[var(--color-brand)]">
+                <Link href={`/pribehy/${carId}/${earlier.id}/`} className="card p-4 hover:border-[var(--color-brand)]">
                   <span className="block text-xs text-[var(--color-muted)]">← Dříve</span>
                   <span className="block font-semibold">{earlier.title}</span>
                 </Link>
               ) : <span />}
               {later && (
-                <Link href={`/deniky/${carId}/${later.id}/`} className="card p-4 text-right hover:border-[var(--color-brand)]">
+                <Link href={`/pribehy/${carId}/${later.id}/`} className="card p-4 text-right hover:border-[var(--color-brand)]">
                   <span className="block text-xs text-[var(--color-muted)]">Později →</span>
                   <span className="block font-semibold">{later.title}</span>
                 </Link>
@@ -129,11 +129,11 @@ export default async function EntryPage({ params }: { params: Params }) {
         </article>
 
         <aside className="min-w-0">
-          <Link href={`/deniky/${carId}/`} className="card block overflow-hidden hover:border-[var(--color-brand)]">
+          <Link href={`/pribehy/${carId}/`} className="card block overflow-hidden hover:border-[var(--color-brand)]">
             <GarageCarImage car={car.data} photo={car.photos[0]} alt={title} />
             <span className="block p-4">
               <span className="block font-semibold">{title}</span>
-              <span className="block text-sm text-[var(--color-muted)]">{page.counts.entries} zápisů v deníku</span>
+              <span className="block text-sm text-[var(--color-muted)]">{page.counts.entries} zápisů v příběhu</span>
             </span>
           </Link>
         </aside>

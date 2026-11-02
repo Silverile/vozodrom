@@ -150,7 +150,7 @@ export function cleanEntry(v: unknown): EntryInput | string {
 /** Short paragraphs of plain text, for owner stories and entries (no markup is stored). */
 export const paragraphs = (text: string) => text.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 
-/** A logbook entry in feeds: the feed page and the "Deníky majitelů" block of catalogue pages. */
+/** A logbook entry in feeds: the feed page and the "Příběhy majitelů" block of catalogue pages. */
 export interface FeedItem {
   id: string;
   carId: string;

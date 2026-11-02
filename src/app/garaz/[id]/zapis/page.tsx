@@ -8,7 +8,7 @@ import { carFor } from "@/lib/garage-store";
 import { ListingError } from "@/lib/listing-store";
 import { EntryForm } from "../../EntryForm";
 
-export const metadata: Metadata = { title: "Nový zápis do deníku", robots: { index: false } };
+export const metadata: Metadata = { title: "Nový zápis do příběhu auta", robots: { index: false } };
 
 export default async function NewEntryPage({ params }: { params: Promise<{ id: string }> }) {
   await connection();
@@ -25,7 +25,7 @@ export default async function NewEntryPage({ params }: { params: Promise<{ id: s
       <p className="text-sm text-[var(--color-muted)]">
         <Link href="/garaz/" className="hover:text-[var(--color-brand)]">Moje garáž</Link> / <Link href={`/garaz/${id}/`} className="hover:text-[var(--color-brand)]">{title}</Link> / Nový zápis
       </p>
-      <h1 className="mt-1 mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight">Nový zápis do deníku</h1>
+      <h1 className="mt-1 mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight">Nový zápis do příběhu auta</h1>
       <EntryForm carId={id} />
     </div>
   );

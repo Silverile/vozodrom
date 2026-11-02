@@ -7,7 +7,7 @@ import { Icon } from "./Icon";
 /** A logbook entry in a feed: photo, car, title, topic and what it cost. */
 export function LogbookCard({ item }: { item: FeedItem }) {
   return (
-    <Link href={`/deniky/${item.carId}/${item.id}/`} className="card block overflow-hidden h-full hover:border-[var(--color-brand)]">
+    <Link href={`/pribehy/${item.carId}/${item.id}/`} className="card block overflow-hidden h-full hover:border-[var(--color-brand)]">
       {item.photo ? (
         <img src={photoUrl(item.photo.key)} alt="" width={item.photo.width} height={item.photo.height} className="w-full aspect-[16/10] object-cover bg-[var(--color-photo)]" loading="lazy" />
       ) : (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Suspense } from "react";
 import { AccountLink } from "@/components/AccountLink";
@@ -13,6 +14,9 @@ import { ShortlistLink } from "@/components/ShortlistLink";
 import { THEME_BOOTSTRAP, ThemeSync } from "@/components/Theme";
 import "./globals.css";
 
+// Inter, self-hosted by next/font (no request to Google from the browser); latin-ext for Czech.
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter", display: "swap" });
+
 export const metadata: Metadata = {
   title: { default: "Vozodrom — auta, inzeráty a katalog", template: "%s · Vozodrom" },
   description: "Prototyp autoportálu: inzeráty, katalog modelů a data z technických kontrol na jednom místě.",
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     // data-theme is set by the bootstrap script before React hydrates.
-    <html lang="cs" suppressHydrationWarning>
+    <html lang="cs" className={inter.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
       </head>
@@ -29,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="bg-[var(--color-warn-soft)] text-[var(--color-warn)] text-xs text-center py-1.5 px-4 print:hidden">
           Prototyp — všechny inzeráty, ceny a statistiky jsou smyšlená testovací data.
         </div>
-        <header className="print:hidden sticky top-0 z-20 border-b border-[var(--color-line)] bg-[var(--color-bg)]/90 backdrop-blur">
+        <header className="print:hidden sticky top-0 z-20 bg-[var(--color-surface)]">
           <div className="relative mx-auto max-w-6xl px-4 h-14 flex items-center gap-1 sm:gap-4">
             <Suspense>
               <BrandLink />
@@ -46,14 +50,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <AddListingButton />
             </Suspense>
           </div>
-          <div className="mx-auto max-w-6xl px-4 border-t border-[var(--color-line)]">
+          <div className="mx-auto max-w-6xl px-4">
             <Suspense>
               <SectionTabs />
             </Suspense>
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="print:hidden border-t border-[var(--color-line)] mt-16">
+        <footer className="print:hidden bg-[var(--color-surface)] mt-24 sm:mt-32">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] grid gap-2 sm:grid-cols-3">
             <span>© 2026 vozodrom.cz — prototyp</span>
             <span className="space-y-1">

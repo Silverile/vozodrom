@@ -31,7 +31,7 @@ export default async function GarageCarPage({ params }: { params: Promise<{ id: 
         <p className="text-sm text-[var(--color-muted)]"><Link href="/garaz/" className="hover:text-[var(--color-brand)]">Moje garáž</Link> / {title}</p>
         <div className="mt-1 flex flex-wrap items-end justify-between gap-3">
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{title}</h1>
-          <Link href={`/deniky/${id}/`} className="pill">Zobrazit veřejnou stránku</Link>
+          <Link href={`/pribehy/${id}/`} className="pill">Zobrazit veřejnou stránku</Link>
         </div>
         {car.hiddenReason && (
           <p className="mt-3 card p-4 text-sm bg-[var(--color-warn-soft)] text-[var(--color-warn)]">Moderátor auto skryl: {car.hiddenReason}</p>
@@ -40,7 +40,7 @@ export default async function GarageCarPage({ params }: { params: Promise<{ id: 
 
       <section className="card p-5 space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="font-bold text-lg">Deník</h2>
+          <h2 className="font-bold text-lg">Příběh auta</h2>
           <Link href={`/garaz/${id}/zapis/`} className="btn-cta text-sm">+ Nový zápis</Link>
         </div>
         {page && page.entries.length > 0 ? (
@@ -70,7 +70,7 @@ export default async function GarageCarPage({ params }: { params: Promise<{ id: 
       <CarForm carId={id} initial={car.data} initialFormer={car.former} />
 
       <div className="pt-2">
-        <DeleteButton url={`/api/garaz/${id}/`} label="Smazat auto z garáže" confirmText={`Smazat ${title} i s celým deníkem a fotkami? Nejde to vrátit.`} then="/garaz/" />
+        <DeleteButton url={`/api/garaz/${id}/`} label="Smazat auto z garáže" confirmText={`Smazat ${title} i s celým příběhem a fotkami? Nejde to vrátit.`} then="/garaz/" />
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 **Aplikace (`src/app/`)**
 
 - `katalog/`, `inzeraty/` (statické), `inzerat/[id]` (inzeráty uživatelů), `pridat/` (formulář),
-  `garaz/` (garáž majitele a psaní deníku), `deniky/` (veřejné deníky aut: přehled zápisů, stránka auta a zápisu),
+  `garaz/` (garáž majitele a psaní příběhu auta), `pribehy/` (veřejné příběhy aut, dřív `/deniky/`: přehled zápisů, stránka auta a zápisu),
   `ucet/` (účet, zprávy, správa inzerátu), `admin/` (uživatelé, inzeráty, hlášení), `prihlaseni/`,
   `zapomenute-heslo/`, `nove-heslo/`, `foto/[...key]` (fotky z R2), `api/` (viz [API](api.md)).
 - Ostatní rubriky (`technika`, `moto`, `dily`, `pneumatiky`, `forum`, `recenze`, `novinky`) jsou zatím

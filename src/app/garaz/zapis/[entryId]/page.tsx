@@ -31,7 +31,7 @@ export default async function EditEntryPage({ params }: { params: Promise<{ entr
         </p>
         <div className="mt-1 flex flex-wrap items-end justify-between gap-3">
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{entry.title}</h1>
-          <Link href={`/deniky/${car.id}/${entry.id}/`} className="pill">Zobrazit zápis</Link>
+          <Link href={`/pribehy/${car.id}/${entry.id}/`} className="pill">Zobrazit zápis</Link>
         </div>
         {entry.hiddenReason && <p className="mt-3 card p-4 text-sm bg-[var(--color-warn-soft)] text-[var(--color-warn)]">Moderátor zápis skryl: {entry.hiddenReason}</p>}
       </div>

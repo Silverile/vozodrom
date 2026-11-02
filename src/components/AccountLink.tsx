@@ -4,7 +4,7 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { useUnread } from "@/lib/chat-client";
 import { SignInLink } from "./SignInModal";
-import { Icon } from "./Icon";
+import { Icon, LineGlyph } from "./Icon";
 
 // Header entries: "Přihlásit" for visitors; messages (with the unread count) and the account for
 // signed-in users. The session is read on the client so that prerendered pages stay static.
@@ -20,7 +20,7 @@ export function AccountLink() {
           <Icon name="messages" />
           <span className="hidden sm:inline"> Zprávy</span>
           {unread > 0 && (
-            <span aria-hidden="true" className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 grid place-items-center rounded-full bg-[var(--color-accent)] text-white text-[11px] font-bold">
+            <span aria-hidden="true" className="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 grid place-items-center rounded-full bg-[var(--color-accent)] text-[var(--color-accent-ink)] text-[11px] font-bold">
               {unread > 99 ? "99+" : unread}
             </span>
           )}
@@ -28,12 +28,12 @@ export function AccountLink() {
       )}
       {signedIn ? (
         <Link href="/ucet/" aria-label="Můj účet" className={linkClass}>
-          <span aria-hidden="true" className="sm:hidden">👤</span>
+          <span className="sm:hidden"><LineGlyph name="person" /></span>
           <span className="hidden sm:inline max-w-[12ch] truncate align-bottom">Můj účet</span>
         </Link>
       ) : (
         <SignInLink className={linkClass}>
-          <span aria-hidden="true" className="sm:hidden">👤</span>
+          <span className="sm:hidden"><LineGlyph name="person" /></span>
           <span className="sr-only sm:not-sr-only">Přihlásit</span>
         </SignInLink>
       )}

@@ -2,7 +2,7 @@ import { feed } from "@/lib/garage-store";
 import { errorResponse } from "@/lib/listing-store";
 
 // GET ?znacka=&model=&tema=&pred=<ISO time>&pocet=: newest public logbook entries, for the feed and
-// the "Deníky majitelů" block on (static) catalogue pages.
+// the "Příběhy majitelů" block on (static) catalogue pages.
 export async function GET(request: Request) {
   const q = new URL(request.url).searchParams;
   const before = q.get("pred") ? new Date(q.get("pred")!) : undefined;

@@ -25,8 +25,8 @@ export function OwnerLogbooks({ make, line, name }: { make: string; line: string
   return (
     <section className="mt-10">
       <div className="flex flex-wrap items-baseline justify-between gap-3 mb-3">
-        <h2 className="text-xl font-bold">Deníky majitelů</h2>
-        {items.length > 0 && <Link href={`/deniky/?znacka=${make}&model=${line}`} className="text-sm text-[var(--color-brand)] hover:underline">Všechny zápisy →</Link>}
+        <h2 className="text-xl font-bold">Příběhy majitelů</h2>
+        {items.length > 0 && <Link href={`/pribehy/?znacka=${make}&model=${line}`} className="text-sm text-[var(--color-brand)] hover:underline">Všechny zápisy →</Link>}
       </div>
       {items.length > 0 ? (
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -34,7 +34,7 @@ export function OwnerLogbooks({ make, line, name }: { make: string; line: string
         </ul>
       ) : (
         <p className="card p-5 text-sm text-[var(--color-muted)]">
-          Jezdíte s {name}? <Link href="/garaz/nove/" className="text-[var(--color-brand)] hover:underline">Založte mu deník</Link> a pište, co jste opravovali a kolik to stálo.
+          Jezdíte s {name}? <Link href="/garaz/nove/" className="text-[var(--color-brand)] hover:underline">Napište jeho příběh</Link>: opravy, úpravy, cesty a co všechno stály.
         </p>
       )}
     </section>

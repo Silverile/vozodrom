@@ -7,17 +7,17 @@ import { ModerateContent } from "./ModerateContent";
 
 export const metadata: Metadata = { title: "Komunita" };
 
-const KIND_LABEL = { car: "Auto v garáži", entry: "Zápis v deníku", comment: "Komentář" } as const;
+const KIND_LABEL = { car: "Auto v garáži", entry: "Zápis v příběhu auta", comment: "Komentář" } as const;
 
 /** Where the reported content is, and a short preview of it. */
 function preview(kind: "car" | "entry" | "comment", target: CarRow | EntryRow | CommentRow) {
   if (kind === "car") {
     const car = target as CarRow;
-    return { href: `/deniky/${car.id}/`, text: carTitle(car.data), body: car.data.story };
+    return { href: `/pribehy/${car.id}/`, text: carTitle(car.data), body: car.data.story };
   }
   if (kind === "entry") {
     const entry = target as EntryRow;
-    return { href: `/deniky/${entry.carId}/${entry.id}/`, text: entry.title, body: entry.body };
+    return { href: `/pribehy/${entry.carId}/${entry.id}/`, text: entry.title, body: entry.body };
   }
   const comment = target as CommentRow;
   return { href: null, text: "Komentář", body: comment.body };

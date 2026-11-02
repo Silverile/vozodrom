@@ -209,7 +209,7 @@ export async function createEntry(session: Session, carId: string, input: EntryI
   await Promise.all(
     followers
       .filter((f) => f.userId !== session.user.id)
-      .map((f) => notify(f.userId, `Nový zápis v deníku auta ${title}: ${input.title}`, `/deniky/${carId}/${id}/`)),
+      .map((f) => notify(f.userId, `Nový zápis v příběhu auta ${title}: ${input.title}`, `/pribehy/${carId}/${id}/`)),
   );
   return id;
 }
@@ -385,6 +385,21 @@ export async function feed({ make, line, category, before, limit = 24 }: { make?
   }));
 }
 
+/** How many owners keep a car of this model line here, and how many entries they wrote. */
+export async function ownersOf(make: string, line: string): Promise<{ cars: number; entries: number }> {
+  const db = getDb();
+  const visible = and(eq(garageCar.makeSlug, make), eq(garageCar.lineSlug, line), isNull(garageCar.hiddenReason));
+  const [[cars], [entries]] = await Promise.all([
+    db.select({ n: count() }).from(garageCar).where(visible),
+    db
+      .select({ n: count() })
+      .from(logEntry)
+      .innerJoin(garageCar, eq(garageCar.id, logEntry.carId))
+      .where(and(visible, isNull(logEntry.hiddenReason))),
+  ]);
+  return { cars: cars?.n ?? 0, entries: entries?.n ?? 0 };
+}
+
 // ---------------------------------------------------------------------------------------------
 // Likes, follows, comments
 
@@ -435,7 +450,7 @@ export async function addComment(session: Session, entryId: string, text: string
   const id = newId("k");
   await db.insert(entryComment).values({ id, entryId, userId: session.user.id, body });
   if (entry.userId !== session.user.id) {
-    await notify(entry.userId, `Nový komentář u zápisu ${entry.title}: ${body.slice(0, 120)}`, `/deniky/${entry.carId}/${entryId}/#komentare`);
+    await notify(entry.userId, `Nový komentář u zápisu ${entry.title}: ${body.slice(0, 120)}`, `/pribehy/${entry.carId}/${entryId}/#komentare`);
   }
   return id;
 }
@@ -451,7 +466,7 @@ export async function deleteComment(session: Session, id: string) {
 // Reports and moderation
 
 const TARGET_TABLES = { car: garageCar, entry: logEntry, comment: entryComment } as const;
-const TARGET_LABEL: Record<CommunityTarget, string> = { car: "auto v garáži", entry: "zápis v deníku", comment: "komentář" };
+const TARGET_LABEL: Record<CommunityTarget, string> = { car: "auto v garáži", entry: "zápis v příběhu auta", comment: "komentář" };
 
 export async function reportContent(session: Session, kind: CommunityTarget, targetId: string, reason: string) {
   const text = reason.trim().slice(0, 1000);

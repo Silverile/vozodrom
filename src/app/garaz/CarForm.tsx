@@ -160,7 +160,7 @@ export function CarForm({ carId, initial, initialFormer = false }: { carId?: str
             <input type="checkbox" className="mt-0.5" checked={former} onChange={(e) => { setFormer(e.target.checked); setSaved(false); }} />
             <span>
               Tohle auto už nemám
-              <span className="block text-xs text-[var(--color-muted)]">Stránka a deník zůstanou, auto se ukáže mezi bývalými.</span>
+              <span className="block text-xs text-[var(--color-muted)]">Stránka a příběh zůstanou, auto se ukáže mezi bývalými.</span>
             </span>
           </label>
         )}

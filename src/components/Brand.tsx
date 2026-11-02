@@ -74,7 +74,8 @@ export function SectionTabs() {
       <Link href="/katalog/" className={tab} data-on={onCatalog} aria-current={onCatalog ? "page" : undefined}>
         Katalog modelů
       </Link>
-      <span className="my-2.5 mx-1 w-px shrink-0 bg-[var(--color-line)]" aria-hidden="true" />
+      {/* market sections | community: a gap, not a rule */}
+      <span className="w-4 shrink-0" aria-hidden="true" />
       {SECTIONS.filter((s) => s.group === "community").map((s) => {
         const on = active?.key === s.key;
         return (

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { ArticleCard } from "@/components/ArticleCard";
-import { CategoryIcon } from "@/components/CategoryIcon";
-import { REGIONS, brands, models } from "@/lib/catalog";
+import { brands, models } from "@/lib/catalog";
 import { formatNumber } from "@/lib/format";
 import { articles } from "@/lib/articles";
 import { itemsOf } from "@/lib/classifieds";
@@ -10,7 +9,12 @@ import { lastActivity, threads } from "@/lib/forum";
 import { listings } from "@/lib/listings";
 import { SECTIONS } from "@/lib/sections";
 import { LatestListings } from "@/components/LatestListings";
+import { newestFrontDrawing } from "@/components/FrontDrawing";
+import { popularLines } from "@/lib/popular-lines";
+import { HomeLogbooks } from "./HomeLogbooks";
 import { HomeSearch } from "./HomeSearch";
+import { HomeStory } from "./HomeStory";
+import { OwnerPicker } from "./OwnerPicker";
 
 const QUICK = [
   { label: "Rodinná kombi", query: "karoserie=kombi" },
@@ -21,11 +25,11 @@ const QUICK = [
   { label: "Do 200 000 Kč", query: "cenaDo=200000" },
 ];
 
-const SECTION_ICON = { technika: "tahace", moto: "motocykly", dily: "motor", pneu: "letni" } as const;
-const OTHER_SECTIONS = SECTIONS.filter((s) => s.group === "market" && s.key !== "auto").map((s) => {
-  const key = s.key as keyof typeof SECTION_ICON;
-  return { href: s.href, label: s.label, icon: SECTION_ICON[key], count: itemsOf(key).length };
-});
+const OTHER_SECTIONS = SECTIONS.filter((s) => s.group === "market" && s.key !== "auto").map((s) => ({
+  href: s.href,
+  label: s.label,
+  count: itemsOf(s.key as Parameters<typeof itemsOf>[0]).length,
+}));
 
 const brandStats = brands
   .map((brand) => {
@@ -41,110 +45,121 @@ const brandStats = brands
 
 export default function HomePage() {
   const latest = listings.slice(0, 8);
-  const byRegion = (r: string) => listings.filter((l) => l.region === r).length;
-  const topRegions = [...REGIONS].sort((a, b) => byRegion(b) - byRegion(a)).slice(0, 3);
   return (
     <>
-      <section className="relative overflow-hidden border-b border-[var(--color-line)]">
-        <div className="absolute inset-0 bg-[radial-gradient(1100px_420px_at_15%_0%,var(--color-hero)_0%,transparent_65%)]" aria-hidden="true" />
-        <div className="relative mx-auto max-w-6xl px-4 pt-12 pb-10 sm:pt-16">
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
-            Najděte auto, kterému můžete věřit
-          </h1>
-          <p className="mt-3 max-w-xl text-[var(--color-muted)]">
-            Inzeráty, data z technických kontrol a zkušenosti majitelů na jednom místě. Bez reklam přes obsah, analytika jen s vaším souhlasem.
-          </p>
-          <HomeSearch total={listings.length} />
-          <div className="mt-4 flex flex-wrap gap-2">
-            {topRegions.map((r) => (
-              <Link key={r} href={`/inzeraty/?kraj=${encodeURIComponent(r)}`} className="pill">
-                {r} <span className="opacity-60 ml-1">{byRegion(r)}</span>
-              </Link>
-            ))}
-            <Link href="/inzeraty/" className="pill" data-on="true">Celá ČR <span className="opacity-70 ml-1">{listings.length}</span></Link>
-            <span className="w-px bg-[var(--color-line)] mx-1" aria-hidden="true" />
-            {QUICK.map((q) => (
-              <Link key={q.label} href={`/inzeraty/?${q.query}`} className="pill">{q.label}</Link>
-            ))}
+      {/* The first screen: owners and their cars' stories, with the way to start one's own. */}
+      <section className="mx-auto max-w-6xl px-4 pt-10 pb-4 sm:pt-16 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] items-start">
+        <div className="min-w-0 space-y-8">
+          <div>
+            <h1 className="rise text-[clamp(2.6rem,5vw,4.5rem)] font-extrabold tracking-[-0.035em] leading-[0.98]">Každé auto má svůj příběh</h1>
+            <p className="rise mt-6 max-w-[34rem] text-lg sm:text-xl leading-relaxed" style={{ "--d": "90ms" } as React.CSSProperties}>
+              Pište příběh svého auta: opravy, úpravy, cesty a co všechno stály. A čtěte, co zažívají majitelé stejných aut.
+            </p>
+            <p className="rise mt-7 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ "--d": "180ms" } as React.CSSProperties}>
+              <Link href="/garaz/nove/" className="btn-cta !px-6 !py-4 text-base">Napsat příběh auta</Link>
+              <Link href="/pribehy/" className="text-base font-semibold underline underline-offset-4">Číst příběhy</Link>
+            </p>
           </div>
-          <nav aria-label="Další sekce" className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 max-w-3xl">
-            {OTHER_SECTIONS.map((s) => (
-              <Link key={s.href} href={s.href} className="card px-3 py-2.5 flex items-center gap-2.5 text-sm hover:border-[var(--color-brand)]">
-                <CategoryIcon slug={s.icon} className="w-10 shrink-0 text-[var(--color-ink)]" />
-                <span>
-                  <span className="block font-semibold leading-tight">{s.label}</span>
-                  <span className="block text-xs text-[var(--color-muted)]">{s.count} inzerátů</span>
-                </span>
-              </Link>
-            ))}
-          </nav>
+          <div className="rise" style={{ "--d": "270ms" } as React.CSSProperties}>
+            <OwnerPicker lines={popularLines()} />
+          </div>
+        </div>
+        <div className="rise min-w-0" style={{ "--d": "140ms" } as React.CSSProperties}>
+          <HomeStory placeholderDrawing={newestFrontDrawing("mazda", "mx-5") ?? newestFrontDrawing("skoda", "octavia")} />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 mt-10">
-        <div className="flex items-end justify-between mb-4">
-          <h2 className="text-xl font-bold">Nejnovější inzeráty</h2>
-          <Link href="/inzeraty/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny inzeráty →</Link>
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32">
+        <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Hledáte auto?</h2>
+        <HomeSearch total={listings.length} />
+        <p className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-base">
+          {QUICK.map((q) => (
+            <Link key={q.label} href={`/inzeraty/?${q.query}`} className="underline underline-offset-4 decoration-[var(--color-muted)] hover:text-[var(--color-brand)]">
+              {q.label}
+            </Link>
+          ))}
+        </p>
+        <p className="mt-6 text-base text-[var(--color-muted)]">
+          Také na Vozodromu:{" "}
+          {OTHER_SECTIONS.map((s, i) => (
+            <span key={s.href}>
+              {i > 0 && " · "}
+              <Link href={s.href} className="text-[var(--color-ink)] hover:text-[var(--color-brand)]">{s.label}</Link> {s.count}
+            </span>
+          ))}
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32">
+        <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight mb-8">Poslední zápisy majitelů</h2>
+        <HomeLogbooks />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32">
+        <div className="flex items-end justify-between mb-6">
+          <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Nejnovější inzeráty</h2>
+          <Link href="/inzeraty/" className="text-base font-semibold text-[var(--color-brand)]">Všechny inzeráty →</Link>
         </div>
         <LatestListings listings={latest} count={latest.length} />
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 mt-12">
-        <div className="flex items-end justify-between mb-4">
-          <h2 className="text-xl font-bold">Hledat podle značky</h2>
-          <Link href="/katalog/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny značky a modely →</Link>
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32">
+        <div className="flex flex-wrap items-end justify-between gap-3 mb-6">
+          <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Hledat podle značky</h2>
+          <Link href="/katalog/" className="text-base font-semibold text-[var(--color-brand)]">Všechny značky a modely →</Link>
         </div>
-        {/* Brands by number of listings; each tile also offers its most offered models. */}
-        <ul className="grid gap-3 grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-5">
+        {/* Brands by number of listings, as a list: logo, name, count, then the most offered models. */}
+        <ul className="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
           {brandStats.map(({ brand, count, top }) => (
-            <li key={brand.slug} className="card p-3 hover:border-[var(--color-brand)] transition-colors">
-              <Link href={`/inzeraty/?znacka=${brand.slug}`} className="flex items-center gap-3">
-                <BrandLogo slug={brand.slug} name={brand.name} size={40} />
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold leading-tight truncate">{brand.name}</span>
-                  <span className="block text-xs text-[var(--color-muted)]">{count} {count === 1 ? "inzerát" : count < 5 ? "inzeráty" : "inzerátů"}</span>
-                </span>
+            <li key={brand.slug} className="flex items-start gap-4">
+              <Link href={`/inzeraty/?znacka=${brand.slug}`} className="shrink-0" aria-hidden="true" tabIndex={-1}>
+                <BrandLogo slug={brand.slug} name={brand.name} size={44} />
               </Link>
-              <p className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-xs">
-                {top.map(({ model, n }) => (
-                  <Link key={model.slug} href={`/inzeraty/?znacka=${brand.slug}&model=${model.slug}`} className="text-[var(--color-muted)] hover:text-[var(--color-brand)]">
-                    {model.name} <span className="opacity-70">{n}</span>
-                  </Link>
-                ))}
-              </p>
+              <span className="min-w-0">
+                <Link href={`/inzeraty/?znacka=${brand.slug}`} className="block text-xl font-bold leading-tight hover:text-[var(--color-brand)]">
+                  {brand.name} <span className="text-base font-normal text-[var(--color-muted)]">{count}</span>
+                </Link>
+                <span className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-base">
+                  {top.map(({ model, n }) => (
+                    <Link key={model.slug} href={`/inzeraty/?znacka=${brand.slug}&model=${model.slug}`} className="text-[var(--color-muted)] hover:text-[var(--color-brand)]">
+                      {model.name} {n}
+                    </Link>
+                  ))}
+                </span>
+              </span>
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-xs text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0) a volná díla z Wikimedia Commons.</p>
+        <p className="mt-3 text-sm text-[var(--color-muted)]">Loga značek jsou ochranné známky jejich vlastníků a slouží jen k označení značky. Grafika: Simple Icons (CC0) a volná díla z Wikimedia Commons.</p>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 mt-12">
-        <div className="flex items-end justify-between mb-4">
-          <h2 className="text-xl font-bold">Nejlépe hodnocené modely</h2>
-          <Link href="/recenze/" className="text-sm font-semibold text-[var(--color-brand)]">Recenze majitelů →</Link>
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32">
+        <div className="flex flex-wrap items-end justify-between gap-3 mb-6">
+          <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Nejlépe hodnocené modely</h2>
+          <Link href="/recenze/" className="text-base font-semibold text-[var(--color-brand)]">Recenze majitelů →</Link>
         </div>
-        <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
+        {/* A ranking set in large type, two columns: place by position, the score at the right. */}
+        <ol className="grid gap-x-12 sm:grid-cols-2">
           {[...models].sort((a, b) => b.ownerScore - a.ownerScore).slice(0, 8).map((m) => (
-            <Link key={`${m.brandSlug}-${m.slug}`} href={`/recenze/${m.brandSlug}/${m.slug}/`} className="card p-4 flex items-center justify-between gap-3 hover:border-[var(--color-brand)] transition-colors">
-              <span>
-                <span className="block text-xs text-[var(--color-muted)]">{brands.find((b) => b.slug === m.brandSlug)?.name}</span>
-                <span className="font-semibold">{m.name}</span>
-                <span className="block text-xs text-[var(--color-muted)] mt-0.5">{formatNumber(m.reviews)} recenzí*</span>
-              </span>
-              <span className="rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2 py-0.5 font-extrabold">
-                {m.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}
-              </span>
-            </Link>
+            <li key={`${m.brandSlug}-${m.slug}`}>
+              <Link href={`/recenze/${m.brandSlug}/${m.slug}/`} className="group flex items-baseline justify-between gap-4 py-3">
+                <span className="min-w-0">
+                  <span className="text-2xl font-bold group-hover:text-[var(--color-brand)]">{brands.find((b) => b.slug === m.brandSlug)?.name} {m.name}</span>
+                  <span className="ml-2 text-base text-[var(--color-muted)]">{formatNumber(m.reviews)} recenzí*</span>
+                </span>
+                <span className="text-2xl font-extrabold tabular-nums text-[var(--color-brand)]">{m.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}</span>
+              </Link>
+            </li>
           ))}
-        </div>
-        <p className="text-xs text-[var(--color-muted)] mt-2">* testovací data</p>
+        </ol>
+        <p className="text-sm text-[var(--color-muted)] mt-3">* testovací data</p>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 mt-12 grid gap-8 lg:grid-cols-[2fr_1fr]">
+      <section className="mx-auto max-w-6xl px-4 mt-24 sm:mt-32 grid gap-10 lg:grid-cols-[2fr_1fr]">
         <div>
-          <div className="flex items-end justify-between mb-4">
-            <h2 className="text-xl font-bold">Novinky a rady</h2>
-            <Link href="/novinky/" className="text-sm font-semibold text-[var(--color-brand)]">Všechny články →</Link>
+          <div className="flex flex-wrap items-end justify-between gap-3 mb-6">
+            <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Novinky a rady</h2>
+            <Link href="/novinky/" className="text-base font-semibold text-[var(--color-brand)]">Všechny články →</Link>
           </div>
           <ul className="grid gap-3">
             {articles.slice(0, 3).map((a) => (
@@ -153,15 +168,15 @@ export default function HomePage() {
           </ul>
         </div>
         <div>
-          <div className="flex items-end justify-between mb-4">
-            <h2 className="text-xl font-bold">Z fóra</h2>
-            <Link href="/forum/" className="text-sm font-semibold text-[var(--color-brand)]">Fórum →</Link>
+          <div className="flex flex-wrap items-end justify-between gap-3 mb-6">
+            <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Z fóra</h2>
+            <Link href="/forum/" className="text-base font-semibold text-[var(--color-brand)]">Fórum →</Link>
           </div>
-          <ul className="card divide-y divide-[var(--color-line)]">
+          <ul className="rounded-[14px] bg-[var(--color-surface)] p-2">
             {[...threads].sort((a, b) => lastActivity(b).localeCompare(lastActivity(a))).slice(0, 4).map((t) => (
               <li key={t.slug} className="p-3">
-                <Link href={`/forum/${t.slug}/`} className="font-semibold text-sm hover:text-[var(--color-brand)]">{t.title}</Link>
-                <p className="text-xs text-[var(--color-muted)]">{t.posts.length - 1} odpovědí</p>
+                <Link href={`/forum/${t.slug}/`} className="font-semibold text-base hover:text-[var(--color-brand)]">{t.title}</Link>
+                <p className="text-sm text-[var(--color-muted)]">{t.posts.length - 1} odpovědí</p>
               </li>
             ))}
           </ul>

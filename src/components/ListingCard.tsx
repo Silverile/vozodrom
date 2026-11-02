@@ -20,7 +20,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
   const name = `${brand?.name ?? getMake(listing.brandSlug)?.name ?? ""} ${modelName}, ${listing.year}`;
   const drawing = frontDrawingFor(listing.brandSlug, listing.modelSlug, listing.year);
   return (
-    <article className="card relative min-w-0 overflow-hidden flex flex-col hover:border-[var(--color-brand)] focus-within:border-[var(--color-brand)] transition-colors">
+    <article className="relative min-w-0 overflow-hidden flex flex-col rounded-[14px] bg-[var(--color-surface)] hover:bg-[var(--color-field)] focus-within:outline focus-within:outline-2 focus-within:outline-[var(--color-brand)] transition-colors">
       {listing.photos?.[0] ? (
         <img src={photoUrl(listing.photos[0].key)} alt={name} className="w-full aspect-[16/10] object-cover bg-[var(--color-photo)]" loading="lazy" />
       ) : drawing ? (
@@ -28,14 +28,14 @@ export function ListingCard({ listing }: { listing: Listing }) {
       ) : (
         <CarImage body={listing.body} color={listing.color} className="w-full aspect-[16/10]" />
       )}
-      <div className="p-3 flex flex-col gap-1 flex-1">
+      <div className="p-4 flex flex-col gap-1 flex-1">
         <h3 className="font-semibold leading-tight">
           <Link href={listingHref(listing)} className="after:absolute after:inset-0 focus:outline-none">{name}</Link>
         </h3>
-        <p className="text-xs text-[var(--color-muted)]">{formatKm(listing.mileageKm)} · <Place city={listing.city} fallback={listing.region} /></p>
+        <p className="text-sm text-[var(--color-muted)]">{formatKm(listing.mileageKm)} · <Place city={listing.city} fallback={listing.region} /></p>
         <div className="mt-auto pt-2 flex flex-col items-start gap-2">
           <div className="flex w-full items-center justify-between gap-3">
-            <span className="font-extrabold whitespace-nowrap">{formatPrice(listing.price)}</span>
+            <span className="text-lg font-extrabold whitespace-nowrap">{formatPrice(listing.price)}</span>
             <FavoriteButton id={listing.id} label={name} className="relative z-10 shrink-0 !h-8 !w-8 text-base" />
           </div>
           {estimate && <PriceMeter score={estimate.score} />}

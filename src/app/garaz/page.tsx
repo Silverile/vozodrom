@@ -10,7 +10,7 @@ import { carsOf } from "@/lib/garage-store";
 export const metadata: Metadata = { title: "Moje garáž", robots: { index: false } };
 
 // The signed-in owner's cars: current ones first, then former. Each opens its own page in the
-// garage (details, photos, logbook); the public page is at /deniky/<car>/.
+// garage (details, photos, logbook); the public page is at /pribehy/<car>/.
 export default async function GaragePage() {
   await connection();
   const session = await getSession();
@@ -44,7 +44,7 @@ export default async function GaragePage() {
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Moje garáž</h1>
           <p className="mt-1 text-[var(--color-muted)] max-w-2xl">
-            Auta, kterými jezdíte nebo jste jezdili. Ke každému můžete psát deník: co jste opravovali, měnili a kolik to stálo.
+            Auta, kterými jezdíte nebo jste jezdili. Ke každému můžete psát jeho příběh: opravy, úpravy, cesty a co všechno stály.
           </p>
         </div>
         <Link href="/garaz/nove/" className="btn-cta text-sm">+ Přidat auto</Link>

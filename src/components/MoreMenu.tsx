@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ThemeSwitch } from "./Theme";
+import { LineGlyph } from "./Icon";
 
 // "Další" dropdown, like Drom's "Ещё": tools and pages that do not fit the main nav.
 
@@ -43,7 +44,7 @@ export function MoreMenu() {
         onClick={() => setOpen((o) => !o)}
         className="px-2 sm:px-3 py-2 rounded-lg text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-field)] whitespace-nowrap"
       >
-        <span aria-hidden="true" className="sm:hidden">☰</span>
+        <span className="sm:hidden"><LineGlyph name="menu" /></span>
         <span className="sr-only sm:not-sr-only">Další {open ? "▴" : "▾"}</span>
       </button>
       {open && (

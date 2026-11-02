@@ -152,7 +152,7 @@ export function Messages({
                   {c.kind === "listing" && <span className="block text-xs text-[var(--color-muted)] truncate">{c.title}</span>}
                   <span className="flex items-center gap-2">
                     <span className="truncate text-sm text-[var(--color-muted)]">{c.preview}</span>
-                    {c.unread > 0 && <span className="ml-auto shrink-0 rounded-full bg-[var(--color-accent)] px-1.5 text-xs font-bold text-white">{c.unread}</span>}
+                    {c.unread > 0 && <span className="ml-auto shrink-0 rounded-full bg-[var(--color-accent)] px-1.5 text-xs font-bold text-[var(--color-accent-ink)]">{c.unread}</span>}
                   </span>
                 </span>
               </Link>

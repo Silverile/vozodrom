@@ -31,10 +31,10 @@ async function load(carId: string) {
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const page = await load((await params).carId);
-  if (!page) return { title: "Deník auta" };
+  if (!page) return { title: "Příběh auta" };
   return {
-    title: `${carTitle(page.car.data)} — deník majitele`,
-    description: page.car.data.story.slice(0, 160) || `Deník ${carName(page.car.data)}: opravy, servis a úpravy podle majitele.`,
+    title: `${carTitle(page.car.data)} — příběh auta`,
+    description: page.car.data.story.slice(0, 160) || `Příběh ${carName(page.car.data)}: opravy, úpravy a cesty podle majitele.`,
     ...(page.car.hiddenReason && { robots: { index: false } }),
   };
 }
@@ -54,7 +54,7 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
   const title = carTitle(data);
   const line = carLine(data);
   const make = getMake(data.brand);
-  const here = `/deniky/${carId}/`;
+  const here = `/pribehy/${carId}/`;
   const listings = await forSale(data.brand, line?.slug ?? "");
 
   const facts: [string, string | null][] = [
@@ -73,13 +73,13 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <p className="text-sm text-[var(--color-muted)]">
-        <Link href="/deniky/" className="hover:text-[var(--color-brand)]">Deníky</Link>
+        <Link href="/pribehy/" className="hover:text-[var(--color-brand)]">Příběhy aut</Link>
         {" / "}
-        <Link href={`/deniky/?znacka=${data.brand}`} className="hover:text-[var(--color-brand)]">{make?.name ?? data.brand}</Link>
+        <Link href={`/pribehy/?znacka=${data.brand}`} className="hover:text-[var(--color-brand)]">{make?.name ?? data.brand}</Link>
         {line && (
           <>
             {" / "}
-            <Link href={`/deniky/?znacka=${data.brand}&model=${line.slug}`} className="hover:text-[var(--color-brand)]">{line.name}</Link>
+            <Link href={`/pribehy/?znacka=${data.brand}&model=${line.slug}`} className="hover:text-[var(--color-brand)]">{line.name}</Link>
           </>
         )}
       </p>
@@ -104,14 +104,14 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
           )}
 
           <section>
-            <h2 className="text-xl font-bold mb-3">Deník <span className="text-[var(--color-muted)] font-normal">{counts.entries}</span></h2>
+            <h2 className="text-xl font-bold mb-3">Zápisy <span className="text-[var(--color-muted)] font-normal">{counts.entries}</span></h2>
             {entries.length === 0 ? (
               <p className="card p-5 text-sm text-[var(--color-muted)]">Majitel zatím nic nenapsal.</p>
             ) : (
               <ul className="space-y-3">
                 {entries.map((e) => (
                   <li key={e.id}>
-                    <Link href={`/deniky/${carId}/${e.id}/`} className="card flex gap-4 p-3 hover:border-[var(--color-brand)]">
+                    <Link href={`/pribehy/${carId}/${e.id}/`} className="card flex gap-4 p-3 hover:border-[var(--color-brand)]">
                       {e.photos[0] ? (
                         <img src={`/foto/${e.photos[0].key}`} alt="" className="w-28 sm:w-36 aspect-[4/3] shrink-0 rounded-[10px] object-cover bg-[var(--color-photo)]" loading="lazy" />
                       ) : (
@@ -152,7 +152,7 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
                 {otherCars.map((c, i) => (
                   <span key={c.id}>
                     {i > 0 && ", "}
-                    <Link href={`/deniky/${c.id}/`} className="text-[var(--color-brand)] hover:underline">{carTitle(c.data)}</Link>
+                    <Link href={`/pribehy/${c.id}/`} className="text-[var(--color-brand)] hover:underline">{carTitle(c.data)}</Link>
                     {c.former && " (bývalé)"}
                   </span>
                 ))}
