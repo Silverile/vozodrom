@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span className="space-y-1">
               <ConsentSettings />
               <span className="block">
+                <Link href="/podminky/" className="hover:text-[var(--color-ink)] underline">Podmínky užívání</Link> ·{" "}
                 <Link href="/soukromi/" className="hover:text-[var(--color-ink)] underline">Soukromí a cookies</Link> ·{" "}
                 <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
               </span>

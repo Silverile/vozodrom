@@ -145,6 +145,12 @@ export function SignInForm({ google, signupOpen, modal }: { google: boolean; sig
             <span>Souhlasím s podmínkami a beru na vědomí <Link href="/soukromi/" className="underline" onClick={modal?.onClose}>zásady ochrany soukromí</Link>.</span>
           </label>
         )}
+        {register && (
+          <p className="text-sm text-[var(--color-muted)]">
+            Vytvořením účtu souhlasíte s <Link href="/podminky/" className="underline" target="_blank">podmínkami užívání</Link>. Jak zacházíme s
+            údaji, popisuje <Link href="/soukromi/" className="underline" target="_blank">ochrana soukromí</Link>.
+          </p>
+        )}
         <button type="submit" disabled={busy} className="btn-cta w-full disabled:opacity-60">{register ? "Vytvořit účet" : "Přihlásit se"}</button>
       </form>
 
