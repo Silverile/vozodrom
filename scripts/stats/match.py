@@ -173,6 +173,12 @@ class Matcher:
             return slugs[0] if slugs else None
         if len(slugs) == 1:
             slug = slugs[0]
+            # Terracan's Korean production ended in 2006, while remaining stock
+            # could first register later. Its unique, explicit model name still
+            # identifies the line; generation() must leave late years unresolved.
+            # Previously its open-ended card already retained these line records.
+            if make == 'hyundai' and slug == 'terracan' and year >= 2001:
+                return slug
             # Generic line bounds may be unknown even for a fully dated historical
             # family, or stale after adding generations. Prefer dated generations.
             gens = getattr(self, 'gens', {}).get((make, slug)) or []

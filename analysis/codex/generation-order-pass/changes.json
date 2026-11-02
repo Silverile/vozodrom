@@ -1,0 +1,2288 @@
+{
+  "cards": 28,
+  "generations": 134,
+  "sourceFiles": [
+    "src/data/model-cards/hyundai.json",
+    "src/data/catalog/model-cards/izh.json",
+    "src/data/catalog/model-cards/kia.json",
+    "src/data/catalog/model-cards/mercedes-benz.json",
+    "src/data/model-cards/wuling-motors.json",
+    "src/data/catalog/model-cards/abarth.json",
+    "src/data/catalog/model-cards/delage.json",
+    "src/data/catalog/model-cards/ferrari.json",
+    "src/data/catalog/model-cards/fso.json",
+    "src/data/catalog/model-cards/lexus.json",
+    "src/data/catalog/model-cards/mahindra.json",
+    "src/data/catalog/model-cards/mg.json",
+    "src/data/catalog/model-cards/mini.json",
+    "src/data/catalog/model-cards/mitsubishi.json",
+    "src/data/catalog/model-cards/morris.json",
+    "src/data/catalog/model-cards/volkswagen.json"
+  ],
+  "mappings": [
+    {
+      "make": "hyundai",
+      "line": "coupe",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "GK",
+          "name": "Coupe II",
+          "from": 2001,
+          "to": 2009,
+          "id": "GK"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "RD",
+          "name": "Coupe I",
+          "from": 1996,
+          "to": 2002,
+          "id": "RD"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "elantra",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 7,
+        "1": 6,
+        "2": 5,
+        "3": 4,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 7,
+          "code": "CN8",
+          "name": "Elantra VIII (Avante)",
+          "from": 2026,
+          "to": null,
+          "id": "CN8"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 6,
+          "code": "CN7",
+          "name": "Elantra VII",
+          "from": 2020,
+          "to": 2026,
+          "id": "CN7"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 5,
+          "code": "AD",
+          "name": "Elantra VI",
+          "from": 2015,
+          "to": 2020,
+          "id": "AD"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 4,
+          "code": "MD",
+          "name": "Elantra V",
+          "from": 2010,
+          "to": 2015,
+          "id": "MD"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 3,
+          "code": "HD",
+          "name": "Elantra IV",
+          "from": 2006,
+          "to": 2010,
+          "id": "HD"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 2,
+          "code": "XD",
+          "name": "Elantra III",
+          "from": 2000,
+          "to": 2006,
+          "id": "XD"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 1,
+          "code": "J2",
+          "name": "Lantra II",
+          "from": 1995,
+          "to": 2000,
+          "id": "J2"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 0,
+          "code": "J1",
+          "name": "Lantra I",
+          "from": 1990,
+          "to": 1995,
+          "id": "J1"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "grandeur",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 6,
+        "1": 5,
+        "2": 4,
+        "3": 3,
+        "4": 2,
+        "5": 1,
+        "6": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 6,
+          "code": "GN7",
+          "name": "Grandeur VII",
+          "from": 2022,
+          "to": null,
+          "id": "GN7"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 5,
+          "code": "IG",
+          "name": "Grandeur VI",
+          "from": 2016,
+          "to": 2022,
+          "id": "IG"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 4,
+          "code": "HG",
+          "name": "Grandeur V",
+          "from": 2011,
+          "to": 2016,
+          "id": "HG"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 3,
+          "code": "TG",
+          "name": "Grandeur IV",
+          "from": 2005,
+          "to": 2011,
+          "id": "TG"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 2,
+          "code": "XG",
+          "name": "Grandeur III (XG)",
+          "from": 1998,
+          "to": 2005,
+          "id": "XG"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 1,
+          "code": "LX",
+          "name": "Grandeur II",
+          "from": 1992,
+          "to": 1998,
+          "id": "LX"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 0,
+          "code": "L",
+          "name": "Grandeur I",
+          "from": 1986,
+          "to": 1992,
+          "id": "L"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "h-1",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "TQ",
+          "name": "H-1 II",
+          "from": 2007,
+          "to": 2021,
+          "id": "TQ"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "A1",
+          "name": "H-1 I",
+          "from": 1997,
+          "to": 2007,
+          "id": "A1"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "kona",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "SX2",
+          "name": "Kona II",
+          "from": 2023,
+          "to": null,
+          "id": "SX2"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "OS",
+          "name": "Kona I",
+          "from": 2017,
+          "to": 2023,
+          "id": "OS"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "nexo",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "NH2",
+          "name": "Nexo II",
+          "from": 2025,
+          "to": null,
+          "id": "NH2"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "FE",
+          "name": "Nexo I",
+          "from": 2018,
+          "to": 2025,
+          "id": "FE"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "santa-fe",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 4,
+          "code": "MX5",
+          "name": "Santa Fe V",
+          "from": 2023,
+          "to": null,
+          "id": "MX5"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 3,
+          "code": "TM",
+          "name": "Santa Fe IV",
+          "from": 2018,
+          "to": 2023,
+          "id": "TM"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": "DM",
+          "name": "Santa Fe III",
+          "from": 2012,
+          "to": 2018,
+          "id": "DM"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 1,
+          "code": "CM",
+          "name": "Santa Fe II",
+          "from": 2006,
+          "to": 2012,
+          "id": "CM"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 0,
+          "code": "SM",
+          "name": "Santa Fe I",
+          "from": 2000,
+          "to": 2006,
+          "id": "SM"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "sonata",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 7,
+        "1": 6,
+        "2": 5,
+        "3": 4,
+        "4": 3,
+        "5": 2,
+        "6": 1,
+        "7": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 7,
+          "code": "DN8",
+          "name": "Sonata VIII",
+          "from": 2019,
+          "to": null,
+          "id": "DN8"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 6,
+          "code": "LF",
+          "name": "Sonata VII",
+          "from": 2014,
+          "to": 2023,
+          "id": "LF"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 5,
+          "code": "YF",
+          "name": "Sonata VI (i45)",
+          "from": 2009,
+          "to": 2014,
+          "id": "YF"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 4,
+          "code": "NF",
+          "name": "Sonata V",
+          "from": 2004,
+          "to": 2010,
+          "id": "NF"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 3,
+          "code": "EF",
+          "name": "Sonata IV",
+          "from": 1998,
+          "to": 2004,
+          "id": "EF"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 2,
+          "code": "Y3",
+          "name": "Sonata III",
+          "from": 1993,
+          "to": 1998,
+          "id": "Y3"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 1,
+          "code": "Y2",
+          "name": "Sonata II",
+          "from": 1988,
+          "to": 1993,
+          "id": "Y2"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 0,
+          "code": "Y",
+          "name": "Sonata I",
+          "from": 1985,
+          "to": 1988,
+          "id": "Y"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "tucson",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 4,
+          "code": "NX5",
+          "name": "Tucson V",
+          "from": 2026,
+          "to": null,
+          "id": "NX5"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 3,
+          "code": "NX4",
+          "name": "Tucson IV",
+          "from": 2020,
+          "to": null,
+          "id": "NX4"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": "TL",
+          "name": "Tucson III",
+          "from": 2015,
+          "to": 2021,
+          "id": "TL"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 1,
+          "code": "LM",
+          "name": "ix35 (Tucson II)",
+          "from": 2009,
+          "to": 2015,
+          "id": "LM"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 0,
+          "code": "JM",
+          "name": "Tucson I",
+          "from": 2004,
+          "to": 2010,
+          "id": "JM"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "hyundai",
+      "line": "veloster",
+      "file": "src/data/model-cards/hyundai.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "JS",
+          "name": "Veloster II",
+          "from": 2018,
+          "to": 2022,
+          "id": "JS"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "FS",
+          "name": "Veloster I",
+          "from": 2011,
+          "to": 2018,
+          "id": "FS"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "izh",
+      "line": "2717",
+      "file": "src/data/catalog/model-cards/izh.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": null,
+          "name": "2717 – dodávka",
+          "from": 1998,
+          "to": 2005,
+          "id": "1998–2005"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": null,
+          "name": "27171 – pick-up",
+          "from": 1995,
+          "to": 2005,
+          "id": "1995–2005"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "kia",
+      "line": "brisa",
+      "file": "src/data/catalog/model-cards/kia.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": null,
+          "name": "S-1000 – sedan",
+          "from": 1974,
+          "to": 1981,
+          "id": "1974–1981"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": null,
+          "name": "B-1000 – pickup",
+          "from": 1973,
+          "to": 1981,
+          "id": "1973–1981"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "heckflosse",
+      "file": "src/data/catalog/model-cards/mercedes-benz.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": "W110",
+          "name": "W110",
+          "from": 1961,
+          "to": 1968,
+          "id": "W110"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "W111 / W112",
+          "name": "W111 / W112",
+          "from": 1959,
+          "to": 1971,
+          "id": "W111 / W112"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "wuling-motors",
+      "line": "cortez",
+      "file": "src/data/model-cards/wuling-motors.json",
+      "kind": "reversed",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": null,
+          "name": "730 I (Wuling 730)",
+          "from": 2020,
+          "to": 2021,
+          "id": "2020–2021"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": "CN210M",
+          "name": "Cortez",
+          "from": 2018,
+          "to": null,
+          "id": "CN210M"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "abarth",
+      "line": "1000",
+      "file": "src/data/catalog/model-cards/abarth.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        1,
+        2,
+        0
+      ],
+      "oldToNew": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 2,
+          "code": null,
+          "name": "1000 Berlina stradale",
+          "from": 1962,
+          "to": 1964,
+          "id": "1962–1964"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 0,
+          "code": null,
+          "name": "1000 Bialbero / Zagato",
+          "from": 1960,
+          "to": null,
+          "id": "1960–?"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 1,
+          "code": null,
+          "name": "Monomille",
+          "from": 1961,
+          "to": 1965,
+          "id": "1961–1965"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "delage",
+      "line": "d8",
+      "file": "src/data/catalog/model-cards/delage.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        5
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 7,
+        "6": 5,
+        "7": 6
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": "D8",
+          "name": "D8 / D8S",
+          "from": 1929,
+          "to": 1933,
+          "id": "D8"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 1,
+          "code": "D8-15",
+          "name": "D8-15 / L / S",
+          "from": 1934,
+          "to": 1935,
+          "id": "D8-15"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": "D8-85",
+          "name": "D8-85",
+          "from": 1934,
+          "to": 1935,
+          "id": "D8-85"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 3,
+          "code": "D8-105",
+          "name": "D8-105",
+          "from": 1934,
+          "to": 1935,
+          "id": "D8-105"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 4,
+          "code": "D8-100",
+          "name": "D8-100",
+          "from": 1936,
+          "to": 1938,
+          "id": "D8-100"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 7,
+          "code": "D8-100 B",
+          "name": "D8-100 B",
+          "from": 1939,
+          "to": 1940,
+          "id": "D8-100 B"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 5,
+          "code": "D8-120",
+          "name": "D8-120",
+          "from": 1936,
+          "to": 1937,
+          "id": "D8-120"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 6,
+          "code": "D8-120 S",
+          "name": "D8-120 S",
+          "from": 1938,
+          "to": 1939,
+          "id": "D8-120 S"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "ferrari",
+      "line": "308",
+      "file": "src/data/catalog/model-cards/ferrari.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1,
+        "3": 3
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "308 GTB/GTS; Ferrari 308 GTBi/GTSi",
+          "from": 1975,
+          "to": 1983,
+          "id": "1975–1983"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": null,
+          "name": "308 Quattrovalvole",
+          "from": 1982,
+          "to": 1985,
+          "id": "1982–1985"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 1,
+          "code": null,
+          "name": "208 GTB; Ferrari 208 GTS",
+          "from": 1980,
+          "to": 1981,
+          "id": "1980–1981"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 3,
+          "code": null,
+          "name": "208 GTB Turbo; Ferrari 208 GTS Turbo",
+          "from": 1982,
+          "to": 1985,
+          "id": "1982–1985"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "ferrari",
+      "line": "365",
+      "file": "src/data/catalog/model-cards/ferrari.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 3,
+        "5": 5
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "365 California",
+          "from": 1966,
+          "to": 1967,
+          "id": "1966–1967"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 1,
+          "code": null,
+          "name": "365 GT 2+2",
+          "from": 1967,
+          "to": 1971,
+          "id": "1967–1971"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": null,
+          "name": "365 GTC; Ferrari 365 GTS",
+          "from": 1968,
+          "to": 1970,
+          "id": "1968–1970"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 4,
+          "code": null,
+          "name": "365 GTC/4",
+          "from": 1971,
+          "to": 1972,
+          "id": "1971–1972"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 3,
+          "code": null,
+          "name": "365 GTB/4 Daytona",
+          "from": 1968,
+          "to": 1973,
+          "id": "1968–1973"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 5,
+          "code": null,
+          "name": "365 GTS/4 Daytona",
+          "from": 1971,
+          "to": 1973,
+          "id": "1971–1973"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "fso",
+      "line": "polonez",
+      "file": "src/data/catalog/model-cards/fso.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 3,
+        "3": 1
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "Polonez – původní osobní řada",
+          "from": 1978,
+          "to": 1991,
+          "id": "1978–1991"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": null,
+          "name": "Polonez Caro / Atu",
+          "from": 1991,
+          "to": 1997,
+          "id": "1991–1997"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 3,
+          "code": null,
+          "name": "Polonez Plus / Atu Plus / Kombi",
+          "from": 1997,
+          "to": 2002,
+          "id": "1997–2002"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 1,
+          "code": null,
+          "name": "Polonez Truck – užitková větev",
+          "from": 1988,
+          "to": 2003,
+          "id": "1988–2003"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "kia",
+      "line": "niro",
+      "file": "src/data/catalog/model-cards/kia.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        2,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "DE – původní řada",
+          "from": 2016,
+          "to": 2022,
+          "id": "2016–2022"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": null,
+          "name": "DE – Niro Plus",
+          "from": 2022,
+          "to": 2024,
+          "id": "2022–2024"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 1,
+          "code": null,
+          "name": "SG2",
+          "from": 2021,
+          "to": null,
+          "id": "2021–?"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "lexus",
+      "line": "is",
+      "file": "src/data/catalog/model-cards/lexus.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 3,
+        "5": 5
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "XE10 – sedan Lexus",
+          "from": 1999,
+          "to": 2005,
+          "id": "1999–2005"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 1,
+          "code": null,
+          "name": "XE10 – SportCross",
+          "from": 2001,
+          "to": 2005,
+          "id": "2001–2005"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": null,
+          "name": "XE20 – sedan",
+          "from": 2005,
+          "to": 2013,
+          "id": "2005–2013"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 4,
+          "code": null,
+          "name": "XE20 – IS C",
+          "from": 2009,
+          "to": 2015,
+          "id": "2009–2015"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 3,
+          "code": null,
+          "name": "XE20 – IS F",
+          "from": 2007,
+          "to": 2014,
+          "id": "2007–2014"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 5,
+          "code": null,
+          "name": "XE30",
+          "from": 2013,
+          "to": null,
+          "id": "2013–?"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mahindra",
+      "line": "cj",
+      "file": "src/data/catalog/model-cards/mahindra.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        5,
+        6
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 7,
+        "6": 8,
+        "7": 5,
+        "8": 6
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "CJ2A – indická montáž",
+          "from": 1949,
+          "to": 1950,
+          "id": "1949–1950"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 1,
+          "code": null,
+          "name": "CJ3A",
+          "from": 1950,
+          "to": 1953,
+          "id": "1950–1953"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": null,
+          "name": "CJ3B",
+          "from": 1953,
+          "to": null,
+          "id": "1953–?"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 3,
+          "code": null,
+          "name": "CJ4 / CJ4A",
+          "from": 1967,
+          "to": null,
+          "id": "1967–?"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 4,
+          "code": null,
+          "name": "CJ500D",
+          "from": 1975,
+          "to": 1989,
+          "id": "1975–1989"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 7,
+          "code": null,
+          "name": "CJ500DE",
+          "from": 1989,
+          "to": 1991,
+          "id": "1989–1991"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 8,
+          "code": null,
+          "name": "CJ500DI / CL500DI",
+          "from": 1991,
+          "to": 1996,
+          "id": "1991–1996"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 5,
+          "code": null,
+          "name": "CJ540DP",
+          "from": 1983,
+          "to": null,
+          "id": "1983–?"
+        },
+        {
+          "oldIndex": 8,
+          "newIndex": 6,
+          "code": null,
+          "name": "CJ640DP",
+          "from": 1986,
+          "to": null,
+          "id": "1986–?"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mg",
+      "line": "mg5",
+      "file": "src/data/catalog/model-cards/mg.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        2,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "MG5 I",
+          "from": 2012,
+          "to": 2018,
+          "id": "2012–2018"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": null,
+          "name": "MG5 II / GT",
+          "from": 2020,
+          "to": null,
+          "id": "2020–?"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 1,
+          "code": null,
+          "name": "MG5 – regionální větev Roewe i5",
+          "from": 2019,
+          "to": null,
+          "id": "2019–?"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mini",
+      "line": "classic",
+      "file": "src/data/catalog/model-cards/mini.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        7,
+        9,
+        10,
+        1,
+        2,
+        8,
+        3,
+        4,
+        5,
+        6
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 4,
+        "2": 5,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "6": 10,
+        "7": 1,
+        "8": 6,
+        "9": 2,
+        "10": 3
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": "Mk I",
+          "name": "Mk I",
+          "from": 1959,
+          "to": 1967,
+          "id": "Mk I"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 4,
+          "code": "Mk II",
+          "name": "Mk II",
+          "from": 1967,
+          "to": 1970,
+          "id": "Mk II"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 5,
+          "code": "Mk III",
+          "name": "Mk III",
+          "from": 1969,
+          "to": 1976,
+          "id": "Mk III"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 7,
+          "code": "Mk IV",
+          "name": "Mk IV",
+          "from": 1976,
+          "to": 1983,
+          "id": "Mk IV"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 8,
+          "code": "Mk V",
+          "name": "Mk V",
+          "from": 1984,
+          "to": 1990,
+          "id": "Mk V"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 9,
+          "code": "Mk VI",
+          "name": "Mk VI",
+          "from": 1990,
+          "to": 1996,
+          "id": "Mk VI"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 10,
+          "code": "Mk VII",
+          "name": "Mk VII",
+          "from": 1996,
+          "to": 2000,
+          "id": "Mk VII"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 1,
+          "code": "Traveller / Countryman – kombi",
+          "name": "Traveller / Countryman – kombi",
+          "from": 1960,
+          "to": 1969,
+          "id": "Traveller / Countryman – kombi"
+        },
+        {
+          "oldIndex": 8,
+          "newIndex": 6,
+          "code": "Clubman / 1275 GT – historická větev",
+          "name": "Clubman / 1275 GT – historická větev",
+          "from": 1969,
+          "to": 1980,
+          "id": "Clubman / 1275 GT – historická větev"
+        },
+        {
+          "oldIndex": 9,
+          "newIndex": 2,
+          "code": "Mini Van / 95",
+          "name": "Mini Van / 95",
+          "from": 1960,
+          "to": 1983,
+          "id": "Mini Van / 95"
+        },
+        {
+          "oldIndex": 10,
+          "newIndex": 3,
+          "code": "Mini Pick-up",
+          "name": "Mini Pick-up",
+          "from": 1961,
+          "to": 1983,
+          "id": "Mini Pick-up"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mitsubishi",
+      "line": "diamante-magna",
+      "file": "src/data/catalog/model-cards/mitsubishi.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        2,
+        0,
+        3,
+        1,
+        4
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 3,
+        "2": 0,
+        "3": 2,
+        "4": 4
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 1,
+          "code": null,
+          "name": "Diamante 1",
+          "from": 1990,
+          "to": 1996,
+          "id": "1990–1996"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 3,
+          "code": null,
+          "name": "Diamante 2",
+          "from": 1995,
+          "to": 2005,
+          "id": "1995–2005"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 0,
+          "code": null,
+          "name": "Magna 1",
+          "from": 1985,
+          "to": 1992,
+          "id": "1985–1992"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 2,
+          "code": null,
+          "name": "Magna 2",
+          "from": 1991,
+          "to": 1997,
+          "id": "1991–1997"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 4,
+          "code": null,
+          "name": "Magna 3",
+          "from": 1996,
+          "to": 2005,
+          "id": "1996–2005"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "mitsubishi",
+      "line": "pajero-junior-pajero-mini",
+      "file": "src/data/catalog/model-cards/mitsubishi.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        2,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": null,
+          "name": "Pajero Mini I",
+          "from": 1994,
+          "to": 1998,
+          "id": "1994–1998"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": null,
+          "name": "Pajero Mini II",
+          "from": 1998,
+          "to": 2012,
+          "id": "1998–2012"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 1,
+          "code": "H57A",
+          "name": "Pajero Junior",
+          "from": 1995,
+          "to": 1998,
+          "id": "H57A"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "morris",
+      "line": "oxford",
+      "file": "src/data/catalog/model-cards/morris.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        8,
+        1,
+        10,
+        9,
+        11,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 6,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "6": 10,
+        "7": 11,
+        "8": 1,
+        "9": 4,
+        "10": 3,
+        "11": 5
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": "Bullnose",
+          "name": "Bullnose",
+          "from": 1913,
+          "to": 1926,
+          "id": "Bullnose"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 2,
+          "code": "Flatnose",
+          "name": "Flatnose",
+          "from": 1926,
+          "to": 1930,
+          "id": "Flatnose"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 6,
+          "code": "MO",
+          "name": "MO",
+          "from": 1948,
+          "to": 1954,
+          "id": "MO"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 7,
+          "code": "Series II",
+          "name": "Series II",
+          "from": 1954,
+          "to": 1956,
+          "id": "Series II"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 8,
+          "code": "Series III",
+          "name": "Series III",
+          "from": 1956,
+          "to": 1959,
+          "id": "Series III"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 9,
+          "code": "Series IV – all-steel Traveller",
+          "name": "Series IV – all-steel Traveller",
+          "from": 1957,
+          "to": 1960,
+          "id": "Series IV – all-steel Traveller"
+        },
+        {
+          "oldIndex": 6,
+          "newIndex": 10,
+          "code": "Series V",
+          "name": "Series V",
+          "from": 1959,
+          "to": 1961,
+          "id": "Series V"
+        },
+        {
+          "oldIndex": 7,
+          "newIndex": 11,
+          "code": "Series VI",
+          "name": "Series VI",
+          "from": 1961,
+          "to": 1971,
+          "id": "Series VI"
+        },
+        {
+          "oldIndex": 8,
+          "newIndex": 1,
+          "code": "F-type Oxford Six",
+          "name": "F-Type Silent Six",
+          "from": 1921,
+          "to": 1926,
+          "id": "F-type Oxford Six"
+        },
+        {
+          "oldIndex": 9,
+          "newIndex": 4,
+          "code": "Oxford Six",
+          "name": "Oxford Six",
+          "from": 1929,
+          "to": 1934,
+          "id": "Oxford Six"
+        },
+        {
+          "oldIndex": 10,
+          "newIndex": 3,
+          "code": "15.9 / 16/40 Empire",
+          "name": "15.9 / 16/40 Empire",
+          "from": 1926,
+          "to": 1929,
+          "id": "15.9 / 16/40 Empire"
+        },
+        {
+          "oldIndex": 11,
+          "newIndex": 5,
+          "code": "Sixteen / Twenty",
+          "name": "Sixteen / Twenty",
+          "from": 1934,
+          "to": 1935,
+          "id": "Sixteen / Twenty"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    },
+    {
+      "make": "volkswagen",
+      "line": "kaefer",
+      "file": "src/data/catalog/model-cards/volkswagen.json",
+      "kind": "mixed-parallel-branches",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 5,
+        "5": 4
+      },
+      "generations": [
+        {
+          "oldIndex": 0,
+          "newIndex": 0,
+          "code": "Typ 1",
+          "name": "KdF-Wagen – před sériovou poválečnou výrobou",
+          "from": null,
+          "to": 1945,
+          "id": "Typ 1"
+        },
+        {
+          "oldIndex": 1,
+          "newIndex": 1,
+          "code": null,
+          "name": "Käfer 1100 – poválečná technická větev",
+          "from": 1945,
+          "to": 1953,
+          "id": "1945–1953"
+        },
+        {
+          "oldIndex": 2,
+          "newIndex": 2,
+          "code": null,
+          "name": "Käfer 1200 / 1200 L – technická větev",
+          "from": 1954,
+          "to": 1985,
+          "id": "1954–1985"
+        },
+        {
+          "oldIndex": 3,
+          "newIndex": 3,
+          "code": null,
+          "name": "Käfer 1302",
+          "from": 1970,
+          "to": 1972,
+          "id": "1970–1972"
+        },
+        {
+          "oldIndex": 4,
+          "newIndex": 5,
+          "code": null,
+          "name": "Käfer 1303 – sedan a kabriolet",
+          "from": 1972,
+          "to": 1980,
+          "id": "1972–1980"
+        },
+        {
+          "oldIndex": 5,
+          "newIndex": 4,
+          "code": null,
+          "name": "Käfer 1600 / 1600i – mexická větev",
+          "from": 1970,
+          "to": 2003,
+          "id": "1970–2003"
+        }
+      ],
+      "decision": "Stable oldest-start-year first; parallel body/region/technical branches retained separately. Equal start years preserve their original order; unknown-start KdF prehistory remains first."
+    }
+  ],
+  "rawMappings": [
+    {
+      "make": "hyundai",
+      "line": "santa-fe",
+      "newToOld": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 3,
+        "2": 1,
+        "3": 2,
+        "4": 4
+      }
+    },
+    {
+      "make": "hyundai",
+      "line": "tucson",
+      "newToOld": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 4,
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 0
+      }
+    },
+    {
+      "make": "izh",
+      "line": "2717",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      }
+    },
+    {
+      "make": "kia",
+      "line": "brisa",
+      "newToOld": [
+        1,
+        0
+      ],
+      "oldToNew": {
+        "0": 1,
+        "1": 0
+      }
+    },
+    {
+      "make": "mercedes-benz",
+      "line": "heckflosse",
+      "newToOld": [
+        0,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    {
+      "make": "abarth",
+      "line": "1000",
+      "newToOld": [
+        1,
+        2,
+        0
+      ],
+      "oldToNew": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      }
+    },
+    {
+      "make": "delage",
+      "line": "d8",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        5
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 7,
+        "6": 5,
+        "7": 6
+      }
+    },
+    {
+      "make": "ferrari",
+      "line": "308",
+      "newToOld": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1,
+        "3": 3
+      }
+    },
+    {
+      "make": "ferrari",
+      "line": "365",
+      "newToOld": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 3,
+        "5": 5
+      }
+    },
+    {
+      "make": "fso",
+      "line": "polonez",
+      "newToOld": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 3,
+        "3": 1
+      }
+    },
+    {
+      "make": "kia",
+      "line": "niro",
+      "newToOld": [
+        0,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1
+      }
+    },
+    {
+      "make": "lexus",
+      "line": "is",
+      "newToOld": [
+        0,
+        1,
+        2
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2
+      }
+    },
+    {
+      "make": "mahindra",
+      "line": "cj",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        5,
+        6
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 7,
+        "6": 8,
+        "7": 5,
+        "8": 6
+      }
+    },
+    {
+      "make": "mg",
+      "line": "mg5",
+      "newToOld": [
+        0,
+        2,
+        1
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "make": "morris",
+      "line": "oxford",
+      "newToOld": [
+        4,
+        8,
+        10,
+        0,
+        1,
+        9,
+        11,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "oldToNew": {
+        "0": 3,
+        "1": 4,
+        "2": 7,
+        "3": 8,
+        "4": 0,
+        "5": 9,
+        "6": 10,
+        "7": 11,
+        "8": 1,
+        "9": 5,
+        "10": 2,
+        "11": 6
+      }
+    },
+    {
+      "make": "volkswagen",
+      "line": "kaefer",
+      "newToOld": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "oldToNew": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 5,
+        "5": 4
+      }
+    }
+  ],
+  "statsChanges": [
+    {
+      "make": "hyundai",
+      "line": "coupe",
+      "buckets": 2
+    },
+    {
+      "make": "hyundai",
+      "line": "elantra",
+      "buckets": 5
+    },
+    {
+      "make": "hyundai",
+      "line": "grandeur",
+      "buckets": 1
+    },
+    {
+      "make": "hyundai",
+      "line": "h-1",
+      "buckets": 2
+    },
+    {
+      "make": "hyundai",
+      "line": "kona",
+      "buckets": 2
+    },
+    {
+      "make": "hyundai",
+      "line": "santa-fe",
+      "buckets": 5
+    },
+    {
+      "make": "hyundai",
+      "line": "sonata",
+      "buckets": 5
+    },
+    {
+      "make": "hyundai",
+      "line": "tucson",
+      "buckets": 4
+    },
+    {
+      "make": "hyundai",
+      "line": "veloster",
+      "buckets": 1
+    },
+    {
+      "make": "kia",
+      "line": "niro",
+      "buckets": 3
+    },
+    {
+      "make": "lexus",
+      "line": "is",
+      "buckets": 6
+    }
+  ],
+  "drawingMoves": [
+    {
+      "from": "public/front/hyundai--h-1--0.webp",
+      "to": "public/front/hyundai--h-1--1.webp",
+      "sha256": "2172fb36cbd8eba62964e7519f219ac01192773da1f51a2a784ae211ac70f035"
+    },
+    {
+      "from": "public/front/hyundai--kona--0.webp",
+      "to": "public/front/hyundai--kona--1.webp",
+      "sha256": "aca7bc0b1af5a9e5b694ab14baaae077c166cede92597fb9dd32e54d478d3188"
+    },
+    {
+      "from": "public/front/hyundai--kona--1.webp",
+      "to": "public/front/hyundai--kona--0.webp",
+      "sha256": "0de27a662a183ecf78893c34be1d48e021b973ad0d6254576e842595aa7a0a1e"
+    },
+    {
+      "from": "public/front/hyundai--santa-fe--0.webp",
+      "to": "public/front/hyundai--santa-fe--4.webp",
+      "sha256": "177923c14e3602432d4e43b960429d5fcdb49ab02d483855087077bc2b79ffc9"
+    },
+    {
+      "from": "public/front/hyundai--santa-fe--1.webp",
+      "to": "public/front/hyundai--santa-fe--3.webp",
+      "sha256": "944f1b0a4cf62aa44ca1f3bb0b5f36a41b986186346da4a022523dfe322b73bf"
+    },
+    {
+      "from": "public/front/hyundai--santa-fe--2.webp",
+      "to": "public/front/hyundai--santa-fe--2.webp",
+      "sha256": "b553c51de0e2ec45e2da8bc473eaaa6672ab08264e84f0bcdfd1334bea60e70c"
+    },
+    {
+      "from": "public/front/hyundai--santa-fe--3.webp",
+      "to": "public/front/hyundai--santa-fe--1.webp",
+      "sha256": "10c5494f0c4b281f2488ffbc7defa91fb33ef62a6c177551f2098f09909c4208"
+    },
+    {
+      "from": "public/front/hyundai--santa-fe--4.webp",
+      "to": "public/front/hyundai--santa-fe--0.webp",
+      "sha256": "3d26b71e4c216e8206162ee38561c6655e26676bf0ef56e6e679800b398b8786"
+    },
+    {
+      "from": "public/front/hyundai--tucson--1.webp",
+      "to": "public/front/hyundai--tucson--3.webp",
+      "sha256": "80247b09b10ef094c1d30decf2e0676aaf21e49f6ffcd84c7a1ad666bddce18b"
+    },
+    {
+      "from": "public/front/hyundai--tucson--2.webp",
+      "to": "public/front/hyundai--tucson--2.webp",
+      "sha256": "9838d3927d45bdda18522c4a982c38559b9090f01ec78b8aeb7a541fb3f5a6de"
+    },
+    {
+      "from": "public/front/hyundai--tucson--3.webp",
+      "to": "public/front/hyundai--tucson--1.webp",
+      "sha256": "b7aad738c73c13cfe0201b6010230ebd70d338a9c75c0d18f0890dbf87ec8767"
+    },
+    {
+      "from": "public/front/hyundai--tucson--4.webp",
+      "to": "public/front/hyundai--tucson--0.webp",
+      "sha256": "c606509b2ba99b4efa451fe3adcfbaadecf8cdbda9f5d16884762b5779795fbb"
+    },
+    {
+      "from": "public/front/abarth--1000--0.webp",
+      "to": "public/front/abarth--1000--2.webp",
+      "sha256": "f004f299823203929cecb100dbd7d2d730304e1e959e274101e3990d4160f561"
+    },
+    {
+      "from": "public/front/abarth--1000--1.webp",
+      "to": "public/front/abarth--1000--0.webp",
+      "sha256": "f4243b2c9e4416e9d8e8bbf0f3d78b1e4e9b56c219cf5abbd31260306efa3db6"
+    },
+    {
+      "from": "public/front/abarth--1000--2.webp",
+      "to": "public/front/abarth--1000--1.webp",
+      "sha256": "fc0c21636d6fb24aeddef803103b8ea3ed218fd7473ecaf90b49c66cb9d3f9f9"
+    }
+  ],
+  "productionEditsRemapped": 4,
+  "dateCorrection": {
+    "make": "hyundai",
+    "line": "terracan",
+    "from": 2001,
+    "to": 2006,
+    "source": "https://www.hyundai.com/worldwide/en/footer/corporate/vehicle-history/2000/terracan"
+  },
+  "stableAliasesUnchanged": true,
+  "photosAndFaceliftStagesMoveWithGeneration": true
+}

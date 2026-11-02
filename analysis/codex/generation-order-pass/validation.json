@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "baselineFiles": 522,
+  "cards": 28,
+  "generations": 134,
+  "remainingOutOfStartYearOrder": [],
+  "engineRowsUnchanged": 12686,
+  "nestedGenerationIndicesVerified": 63,
+  "photosPreserved": 65,
+  "drawingsVerified": 15,
+  "listingIdentityChecks": 399,
+  "stableAliases": "unchanged",
+  "faceliftDrawingStages": "preserved with generation; not generation indices",
+  "modifiedData": [
+    "src/data/catalog/model-cards/abarth.json",
+    "src/data/catalog/model-cards/delage.json",
+    "src/data/catalog/model-cards/ferrari.json",
+    "src/data/catalog/model-cards/fso.json",
+    "src/data/catalog/model-cards/izh.json",
+    "src/data/catalog/model-cards/kia.json",
+    "src/data/catalog/model-cards/lexus.json",
+    "src/data/catalog/model-cards/mahindra.json",
+    "src/data/catalog/model-cards/mercedes-benz.json",
+    "src/data/catalog/model-cards/mg.json",
+    "src/data/catalog/model-cards/mini.json",
+    "src/data/catalog/model-cards/mitsubishi.json",
+    "src/data/catalog/model-cards/morris.json",
+    "src/data/catalog/model-cards/volkswagen.json",
+    "src/data/model-cards/hyundai.json",
+    "src/data/model-cards/wuling-motors.json",
+    "src/data/front-drawings.json",
+    "src/data/listing-stats.json",
+    "src/data/model-cards-index.json",
+    "src/data/model-lines-index.json",
+    "src/data/catalog/model-lines-auto.json",
+    "src/data/stats/hyundai.json",
+    "src/data/stats/index.json",
+    "src/data/stats/kia.json",
+    "src/data/stats/lexus.json"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "src/lib/listing-context.ts",
+      "line": 80,
+      "claim": "Year-only fallback selects announcement-only NX5 for a 2026 Tucson without a saved generation.",
+      "evidence": "Actual fallback expression reproduced against the reordered public card: index 4, code NX5, dateBasis announcement. Filter announcement-dated entries before choosing a production generation."
+    }
+  ]
+}

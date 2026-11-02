@@ -77,7 +77,10 @@ export async function listingContext(listing: Listing, draft: Draft): Promise<Li
   const listed = generationOf(draft, line);
   const matched = listed && cardGeneration(listed, card.generations, listing.year);
   const chosen = matched ? card.generations.indexOf(matched) : -1;
-  const covering = card.generations.map((g, i) => [g, i] as const).filter(([g]) => g.from !== null && coversYear(g, listing.year));
+  // a generation only announced (dateBasis "announcement") is not yet a car anyone sells
+  const covering = card.generations
+    .map((g, i) => [g, i] as const)
+    .filter(([g]) => g.from !== null && g.dateBasis !== "announcement" && coversYear(g, listing.year));
   const genIndex = chosen >= 0 ? chosen : covering.length ? covering[covering.length - 1][1] : -1;
   if (genIndex < 0) return null;
   const gen = card.generations[genIndex];

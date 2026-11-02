@@ -19,6 +19,11 @@ assert synthetic(2005,{'only':(2000,2010)})=='only'
 assert synthetic(2026,{'only':(2000,None)})=='only'
 assert synthetic(2026,{'only':(None,None)})=='only'
 m=Matcher()
+# A late first registration does not erase an explicitly named historical model,
+# but must not extend the generation's confirmed production period.
+assert m.line('hyundai','TERRACAN 2.9 CRDI',2007)=='terracan'
+assert m.generation('hyundai','terracan',2007,'HP') is None
+assert m.line('hyundai','TERRACAN',1999) is None
 assert m.generation('mini','cooper',2024,'J01')==3
 assert m.generation('mini','cooper',2024,'F66')==4
 assert m.generation('mini','cooper',2024,'PREFIXJ01SUFFIX')==4
