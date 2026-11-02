@@ -6,7 +6,6 @@ import { CarImage } from "@/components/CarImage";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { FrontDrawing } from "@/components/FrontDrawing";
 import { ListingCard } from "@/components/ListingCard";
-import { ModelSidebar } from "@/components/ModelSidebar";
 import { PartnerOffers } from "@/components/PartnerOffers";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { Place } from "@/components/Place";
@@ -18,7 +17,6 @@ import { regionLabel } from "@/lib/geo";
 import { BODY_KEYS } from "@/lib/listing-catalog";
 import { draftTitle } from "@/lib/listing-draft";
 import { listingContext } from "@/lib/listing-context";
-import { listings as testListings } from "@/lib/listings";
 import { getMake } from "@/lib/makes";
 import { STATUS_LABEL } from "@/lib/listing-status";
 import { marketEstimate } from "@/lib/market";
@@ -52,7 +50,7 @@ async function load(id: string) {
 
 /** Up to three other cars of the same model (then make), closest in year and price first. */
 async function similarTo(listing: Listing): Promise<Listing[]> {
-  const pool = [...(await publishedUserListings()), ...testListings].filter((l) => l.id !== listing.id && l.brandSlug === listing.brandSlug);
+  const pool = (await publishedUserListings()).filter((l) => l.id !== listing.id && l.brandSlug === listing.brandSlug);
   const distance = (l: Listing) =>
     (l.modelSlug === listing.modelSlug ? 0 : 100) + Math.abs(l.year - listing.year) + Math.abs(l.price - listing.price) / Math.max(listing.price, 1) * 5;
   return pool.sort((a, b) => distance(a) - distance(b)).slice(0, 3);
@@ -107,7 +105,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
       </nav>
       <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2">{title}</h1>
 
-      <div className={`grid gap-5 lg:grid-cols-[1fr_340px] ${model ? "xl:grid-cols-[1fr_340px_300px]" : ""} mt-5 items-start`}>
+      <div className="grid gap-5 lg:grid-cols-[1fr_340px] mt-5 items-start">
         <div className="space-y-4 min-w-0">
           {listing.photos?.length ? (
             <PhotoGallery photos={listing.photos} title={title} />
@@ -205,11 +203,6 @@ export default async function UserListingPage({ params }: { params: Params }) {
           )}
         </div>
 
-        {model && (
-          <aside className="lg:col-span-2 xl:col-span-1">
-            <ModelSidebar model={model} />
-          </aside>
-        )}
       </div>
 
       {similar.length > 0 && (

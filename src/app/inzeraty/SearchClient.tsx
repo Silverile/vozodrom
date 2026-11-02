@@ -1,10 +1,10 @@
 "use client";
 
 import MiniSearch from "minisearch";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { ListingRow } from "@/components/ListingRow";
-import { ModelSidebar } from "@/components/ModelSidebar";
 import { BODY_LABEL, FUEL_LABEL, REGIONS, getBrand, getModel, models } from "@/lib/catalog";
 import { LocationPills, useSearchLocation } from "@/components/LocationPills";
 import { EQUIPMENT, EQUIPMENT_GROUPS } from "@/lib/equipment";
@@ -32,7 +32,7 @@ type SortKey = keyof typeof SORTS | "nejblize";
 
 const nf = new Intl.NumberFormat("cs-CZ");
 
-// All car makes for the brand filter; models exist only for the demo makes in lib/catalog.
+// All car makes for the brand filter; models come from lib/catalog or the curated model lines.
 const CAR_MAKES = makesIn("auto");
 const BRAND_COUNTS = listings.reduce((m, l) => m.set(l.brandSlug, (m.get(l.brandSlug) ?? 0) + 1), new Map<string, number>());
 
@@ -91,23 +91,24 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-/** Test and feed listings ship with the page; published user listings are fetched and put first. */
-function useAllListings(): Listing[] {
-  const [userListings, setUserListings] = useState<Listing[]>([]);
+/** Feed listings ship with the page; published user listings are fetched and put first. */
+function useAllListings(): { all: Listing[]; loaded: boolean } {
+  const [userListings, setUserListings] = useState<Listing[] | null>(null);
   useEffect(() => {
     fetch("/api/inzeraty/verejne/")
       .then((r): Promise<Listing[]> | Listing[] => (r.ok ? r.json() : []))
       .then(setUserListings)
-      .catch(() => {});
+      .catch(() => setUserListings([]));
   }, []);
-  return useMemo(() => [...userListings, ...listings], [userListings]);
+  const all = useMemo(() => [...(userListings ?? []), ...listings], [userListings]);
+  return { all, loaded: userListings !== null };
 }
 
 export function SearchClient() {
   const params = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const all = useAllListings();
+  const { all, loaded } = useAllListings();
   const index = useMemo(() => buildIndex(all), [all]);
   const saved = savedSearches.useValue();
   const { centers, radius } = useSearchLocation();
@@ -437,8 +438,25 @@ export function SearchClient() {
               </select>
             </div>
           </div>
-          {results.length === 0 ? (
-            <div className="card p-10 text-center text-[var(--color-muted)]">Žádný inzerát neodpovídá filtrům.</div>
+          {results.length === 0 && !loaded ? (
+            <div className="card p-10 text-center text-[var(--color-muted)]">Načítám inzeráty…</div>
+          ) : results.length === 0 ? (
+            // Few listings yet: an empty result is an invitation to be the first seller.
+            <div className="card p-8 sm:p-10 text-center">
+              <p className="text-lg font-semibold">
+                {all.length === 0
+                  ? "Zatím tu není žádný inzerát."
+                  : selectedModel
+                    ? `Zatím tu není žádný inzerát ${brandName} ${selectedModel.name}.`
+                    : brandName
+                      ? `Zatím tu není žádný inzerát ${brandName}.`
+                      : "Žádný inzerát neodpovídá filtrům."}
+              </p>
+              <p className="mt-2 text-[var(--color-muted)]">Prodáváte auto? Buďte první, kdo ho tu nabídne. Vložení je zdarma.</p>
+              <Link href={brand && model ? `/pridat/?znacka=${brand}&model=${model}` : "/pridat/"} className="btn-cta mt-5 inline-flex">
+                Přidat inzerát
+              </Link>
+            </div>
           ) : (
             <div className="flex flex-col gap-3">
               {results.map((l) => <ListingRow key={l.id} listing={l} />)}
@@ -446,25 +464,20 @@ export function SearchClient() {
           )}
         </div>
         <aside className="lg:sticky lg:top-20 h-fit">
-          {selectedModel ? (
-            <ModelSidebar model={selectedModel} />
-          ) : (
-            <section className="card p-4 text-sm space-y-3">
-              <h3 className="font-bold">Jak číst inzeráty</h3>
-              <p className="text-[var(--color-muted)]">
-                Cena je vždy <b className="text-[var(--color-ink)]">cena při platbě najednou</b>, bez podmínky financování.
+          <section className="card p-4 text-sm space-y-3">
+            <h3 className="font-bold">Jak číst inzeráty</h3>
+            <p className="text-[var(--color-muted)]">
+              Cena je vždy <b className="text-[var(--color-ink)]">cena při platbě najednou</b>, bez podmínky financování.
+            </p>
+            {selectedModel && (
+              <p>
+                <Link href={`/katalog/${brand}/${model}/`} className="font-semibold text-[var(--color-brand)] hover:underline">
+                  {brandName} {selectedModel.name} v katalogu →
+                </Link>
+                <span className="block text-[var(--color-muted)]">Generace, motory a data z technických kontrol.</span>
               </p>
-              <p className="text-[var(--color-muted)]">
-                <b className="text-[var(--color-good)]">Dobrá cena</b> a pruh pod cenou porovnávají vůz s podobnými inzeráty (±2 roky,
-                přepočteno na nájezd).
-              </p>
-              <p className="text-[var(--color-muted)]">
-                <b className="text-[var(--color-info)]">STK bez poklesu nájezdu</b> znamená, že mezi technickými kontrolami
-                tachometr neklesl. Nepotvrzuje aktuální stav.
-              </p>
-              <p className="text-[var(--color-muted)]">Vyberte značku a model a uvidíte hodnocení majitelů a nejčastější závady.</p>
-            </section>
-          )}
+            )}
+          </section>
         </aside>
       </div>
     </>

@@ -21,7 +21,7 @@ const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter",
 
 export const metadata: Metadata = {
   title: { default: "Vozodrom — auta, inzeráty a katalog", template: "%s · Vozodrom" },
-  description: "Prototyp autoportálu: inzeráty, katalog modelů a data z technických kontrol na jednom místě.",
+  description: "Každé auto má svůj příběh. Majitelé píšou o opravách, cestách a nákladech svých aut; k tomu katalog modelů a inzeráty.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -32,9 +32,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
       </head>
       <body className="min-h-screen flex flex-col">
-        <div className="bg-[var(--color-warn-soft)] text-[var(--color-warn)] text-xs text-center py-1.5 px-4 print:hidden">
-          Prototyp — všechny inzeráty, ceny a statistiky jsou smyšlená testovací data.
-        </div>
         <header className="print:hidden sticky top-0 z-20 bg-[var(--color-surface)]">
           <div className="relative mx-auto max-w-6xl px-4 h-14 flex items-center gap-1 sm:gap-4">
             <Suspense>
@@ -61,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <footer className="print:hidden bg-[var(--color-surface)] mt-24 sm:mt-32">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-[var(--color-muted)] grid gap-2 sm:grid-cols-3">
-            <span>© 2026 vozodrom.cz — prototyp</span>
+            <span>© 2026 vozodrom.cz</span>
             <span className="space-y-1">
               <ConsentSettings />
               <span className="block">
@@ -69,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/pro-prodejce/" className="hover:text-[var(--color-ink)] underline">Pro prodejce</Link>
               </span>
             </span>
-            <span className="sm:text-right space-y-1">
+            <span>
               {SOCIAL.length > 0 && (
                 <span className="flex items-center gap-3 sm:justify-end">
                   Sledujte nás:
@@ -80,7 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                 </span>
               )}
-              <span className="block">Data v prototypu jsou smyšlená.</span>
             </span>
           </div>
         </footer>

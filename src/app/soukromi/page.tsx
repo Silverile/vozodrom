@@ -7,9 +7,6 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 space-y-6">
       <h1 className="text-3xl font-extrabold">Ochrana soukromí a cookies</h1>
-      <p className="card p-4 text-sm text-[var(--color-warn)]">
-        Pracovní verze pro prototyp. Před spuštěním ji doplníme o údaje provozovatele a projde právní kontrolou.
-      </p>
       <section className="space-y-2">
         <h2 className="text-xl font-bold">Co ukládáme bez souhlasu</h2>
         <p className="text-[var(--color-muted)]">

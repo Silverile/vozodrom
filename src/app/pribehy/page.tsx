@@ -68,10 +68,15 @@ export default async function LogbooksPage({ searchParams }: { searchParams: Pro
       </nav>
 
       {items.length === 0 ? (
-        <div className="card mt-6 p-8 text-center text-[var(--color-muted)]">
-          {before ? "Starší zápisy už nejsou." : "Tady zatím nikdo nic nenapsal."}{" "}
-          <Link href="/garaz/" className="text-[var(--color-brand)]">Napište příběh svého auta.</Link>
-        </div>
+        before ? (
+          <div className="card mt-6 p-8 text-center text-[var(--color-muted)]">Starší zápisy už nejsou.</div>
+        ) : (
+          <div className="card mt-6 p-8 sm:p-10 text-center">
+            <p className="text-lg font-semibold">{category ? `Na téma ${ENTRY_CATEGORIES[category as keyof typeof ENTRY_CATEGORIES]} tu zatím není žádný zápis.` : "Zatím tu není žádný příběh."}</p>
+            <p className="mt-2 text-[var(--color-muted)]">Buďte první, kdo napíše příběh svého auta: opravy, cesty, úpravy a co všechno stály.</p>
+            <Link href="/garaz/nove/" className="btn-cta mt-5 inline-flex">Napsat příběh auta</Link>
+          </div>
+        )
       ) : (
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => <li key={item.id}><LogbookCard item={item} /></li>)}

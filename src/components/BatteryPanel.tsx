@@ -27,7 +27,7 @@ export function BatteryPanel({ battery }: { battery: Battery }) {
         )}
       </dl>
       <p className="text-[11px] text-[var(--color-muted)] mt-3">
-        Stav baterie neodhadujeme z registru ani z nájezdu. Bez testu chybí údaj, ne odhad. Prototyp: smyšlená data.
+        Stav baterie neodhadujeme z registru ani z nájezdu. Bez testu chybí údaj, ne odhad.
       </p>
     </section>
   );

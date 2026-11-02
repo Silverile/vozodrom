@@ -6,7 +6,6 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { Gallery } from "@/components/Gallery";
 import { frontDrawingFor } from "@/components/FrontDrawing";
 import { ListingCard } from "@/components/ListingCard";
-import { ModelSidebar } from "@/components/ModelSidebar";
 import { PartnerOffers } from "@/components/PartnerOffers";
 import { Place } from "@/components/Place";
 import { PriceMeter, VerdictBadge } from "@/components/VerdictBadge";
@@ -86,7 +85,7 @@ export default async function ListingPage({ params }: { params: Params }) {
         {brand.name} {model.name}, {listing.year} <span className="text-[var(--color-muted)] font-semibold">· {getCity(listing.city)?.name ?? listing.region}</span>
       </h1>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_340px_300px] mt-5 items-start">
+      <div className="grid gap-5 lg:grid-cols-[1fr_340px] mt-5 items-start">
         {/* photos + details */}
         <div className="space-y-4 min-w-0">
           <Gallery
@@ -106,7 +105,7 @@ export default async function ListingPage({ params }: { params: Params }) {
           </section>
           <section className="card p-4">
             <h2 className="font-bold">Historie technických kontrol</h2>
-            <p className="text-xs text-[var(--color-muted)]">Zdroj: data o technických prohlídkách (v ostrém provozu MD ČR), nikoli prodejce.</p>
+            <p className="text-xs text-[var(--color-muted)]">Zdroj: data o technických prohlídkách, nikoli prodejce.</p>
             {listing.stkHistory.length === 0 ? (
               <p className="mt-2 text-sm text-[var(--color-muted)]">
                 {2026 - listing.year < 4 ? "Vůz je mladší než 4 roky, první STK ho teprve čeká." : "Záznamy STK nejsou k dispozici (prodejce neuvedl VIN)."}
@@ -174,9 +173,6 @@ export default async function ListingPage({ params }: { params: Params }) {
                 <div className="text-xs text-[var(--color-muted)]">Vloženo {formatAgo(listing.postedAt)} · {formatDate(listing.postedAt)}</div>
               </div>
             </div>
-            <p className="mt-4 rounded-[10px] bg-[var(--color-field)] p-3 text-sm text-[var(--color-muted)]">
-              Toto je smyšlený testovací inzerát, prodejce neexistuje. V ostrém provozu zde bude telefon a zpráva prodejci.
-            </p>
             <div className="mt-3 flex items-center justify-between gap-3">
               <span className="text-sm">Přidat do výběru a porovnání</span>
               <FavoriteButton id={listing.id} label={`${brand.name} ${model.name}, ${listing.year}`} />
@@ -185,10 +181,6 @@ export default async function ListingPage({ params }: { params: Params }) {
           <PartnerOffers />
         </div>
 
-        {/* model context */}
-        <aside className="lg:col-span-2 xl:col-span-1">
-          <ModelSidebar model={model} />
-        </aside>
       </div>
 
       {similar.length > 0 && (

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { SECTIONS, sectionOf } from "@/lib/sections";
+import { OPEN_SECTIONS, sectionOf } from "@/lib/sections";
 
 /**
  * The mark: a bold "V" drawn as a tick, the promise of cars you can trust, with an
@@ -63,7 +63,7 @@ export function SectionTabs() {
   const tab = "relative whitespace-nowrap px-3 py-2.5 text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)] data-[on=true]:text-[var(--color-ink)] data-[on=true]:font-semibold data-[on=true]:after:absolute data-[on=true]:after:inset-x-3 data-[on=true]:after:bottom-0 data-[on=true]:after:h-0.5 data-[on=true]:after:rounded-full data-[on=true]:after:bg-[var(--color-brand)]";
   return (
     <nav ref={nav} aria-label="Sekce" className="relative flex overflow-x-auto -mx-3 [scrollbar-width:none]">
-      {SECTIONS.filter((s) => s.group === "market").map((s) => {
+      {OPEN_SECTIONS.filter((s) => s.group === "market").map((s) => {
         const on = active?.key === s.key && !onCatalog;
         return (
           <Link key={s.key} href={s.href} className={tab} data-on={on} aria-current={on ? "page" : undefined}>
@@ -76,7 +76,7 @@ export function SectionTabs() {
       </Link>
       {/* market sections | community: a gap, not a rule */}
       <span className="w-4 shrink-0" aria-hidden="true" />
-      {SECTIONS.filter((s) => s.group === "community").map((s) => {
+      {OPEN_SECTIONS.filter((s) => s.group === "community").map((s) => {
         const on = active?.key === s.key;
         return (
           <Link key={s.key} href={s.href} className={tab} data-on={on} aria-current={on ? "page" : undefined}>

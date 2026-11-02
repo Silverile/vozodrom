@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { Place } from "@/components/Place";
 import { BODY_LABEL, FUEL_LABEL, getBrand, getModel } from "@/lib/catalog";
@@ -73,7 +73,15 @@ export function ShortlistClient() {
   const searches = savedSearches.useValue();
   const sharedIds = params.get("ids")?.split(",").filter(Boolean) ?? null;
   const ids = sharedIds ?? stored;
-  const cars = ids.map(getListing).filter((l): l is Listing => Boolean(l));
+  // Published user listings come from the API; feed listings ship with the page.
+  const [userListings, setUserListings] = useState<Listing[]>([]);
+  useEffect(() => {
+    fetch("/api/inzeraty/verejne/")
+      .then((r): Promise<Listing[]> | Listing[] => (r.ok ? r.json() : []))
+      .then(setUserListings)
+      .catch(() => {});
+  }, []);
+  const cars = ids.map((id) => userListings.find((l) => l.id === id) ?? getListing(id)).filter((l): l is Listing => Boolean(l));
   // The manual selection belongs to one context (a shared link or my own shortlist);
   // switching context falls back to the first cars of the new list.
   const context = sharedIds ? `shared:${sharedIds.join(",")}` : "mine";
@@ -83,6 +91,8 @@ export function ShortlistClient() {
   const compared = (selected ?? cars.slice(0, MAX_COMPARE).map((c) => c.id))
     .map((id) => cars.find((c) => c.id === id))
     .filter((c): c is Listing => Boolean(c));
+  // the STK row only when one of the compared cars has dated inspection records
+  const rows = ROWS.filter((r) => r.label !== "STK (datované záznamy)" || compared.some((c) => stkSignal(c).kind !== "none"));
   const [copied, setCopied] = useState(false);
 
   function toggleCompare(id: string) {
@@ -151,7 +161,7 @@ export function ShortlistClient() {
                 </tr>
               </thead>
               <tbody>
-                {ROWS.map((row) => {
+                {rows.map((row) => {
                   const best = bestIds(row, compared);
                   return (
                     <tr key={row.label} className="border-t border-[var(--color-line)]">

@@ -9,10 +9,9 @@ import { PartnerOffers } from "@/components/PartnerOffers";
 import { OwnerLogbooks } from "@/components/OwnerLogbooks";
 import { loadCard } from "@/lib/card-store";
 import { ListingRow } from "@/components/ListingRow";
-import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
 import { RealStats } from "@/components/RealStats";
-import { BODY_LABEL, FUEL_LABEL, getBrand, getModel, models } from "@/lib/catalog";
+import { BODY_LABEL, getBrand, getModel, models } from "@/lib/catalog";
 import { formatKm, formatNumber, formatPercent, formatPrice } from "@/lib/format";
 import { listingsOf } from "@/lib/listings";
 import { MAKES, getMake, modelLinesOf, yearsOf } from "@/lib/makes";
@@ -31,8 +30,8 @@ import {
 import { type StatsEntry, lineStats } from "@/lib/stats";
 import drawingReview from "@/data/front-drawing-review.json";
 
-// One page per model line. Every curated line has one; demo models add owner ratings, STK data,
-// prices and listings. Model cards (generations, engines, trims) come from Codex's catalogue;
+// One page per model line. Every curated line has one; STK and registry figures appear only where
+// the open data has them (lib/stats.ts), listings only where there are any. Model cards (generations, engines, trims) come from Codex's catalogue;
 // pictures are front-view drawings only (FrontDrawing), not photos.
 
 type Params = Promise<{ brand: string; model: string }>;
@@ -416,29 +415,11 @@ export default async function ModelPage({ params }: { params: Params }) {
           )}
           {(card?.summary ?? demo?.description) && <p className="mt-4 max-w-xl">{card?.summary ?? demo?.description}</p>}
 
-          {demo && (
-            <div className="card p-3 mt-5 max-w-md flex items-center justify-between gap-3">
-              <div className="min-w-0">
-                <Link href={`/recenze/${brandSlug}/${modelSlug}/`} className="text-xs text-[var(--color-brand)] hover:underline">Hodnocení majitelů* · recenze →</Link>
-                <div className="flex flex-wrap gap-1.5 mt-1 [&>.chip]:max-w-full [&>.chip]:whitespace-normal">
-                  {demo.pros.slice(0, 3).map((p) => (
-                    <span key={p.label} className="chip bg-[var(--color-good-soft)] text-[var(--color-good)]">{p.label} <b className="opacity-70">{formatNumber(p.count)}</b></span>
-                  ))}
-                </div>
-              </div>
-              <span className="shrink-0 rounded-lg bg-[var(--color-brand)] text-[var(--color-brand-ink)] px-2.5 py-1 text-2xl font-extrabold">
-                {demo.ownerScore.toLocaleString("cs-CZ", { minimumFractionDigits: 1 })}
-              </span>
-            </div>
-          )}
-
           <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
             {(gens.length || line?.generations.length) ? <Stat label="Generace" value={gens.length || line?.generations.length} /> : null}
             {powers && <Stat label={powers.label} value={powers.value} />}
             {real?.entry.stk ? (
               <Stat label="Neprošlo STK" value={formatPercent(real.entry.stk.failRate)} />
-            ) : demo ? (
-              <Stat label="Neprošlo STK*" value={formatPercent(demo.stk.failRate)} />
             ) : bodies.length > 1 ? (
               <Stat label="Karoserie" value={bodies.length} />
             ) : null}
@@ -543,69 +524,15 @@ export default async function ModelPage({ params }: { params: Params }) {
         </Section>
       )}
 
-      {demo && (
+      {byYear.length > 0 && (
         <div className="grid gap-4 mt-8 lg:grid-cols-2">
-          {!card && (
-            <Section title="Motorizace">
-              <table className="w-full table-fixed sm:table-auto text-sm break-words">
-                <thead className="text-left text-[var(--color-muted)]">
-                  <tr><th className="pb-2 font-medium">Motor</th><th className="pb-2 font-medium">Palivo</th><th className="pb-2 font-medium">Výkon</th><th className="pb-2 font-medium">Spotřeba*</th></tr>
-                </thead>
-                <tbody>
-                  {demo.engines.map((e) => (
-                    <tr key={e.code} className="border-t border-[var(--color-line)]">
-                      <td className="py-2 font-medium">{e.code}</td>
-                      <td>{FUEL_LABEL[e.fuel]}</td>
-                      <td>{e.powerKw} kW</td>
-                      <td>{e.consumption} {e.fuel === "elektro" ? "kWh" : "l"}/100 km</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </Section>
-          )}
-
-          {!real?.entry.stk && (<Section
-            title="Nejčastější závady při STK"
-            note={`* Testovací data. V ostrém provozu: otevřená data Ministerstva dopravy o technických prohlídkách (${formatNumber(demo.stk.inspections)} prohlídek v ukázce).`}
-          >
+          <Section id="ceny" title="Ceny v inzerátech podle ročníku" note={`Rozpětí: ${formatPrice(Math.min(...prices))} – ${formatPrice(Math.max(...prices))}.`}>
             <div className="space-y-2.5">
-              {demo.stk.defects.map((d) => (
-                <Bar key={d.label} label={d.label} value={d.share} max={Math.max(...demo.stk.defects.map((x) => x.share))} display={formatPercent(d.share)} />
+              {byYear.map((y) => (
+                <Bar key={y.year} label={String(y.year)} value={y.avg} max={maxAvg} display={formatPrice(Math.round(y.avg / 1000) * 1000)} />
               ))}
             </div>
-          </Section>)}
-
-          {!real?.entry.stk && (<Section id="najezd" title="Typický nájezd podle stáří" note="* Medián stavu tachometru při STK, testovací data.">
-            <div className="space-y-2.5">
-              {demo.mileageByAge.map((m) => (
-                <Bar key={m.age} label={`${m.age} ${m.age === 1 ? "rok" : m.age < 5 ? "roky" : "let"}`} value={m.km} max={Math.max(...demo.mileageByAge.map((x) => x.km))} display={formatKm(m.km)} />
-              ))}
-            </div>
-          </Section>)}
-
-          {byYear.length > 0 && (
-            <Section id="ceny" title="Ceny v inzerátech podle ročníku" note={`Rozpětí: ${formatPrice(Math.min(...prices))} – ${formatPrice(Math.max(...prices))}.`}>
-              <div className="space-y-2.5">
-                {byYear.map((y) => (
-                  <Bar key={y.year} label={String(y.year)} value={y.avg} max={maxAvg} display={formatPrice(Math.round(y.avg / 1000) * 1000)} />
-                ))}
-              </div>
-            </Section>
-          )}
-
-          {!real?.entry.fleet && (
-            <Section title="V provozu v ČR*" note="* Testovací data. V ostrém provozu: Centrální registr vozidel.">
-              <div className="text-3xl font-extrabold">{formatNumber(demo.registered)}</div>
-              <p className="text-sm text-[var(--color-muted)] mt-1">registrovaných vozidel</p>
-            </Section>
-          )}
-        </div>
-      )}
-
-      {demo && (
-        <div className="mt-4">
-          <OwnerQuestions model={demo} />
+          </Section>
         </div>
       )}
 
@@ -630,7 +557,6 @@ export default async function ModelPage({ params }: { params: Params }) {
       <p className="mt-10 text-xs text-[var(--color-muted)] max-w-3xl">
         Technické údaje z Wikipedie, Wikidat a materiálů výrobce (fakta, vlastní texty); roky jsou roky výroby. Neznámé údaje necháváme prázdné.
         Fotografie z Wikimedia Commons, autor a licence u každé fotky.
-        {demo && " Údaje označené * jsou testovací."}
       </p>
     </div>
   );

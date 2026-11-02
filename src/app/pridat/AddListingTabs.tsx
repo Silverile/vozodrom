@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { ItemSection } from "@/lib/classifieds";
-import { SECTIONS } from "@/lib/sections";
+import { OPEN_SECTIONS } from "@/lib/sections";
 import { AddListingForm } from "./AddListingForm";
 import { ItemForm } from "./ItemForm";
 
@@ -12,10 +12,12 @@ const ICONS: Record<string, string> = { auto: "🚗", technika: "🚛", moto: "�
 /** Section switch above the form; the choice lives in ?sekce= so sections can link here. */
 export function AddListingTabs() {
   const requested = useSearchParams().get("sekce");
-  const market = SECTIONS.filter((s) => s.group === "market");
+  // Only open sections: the forms of the closed ones do not save anything yet.
+  const market = OPEN_SECTIONS.filter((s) => s.group === "market");
   const active = market.find((s) => s.key === requested)?.key ?? "auto";
   return (
     <>
+      {market.length > 1 && (
       <nav aria-label="Co prodáváte" className="mt-6 flex flex-wrap gap-2">
         {market.map((s) => (
           <Link
@@ -31,6 +33,7 @@ export function AddListingTabs() {
           </Link>
         ))}
       </nav>
+      )}
       {active === "auto" ? <AddListingForm /> : <ItemForm key={active} section={active as ItemSection} />}
     </>
   );

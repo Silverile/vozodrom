@@ -5,8 +5,13 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   // The owners' logbooks were "Deníky aut" at /deniky/ until 2026-11-02; old links and notifications keep working.
+  // Sections without real content yet (lib/sections.ts, closed) lead home until they open.
   async redirects() {
-    return [{ source: "/deniky/:path*", destination: "/pribehy/:path*", permanent: true }];
+    const closed = ["/forum", "/recenze", "/technika", "/moto", "/dily", "/pneumatiky"].flatMap((p) => [
+      { source: p, destination: "/", permanent: false },
+      { source: `${p}/:path*`, destination: "/", permanent: false },
+    ]);
+    return [{ source: "/deniky/:path*", destination: "/pribehy/:path*", permanent: true }, ...closed];
   },
   // pg loads its Workers socket from pg-cloudflare only under the "workerd" export condition,
   // which Next's file tracing (Node conditions) does not follow, so ship the whole package.

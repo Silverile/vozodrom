@@ -36,7 +36,7 @@ export function SectionLanding({ section }: { section: ItemSection }) {
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{INTRO[section].title}</h1>
           <p className="mt-1 text-[var(--color-muted)] max-w-2xl">{INTRO[section].lead}</p>
         </div>
-        <p className="text-sm text-[var(--color-muted)]"><b className="text-[var(--color-ink)]">{formatNumber(total)}</b> testovacích inzerátů</p>
+        <p className="text-sm text-[var(--color-muted)]"><b className="text-[var(--color-ink)]">{formatNumber(total)}</b> inzerátů</p>
       </div>
       <Suspense>
         <SectionSearch section={section} />
@@ -77,7 +77,6 @@ export async function ItemDetail({ section, params }: { section: ItemSection; pa
         <div className="space-y-4 min-w-0">
           <div className="card overflow-hidden">
             <ItemImage item={item} className="w-full aspect-[16/9] [&>span]:text-8xl" />
-            <p className="px-4 py-2 text-xs text-[var(--color-muted)]">V prototypu bez fotografií.</p>
           </div>
           <section className="card p-4">
             <h2 className="font-bold">Popis prodejce</h2>

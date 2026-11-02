@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export function HomeSearch({ total }: { total: number }) {
+export function HomeSearch() {
   const router = useRouter();
   const [q, setQ] = useState("");
 
@@ -21,7 +21,7 @@ export function HomeSearch({ total }: { total: number }) {
         onChange={(e) => setQ(e.target.value)}
         aria-label="Co hledáte"
       />
-      <button className="btn-cta !px-6 !py-4 text-base whitespace-nowrap">Hledat z {new Intl.NumberFormat("cs-CZ").format(total)} aut</button>
+      <button className="btn-cta !px-6 !py-4 text-base whitespace-nowrap">Hledat auto</button>
     </form>
   );
 }

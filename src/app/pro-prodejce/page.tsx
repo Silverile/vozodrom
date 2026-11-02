@@ -50,7 +50,7 @@ export default function DealersPage() {
       {feedReports.map((r) => (
         <section key={r.feed} className="card p-5">
           <h2 className="font-bold text-lg">Poslední import: {r.seller}</h2>
-          <p className="text-xs text-[var(--color-muted)]">Ukázkový testovací feed <code>{r.feed}</code></p>
+          <p className="text-xs text-[var(--color-muted)]">Feed <code>{r.feed}</code></p>
           <dl className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {[
               ["Přijato záznamů", r.received],

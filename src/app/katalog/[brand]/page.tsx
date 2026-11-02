@@ -5,7 +5,7 @@ import { BrandLogo, isWide } from "@/components/BrandLogo";
 import { CarImage } from "@/components/CarImage";
 import { BODY_LABEL, getBrand, modelsOf } from "@/lib/catalog";
 import { items } from "@/lib/classifieds";
-import { listings, listingsOf } from "@/lib/listings";
+import { listings } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
 import { factsOf, historyOf, hostOf, periodOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
@@ -97,7 +97,7 @@ export default async function BrandPage({ params }: { params: Params }) {
       ["Sídlo", [facts?.hq, make.country].filter(Boolean).join(", ") || null],
       ["Patří pod", facts?.parent ?? null],
       ["Modely v katalogu", lines.length ? `${lines.length}${currentModels ? ` · ${currentModels} vyráběných` : ""}` : null],
-      ["Inzeráty", String(listingCount)],
+      ["Inzeráty", listingCount ? String(listingCount) : null],
       ["Zakladatelé", facts?.founders.length ? facts.founders.slice(0, 2).join(", ") + (facts.founders.length > 2 ? " a další" : "") : null],
       ["Zaměstnanci", facts?.employees ? `${facts.employees.value.toLocaleString("cs-CZ")}${facts.employees.year ? ` (${facts.employees.year})` : ""}` : null],
     ] as [string, string | null][]
@@ -177,12 +177,13 @@ export default async function BrandPage({ params }: { params: Params }) {
       )}
 
       <ul className="mt-4 flex flex-wrap gap-2">
-        {make.sections.map((s) => {
+        {/* only the car section is open (lib/sections.ts); a count only where there is one */}
+        {make.sections.filter((s) => s === "auto").map((s) => {
           const n = itemCount(s);
           return (
             <li key={s}>
               <Link href={`${SECTION_LINKS[s].href}?znacka=${make.slug}`} className="pill">
-                {SECTION_LINKS[s].label} · {n} {n === 1 ? "inzerát" : n >= 2 && n <= 4 ? "inzeráty" : "inzerátů"}
+                {SECTION_LINKS[s].label}{n > 0 && ` · ${n} ${n === 1 ? "inzerát" : n >= 2 && n <= 4 ? "inzeráty" : "inzerátů"}`}
               </Link>
             </li>
           );
@@ -219,7 +220,6 @@ export default async function BrandPage({ params }: { params: Params }) {
               <div className="p-4">
                 <div className="font-semibold">{make.name} {m.name}</div>
                 <div className="text-sm text-[var(--color-muted)]">{m.segment} · {BODY_LABEL[m.body]}</div>
-                <div className="text-sm mt-2">{listingsOf(slug, m.slug).length} inzerátů</div>
               </div>
             </Link>
           ))}

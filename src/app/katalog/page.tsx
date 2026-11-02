@@ -18,7 +18,7 @@ const SECTIONS: { key: MakeSection; label: string; id: string }[] = [
   { key: "pneu", label: "Pneumatiky", id: "pneumatiky" },
 ];
 
-// Listing counts per make and section, from the test listings.
+// Listing counts per make and section, from the listings shipped with the site (none yet).
 const counts = new Map<string, number>();
 const bump = (key: string) => counts.set(key, (counts.get(key) ?? 0) + 1);
 for (const l of listings) bump(`auto:${l.brandSlug}`);

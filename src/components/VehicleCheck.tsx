@@ -54,10 +54,10 @@ export function VehicleCheck({ listing }: { listing: Listing }) {
         <Item state="locked">Historie inzerce a servisní záznamy</Item>
       </ul>
       <p className="mt-3 rounded-[10px] border border-[var(--color-line)] p-2.5 text-xs text-[var(--color-muted)]">
-        🔒 Úplnou historii nabídneme přes partnera (placená prověrka). V prototypu zatím není napojená.
+        🔒 Úplnou historii nabídneme přes partnera (placená prověrka).
       </p>
       <p className="text-[11px] text-[var(--color-muted)] mt-2">
-        Záznamy STK jsou datované a nepotvrzují aktuální stav tachometru. Prototyp: smyšlená data.
+        Záznamy STK jsou datované a nepotvrzují aktuální stav tachometru.
       </p>
     </section>
   );

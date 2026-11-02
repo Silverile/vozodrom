@@ -42,7 +42,6 @@ export const articles: Article[] = [
         "vozidla nad 3,5 t: alespoň 6 mm.",
       ] },
       { text: "Měří se v hlavních drážkách dezénu. Nové zimní pneumatiky mívají kolem 8 až 9 mm, takže 4 mm je hranice, kdy už je čas na novou sadu." },
-      { link: { href: "/pneumatiky/?kategorie=zimni", label: "Zimní pneumatiky v inzerci" } },
     ],
     sources: ["zákon č. 361/2000 Sb., § 40a"],
   },
@@ -102,7 +101,7 @@ export const articles: Article[] = [
         "přiměřenost nájezdu ke stáří auta.",
       ] },
       { text: "U inzerátů na vozodromu ukazujeme, zda nájezd mezi datovanými kontrolami neklesl. Aktuální stav to ale nepotvrzuje: prohlídku a zkušební jízdu nic nenahradí." },
-      { link: { href: "/inzeraty/", label: "Prohlédnout inzeráty se záznamy STK" } },
+      { link: { href: "/inzeraty/", label: "Prohlédnout inzeráty" } },
     ],
   },
   {

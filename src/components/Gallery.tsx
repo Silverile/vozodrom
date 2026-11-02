@@ -39,7 +39,7 @@ export function Gallery({ body, color, title, drawing }: { body: Body; color: st
           <div className="w-full aspect-[16/10] grid place-items-center bg-[var(--color-photo)] text-center">
             <div>
               <div className="text-5xl" aria-hidden="true">{view.icon}</div>
-              <p className="mt-2 text-sm text-[var(--color-muted)]">{view.label}<br />(v prototypu bez fotografií)</p>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">{view.label}</p>
             </div>
           </div>
         )}

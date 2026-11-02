@@ -11,7 +11,7 @@ import { LineGlyph } from "./Icon";
 const ITEMS: { href: string; label: string; note?: string }[] = [
   { href: "/kupni-smlouva/", label: "Kupní smlouva na auto", note: "vyplnit a vytisknout" },
   { href: "/prepis-vozidla/", label: "Přepis vozidla", note: "postup, doklady, poplatky" },
-  { href: "/ucet/", label: "Můj účet", note: "náhled" },
+  { href: "/ucet/", label: "Můj účet" },
   { href: "/pro-prodejce/", label: "Pro prodejce", note: "import inzerátů" },
   { href: "/soukromi/", label: "Soukromí a cookies" },
 ];
