@@ -7,6 +7,7 @@ import { ModelListingCount } from "@/components/ModelListingCount";
 import { OpenOnHash } from "@/components/OpenOnHash";
 import { PartnerOffers } from "@/components/PartnerOffers";
 import { OwnerLogbooks } from "@/components/OwnerLogbooks";
+import { loadCard } from "@/lib/card-store";
 import { ListingRow } from "@/components/ListingRow";
 import { OwnerQuestions } from "@/components/OwnerQuestions";
 import { FrontDrawing, frontDrawingId, newestFrontDrawing } from "@/components/FrontDrawing";
@@ -24,7 +25,6 @@ import {
   type CardGeneration,
   type CardTrim,
   bodyVariantName,
-  cardOf,
   stagesOf,
   yearsSpan,
 } from "@/lib/modelCards";
@@ -55,10 +55,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { brand, model } = await params;
   const make = getMake(brand);
-  const name = cardOf(brand, model)?.name ?? modelLinesOf(brand).find((l) => l.slug === model)?.name ?? getModel(brand, model)?.name;
+  const card = await loadCard(brand, model);
+  const name = card?.name ?? modelLinesOf(brand).find((l) => l.slug === model)?.name ?? getModel(brand, model)?.name;
   return {
     title: make && name ? `${make.name} ${name} — generace, technické údaje a inzeráty` : "Model",
-    description: cardOf(brand, model)?.summary ?? getModel(brand, model)?.description,
+    description: card?.summary ?? getModel(brand, model)?.description,
   };
 }
 
@@ -366,7 +367,7 @@ export default async function ModelPage({ params }: { params: Params }) {
   const make = getMake(brandSlug);
   const line = modelLinesOf(brandSlug).find((l) => l.slug === modelSlug);
   const model = getModel(brandSlug, modelSlug);
-  const card = cardOf(brandSlug, modelSlug);
+  const card = await loadCard(brandSlug, modelSlug);
   if (!make || (!line && !model)) notFound();
 
   const name = card?.name ?? line?.name ?? model!.name;

@@ -67,7 +67,7 @@ export default async function UserListingPage({ params }: { params: Params }) {
   const title = draftTitle(row.data);
   const model = getModel(listing.brandSlug, listing.modelSlug);
   const estimate = marketEstimate(listing);
-  const context = listingContext(listing, row.data);
+  const context = await listingContext(listing, row.data);
   const makeName = getMake(listing.brandSlug)?.name ?? listing.brandSlug;
   const similar = preview ? [] : await similarTo(listing);
   const generationName = context ? context.gen.name ?? context.gen.code : model ? listing.generation : null;

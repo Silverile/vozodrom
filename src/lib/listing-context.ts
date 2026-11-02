@@ -4,7 +4,8 @@ import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
 import { cardGeneration, coversYear, toListingFuel } from "./listing-catalog";
 import { generationOf, lineOf, type Draft } from "./listing-draft";
-import { type CardEngine, type CardGeneration, type CardTrim, type ModelCard, cardOf, sizeOf, stagesOf } from "./modelCards";
+import { loadCard } from "./card-store";
+import { type CardEngine, type CardGeneration, type CardTrim, type ModelCard, sizeOf, stagesOf } from "./modelCards";
 import type { Listing } from "./types";
 
 // Catalogue context for the page of a user listing: the generation the car belongs to, the catalogue
@@ -69,9 +70,9 @@ function matchTrim(gen: CardGeneration, listing: Listing): CardTrim | null {
   return candidates.find((t) => !t.transmission?.type || (t.transmission.type === "manual") !== automatic) ?? candidates[0] ?? null;
 }
 
-export function listingContext(listing: Listing, draft: Draft): ListingContext | null {
+export async function listingContext(listing: Listing, draft: Draft): Promise<ListingContext | null> {
   const line = lineOf(draft);
-  const card = line && cardOf(draft.brand, line.slug);
+  const card = line && (await loadCard(draft.brand, line.slug));
   if (!line || !card) return null;
   const listed = generationOf(draft, line);
   const matched = listed && cardGeneration(listed, card.generations, listing.year);

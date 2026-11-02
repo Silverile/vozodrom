@@ -9,7 +9,8 @@ import { listings, listingsOf } from "@/lib/listings";
 import { ViewTabs } from "@/components/ViewTabs";
 import { factsOf, historyOf, hostOf, periodOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
-import { BODY_GROUPS, cardOf } from "@/lib/modelCards";
+import { loadCard } from "@/lib/card-store";
+import { BODY_GROUPS } from "@/lib/modelCards";
 import { CatalogImage } from "@/components/CatalogImage";
 import { newestFrontDrawing } from "@/components/FrontDrawing";
 import type { Body } from "@/lib/types";
@@ -21,12 +22,11 @@ type Params = Promise<{ brand: string }>;
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-function LineGrid({ make, slug, lines }: { make: string; slug: string; lines: ModelLine[] }) {
+function LineGrid({ make, slug, lines, genCounts }: { make: string; slug: string; lines: ModelLine[]; genCounts: Map<string, number> }) {
   return (
     <ul className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
       {lines.map((l) => {
-        const card = cardOf(slug, l.slug);
-        const gens = card?.generations.length || l.generations.length;
+        const gens = genCounts.get(l.slug) || l.generations.length;
         // the newest generation that has a drawing; the catalogue shows drawings, not photos
         const drawing = newestFrontDrawing(slug, l.slug);
         return (
@@ -71,6 +71,8 @@ export default async function BrandPage({ params }: { params: Params }) {
   const demo = getBrand(slug);
   const list = demo ? modelsOf(slug) : [];
   const lines = modelLinesOf(slug);
+  // generations per line by the model cards (the line index may count fewer)
+  const genCounts = new Map(await Promise.all(lines.map(async (l) => [l.slug, (await loadCard(slug, l.slug))?.generations.length ?? 0] as const)));
   // A model with several body types appears in each of its groups, as on Drom.
   const groups: [string, string, ModelLine[]][] = [
     ...BODY_GROUPS.map(([key, label]) => [key, label, lines.filter((l) => l.bodyTypes.includes(key))] as [string, string, ModelLine[]]),
@@ -195,12 +197,12 @@ export default async function BrandPage({ params }: { params: Params }) {
               {groups.map(([key, label, group]) => (
                 <div key={key}>
                   <h3 className="font-bold text-lg mb-3">{label} <span className="text-sm font-normal text-[var(--color-muted)]">· {group.length}</span></h3>
-                  <LineGrid make={make.name} slug={slug} lines={group} />
+                  <LineGrid make={make.name} slug={slug} lines={group} genCounts={genCounts} />
                 </div>
               ))}
             </div>
-            <LineGrid make={make.name} slug={slug} lines={lines} />
-            <LineGrid make={make.name} slug={slug} lines={byYear} />
+            <LineGrid make={make.name} slug={slug} lines={lines} genCounts={genCounts} />
+            <LineGrid make={make.name} slug={slug} lines={byYear} genCounts={genCounts} />
           </ViewTabs>
           <p className="mt-4 text-xs text-[var(--color-muted)]">
             Modelová řada sestavená z Wikidat, Wikipedie a materiálů výrobců (fakta, ne texty); roky jsou roky výroby, ne prodeje v ČR.

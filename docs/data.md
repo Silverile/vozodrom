@@ -100,10 +100,11 @@ Každé uložení je nový řádek, platí nejnovější; prázdná hodnota = te
 
 ## Katalog
 
-Web nečte `src/data/model-cards-index.json` přímo, ale jeho kopii `src/data/model-cards-app.json` bez důkazních polí
-(`sources`, `sourceScope`, `fieldSources`, …), kterou před `dev`, `build` a `typecheck` vyrobí
-`scripts/app-model-cards.mjs` (soubor se necommituje). Worker má limit 64 MiB nekomprimovaně a karty jsou v něm
-víckrát; plný index zůstává pro kontroly katalogu.
+Web nečte `src/data/model-cards-index.json` přímo. Před `dev`, `build` a `typecheck` z něj
+`scripts/app-model-cards.mjs` vyrobí jeden soubor na modelovou řadu, `public/katalog-data/<značka>/<řada>.json`,
+bez důkazních polí (`sources`, `sourceScope`, `fieldSources`, …); soubory se necommitují. Jsou to statické assety,
+takže katalog není v balíčku Workeru (limit 64 MiB, pomalé studené starty). `src/lib/card-store.ts` (`loadCard`) je
+při předrenderování čte z disku a ve Workeru přes `ASSETS`. Plný index zůstává pro kontroly katalogu.
 
 - `src/data/catalog/` — zdrojová data (Wikidata, CC0, a ručně ověřené doplňky); licence a postup v
   [SOURCES.md](../src/data/catalog/SOURCES.md). Kurátorství probíhá v `analysis/codex/`.
@@ -136,7 +137,7 @@ Stránky katalogu jsou statické, opravy se do nich dostanou při sestavení:
 2. Před buildem `scripts/fetch-catalog-edits.mjs` (npm `prebuild`, jen na CI) stáhne aktuální opravy z
    `https://vozodrom.cz/api/katalog/opravy/` do `src/data/catalog-edits.json`; když web neodpoví, build pokračuje
    s verzí v repozitáři.
-3. `cardOf` v `src/lib/modelCards.ts` je aplikuje na karty (`src/lib/catalog-edits.ts`).
+3. `loadCard` v `src/lib/card-store.ts` je aplikuje na karty (`src/lib/catalog-edits.ts`).
 4. „Publikovat na web“ spustí workflow nasazení přes GitHub API (secret `GITHUB_DEPLOY_TOKEN`, viz provoz).
    Opravy jdou na web i s každým jiným nasazením.
 

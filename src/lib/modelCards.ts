@@ -1,9 +1,6 @@
-// The site reads the slimmed copy (scripts/app-model-cards.mjs): no evidence fields, see there.
-import cardIndex from "@/data/model-cards-app.json";
-import { applyEdits, builtEditsOf } from "./catalog-edits";
-
 // Model cards: generations, engines, trims and Commons photos per model line
 // (src/data/catalog/model-cards/ via scripts/model-cards-index.mjs). Unknown values are null.
+// Types and helpers only; the cards themselves are loaded by lib/card-store (server).
 
 export type CardFuel = "petrol" | "diesel" | "petrol-cng" | "petrol-lpg" | "petrol-mhev" | "petrol-hev" | "petrol-phev" | "diesel-mhev" | "electric" | "hydrogen";
 
@@ -166,7 +163,7 @@ export interface CardGeneration {
   /** trim levels such as Active, Ambition, Style, RS; missing on most generations so far */
   equipmentLines?: CardEquipmentLine[];
   photo: CardPhoto | null;
-  /** not in the site's copy of the index (scripts/app-model-cards.mjs) */
+  /** not in the site's card files (scripts/app-model-cards.mjs) */
   sources?: string[];
 }
 
@@ -176,14 +173,6 @@ export interface ModelCard {
   summary: string | null;
   generations: CardGeneration[];
   sources?: string[];
-}
-
-const CARDS = cardIndex as unknown as Record<string, Record<string, ModelCard>>;
-
-/** The model card with admins' text corrections applied (lib/catalog-edits); edits: false gives the data as built. */
-export function cardOf(makeSlug: string, lineSlug: string, { edits = true } = {}): ModelCard | undefined {
-  const card = CARDS[makeSlug]?.[lineSlug];
-  return card && (edits ? applyEdits(card, builtEditsOf(makeSlug, lineSlug)) : card);
 }
 
 // Commons serves thumbnails only in standard widths; others answer 400.
