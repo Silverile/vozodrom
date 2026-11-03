@@ -138,7 +138,10 @@ se do nich dostanou při sestavení:
 
 1. Editor (`src/components/catalog-editor/`) převádí každou změnu na operaci (`src/lib/catalog-ops.ts`: set, reset,
    insert, remove, move, drawing). Operace nesou, co čekaly na svém místě; „Uložit“ je pošle do
-   `/api/admin/katalog/`, server je přehraje na kartě s dosavadní historií a uloží jen ty, které sedí.
+   `/api/admin/katalog/`, server je přehraje na kartě s dosavadní historií a uloží jen ty, které sedí
+   (v transakci SERIALIZABLE: ze dvou současných uložení jedné řady jedno dostane 409; Hyperdrive nepodporuje
+   advisory locks). Operace uvnitř generace nesou její identitu (kód, název, první rok, u přidané generace
+   token), takže když data generace přeřadí, trefí se do své; zmizelá generace je konflikt.
 2. Nákres: obrázek ze souboru, Ctrl+V nebo přetažením převede v prohlížeči `src/lib/drawing-format.ts` do formátu
    webu (port `vozodrom-data/tools/front/site_drawings.py`, shodný s ním bajt po bajtu; Codexův test
    v `analysis/codex/drawing-format/`). WebP jde do R2 (`katalog/…`, služba `/foto/katalog/…`).

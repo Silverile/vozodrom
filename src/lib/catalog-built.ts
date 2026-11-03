@@ -10,7 +10,7 @@ export type BuiltDrawing = [index: number, from: number | null, to: number | nul
 interface BuiltLine {
   origins: (number | null)[];
   drawings: BuiltDrawing[];
-  generations: { code: string | null; from: number | null; to: number | null }[];
+  generations: { code: string | null; from: number | null; to: number | null; current?: boolean }[];
 }
 
 // through unknown: the JSON's inferred type depends on its content, which only the build knows

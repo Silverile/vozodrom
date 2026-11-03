@@ -78,12 +78,14 @@ export function modelLinesOf(makeSlug: string): ModelLine[] {
       if (!gens) return line;
       const froms = gens.map((g) => g.from).filter((y): y is number => y !== null);
       const tos = gens.map((g) => g.to).filter((y): y is number => y !== null);
+      // from the edited generations: current when one of them is; open-ended when one has no known end
+      const current = gens.some((g) => g.current);
       return {
         ...line,
-        generations: gens,
+        generations: gens.map(({ code, from, to }) => ({ code, from, to })),
         from: froms.length ? Math.min(...froms) : line.from,
-        // a generation without a known end leaves the line open-ended too
-        to: line.current ? line.to : gens.some((g) => g.from !== null && g.to === null) ? null : tos.length ? Math.max(...tos) : line.to,
+        current,
+        to: current || gens.some((g) => g.from !== null && g.to === null) ? null : tos.length ? Math.max(...tos) : line.to,
       };
     });
     edited.set(makeSlug, out);

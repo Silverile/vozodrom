@@ -17,8 +17,15 @@ const lineHeld = (make: string, line: string) => `${make}--${line}` in HELD;
 
 /** Drawings of this model line, or of this one generation, are being checked and not shown yet. */
 export function drawingPending(make: string, line: string, genIndex?: number): boolean {
-  // a line edited by admins had its drawings resolved, held ones left out, when it was built
-  if (builtLine(make, line)) return false;
+  // on a line edited by admins, a generation is held through the data files' index it came from,
+  // and an uploaded drawing replaces a held one
+  const built = builtLine(make, line);
+  if (built) {
+    if (genIndex === undefined) return lineHeld(make, line);
+    if (built.drawings.some(([i, , , src]) => i === genIndex && src.startsWith("/foto/"))) return false;
+    const origin = built.origins[genIndex];
+    return origin !== null && origin !== undefined && (lineHeld(make, line) || `${make}--${line}--${origin}` in HELD);
+  }
   return lineHeld(make, line) || (genIndex !== undefined && `${make}--${line}--${genIndex}` in HELD);
 }
 

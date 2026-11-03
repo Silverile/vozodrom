@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { type CatalogOp, type EditRow, type Path, type StoredOp, applyOps, getAt, identityOf, rowToOp, same } from "@/lib/catalog-ops";
+import { type CatalogOp, type EditRow, type GenIdentity, type Path, type StoredOp, applyOps, getAt, identityOf, rowToOp, same } from "@/lib/catalog-ops";
 import type { CardGeneration, ModelCard } from "@/lib/modelCards";
 import { DrawingField } from "./DrawingField";
 import { FIELDS, OPTIONAL_FIELDS, OPTIONAL_GENERATION_FIELDS, kindOf, labelOf, newGeneration } from "./fields";
@@ -220,6 +220,7 @@ function GenerationEditor({
   emit,
   makeSlug,
   lineSlug,
+  identity,
 }: {
   index: number;
   count: number;
@@ -231,12 +232,12 @@ function GenerationEditor({
   emit: Emit;
   makeSlug: string;
   lineSlug: string;
+  identity: GenIdentity | undefined;
 }) {
   const path: Path = ["generations", index];
   const missing = Object.keys(OPTIONAL_GENERATION_FIELDS).filter((k) => !(k in gen));
   const title = gen.name || gen.code || `${index + 1}. generace`;
   const years = [gen.from ?? "?", gen.current ? "dosud" : (gen.to ?? "?")].join("–");
-  const identity = identityOf(gen);
   return (
     <section id={`editor-g${index}`} className="rounded-[14px] bg-[var(--color-surface)] scroll-mt-4">
       <header className="flex flex-wrap items-center gap-2 p-3">
@@ -279,6 +280,13 @@ function GenerationEditor({
       )}
     </section>
   );
+}
+
+/** How operations refer to a generation of the shown card: its identity, and its token if an admin added it. */
+function genIdentity(view: { card: ModelCard; tokens: (string | null)[] }, index: number): GenIdentity | undefined {
+  const id = identityOf(view.card.generations[index]);
+  const token = view.tokens[index];
+  return id && token ? { ...id, token } : id;
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -350,10 +358,14 @@ export default function CatalogEditorPanel({
   const emit: Emit = useCallback(
     (raw) => {
       if (!base || !view) return;
-      const op: CatalogOp =
-        raw.op !== "drawing" && raw.path[0] === "generations" && typeof raw.path[1] === "number" && raw.path.length > 1
-          ? { ...raw, gen: identityOf(view.card.generations[raw.path[1]]) }
-          : raw;
+      let op: CatalogOp = raw;
+      if (op.op !== "drawing" && op.path[0] === "generations" && typeof op.path[1] === "number" && op.path.length > 1) {
+        const gen = genIdentity(view, op.path[1]);
+        if (gen) op = { ...op, gen };
+      }
+      // a new generation gets a token, by which later edits recognise it
+      if (op.op === "insert" && op.path.length === 2 && op.path[0] === "generations" && !op.token)
+        op = { ...op, token: Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => b.toString(36).padStart(2, "0")).join("").slice(0, 16) };
       const fresh = [...pending, op].map((o, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op: o, createdAt: "" }));
       const check = applyOps(base, [...saved, ...fresh]);
       const bad = check.conflicts.find((c) => c.id === `new-${pending.length}`);
@@ -511,6 +523,7 @@ export default function CatalogEditorPanel({
                     emit={emit}
                     makeSlug={makeSlug}
                     lineSlug={lineSlug}
+                    identity={genIdentity(view, i)}
                   />
                 );
               })}

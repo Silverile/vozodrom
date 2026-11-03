@@ -20,11 +20,16 @@ import type { CardGeneration, ModelCard } from "./modelCards";
 
 export type Path = (string | number)[];
 
-/** How a generation is recognised when an operation refers to it by index. */
+/**
+ * How a generation is recognised when an operation refers to it by index: code, name and first
+ * year, and for a generation an admin added, the token its insert gave it (new generations often
+ * start with the same empty name and years).
+ */
 export interface GenIdentity {
   code: string | null;
   name: string | null;
   from: number | null;
+  token?: string;
 }
 
 export type CatalogOp =
@@ -32,8 +37,8 @@ export type CatalogOp =
   | { op: "set"; path: Path; value: unknown; expect?: unknown; gen?: GenIdentity }
   /** back to the value in the data files (a field, an array item, a whole generation) */
   | { op: "reset"; path: Path; gen?: GenIdentity }
-  /** insert into an array (path ends with the new item's index); ["generations", i] adds a generation */
-  | { op: "insert"; path: Path; value: unknown; gen?: GenIdentity }
+  /** insert into an array (path ends with the new item's index); ["generations", i] adds a generation, with its token */
+  | { op: "insert"; path: Path; value: unknown; gen?: GenIdentity; token?: string }
   /** remove an array item or an object field; expect as for set */
   | { op: "remove"; path: Path; expect?: unknown; gen?: GenIdentity }
   /** move an array item within its array (path is the array) */
@@ -61,6 +66,8 @@ export interface Applied {
   origins: (number | null)[];
   /** per generation: undefined = the drawing from the data files, a path = uploaded, null = none */
   drawings: (string | null | undefined)[];
+  /** per generation: the token of a generation an admin added, else null */
+  tokens: (string | null)[];
   conflicts: Conflict[];
 }
 
@@ -118,12 +125,16 @@ export function validValue(value: unknown): boolean {
   }
 }
 
+const validToken = (v: unknown): v is string => typeof v === "string" && /^[a-z0-9]{6,32}$/.test(v);
+
 function parseIdentity(raw: unknown): GenIdentity | undefined | null {
   if (raw === undefined) return undefined;
   if (!isObject(raw)) return null;
   const text = (v: unknown) => v === null || (typeof v === "string" && v.length <= 200);
   if (!text(raw.code) || !text(raw.name) || !(raw.from === null || Number.isInteger(raw.from))) return null;
-  return { code: raw.code as string | null, name: raw.name as string | null, from: raw.from as number | null };
+  if (raw.token !== undefined && !validToken(raw.token)) return null;
+  const id: GenIdentity = { code: raw.code as string | null, name: raw.name as string | null, from: raw.from as number | null };
+  return raw.token === undefined ? id : { ...id, token: raw.token as string };
 }
 
 /** Checks the shape of one operation from a request; returns it, or a reason it is refused. */
@@ -143,7 +154,9 @@ export function parseOp(raw: unknown): CatalogOp | string {
     case "insert":
       if (!validPath(raw.path) || typeof raw.path[raw.path.length - 1] !== "number") return "Neplatná cesta.";
       if (raw.value === undefined) return "Chybí hodnota.";
-      return validValue(raw.value) ? withGen({ op: "insert", path: raw.path, value: raw.value }) : bad;
+      if (raw.token !== undefined && !validToken(raw.token)) return "Neplatná generace.";
+      if (!validValue(raw.value)) return bad;
+      return withGen(raw.token === undefined ? { op: "insert", path: raw.path, value: raw.value } : { op: "insert", path: raw.path, value: raw.value, token: raw.token });
     case "remove":
       return validPath(raw.path) && validValue(raw.expect ?? null) ? withGen({ op: "remove", path: raw.path, expect: raw.expect }) : "Neplatná cesta.";
     case "move": {
@@ -164,8 +177,12 @@ export function parseOp(raw: unknown): CatalogOp | string {
 
 const GENERATIONS = JSON.stringify(["generations"]);
 const isGenerationsPath = (path: Path) => path.length === 1 && path[0] === "generations";
-/** A generation as an admin may insert it: an object with the lists every generation has. */
-const generationLike = (v: unknown) => isObject(v) && ["facelifts", "bodyTypes", "engines", "drivetrains", "transmissions", "markets", "trims"].every((k) => Array.isArray(v[k]));
+/** Lists every generation has; the site reads them without checking. */
+const REQUIRED_LISTS = ["facelifts", "bodyTypes", "engines", "drivetrains", "transmissions", "markets", "trims"];
+/** A generation as an admin may insert it: an object with those lists. */
+const generationLike = (v: unknown) => isObject(v) && REQUIRED_LISTS.every((k) => Array.isArray(v[k]));
+/** A generation's required list (["generations", i, "engines"]), which may be edited but not removed. */
+const requiredList = (path: Path) => path.length === 3 && path[0] === "generations" && typeof path[2] === "string" && REQUIRED_LISTS.includes(path[2]);
 
 /**
  * Replays operations on a card as built from the data files. The input card is not changed.
@@ -174,6 +191,7 @@ const generationLike = (v: unknown) => isObject(v) && ["facelifts", "bodyTypes",
 export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
   const card = clone(base);
   const drawings: (string | null | undefined)[] = card.generations.map(() => undefined);
+  const tokens: (string | null)[] = card.generations.map(() => null);
   const conflicts: Conflict[] = [];
   // for every array touched by insert, remove or move: where each of its items came from, keyed
   // by the array's path in the data files
@@ -207,12 +225,27 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
     return list;
   }
 
+  /** Origin lists of arrays at or below a place in the data files are stale once it is replaced. */
+  function forgetBelow(basePath: Path | null) {
+    if (!basePath) return;
+    for (const key of [...itemOrigins.keys()]) {
+      const p = JSON.parse(key) as Path;
+      if (key !== GENERATIONS && p.length >= basePath.length && basePath.every((seg, i) => p[i] === seg)) itemOrigins.delete(key);
+    }
+  }
+
   /** Finds the generation an operation was made for, also when the data files reordered them. */
   function locate(index: number, identity: GenIdentity | undefined): number {
     if (!identity) return index;
-    const fits = (g: CardGeneration | undefined) => !!g && same(identityOf(g), identity);
-    if (fits(card.generations[index])) return index;
-    const found = card.generations.map((g, i) => (fits(g) ? i : -1)).filter((i) => i >= 0);
+    const { token, ...rest } = identity;
+    const fits = (i: number) => {
+      const g = card.generations[i];
+      if (!g) return false;
+      // an added generation is known by its token; its name and years may match another one
+      return token ? tokens[i] === token : same(identityOf(g), rest);
+    };
+    if (fits(index)) return index;
+    const found = card.generations.map((_, i) => (fits(i) ? i : -1)).filter((i) => i >= 0);
     return found.length === 1 ? found[0] : -1;
   }
 
@@ -251,7 +284,10 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
       const [item] = list.splice(op.from, 1);
       list.splice(op.to, 0, item);
       if (origins) origins.splice(op.to, 0, ...origins.splice(op.from, 1));
-      if (isGenerationsPath(op.path)) drawings.splice(op.to, 0, ...drawings.splice(op.from, 1));
+      if (isGenerationsPath(op.path)) {
+        drawings.splice(op.to, 0, ...drawings.splice(op.from, 1));
+        tokens.splice(op.to, 0, ...tokens.splice(op.from, 1));
+      }
       continue;
     }
 
@@ -270,13 +306,16 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
       const origins = originsOf(arrayPath, list.length);
       list.splice(at, 0, clone(op.value));
       origins?.splice(at, 0, null);
-      if (isGenerationsPath(arrayPath)) drawings.splice(at, 0, undefined);
+      if (isGenerationsPath(arrayPath)) {
+        drawings.splice(at, 0, undefined);
+        tokens.splice(at, 0, op.token ?? null);
+      }
       continue;
     }
 
     if (op.op === "remove") {
-      if (isGenerationsPath(op.path)) {
-        fail("seznam generací nelze odstranit");
+      if (isGenerationsPath(op.path) || requiredList(op.path)) {
+        fail("tento seznam nelze odstranit, jen vyprázdnit");
         continue;
       }
       const parentPath = op.path.slice(0, -1);
@@ -293,9 +332,13 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
       }
       if (Array.isArray(parent)) {
         const origins = originsOf(parentPath, parent.length);
+        forgetBelow(toBase(op.path));
         parent.splice(key as number, 1);
         origins?.splice(key as number, 1);
-        if (isGenerationsPath(parentPath)) drawings.splice(key as number, 1);
+        if (isGenerationsPath(parentPath)) {
+          drawings.splice(key as number, 1);
+          tokens.splice(key as number, 1);
+        }
       } else delete (parent as Record<string, unknown>)[key as string];
       continue;
     }
@@ -338,8 +381,17 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
         fail("hodnota se mezitím změnila");
         continue;
       }
+      if (requiredList(op.path) && !Array.isArray(op.value)) {
+        fail("tento seznam musí zůstat seznamem");
+        continue;
+      }
       value = clone(op.value);
     }
+    // what was below the replaced value no longer comes from where it did: a reset brings back the
+    // data's own items (no list needed), a set brings new ones
+    const replacedBase = toBase(op.path);
+    forgetBelow(replacedBase);
+    if (op.op === "set" && Array.isArray(value) && replacedBase) itemOrigins.set(JSON.stringify(replacedBase), value.map(() => null));
     if (Array.isArray(parent)) {
       const at = key as number;
       if (at > parent.length || (at === parent.length && op.op === "reset")) {
@@ -353,12 +405,12 @@ export function applyOps(base: ModelCard, ops: StoredOp[]): Applied {
     else parent[key as string] = value;
   }
 
-  return { card, origins: [...itemOrigins.get(GENERATIONS)!], drawings, conflicts };
+  return { card, origins: [...itemOrigins.get(GENERATIONS)!], drawings, tokens, conflicts };
 }
 
-/** The years and codes of a card's generations, as the model lines index keeps them. */
-export function generationSummary(card: ModelCard): { code: string | null; from: number | null; to: number | null }[] {
-  return card.generations.map((g) => ({ code: g.code ?? g.name ?? null, from: g.from ?? null, to: g.current ? null : (g.to ?? null) }));
+/** The years and codes of a card's generations, as the model lines index keeps them, and which are current. */
+export function generationSummary(card: ModelCard): { code: string | null; from: number | null; to: number | null; current: boolean }[] {
+  return card.generations.map((g) => ({ code: g.code ?? g.name ?? null, from: g.from ?? null, to: g.current ? null : (g.to ?? null), current: !!g.current }));
 }
 
 /**

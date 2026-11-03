@@ -8,21 +8,36 @@ import { modelLinesOf } from "@/lib/makes";
 // never reused and served by /foto/katalog/…; the editor then saves a "drawing" operation with it.
 const MAX_BYTES = 2 * 1024 * 1024;
 
-/** Width and height from a WebP's headers (lossy, lossless or extended), or null when it is not one. */
+/**
+ * Width and height of a complete WebP (lossy, lossless or extended), or null when it is not one: the
+ * RIFF size must match, every chunk must fit, and an image chunk (VP8 or VP8L) with data must be
+ * there, not only a header.
+ */
 function webpSize(bytes: Uint8Array): { width: number; height: number } | null {
   const ascii = (from: number, to: number) => String.fromCharCode(...bytes.slice(from, to));
-  if (bytes.length < 30 || ascii(0, 4) !== "RIFF" || ascii(8, 12) !== "WEBP") return null;
-  const riff = bytes[4] | (bytes[5] << 8) | (bytes[6] << 16) | (bytes[7] << 24);
-  if (riff + 8 !== bytes.length) return null;
-  const chunk = ascii(12, 16);
-  if (chunk === "VP8X") return { width: 1 + (bytes[24] | (bytes[25] << 8) | (bytes[26] << 16)), height: 1 + (bytes[27] | (bytes[28] << 8) | (bytes[29] << 16)) };
-  if (chunk === "VP8L" && bytes[20] === 0x2f) {
-    const bits = bytes[21] | (bytes[22] << 8) | (bytes[23] << 16) | (bytes[24] << 24);
-    return { width: (bits & 0x3fff) + 1, height: ((bits >>> 14) & 0x3fff) + 1 };
+  const u32 = (at: number) => (bytes[at] | (bytes[at + 1] << 8) | (bytes[at + 2] << 16) | (bytes[at + 3] << 24)) >>> 0;
+  if (bytes.length < 20 || ascii(0, 4) !== "RIFF" || ascii(8, 12) !== "WEBP" || u32(4) + 8 !== bytes.length) return null;
+  let canvas: { width: number; height: number } | null = null;
+  let image: { width: number; height: number } | null = null;
+  for (let at = 12; at < bytes.length; ) {
+    if (at + 8 > bytes.length) return null;
+    const type = ascii(at, at + 4);
+    const size = u32(at + 4);
+    const data = at + 8;
+    if (data + size > bytes.length) return null;
+    if (type === "VP8X" && size >= 10)
+      canvas = { width: 1 + (bytes[data + 4] | (bytes[data + 5] << 8) | (bytes[data + 6] << 16)), height: 1 + (bytes[data + 7] | (bytes[data + 8] << 8) | (bytes[data + 9] << 16)) };
+    if (type === "VP8L" && size > 5 && bytes[data] === 0x2f) {
+      const bits = u32(data + 1);
+      image = { width: (bits & 0x3fff) + 1, height: ((bits >>> 14) & 0x3fff) + 1 };
+    }
+    if (type === "VP8 " && size > 10 && bytes[data + 3] === 0x9d && bytes[data + 4] === 0x01 && bytes[data + 5] === 0x2a)
+      image = { width: (bytes[data + 6] | (bytes[data + 7] << 8)) & 0x3fff, height: (bytes[data + 8] | (bytes[data + 9] << 8)) & 0x3fff };
+    at = data + size + (size & 1); // chunks are padded to an even length
   }
-  if (chunk === "VP8 " && bytes[23] === 0x9d && bytes[24] === 0x01 && bytes[25] === 0x2a)
-    return { width: (bytes[26] | (bytes[27] << 8)) & 0x3fff, height: (bytes[28] | (bytes[29] << 8)) & 0x3fff };
-  return null;
+  if (!image) return null;
+  if (canvas && (canvas.width !== image.width || canvas.height !== image.height)) return null;
+  return image;
 }
 
 export async function POST(request: Request) {

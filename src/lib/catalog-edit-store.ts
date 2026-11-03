@@ -2,7 +2,7 @@ import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateRandomString } from "better-auth/crypto";
-import { and, asc, eq, sql } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import { type Db, getDb } from "@/db";
 import { catalogEdit } from "@/db/schema";
 import { type Session, hasRole } from "./auth";
@@ -68,9 +68,10 @@ export async function editorState(session: Session | null, makeSlug: string, lin
 /**
  * Saves operations made in the editor. They are replayed on the card with the line's earlier edits
  * first: a save whose operations do not fit (someone else changed the same thing meanwhile) is
- * refused as a whole, so the history only ever holds operations that applied cleanly. Saves of one
- * line run one at a time (a transaction-scoped Postgres lock), so two editors cannot both pass the
- * check against the same history.
+ * refused as a whole, so the history only ever holds operations that applied cleanly. The check and
+ * the insert run in one SERIALIZABLE transaction: when two editors save the same line at once,
+ * Postgres aborts one of them (40001) and that one is told to reload. (Hyperdrive does not support
+ * advisory locks; a transaction holds one connection, so the isolation level works through it.)
  */
 export async function saveOps(session: Session | null, makeSlug: string, lineSlug: string, input: unknown) {
   requireAdmin(session);
@@ -86,31 +87,39 @@ export async function saveOps(session: Session | null, makeSlug: string, lineSlu
   const base = await loadCard(makeSlug, lineSlug, { base: true });
   if (!base) throw new ListingError(404, "Model nemá kartu v katalogu.");
 
-  await getDb().transaction(async (tx) => {
-    await tx.execute(sql`select pg_advisory_xact_lock(hashtext(${`catalog_edit/${makeSlug}/${lineSlug}`}))`);
-    const rows = await editsOf(makeSlug, lineSlug, tx);
-    const earlier = rows.map((r, n) => rowToOp(r, n)).filter((o) => o !== null);
-    const fresh = ops.map((op, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op, createdAt: "" }));
-    const failed = applyOps(base, [...earlier, ...fresh]).conflicts.filter((c) => c.id.startsWith("new-"));
-    if (failed.length) throw new ListingError(409, `Úpravu nelze uložit: ${failed[0].reason}. Načtěte editor znovu.`);
+  try {
+    await getDb().transaction(
+      async (tx) => {
+        const rows = await editsOf(makeSlug, lineSlug, tx);
+        const earlier = rows.map((r, n) => rowToOp(r, n)).filter((o) => o !== null);
+        const fresh = ops.map((op, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op, createdAt: "" }));
+        const failed = applyOps(base, [...earlier, ...fresh]).conflicts.filter((c) => c.id.startsWith("new-"));
+        if (failed.length) throw new ListingError(409, `Úpravu nelze uložit: ${failed[0].reason}. Načtěte editor znovu.`);
 
-    // one time for the whole save, after every earlier row; the id keeps the save's own order
-    const last = rows.length ? Date.parse(rows[rows.length - 1].createdAt) : 0;
-    const createdAt = new Date(Math.max(Date.now(), last + 1));
-    const batch = generateRandomString(8, "a-z", "0-9");
-    await tx.insert(catalogEdit).values(
-      ops.map((op, n) => ({
-        id: `o-${batch}-${n.toString(36).padStart(3, "0")}`,
-        makeSlug,
-        lineSlug,
-        genIndex: null,
-        field: "op",
-        value: JSON.stringify(op),
-        authorId: session!.user.id,
-        createdAt,
-      })),
+        // one time for the whole save, after every earlier row; the id keeps the save's own order
+        const last = rows.length ? Date.parse(rows[rows.length - 1].createdAt) : 0;
+        const createdAt = new Date(Math.max(Date.now(), last + 1));
+        const batch = generateRandomString(8, "a-z", "0-9");
+        await tx.insert(catalogEdit).values(
+          ops.map((op, n) => ({
+            id: `o-${batch}-${n.toString(36).padStart(3, "0")}`,
+            makeSlug,
+            lineSlug,
+            genIndex: null,
+            field: "op",
+            value: JSON.stringify(op),
+            authorId: session!.user.id,
+            createdAt,
+          })),
+        );
+      },
+      { isolationLevel: "serializable" },
     );
-  });
+  } catch (error) {
+    if ((error as { code?: string }).code === "40001" || (error as { cause?: { code?: string } }).cause?.code === "40001")
+      throw new ListingError(409, "Tuto řadu právě ukládá někdo jiný. Načtěte editor znovu a změny zopakujte.");
+    throw error;
+  }
   return editsOf(makeSlug, lineSlug);
 }
 
