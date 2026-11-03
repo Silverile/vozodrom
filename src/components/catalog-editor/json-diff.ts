@@ -1,5 +1,5 @@
 import { type CatalogOp, type Path, same } from "@/lib/catalog-ops";
-import type { CardGeneration, ModelCard } from "@/lib/modelCards";
+import { BODY_NAMES, CARD_FUEL, DRIVE, GEARBOX, type CardGeneration, type ModelCard } from "@/lib/modelCards";
 
 // "Vložit JSON" in the catalogue editor: an admin copies the card as JSON, has it corrected (by an AI,
 // say) and pastes it back. This turns the difference into the editor's operations: generations are
@@ -11,6 +11,11 @@ import type { CardGeneration, ModelCard } from "@/lib/modelCards";
 /** What a pasted card must look like; the reason it is refused, or the card. */
 export function parseCard(text: string): ModelCard | string {
   let data: unknown;
+  // an AI answer may wrap the card in a code block and say something around it: take the block,
+  // or else the outer { … }
+  const block = /```(?:json)?[ \t]*\r?\n([\s\S]*?)```/.exec(text);
+  if (block) text = block[1];
+  else if (text.indexOf("{") > 0 || text.lastIndexOf("}") < text.trimEnd().length - 1) text = text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1);
   try {
     data = JSON.parse(text);
   } catch (e) {
@@ -102,4 +107,37 @@ export function diffCard(current: ModelCard, next: ModelCard): CatalogOp[] {
   }
   for (const k of Object.keys(restA)) if (!(k in restB)) ops.push({ op: "remove", path: [k], expect: (restA as Record<string, unknown>)[k] });
   return ops;
+}
+
+const keys = (m: Record<string, string>) => Object.keys(m).join(", ");
+
+/**
+ * "Kopírovat pro AI": the card with instructions, to paste into a chat as it is. The AI checks and
+ * corrects the data and answers with the whole card as JSON, which goes back through "Vložit JSON".
+ */
+export function aiPrompt(card: ModelCard, title: string): string {
+  return `Jsi redaktor katalogu aut na webu Vozodrom (Česko). Níže je karta modelu ${title} jako JSON.
+
+ÚKOL: Zkontroluj údaje a oprav chyby. Doplň, co chybí, ale jen to, čím si jsi jistý; co nevíš, nech null. Nic si nevymýšlej. Pokud ti pod touto zprávou napíšu konkrétní úkol, udělej hlavně ten.
+
+PRAVIDLA
+- Vrať CELOU kartu jako jeden platný JSON v jednom bloku kódu. Žádné komentáře uvnitř JSON, nic nezkracuj („…“), nevynechávej generace ani pole.
+- Zachovej strukturu: stejné klíče a typy. Čísla jsou čísla (ne text), neznámá hodnota je null, prázdný seznam je [].
+- Jednotky: rozměry v mm (dimensionsMm), kufr v litrech (trunkL), výkon v kW (powerKw…), roky jako celá čísla.
+- from/to generace = roky sériové výroby (ne předsériová výroba ani ohlášení). Vyráběná generace má to: null a current: true.
+- "code" generace neměň, pokud není zjevně špatně: podle něj se generace pozná (i s nákresem). Nová generace = nový objekt v seznamu "generations" na správném místě podle let.
+- Texty (summary, noteCs, názvy) piš česky.
+- Pole "photo", "drawingVariant" a odkazy v "sources" neměň; zdroje můžeš jen přidat.
+- Povolené hodnoty:
+  bodyTypes / bodyType: ${keys(BODY_NAMES)}
+  drivetrains / drive: ${keys(DRIVE)}
+  transmissions.type: ${keys(GEARBOX)}
+  fuel: ${keys(CARD_FUEL)}
+- Pod JSON krátce vypiš, co jsi změnil a proč.
+
+KARTA
+\`\`\`json
+${JSON.stringify(card, null, 2)}
+\`\`\`
+`;
 }

@@ -9,7 +9,7 @@ const bundle = (file) => {
   const code = buildSync({ entryPoints: [fileURLToPath(new URL(file, import.meta.url))], bundle: true, format: "esm", write: false, platform: "node", alias: { "@": fileURLToPath(new URL("../src", import.meta.url)) } }).outputFiles[0].text;
   return import(`data:text/javascript;base64,${Buffer.from(code).toString("base64")}`);
 };
-const { diffCard, parseCard } = await bundle("../src/components/catalog-editor/json-diff.ts");
+const { aiPrompt, diffCard, parseCard } = await bundle("../src/components/catalog-editor/json-diff.ts");
 const { applyOps } = await import("../src/lib/catalog-ops.ts");
 
 const gen = (code, from, extra = {}) => ({ code, name: `Model ${code}`, from, to: from + 6, current: false, facelifts: [], bodyTypes: ["sedan"], engines: [{ variant: "1.0", powerKwMin: 40 }], drivetrains: ["fwd"], transmissions: [], dimensionsMm: { length: 4000, width: 1700, height: 1450, wheelbase: 2500 }, trunkL: 300, markets: [], trims: [], photo: null, ...extra });
@@ -72,4 +72,13 @@ test("pasted text is checked", () => {
   assert.equal(typeof parseCard('{"name":"x"}'), "string");
   assert.equal(typeof parseCard('{"generations":[{"code":"I"}]}'), "string");
   assert.equal(typeof parseCard(JSON.stringify(card())), "object");
+});
+
+test("an AI answer: the card in a code block, with words around it", () => {
+  const answer = "Tady je opravená karta:\n\n```json\n" + JSON.stringify(card(), null, 2) + "\n```\n\nZměny: kufr {I} opraven.";
+  assert.deepEqual(parseCard(answer), card());
+  assert.deepEqual(parseCard("Opraveno: " + JSON.stringify(card()) + " Hotovo."), card());
+  // the instructions themselves hold the card the same way
+  assert.deepEqual(parseCard(aiPrompt(card(), "Škoda Fabia")), card());
+  assert.match(aiPrompt(card(), "Škoda Fabia"), /bodyTypes \/ bodyType: hatchback/);
 });

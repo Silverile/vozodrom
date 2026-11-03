@@ -5,7 +5,7 @@ import { type CatalogOp, type EditRow, type GenIdentity, type Path, type StoredO
 import type { CardGeneration, ModelCard } from "@/lib/modelCards";
 import { DrawingField } from "./DrawingField";
 import { FIELDS, OPTIONAL_FIELDS, OPTIONAL_GENERATION_FIELDS, kindOf, labelOf, newGeneration } from "./fields";
-import { diffCard, parseCard } from "./json-diff";
+import { aiPrompt, diffCard, parseCard } from "./json-diff";
 
 // The catalogue editor, opened from a model page by an admin. It loads the card as the data files
 // have it and the line's saved edits (/api/admin/katalog), shows the card with them, and turns every
@@ -407,11 +407,16 @@ export default function CatalogEditorPanel({
     setNotice("");
   }
 
-  async function copyJson() {
+  /** The card as JSON, or with instructions for an AI chat ("pro AI"). */
+  async function copyJson(forAi: boolean) {
     if (!view) return;
     try {
-      await navigator.clipboard.writeText(JSON.stringify(view.card, null, 2));
-      setNotice("Karta modelu je ve schránce jako JSON. Opravenou ji vložte tlačítkem „Vložit JSON“.");
+      await navigator.clipboard.writeText(forAi ? aiPrompt(view.card, title) : JSON.stringify(view.card, null, 2));
+      setNotice(
+        forAi
+          ? "Ve schránce je karta s pokyny pro AI: vložte ji do chatu, případně připište svůj úkol. Odpověď vložte tlačítkem „Vložit JSON“, celou i s textem okolo."
+          : "Karta modelu je ve schránce jako JSON. Opravenou ji vložte tlačítkem „Vložit JSON“.",
+      );
     } catch {
       setError("Do schránky se kopírovat nepodařilo; prohlížeč to nepovolil.");
     }
@@ -427,7 +432,8 @@ export default function CatalogEditorPanel({
       setJsonOpen(false);
       setJsonText("");
       setJsonError("");
-      setNotice(`Z JSON vzniklo ${ops.length} změn. Zkontrolujte je, „↶ Zpět“ je vrátí všechny najednou; uloží se tlačítkem „Uložit“.`);
+      const n = ops.length;
+      setNotice(`Z JSON ${n === 1 ? "vznikla 1 změna" : n < 5 ? `vznikly ${n} změny` : `vzniklo ${n} změn`}. Zkontrolujte je, „↶ Zpět“ je vrátí všechny najednou; uloží se tlačítkem „Uložit“.`);
     }
   }
 
@@ -511,7 +517,8 @@ export default function CatalogEditorPanel({
             Uložit{pending.length ? ` (${pending.length})` : ""}
           </button>
           <button type="button" className="pill text-sm" disabled={busy || !pending.length} onClick={undo} title="Vrátit poslední neuloženou změnu">↶ Zpět</button>
-          <button type="button" className="pill text-sm" disabled={!view} onClick={copyJson} title="Zkopírovat celou kartu modelu jako JSON">Kopírovat JSON</button>
+          <button type="button" className="pill text-sm" disabled={!view} onClick={() => copyJson(false)} title="Zkopírovat celou kartu modelu jako JSON">Kopírovat JSON</button>
+          <button type="button" className="pill text-sm" disabled={!view} onClick={() => copyJson(true)} title="Zkopírovat kartu s pokyny, jak ji má AI zkontrolovat a vrátit">Kopírovat pro AI</button>
           <button type="button" className="pill text-sm" disabled={!view} onClick={() => setJsonOpen(true)} title="Vložit opravenou kartu modelu jako JSON">Vložit JSON</button>
           <button type="button" className="pill text-sm" disabled={busy} onClick={publish}>Publikovat na web</button>
           <button type="button" className="pill text-sm" onClick={close} aria-label="Zavřít">✕</button>
@@ -539,7 +546,7 @@ export default function CatalogEditorPanel({
           <div className="space-y-2 border-b border-[var(--color-line)] p-3">
             <label htmlFor="json-paste" className="block text-sm font-semibold">Vložte opravenou kartu modelu (JSON)</label>
             <p className="text-xs text-[var(--color-muted)]">
-              Celá karta jako z „Kopírovat JSON“. Editor ji porovná s tou současnou a rozdíly přidá jako neuložené změny: upravená pole,
+              Celá karta jako z „Kopírovat JSON“, nebo celá odpověď AI (JSON se z ní vybere sám). Editor ji porovná s tou současnou a rozdíly přidá jako neuložené změny: upravená pole,
               přidané, smazané a přesunuté generace. Nákresy v JSON nejsou a zůstanou u svých generací.
             </p>
             <textarea id="json-paste" className="input min-h-48 font-mono text-xs" value={jsonText} onChange={(e) => setJsonText(e.target.value)} spellCheck={false} />
