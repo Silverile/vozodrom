@@ -88,7 +88,7 @@ export default function SignIn() {
     <Screen>
       <SafeAreaView edges={["top", "bottom"]} style={{ flex: 1 }}>
         <TopBar title={mode === "signin" ? "Přihlášení" : "Registrace"} closeIcon />
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
           <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: 16, paddingBottom: 32 }}>
             <View style={{ flexDirection: "row", gap: 8, marginBottom: 18 }}>
               <Chip label="Mám účet" on={mode === "signin"} onPress={() => { setMode("signin"); setError(null); }} />

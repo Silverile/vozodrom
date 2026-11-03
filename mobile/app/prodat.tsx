@@ -118,7 +118,7 @@ export default function Sell() {
           {STEPS.map((s, i) => <View key={s} style={{ flex: 1, height: 4, borderRadius: 2, backgroundColor: i <= step ? c.brand : c.line }} />)}
         </View>
         <T w="bold" s="title" style={{ paddingHorizontal: 16, paddingBottom: 6 }}>{STEPS[step]}</T>
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
           <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: 16 }}>
             {step === 0 && (
               <>

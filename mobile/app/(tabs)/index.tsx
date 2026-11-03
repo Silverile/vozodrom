@@ -48,7 +48,7 @@ export default function Home() {
               </Card>
             ))}
           </ScrollView>
-          {!fresh.data && <StateView loading={fresh.loading} error={fresh.error} onRetry={fresh.reload} />}
+          {!fresh.data ? <StateView loading={fresh.loading} error={fresh.error} onRetry={fresh.reload} /> : fresh.data.items.length === 0 ? <StateView empty="Zatím tu nejsou žádné inzeráty. Přidejte první přes „+“." /> : null}
           <SectionHeader title="Příběhy majitelů" action="Vše" onAction={() => router.push("/pribehy")} />
           {stories.data ? stories.data.map((s) => (
             <Row key={s.id} c={c} onPress={() => router.push("/pribehy")}>

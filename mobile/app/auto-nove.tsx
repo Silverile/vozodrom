@@ -63,7 +63,7 @@ export default function NewCar() {
     <Screen>
       <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
         <TopBar title="Auto do garáže" closeIcon />
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
           <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: 16 }}>
             <PickerField label="Značka" placeholder="Vyberte značku" value={brand} loading={makes.loading} error={makes.error}
               options={(makes.data?.items ?? []).map((m) => ({ value: m.slug, label: m.name }))}

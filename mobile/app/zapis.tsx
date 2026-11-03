@@ -56,7 +56,7 @@ export default function NewEntry() {
     <Screen>
       <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
         <TopBar title="Nový zápis" closeIcon />
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
           <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: 16 }}>
             {cars.data ? (
               cars.data.items.length ? (

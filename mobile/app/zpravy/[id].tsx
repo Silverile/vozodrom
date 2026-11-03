@@ -52,7 +52,7 @@ export default function Thread() {
     <Screen>
       <SafeAreaView edges={["top", "bottom"]} style={{ flex: 1 }}>
         <TopBar title={title ?? "Zprávy"} />
-        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
+        <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
           {messages ? (
             <FlatList
               ref={list}
