@@ -75,3 +75,16 @@ test("text cannot inject markup", () => {
 test("plainText drops the marks", () => {
   assert.equal(plainText("## Nákup\n**Tučně** a [odkaz](https://a.cz)\n- a\n- b"), "Nákup Tučně a odkaz a, b");
 });
+
+test("pictures: only photos stored on the site, as figures with captions", () => {
+  const out = html("Úvod\n\n![Motor po opravě](/foto/novinky/abc123.webp)\n\nZávěr");
+  assert.match(out, /<figure[^>]*><img src="\/foto\/novinky\/abc123.webp" alt="Motor po opravě"[^>]*\/><figcaption[^>]*>Motor po opravě<\/figcaption><\/figure>/);
+  for (const src of ["https://evil.example/x.png", "javascript:alert(1)", "/foto/novinky/../../x.webp", "/foto/inzeraty/u-1/a.webp"]) {
+    assert.doesNotMatch(html(`![x](${src})`), /<img/, src);
+  }
+});
+
+test("underscore italics", () => {
+  assert.match(html("To je _kurzíva_ a **_obojí_**."), /<em>kurzíva<\/em>.*<strong><em>obojí<\/em><\/strong>/);
+  assert.doesNotMatch(html("soubor_nazev_test.txt"), /<em>/);
+});

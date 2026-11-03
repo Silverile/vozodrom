@@ -19,9 +19,31 @@ import "./globals.css";
 // Inter, self-hosted by next/font (no request to Google from the browser); latin-ext for Czech.
 const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter", display: "swap" });
 
+const DESCRIPTION = "Každé auto má svůj příběh. Majitelé píšou o opravách, cestách a nákladech svých aut; k tomu katalog modelů a inzeráty.";
+
 export const metadata: Metadata = {
-  title: { default: "Vozodrom — auta, inzeráty a katalog", template: "%s · Vozodrom" },
-  description: "Každé auto má svůj příběh. Majitelé píšou o opravách, cestách a nákladech svých aut; k tomu katalog modelů a inzeráty.",
+  metadataBase: new URL("https://vozodrom.cz"),
+  title: { default: "Vozodrom — příběhy aut, katalog modelů a inzeráty", template: "%s · Vozodrom" },
+  description: DESCRIPTION,
+  applicationName: "Vozodrom",
+  openGraph: { siteName: "Vozodrom", locale: "cs_CZ", type: "website", description: DESCRIPTION },
+};
+
+// Who the site is, for search engines: its name (so results say "Vozodrom", not the bare domain),
+// logo and profiles (schema.org WebSite and Organization).
+const SITE_DATA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": "https://vozodrom.cz/#website", url: "https://vozodrom.cz/", name: "Vozodrom", alternateName: "vozodrom.cz", inLanguage: "cs", description: DESCRIPTION },
+    {
+      "@type": "Organization",
+      "@id": "https://vozodrom.cz/#organization",
+      name: "Vozodrom",
+      url: "https://vozodrom.cz/",
+      logo: "https://vozodrom.cz/icon1.png",
+      sameAs: SOCIAL.map((s) => s.href),
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -30,6 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="cs" className={inter.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
+        {/* static JSON from constants above, not from user input */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_DATA) }} />
       </head>
       <body className="min-h-screen flex flex-col">
         <header className="print:hidden sticky top-0 z-20 bg-[var(--color-surface)]">

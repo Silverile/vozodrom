@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { type Article, readingMinutes } from "@/lib/articles";
 import { formatDate } from "@/lib/format";
+import { firstImage } from "@/lib/markup";
 import { CategoryIcon } from "./CategoryIcon";
 
 /**
@@ -15,11 +16,16 @@ export function ArticleCard({ article, variant = "row" }: { article: Article; va
       {formatDate(article.date)} · {readingMinutes(article)} min čtení
     </p>
   );
-  const cover = (size: string) => (
-    <div className={`grid place-items-center bg-[var(--color-brand-soft)] ${size}`}>
-      <CategoryIcon slug={article.icon} className="w-[60%] text-[var(--color-ink)]" />
-    </div>
-  );
+  // the article's first photo, else its pictogram
+  const photo = firstImage(article.body);
+  const cover = (size: string) =>
+    photo ? (
+      <img src={photo.src} alt="" loading="lazy" className={`h-full w-full object-cover bg-[var(--color-photo)] ${size}`} />
+    ) : (
+      <div className={`grid place-items-center bg-[var(--color-brand-soft)] ${size}`}>
+        <CategoryIcon slug={article.icon} className="w-[60%] text-[var(--color-ink)]" />
+      </div>
+    );
 
   if (variant === "feature") {
     return (

@@ -70,6 +70,7 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 | `catalog-edit-store.ts` | úpravy katalogu od administrátorů (operace) a spuštění nasazení |
 | `article-store.ts` | články: vestavěné + uložené redakcí, ukládání a mazání (moderátor, admin) |
 | `markup.tsx` | formátovaný text (malá podmnožina Markdownu) pro zápisy, příběhy aut a články; výstup jen React prvky |
+| `markup-dom.ts` | převod mezi HTML vizuálního editoru (`components/RichTextEditor`) a uloženým textem |
 | `catalog-ops.ts` | operace nad kartou modelu a jejich přehrání (sdílí ho editor, server i build) |
 | `catalog-built.ts` | po úpravách generací: odkud která generace pochází (nákresy, statistiky STK) |
 | `drawing-format.ts` | převod nákresu do formátu webu v prohlížeči (port `site_drawings.py`) |

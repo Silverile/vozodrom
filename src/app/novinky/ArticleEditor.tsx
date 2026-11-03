@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RichTextEditor } from "@/components/RichTextEditor";
+import { resizePhoto } from "@/lib/photo-resize";
 import { ARTICLE_CATEGORIES, ARTICLE_ICONS, type Article } from "@/lib/articles";
 
 // The article editor for staff (moderators and admins): a new article on /novinky/novy/, or the
@@ -24,6 +25,14 @@ export function ArticleEditor({ article, onCancel }: { article?: Article; onCanc
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const set = (patch: Partial<typeof draft>) => setDraft((d) => ({ ...d, ...patch }));
+
+  /** Shrinks a photo in the browser and stores it for the article; its address goes into the text. */
+  async function uploadPhoto(file: File): Promise<{ src: string } | { error: string }> {
+    const photo = await resizePhoto(file);
+    const r = await fetch(`/api/novinky/foto/?w=${photo.width}&h=${photo.height}`, { method: "POST", headers: { "content-type": photo.blob.type }, body: photo.blob });
+    const data = (await r.json().catch(() => ({}))) as { src?: string; error?: string };
+    return r.ok && data.src ? { src: data.src } : { error: data.error ?? "Fotku se nepodařilo nahrát." };
+  }
 
   async function save(e: React.FormEvent) {
     e.preventDefault();
@@ -79,7 +88,8 @@ export function ArticleEditor({ article, onCancel }: { article?: Article; onCanc
       <div className="text-sm">
         <label htmlFor="clanek-text">Text</label>
         <div className="mt-1">
-          <RichTextEditor id="clanek-text" minHeight="min-h-96" maxLength={40_000} value={draft.body} onChange={(body) => set({ body })} />
+          <RichTextEditor id="clanek-text" minHeight="min-h-96" maxLength={40_000} value={draft.body} onChange={(body) => set({ body })} onImage={uploadPhoto} />
+          <p className="mt-1 text-xs text-[var(--color-muted)]">Fotky vložte tlačítkem „Fotka“, přetažením nebo Ctrl+V. První fotka v textu je i obrázkem článku v přehledu.</p>
         </div>
       </div>
       <label className="block text-sm">

@@ -77,6 +77,7 @@ Všechny cesty končí lomítkem (web má `trailingSlash`); bez něj Next přesm
 | `GET /api/novinky/?pocet=` | kdokoli | nejnovější články (pro statickou úvodní stránku) |
 | `POST /api/novinky/` | moderátor, admin | `{ slug?, article }` uloží článek (bez `slug` nový) → `{ slug }` |
 | `DELETE /api/novinky/[slug]/` | moderátor, admin | skryje článek (i vestavěný) |
+| `POST /api/novinky/foto/?w=&h=` | moderátor, admin | tělo JPEG/WebP (zmenšené v prohlížeči) → `{ src }` fotka článku v R2 (`novinky/…`) |
 | `POST /api/admin/katalog/publikovat/` | admin | spustí nasazení (GitHub workflow) |
 
 ## Interní

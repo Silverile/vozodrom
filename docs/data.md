@@ -90,7 +90,8 @@ Fotky jsou v R2 pod `garaz/c-…/` a `deniky/e-…/`.
 
 **`article`** — články „Novinky a rady“ od redakce (moderátoři, admini). Vestavěné články ze
 `src/lib/articles.ts` jsou výchozí sada: řádek se stejným `slug` je nahradí, `deleted` je skryje. Text je
-formátovaný (`src/lib/markup.tsx`). Migrace `0007_articles.sql`.
+formátovaný (`src/lib/markup.tsx`); fotky jsou v textu jako `![popisek](/foto/novinky/…)`, první z nich je i obrázkem
+článku v přehledu. Migrace `0007_articles.sql`.
 
 **`catalog_edit`** — úpravy katalogu od administrátorů jako operace nad kartou modelu (`field = "op"`, `value` = JSON
 operace z `src/lib/catalog-ops.ts`), v pořadí uložení. Starší řádky s `field` summary/name/dateNote se čtou jako
