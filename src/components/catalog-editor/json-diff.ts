@@ -111,29 +111,92 @@ export function diffCard(current: ModelCard, next: ModelCard): CatalogOp[] {
 
 const keys = (m: Record<string, string>) => Object.keys(m).join(", ");
 
+const DIMS = { length: null, width: null, height: null, wheelbase: null };
+
+/**
+ * What an item of each list of a generation looks like, with what its fields mean: an empty list in
+ * the card says nothing of its shape, and without this an AI cannot fill it.
+ */
+const LIST_SHAPES: { list: string; what: string; item: unknown; fields?: string }[] = [
+  {
+    list: "engines",
+    what: "rodiny motorů generace (souhrn; každý motor jednou, i když má více výkonů)",
+    item: { fuel: "petrol", displacementCc: 1390, displacementLitresNominal: 1.4, powerKwMin: 55, powerKwMax: 74, variant: "1.4 MPI", availablePowerKw: [55, 63, 74] },
+    fields: "displacementCc = přesný objem v cm³; displacementLitresNominal = obchodní objem v litrech; powerKwMin/Max = nejnižší a nejvyšší výkon té rodiny; variant = označení motoru; availablePowerKw je nepovinný seznam všech výkonů.",
+  },
+  { list: "transmissions", what: "převodovky generace (souhrn, každý druh jednou)", item: { type: "manual", gears: 5 } },
+  {
+    list: "facelifts",
+    what: "modernizace generace",
+    item: { year: 2010, to: null, name: "facelift", code: null, note: null, photo: null },
+    fields: "year = rok začátku výroby po modernizaci; to = poslední rok (null = do konce generace nebo další modernizace); photo nech null.",
+  },
+  {
+    list: "trims",
+    what: "konkrétní technické verze (motor + převodovka + karoserie) s údaji z katalogu výrobce",
+    item: {
+      name: "1.4 MPI 63 kW 5MT",
+      from: 2007,
+      to: 2010,
+      bodyType: "hatchback",
+      engine: { fuel: "petrol", displacementCc: 1390, cylinders: 4, powerKw: 63, powerStandard: null, torqueNm: 132 },
+      transmission: { type: "manual", gears: 5 },
+      drive: "fwd",
+      dimensionsMm: DIMS,
+      massKg: 1080,
+      massBasis: "pohotovostní hmotnost",
+      topSpeedKmh: 175,
+      acceleration0to100s: 12.4,
+      consumptionL100: 6.4,
+      consumptionCycle: "NEDC",
+      consumptionKwh100: null,
+      rangeKm: null,
+      rangeCycle: null,
+    },
+    fields: "powerStandard = norma výkonu (ISO, SAE, DIN…), když ji zdroj uvádí; consumptionCycle = cyklus spotřeby (WLTP, NEDC, ČSN…); u elektromobilů consumptionKwh100, rangeKm a rangeCycle; u hybridů engine.powerBasis: \"system\" a combustionPowerKw/electricPowerKw.",
+  },
+  {
+    list: "bodyVariants",
+    what: "nepovinné: rozměry a kufr podle karoserie, když se karoserie liší (hatchback × kombi, krátký × dlouhý rozvor); dimensionsMm a trunkL generace pak zůstanou null",
+    item: { bodyType: "kombi", label: null, dimensionsMm: { length: 4255, width: 1642, height: 1498, wheelbase: 2451 }, trunkL: 480, noteCs: null },
+  },
+  {
+    list: "equipmentLines",
+    what: "nepovinné: výbavové stupně (Active, Ambition, Style, RS…)",
+    item: { id: "ambition", name: "Ambition", kind: "equipment-line", from: null, to: null, noteCs: null },
+    fields: "kind je \"equipment-line\", nebo \"performance-line\" pro sportovní řady s vlastními motory; trims je mohou uvádět v equipmentLineIds.",
+  },
+];
+
 /**
  * "Kopírovat pro AI": the card with instructions, to paste into a chat as it is. The AI checks and
  * corrects the data and answers with the whole card as JSON, which goes back through "Vložit JSON".
  */
 export function aiPrompt(card: ModelCard, title: string): string {
+  const shapes = LIST_SHAPES.map((s) => `${s.list}: ${s.what}\n${JSON.stringify(s.item)}${s.fields ? `\n${s.fields}` : ""}`).join("\n\n");
   return `Jsi redaktor katalogu aut na webu Vozodrom (Česko). Níže je karta modelu ${title} jako JSON.
 
-ÚKOL: Zkontroluj údaje a oprav chyby. Doplň, co chybí, ale jen to, čím si jsi jistý; co nevíš, nech null. Nic si nevymýšlej. Pokud ti pod touto zprávou napíšu konkrétní úkol, udělej hlavně ten.
+ÚKOL: Zkontroluj údaje a oprav chyby. Doplň, co chybí, ale jen to, čím si jsi jistý; co nevíš, nech null. Nic si nevymýšlej. Prázdné seznamy (engines, transmissions, trims…) naplň podle vzorů níže, pokud údaje znáš. Pokud ti pod touto zprávou napíšu konkrétní úkol, udělej hlavně ten.
 
 PRAVIDLA
 - Vrať CELOU kartu jako jeden platný JSON v jednom bloku kódu. Žádné komentáře uvnitř JSON, nic nezkracuj („…“), nevynechávej generace ani pole.
-- Zachovej strukturu: stejné klíče a typy. Čísla jsou čísla (ne text), neznámá hodnota je null, prázdný seznam je [].
-- Jednotky: rozměry v mm (dimensionsMm), kufr v litrech (trunkL), výkon v kW (powerKw…), roky jako celá čísla.
+- Zachovej strukturu: stejné klíče a typy. Čísla jsou čísla (ne text), neznámá hodnota je null, prázdný seznam je []. Nové položky seznamů mají tvar podle vzorů níže.
+- Jednotky: rozměry v mm (dimensionsMm), kufr v litrech (trunkL), výkon v kW (powerKw…; 1 k = 0,7355 kW), točivý moment v Nm, hmotnost v kg, spotřeba v l/100 km, roky jako celá čísla.
 - from/to generace = roky sériové výroby (ne předsériová výroba ani ohlášení). Vyráběná generace má to: null a current: true.
-- "code" generace neměň, pokud není zjevně špatně: podle něj se generace pozná (i s nákresem). Nová generace = nový objekt v seznamu "generations" na správném místě podle let.
+- Seznamy engines a transmissions jsou souhrnem verzí v trims: co je v trims, má být i tam.
+- "code" generace neměň, pokud není zjevně špatně: podle něj se generace pozná (i s nákresem). Nová generace = nový objekt v seznamu "generations" na správném místě podle let, se všemi seznamy níže (i prázdnými).
 - Texty (summary, noteCs, názvy) piš česky.
-- Pole "photo", "drawingVariant" a odkazy v "sources" neměň; zdroje můžeš jen přidat.
+- Pole "photo" a "drawingStage" a odkazy v "sources" neměň; zdroje můžeš jen přidat.
 - Povolené hodnoty:
   bodyTypes / bodyType: ${keys(BODY_NAMES)}
   drivetrains / drive: ${keys(DRIVE)}
-  transmissions.type: ${keys(GEARBOX)}
+  transmissions.type / transmission.type: ${keys(GEARBOX)}
   fuel: ${keys(CARD_FUEL)}
+  dateBasis: production (výroba), sale (prodej), announcement (jen ohlášeno)
 - Pod JSON krátce vypiš, co jsi změnil a proč.
+
+VZORY POLOŽEK SEZNAMŮ GENERACE (čísla jsou jen příklad tvaru, ne údaje tohoto modelu)
+${shapes}
 
 KARTA
 \`\`\`json
