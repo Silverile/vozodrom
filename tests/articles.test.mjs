@@ -4,7 +4,6 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { stripTypeScriptTypes } from "node:module";
 import { test } from "node:test";
-import { pathToFileURL } from "node:url";
 import { ARTICLE_ICONS, builtInArticles, readingMinutes, slugify } from "../src/lib/articles.ts";
 
 test("slugs from Czech titles", () => {
@@ -34,7 +33,7 @@ async function cleanArticle() {
   const start = source.indexOf("export function cleanArticle");
   const tail = /\r?\n\}\r?\n/.exec(source.slice(start)); // the file may have CRLF line ends
   const end = start + tail.index + tail[0].length;
-  const articles = pathToFileURL(new URL("../src/lib/articles.ts", import.meta.url).pathname.replace(/^\/([A-Z]:)/, "$1")).href;
+  const articles = new URL("../src/lib/articles.ts", import.meta.url).href;
   const mod = `import { ARTICLE_CATEGORIES, ARTICLE_ICONS } from ${JSON.stringify(articles)};\n${source.slice(start, end)}`;
   return (await import(`data:text/javascript;base64,${Buffer.from(mod).toString("base64")}`)).cleanArticle;
 }
