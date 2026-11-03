@@ -85,7 +85,8 @@ export async function listingContext(listing: Listing, draft: Draft): Promise<Li
   const genIndex = chosen >= 0 ? chosen : covering.length ? covering[covering.length - 1][1] : -1;
   if (genIndex < 0) return null;
   const gen = card.generations[genIndex];
-  const stage = stagesOf(gen).filter((s) => s.from === null || s.from <= listing.year).pop()?.label ?? "";
+  const look = stagesOf(gen).filter((s) => s.from === null || s.from <= listing.year).pop();
+  const stage = look?.label ?? "";
 
   const statsLine = STATS.makes[draft.brand]?.[line.slug];
   const genStats = genStatsOf(statsLine?.gens, draft.brand, line.slug, genIndex);
@@ -98,7 +99,8 @@ export async function listingContext(listing: Listing, draft: Draft): Promise<Li
     gen,
     genIndex,
     stage,
-    drawing: frontDrawingId(draft.brand, line.slug, genIndex),
+    // the facelift's own drawing, if the car's look has one
+    drawing: look?.drawing ?? frontDrawingId(draft.brand, line.slug, genIndex),
     engine: matchEngine(gen, listing),
     trim: matchTrim(gen, listing),
     size: sizeOf(gen, draft.body || listing.body),

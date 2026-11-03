@@ -59,8 +59,13 @@ export function newestFrontDrawing(makeSlug: string, lineSlug: string): string |
   return gens.length ? `${makeSlug}--${lineSlug}--${gens[gens.length - 1][0]}` : null;
 }
 
-/** Drawing of the generation built in `year`; where generations overlap, the newer one. */
+/**
+ * Drawing of the car built in `year`: a facelift's own drawing when its look covers the year, else
+ * the generation's; where they overlap, the newer one.
+ */
 export function frontDrawingFor(makeSlug: string, lineSlug: string, year: number): string | null {
+  const facelift = builtLine(makeSlug, lineSlug)?.faceliftDrawings?.filter(([, from, to]) => (from ?? 0) <= year && year <= (to ?? 9999)).pop();
+  if (facelift) return facelift[3];
   const hit = shownOf(makeSlug, lineSlug).filter(([, from, to]) => (from ?? 0) <= year && year <= (to ?? 9999)).pop();
   return hit ? `${makeSlug}--${lineSlug}--${hit[0]}` : null;
 }

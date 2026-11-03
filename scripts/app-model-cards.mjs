@@ -10,7 +10,7 @@
 // the data files have it, for the editor. Every edited line is listed in src/data/catalog-built.json:
 // for each generation the index it came from in the data files (front drawings and STK statistics
 // are keyed by it), the drawings with the edited years, and the generations' codes and years for
-// the listing form and its checks (lib/makes reads them instead of the model lines index).
+// the listing form and its checks, and facelifts' own drawings by their years (lib/makes reads them instead of the model lines index).
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { applyOps, generationSummary, rowToOp } from "../src/lib/catalog-ops.ts";
 
@@ -58,6 +58,21 @@ function drawingsOf(key, card, applied) {
   return out;
 }
 
+/** Facelifts' own drawings (uploaded in the editor), by the years of their look (as lib/modelCards stagesOf). */
+function faceliftDrawingsOf(card) {
+  const out = [];
+  card.generations.forEach((g, i) => {
+    const fl = [...(g.facelifts ?? [])].sort((a, b) => a.year - b.year);
+    fl.forEach((f, k) => {
+      if (typeof f.drawing !== "string" || !/^\/foto\/katalog\/[a-z0-9-]+\.webp$/.test(f.drawing)) return;
+      const last = k === fl.length - 1;
+      const to = f.to ?? (last ? (g.current ? null : (g.to ?? null)) : fl[k + 1].year);
+      out.push([i, f.year ?? null, to, f.drawing]);
+    });
+  });
+  return out;
+}
+
 rmSync(TARGET, { recursive: true, force: true });
 const built = { lines: {}, conflicts: {} };
 let count = 0;
@@ -73,7 +88,7 @@ for (const [make, lines] of Object.entries(index)) {
       const applied = applyOps(card, ops);
       out = applied.card;
       writeFileSync(new URL(`${make}/${line}.base.json`, TARGET), JSON.stringify(card));
-      built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied), generations: generationSummary(out) };
+      built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied), faceliftDrawings: faceliftDrawingsOf(out), generations: generationSummary(out) };
       if (applied.conflicts.length) built.conflicts[key] = applied.conflicts;
       edited++;
     }

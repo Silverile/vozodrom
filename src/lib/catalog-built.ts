@@ -10,6 +10,8 @@ export type BuiltDrawing = [index: number, from: number | null, to: number | nul
 interface BuiltLine {
   origins: (number | null)[];
   drawings: BuiltDrawing[];
+  /** facelifts' own drawings, by the years of their look (older builds lack it) */
+  faceliftDrawings?: BuiltDrawing[];
   generations: { code: string | null; from: number | null; to: number | null; current?: boolean }[];
 }
 

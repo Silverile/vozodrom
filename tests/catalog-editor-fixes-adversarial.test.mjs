@@ -253,3 +253,24 @@ test('follow-up: constant/backward clocks and legacy random IDs do not interleav
     assert.equal(rows.at(-1).createdAt,'1970-01-01T00:00:01.002Z');
   }finally{Date.now=clock;h.dispose();}
 });
+
+test('facelift drawings: the build lists them by their years and listings pick them by year',async()=>{
+  const src='/foto/katalog/make--line--fl1.webp';
+  const facelifts=[{year:1993,to:null,name:'facelift',code:null,note:null,photo:null,drawing:src},{year:1994,to:null,name:'x',code:null,note:null,photo:null,drawing:'https://elsewhere.example/x.webp'}];
+  await fixture([{op:'set',path:['generations',0,'facelifts'],expect:[],value:facelifts}],{},async built=>{
+    assert.deepEqual(built.lines['make--line'].faceliftDrawings,[[0,1993,1994,src]]);
+    let source=await readFile(path.join(root,'src/components/FrontDrawing.tsx'),'utf8');
+    source=source.slice(0,source.indexOf('export function FrontDrawing('));
+    const imports={
+      '@/data/front-drawings.json':dataModule('export default {"make--line":[[0,1990,1995]]};'),
+      '@/data/front-drawing-review.json':dataModule('export default {};'),
+      '@/lib/catalog-built':dataModule(`const B=${JSON.stringify(built)};export const builtLine=(m,l)=>B.lines[m+'--'+l];`),
+      '@/lib/format':dataModule('export const asset=x=>x;'),
+    };
+    source=stripTypeScriptTypes(source).replace(/from\s*(['"])([^'"]+)\1/g,(_m,_q,s)=>`from ${JSON.stringify(imports[s])}`);
+    const mod=await import(dataModule(source));
+    assert.equal(mod.frontDrawingFor('make','line',1992),'make--line--0');
+    assert.equal(mod.frontDrawingFor('make','line',1993),src);
+    assert.equal(mod.frontDrawingFor('make','line',1995),'make--line--0');
+  });
+});
