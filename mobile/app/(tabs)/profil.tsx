@@ -1,9 +1,9 @@
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import { useState } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { RefreshControl, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { DEMO, useRemote } from "../../components/data";
+import { DEMO, useReloadOnFocus, useRemote } from "../../components/data";
 import { garage as demoGarage } from "../../components/demo";
 import { Icon } from "../../components/icons";
 import { font, useColors } from "../../components/theme";
@@ -30,6 +30,8 @@ export default function Profile() {
     return res.items.map((g) => ({ id: g.id, title: g.nickname || g.title, sub: [g.generation, g.year].filter(Boolean).join(" · "), photo: g.photos[0] ? api.assetUrl(g.photos[0].url) : null, former: g.former }));
   });
 
+  useReloadOnFocus(me, cars);
+
   if (!signedIn) {
     return (
       <Screen>
@@ -52,7 +54,7 @@ export default function Profile() {
   return (
     <Screen>
       <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={{ paddingBottom: 24 }}>
+        <ScrollView contentContainerStyle={{ paddingBottom: 24 }} refreshControl={<RefreshControl refreshing={cars.loading && Boolean(cars.data)} onRefresh={() => { me.reload(); cars.reload(); }} tintColor={c.brand} colors={[c.brand]} />}>
           <View style={{ flexDirection: "row", alignItems: "center", paddingLeft: 16, paddingRight: 8, paddingTop: 4 }}>
             <T w="bold" style={{ flex: 1, fontSize: 22 }}>Profil</T>
             <IconButton name="settings" label="Nastavení" />

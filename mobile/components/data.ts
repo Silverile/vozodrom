@@ -1,3 +1,4 @@
+import { useFocusEffect } from "expo-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import type { ListingDto, ReferenceDataDto, StoryDto } from "../lib/api/types";
@@ -26,6 +27,17 @@ export function useRemote<T>(key: string, load: (signal: AbortSignal) => Promise
   }, [key, attempt]);
   const reload = useCallback(() => setAttempt((n) => n + 1), []);
   return { ...state, reload };
+}
+
+/** Reloads when the screen comes back into view (tabs stay mounted), skipping the first focus. */
+export function useReloadOnFocus(...remotes: { reload: () => void }[]) {
+  const seen = useRef(false);
+  const list = useRef(remotes);
+  list.current = remotes;
+  useFocusEffect(useCallback(() => {
+    if (seen.current) list.current.forEach((r) => r.reload());
+    seen.current = true;
+  }, []));
 }
 
 /** What a listing card shows, whether it came from the API or the demo set. */

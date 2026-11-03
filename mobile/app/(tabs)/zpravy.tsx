@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ago, useRemote } from "../../components/data";
+import { ago, useReloadOnFocus, useRemote } from "../../components/data";
 import { Icon } from "../../components/icons";
 import { font, useColors } from "../../components/theme";
 import { Button, Row, Screen, StateView, T } from "../../components/ui";
@@ -12,6 +12,7 @@ export default function Messages() {
   const session = authClient.useSession();
   const userKey = session.data?.user.id ?? "anon";
   const threads = useRemote(`conversations:${userKey}`, (signal) => (session.data ? api.conversations({ signal }) : Promise.resolve(null)));
+  useReloadOnFocus(threads);
   return (
     <Screen>
       <SafeAreaView edges={["top"]} style={{ flex: 1 }}>
