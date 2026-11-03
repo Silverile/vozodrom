@@ -5,6 +5,7 @@ import { type CatalogOp, type EditRow, type GenIdentity, type Path, type StoredO
 import type { CardGeneration, ModelCard } from "@/lib/modelCards";
 import { DrawingField } from "./DrawingField";
 import { FIELDS, OPTIONAL_FIELDS, OPTIONAL_GENERATION_FIELDS, kindOf, labelOf, newGeneration } from "./fields";
+import { diffCard, parseCard } from "./json-diff";
 
 // The catalogue editor, opened from a model page by an admin. It loads the card as the data files
 // have it and the line's saved edits (/api/admin/katalog), shows the card with them, and turns every
@@ -317,6 +318,11 @@ export default function CatalogEditorPanel({
   const [busy, setBusy] = useState(false);
   const [open, setOpen] = useState<Set<number>>(() => new Set(focus === null ? [] : [focus]));
   const [tab, setTab] = useState<"karta" | "historie">("karta");
+  // sizes of the groups pending changes were added in (a pasted JSON is one group)
+  const [groups, setGroups] = useState<number[]>([]);
+  const [jsonOpen, setJsonOpen] = useState(false);
+  const [jsonText, setJsonText] = useState("");
+  const [jsonError, setJsonError] = useState("");
   const dirty = useRef(false);
   dirty.current = pending.length > 0;
 
@@ -355,27 +361,75 @@ export default function CatalogEditorPanel({
 
   // an operation that does not apply to what the editor shows is refused at once, not at saving;
   // one inside a generation carries the generation's identity, so it keeps to that generation
-  const emit: Emit = useCallback(
-    (raw) => {
-      if (!base || !view) return;
-      let op: CatalogOp = raw;
-      if (op.op !== "drawing" && op.path[0] === "generations" && typeof op.path[1] === "number" && op.path.length > 1) {
-        const gen = genIdentity(view, op.path[1]);
-        if (gen) op = { ...op, gen };
+  /**
+   * Adds operations as one group (one change, or a pasted JSON): each gets the identity of the
+   * generation it is in, as the card stands just before it, and a new generation its token. A group
+   * where any operation does not apply is refused whole. Answers whether it was added.
+   */
+  const emitMany = useCallback(
+    (raws: CatalogOp[]): boolean => {
+      if (!base || !raws.length) return false;
+      const stored = (list: CatalogOp[]) => list.map((o, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op: o, createdAt: "" }));
+      const added: CatalogOp[] = [];
+      for (const raw of raws) {
+        const before = applyOps(base, [...saved, ...stored([...pending, ...added])]);
+        let op: CatalogOp = raw;
+        if (op.op !== "drawing" && op.path[0] === "generations" && typeof op.path[1] === "number" && op.path.length > 1) {
+          const gen = genIdentity(before, op.path[1]);
+          if (gen) op = { ...op, gen };
+        }
+        // a new generation gets a token, by which later edits recognise it
+        if (op.op === "insert" && op.path.length === 2 && op.path[0] === "generations" && !op.token)
+          op = { ...op, token: Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => b.toString(36).padStart(2, "0")).join("").slice(0, 16) };
+        const at = pending.length + added.length;
+        const bad = applyOps(base, [...saved, ...stored([...pending, ...added, op])]).conflicts.find((c) => c.id === `new-${at}`);
+        if (bad) {
+          setError(`Tuto změnu nelze provést: ${bad.reason}.`);
+          return false;
+        }
+        added.push(op);
       }
-      // a new generation gets a token, by which later edits recognise it
-      if (op.op === "insert" && op.path.length === 2 && op.path[0] === "generations" && !op.token)
-        op = { ...op, token: Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => b.toString(36).padStart(2, "0")).join("").slice(0, 16) };
-      const fresh = [...pending, op].map((o, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op: o, createdAt: "" }));
-      const check = applyOps(base, [...saved, ...fresh]);
-      const bad = check.conflicts.find((c) => c.id === `new-${pending.length}`);
-      if (bad) return setError(`Tuto změnu nelze provést: ${bad.reason}.`);
       setError("");
       setNotice("");
-      setPending((p) => [...p, op]);
+      setPending((p) => [...p, ...added]);
+      setGroups((g) => [...g, added.length]);
+      return true;
     },
-    [base, view, pending, saved, makeSlug, lineSlug],
+    [base, pending, saved, makeSlug, lineSlug],
   );
+  const emit: Emit = useCallback((op) => void emitMany([op]), [emitMany]);
+
+  /** Takes back the last group of unsaved changes. */
+  function undo() {
+    const last = groups[groups.length - 1] ?? 1;
+    setPending((p) => p.slice(0, Math.max(0, p.length - last)));
+    setGroups((g) => g.slice(0, -1));
+    setNotice("");
+  }
+
+  async function copyJson() {
+    if (!view) return;
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(view.card, null, 2));
+      setNotice("Karta modelu je ve schránce jako JSON. Opravenou ji vložte tlačítkem „Vložit JSON“.");
+    } catch {
+      setError("Do schránky se kopírovat nepodařilo; prohlížeč to nepovolil.");
+    }
+  }
+
+  function applyJson() {
+    if (!view) return;
+    const next = parseCard(jsonText);
+    if (typeof next === "string") return setJsonError(next);
+    const ops = diffCard(view.card, next);
+    if (!ops.length) return setJsonError("Vložený JSON se od karty neliší.");
+    if (emitMany(ops)) {
+      setJsonOpen(false);
+      setJsonText("");
+      setJsonError("");
+      setNotice(`Z JSON vzniklo ${ops.length} změn. Zkontrolujte je, „↶ Zpět“ je vrátí všechny najednou; uloží se tlačítkem „Uložit“.`);
+    }
+  }
 
   async function save() {
     // what this save sends; changes made while it is on its way stay pending
@@ -392,6 +446,13 @@ export default function CatalogEditorPanel({
       if (!r.ok || !data.rows) return setError(data.error ?? "Uložení se nepovedlo.");
       setRows(data.rows);
       setPending((p) => p.slice(sent.length));
+      // the groups that were saved go; any added meanwhile stay
+      setGroups((g) => {
+        let left = sent.length;
+        const out = [...g];
+        while (left > 0 && out.length) left -= out.shift()!;
+        return out;
+      });
       setNotice("Uloženo. Na webu se změny objeví po „Publikovat na web“ a dokončení nasazení.");
     } catch {
       setError("Uložení se nepovedlo (spojení). Změny zůstaly v editoru, zkuste to znovu.");
@@ -449,7 +510,9 @@ export default function CatalogEditorPanel({
           <button type="button" className="btn-cta !py-1.5 text-sm disabled:opacity-50" disabled={busy || !pending.length} onClick={save}>
             Uložit{pending.length ? ` (${pending.length})` : ""}
           </button>
-          <button type="button" className="pill text-sm" disabled={busy || !pending.length} onClick={() => setPending((p) => p.slice(0, -1))} title="Vrátit poslední neuloženou změnu">↶ Zpět</button>
+          <button type="button" className="pill text-sm" disabled={busy || !pending.length} onClick={undo} title="Vrátit poslední neuloženou změnu">↶ Zpět</button>
+          <button type="button" className="pill text-sm" disabled={!view} onClick={copyJson} title="Zkopírovat celou kartu modelu jako JSON">Kopírovat JSON</button>
+          <button type="button" className="pill text-sm" disabled={!view} onClick={() => setJsonOpen(true)} title="Vložit opravenou kartu modelu jako JSON">Vložit JSON</button>
           <button type="button" className="pill text-sm" disabled={busy} onClick={publish}>Publikovat na web</button>
           <button type="button" className="pill text-sm" onClick={close} aria-label="Zavřít">✕</button>
         </header>
@@ -469,6 +532,22 @@ export default function CatalogEditorPanel({
                 {conflicts.length} uložených úprav se už nedá použít (data katalogu se mezitím změnila); najdete je v historii.
               </p>
             )}
+          </div>
+        )}
+
+        {jsonOpen && (
+          <div className="space-y-2 border-b border-[var(--color-line)] p-3">
+            <label htmlFor="json-paste" className="block text-sm font-semibold">Vložte opravenou kartu modelu (JSON)</label>
+            <p className="text-xs text-[var(--color-muted)]">
+              Celá karta jako z „Kopírovat JSON“. Editor ji porovná s tou současnou a rozdíly přidá jako neuložené změny: upravená pole,
+              přidané, smazané a přesunuté generace. Nákresy v JSON nejsou a zůstanou u svých generací.
+            </p>
+            <textarea id="json-paste" className="input min-h-48 font-mono text-xs" value={jsonText} onChange={(e) => setJsonText(e.target.value)} spellCheck={false} />
+            <div className="flex flex-wrap items-center gap-2">
+              <button type="button" className="btn-cta !py-1.5 text-sm" disabled={!jsonText.trim()} onClick={applyJson}>Použít</button>
+              <button type="button" className="pill text-sm" onClick={() => (setJsonOpen(false), setJsonError(""))}>Zrušit</button>
+              {jsonError && <span role="alert" className="text-sm text-[var(--color-warn)]">{jsonError}</span>}
+            </div>
           </div>
         )}
 
