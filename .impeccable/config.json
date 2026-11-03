@@ -15,6 +15,15 @@
         "value": "inter",
         "createdAt": "2026-11-02T21:24:14.657Z",
         "reason": "Inter is the site's brand typeface (loaded in src/app/layout.tsx); social graphics must match the site"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/app/globals.css"
+        ],
+        "createdAt": "2026-11-03T08:44:12.829Z",
+        "reason": "Claude: L390 is the editor's blockquote rule (a quotation's left rule, the conventional quote mark), not a card accent; it matches how the site renders quotes (lib/markup.tsx)"
       }
     ]
   }
