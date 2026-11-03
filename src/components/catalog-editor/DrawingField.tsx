@@ -49,6 +49,8 @@ export function DrawingField({
   lineSlug,
   current,
   title,
+  heading = "Nákres zepředu",
+  empty = "Generace zatím nákres nemá.",
   onUploaded,
   onRemove,
 }: {
@@ -56,6 +58,8 @@ export function DrawingField({
   lineSlug: string;
   current: string | null;
   title: string;
+  heading?: string;
+  empty?: string;
   onUploaded: (src: string) => void;
   onRemove: () => void;
 }) {
@@ -107,9 +111,9 @@ export function DrawingField({
 
   return (
     <div className="space-y-2">
-      <p className="text-sm font-semibold">Nákres zepředu</p>
+      <p className="text-sm font-semibold">{heading}</p>
       <div className="flex flex-wrap items-start gap-3">
-        {current ? <DrawingPreview src={current} label={`Současný nákres: ${title}`} /> : <p className="text-sm text-[var(--color-muted)]">Generace zatím nákres nemá.</p>}
+        {current ? <DrawingPreview src={current} label={`Současný nákres: ${title}`} /> : <p className="text-sm text-[var(--color-muted)]">{empty}</p>}
         {preview && (
           <div className="space-y-2">
             <DrawingPreview src={preview.url} label={`Nový nákres: ${title}`} />

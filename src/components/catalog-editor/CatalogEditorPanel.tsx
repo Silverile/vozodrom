@@ -266,6 +266,25 @@ function GenerationEditor({
             onUploaded={(src) => emit({ op: "drawing", index, src, expect: identity })}
             onRemove={() => emit({ op: "drawing", index, src: null, expect: identity })}
           />
+          {/* a facelift's own look: its drawing is a field of the facelift */}
+          {gen.facelifts.map((f, k) => {
+            const name = f.name || `facelift ${f.year}`;
+            const at: Path = [...path, "facelifts", k, "drawing"];
+            const now = typeof f.drawing === "string" && f.drawing ? f.drawing : null;
+            return (
+              <DrawingField
+                key={`fl-${k}`}
+                makeSlug={makeSlug}
+                lineSlug={lineSlug}
+                current={now}
+                title={`${title}, ${name}`}
+                heading={`Nákres zepředu: ${name}`}
+                empty="Facelift zatím vlastní nákres nemá; jeho karta ukazuje zástupný obrázek."
+                onUploaded={(src) => emit({ op: "set", path: at, value: src, expect: f.drawing ?? null })}
+                onRemove={() => emit({ op: "set", path: at, value: null, expect: now })}
+              />
+            );
+          })}
           <Node path={path} keyName={index} value={gen} baseValue={baseGen} emit={emit} depth={0} />
           {missing.length > 0 && (
             <p className="flex flex-wrap items-center gap-2 text-sm">

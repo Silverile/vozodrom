@@ -129,7 +129,7 @@ const LIST_SHAPES: { list: string; what: string; item: unknown; fields?: string 
     list: "facelifts",
     what: "modernizace generace",
     item: { year: 2010, to: null, name: "facelift", code: null, note: null, photo: null },
-    fields: "year = rok začátku výroby po modernizaci; to = poslední rok (null = do konce generace nebo další modernizace); photo nech null.",
+    fields: "year = rok začátku výroby po modernizaci; to = poslední rok (null = do konce generace nebo další modernizace); photo nech null; drawing, pokud ho facelift má, ponech.",
   },
   {
     list: "trims",
@@ -186,7 +186,7 @@ PRAVIDLA
 - Seznamy engines a transmissions jsou souhrnem verzí v trims: co je v trims, má být i tam.
 - "code" generace neměň, pokud není zjevně špatně: podle něj se generace pozná (i s nákresem). Nová generace = nový objekt v seznamu "generations" na správném místě podle let, se všemi seznamy níže (i prázdnými).
 - Texty (summary, noteCs, názvy) piš česky.
-- Pole "photo" a "drawingStage" a odkazy v "sources" neměň; zdroje můžeš jen přidat.
+- Pole "photo", "drawing" a "drawingStage" a odkazy v "sources" neměň; zdroje můžeš jen přidat.
 - Povolené hodnoty:
   bodyTypes / bodyType: ${keys(BODY_NAMES)}
   drivetrains / drive: ${keys(DRIVE)}

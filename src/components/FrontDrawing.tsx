@@ -39,8 +39,9 @@ export function dataDrawingSrc(make: string, line: string, index: number): strin
   return (LINES[`${make}--${line}`] ?? []).some(([i]) => i === index) ? asset(`/front/${make}--${line}--${index}.webp`) : null;
 }
 
-/** The file of a drawing id ("make--line--index"): an uploaded drawing or the data files' one. */
+/** The file of a drawing id ("make--line--index", or an uploaded facelift drawing's path). */
 function drawingSrc(id: string): string {
+  if (id.startsWith("/foto/")) return id;
   const cut = id.lastIndexOf("--");
   const [make, line] = id.slice(0, cut).split("--");
   const built = builtLine(make, line);

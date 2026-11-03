@@ -94,6 +94,7 @@ export const FIELDS: Record<string, FieldSpec> = {
   id: { label: "Identifikátor", kind: "text" },
   kind: { label: "Druh", kind: "enum", options: { "equipment-line": "výbava", "performance-line": "sportovní řada" } },
   photo: { label: "Fotka" },
+  drawing: { label: "Nákres (nahrajte ho výše u generace)", kind: "text" },
   url: { label: "Adresa obrázku", kind: "text" },
   page: { label: "Stránka zdroje", kind: "text" },
   credit: { label: "Autor", kind: "text" },

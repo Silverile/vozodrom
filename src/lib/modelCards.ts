@@ -74,7 +74,12 @@ export interface CardFacelift {
   code: string | null;
   note: string | null;
   photo: CardPhoto | null;
+  /** the facelift's own front drawing, uploaded in the catalogue editor (FACELIFT_DRAWING) */
+  drawing?: string | null;
 }
+
+/** Where an uploaded drawing lives; a facelift's drawing field is used only when it is one of these. */
+export const UPLOADED_DRAWING = /^\/foto\/katalog\/[a-z0-9-]+\.webp$/;
 
 /** A generation's look-stages as Drom shows them: the original, then each facelift with its own years. */
 export interface GenerationStage {
@@ -84,6 +89,8 @@ export interface GenerationStage {
   to: number | null;
   current: boolean;
   photo: CardPhoto | null;
+  /** a facelift's own uploaded drawing */
+  drawing?: string | null;
 }
 
 export function stagesOf(g: CardGeneration): GenerationStage[] {
@@ -101,6 +108,7 @@ export function stagesOf(g: CardGeneration): GenerationStage[] {
         to: f.to ?? (last ? g.to : fl[i + 1].year),
         current: last && g.current,
         photo: f.photo,
+        drawing: typeof f.drawing === "string" && UPLOADED_DRAWING.test(f.drawing) ? f.drawing : null,
       };
     }),
   ];

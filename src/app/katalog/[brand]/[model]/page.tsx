@@ -461,7 +461,8 @@ export default async function ModelPage({ params }: { params: Params }) {
             {gens.flatMap((g, i) => {
               // One card per look: the generation as launched, then each facelift with its own years.
               // Drawings exist per generation and show one look (drawingStage, by default as launched);
-              // the other looks keep the placeholder, since mixing them would mislead.
+              // a facelift may have its own drawing; the other looks keep the placeholder, since
+              // mixing them would mislead.
               const shown = stagesOf(g);
               const base = g.name ?? g.code ?? `${i + 1}. generace`;
               return shown.map((st, k) => {
@@ -471,7 +472,7 @@ export default async function ModelPage({ params }: { params: Params }) {
                 <li key={`${i}-${k}`} className="min-w-0">
                   <a href={`#g${i + 1}`} className="card block overflow-hidden hover:shadow-lg transition h-full">
                     <CatalogImage
-                      drawing={k === (g.drawingStage ?? 0) ? frontDrawingId(brandSlug, modelSlug, i) : null}
+                      drawing={st.drawing ?? (k === (g.drawingStage ?? 0) ? frontDrawingId(brandSlug, modelSlug, i) : null)}
                       make={brandSlug}
                       line={modelSlug}
                       genIndex={i}
