@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useReference, useRemote } from "../components/data";
 import { ErrorNote, FieldGroup, Input, PhotoStrip } from "../components/form";
 import { pickPhotos, type PickedPhoto } from "../components/photos";
+import { engineChoices } from "../components/engines";
 import { PickerField } from "../components/picker";
 import { formatCzk, formatKm, useColors } from "../components/theme";
 import { ActionBar, Button, Card, Chip, Screen, StatGrid, StateView, T, TopBar } from "../components/ui";
@@ -28,6 +29,7 @@ export default function Sell() {
   const form = useRemote(`form:${brand}:${model}:${year}`, (signal) => (brand && model && year.length === 4 ? api.listingForm(brand, model, Number(year), { signal }) : Promise.resolve(null)));
   const [generation, setGeneration] = useState<string>();
   const [engine, setEngine] = useState("");
+  const [engineKey, setEngineKey] = useState<string>();
   const [fuel, setFuel] = useState<string>();
   const [powerKw, setPowerKw] = useState("");
   const [body, setBody] = useState<string>();
@@ -62,7 +64,8 @@ export default function Sell() {
     photos.length >= minPhotos,
   ];
 
-  function chooseEngine(e: { label: string; fuel: string | null; kwMin: number | null; kwMax: number | null }) {
+  function chooseEngine(key: string, e: { label: string; fuel: string | null; kwMin: number | null; kwMax: number | null }) {
+    setEngineKey(key);
     setEngine(e.label);
     if (e.fuel) setFuel(e.fuel);
     setPowerKw(e.kwMin != null && e.kwMin === e.kwMax ? String(e.kwMin) : "");
@@ -132,7 +135,7 @@ export default function Sell() {
                 )}
                 {gen && (
                   <>
-                    {gen.engines.length > 0 && <FieldGroup label="Motor">{gen.engines.map((e) => <Chip key={e.label} label={e.label} on={engine === e.label} onPress={() => chooseEngine(e)} />)}</FieldGroup>}
+                    {gen.engines.length > 0 && <FieldGroup label="Motor">{engineChoices(gen.engines).map((c) => <Chip key={c.key} label={c.chip} on={engineKey === c.key && engine === c.label} onPress={() => chooseEngine(c.key, c.engine)} />)}</FieldGroup>}
                     <Input label={gen.engines.length ? "Motor není v seznamu?" : "Motor"} placeholder="Např. 2.0 TDI" value={engine} onChangeText={setEngine} />
                     <FieldGroup label="Palivo">{r.fuels.map((o) => <Chip key={o.value} label={o.label} on={fuel === o.value} onPress={() => setFuel(o.value)} />)}</FieldGroup>
                     <Input label="Výkon (kW)" placeholder="110" keyboardType="number-pad" value={powerKw} onChangeText={(v) => setPowerKw(digits(v))} />

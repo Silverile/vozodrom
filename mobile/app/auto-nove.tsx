@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useReference, useRemote } from "../components/data";
 import { ErrorNote, FieldGroup, Input, PhotoStrip } from "../components/form";
 import { pickPhotos, type PickedPhoto } from "../components/photos";
+import { engineChoices } from "../components/engines";
 import { PickerField } from "../components/picker";
 import { ActionBar, Button, Chip, Screen, StateView, T, TopBar } from "../components/ui";
 import { api, ApiError, type GarageDataDto } from "../lib/api";
@@ -24,6 +25,7 @@ export default function NewCar() {
   const [generation, setGeneration] = useState<string>();
   const [nickname, setNickname] = useState("");
   const [engine, setEngine] = useState("");
+  const [engineKey, setEngineKey] = useState<string>();
   const [fuel, setFuel] = useState<string>();
   const [transmission, setTransmission] = useState<string>();
   const [story, setStory] = useState("");
@@ -77,7 +79,7 @@ export default function NewCar() {
             )}
             {gen && gen.engines.length > 0 && (
               <FieldGroup label="Motor">
-                {gen.engines.slice(0, 12).map((e) => <Chip key={e.label} label={e.label} on={engine === e.label} onPress={() => { setEngine(e.label); if (e.fuel) setFuel(e.fuel); }} />)}
+                {engineChoices(gen.engines).slice(0, 12).map((c) => <Chip key={c.key} label={c.chip} on={engineKey === c.key && engine === c.label} onPress={() => { setEngineKey(c.key); setEngine(c.label); if (c.engine.fuel) setFuel(c.engine.fuel); }} />)}
               </FieldGroup>
             )}
             <Input label={gen?.engines.length ? "Jiný motor" : "Motor"} placeholder="Např. 2.0 TDI" value={engine} onChangeText={setEngine} />
