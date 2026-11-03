@@ -105,14 +105,14 @@ export function Card({ children, style, onPress }: { children: ReactNode; style?
   return onPress ? <Pressable onPress={onPress} style={({ pressed }) => [...box, pressed && { opacity: 0.9 }]}>{children}</Pressable> : <View style={box}>{children}</View>;
 }
 
-/** Labelled facts: every figure carries its name. */
-export function StatGrid({ items, columns = 3 }: { items: { label: string; value: string }[]; columns?: number }) {
+/** Labelled facts: every figure carries its name. `inset` drops the side margin when the grid sits inside a card. */
+export function StatGrid({ items, columns = 3, inset }: { items: { label: string; value: string }[]; columns?: number; inset?: boolean }) {
   const c = useColors();
   return (
-    <View style={[styles.grid, { borderColor: c.line, backgroundColor: c.line }]}>
+    <View style={[styles.grid, inset && { marginHorizontal: 0 }, { borderColor: c.line, backgroundColor: c.line }]}>
       {items.map((it) => (
         <View key={it.label} style={{ width: `${100 / columns}%`, padding: 1 / 2 }}>
-          <View style={{ backgroundColor: c.surface, paddingVertical: 10, paddingHorizontal: 12 }}>
+          <View style={{ flex: 1, backgroundColor: c.surface, paddingVertical: 10, paddingHorizontal: 12 }}>
             <T s="small" tone="muted">{it.label}</T>
             <T w="bold" style={{ fontSize: 16 }}>{it.value}</T>
           </View>

@@ -13,6 +13,7 @@ import { api, ApiError, type ListingInputDto } from "../lib/api";
 
 const STEPS = ["Vůz", "Stav a cena", "Místo a popis", "Fotky"] as const;
 const digits = (s: string) => s.replace(/\D/g, "");
+const photosWord = (n: number) => (n === 1 ? "fotka" : n >= 2 && n <= 4 ? "fotky" : "fotek");
 const spaced = (s: string) => (digits(s) ? Number(digits(s)).toLocaleString("cs-CZ") : "");
 
 // Selling a car in four short steps; the catalogue fills what it knows (generation, engines,
@@ -36,7 +37,7 @@ export default function Sell() {
   const [transmission, setTransmission] = useState<string>();
   const [km, setKm] = useState("");
   const [price, setPrice] = useState("");
-  const [color, setColor] = useState<string>();
+  const [color, setColor] = useState("");
   const [vin, setVin] = useState("");
   const [region, setRegion] = useState<string>();
   const [city, setCity] = useState<string>();
@@ -59,7 +60,7 @@ export default function Sell() {
 
   const stepReady = [
     Boolean(brand && model && year.length === 4 && gen && engine.trim() && fuel && bodyValue && gearValue && Number(digits(powerKw)) > 0),
-    Boolean(digits(km) && Number(digits(price)) > 0 && color),
+    Boolean(digits(km) && Number(digits(price)) > 0),
     Boolean(region && city && description.trim().length >= 20),
     photos.length >= minPhotos,
   ];
@@ -72,12 +73,12 @@ export default function Sell() {
   }
 
   async function publish() {
-    if (!brand || !model || !gen || !fuel || !bodyValue || !gearValue || !region || !city || !color) return;
+    if (!brand || !model || !gen || !fuel || !bodyValue || !gearValue || !region || !city) return;
     setBusy(true);
     setError(null);
     const data: ListingInputDto = {
       brand, model, generation: gen.id, year: Number(year), mileageKm: Number(digits(km)), price: Number(digits(price)),
-      engine: engine.trim(), fuel, transmission: gearValue, powerKw: Number(digits(powerKw)), body: bodyValue, color,
+      engine: engine.trim(), fuel, transmission: gearValue, powerKw: Number(digits(powerKw)), body: bodyValue, color: color.trim(),
       region, city, description: description.trim(), vin: vin.trim().toUpperCase(),
     };
     try {
@@ -149,7 +150,8 @@ export default function Sell() {
               <>
                 <Input label="Stav tachometru (km)" placeholder="154 020" keyboardType="number-pad" value={spaced(km)} onChangeText={setKm} />
                 <Input label="Cena (Kč)" placeholder="289 000" keyboardType="number-pad" value={spaced(price)} onChangeText={setPrice} />
-                <FieldGroup label="Barva">{r.colors.options.map((o) => <Chip key={o.value} label={o.label} on={color === o.value} onPress={() => setColor(o.value)} />)}</FieldGroup>
+                {r.colors.options.length > 0 && <FieldGroup label="Barva">{r.colors.options.map((o) => <Chip key={o.value} label={o.label} on={color === o.value} onPress={() => setColor(o.value)} />)}</FieldGroup>}
+                <Input label={r.colors.options.length ? "Jiná barva" : "Barva"} placeholder="Nepovinné, např. stříbrná metalíza" value={color} onChangeText={setColor} maxLength={r.limits.listing.color?.maxLength ?? 40} />
                 <Input label="VIN" placeholder="17 znaků z technického průkazu" autoCapitalize="characters" maxLength={17} value={vin} onChangeText={setVin} hint="Kupující si podle VIN ověří historii vozu. Inzerát s VIN působí důvěryhodněji." />
               </>
             )}
@@ -167,11 +169,11 @@ export default function Sell() {
                 <PhotoStrip uris={photos.map((p) => p.uri)} max={maxPhotos} onAdd={async () => {
                   try { setPhotos([...photos, ...(await pickPhotos(maxPhotos - photos.length))]); } catch (e) { setError(e instanceof Error ? e.message : "Fotky se nepodařilo načíst."); }
                 }} onRemove={(i) => setPhotos(photos.filter((_, j) => j !== i))} />
-                <T s="small" tone="muted" style={{ marginBottom: 16 }}>K zveřejnění jsou potřeba alespoň {minPhotos} fotky. První fotka bude hlavní.</T>
+                <T s="small" tone="muted" style={{ marginBottom: 16 }}>Ke zveřejnění je potřeba alespoň {minPhotos} {photosWord(minPhotos)}. První fotka bude hlavní.</T>
                 <Card style={{ gap: 10, marginBottom: 12 }}>
                   <T w="bold" style={{ fontSize: 16 }}>Shrnutí</T>
                   <T w="semibold">{[makes.data?.items.find((m) => m.slug === brand)?.name, lines.data?.items.find((l) => l.slug === model)?.name, gen?.name, engine].filter(Boolean).join(" ")}</T>
-                  <StatGrid items={[
+                  <StatGrid inset items={[
                     { label: "Rok", value: year },
                     { label: "Najeto", value: digits(km) ? formatKm(Number(digits(km))) : "—" },
                     { label: "Cena", value: digits(price) ? formatCzk(Number(digits(price))) : "—" },
