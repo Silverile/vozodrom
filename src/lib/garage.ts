@@ -1,4 +1,6 @@
 import type { ListingPhoto } from "@/db/schema";
+import { GARAGE_LIMITS, ENTRY_LIMITS } from "./form-constraints";
+import { VEHICLE_TEXT_LIMITS as TEXT } from "./listing-draft";
 import { BODY_KEYS } from "./listing-catalog";
 import { type ModelLine, getMake, makesIn, modelLinesOf } from "./makes";
 
@@ -42,11 +44,11 @@ export const EMPTY_CAR: CarData = {
   powerKw: 0, transmission: "", drive: "", vin: "", plate: "", plateVisible: false, story: "",
 };
 
-export const MAX_STORY = 25_000;
-export const MAX_ENTRY_BODY = 25_000;
+export const MAX_STORY = GARAGE_LIMITS.story;
+export const MAX_ENTRY_BODY = ENTRY_LIMITS.body;
 export const MAX_COMMENT = 2_000;
-export const MAX_GARAGE_PHOTOS = 20;
-export const MAX_ENTRY_PHOTOS = 20;
+export const MAX_GARAGE_PHOTOS = GARAGE_LIMITS.photos;
+export const MAX_ENTRY_PHOTOS = ENTRY_LIMITS.photos;
 
 export const CAR_DRIVES: Record<string, string> = { fwd: "přední", rwd: "zadní", awd: "4×4" };
 
@@ -75,10 +77,10 @@ export function isCarData(v: unknown): v is CarData {
 export function cleanCarData(v: CarData): CarData {
   const text = (s: string, max: number) => s.trim().slice(0, max);
   return {
-    brand: text(v.brand, 64), model: text(v.model, 80), generation: text(v.generation, 80), nickname: text(v.nickname, 60),
-    year: v.year, purchaseYear: v.purchaseYear, color: text(v.color, 40), body: v.body in BODY_KEYS ? v.body : "",
-    engine: text(v.engine, 80), fuel: text(v.fuel, 20), powerKw: v.powerKw, transmission: v.transmission === "manuál" || v.transmission === "automat" ? v.transmission : "",
-    drive: v.drive in CAR_DRIVES ? v.drive : "", vin: text(v.vin, 17).toUpperCase(), plate: text(v.plate, 12).toUpperCase(),
+    brand: text(v.brand, TEXT.brand), model: text(v.model, TEXT.model), generation: text(v.generation, TEXT.generation), nickname: text(v.nickname, GARAGE_LIMITS.nickname),
+    year: v.year, purchaseYear: v.purchaseYear, color: text(v.color, TEXT.color), body: v.body in BODY_KEYS ? v.body : "",
+    engine: text(v.engine, TEXT.engine), fuel: text(v.fuel, 20), powerKw: v.powerKw, transmission: v.transmission === "manuál" || v.transmission === "automat" ? v.transmission : "",
+    drive: v.drive in CAR_DRIVES ? v.drive : "", vin: text(v.vin, TEXT.vin).toUpperCase(), plate: text(v.plate, GARAGE_LIMITS.plate).toUpperCase(),
     plateVisible: v.plateVisible === true, story: text(v.story, MAX_STORY),
   };
 }
@@ -90,10 +92,10 @@ export function carProblems(car: CarData): Partial<Record<keyof CarData, string>
   const problems: Partial<Record<keyof CarData, string>> = {};
   if (!makesIn("auto").some((m) => m.slug === car.brand)) problems.brand = "vyberte značku";
   if (!car.model.trim()) problems.model = "vyberte model";
-  if (car.year && !whole(car.year, 1900, CURRENT_YEAR + 1)) problems.year = "neplatný rok výroby";
-  if (car.purchaseYear && !whole(car.purchaseYear, 1900, CURRENT_YEAR)) problems.purchaseYear = "neplatný rok koupě";
+  if (car.year && !whole(car.year, GARAGE_LIMITS.yearMin, CURRENT_YEAR + 1)) problems.year = "neplatný rok výroby";
+  if (car.purchaseYear && !whole(car.purchaseYear, GARAGE_LIMITS.yearMin, CURRENT_YEAR)) problems.purchaseYear = "neplatný rok koupě";
   else if (car.purchaseYear && car.year && car.purchaseYear < car.year) problems.purchaseYear = "koupeno před výrobou?";
-  if (car.powerKw && !whole(car.powerKw, 1, 1500)) problems.powerKw = "neplatný výkon";
+  if (car.powerKw && !whole(car.powerKw, GARAGE_LIMITS.powerMin, GARAGE_LIMITS.powerMax)) problems.powerKw = "neplatný výkon";
   if (car.vin && !/^[A-HJ-NPR-Z0-9]{17}$/.test(car.vin)) problems.vin = "VIN má 17 znaků a neobsahuje písmena I, O, Q";
   return problems;
 }
@@ -132,14 +134,14 @@ export function cleanEntry(v: unknown): EntryInput | string {
   const text = (x: unknown, max: number) => (typeof x === "string" ? x.trim().slice(0, max) : "");
   const amount = (x: unknown, max: number) => (x === null || x === "" || x === undefined ? null : Number.isInteger(x) && (x as number) >= 0 && (x as number) <= max ? (x as number) : NaN);
   const entry = {
-    title: text(b.title, 120),
+    title: text(b.title, ENTRY_LIMITS.titleMax),
     body: text(b.body, MAX_ENTRY_BODY),
     category: text(b.category, 20),
-    costCzk: amount(b.costCzk, 100_000_000),
-    mileageKm: amount(b.mileageKm, 3_000_000),
+    costCzk: amount(b.costCzk, ENTRY_LIMITS.costMax),
+    mileageKm: amount(b.mileageKm, ENTRY_LIMITS.mileageMax),
     happenedOn: text(b.happenedOn, 10),
   };
-  if (entry.title.length < 3) return "Napište nadpis zápisu.";
+  if (entry.title.length < ENTRY_LIMITS.titleMin) return "Napište nadpis zápisu.";
   if (!(entry.category in ENTRY_CATEGORIES)) return "Vyberte téma zápisu.";
   if (Number.isNaN(entry.costCzk)) return "Neplatná cena.";
   if (Number.isNaN(entry.mileageKm)) return "Neplatný nájezd.";

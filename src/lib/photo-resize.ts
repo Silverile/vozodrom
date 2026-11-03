@@ -1,8 +1,9 @@
 "use client";
+import { PHOTO_CLIENT_MAX_SIDE } from "./form-constraints";
 
 // Photos are shrunk in the browser before upload: at most 1920 px on the longer side, WebP (JPEG
 // where WebP encoding is missing). Re-encoding also drops EXIF metadata such as GPS position.
-const MAX_SIDE = 1920;
+const MAX_SIDE = PHOTO_CLIENT_MAX_SIDE;
 
 export interface ResizedPhoto {
   blob: Blob;

@@ -5,6 +5,11 @@ import { getCity } from "./geo";
 import { BODY_KEYS, type ListingFuel, coversYear } from "./listing-catalog";
 import { type ModelLine, getMake, makesIn, modelLinesOf } from "./makes";
 
+export const VEHICLE_TEXT_LIMITS = { brand: 64, model: 80, generation: 80, engine: 80, color: 40, vin: 17 } as const;
+export const LISTING_NUMBER_LIMITS = { yearMin: 1950, mileageMin: 1, mileageMax: 1_500_000, priceMin: 1000, priceMax: 100_000_000, powerMin: 1, powerMax: 1500 } as const;
+export const LISTING_DESCRIPTION_MAX = 5000;
+const TEXT = VEHICLE_TEXT_LIMITS, LIMITS = LISTING_NUMBER_LIMITS;
+
 // The car listing a seller fills in on /pridat/. The same checks run in the browser (live hints)
 // and on the server (before saving), so a listing that passes one passes the other. Make, model
 // line and generation come from the catalogue (lib/makes); a model it does not know can be typed.
@@ -60,10 +65,10 @@ export function isDraft(v: unknown): v is Draft {
 export function cleanDraft(v: Draft): Draft {
   const text = (s: string, max: number) => s.trim().slice(0, max);
   return {
-    brand: text(v.brand, 64), model: text(v.model, 80), generation: text(v.generation ?? "", 80), year: v.year,
-    mileageKm: v.mileageKm, price: v.price, engine: text(v.engine, 80), fuel: v.fuel, transmission: v.transmission,
-    powerKw: v.powerKw, body: v.body, color: text(v.color, 40), region: v.region, city: v.city,
-    description: text(v.description, 5000), vin: text(v.vin, 17).toUpperCase(), features: cleanEquipment(v.features),
+    brand: text(v.brand, TEXT.brand), model: text(v.model, TEXT.model), generation: text(v.generation ?? "", TEXT.generation), year: v.year,
+    mileageKm: v.mileageKm, price: v.price, engine: text(v.engine, TEXT.engine), fuel: v.fuel, transmission: v.transmission,
+    powerKw: v.powerKw, body: v.body, color: text(v.color, TEXT.color), region: v.region, city: v.city,
+    description: text(v.description, LISTING_DESCRIPTION_MAX), vin: text(v.vin, TEXT.vin).toUpperCase(), features: cleanEquipment(v.features),
   };
 }
 
@@ -119,7 +124,7 @@ export function draftFieldProblems(draft: Draft): Partial<Record<DraftField, str
   const whole = (n: number, min: number, max: number) => Number.isInteger(n) && n >= min && n <= max;
   if (!makesIn("auto").some((m) => m.slug === draft.brand)) problems.brand = "vyberte značku";
   if (!draft.model.trim()) problems.model = "vyberte model";
-  if (!whole(draft.year, 1950, CURRENT_YEAR + 1)) problems.year = "vyplňte rok výroby";
+  if (!whole(draft.year, LIMITS.yearMin, CURRENT_YEAR + 1)) problems.year = "vyplňte rok výroby";
   else if (lineOf(draft)) {
     const { dated, matching } = generationsForYear(draft);
     const line = lineOf(draft)!;
@@ -132,11 +137,11 @@ export function draftFieldProblems(draft: Draft): Partial<Record<DraftField, str
   if (!(draft.body in BODY_KEYS)) problems.body = "vyberte karoserii";
   if (!draft.engine.trim()) problems.engine = "vyberte nebo napište motor";
   if (!FUELS.includes(draft.fuel as ListingFuel)) problems.fuel = "vyberte palivo";
-  if (!whole(draft.powerKw, 1, 1500)) problems.powerKw = "vyplňte výkon (kW)";
+  if (!whole(draft.powerKw, LIMITS.powerMin, LIMITS.powerMax)) problems.powerKw = "vyplňte výkon (kW)";
   if (draft.transmission !== "manuál" && draft.transmission !== "automat") problems.transmission = "vyberte převodovku";
   if (!draft.mileageKm) problems.mileageKm = "vyplňte nájezd (km)";
-  else if (!whole(draft.mileageKm, 1, 1_500_000)) problems.mileageKm = "neplatný nájezd";
-  if (!whole(draft.price, 1000, 100_000_000)) problems.price = "vyplňte cenu (Kč, při platbě najednou)";
+  else if (!whole(draft.mileageKm, LIMITS.mileageMin, LIMITS.mileageMax)) problems.mileageKm = "neplatný nájezd";
+  if (!whole(draft.price, LIMITS.priceMin, LIMITS.priceMax)) problems.price = "vyplňte cenu (Kč, při platbě najednou)";
   if (!REGIONS.includes(draft.region)) problems.place = "vyberte místo";
   else if (draft.city && getCity(draft.city)?.region !== draft.region) problems.place = "město nepatří do kraje";
   const vin = vinProblem(draft.vin);

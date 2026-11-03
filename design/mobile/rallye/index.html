@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vozodrom Rallye</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Asfalt tokens from src/app/globals.css */
+.ph{--bg:#0d0f12;--surface:#15181d;--field:#1b1f25;--ink:#f1f3f5;--muted:#9aa3ad;--line:#262a31;--brand:#2fd0a0;--brand-ink:#05261d;--brand-soft:#123a30;--accent:#ff6a2a;--accent-ink:#160b04;--good:#4ee08f;--warn:#ffb36b;--bad:#ff8a80;--photo:#20252c}
+.ph.light{--bg:#f4f6f8;--surface:#ffffff;--field:#eceff3;--ink:#14181d;--muted:#5a6370;--line:#d9dee4;--brand:#0b8466;--brand-ink:#ffffff;--brand-soft:#d9f3ea;--accent:#b83f08;--accent-ink:#ffffff;--good:#17803f;--warn:#995400;--bad:#b42318;--photo:#e3e7ec}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#08090b;color:#e8ebee;font-family:Barlow,system-ui,sans-serif;padding:32px 24px 64px}
+.intro{max-width:1300px;margin:0 auto 28px}
+.intro h1{font:700 28px Barlow}
+.intro p{font:500 15px/1.5 Barlow;color:#a6aeb7;max-width:760px;margin-top:8px}
+.board{display:flex;flex-wrap:wrap;gap:36px 28px;max-width:1300px;margin:0 auto}
+figure{width:390px}
+figcaption{font:600 14px Barlow;color:#c9cfd5;margin-bottom:10px}
+figcaption b{color:#2fd0a0;font-family:"Barlow Condensed";letter-spacing:1px;margin-right:6px}
+.ph{width:390px;height:844px;overflow:hidden;position:relative;background:var(--bg);color:var(--ink);border-radius:34px;border:1px solid #2a2f36}
+.st{height:48px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 28px 8px;font:600 15px Barlow}
+.hd{padding:4px 16px 10px}
+.hd h2{font:700 30px Barlow;letter-spacing:-.3px}
+.hd .sub{font:500 14px Barlow;color:var(--muted);margin-top:2px}
+.back{display:flex;align-items:center;gap:10px;padding:6px 12px 8px;font:600 16px Barlow}
+.back i{font-style:normal;font-size:22px;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.chips{display:flex;gap:8px;margin-top:10px;overflow:hidden}
+.chips a{font:600 14px Barlow;padding:9px 14px;border-radius:20px;background:var(--field);color:var(--muted);white-space:nowrap}
+.chips a.on{background:var(--brand);color:var(--brand-ink)}
+.seg{display:flex;background:var(--field);border-radius:12px;padding:4px;margin-top:12px}
+.seg a{flex:1;text-align:center;font:700 14px Barlow;padding:10px 0;border-radius:9px;color:var(--muted)}
+.seg a.on{background:var(--surface);color:var(--ink);box-shadow:inset 0 -2px 0 var(--brand)}
+/* roadbook */
+.rb{margin:0 12px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.rh{display:grid;grid-template-columns:var(--c1,92px) 56px 1fr;background:var(--surface);font:700 11px "Barlow Condensed";letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.rh div{padding:10px 12px}
+.row{display:grid;grid-template-columns:var(--c1,92px) 56px 1fr;border-top:1px solid var(--line)}
+.row .m{padding:14px 12px;font:700 18px/1 "Barlow Condensed";font-variant-numeric:tabular-nums;border-right:1px solid var(--line)}
+.row .m small{display:block;font:500 12px Barlow;color:var(--muted);margin-top:6px}
+.row .tu{display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line)}
+.tu svg{width:32px;height:32px;stroke:var(--brand);fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.row .n{padding:12px 14px}
+.n .k{font:600 12px Barlow;color:var(--muted)}
+.n h3{font:600 16px/1.25 Barlow;margin:3px 0 6px}
+.n .c{font:700 15px Barlow;color:var(--accent);font-variant-numeric:tabular-nums}
+.row.new .m{box-shadow:inset 0 3px 0 var(--brand)}
+.row.pend .tu svg{stroke-dasharray:3 3;stroke:var(--warn)}
+.row.void{opacity:.82}.row.void h3{text-decoration:line-through}
+.stagebar{display:flex;gap:1px;margin:0 12px 10px;background:var(--line);border-radius:8px;overflow:hidden}
+.stagebar div{flex:1;background:var(--surface);padding:10px 12px}
+.stagebar small{display:block;font:700 11px "Barlow Condensed";letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+.stagebar b{font:700 17px "Barlow Condensed";font-variant-numeric:tabular-nums}
+/* start number */
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--bg);font:800 20px "Barlow Condensed";border:3px solid var(--brand)}
+.photo{background:linear-gradient(150deg,var(--photo),var(--field));position:relative}
+.tag{display:inline-block;font:700 11px "Barlow Condensed";letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:var(--brand-soft);color:var(--brand)}
+.light .tag{color:#07604a}
+.note{margin:10px 12px 0;padding:10px 12px;border-radius:8px;border:1px dashed var(--line);font:500 13px/1.4 Barlow;color:var(--muted)}
+/* bars */
+.fab{position:absolute;right:16px;bottom:104px;height:56px;padding:0 22px;border-radius:28px;background:var(--accent);color:var(--accent-ink);font:700 16px Barlow;display:flex;align-items:center;gap:6px}
+.cta{position:absolute;left:0;right:0;bottom:0;padding:12px 12px 30px;background:var(--surface);border-top:1px solid var(--line);display:flex;gap:10px}
+.btn{height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:700 16px Barlow;padding:0 18px}
+.btn.p{flex:1;background:var(--accent);color:var(--accent-ink)}
+.btn.s{background:var(--field);color:var(--ink);min-width:52px}
+.btn.g{flex:1;background:var(--brand);color:var(--brand-ink)}
+.btn.d{flex:1;background:var(--field);color:var(--bad)}
+nav.tb{position:absolute;left:0;right:0;bottom:0;height:86px;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:10px 6px 0}
+nav.tb a{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font:600 11px Barlow;color:var(--muted);position:relative}
+nav.tb svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.tb a.on{color:var(--brand)}
+.badge{position:absolute;top:-4px;left:54%;background:var(--accent);color:var(--accent-ink);font:700 11px Barlow;border-radius:9px;padding:1px 6px}
+.demo{position:absolute;left:16px;font:600 11px Barlow;letter-spacing:1px;color:var(--muted)}
+/* sheet */
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:22px 22px 0 0;padding:10px 12px 34px}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sheet h3{font:700 20px Barlow;padding:0 6px 10px}
+.opt{display:grid;grid-template-columns:56px 1fr 24px;align-items:center;gap:6px;padding:12px 6px;border-top:1px solid var(--line)}
+.opt .ic{width:48px;height:48px;border-radius:12px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center}
+.opt .ic svg{width:28px;height:28px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.opt b{font:600 16px Barlow;display:block}
+.opt small{font:500 13px Barlow;color:var(--muted)}
+.opt i{font-style:normal;color:var(--muted);font-size:20px}
+/* chat */
+.msgs{padding:8px 14px;display:flex;flex-direction:column;gap:8px}
+.b{max-width:78%;padding:10px 13px;border-radius:16px;font:500 15px/1.35 Barlow}
+.b.in{background:var(--field);border-bottom-left-radius:4px}
+.b.out{align-self:flex-end;background:var(--brand);color:var(--brand-ink);border-bottom-right-radius:4px}
+.b small{display:block;font:500 11px Barlow;opacity:.75;margin-top:4px}
+.ctx{margin:0 12px 8px;display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:12px}
+.ctx .photo{height:44px;border-radius:8px}
+.input{position:absolute;left:0;right:0;bottom:0;padding:10px 12px 30px;background:var(--surface);border-top:1px solid var(--line);display:flex;gap:8px}
+.input div{flex:1;height:46px;border-radius:23px;background:var(--field);display:flex;align-items:center;padding:0 16px;color:var(--muted);font:500 15px Barlow}
+.input span{width:46px;height:46px;border-radius:23px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font:700 20px Barlow}
+.fig{display:flex;justify-content:center;padding:10px 0}
+.fig svg{width:220px;height:100px;stroke:var(--ink);fill:none;stroke-width:1.6}
+</style></head><body>
+<div class="intro">
+  <h1>Vozodrom · Rallye roadbook</h1>
+  <p>Mobilní aplikace v barvách webu (Asfalt, tyrkys, oranžová). Podpis směru: řádek roadbooku, tedy vlevo kilometry nebo rok, uprostřed značka události, vpravo zápis. Navigace palcem: spodní lišta, hlavní akce v dolní třetině. Všechna data jsou ukázková.</p>
+</div>
+<div class="board">
+
+<!-- 1 Příběhy -->
+<figure><figcaption><b>01</b>Příběhy · lenta komunity</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="hd"><h2>Příběhy</h2><div class="chips"><a class="on">Vše</a><a>Sleduji</a><a>Moje generace</a><a>Okolí</a></div></div>
+<section class="rb"><div class="rh"><div>km</div><div>akce</div><div>zápis</div></div>
+<div class="row new"><div class="m">186 400<small>28. 10.</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 4v7M16 21v7M4 16h7M21 16h7"/></svg></div><div class="n"><div class="k">Octavia III · 2.0 TDI</div><h3>Výměna rozvodů a vodní pumpy</h3><div class="c">14 200 Kč</div></div></div>
+<div class="row"><div class="m">210 950<small>21. 10.</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M5 26L16 7l11 19z"/><path d="M16 14v5M16 22v.5"/></svg></div><div class="n"><div class="k">Fabia II · 1.2 HTP</div><h3>Nová spojka po 210 tisících</h3><div class="c">9 800 Kč</div></div></div>
+<div class="row"><div class="m">98 120<small>19. 10.</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M10 6h12l-2 21h-8z"/><path d="M11 13h10"/></svg></div><div class="n"><div class="k">Superb III · 1.4 TSI</div><h3>Pravidelný servis, olej a filtry</h3><div class="c">4 650 Kč</div></div></div>
+</section>
+<div class="demo" style="bottom:96px">UKÁZKOVÁ DATA</div>
+<div class="fab">＋ Zapsat</div>
+<nav class="tb"><a class="on"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 10h8M8 14h8"/></svg>Příběhy</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Inzeráty</a><a><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4z"/><path d="M8 8V5h8v3"/></svg>Katalog</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><path d="M3 11l9-6 9 6v9H3z"/></svg>Garáž</a></nav>
+</div></figure>
+
+<!-- 2 Deník auta -->
+<figure><figcaption><b>02</b>Deník auta · veřejná stránka vozu</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Příběhy</div>
+<div style="display:flex;gap:12px;align-items:center;padding:0 16px 12px"><span class="num">7</span><div><div style="font:700 22px Barlow">Octavia III Combi</div><div style="font:500 14px Barlow;color:var(--muted)">2.0 TDI · 110 kW · 2016 · majitel od 2019</div></div></div>
+<div class="stagebar"><div><small>Najeto u nás</small><b>94 300 km</b></div><div><small>Zápisů</small><b>23</b></div><div><small>Utraceno</small><b>87 400 Kč</b></div></div>
+<div style="display:flex;gap:8px;padding:0 12px 10px"><div class="btn g" style="height:44px">Sledovat</div><div class="btn s" style="height:44px">♡ 41</div><div class="btn s" style="height:44px">Sdílet</div></div>
+<section class="rb" style="--c1:96px"><div class="rh"><div>km · datum</div><div>akce</div><div>zápis</div></div>
+<div class="row"><div class="m">186 400<small>10/2026</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 4v7M16 21v7M4 16h7M21 16h7"/></svg></div><div class="n"><h3>Rozvody a vodní pumpa</h3><div class="c">14 200 Kč</div></div></div>
+<div class="row"><div class="m">171 900<small>03/2026</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 24h16M10 24V12l6-5 6 5v12"/><path d="M14 24v-6h4v6"/></svg></div><div class="n"><h3>STK bez závad</h3><div class="c">1 800 Kč</div></div></div>
+<div class="row"><div class="m">160 250<small>09/2025</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="11" cy="21" r="5"/><circle cx="23" cy="21" r="5"/><path d="M11 16l4-8h6"/></svg></div><div class="n"><h3>Zimní pneu Nokian, 4 ks</h3><div class="c">12 600 Kč</div></div></div>
+</section>
+<div class="fab" style="bottom:40px">＋ Zapsat</div>
+</div></figure>
+
+<!-- 3 Inzeráty -->
+<figure><figcaption><b>03</b>Inzeráty · auta, stroje, díly</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="hd"><h2>Inzeráty</h2>
+<div class="seg"><a class="on">Auta</a><a>Stroje</a><a>Díly</a></div>
+<div class="chips"><a class="on">Octavia III ✕</a><a>do 300 tis.</a><a>Diesel</a><a>Kraj ▾</a></div></div>
+<div style="display:flex;justify-content:space-between;padding:0 16px 8px;font:600 13px Barlow;color:var(--muted)"><span>128 vozů</span><span>Řadit: nejnovější ▾</span></div>
+<section class="rb" style="--c1:104px"><div class="rh"><div>rok · km</div><div>stav</div><div>vůz · cena</div></div>
+<div class="row new"><div class="m">2017<small>154 020 km</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 16l6 6 11-12"/></svg></div><div class="n"><div class="k">Combi · 2.0 TDI · Praha</div><h3>STK do 2027, servisní kniha</h3><div class="c">289 000 Kč</div></div></div>
+<div class="row"><div class="m">2015<small>201 300 km</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 16l6 6 11-12"/></svg></div><div class="n"><div class="k">Liftback · 1.6 TDI · Brno</div><h3>Po rozvodech, 2. majitel</h3><div class="c">219 000 Kč</div></div></div>
+<div class="row pend"><div class="m">2018<small>— km</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M16 10v7M16 21v.5"/></svg></div><div class="n"><div class="k">Combi · 1.5 TSI · Plzeň</div><h3>Stav km neuveden</h3><div class="c">265 000 Kč</div></div></div>
+</section>
+<div class="demo" style="bottom:96px">UKÁZKOVÁ DATA</div>
+<div class="fab">Hlídat hledání</div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/></svg>Příběhy</a><a class="on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Inzeráty</a><a><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4z"/></svg>Katalog</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><path d="M3 11l9-6 9 6v9H3z"/></svg>Garáž</a></nav>
+</div></figure>
+
+<!-- 4 Detail inzerátu -->
+<figure><figcaption><b>04</b>Detail inzerátu · data a majitelé generace</figcaption>
+<div class="ph"><div class="photo" style="height:250px"><div class="st" style="position:absolute;left:0;right:0"><span>9:41</span><span>●●● 5G ▮</span></div><div style="position:absolute;bottom:10px;right:12px;font:600 12px Barlow;background:rgba(0,0,0,.6);color:#fff;padding:3px 8px;border-radius:10px">1 / 14</div></div>
+<div style="padding:12px 16px 8px"><div style="font:600 13px Barlow;color:var(--muted)">Škoda Octavia III Combi · 2.0 TDI</div><div style="font:700 22px Barlow;margin-top:2px">STK do 2027, servisní kniha</div><div style="font:800 26px 'Barlow Condensed';color:var(--accent);margin-top:4px">289 000 Kč</div></div>
+<div class="stagebar"><div><small>Rok</small><b>2017</b></div><div><small>Najeto</small><b>154 020</b></div><div><small>Výkon</small><b>110 kW</b></div><div><small>Palivo</small><b>Nafta</b></div></div>
+<div style="padding:4px 16px 6px;font:700 12px 'Barlow Condensed';letter-spacing:1px;color:var(--muted);text-transform:uppercase">Co psali majitelé této generace</div>
+<section class="rb" style="--c1:92px"><div class="row" style="border-top:0"><div class="m">~180 tis.<small>12 zápisů</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 4v7M16 21v7M4 16h7M21 16h7"/></svg></div><div class="n"><h3>Rozvody a vodní pumpa</h3><div class="c">průměr 13 900 Kč</div></div></div>
+<div class="row"><div class="m">~150 tis.<small>7 zápisů</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 20h16l-3-8H11z"/><path d="M12 20v4M20 20v4"/></svg></div><div class="n"><h3>Čištění DPF, EGR</h3><div class="c">průměr 9 400 Kč</div></div></div></section>
+<div class="cta"><div class="btn s">♡</div><div class="btn s">⇄</div><div class="btn p">Napsat prodejci</div></div>
+</div></figure>
+
+<!-- 5 Katalog -->
+<figure><figcaption><b>05</b>Katalog · generace jako etapy</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Škoda</div>
+<div class="hd" style="padding-top:0"><h2>Octavia</h2><div class="sub">4 generace · 1996 až dosud</div></div>
+<section class="rb" style="--c1:96px"><div class="rh"><div>roky</div><div>etapa</div><div>generace</div></div>
+<div class="row"><div class="m">2020–<small>sériově</small></div><div class="tu"><span class="num" style="width:36px;height:36px;min-width:36px;font-size:16px;border-width:2px">4</span></div><div class="n"><h3>Octavia IV</h3><div class="k">38 inzerátů · 9 deníků</div></div></div>
+<div class="row new"><div class="m">2013–2020<small>facelift 2017</small></div><div class="tu"><span class="num" style="width:36px;height:36px;min-width:36px;font-size:16px;border-width:2px">3</span></div><div class="n"><h3>Octavia III</h3><div class="k">128 inzerátů · 41 deníků</div></div></div>
+<div class="row"><div class="m">2004–2013<small>facelift 2008</small></div><div class="tu"><span class="num" style="width:36px;height:36px;min-width:36px;font-size:16px;border-width:2px">2</span></div><div class="n"><h3>Octavia II</h3><div class="k">96 inzerátů · 27 deníků</div></div></div>
+<div class="row"><div class="m">1996–2010<small>Tour od 2004</small></div><div class="tu"><span class="num" style="width:36px;height:36px;min-width:36px;font-size:16px;border-width:2px">1</span></div><div class="n"><h3>Octavia I</h3><div class="k">22 inzerátů · 6 deníků</div></div></div>
+</section>
+<div class="fig"><svg viewBox="0 0 220 100"><path d="M10 74h200M24 74V50l22-22h128l22 22v24M52 50h116M36 60h22M162 60h22M34 74v14h20V74M166 74v14h20V74"/></svg></div>
+<div style="text-align:center;font:500 12px Barlow;color:var(--muted)">Kresba přídě · Octavia III · stejné měřítko pro všechny generace</div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/></svg>Příběhy</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Inzeráty</a><a class="on"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4z"/></svg>Katalog</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><path d="M3 11l9-6 9 6v9H3z"/></svg>Garáž</a></nav>
+</div></figure>
+
+<!-- 6 Generace detail light -->
+<figure><figcaption><b>06</b>Generace · data STK a registru (světlý motiv)</figcaption>
+<div class="ph light"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Octavia</div>
+<div class="hd" style="padding-top:0"><h2>Octavia III</h2><div class="sub">2013–2020 · facelift 2017</div>
+<div class="seg"><a class="on">Data</a><a>Motory</a><a>Majitelé</a><a>Inzeráty</a></div></div>
+<div class="stagebar"><div><small>V registru</small><b>—</b></div><div><small>Prošlo STK</small><b>—</b></div><div><small>Průměr km</small><b>—</b></div></div>
+<div class="note">Údaj zatím nemáme. Mezeru ukazujeme jako mezeru, nic nedopočítáváme.</div>
+<div style="padding:14px 16px 6px;font:700 12px 'Barlow Condensed';letter-spacing:1px;color:var(--muted);text-transform:uppercase">Časté závady podle STK · zdroj: STK</div>
+<section class="rb" style="--c1:92px"><div class="row" style="border-top:0"><div class="m">B<small>vážná</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M5 26L16 7l11 19z"/><path d="M16 14v5"/></svg></div><div class="n"><h3>Brzdy, nerovnoměrný účinek</h3><div class="k">podíl závad · ukázka</div></div></div>
+<div class="row"><div class="m">A<small>lehká</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="9"/><path d="M12 16h8"/></svg></div><div class="n"><h3>Osvětlení, seřízení světel</h3><div class="k">podíl závad · ukázka</div></div></div></section>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/></svg>Příběhy</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Inzeráty</a><a class="on"><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4z"/></svg>Katalog</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy</a><a><svg viewBox="0 0 24 24"><path d="M3 11l9-6 9 6v9H3z"/></svg>Garáž</a></nav>
+</div></figure>
+
+<!-- 7 Profil / Garáž -->
+<figure><figcaption><b>07</b>Garáž · profil uživatele</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 16px 12px"><div style="display:flex;gap:12px;align-items:center"><div style="width:56px;height:56px;border-radius:16px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font:800 22px 'Barlow Condensed'">JN</div><div><div style="font:700 22px Barlow">jirka_naftak</div><div style="font:500 13px Barlow;color:var(--muted)">Na Vozodromu od 2025 · 3 auta</div></div></div><div style="font-size:22px;color:var(--muted);width:44px;text-align:center">⚙</div></div>
+<div class="seg" style="margin:0 12px 12px"><a class="on">Garáž</a><a>Inzeráty</a><a>Uložené</a></div>
+<section class="rb" style="--c1:72px"><div class="rh"><div>číslo</div><div>stav</div><div>vůz</div></div>
+<div class="row"><div class="m" style="display:flex;align-items:center"><span class="num">7</span></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 16l6 6 11-12"/></svg></div><div class="n"><h3>Octavia III Combi</h3><div class="k">2.0 TDI · 186 400 km · 23 zápisů</div></div></div>
+<div class="row"><div class="m" style="display:flex;align-items:center"><span class="num">12</span></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 16l6 6 11-12"/></svg></div><div class="n"><h3>Fabia II</h3><div class="k">1.2 HTP · 210 950 km · 9 zápisů</div></div></div>
+<div class="row void"><div class="m" style="display:flex;align-items:center"><span class="num" style="border-color:var(--muted)">3</span></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 24L24 8"/></svg></div><div class="n"><h3>Felicia Combi</h3><div class="k">Prodáno 2024 · deník zůstává</div></div></div>
+</section>
+<div style="padding:12px"><div class="btn s" style="width:100%;border:1px dashed var(--line);background:transparent">＋ Přidat auto do garáže</div></div>
+<div style="margin:0 12px;padding:12px;border-radius:12px;background:var(--surface);display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line)"><div><div style="font:600 15px Barlow">Správa</div><div style="font:500 13px Barlow;color:var(--muted)">Moderátor · 4 čekají na rozhodnutí</div></div><span class="badge" style="position:static">4</span></div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/></svg>Příběhy</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Inzeráty</a><a><svg viewBox="0 0 24 24"><path d="M4 8h16v11H4z"/></svg>Katalog</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-6 9 6v9H3z"/></svg>Garáž</a></nav>
+</div></figure>
+
+<!-- 8 Přidat sheet -->
+<figure><figcaption><b>08</b>Přidat · výběr palcem</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="hd"><h2>Příběhy</h2></div>
+<div class="scrim"></div>
+<div class="sheet"><div class="grab"></div><h3>Co chcete přidat?</h3>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M8 5h12l4 4v18H8z"/><path d="M12 14h8M12 19h8"/></svg></div><div><b>Zápis do deníku</b><small>Oprava, servis, tankování, STK</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M6 20l3-8h14l3 8v5H6z"/><circle cx="11" cy="21" r="1.5"/><circle cx="21" cy="21" r="1.5"/></svg></div><div><b>Inzerát auta</b><small>Značka → model → rok → generace → motor</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M5 22h14V12h5l3 5v5h-2M5 22V9h10"/><circle cx="10" cy="24" r="2"/><circle cx="23" cy="24" r="2"/></svg></div><div><b>Inzerát stroje</b><small>Spec. technika · připravujeme</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="3"/></svg></div><div><b>Inzerát dílu</b><small>Díly a pneu · připravujeme</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M4 16l12-9 12 9v11H4z"/></svg></div><div><b>Auto do garáže</b><small>Vlastní deník vozu</small></div><i>›</i></div>
+</div></div></figure>
+
+<!-- 9 Zprávy -->
+<figure><figcaption><b>09</b>Zprávy · chat s prodejcem</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Zprávy</div>
+<div class="ctx"><div class="photo"></div><div><div style="font:600 14px Barlow">Octavia III Combi · 2017</div><div style="font:700 15px Barlow;color:var(--accent)">289 000 Kč</div></div></div>
+<div class="msgs">
+<div class="b out">Dobrý den, je auto ještě k mání? Kdy by šla prohlídka?<small>18:02 · přečteno</small></div>
+<div class="b in">Dobrý den, ano. V sobotu dopoledne v Praze 9.<small>18:10</small></div>
+<div class="b out">Můžu přijet s mechanikem a projet ho na STK?<small>18:11</small></div>
+<div class="b in">Jasně, servisní knížku přivezu.<small>18:15</small></div>
+</div>
+<div class="input"><div>Napište zprávu…</div><span>↑</span></div>
+</div></figure>
+
+<!-- 10 Správa -->
+<figure><figcaption><b>10</b>Správa · fronta moderace</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Garáž</div>
+<div class="hd" style="padding-top:0"><h2>Správa</h2>
+<div class="seg"><a class="on">Inzeráty 3</a><a>Hlášení 1</a><a>Komunita</a><a>Katalog</a></div></div>
+<section class="rb" style="--c1:84px"><div class="rh"><div>čeká</div><div>stav</div><div>položka</div></div>
+<div class="row pend"><div class="m">12 min<small>auto-kontrola</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M16 10v7M16 21v.5"/></svg></div><div class="n"><div class="k">Inzerát · Superb III</div><h3>Podezřele nízká cena</h3><div class="k" style="color:var(--warn)">Pravidlo: cena pod trhem</div></div></div>
+<div class="row pend"><div class="m">1 h<small>auto-kontrola</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M16 10v7M16 21v.5"/></svg></div><div class="n"><div class="k">Inzerát · Fabia III</div><h3>Kontakt v popisu</h3><div class="k" style="color:var(--warn)">Pravidlo: kontakt mimo chat</div></div></div>
+<div class="row void"><div class="m">včera<small>zamítnuto</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M9 9l14 14M23 9L9 23"/></svg></div><div class="n"><div class="k">Inzerát · Octavia II</div><h3>Duplicitní inzerát</h3></div></div>
+</section>
+<div class="cta"><div class="btn d">Zamítnout</div><div class="btn g">Schválit</div></div>
+</div></figure>
+
+<!-- 11 Katalog editor -->
+<figure><figcaption><b>11</b>Správa katalogu · úprava a publikace</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="back"><i>‹</i>Octavia III</div>
+<div class="hd" style="padding-top:0"><h2>Upravit generaci</h2><div class="sub">Admin · změny se zveřejní po sestavení webu</div></div>
+<section class="rb" style="--c1:96px"><div class="rh"><div>pole</div><div>stav</div><div>hodnota</div></div>
+<div class="row"><div class="m" style="font-size:15px">Roky<small>výroba</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M8 16l6 6 11-12"/></svg></div><div class="n"><h3>2013–2020</h3><div class="k">Zdroj: výrobce</div></div></div>
+<div class="row new"><div class="m" style="font-size:15px">Facelift<small>upraveno</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M7 25l4-1 13-13-3-3L8 21z"/></svg></div><div class="n"><h3>2017, nová příď</h3><div class="k">Uloženo, čeká na publikaci</div></div></div>
+<div class="row"><div class="m" style="font-size:15px;color:var(--bad)">Délka<small>konflikt</small></div><div class="tu"><svg viewBox="0 0 32 32" style="stroke:var(--bad)"><path d="M8 8l16 16M24 8L8 24"/><path d="M8 16h16" stroke-dasharray="2 3"/></svg></div><div class="n"><h3>4 659 mm</h3><div class="k" style="color:var(--bad)">Mezitím změnil jiný admin</div></div></div>
+<div class="row"><div class="m" style="font-size:15px">Kresba<small>960×600</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M5 22h22M8 22v-6l5-5h6l5 5v6"/></svg></div><div class="n"><h3>Příď faceliftu</h3><div class="k">WebP · nahráno</div></div></div>
+</section>
+<div class="note">Stavy: uloženo → publikace vyžádána → zveřejněno. Spuštění sestavení ještě neznamená, že je změna venku.</div>
+<div class="cta"><div class="btn s" style="flex:1">Uložit</div><div class="btn p">Publikovat 2 změny</div></div>
+</div></figure>
+
+<!-- 12 Detail stroje light -->
+<figure><figcaption><b>12</b>Inzerát stroje · spec. technika (světlý)</figcaption>
+<div class="ph light"><div class="photo" style="height:230px"><div class="st" style="position:absolute;left:0;right:0"><span>9:41</span><span>●●● 5G ▮</span></div><span class="tag" style="position:absolute;left:12px;bottom:12px">Připravujeme</span></div>
+<div style="padding:12px 16px 8px"><div style="font:600 13px Barlow;color:var(--muted)">Stroje · Rypadlo-nakladač</div><div style="font:700 22px Barlow;margin-top:2px">JCB 3CX, 2014</div><div style="font:800 26px 'Barlow Condensed';color:var(--accent);margin-top:4px">1 450 000 Kč <span style="font:500 14px Barlow;color:var(--muted)">bez DPH</span></div></div>
+<div class="stagebar"><div><small>Rok</small><b>2014</b></div><div><small>Motohodiny</small><b>8 400 mth</b></div><div><small>Výkon</small><b>68 kW</b></div></div>
+<section class="rb" style="--c1:104px"><div class="rh"><div>mth · datum</div><div>akce</div><div>servis</div></div>
+<div class="row"><div class="m">8 200<small>06/2026</small></div><div class="tu"><svg viewBox="0 0 32 32"><path d="M10 6h12l-2 21h-8z"/><path d="M11 13h10"/></svg></div><div class="n"><h3>Výměna hydraulického oleje</h3></div></div>
+<div class="row"><div class="m">7 600<small>09/2025</small></div><div class="tu"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5"/><path d="M16 4v7M16 21v7M4 16h7M21 16h7"/></svg></div><div class="n"><h3>Nové čepy a pouzdra ramene</h3></div></div></section>
+<div class="cta"><div class="btn s">♡</div><div class="btn p">Napsat prodejci</div></div>
+</div></figure>
+
+</div>
+</body></html>

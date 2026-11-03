@@ -2,14 +2,17 @@ import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { betterAuth } from "better-auth";
+import { expo } from "@better-auth/expo";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { nextCookies } from "better-auth/next-js";
 import { admin } from "better-auth/plugins/admin";
+import { bearer } from "better-auth/plugins/bearer";
 import { headers } from "next/headers";
 import { cache } from "react";
 import { getDb } from "@/db";
 import * as schema from "@/db/schema";
 import { sendMail } from "./mail";
+import { developmentWebOrigins } from "./development-cors";
 
 export const ROLES = ["user", "dealer", "moderator", "admin"] as const;
 export type Role = (typeof ROLES)[number];
@@ -33,6 +36,7 @@ export const getAuth = cache(() => {
   return betterAuth({
     baseURL: env.BETTER_AUTH_URL,
     secret: env.BETTER_AUTH_SECRET,
+    trustedOrigins: ["vozodrom://", "vozodrom://*", ...developmentWebOrigins(), ...(process.env.NODE_ENV === "development" ? ["exp://", "exp://**"] : [])],
     database: drizzleAdapter(getDb(), { provider: "pg", schema }),
     telemetry: { enabled: false },
     emailAndPassword: {
@@ -68,7 +72,7 @@ export const getAuth = cache(() => {
     // Every signed-in request reads the session; a signed cookie copy for two minutes saves that
     // database round trip. A ban or sign-out elsewhere therefore takes effect within two minutes.
     session: { cookieCache: { enabled: true, maxAge: 120 } },
-    plugins: [admin({ defaultRole: "user", adminRoles: ["admin"] }), nextCookies()],
+    plugins: [admin({ defaultRole: "user", adminRoles: ["admin"] }), bearer(), expo(), nextCookies()],
   });
 });
 

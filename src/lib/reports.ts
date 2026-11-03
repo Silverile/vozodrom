@@ -24,6 +24,7 @@ import { redress, statementOfReasons } from "./statement";
 const HIDE_AT = 3;
 /** Notices one e-mail address may send per hour, against flooding. */
 const PER_HOUR = 5;
+export const ANONYMOUS_REPORT_CATEGORY = "deti";
 
 export type ReportRow = typeof report.$inferSelect;
 
@@ -49,7 +50,7 @@ export function parseNotice(body: unknown): NoticeInput {
   };
   if (!REPORT_CATEGORIES.includes(notice.category as ReportCategory)) throw new ListingError(422, "Vyberte důvod hlášení.");
   if (notice.explanation.length < 20) throw new ListingError(422, "Popište, co je s inzerátem v nepořádku (alespoň 20 znaků).");
-  const anonymousAllowed = notice.category === "deti";
+  const anonymousAllowed = notice.category === ANONYMOUS_REPORT_CATEGORY;
   if (!notice.name && !anonymousAllowed) throw new ListingError(422, "Uveďte své jméno.");
   if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(notice.email) && !(anonymousAllowed && !notice.email))
     throw new ListingError(422, "Uveďte platný e-mail, pošleme na něj výsledek.");
