@@ -180,7 +180,7 @@ export function aiPrompt(card: ModelCard, title: string): string {
 
 PRAVIDLA
 - Vrať CELOU kartu jako jeden platný JSON v jednom bloku kódu. Žádné komentáře uvnitř JSON, nic nezkracuj („…“), nevynechávej generace ani pole.
-- Zachovej strukturu: stejné klíče a typy. Čísla jsou čísla (ne text), neznámá hodnota je null, prázdný seznam je []. Nové položky seznamů mají tvar podle vzorů níže.
+- Zachovej strukturu: stejné klíče a typy. Čísla jsou čísla (ne text), neznámá hodnota je null, prázdný seznam je []. Nové položky seznamů mají tvar podle vzorů níže. Klíče, které karta má a vzory ne (např. powerRangeCoverage, noteCs, kind), jsou platné: nemaž je.
 - Jednotky: rozměry v mm (dimensionsMm), kufr v litrech (trunkL), výkon v kW (powerKw…; 1 k = 0,7355 kW), točivý moment v Nm, hmotnost v kg, spotřeba v l/100 km, roky jako celá čísla.
 - from/to generace = roky sériové výroby (ne předsériová výroba ani ohlášení). Vyráběná generace má to: null a current: true.
 - Seznamy engines a transmissions jsou souhrnem verzí v trims: co je v trims, má být i tam.
@@ -198,9 +198,9 @@ PRAVIDLA
 VZORY POLOŽEK SEZNAMŮ GENERACE (čísla jsou jen příklad tvaru, ne údaje tohoto modelu)
 ${shapes}
 
-KARTA
+KARTA (na jednom řádku kvůli délce; vrať ji klidně formátovanou)
 \`\`\`json
-${JSON.stringify(card, null, 2)}
+${JSON.stringify(card)}
 \`\`\`
 `;
 }

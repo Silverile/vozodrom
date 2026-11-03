@@ -411,10 +411,11 @@ export default function CatalogEditorPanel({
   async function copyJson(forAi: boolean) {
     if (!view) return;
     try {
-      await navigator.clipboard.writeText(forAi ? aiPrompt(view.card, title) : JSON.stringify(view.card, null, 2));
+      const text = forAi ? aiPrompt(view.card, title) : JSON.stringify(view.card, null, 2);
+      await navigator.clipboard.writeText(text);
       setNotice(
         forAi
-          ? "Ve schránce je karta s pokyny pro AI: vložte ji do chatu, případně připište svůj úkol. Odpověď vložte tlačítkem „Vložit JSON“, celou i s textem okolo."
+          ? `Ve schránce je karta s pokyny pro AI (${text.length.toLocaleString("cs")} znaků): vložte ji do chatu, případně připište svůj úkol. Odpověď vložte tlačítkem „Vložit JSON“, celou i s textem okolo.${text.length > 8000 ? " Některé chaty (Google) dlouhý text ořežou; ChatGPT nebo Claude ho vezmou celý." : ""}`
           : "Karta modelu je ve schránce jako JSON. Opravenou ji vložte tlačítkem „Vložit JSON“.",
       );
     } catch {
