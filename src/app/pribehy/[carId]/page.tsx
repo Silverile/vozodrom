@@ -8,7 +8,8 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import { getSession } from "@/lib/auth";
 import { FUEL_LABEL } from "@/lib/catalog";
 import { formatDate, formatKm, formatPrice } from "@/lib/format";
-import { CAR_DRIVES, ENTRY_CATEGORIES, carLine, carName, carTitle, paragraphs } from "@/lib/garage";
+import { CAR_DRIVES, ENTRY_CATEGORIES, carLine, carName, carTitle } from "@/lib/garage";
+import { Markup, plainText } from "@/lib/markup";
 import { carPage } from "@/lib/garage-store";
 import { BODY_KEYS } from "@/lib/listing-catalog";
 import { listings as testListings } from "@/lib/listings";
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!page) return { title: "Příběh auta" };
   return {
     title: `${carTitle(page.car.data)} — příběh auta`,
-    description: page.car.data.story.slice(0, 160) || `Příběh ${carName(page.car.data)}: opravy, úpravy a cesty podle majitele.`,
+    description: plainText(page.car.data.story).slice(0, 160) || `Příběh ${carName(page.car.data)}: opravy, úpravy a cesty podle majitele.`,
     ...(page.car.hiddenReason && { robots: { index: false } }),
   };
 }
@@ -97,9 +98,7 @@ export default async function CarLogbookPage({ params }: { params: Params }) {
           {data.story && (
             <section className="card p-5">
               <h2 className="font-bold text-lg mb-2">O autě</h2>
-              <div className="space-y-3 text-[0.95rem] leading-relaxed">
-                {paragraphs(data.story).map((p, i) => <p key={i} className="whitespace-pre-line">{p}</p>)}
-              </div>
+              <Markup text={data.story} className="text-[0.95rem] leading-relaxed" />
             </section>
           )}
 

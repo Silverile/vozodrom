@@ -1,29 +1,62 @@
-// Guides for the "Novinky a rady" section. Practical, evergreen articles rather than invented
-// news about real companies; legal facts are taken from the statutes and ministry pages that
-// the přepis guide and the contract were checked against (October 2026).
+// Articles of the "Novinky a rady" section. The guides below ship with the site: practical,
+// evergreen articles rather than invented news about real companies; legal facts are taken from the
+// statutes and ministry pages that the přepis guide and the contract were checked against (October
+// 2026). Staff add, change and delete articles on the site (lib/article-store); a stored article
+// with the same slug replaces one of these. Bodies are formatted text (lib/markup).
 
-export type ArticleCategory = "Rady" | "Úřady" | "Elektromobily" | "Pneumatiky";
+export const ARTICLE_CATEGORIES = ["Rady", "Úřady", "Elektromobily", "Pneumatiky", "Novinky"] as const;
+export type ArticleCategory = (typeof ARTICLE_CATEGORIES)[number];
 
-export interface Block {
+/** Covers an article can have (CategoryIcon slugs), with a name for the editor. */
+export const ARTICLE_ICONS: Record<string, string> = {
+  dokument: "Dokument",
+  urad: "Úřad",
+  lupa: "Lupa",
+  baterie: "Baterie",
+  zimni: "Zimní pneumatika",
+  letni: "Letní pneumatika",
+  celorocni: "Pneumatika",
+  kola: "Kola",
+  motor: "Motor",
+  podvozek: "Brzdy a podvozek",
+  karoserie: "Karoserie",
+  elektro: "Elektrika",
+  interier: "Interiér",
+};
+
+export interface Article {
+  slug: string;
+  category: string;
+  title: string;
+  perex: string;
+  /** YYYY-MM-DD */
+  date: string;
+  /** CategoryIcon slug used as the cover picture */
+  icon: string;
+  /** formatted text (lib/markup) */
+  body: string;
+  sources: string[];
+}
+
+interface Block {
   heading?: string;
   text?: string;
   list?: string[];
   link?: { href: string; label: string };
 }
 
-export interface Article {
+interface BuiltInArticle {
   slug: string;
   category: ArticleCategory;
   title: string;
   perex: string;
   date: string;
-  /** CategoryIcon slug used as the cover picture */
   icon: string;
   body: Block[];
   sources?: string[];
 }
 
-export const articles: Article[] = [
+const BUILT_IN: BuiltInArticle[] = [
   {
     slug: "zimni-pneumatiky-kdy-jsou-povinne",
     category: "Pneumatiky",
@@ -138,12 +171,35 @@ export const articles: Article[] = [
   },
 ];
 
-/** Reading time in minutes at about 180 words a minute (Czech prose). */
-export function readingMinutes(article: Article): number {
-  const text = [article.perex, ...article.body.flatMap((b) => [b.heading, b.text, ...(b.list ?? [])])].filter(Boolean).join(" ");
-  return Math.max(1, Math.round(text.split(/\s+/).length / 180));
+/** A built-in article's blocks as formatted text. */
+function toMarkup(blocks: Block[]): string {
+  return blocks
+    .flatMap((b) => [
+      b.heading && `## ${b.heading}`,
+      b.text,
+      b.list && b.list.map((li) => `- ${li}`).join("\n"),
+      b.link && `[${b.link.label} →](${b.link.href})`,
+    ])
+    .filter(Boolean)
+    .join("\n\n");
 }
 
-export function getArticle(slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug);
+/** The articles that ship with the site, newest first. */
+export const builtInArticles: Article[] = BUILT_IN.map((a) => ({ ...a, body: toMarkup(a.body), sources: a.sources ?? [] }));
+
+/** Reading time in minutes at about 180 words a minute (Czech prose). */
+export function readingMinutes(article: Pick<Article, "perex" | "body">): number {
+  const words = `${article.perex} ${article.body}`.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 180));
+}
+
+/** A URL slug from a title: lower case, without diacritics, words joined by hyphens. */
+export function slugify(title: string): string {
+  return title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
 }

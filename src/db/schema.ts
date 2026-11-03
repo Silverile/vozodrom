@@ -340,3 +340,34 @@ export const catalogEdit = pgTable(
   },
   (t) => [index("catalog_edit_line_idx").on(t.makeSlug, t.lineSlug, t.createdAt)],
 );
+
+// ---------------------------------------------------------------------------------------------
+// Articles ("Novinky a rady")
+
+/**
+ * Articles written or changed by staff on the site. The articles that ship with the code
+ * (lib/articles.ts) are the starting set: a row with the same slug replaces one of them, and a
+ * deleted row hides it. Bodies are formatted text (lib/markup).
+ */
+export const article = pgTable(
+  "article",
+  {
+    slug: text("slug").primaryKey(),
+    category: text("category").notNull(),
+    title: text("title").notNull(),
+    perex: text("perex").notNull(),
+    body: text("body").notNull(),
+    /** CategoryIcon slug shown as the cover */
+    icon: text("icon").notNull(),
+    sources: jsonb("sources").$type<string[]>().notNull().default([]),
+    /** the date the article shows, YYYY-MM-DD */
+    publishedOn: text("published_on").notNull(),
+    /** hidden from the site; kept so a built-in article stays deleted */
+    deleted: boolean("deleted").notNull().default(false),
+    authorId: text("author_id").references(() => user.id, { onDelete: "set null" }),
+    updatedBy: text("updated_by").references(() => user.id, { onDelete: "set null" }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("article_published_idx").on(t.deleted, t.publishedOn)],
+);

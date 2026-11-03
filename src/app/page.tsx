@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
-import { ArticleCard } from "@/components/ArticleCard";
 import { brands, models } from "@/lib/catalog";
-import { articles } from "@/lib/articles";
+import { builtInArticles } from "@/lib/articles";
 import { LatestListings } from "@/components/LatestListings";
 import { newestFrontDrawing } from "@/components/FrontDrawing";
 import { popularLines } from "@/lib/popular-lines";
+import { HomeArticles } from "./HomeArticles";
 import { HomeLogbooks } from "./HomeLogbooks";
 import { HomeSearch } from "./HomeSearch";
 import { HomeStory } from "./HomeStory";
@@ -84,7 +84,7 @@ export default function HomePage() {
           {brandModels.map(({ brand, top }) => (
             <li key={brand.slug} className="flex items-start gap-4">
               <Link href={`/katalog/${brand.slug}/`} className="shrink-0" aria-hidden="true" tabIndex={-1}>
-                <BrandLogo slug={brand.slug} name={brand.name} size={44} />
+                <BrandLogo slug={brand.slug} name={brand.name} size={44} square />
               </Link>
               <span className="min-w-0">
                 <Link href={`/katalog/${brand.slug}/`} className="block text-xl font-bold leading-tight hover:text-[var(--color-brand)]">
@@ -109,11 +109,7 @@ export default function HomePage() {
           <h2 className="reveal text-3xl sm:text-4xl font-extrabold tracking-tight">Novinky a rady</h2>
           <Link href="/novinky/" className="text-base font-semibold text-[var(--color-brand)]">Všechny články →</Link>
         </div>
-        <ul className="grid gap-3 lg:grid-cols-3">
-          {articles.slice(0, 3).map((a) => (
-            <li key={a.slug}><ArticleCard article={a} /></li>
-          ))}
-        </ul>
+        <HomeArticles initial={builtInArticles.slice(0, 3)} />
       </section>
     </>
   );

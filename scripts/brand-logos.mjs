@@ -54,6 +54,7 @@ const MAP = {
   "renault": "Renault",
   "rolls-royce": "Rolls-Royce",
   "seat": "SEAT",
+  "skoda": "ŠKODA", // Exact Simple Icons title; the round emblem, not the wide wordmark.
   "smart": "smart",
   "subaru": "Subaru",
   "suzuki": "Suzuki",

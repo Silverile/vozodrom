@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { RichTextEditor } from "@/components/RichTextEditor";
 import { ENTRY_CATEGORIES, type EntryInput, MAX_ENTRY_BODY, cleanEntry, today } from "@/lib/garage";
 
 // A logbook entry: what happened, when, at what mileage and for how much. New entries go to their
@@ -74,7 +75,9 @@ export function EntryForm({ carId, entryId, initial }: { carId: string; entryId?
       </div>
       <div className="text-sm sm:col-span-2">
         <label htmlFor="z-body">Text</label>
-        <textarea id="z-body" className="input mt-1 min-h-64" maxLength={MAX_ENTRY_BODY} placeholder="Co se dělo, co jste měnili, co doporučujete ostatním. Odstavce oddělte prázdným řádkem." value={entry.body} onChange={(e) => write({ body: e.target.value })} />
+        <div className="mt-1">
+          <RichTextEditor id="z-body" maxLength={MAX_ENTRY_BODY} placeholder="Co se dělo, co jste měnili, co doporučujete ostatním." value={entry.body} onChange={(body) => write({ body })} />
+        </div>
       </div>
       <div className="sm:col-span-2 flex flex-wrap items-center gap-3">
         <button type="submit" className="btn-cta" disabled={busy}>{entryId ? "Uložit změny" : "Uložit a přidat fotky"}</button>

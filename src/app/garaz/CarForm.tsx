@@ -8,6 +8,7 @@ import { BODY_KEYS } from "@/lib/listing-catalog";
 import { makesIn, modelLinesOf, yearsOf } from "@/lib/makes";
 import { useCardGenerations } from "@/lib/use-card-generations";
 import { CarSearch } from "../pridat/CarSearch";
+import { RichTextEditor } from "@/components/RichTextEditor";
 
 // The car's details in the garage: make, model and generation from the catalogue (or a typed
 // model), what the owner calls it, the technical basics and their story. Only make and model are
@@ -212,7 +213,7 @@ export function CarForm({ carId, initial, initialFormer = false }: { carId?: str
       <section className="card p-5 space-y-2">
         <h2 className="font-bold text-lg">Příběh auta</h2>
         <label htmlFor="g-story" className="text-sm text-[var(--color-muted)]">Jak jste k autu přišli, první dojmy, co plánujete.</label>
-        <textarea id="g-story" className="input min-h-48" maxLength={MAX_STORY} value={car.story} onChange={(e) => write({ story: e.target.value })} />
+        <RichTextEditor id="g-story" minHeight="min-h-48" maxLength={MAX_STORY} value={car.story} onChange={(story) => write({ story })} />
         <p className="text-xs text-[var(--color-muted)] text-right">{car.story.length.toLocaleString("cs-CZ")} / {MAX_STORY.toLocaleString("cs-CZ")}</p>
       </section>
 

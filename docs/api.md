@@ -74,6 +74,9 @@ Všechny cesty končí lomítkem (web má `trailingSlash`); bez něj Next přesm
 | `POST /api/admin/katalog/` | admin | `{ makeSlug, lineSlug, ops }` uloží operace (`src/lib/catalog-ops.ts`) → `{ rows }`; 409, když nesedí |
 | `DELETE /api/admin/katalog/?id=` | admin | smaže jednu uloženou úpravu |
 | `POST /api/admin/katalog/nakres/?znacka=&model=` | admin | tělo WebP (≤ 2 MB) → `{ src }` nákres v R2 |
+| `GET /api/novinky/?pocet=` | kdokoli | nejnovější články (pro statickou úvodní stránku) |
+| `POST /api/novinky/` | moderátor, admin | `{ slug?, article }` uloží článek (bez `slug` nový) → `{ slug }` |
+| `DELETE /api/novinky/[slug]/` | moderátor, admin | skryje článek (i vestavěný) |
 | `POST /api/admin/katalog/publikovat/` | admin | spustí nasazení (GitHub workflow) |
 
 ## Interní

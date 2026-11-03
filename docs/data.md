@@ -88,6 +88,10 @@ Auta, zápisy a komentáře jsou veřejné hned. Moderátor je skryje s důvodem
 i s důvodem. VIN vidí jen majitel, SPZ jen když ji majitel ukáže. Veřejné stránky ukazují jméno zkráceně („Jana N.“).
 Fotky jsou v R2 pod `garaz/c-…/` a `deniky/e-…/`.
 
+**`article`** — články „Novinky a rady“ od redakce (moderátoři, admini). Vestavěné články ze
+`src/lib/articles.ts` jsou výchozí sada: řádek se stejným `slug` je nahradí, `deleted` je skryje. Text je
+formátovaný (`src/lib/markup.tsx`). Migrace `0007_articles.sql`.
+
 **`catalog_edit`** — úpravy katalogu od administrátorů jako operace nad kartou modelu (`field = "op"`, `value` = JSON
 operace z `src/lib/catalog-ops.ts`), v pořadí uložení. Starší řádky s `field` summary/name/dateNote se čtou jako
 nastavení textu (prázdná hodnota = text katalogu). Viz [Úpravy katalogu](#opravy-katalogu).

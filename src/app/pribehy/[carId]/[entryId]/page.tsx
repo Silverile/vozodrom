@@ -6,7 +6,8 @@ import { GarageCarImage } from "@/components/GarageCarImage";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { getSession } from "@/lib/auth";
 import { formatDate, formatKm, formatPrice } from "@/lib/format";
-import { ENTRY_CATEGORIES, carTitle, paragraphs } from "@/lib/garage";
+import { ENTRY_CATEGORIES, carTitle } from "@/lib/garage";
+import { Markup, plainText } from "@/lib/markup";
 import { entryPage } from "@/lib/garage-store";
 import { CommentForm, DeleteComment, Reaction, ReportContent } from "../../LogbookClient";
 
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!page) return { title: "Zápis v příběhu auta" };
   return {
     title: `${page.entry.title} — ${carTitle(page.car.data)}`,
-    description: page.entry.body.slice(0, 160) || undefined,
+    description: plainText(page.entry.body).slice(0, 160) || undefined,
     ...((page.entry.hiddenReason || page.car.hiddenReason) && { robots: { index: false } }),
   };
 }
@@ -61,9 +62,7 @@ export default async function EntryPage({ params }: { params: Params }) {
           {entry.photos.length > 0 && <PhotoGallery photos={entry.photos} title={entry.title} />}
 
           {entry.body && (
-            <div className="space-y-3 text-[0.95rem] leading-relaxed">
-              {paragraphs(entry.body).map((p, i) => <p key={i} className="whitespace-pre-line">{p}</p>)}
-            </div>
+            <Markup text={entry.body} className="text-[0.95rem] leading-relaxed" />
           )}
 
           {(entry.costCzk != null || entry.mileageKm != null) && (
