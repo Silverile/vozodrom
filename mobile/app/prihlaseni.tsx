@@ -1,3 +1,4 @@
+import Constants from "expo-constants";
 import { router } from "expo-router";
 import { useState } from "react";
 import { KeyboardAvoidingView, Linking, Platform, Pressable, ScrollView, StyleSheet, TextInput, View, type TextInputProps } from "react-native";
@@ -9,6 +10,9 @@ import { api, authClient } from "../lib/api";
 
 type Mode = "signin" | "signup";
 const MIN_PASSWORD = 10; // matches emailAndPassword.minPasswordLength on the server
+// Expo Go opens links with its own exp:// scheme, which production auth does not trust,
+// so Google sign-in can only return to an installed build with the vozodrom:// scheme.
+const IN_EXPO_GO = Constants.executionEnvironment === "storeClient";
 
 function Input({ label, hint, ...props }: TextInputProps & { label: string; hint?: string }) {
   const c = useColors();
@@ -39,7 +43,7 @@ export default function SignIn() {
   const [error, setError] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
   const caps = useRemote("capabilities", (signal) => (DEMO ? Promise.resolve(null) : api.capabilities({ signal })));
-  const google = caps.data?.auth.google ?? false;
+  const google = (caps.data?.auth.google ?? false) && !IN_EXPO_GO;
   const signupOpen = caps.data?.auth.signup ?? true;
 
   const valid = /.+@.+\..+/.test(email.trim()) && password.length >= (mode === "signup" ? MIN_PASSWORD : 1) && (mode === "signin" || name.trim().length > 1);
