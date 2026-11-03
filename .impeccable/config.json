@@ -24,6 +24,33 @@
         ],
         "createdAt": "2026-11-03T08:44:12.829Z",
         "reason": "Claude: L390 is the editor's blockquote rule (a quotation's left rule, the conventional quote mark), not a card accent; it matches how the site renders quotes (lib/markup.tsx)"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/pick-r1.html"
+        ],
+        "createdAt": "2026-11-03T19:33:29.724Z",
+        "reason": "Claude: date text sits on the ring's white ::before disc, which the detector cannot see; decision sketch only"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design/mobile/rallye/index.html"
+        ],
+        "createdAt": "2026-11-03T19:50:29.628Z",
+        "reason": "Claude: roadbook sections are bordered grids whose cells carry 12-14px padding; detector reads the section border against cell text"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          "design/mobile/jasne/index.html"
+        ],
+        "createdAt": "2026-11-03T20:13:51.255Z",
+        "reason": "Claude: design board of independent phone frames; each frame's heading outline is rebuilt in the native app"
       }
     ]
   }

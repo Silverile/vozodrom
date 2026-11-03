@@ -20,7 +20,7 @@ import { modelLinesOf } from "./makes";
 const REPOSITORY = "Silverile/vozodrom";
 const WORKFLOW = "deploy-cloudflare.yml";
 /** Operations one save may carry. */
-const MAX_OPS = 200;
+export const MAX_OPS = 200;
 
 const toRow = (r: typeof catalogEdit.$inferSelect): EditRow & { id: string; createdAt: string } => ({
   id: r.id,

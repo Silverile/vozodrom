@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vozodrom Jasně</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Asfalt tokens from src/app/globals.css */
+.ph{--bg:#0d0f12;--surface:#15181d;--field:#1b1f25;--ink:#f1f3f5;--muted:#9aa3ad;--line:#262a31;--brand:#2fd0a0;--brand-ink:#05261d;--brand-soft:#123a30;--accent:#ff6a2a;--accent-ink:#160b04;--warn:#ffb36b;--bad:#ff8a80;--good:#4ee08f}
+.ph.light{--bg:#f4f6f8;--surface:#ffffff;--field:#eceff3;--ink:#14181d;--muted:#5a6370;--line:#d9dee4;--brand:#0b8466;--brand-ink:#ffffff;--brand-soft:#d9f3ea;--accent:#b83f08;--accent-ink:#ffffff;--warn:#995400;--bad:#b42318;--good:#17803f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#08090b;color:#e8ebee;font-family:Barlow,system-ui,sans-serif;padding:32px 24px 64px}
+.intro{max-width:1300px;margin:0 auto 28px}
+.intro h1{font:700 28px Barlow}
+.intro p{font:500 15px/1.5 Barlow;color:#a6aeb7;max-width:780px;margin-top:8px}
+.board{display:flex;flex-wrap:wrap;gap:36px 28px;max-width:1300px;margin:0 auto}
+figure{width:390px}
+figcaption{font:600 14px Barlow;color:#c9cfd5;margin-bottom:10px}
+figcaption b{color:#2fd0a0;margin-right:6px}
+.ph{width:390px;height:844px;overflow:hidden;position:relative;background:var(--bg);color:var(--ink);border-radius:34px;border:1px solid #2a2f36}
+.st{height:48px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 28px 8px;font:600 15px Barlow}
+.top{display:flex;align-items:center;gap:6px;padding:4px 8px 8px}
+.ib{width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:600 22px Barlow;color:var(--ink)}
+.top h2{flex:1;font:700 19px Barlow}
+.pad{padding:0 16px}
+h1.big{font:800 30px Barlow;letter-spacing:-.3px;padding:4px 16px 12px}
+.sec{display:flex;justify-content:space-between;align-items:baseline;padding:18px 16px 10px}
+.sec h2{font:700 19px Barlow}
+.sec a{font:600 14px Barlow;color:var(--brand)}
+.search{margin:0 16px;height:52px;border-radius:14px;background:var(--field);display:flex;align-items:center;gap:10px;padding:0 16px;font:500 16px Barlow;color:var(--muted)}
+.search svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 16px 0}
+.cat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 12px;display:flex;flex-direction:column;gap:8px}
+.cat svg{width:30px;height:30px;stroke:var(--brand);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.cat b{font:700 16px Barlow}.cat small{font:500 12px Barlow;color:var(--muted)}
+.hs{display:flex;gap:12px;padding:0 16px;overflow:hidden}
+.mini{width:200px;flex:none;background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.mini img{width:100%;height:120px;object-fit:cover;display:block;background:var(--field)}
+.mini div{padding:10px 12px}
+.price{font:800 20px Barlow;color:var(--ink);font-variant-numeric:tabular-nums}
+.ttl{font:600 15px/1.25 Barlow;margin-top:2px}
+.spec{font:500 13px/1.4 Barlow;color:var(--muted);margin-top:4px}
+.card{margin:0 12px 12px;background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.card .img{position:relative}
+.card img{width:100%;height:196px;object-fit:cover;display:block;background:var(--field)}
+.heart{position:absolute;right:10px;top:10px;width:40px;height:40px;border-radius:20px;background:rgba(13,15,18,.7);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px}
+.cnt{position:absolute;left:10px;bottom:10px;font:600 12px Barlow;background:rgba(13,15,18,.7);color:#fff;padding:4px 10px;border-radius:10px}
+.card .in{padding:12px 14px 14px}
+.row2{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font:500 13px Barlow;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:4px;font:700 12px Barlow;padding:5px 11px;border-radius:12px;background:var(--brand-soft);color:var(--brand)}
+.pill.w{background:rgba(255,179,107,.14);color:var(--warn)}
+.chips{display:flex;gap:8px;padding:0 16px 10px;overflow:hidden}
+.chips a{font:600 14px Barlow;padding:9px 13px;border-radius:20px;background:var(--field);white-space:nowrap}
+.chips a.on{background:var(--ink);color:var(--bg)}
+.float{position:absolute;left:50%;transform:translateX(-50%);bottom:102px;display:flex;background:var(--ink);color:var(--bg);border-radius:26px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.float a{font:700 15px Barlow;padding:15px 18px;white-space:nowrap}
+.float a+a{border-left:1px solid rgba(128,128,128,.35)}
+nav.tb{position:absolute;left:0;right:0;bottom:0;height:88px;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:8px 4px 0}
+nav.tb a{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;font:600 12px Barlow;color:var(--muted);position:relative}
+nav.tb svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav.tb a.on{color:var(--ink)}
+nav.tb a.on svg{stroke:var(--brand)}
+nav.tb a.add span{width:52px;height:52px;margin-top:-18px;border-radius:26px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font:500 32px Barlow;box-shadow:0 0 0 5px var(--surface)}
+.badge{position:absolute;top:-4px;left:56%;background:var(--accent);color:var(--accent-ink);font:700 11px Barlow;border-radius:9px;padding:1px 6px}
+.cta{position:absolute;left:0;right:0;bottom:0;padding:12px 12px 30px;background:var(--surface);border-top:1px solid var(--line);display:flex;gap:10px}
+.btn{height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:700 16px Barlow;padding:0 18px}
+.btn.p{flex:1;background:var(--accent);color:var(--accent-ink)}
+.btn.s{background:var(--field);color:var(--ink);min-width:52px}
+.btn.g{flex:1;background:var(--brand);color:var(--brand-ink)}
+.btn.d{flex:1;background:var(--field);color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:0 16px;background:var(--line);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.grid div{background:var(--surface);padding:10px 12px}
+.grid small{display:block;font:500 12px Barlow;color:var(--muted)}
+.grid b{font:700 16px Barlow;font-variant-numeric:tabular-nums}
+.box{margin:12px 16px 0;padding:14px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.box h3{font:700 16px Barlow;margin-bottom:6px}
+.box p{font:500 14px/1.45 Barlow;color:var(--muted)}
+.lnk{display:flex;justify-content:space-between;align-items:center;font:600 15px Barlow;color:var(--brand);margin-top:10px}
+.who{display:flex;gap:10px;align-items:center}
+.av{width:44px;height:44px;border-radius:22px;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font:800 16px Barlow;flex:none}
+.who b{font:700 15px Barlow;display:block}.who small{font:500 13px Barlow;color:var(--muted)}
+.field{margin:0 16px 12px}
+.field label{display:block;font:600 14px Barlow;color:var(--muted);margin-bottom:6px}
+.field .v{height:50px;border-radius:12px;background:var(--field);display:flex;align-items:center;justify-content:space-between;padding:0 14px;font:600 16px Barlow}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.segc{display:flex;gap:8px;flex-wrap:wrap}
+.segc a{font:600 15px Barlow;padding:11px 15px;border-radius:12px;background:var(--field)}
+.segc a.on{background:var(--brand);color:var(--brand-ink)}
+.post{margin:0 12px 12px;background:var(--surface);border-radius:16px;border:1px solid var(--line);overflow:hidden}
+.post .hd{padding:12px 14px 10px}
+.post img{width:100%;height:170px;object-fit:cover;display:block;background:var(--field)}
+.post .bd{padding:12px 14px 14px}
+.post h3{font:700 17px/1.25 Barlow}
+.facts{display:flex;gap:22px;margin-top:10px}
+.facts small{display:block;font:500 12px Barlow;color:var(--muted)}
+.facts b{font:700 17px Barlow;font-variant-numeric:tabular-nums}
+.acts{display:flex;gap:20px;margin-top:12px;font:600 14px Barlow;color:var(--muted)}
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:22px 22px 0 0;padding:10px 12px 34px}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sheet h3{font:700 21px Barlow;padding:0 6px 4px}
+.sheet .sub{font:500 14px Barlow;color:var(--muted);padding:0 6px 12px}
+.opt{display:grid;grid-template-columns:56px 1fr 20px;align-items:center;gap:8px;padding:12px 6px;border-top:1px solid var(--line)}
+.opt .ic{width:48px;height:48px;border-radius:14px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center}
+.opt .ic svg{width:28px;height:28px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.opt b{font:700 16px Barlow;display:block}.opt small{font:500 13px Barlow;color:var(--muted)}
+.opt i{font-style:normal;color:var(--muted);font-size:20px}
+.list a{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.list img{width:52px;height:52px;border-radius:12px;object-fit:cover;background:var(--field)}
+.list b{font:700 15px Barlow;display:block}.list small{font:500 14px Barlow;color:var(--muted)}
+.list .t{font:500 12px Barlow;color:var(--muted);text-align:right}
+.dot{display:inline-block;margin-top:6px;min-width:20px;height:20px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font:700 12px/20px Barlow;text-align:center}
+.gen{display:grid;grid-template-columns:120px 1fr;gap:12px;margin:0 12px 10px;background:var(--surface);border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.gen img{width:120px;height:96px;object-fit:cover;background:var(--field)}
+.gen div{padding:10px 12px 10px 0}
+.gen b{font:700 17px Barlow;display:block}.gen small{font:500 13px Barlow;color:var(--muted);display:block;margin-top:2px}
+.demo{font:600 12px Barlow;letter-spacing:.6px;color:var(--muted);padding:6px 16px}
+</style></head><body>
+<div class="intro">
+  <h1>Vozodrom · srozumitelná aplikace</h1>
+  <p>Druhý návrh: žádné metafory. Fotky na prvním místě, každý údaj má popisek, dole pět záložek s textem a velké oranžové „+“ uprostřed. Barvy webu (Asfalt, tyrkys, oranžová). Fotky: Wikimedia Commons, ukázka. Inzeráty, ceny a lidé jsou smyšlená ukázková data.</p>
+</div>
+<div class="board">
+
+<!-- 01 Domů -->
+<figure><figcaption><b>01</b>Domů · první obrazovka</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<h1 class="big">Vozodrom</h1>
+<div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat, např. Octavia III</div>
+<div class="cats">
+<div class="cat"><svg viewBox="0 0 32 32"><path d="M5 20l3-8h16l3 8v5H5z"/><circle cx="10" cy="21" r="1.5"/><circle cx="22" cy="21" r="1.5"/></svg><b>Auta</b><small>3 412 inzerátů</small></div>
+<div class="cat"><svg viewBox="0 0 32 32"><path d="M4 22h14V12h5l4 6v4h-3M4 22V9h10"/><circle cx="9" cy="24" r="2.5"/><circle cx="22" cy="24" r="2.5"/></svg><b>Stroje</b><small>Připravujeme</small></div>
+<div class="cat"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="3"/></svg><b>Díly</b><small>Připravujeme</small></div>
+</div>
+<div class="sec"><h2>Nové inzeráty</h2><a>Vše</a></div>
+<div class="hs">
+<div class="mini"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/2022_Skoda_Octavia_SE_TSi.jpg" alt="Škoda Octavia IV"><div><div class="price">489 000 Kč</div><div class="ttl">Škoda Octavia IV 1.5 TSI</div><div class="spec">2021 · 61 200 km</div></div></div>
+<div class="mini"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/2009_Skoda_Fabia_silver_front.jpg" alt="Škoda Fabia II"><div><div class="price">89 000 Kč</div><div class="ttl">Škoda Fabia II 1.2 HTP</div><div class="spec">2009 · 210 950 km</div></div></div>
+</div>
+<div class="sec"><h2>Příběhy majitelů</h2><a>Vše</a></div>
+<div class="list"><a><div class="av">JN</div><div><b>Výměna rozvodů a vodní pumpy</b><small>Octavia III · 186 400 km · 14 200 Kč</small></div><div class="t">dnes</div></a></div>
+<nav class="tb"><a class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 02 Seznam -->
+<figure><figcaption><b>02</b>Seznam inzerátů · výsledky hledání</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><div class="ib">‹</div><h2>Škoda Octavia · 128 aut</h2><div class="ib">♡</div></div>
+<div class="chips"><a class="on">Octavia III ✕</a><a class="on">do 300 000 Kč ✕</a><a>Nafta</a><a>Kraj</a></div>
+<div class="card"><div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/%C5%A0koda_Octavia_Combi_II_1.9_TDI_%282005%29_%2852074633672%29.jpg" alt="Škoda Octavia Combi"><div class="heart">♡</div><div class="cnt">1 / 14</div></div>
+<div class="in"><div class="price">289 000 Kč</div><div class="ttl">Škoda Octavia III Combi 2.0 TDI</div><div class="spec">2017 · 154 020 km · Nafta · Manuál · 110 kW</div>
+<div class="row2"><span>Praha 9 · před 2 h</span><span class="pill">✓ STK do 2027</span></div></div></div>
+<div class="card"><div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/2022_Skoda_Octavia_SE_TSi.jpg" alt="Škoda Octavia"><div class="heart">♥</div></div>
+<div class="in"><div class="price">219 000 Kč</div><div class="ttl">Škoda Octavia III 1.6 TDI</div><div class="spec">2015 · 201 300 km · Nafta · Manuál</div></div></div>
+<div class="float"><a>⚙ Filtry (2)</a><a>⇅ Řadit</a><a>🔔 Hlídat</a></div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a class="on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 03 Detail -->
+<figure><figcaption><b>03</b>Detail inzerátu</figcaption>
+<div class="ph"><div style="position:relative"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/%C5%A0koda_Octavia_Combi_II_1.9_TDI_%282005%29_%2852074633672%29.jpg" alt="Škoda Octavia Combi" style="width:100%;height:270px;object-fit:cover;display:block;background:var(--field)">
+<div style="position:absolute;left:8px;top:48px" class="ib heart">‹</div><div class="heart" style="top:48px">♡</div><div class="cnt">1 / 14</div></div>
+<div class="pad" style="padding-top:14px"><div class="price" style="font-size:26px">289 000 Kč</div><div class="ttl" style="font-size:19px">Škoda Octavia III Combi 2.0 TDI</div><div class="spec">Praha 9 · vloženo dnes</div></div>
+<div style="height:12px"></div>
+<div class="grid"><div><small>Rok</small><b>2017</b></div><div><small>Najeto</small><b>154 020 km</b></div><div><small>Palivo</small><b>Nafta</b></div><div><small>Převodovka</small><b>Manuál</b></div><div><small>Výkon</small><b>110 kW</b></div><div><small>STK do</small><b>05/2027</b></div></div>
+<div class="box"><h3>Zkušenosti majitelů Octavie III</h3><p>41 majitelů píše deník. Nejčastější oprava kolem 180 000 km: rozvody a vodní pumpa, průměrně 13 900 Kč.</p><div class="lnk">Přečíst deníky <span>›</span></div></div>
+<div class="box"><div class="who"><div class="av">MK</div><div><b>Soukromý prodejce</b><small>Na Vozodromu od 2025 · odpovídá do 1 h</small></div></div></div>
+<div class="cta"><div class="btn s">☎</div><div class="btn p">Napsat prodejci</div></div>
+</div></figure>
+
+<!-- 04 Filtry -->
+<figure><figcaption><b>04</b>Filtry · srozumitelný formulář</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><div class="ib">✕</div><h2>Filtry</h2><div style="font:600 15px Barlow;color:var(--brand);padding-right:10px">Vymazat</div></div>
+<div class="field"><label>Značka a model</label><div class="v">Škoda Octavia <span style="color:var(--muted)">›</span></div></div>
+<div class="field"><label>Generace</label><div class="v">Octavia III (2013–2020) <span style="color:var(--muted)">›</span></div></div>
+<div class="field"><label>Cena</label><div class="two"><div class="v" style="color:var(--muted)">od</div><div class="v">300 000 Kč</div></div></div>
+<div class="field"><label>Rok výroby od · Najeto do</label><div class="two"><div class="v">2015</div><div class="v" style="color:var(--muted)">km</div></div></div>
+<div class="field"><label>Palivo</label><div class="segc"><a>Benzín</a><a class="on">Nafta</a><a>Hybrid</a><a>Elektro</a><a>LPG</a></div></div>
+<div class="field"><label>Převodovka</label><div class="segc"><a class="on">Jakákoli</a><a>Manuál</a><a>Automat</a></div></div>
+<div class="cta"><div class="btn g">Zobrazit 128 aut</div></div>
+</div></figure>
+
+<!-- 05 Příběhy -->
+<figure><figcaption><b>05</b>Příběhy · deníky majitelů</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<h1 class="big" style="padding-bottom:8px">Příběhy</h1>
+<div class="chips"><a class="on">Vše</a><a>Sleduji</a><a>Moje generace</a></div>
+<div class="post"><div class="hd"><div class="who"><div class="av">JN</div><div><b>jirka_naftak · Octavia III Combi</b><small>dnes · Oprava</small></div></div></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/2022_Skoda_Octavia_SE_TSi.jpg" alt="Škoda Octavia">
+<div class="bd"><h3>Výměna rozvodů a vodní pumpy</h3><div class="facts"><div><small>Stav tachometru</small><b>186 400 km</b></div><div><small>Cena</small><b>14 200 Kč</b></div></div>
+<div class="acts"><span>♡ 12</span><span>💬 4 komentáře</span><span>↗ Sdílet</span></div></div></div>
+<nav class="tb"><a class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 06 Přidat -->
+<figure><figcaption><b>06</b>Přidat · po stisku „+“</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div><h1 class="big">Vozodrom</h1>
+<div class="scrim"></div>
+<div class="sheet"><div class="grab"></div><h3>Co chcete přidat?</h3><div class="sub">Vyberte jednu možnost</div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M5 20l3-8h16l3 8v5H5z"/></svg></div><div><b>Prodat auto</b><small>Inzerát s fotkami, zabere asi 5 minut</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M8 5h12l4 4v18H8z"/><path d="M12 14h8M12 19h8"/></svg></div><div><b>Zápis do deníku</b><small>Oprava, servis, STK, tankování</small></div><i>›</i></div>
+<div class="opt"><div class="ic"><svg viewBox="0 0 32 32"><path d="M4 16l12-9 12 9v11H4z"/></svg></div><div><b>Auto do garáže</b><small>Začněte vést deník svého vozu</small></div><i>›</i></div>
+<div class="opt" style="opacity:.8"><div class="ic"><svg viewBox="0 0 32 32"><path d="M4 22h14V12h5l4 6v4h-3M4 22V9h10"/></svg></div><div><b>Prodat stroj nebo díl</b><small>Připravujeme</small></div><i>›</i></div>
+<div class="btn s" style="width:100%;margin-top:8px">Zrušit</div>
+</div></div></figure>
+
+<!-- 07 Profil -->
+<figure><figcaption><b>07</b>Profil · moje garáž</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><h2 style="padding-left:8px;font-size:22px">Profil</h2><div class="ib">⚙</div></div>
+<div class="pad"><div class="who"><div class="av" style="width:64px;height:64px;border-radius:32px;font-size:22px">JN</div><div><b style="font-size:20px">jirka_naftak</b><small>Na Vozodromu od 2025</small></div></div></div>
+<div class="grid" style="margin-top:14px"><div><small>Auta</small><b>3</b></div><div><small>Zápisy</small><b>32</b></div><div><small>Sledující</small><b>18</b></div></div>
+<div class="chips" style="padding-top:14px"><a class="on">Garáž</a><a>Moje inzeráty</a><a>Uložené</a></div>
+<div class="gen"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/%C5%A0koda_Octavia_Combi_II_1.9_TDI_%282005%29_%2852074633672%29.jpg" alt="Škoda Octavia Combi"><div><b>Octavia III Combi</b><small>2.0 TDI · 186 400 km</small><small>23 zápisů · 87 400 Kč</small></div></div>
+<div class="gen"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/2009_Skoda_Fabia_silver_front.jpg" alt="Škoda Fabia II"><div><b>Fabia II</b><small>1.2 HTP · 210 950 km</small><small>9 zápisů · 31 900 Kč</small></div></div>
+<div class="box" style="display:flex;justify-content:space-between;align-items:center"><div><h3 style="margin:0">Správa webu</h3><p>4 položky čekají na rozhodnutí</p></div><span class="dot" style="margin:0">4</span></div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 08 Katalog -->
+<figure><figcaption><b>08</b>Katalog · model a jeho generace</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><div class="ib">‹</div><h2>Škoda Octavia</h2></div>
+<div class="demo">4 GENERACE · VYBERTE SVOU</div>
+<div class="gen"><img src="../../../public/front/skoda--octavia--3.webp" alt="Kresba přídě" style="object-fit:contain;background:#e9eef0;padding:6px"><div><b>Octavia IV</b><small>2020 až dosud</small><small>38 inzerátů · 9 deníků</small></div></div>
+<div class="gen"><img src="../../../public/front/skoda--octavia--2.webp" alt="Kresba přídě" style="object-fit:contain;background:#e9eef0;padding:6px"><div><b>Octavia III</b><small>2013–2020 · facelift 2017</small><small>128 inzerátů · 41 deníků</small></div></div>
+<div class="gen"><img src="../../../public/front/skoda--octavia--1.webp" alt="Kresba přídě" style="object-fit:contain;background:#e9eef0;padding:6px"><div><b>Octavia II</b><small>2004–2013 · facelift 2008</small><small>96 inzerátů · 27 deníků</small></div></div>
+<div class="box"><h3>Co v katalogu najdete</h3><p>Motory, rozměry, výbavy, data z registru a STK a zkušenosti majitelů. Kde údaj chybí, napíšeme to.</p></div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a class="on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 09 Zprávy -->
+<figure><figcaption><b>09</b>Zprávy · seznam konverzací</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<h1 class="big">Zprávy</h1>
+<div class="list">
+<a><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/%C5%A0koda_Octavia_Combi_II_1.9_TDI_%282005%29_%2852074633672%29.jpg" alt=""><div><b>Octavia III Combi · 289 000 Kč</b><small>Jasně, servisní knížku přivezu.</small></div><div class="t">18:15<br><span class="dot">1</span></div></a>
+<a><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/2009_Skoda_Fabia_silver_front.jpg" alt=""><div><b>Fabia II · 89 000 Kč</b><small>Vy: Je možná sleva při rychlém…</small></div><div class="t">včera</div></a>
+<a><div class="av" style="width:52px;height:52px;border-radius:12px">🔔</div><div><b>Hlídací pes</b><small>3 nová auta podle hledání Octavia III</small></div><div class="t">6:00<br><span class="dot">1</span></div></a>
+</div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy<span class="badge">2</span></a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+<!-- 10 Správa -->
+<figure><figcaption><b>10</b>Správa · kontrola inzerátu</figcaption>
+<div class="ph"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><div class="ib">‹</div><h2>Ke kontrole · 1 ze 3</h2></div>
+<div class="card"><div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/2009_Skoda_Fabia_silver_front.jpg" alt="Škoda Fabia" style="height:170px"></div>
+<div class="in"><div class="price">39 000 Kč</div><div class="ttl">Škoda Fabia III 1.0 TSI</div><div class="spec">2019 · 48 000 km · Brno · vloženo před 12 min</div></div></div>
+<div class="box" style="border-color:var(--warn)"><h3 style="color:var(--warn)">⚠ Proč čeká</h3><p>Automatická kontrola: cena je výrazně pod trhem této generace.</p></div>
+<div class="box"><h3>Důvod při zamítnutí</h3><div class="field" style="margin:8px 0 0"><div class="v">Vyberte pravidlo <span style="color:var(--muted)">›</span></div></div></div>
+<div class="cta"><div class="btn d">Zamítnout</div><div class="btn g">Schválit</div></div>
+</div></figure>
+
+<!-- 11 Seznam light -->
+<figure><figcaption><b>11</b>Seznam inzerátů · světlý motiv</figcaption>
+<div class="ph light"><div class="st"><span>9:41</span><span>●●● 5G ▮</span></div>
+<div class="top"><div class="ib">‹</div><h2>Škoda Superb · 64 aut</h2><div class="ib">♡</div></div>
+<div class="chips"><a class="on">Superb III ✕</a><a>Cena</a><a>Rok</a><a>Palivo</a></div>
+<div class="card"><div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/2009_Skoda_Fabia_silver_front.jpg" alt="Škoda"><div class="heart">♡</div></div>
+<div class="in"><div class="price">419 000 Kč</div><div class="ttl">Škoda Superb III Combi 2.0 TDI</div><div class="spec">2018 · 132 000 km · Nafta · Automat · 140 kW</div><div class="row2"><span>Olomouc · včera</span><span class="pill w">Stav km neověřen</span></div></div></div>
+<div class="card"><div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/2022_Skoda_Octavia_SE_TSi.jpg" alt="Škoda"><div class="heart">♡</div></div>
+<div class="in"><div class="price">365 000 Kč</div><div class="ttl">Škoda Superb III 1.4 TSI</div><div class="spec">2017 · 98 120 km · Benzín · Manuál</div></div></div>
+<div class="float"><a>⚙ Filtry (1)</a><a>⇅ Řadit</a><a>🔔 Hlídat</a></div>
+<nav class="tb"><a><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Domů</a><a class="on"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Hledat</a><a class="add"><span>+</span>Přidat</a><a><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Zprávy</a><a><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil</a></nav>
+</div></figure>
+
+</div>
+</body></html>
