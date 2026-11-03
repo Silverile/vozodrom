@@ -25,7 +25,7 @@ export default async function CatalogEditsPage() {
     byLine.set(key, entry);
   }
   const lines = [...byLine.values()].sort((a, b) => b.last.localeCompare(a.last));
-  const conflicts = Object.entries((BUILT as { conflicts: Record<string, { id: string; reason: string }[]> }).conflicts);
+  const conflicts = Object.entries((BUILT as unknown as { conflicts: Record<string, { id: string; reason: string }[]> }).conflicts);
   const nameOf = (make: string, line: string) => `${getMake(make)?.name ?? make} ${modelLinesOf(make).find((l) => l.slug === line)?.name ?? line}`;
 
   return (

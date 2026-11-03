@@ -13,7 +13,8 @@ interface BuiltLine {
   generations: { code: string | null; from: number | null; to: number | null }[];
 }
 
-const LINES = (BUILT as { lines: Record<string, BuiltLine> }).lines;
+// through unknown: the JSON's inferred type depends on its content, which only the build knows
+const LINES = (BUILT as unknown as { lines: Record<string, BuiltLine> }).lines;
 
 export function builtLine(make: string, line: string): BuiltLine | undefined {
   return LINES[`${make}--${line}`];
