@@ -7,11 +7,12 @@
 //
 // Admins' edits (src/data/catalog-edits.json, fetched from the site on CI) are replayed here
 // (lib/catalog-ops), so the files carry them. An edited line also gets <line>.base.json, the card as
-// the data files have it, for the editor. Lines whose generations were added, removed, moved or
-// given a drawing are listed in src/data/catalog-built.json: for each generation the index it came
-// from in the data files (front drawings and STK statistics are keyed by it) and its drawing.
+// the data files have it, for the editor. Every edited line is listed in src/data/catalog-built.json:
+// for each generation the index it came from in the data files (front drawings and STK statistics
+// are keyed by it), the drawings with the edited years, and the generations' codes and years for
+// the listing form and its checks (lib/makes reads them instead of the model lines index).
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { applyOps, changesGenerations, rowToOp } from "../src/lib/catalog-ops.ts";
+import { applyOps, generationSummary, rowToOp } from "../src/lib/catalog-ops.ts";
 
 const DROP = new Set(["sources", "sourceScope", "fieldSources", "generationEvidence", "specificationScope", "engineCoverage"]);
 const SOURCE = new URL("../src/data/model-cards-index.json", import.meta.url);
@@ -72,7 +73,7 @@ for (const [make, lines] of Object.entries(index)) {
       const applied = applyOps(card, ops);
       out = applied.card;
       writeFileSync(new URL(`${make}/${line}.base.json`, TARGET), JSON.stringify(card));
-      if (changesGenerations(ops)) built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied) };
+      built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied), generations: generationSummary(out) };
       if (applied.conflicts.length) built.conflicts[key] = applied.conflicts;
       edited++;
     }

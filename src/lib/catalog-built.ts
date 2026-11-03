@@ -1,15 +1,16 @@
 import BUILT from "@/data/catalog-built.json";
 
-// What scripts/app-model-cards.mjs recorded about lines whose generations admins added, removed,
-// moved or gave a drawing: for each generation of the card the index it came from in the data
-// files, and the drawings by generation. Front drawings and STK statistics are keyed by the data
-// files' index, so they go through originOf; untouched lines keep their own indices.
+// What scripts/app-model-cards.mjs recorded about lines admins edited: for each generation of the
+// card the index it came from in the data files, the drawings by generation, and the generations'
+// codes and years. Front drawings and STK statistics are keyed by the data files' index, so they go
+// through originOf; untouched lines keep their own indices.
 
 export type BuiltDrawing = [index: number, from: number | null, to: number | null, src: string];
 
 interface BuiltLine {
   origins: (number | null)[];
   drawings: BuiltDrawing[];
+  generations: { code: string | null; from: number | null; to: number | null }[];
 }
 
 const LINES = (BUILT as { lines: Record<string, BuiltLine> }).lines;

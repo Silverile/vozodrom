@@ -92,12 +92,17 @@ export function DrawingField({
     if (!preview) return;
     setState("uploading");
     setError("");
-    const r = await fetch(`/api/admin/katalog/nakres/?znacka=${makeSlug}&model=${lineSlug}`, { method: "POST", headers: { "content-type": "image/webp" }, body: preview.blob });
-    const data = (await r.json().catch(() => ({}))) as { src?: string; error?: string };
-    setState("");
-    if (!r.ok || !data.src) return setError(data.error ?? "Nahrání se nepovedlo.");
-    setPreview(null);
-    onUploaded(data.src);
+    try {
+      const r = await fetch(`/api/admin/katalog/nakres/?znacka=${makeSlug}&model=${lineSlug}`, { method: "POST", headers: { "content-type": "image/webp" }, body: preview.blob });
+      const data = (await r.json().catch(() => ({}))) as { src?: string; error?: string };
+      if (!r.ok || !data.src) return setError(data.error ?? "Nahrání se nepovedlo, zkuste to znovu.");
+      setPreview(null);
+      onUploaded(data.src);
+    } catch {
+      setError("Nahrání se nepovedlo (spojení), zkuste to znovu.");
+    } finally {
+      setState("");
+    }
   }
 
   return (

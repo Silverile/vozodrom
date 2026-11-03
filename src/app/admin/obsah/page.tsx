@@ -35,8 +35,8 @@ export default async function CatalogEditsPage() {
         <PublishButton />
       </div>
       <p className="text-base max-w-3xl">
-        Katalog se upravuje přímo na stránce modelu: tlačítko <b>✎ Upravit katalog</b> u názvu modelu nebo <b>Upravit</b> u generace. Úpravy se
-        uloží hned; na web se dostanou po „Publikovat na web“ (nasazení trvá asi 5–7 minut).
+        Katalog se upravuje přímo na stránce modelu: tlačítko <b>✎ Upravit katalog</b> u názvu modelu nebo <b>Upravit</b> u generace. Změny nejprve
+        potvrďte tlačítkem „Uložit“. Na webu se projeví až po „Publikovat na web“ a úspěšném nasazení (asi 5–7 minut).
       </p>
 
       {conflicts.length > 0 && (

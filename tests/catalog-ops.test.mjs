@@ -186,3 +186,26 @@ test("a long history replays the same way twice", () => {
   assert.equal(a.card.summary, "Nový popis.");
   assert.deepEqual(a.conflicts, []);
 });
+
+test("an edit inside a generation follows it when the data files reorder generations", () => {
+  const b = base();
+  const gen = { code: "I", name: "Model I", from: 1990 };
+  const refreshed = base();
+  refreshed.generations.reverse();
+  const r = applyOps(refreshed, [op({ op: "set", path: ["generations", 0, "trunkL"], value: 999, expect: 300, gen })]);
+  assert.deepEqual(r.conflicts, []);
+  assert.equal(r.card.generations.find((g) => g.code === "I").trunkL, 999);
+  assert.equal(r.card.generations.find((g) => g.code === "III").trunkL, 300);
+  assert.equal(b.generations[0].trunkL, 300);
+});
+
+test("reset of a nested item after a removal restores that item's own value", () => {
+  const b = base();
+  b.generations[0].engines = [{ variant: "A", powerKwMin: 50 }, { variant: "B", powerKwMin: 70 }];
+  const r = applyOps(b, [
+    op({ op: "remove", path: ["generations", 0, "engines", 0] }),
+    op({ op: "set", path: ["generations", 0, "engines", 0, "powerKwMin"], value: 71 }),
+    op({ op: "reset", path: ["generations", 0, "engines", 0] }),
+  ]);
+  assert.deepEqual(r.card.generations[0].engines, [{ variant: "B", powerKwMin: 70 }]);
+});

@@ -2,8 +2,8 @@ import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateRandomString } from "better-auth/crypto";
-import { and, asc, eq } from "drizzle-orm";
-import { getDb } from "@/db";
+import { and, asc, eq, sql } from "drizzle-orm";
+import { type Db, getDb } from "@/db";
 import { catalogEdit } from "@/db/schema";
 import { type Session, hasRole } from "./auth";
 import { loadCard } from "./card-store";
@@ -37,10 +37,10 @@ export async function allEdits(): Promise<EditRow[]> {
   return (await getDb().select().from(catalogEdit).orderBy(asc(catalogEdit.createdAt), asc(catalogEdit.id))).map(toRow);
 }
 
-/** Edits of one model line, oldest first. */
-export async function editsOf(makeSlug: string, lineSlug: string) {
+/** Edits of one model line, oldest first (db: a transaction, when called inside one). */
+export async function editsOf(makeSlug: string, lineSlug: string, db: Pick<Db, "select"> = getDb()) {
   return (
-    await getDb()
+    await db
       .select()
       .from(catalogEdit)
       .where(and(eq(catalogEdit.makeSlug, makeSlug), eq(catalogEdit.lineSlug, lineSlug)))
@@ -68,7 +68,9 @@ export async function editorState(session: Session | null, makeSlug: string, lin
 /**
  * Saves operations made in the editor. They are replayed on the card with the line's earlier edits
  * first: a save whose operations do not fit (someone else changed the same thing meanwhile) is
- * refused as a whole, so the history only ever holds operations that applied cleanly.
+ * refused as a whole, so the history only ever holds operations that applied cleanly. Saves of one
+ * line run one at a time (a transaction-scoped Postgres lock), so two editors cannot both pass the
+ * check against the same history.
  */
 export async function saveOps(session: Session | null, makeSlug: string, lineSlug: string, input: unknown) {
   requireAdmin(session);
@@ -81,29 +83,34 @@ export async function saveOps(session: Session | null, makeSlug: string, lineSlu
     if (typeof op === "string") throw new ListingError(400, op);
     ops.push(op);
   }
-  const { base, rows } = await editorState(session, makeSlug, lineSlug);
-  const earlier = rows.map((r, n) => rowToOp(r, n)).filter((o) => o !== null);
-  const fresh = ops.map((op, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op, createdAt: "" }));
-  const result = applyOps(base, [...earlier, ...fresh]);
-  const failed = result.conflicts.filter((c) => c.id.startsWith("new-"));
-  if (failed.length) throw new ListingError(409, `Úpravu nelze uložit: ${failed[0].reason}. Načtěte editor znovu.`);
+  const base = await loadCard(makeSlug, lineSlug, { base: true });
+  if (!base) throw new ListingError(404, "Model nemá kartu v katalogu.");
 
-  const now = Date.now();
-  await getDb()
-    .insert(catalogEdit)
-    .values(
+  await getDb().transaction(async (tx) => {
+    await tx.execute(sql`select pg_advisory_xact_lock(hashtext(${`catalog_edit/${makeSlug}/${lineSlug}`}))`);
+    const rows = await editsOf(makeSlug, lineSlug, tx);
+    const earlier = rows.map((r, n) => rowToOp(r, n)).filter((o) => o !== null);
+    const fresh = ops.map((op, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op, createdAt: "" }));
+    const failed = applyOps(base, [...earlier, ...fresh]).conflicts.filter((c) => c.id.startsWith("new-"));
+    if (failed.length) throw new ListingError(409, `Úpravu nelze uložit: ${failed[0].reason}. Načtěte editor znovu.`);
+
+    // one time for the whole save, after every earlier row; the id keeps the save's own order
+    const last = rows.length ? Date.parse(rows[rows.length - 1].createdAt) : 0;
+    const createdAt = new Date(Math.max(Date.now(), last + 1));
+    const batch = generateRandomString(8, "a-z", "0-9");
+    await tx.insert(catalogEdit).values(
       ops.map((op, n) => ({
-        id: `o-${generateRandomString(12, "a-z", "0-9")}`,
+        id: `o-${batch}-${n.toString(36).padStart(3, "0")}`,
         makeSlug,
         lineSlug,
         genIndex: null,
         field: "op",
         value: JSON.stringify(op),
         authorId: session!.user.id,
-        // one millisecond apart, so the order of a save survives sorting by time
-        createdAt: new Date(now + n),
+        createdAt,
       })),
     );
+  });
   return editsOf(makeSlug, lineSlug);
 }
 

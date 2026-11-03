@@ -112,6 +112,23 @@ export const OPTIONAL_GENERATION_FIELDS: Record<string, () => unknown> = {
   photo: () => ({ url: "", page: "", credit: "", licence: "", licenceUrl: null }),
 };
 
+/** Optional fields of nested objects, by the field (or list) they sit in, offered under "Přidat pole". */
+export const OPTIONAL_FIELDS: Record<string, Record<string, () => unknown>> = {
+  engines: { powerRangeCoverage: () => "", availablePowerKw: () => [] },
+  trims: {
+    from: () => null, to: () => null, bodyType: () => "hatchback", engine: () => ({ fuel: "petrol", displacementCc: null, powerKw: null, torqueNm: null }),
+    equipmentLineIds: () => [], transmission: () => ({ type: "manual", gears: null }), drive: () => "fwd",
+    dimensionsMm: () => ({ length: null, width: null, height: null, wheelbase: null }), massKg: () => null, topSpeedKmh: () => null,
+    acceleration0to100s: () => null, consumptionL100: () => null, consumptionCycle: () => "", consumptionKwh100: () => null,
+    rangeKm: () => null, rangeCycle: () => "", massBasis: () => "", massReference: () => "", massRangeKg: () => ({ min: 0, max: 0 }),
+  },
+  engine: { fuel: () => "petrol", displacementCc: () => null, cylinders: () => null, powerKw: () => null, powerStandard: () => "", torqueNm: () => null, powerBasis: () => "", combustionPowerKw: () => null, electricPowerKw: () => null },
+  transmission: { type: () => "manual", gears: () => null },
+  bodyVariants: { label: () => "", noteCs: () => "" },
+  equipmentLines: { noteCs: () => "" },
+  photo: { aspect: () => null },
+};
+
 /** A new, empty generation. */
 export const newGeneration = (from: number | null = null) => ({
   code: null,

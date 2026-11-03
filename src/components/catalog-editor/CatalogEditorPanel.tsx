@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type CatalogOp, type EditRow, type Path, type StoredOp, applyOps, getAt, identityOf, rowToOp, same } from "@/lib/catalog-ops";
 import type { CardGeneration, ModelCard } from "@/lib/modelCards";
 import { DrawingField } from "./DrawingField";
-import { FIELDS, OPTIONAL_GENERATION_FIELDS, kindOf, labelOf, newGeneration } from "./fields";
+import { FIELDS, OPTIONAL_FIELDS, OPTIONAL_GENERATION_FIELDS, kindOf, labelOf, newGeneration } from "./fields";
 
 // The catalogue editor, opened from a model page by an admin. It loads the card as the data files
 // have it and the line's saved edits (/api/admin/katalog), shows the card with them, and turns every
@@ -162,6 +162,20 @@ function Node({ path, keyName, parentKey, value, baseValue, emit, depth }: { pat
             );
           })}
         </div>
+        {(() => {
+          const context = typeof keyName === "number" ? parentKey : keyName;
+          const missing = Object.keys((context && OPTIONAL_FIELDS[context]) ?? {}).filter((k) => !(k in (value as object)));
+          return missing.length ? (
+            <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs">
+              <span className="text-[var(--color-muted)]">Přidat pole:</span>
+              {missing.map((k) => (
+                <button key={k} type="button" className="pill !px-2 !py-0.5 text-xs" onClick={() => emit({ op: "set", path: [...path, k], value: OPTIONAL_FIELDS[context!][k](), expect: null })}>
+                  {labelOf(k)}
+                </button>
+              ))}
+            </p>
+          ) : null;
+        })()}
         {typeof keyName === "number" && reset && <p className="mt-1">{reset}</p>}
       </fieldset>
     );
@@ -300,11 +314,15 @@ export default function CatalogEditorPanel({
 
   const load = useCallback(async () => {
     setError("");
-    const r = await fetch(`/api/admin/katalog/?znacka=${makeSlug}&model=${lineSlug}`);
-    const data = (await r.json().catch(() => ({}))) as { base?: ModelCard; rows?: Row[]; error?: string };
-    if (!r.ok || !data.base) return setError(data.error ?? "Editor se nepodařilo načíst.");
-    setBase(data.base);
-    setRows(data.rows ?? []);
+    try {
+      const r = await fetch(`/api/admin/katalog/?znacka=${makeSlug}&model=${lineSlug}`);
+      const data = (await r.json().catch(() => ({}))) as { base?: ModelCard; rows?: Row[]; error?: string };
+      if (!r.ok || !data.base) return setError(data.error ?? "Editor se nepodařilo načíst.");
+      setBase(data.base);
+      setRows(data.rows ?? []);
+    } catch {
+      setError("Editor se nepodařilo načíst (spojení). Zavřete ho a otevřete znovu.");
+    }
   }, [makeSlug, lineSlug]);
   useEffect(() => void load(), [load]);
 
@@ -327,10 +345,15 @@ export default function CatalogEditorPanel({
     return applyOps(base, [...saved, ...fresh]);
   }, [base, saved, pending, makeSlug, lineSlug]);
 
-  // an operation that does not apply to what the editor shows is refused at once, not at saving
+  // an operation that does not apply to what the editor shows is refused at once, not at saving;
+  // one inside a generation carries the generation's identity, so it keeps to that generation
   const emit: Emit = useCallback(
-    (op) => {
-      if (!base) return;
+    (raw) => {
+      if (!base || !view) return;
+      const op: CatalogOp =
+        raw.op !== "drawing" && raw.path[0] === "generations" && typeof raw.path[1] === "number" && raw.path.length > 1
+          ? { ...raw, gen: identityOf(view.card.generations[raw.path[1]]) }
+          : raw;
       const fresh = [...pending, op].map((o, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op: o, createdAt: "" }));
       const check = applyOps(base, [...saved, ...fresh]);
       const bad = check.conflicts.find((c) => c.id === `new-${pending.length}`);
@@ -339,41 +362,58 @@ export default function CatalogEditorPanel({
       setNotice("");
       setPending((p) => [...p, op]);
     },
-    [base, pending, saved, makeSlug, lineSlug],
+    [base, view, pending, saved, makeSlug, lineSlug],
   );
 
   async function save() {
+    // what this save sends; changes made while it is on its way stay pending
+    const sent = pending;
     setBusy(true);
     setError("");
-    const r = await fetch("/api/admin/katalog/", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ makeSlug, lineSlug, ops: pending }),
-    });
-    const data = (await r.json().catch(() => ({}))) as { rows?: Row[]; error?: string };
-    setBusy(false);
-    if (!r.ok || !data.rows) return setError(data.error ?? "Uložení se nepovedlo.");
-    setRows(data.rows);
-    setPending([]);
-    setNotice("Uloženo. Na webu se změny objeví po „Publikovat na web“.");
+    try {
+      const r = await fetch("/api/admin/katalog/", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ makeSlug, lineSlug, ops: sent }),
+      });
+      const data = (await r.json().catch(() => ({}))) as { rows?: Row[]; error?: string };
+      if (!r.ok || !data.rows) return setError(data.error ?? "Uložení se nepovedlo.");
+      setRows(data.rows);
+      setPending((p) => p.slice(sent.length));
+      setNotice("Uloženo. Na webu se změny objeví po „Publikovat na web“ a dokončení nasazení.");
+    } catch {
+      setError("Uložení se nepovedlo (spojení). Změny zůstaly v editoru, zkuste to znovu.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function removeRow(id: string) {
     if (!window.confirm("Smazat tuto úpravu z historie? Pozdější úpravy, které na ní stojí, se pak nemusí dát použít.")) return;
     setBusy(true);
-    const r = await fetch(`/api/admin/katalog/?id=${encodeURIComponent(id)}`, { method: "DELETE" });
-    setBusy(false);
-    if (!r.ok) return setError(((await r.json().catch(() => ({}))) as { error?: string }).error ?? "Smazání se nepovedlo.");
-    await load();
+    try {
+      const r = await fetch(`/api/admin/katalog/?id=${encodeURIComponent(id)}`, { method: "DELETE" });
+      if (!r.ok) return setError(((await r.json().catch(() => ({}))) as { error?: string }).error ?? "Smazání se nepovedlo.");
+      await load();
+    } catch {
+      setError("Smazání se nepovedlo (spojení), zkuste to znovu.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function publish() {
     if (pending.length && !window.confirm("Máte neuložené změny; publikují se jen uložené. Pokračovat?")) return;
     setBusy(true);
-    const r = await fetch("/api/admin/katalog/publikovat/", { method: "POST" });
-    setBusy(false);
-    if (!r.ok) return setError(((await r.json().catch(() => ({}))) as { error?: string }).error ?? "Publikování se nepovedlo.");
-    setNotice("Nasazení spuštěno; za několik minut budou změny na webu.");
+    try {
+      const r = await fetch("/api/admin/katalog/publikovat/", { method: "POST" });
+      if (!r.ok) return setError(((await r.json().catch(() => ({}))) as { error?: string }).error ?? "Publikování se nepovedlo.");
+      setNotice("Nasazení spuštěno. Změny se na webu objeví po jeho úspěšném dokončení (asi 5–7 minut).");
+    } catch {
+      setError("Publikování se nepovedlo (spojení), zkuste to znovu.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   function close() {

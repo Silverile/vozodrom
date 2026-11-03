@@ -1,5 +1,6 @@
 import index from "@/data/makes-index.json";
 import lineIndex from "@/data/model-lines-index.json";
+import { builtLine } from "./catalog-built";
 
 // All vehicle makes known to the site (432, from Wikidata, CC0), small enough for the browser.
 // Built by scripts/makes-index.mjs from src/data/catalog/makes.json. Model lines exist only for
@@ -61,9 +62,33 @@ export interface ModelLine {
 }
 
 const LINES = lineIndex as Record<string, ModelLine[]>;
+const edited = new Map<string, ModelLine[]>();
 
+/**
+ * Model lines of a make. Where admins edited a line's generations (lib/catalog-built), its
+ * generations and years come from the edited card, so the listing form offers, and its checks
+ * accept, the same generations the catalogue shows.
+ */
 export function modelLinesOf(makeSlug: string): ModelLine[] {
-  return LINES[makeSlug] ?? [];
+  const lines = LINES[makeSlug] ?? [];
+  let out = edited.get(makeSlug);
+  if (!out) {
+    out = lines.map((line) => {
+      const gens = builtLine(makeSlug, line.slug)?.generations;
+      if (!gens) return line;
+      const froms = gens.map((g) => g.from).filter((y): y is number => y !== null);
+      const tos = gens.map((g) => g.to).filter((y): y is number => y !== null);
+      return {
+        ...line,
+        generations: gens,
+        from: froms.length ? Math.min(...froms) : line.from,
+        // a generation without a known end leaves the line open-ended too
+        to: line.current ? line.to : gens.some((g) => g.from !== null && g.to === null) ? null : tos.length ? Math.max(...tos) : line.to,
+      };
+    });
+    edited.set(makeSlug, out);
+  }
+  return out;
 }
 
 /** Exact model identity, allowing spacing/punctuation aliases, never S line -> S. */
