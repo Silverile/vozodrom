@@ -1,11 +1,11 @@
-import { currentEdits } from "@/lib/catalog-edit-store";
+import { allEdits } from "@/lib/catalog-edit-store";
 import { errorResponse } from "@/lib/listing-store";
 
-// GET: admins' current catalogue corrections. The build fetches them into the static pages
-// (scripts/fetch-catalog-edits.mjs); they are public anyway once published.
+// GET: admins' catalogue edits, oldest first. The build fetches them and replays them into the static
+// pages (scripts/fetch-catalog-edits.mjs, app-model-cards.mjs); they are public anyway once published.
 export async function GET() {
   try {
-    return Response.json({ edits: await currentEdits() }, { headers: { "cache-control": "no-store" } });
+    return Response.json({ edits: await allEdits() }, { headers: { "cache-control": "no-store" } });
   } catch (error) {
     return errorResponse(error);
   }

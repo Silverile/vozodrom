@@ -1,5 +1,6 @@
 import lines from "@/data/front-drawings.json";
 import review from "@/data/front-drawing-review.json";
+import { builtLine } from "@/lib/catalog-built";
 import { asset } from "@/lib/format";
 
 // Front-view line drawing of a generation, the placeholder until there is a photo. The drawings are
@@ -16,12 +17,29 @@ const lineHeld = (make: string, line: string) => `${make}--${line}` in HELD;
 
 /** Drawings of this model line, or of this one generation, are being checked and not shown yet. */
 export function drawingPending(make: string, line: string, genIndex?: number): boolean {
+  // a line edited by admins had its drawings resolved, held ones left out, when it was built
+  if (builtLine(make, line)) return false;
   return lineHeld(make, line) || (genIndex !== undefined && `${make}--${line}--${genIndex}` in HELD);
 }
 
 /** Published, not held drawings of a model line, as [generation index, first year, last year]. */
 const shownOf = (make: string, line: string) =>
-  lineHeld(make, line) ? [] : (LINES[`${make}--${line}`] ?? []).filter(([i]) => !drawingPending(make, line, i));
+  builtLine(make, line)?.drawings.map(([i, from, to]) => [i, from, to] as [number, number | null, number | null]) ??
+  (lineHeld(make, line) ? [] : (LINES[`${make}--${line}`] ?? []).filter(([i]) => !drawingPending(make, line, i)));
+
+/** The data files' drawing of a generation (by its index there), held for review or not; for the editor. */
+export function dataDrawingSrc(make: string, line: string, index: number): string | null {
+  return (LINES[`${make}--${line}`] ?? []).some(([i]) => i === index) ? asset(`/front/${make}--${line}--${index}.webp`) : null;
+}
+
+/** The file of a drawing id ("make--line--index"): an uploaded drawing or the data files' one. */
+function drawingSrc(id: string): string {
+  const cut = id.lastIndexOf("--");
+  const [make, line] = id.slice(0, cut).split("--");
+  const built = builtLine(make, line);
+  const src = built?.drawings.find(([i]) => i === Number(id.slice(cut + 2)))?.[3];
+  return src ?? `/front/${id}.webp`;
+}
 
 export function frontDrawingId(makeSlug: string, lineSlug: string, genIndex: number): string | null {
   return shownOf(makeSlug, lineSlug).some(([i]) => i === genIndex) ? `${makeSlug}--${lineSlug}--${genIndex}` : null;
@@ -40,7 +58,7 @@ export function frontDrawingFor(makeSlug: string, lineSlug: string, year: number
 }
 
 export function FrontDrawing({ id, alt, className = "", aspect = "aspect-[16/10]" }: { id: string; alt: string; className?: string; aspect?: string }) {
-  const mask = `url(${asset(`/front/${id}.webp`)}) center / contain no-repeat`;
+  const mask = `url(${asset(drawingSrc(id))}) center / contain no-repeat`;
   return (
     <div className={`w-full ${aspect} bg-[var(--color-blueprint)] ${className}`} role="img" aria-label={`Nákres: ${alt}`}>
       <div className="w-full h-full bg-[var(--color-blueprint-ink)]" style={{ mask, WebkitMask: mask }} />

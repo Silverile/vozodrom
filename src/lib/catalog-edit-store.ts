@@ -2,76 +2,124 @@ import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { generateRandomString } from "better-auth/crypto";
-import { and, desc, eq } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import { getDb } from "@/db";
 import { catalogEdit } from "@/db/schema";
 import { type Session, hasRole } from "./auth";
-import { CATALOG_EDIT_FIELDS, type CatalogEdit, isEditField } from "./catalog-edits";
+import { loadCard } from "./card-store";
+import { type CatalogOp, type EditRow, applyOps, parseOp, rowToOp } from "./catalog-ops";
 import { ListingError } from "./listing-store";
 import { modelLinesOf } from "./makes";
 
-// Catalogue edits in the database: admins save them here (each save is kept, the newest per field
-// wins), the public list feeds the next build, and "Publikovat" starts that build on GitHub.
-// Deliberately without lib/modelCards: the model cards (~20 MB) would be bundled once more for
-// these routes and push the Worker over its size limit.
+// Catalogue edits in the database: admins save operations on a model card (lib/catalog-ops), one
+// row each, in order. The public list feeds the next build, which replays them into the static
+// catalogue; "Publikovat" starts that build on GitHub. Deliberately without lib/modelCards: the
+// model cards (~20 MB) would be bundled once more for these routes and push the Worker over its
+// size limit. Base cards come from the static files (lib/card-store).
 
 const REPOSITORY = "Silverile/vozodrom";
 const WORKFLOW = "deploy-cloudflare.yml";
+/** Operations one save may carry. */
+const MAX_OPS = 200;
 
-/** Newest edit per line, generation and field; the order of the table is the history. */
-function newest(rows: (typeof catalogEdit.$inferSelect)[]): CatalogEdit[] {
-  const seen = new Map<string, CatalogEdit>();
-  for (const r of rows) {
-    const key = `${r.makeSlug}/${r.lineSlug}/${r.genIndex ?? "-"}/${r.field}`;
-    if (!seen.has(key) && isEditField(r.field)) seen.set(key, { makeSlug: r.makeSlug, lineSlug: r.lineSlug, genIndex: r.genIndex, field: r.field, value: r.value });
-  }
-  return [...seen.values()];
+const toRow = (r: typeof catalogEdit.$inferSelect): EditRow & { id: string; createdAt: string } => ({
+  id: r.id,
+  makeSlug: r.makeSlug,
+  lineSlug: r.lineSlug,
+  genIndex: r.genIndex,
+  field: r.field,
+  value: r.value,
+  createdAt: r.createdAt.toISOString(),
+});
+
+/** All edits, oldest first, for the build (GET /api/katalog/opravy/). */
+export async function allEdits(): Promise<EditRow[]> {
+  return (await getDb().select().from(catalogEdit).orderBy(asc(catalogEdit.createdAt), asc(catalogEdit.id))).map(toRow);
 }
 
-/** All current edits, for the build (GET /api/katalog/opravy/). */
-export async function currentEdits(): Promise<CatalogEdit[]> {
-  return newest(await getDb().select().from(catalogEdit).orderBy(desc(catalogEdit.createdAt)));
-}
-
-/** Current edits of one model line, for the admin form (newer than what the pages were built with). */
-export async function editsOf(makeSlug: string, lineSlug: string): Promise<CatalogEdit[]> {
-  return newest(
+/** Edits of one model line, oldest first. */
+export async function editsOf(makeSlug: string, lineSlug: string) {
+  return (
     await getDb()
       .select()
       .from(catalogEdit)
       .where(and(eq(catalogEdit.makeSlug, makeSlug), eq(catalogEdit.lineSlug, lineSlug)))
-      .orderBy(desc(catalogEdit.createdAt)),
-  );
+      .orderBy(asc(catalogEdit.createdAt), asc(catalogEdit.id))
+  ).map(toRow);
 }
 
-export async function saveEdit(session: Session, input: unknown) {
+function requireAdmin(session: Session | null): asserts session is Session {
   if (!hasRole(session, ["admin"])) throw new ListingError(403, "Jen pro administrátory.");
-  const b = (input && typeof input === "object" ? input : {}) as Record<string, unknown>;
-  const field = typeof b.field === "string" && isEditField(b.field) ? b.field : null;
-  const makeSlug = typeof b.makeSlug === "string" ? b.makeSlug : "";
-  const lineSlug = typeof b.lineSlug === "string" ? b.lineSlug : "";
-  const genIndex = typeof b.genIndex === "number" && Number.isInteger(b.genIndex) ? b.genIndex : null;
-  const value = typeof b.value === "string" ? b.value.trim().slice(0, 5000) : "";
-  if (!field || !modelLinesOf(makeSlug).some((l) => l.slug === lineSlug)) throw new ListingError(400, "Neplatná úprava.");
-  const generationField = CATALOG_EDIT_FIELDS[field].level === "generation";
-  if (generationField !== (genIndex !== null) || (genIndex !== null && (genIndex < 0 || genIndex > 50))) throw new ListingError(400, "Neplatná generace.");
-  await getDb().insert(catalogEdit).values({
-    id: `o-${generateRandomString(12, "a-z", "0-9")}`,
-    makeSlug,
-    lineSlug,
-    genIndex,
-    field,
-    value,
-    authorId: session.user.id,
-  });
+}
+
+function requireLine(makeSlug: string, lineSlug: string) {
+  if (!modelLinesOf(makeSlug).some((l) => l.slug === lineSlug)) throw new ListingError(404, "Model nenalezen.");
+}
+
+/** The card as the data files have it plus all its edits so far, for the editor. */
+export async function editorState(session: Session | null, makeSlug: string, lineSlug: string) {
+  requireAdmin(session);
+  requireLine(makeSlug, lineSlug);
+  const base = await loadCard(makeSlug, lineSlug, { base: true });
+  if (!base) throw new ListingError(404, "Model nemá kartu v katalogu.");
+  return { base, rows: await editsOf(makeSlug, lineSlug) };
+}
+
+/**
+ * Saves operations made in the editor. They are replayed on the card with the line's earlier edits
+ * first: a save whose operations do not fit (someone else changed the same thing meanwhile) is
+ * refused as a whole, so the history only ever holds operations that applied cleanly.
+ */
+export async function saveOps(session: Session | null, makeSlug: string, lineSlug: string, input: unknown) {
+  requireAdmin(session);
+  requireLine(makeSlug, lineSlug);
+  const list = Array.isArray(input) ? input : [];
+  if (!list.length || list.length > MAX_OPS) throw new ListingError(400, "Žádné nebo příliš mnoho úprav najednou.");
+  const ops: CatalogOp[] = [];
+  for (const raw of list) {
+    const op = parseOp(raw);
+    if (typeof op === "string") throw new ListingError(400, op);
+    ops.push(op);
+  }
+  const { base, rows } = await editorState(session, makeSlug, lineSlug);
+  const earlier = rows.map((r, n) => rowToOp(r, n)).filter((o) => o !== null);
+  const fresh = ops.map((op, n) => ({ id: `new-${n}`, makeSlug, lineSlug, op, createdAt: "" }));
+  const result = applyOps(base, [...earlier, ...fresh]);
+  const failed = result.conflicts.filter((c) => c.id.startsWith("new-"));
+  if (failed.length) throw new ListingError(409, `Úpravu nelze uložit: ${failed[0].reason}. Načtěte editor znovu.`);
+
+  const now = Date.now();
+  await getDb()
+    .insert(catalogEdit)
+    .values(
+      ops.map((op, n) => ({
+        id: `o-${generateRandomString(12, "a-z", "0-9")}`,
+        makeSlug,
+        lineSlug,
+        genIndex: null,
+        field: "op",
+        value: JSON.stringify(op),
+        authorId: session!.user.id,
+        // one millisecond apart, so the order of a save survives sorting by time
+        createdAt: new Date(now + n),
+      })),
+    );
+  return editsOf(makeSlug, lineSlug);
+}
+
+/** Takes back one saved operation (later ones that depended on it then show as conflicts). */
+export async function deleteOp(session: Session | null, id: string) {
+  requireAdmin(session);
+  const deleted = await getDb().delete(catalogEdit).where(eq(catalogEdit.id, id)).returning({ id: catalogEdit.id });
+  if (!deleted.length) throw new ListingError(404, "Úprava nenalezena.");
 }
 
 /**
  * Starts the deploy workflow, whose build fetches the current edits. Needs GITHUB_DEPLOY_TOKEN: a
  * fine-grained token for this repository with "Actions: read and write" only.
  */
-export async function publishEdits(session: Session) {
-  if (!hasRole(session, ["admin"])) throw new ListingError(403, "Jen pro administrátory.");
+export async function publishEdits(session: Session | null) {
+  requireAdmin(session);
   const token = (getCloudflareContext().env as unknown as { GITHUB_DEPLOY_TOKEN?: string }).GITHUB_DEPLOY_TOKEN;
   if (!token) throw new ListingError(503, "Chybí GITHUB_DEPLOY_TOKEN, nasazení nelze spustit odsud.");
   const response = await fetch(`https://api.github.com/repos/${REPOSITORY}/actions/workflows/${WORKFLOW}/dispatches`, {

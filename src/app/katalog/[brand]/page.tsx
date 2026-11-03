@@ -10,7 +10,6 @@ import { ViewTabs } from "@/components/ViewTabs";
 import { factsOf, historyOf, hostOf, periodOf } from "@/lib/brandFacts";
 import { MAKES, type MakeSection, type ModelLine, getMake, modelLinesOf, resolveMake, yearsOf } from "@/lib/makes";
 import { loadCard } from "@/lib/card-store";
-import { BODY_GROUPS } from "@/lib/modelCards";
 import { CatalogImage } from "@/components/CatalogImage";
 import { newestFrontDrawing } from "@/components/FrontDrawing";
 import type { Body } from "@/lib/types";
@@ -73,11 +72,6 @@ export default async function BrandPage({ params }: { params: Params }) {
   const lines = modelLinesOf(slug);
   // generations per line by the model cards (the line index may count fewer)
   const genCounts = new Map(await Promise.all(lines.map(async (l) => [l.slug, (await loadCard(slug, l.slug))?.generations.length ?? 0] as const)));
-  // A model with several body types appears in each of its groups, as on Drom.
-  const groups: [string, string, ModelLine[]][] = [
-    ...BODY_GROUPS.map(([key, label]) => [key, label, lines.filter((l) => l.bodyTypes.includes(key))] as [string, string, ModelLine[]]),
-    ["ostatni", "Ostatní", lines.filter((l) => !l.bodyTypes.some((b) => BODY_GROUPS.some(([k]) => k === b)))] as [string, string, ModelLine[]],
-  ].filter(([, , g]) => g.length > 0);
   const byYear = [...lines].sort((a, b) => (b.from ?? 0) - (a.from ?? 0));
 
   const itemCount = (section: MakeSection) =>
@@ -193,15 +187,7 @@ export default async function BrandPage({ params }: { params: Params }) {
       {lines.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-bold mb-3">Modelová řada <span className="text-base font-normal text-[var(--color-muted)]">· {lines.length} modelů</span></h2>
-          <ViewTabs labels={["Podle karoserie", "Abecedně", "Podle roku"]}>
-            <div className="space-y-8">
-              {groups.map(([key, label, group]) => (
-                <div key={key}>
-                  <h3 className="font-bold text-lg mb-3">{label} <span className="text-sm font-normal text-[var(--color-muted)]">· {group.length}</span></h3>
-                  <LineGrid make={make.name} slug={slug} lines={group} genCounts={genCounts} />
-                </div>
-              ))}
-            </div>
+          <ViewTabs labels={["Abecedně", "Podle roku"]}>
             <LineGrid make={make.name} slug={slug} lines={lines} genCounts={genCounts} />
             <LineGrid make={make.name} slug={slug} lines={byYear} genCounts={genCounts} />
           </ViewTabs>

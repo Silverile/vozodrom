@@ -38,6 +38,7 @@ Celé chování jako v produkci ukáže `npm run cf:preview`.
 |---|---|
 | `npm run dev` | vývojový server Next.js |
 | `npm run typecheck` | kontrola typů (`tsc --noEmit`) |
+| `npm test` | testy (`node --test`, složka `tests/`): úpravy katalogu, převod nákresů |
 | `npm run build` | build Next.js (kontrola) |
 | `npm run cf:build` | build pro Cloudflare Workers (OpenNext) do `.open-next/` |
 | `npm run cf:preview` | build + lokální běh ve workerd (Durable Objects, R2, cron jako v produkci) |

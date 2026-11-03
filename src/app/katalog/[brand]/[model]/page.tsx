@@ -29,6 +29,8 @@ import {
 } from "@/lib/modelCards";
 import { type StatsEntry, lineStats } from "@/lib/stats";
 import drawingReview from "@/data/front-drawing-review.json";
+import { genStatsOf } from "@/lib/catalog-built";
+import { EditCatalog, EditGeneration } from "@/components/catalog-editor/EditCatalog";
 
 // One page per model line. Every curated line has one; STK and registry figures appear only where
 // the open data has them (lib/stats.ts), listings only where there are any. Model cards (generations, engines, trims) come from Codex's catalogue;
@@ -181,7 +183,7 @@ const TRIM_COLUMNS: { label: string; value: (t: CardTrim) => string | null; tip?
  * One generation's details, folded except the newest so a long model history stays short. Folded
  * content is still in the page for search engines; the generation cards open it (OpenOnHash).
  */
-function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardGeneration; title: string; id: string; stats?: StatsEntry; drawing?: string | null; open: boolean }) {
+function GenerationDetail({ gen, index, title, id, stats, drawing, open }: { gen: CardGeneration; index: number; title: string; id: string; stats?: StatsEntry; drawing?: string | null; open: boolean }) {
   const facts: [string, string | null][] = [
     [
       gen.dateBasis === "announcement" ? "Představeno" : gen.dateBasis && gen.dateBasis !== "production" ? "Období modelu" : "Výroba",
@@ -218,7 +220,10 @@ function GenerationDetail({ gen, title, id, stats, drawing, open }: { gen: CardG
           <span aria-hidden="true" className="mr-2 inline-block text-[var(--color-muted)] transition-transform group-open:rotate-90">›</span>
           {title}
         </h3>
-        <span className="text-sm text-[var(--color-muted)]">{gen.dateBasis === "announcement" ? (gen.from ? `připravuje se · představeno ${gen.from}` : "připravuje se") : yearsSpan(gen.from, gen.to, gen.current)}</span>
+        <span className="flex items-baseline gap-3 text-sm text-[var(--color-muted)]">
+          {gen.dateBasis === "announcement" ? (gen.from ? `připravuje se · představeno ${gen.from}` : "připravuje se") : yearsSpan(gen.from, gen.to, gen.current)}
+          <EditGeneration index={index} />
+        </span>
       </summary>
       {empty && <p className="mt-3 text-sm text-[var(--color-muted)]">Technické údaje této generace zatím nemáme ověřené.</p>}
       {gen.dateNote && <p className="mt-2 text-xs text-[var(--color-muted)]">{gen.dateNote}</p>}
@@ -402,7 +407,10 @@ export default async function ModelPage({ params }: { params: Params }) {
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr] mt-3 items-center">
         <div className="min-w-0">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{title}</h1>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{title}</h1>
+            <EditCatalog makeSlug={brandSlug} lineSlug={modelSlug} title={title} />
+          </div>
           <p className="text-[var(--color-muted)] mt-1">
             {[segmentOf(card?.segment ?? demo?.segment), years && `${line?.dateScope ? "období modelu" : "vyráběno"} ${years}`].filter(Boolean).join(" · ")}
           </p>
@@ -497,7 +505,7 @@ export default async function ModelPage({ params }: { params: Params }) {
           <div className="mt-4 flex flex-col gap-4">
             {[...gens].reverse().map((g, r) => {
               const i = gens.length - 1 - r;
-              return <GenerationDetail key={i} id={`g${i + 1}`} open={r === 0} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={`${brandSlug}--${modelSlug}` in drawingReview ? undefined : real?.gens[String(i)]} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
+              return <GenerationDetail key={i} index={i} id={`g${i + 1}`} open={r === 0} gen={g} drawing={frontDrawingId(brandSlug, modelSlug, i)} stats={`${brandSlug}--${modelSlug}` in drawingReview ? undefined : genStatsOf(real?.gens, brandSlug, modelSlug, i)} title={`${title} ${g.name?.replace(name, "").trim() || g.code || `${i + 1}. generace`}`} />;
             })}
           </div>
           <OpenOnHash />

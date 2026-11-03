@@ -2,6 +2,7 @@ import "server-only";
 
 import listingStats from "@/data/listing-stats.json";
 import { frontDrawingId } from "@/components/FrontDrawing";
+import { genStatsOf } from "./catalog-built";
 import { cardGeneration, coversYear, toListingFuel } from "./listing-catalog";
 import { generationOf, lineOf, type Draft } from "./listing-draft";
 import { loadCard } from "./card-store";
@@ -87,7 +88,7 @@ export async function listingContext(listing: Listing, draft: Draft): Promise<Li
   const stage = stagesOf(gen).filter((s) => s.from === null || s.from <= listing.year).pop()?.label ?? "";
 
   const statsLine = STATS.makes[draft.brand]?.[line.slug];
-  const genStats = statsLine?.gens?.[String(genIndex)];
+  const genStats = genStatsOf(statsLine?.gens, draft.brand, line.slug, genIndex);
   const { gens: _, ...lineStats } = statsLine ?? {};
 
   return {

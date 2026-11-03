@@ -37,7 +37,7 @@ Každý push do `main` spustí `.github/workflows/deploy-cloudflare.yml`: `npm c
 
 Postup změny:
 
-1. Pracovat ve vlastní větvi, ověřit `npm run typecheck` a `npm run cf:build`.
+1. Pracovat ve vlastní větvi, ověřit `npm run typecheck`, `npm test` a `npm run cf:build`.
 2. Mění-li se schéma: **nejdřív migrace na Neon** (níže), pak teprve push.
 3. Fast-forward do `main` a push.
 4. Po nasazení zkontrolovat hlavní stránky a API (`/`, `/inzeraty/`, `/api/inzeraty/verejne/`).

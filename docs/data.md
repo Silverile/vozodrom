@@ -88,8 +88,9 @@ Auta, zápisy a komentáře jsou veřejné hned. Moderátor je skryje s důvodem
 i s důvodem. VIN vidí jen majitel, SPZ jen když ji majitel ukáže. Veřejné stránky ukazují jméno zkráceně („Jana N.“).
 Fotky jsou v R2 pod `garaz/c-…/` a `deniky/e-…/`.
 
-**`catalog_edit`** — opravy textů katalogu od administrátorů (popis modelu, název generace, poznámka k rokům).
-Každé uložení je nový řádek, platí nejnovější; prázdná hodnota = text katalogu. Viz [Katalog](#opravy-katalogu).
+**`catalog_edit`** — úpravy katalogu od administrátorů jako operace nad kartou modelu (`field = "op"`, `value` = JSON
+operace z `src/lib/catalog-ops.ts`), v pořadí uložení. Starší řádky s `field` summary/name/dateNote se čtou jako
+nastavení textu (prázdná hodnota = text katalogu). Viz [Úpravy katalogu](#opravy-katalogu).
 
 ## Migrace
 
@@ -126,18 +127,29 @@ při předrenderování čte z disku a ve Workeru přes `ASSETS`. Plný index z�
 
 ## Testovací data
 
-`src/lib/listings.ts` generuje smyšlené inzeráty (VIN `TESTVZD…`), `src/data/feeds/` obsahuje ukázkový feed
-dealera. Odhad ceny vůči trhu (`src/lib/market.ts`) zatím počítá z těchto testovacích inzerátů.
+`src/lib/listings.ts` je seznam inzerátů z feedů dealerů (zatím prázdný); inzeráty uživatelů jsou v databázi.
+Odhad ceny vůči trhu (`src/lib/market.ts`) počítá jen z těchto inzerátů, takže se zatím neukazuje.
 
 ## Opravy katalogu
 
-Stránky katalogu jsou statické, opravy se do nich dostanou při sestavení:
+Administrátor upravuje katalog přímo na stránce modelu (tlačítko „✎ Upravit katalog“, u generace „Upravit“):
+libovolné pole karty, přidání, smazání a přesun generací, nákres zepředu. Stránky katalogu jsou statické, úpravy
+se do nich dostanou při sestavení:
 
-1. Administrátor uloží opravu v `/admin/obsah/` (tabulka `catalog_edit`).
-2. Před buildem `scripts/fetch-catalog-edits.mjs` (npm `prebuild`, jen na CI) stáhne aktuální opravy z
+1. Editor (`src/components/catalog-editor/`) převádí každou změnu na operaci (`src/lib/catalog-ops.ts`: set, reset,
+   insert, remove, move, drawing). Operace nesou, co čekaly na svém místě; „Uložit“ je pošle do
+   `/api/admin/katalog/`, server je přehraje na kartě s dosavadní historií a uloží jen ty, které sedí.
+2. Nákres: obrázek ze souboru, Ctrl+V nebo přetažením převede v prohlížeči `src/lib/drawing-format.ts` do formátu
+   webu (port `vozodrom-data/tools/front/site_drawings.py`, shodný s ním bajt po bajtu; Codexův test
+   v `analysis/codex/drawing-format/`). WebP jde do R2 (`katalog/…`, služba `/foto/katalog/…`).
+3. Před buildem `scripts/fetch-catalog-edits.mjs` (npm `prebuild`, jen na CI) stáhne všechny operace z
    `https://vozodrom.cz/api/katalog/opravy/` do `src/data/catalog-edits.json`; když web neodpoví, build pokračuje
    s verzí v repozitáři.
-3. `loadCard` v `src/lib/card-store.ts` je aplikuje na karty (`src/lib/catalog-edits.ts`).
-4. „Publikovat na web“ spustí workflow nasazení přes GitHub API (secret `GITHUB_DEPLOY_TOKEN`, viz provoz).
-   Opravy jdou na web i s každým jiným nasazením.
+4. `scripts/app-model-cards.mjs` je přehraje do souborů karet (`public/katalog-data/…/<řada>.json`, původní karta
+   vedle jako `<řada>.base.json`). U řad, kde se měnily generace nebo nákresy, zapíše do
+   `src/data/catalog-built.json` (negeneruje se do gitu), odkud která generace pochází: nákresy a statistiky STK
+   jsou vedené podle pořadí v datech, `src/lib/catalog-built.ts` je přes to přemapuje. Operace, které už na
+   data nesedí (data se pod nimi změnila), se přeskočí a ukáže je `/admin/obsah/`.
+5. „Publikovat na web“ spustí workflow nasazení přes GitHub API (secret `GITHUB_DEPLOY_TOKEN`, viz provoz).
+   Úpravy jdou na web i s každým jiným nasazením.
 

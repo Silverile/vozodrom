@@ -1,12 +1,13 @@
 import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { applyEdits, builtEditsOf } from "./catalog-edits";
 import type { ModelCard } from "./modelCards";
 
 // Model cards are static files, one per model line (public/katalog-data/<make>/<line>.json, written
 // by scripts/app-model-cards.mjs), not part of the Worker bundle. When pages are prerendered they
 // are read from disk; in the Worker through the ASSETS binding. Cards are cached per isolate.
+// Admins' edits are already in the files (scripts/app-model-cards.mjs replays them); an edited line
+// also has <line>.base.json, the card as the data files have it.
 
 const SLUG = /^[a-z0-9-]+$/;
 const cache = new Map<string, Promise<ModelCard | undefined>>();
@@ -31,8 +32,7 @@ async function fromAssets(path: string): Promise<string | null> {
   }
 }
 
-function read(makeSlug: string, lineSlug: string): Promise<ModelCard | undefined> {
-  const path = `/katalog-data/${makeSlug}/${lineSlug}.json`;
+function read(path: string): Promise<ModelCard | undefined> {
   let card = cache.get(path);
   if (!card) {
     card = (async () => {
@@ -46,9 +46,9 @@ function read(makeSlug: string, lineSlug: string): Promise<ModelCard | undefined
   return card;
 }
 
-/** The model card with admins' text corrections applied (lib/catalog-edits); edits: false gives the data as built. */
-export async function loadCard(makeSlug: string, lineSlug: string, { edits = true } = {}): Promise<ModelCard | undefined> {
+/** The model card as the site shows it, with admins' edits; base: true gives it as the data files have it. */
+export async function loadCard(makeSlug: string, lineSlug: string, { base = false } = {}): Promise<ModelCard | undefined> {
   if (!SLUG.test(makeSlug) || !SLUG.test(lineSlug)) return undefined;
-  const card = await read(makeSlug, lineSlug);
-  return card && (edits ? applyEdits(card, builtEditsOf(makeSlug, lineSlug)) : card);
+  const path = `/katalog-data/${makeSlug}/${lineSlug}`;
+  return (base && (await read(`${path}.base.json`))) || read(`${path}.json`);
 }

@@ -67,7 +67,10 @@ předrenderované. Relace se čte z podepsané cookie (cache 2 min), databáze s
 | `mail.ts` | odeslání e-mailu (Cloudflare Email Service; lokálně jen výpis) |
 | `garage-store.ts` | garáž a deníky: auta, zápisy, fotky, „líbí se“, sledování, komentáře, hlášení a moderace |
 | `photo-store.ts` | kontrola a uložení fotek do R2 (inzeráty, auta v garáži, zápisy) |
-| `catalog-edit-store.ts` | opravy textů katalogu od administrátorů a spuštění nasazení |
+| `catalog-edit-store.ts` | úpravy katalogu od administrátorů (operace) a spuštění nasazení |
+| `catalog-ops.ts` | operace nad kartou modelu a jejich přehrání (sdílí ho editor, server i build) |
+| `catalog-built.ts` | po úpravách generací: odkud která generace pochází (nákresy, statistiky STK) |
+| `drawing-format.ts` | převod nákresu do formátu webu v prohlížeči (port `site_drawings.py`) |
 
 **Sdílené (prohlížeč i server)**: `listing-draft.ts` (typ a kontrola formuláře inzerátu — stejná pravidla
 v prohlížeči i na serveru), `listing-catalog.ts` (karoserie, paliva, mapování katalogu), `listing-status.ts`

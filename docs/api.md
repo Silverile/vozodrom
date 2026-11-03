@@ -69,8 +69,11 @@ Všechny cesty končí lomítkem (web má `trailingSlash`); bez něj Next přesm
 | Metoda a cesta | Kdo | Co |
 |---|---|---|
 | `GET /api/katalog/[make]/[line]/` | kdokoli | generace pro formuláře (karoserie, motory, převodovky) |
-| `GET /api/katalog/opravy/` | kdokoli | aktuální opravy textů katalogu (čte je build) |
-| `POST /api/admin/katalog/` | admin | `{ makeSlug, lineSlug, genIndex, field, value }` uloží opravu |
+| `GET /api/katalog/opravy/` | kdokoli | všechny úpravy katalogu od nejstarší (čte je build) |
+| `GET /api/admin/katalog/?znacka=&model=` | admin | `{ base, rows }`: karta podle dat a uložené úpravy řady |
+| `POST /api/admin/katalog/` | admin | `{ makeSlug, lineSlug, ops }` uloží operace (`src/lib/catalog-ops.ts`) → `{ rows }`; 409, když nesedí |
+| `DELETE /api/admin/katalog/?id=` | admin | smaže jednu uloženou úpravu |
+| `POST /api/admin/katalog/nakres/?znacka=&model=` | admin | tělo WebP (≤ 2 MB) → `{ src }` nákres v R2 |
 | `POST /api/admin/katalog/publikovat/` | admin | spustí nasazení (GitHub workflow) |
 
 ## Interní

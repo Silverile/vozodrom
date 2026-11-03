@@ -1,9 +1,10 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 
-// Serves photos of listings, garage cars and logbook entries from R2. Keys are random and never reused, so responses are cached for a year.
+// Serves photos of listings, garage cars and logbook entries and admins' catalogue drawings from R2.
+// Keys are random and never reused, so responses are cached for a year.
 export async function GET(_: Request, { params }: { params: Promise<{ key: string[] }> }) {
   const key = (await params).key.join("/");
-  if (!/^(inzeraty\/u|garaz\/c|deniky\/e)-[a-z0-9]+\/[a-z0-9]+\.(webp|jpg)$/.test(key)) return new Response("Not found", { status: 404 });
+  if (!/^((inzeraty\/u|garaz\/c|deniky\/e)-[a-z0-9]+\/[a-z0-9]+\.(webp|jpg)|katalog\/[a-z0-9-]+\.webp)$/.test(key)) return new Response("Not found", { status: 404 });
   const object = await getCloudflareContext().env.PHOTOS.get(key);
   if (!object) return new Response("Not found", { status: 404 });
   const headers = new Headers();
