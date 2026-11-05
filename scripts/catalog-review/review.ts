@@ -79,7 +79,8 @@ if (cmd === "lines") {
       continue;
     }
     const base = cardOf(make, line);
-    const raw = diffCard(base, next as ModelCard);
+    const raw = [...renames(base, next as ModelCard)];
+    raw.push(...diffCard(raw.length ? applyOps(base, raw.map((op, n) => ({ id: `r-${n}`, makeSlug: make, lineSlug: line, op, createdAt: "" }))).card : base, next as ModelCard));
     const changes = readFileSync(changesFile, "utf8").trim();
     if (!raw.length) {
       unchanged++;
@@ -108,17 +109,47 @@ if (cmd === "lines") {
       bad.push(`${line}: ${failed}`);
       continue;
     }
+    const lost = base.generations.map((_, i) => i).filter((i) => !result.origins.includes(i));
+    if (lost.length) console.log(`  ${line}: generations ${lost.map((i) => `${i + 1} (${base.generations[i].code ?? base.generations[i].name})`).join(", ")} of the data files removed (their drawings and STK statistics go with them)`);
     review[line] = { ops, changes };
     changed++;
   }
   const sorted = Object.fromEntries(Object.entries(review).sort(([a], [b]) => a.localeCompare(b)));
   mkdirSync(new URL("src/data/catalog-review/", ROOT), { recursive: true });
-  writeFileSync(reviewPath(make), `${JSON.stringify(sorted, null, 1)}\n`);
+  // one model line per row: readable diffs without the bulk of pretty-printed operations
+  writeFileSync(reviewPath(make), `{\n${Object.entries(sorted).map(([l, r]) => `${JSON.stringify(l)}: ${JSON.stringify(r)}`).join(",\n")}\n}\n`);
   console.log(`${make}: ${changed} lines with corrections, ${unchanged} confirmed unchanged, ${bad.length} refused`);
   for (const b of bad) console.log(`  refused ${b}`);
 } else {
   console.error("usage: review.ts prep|apply <workdir> <make> [line…] | lines");
   process.exit(1);
+}
+
+/**
+ * diffCard matches generations by code (or name): a generation that kept its place but got a code
+ * or a new name would become remove + insert and lose its drawing and STK statistics. Such a
+ * generation is recognised by its photo (the review never changes it), else by its first year, and
+ * renamed in place first, so the diff then finds it.
+ */
+function renames(base: ModelCard, next: ModelCard): CatalogOp[] {
+  const key = (g: { code?: string | null; name?: string | null; from?: number | null }, i: number) => (g.code || g.name || (g.from ? `od ${g.from}` : "") || `#${i}`).trim().toLowerCase();
+  const nextKeys = new Set(next.generations.map(key));
+  const baseKeys = new Set(base.generations.map(key));
+  const free = next.generations.map((g, j) => (baseKeys.has(key(g, j)) ? -1 : j)).filter((j) => j >= 0);
+  const photo = (g: { photo?: { url?: string } | null }) => g.photo?.url ?? null;
+  const ops: CatalogOp[] = [];
+  base.generations.forEach((g, i) => {
+    if (nextKeys.has(key(g, i))) return;
+    let at = free.findIndex((j) => photo(g) && photo(next.generations[j]) === photo(g));
+    if (at < 0) at = free.findIndex((j) => g.from != null && next.generations[j].from != null && Math.abs(next.generations[j].from! - g.from) <= 1 && !photo(next.generations[j]) === !photo(g));
+    // one generation without years renamed: the only one left on both sides is the same
+    if (at < 0 && free.length === 1 && base.generations.filter((h, k) => !nextKeys.has(key(h, k))).length === 1) at = 0;
+    if (at < 0) return;
+    const n = next.generations[free[at]];
+    free.splice(at, 1);
+    for (const k of ["code", "name"] as const) if ((g[k] ?? null) !== (n[k] ?? null)) ops.push({ op: "set", path: ["generations", i, k], value: n[k] ?? null, expect: g[k] ?? null });
+  });
+  return ops;
 }
 
 /** Values the site does not know, and the lists every generation must have. */
