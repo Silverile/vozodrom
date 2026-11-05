@@ -21,6 +21,21 @@ export interface FormGeneration {
   engines: FormEngine[];
   gearboxes: ListingGearbox[];
   photo: string | null;
+  /**
+   * The generation's looks as the catalogue shows them: as launched, then each facelift with its
+   * years, and the front drawing of that look (null where the catalogue has none). Answers cached
+   * before looks existed lack it.
+   */
+  looks?: FormLook[];
+}
+
+export interface FormLook {
+  /** "" for the generation as launched, else the facelift's name ("facelift", "Modernizace NA8") */
+  label: string;
+  from: number | null;
+  to: number | null;
+  current: boolean;
+  drawing: string | null;
 }
 
 const FUEL: Record<string, ListingFuel> = {

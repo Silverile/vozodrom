@@ -3,17 +3,24 @@ import { loadCard } from "./card-store";
 import { getMake, modelLinesOf } from "./makes";
 import { cardGeneration, coversYear, engineLabel, toGearbox, toListingFuel, BODY_KEYS, type FormGeneration } from "./listing-catalog";
 import { generationId } from "./listing-draft";
-import { thumb } from "./modelCards";
+import { stagesOf, thumb } from "./modelCards";
+import { frontDrawingId } from "@/components/FrontDrawing";
 import { ApiError } from "./api-v1-http";
 import type { ListingFormDto } from "./api-v1-contract";
 
 /** The exact normalized card projection used by the current web form. */
 export async function cardFormGenerations(make: string, line: string): Promise<FormGeneration[]> {
   const card = await loadCard(make, line);
-  return (card?.generations ?? []).filter((g) => g.code || g.name).map((g) => ({
+  // the index into the card's generations keys its drawing, so it is taken before the filter
+  return (card?.generations ?? []).map((g, i) => ({ g, i })).filter(({ g }) => g.code || g.name).map(({ g, i }) => ({
     code: g.code ?? g.name!, name: g.name, from: g.from, to: g.to, bodies: g.bodyTypes,
     engines: (g.engines ?? []).map((e) => ({ label: engineLabel(e), fuel: toListingFuel(e.fuel), kwMin: e.powerKwMin, kwMax: e.powerKwMax })).filter((e) => e.label),
     gearboxes: [...new Set((g.transmissions ?? []).map((t) => toGearbox(t.type)))], photo: g.photo ? thumb(g.photo.url, 330) : null,
+    // the same drawings as the catalogue's generation tiles: a facelift's own, else the generation's on its drawingStage
+    looks: stagesOf(g).map((st, k) => ({
+      label: st.label, from: st.from, to: st.to, current: st.current,
+      drawing: st.drawing ?? (k === (g.drawingStage ?? 0) ? frontDrawingId(make, line, i) : null),
+    })),
   }));
 }
 export async function listingForm(make: string, line: string, params: URLSearchParams): Promise<ListingFormDto> {

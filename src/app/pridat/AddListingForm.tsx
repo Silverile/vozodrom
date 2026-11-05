@@ -81,6 +81,8 @@ export function AddListingForm() {
   const [modelQuery, setModelQuery] = useState("");
   const [customModel, setCustomModel] = useState(false);
   const [customEngine, setCustomEngine] = useState(false);
+  // the look (generation as launched or a facelift) the seller clicked; the draft keeps only the generation
+  const [pickedLook, setPickedLook] = useState("");
   // engine words typed into the quick search ("1.0 tdi"), to put the matching catalogue engines first
   const [engineHint, setEngineHint] = useState("");
   // undefined until the stored draft is read: then the first unfinished step opens; null = all closed.
@@ -108,6 +110,37 @@ export function AddListingForm() {
   const cardGen =
     (chosenGeneration && cardGeneration(chosenGeneration, cardGenerations, draft.year || undefined)) ??
     (draft.year ? cardGenerations.filter((g) => g.from !== null && coversYear(g, draft.year)).pop() : undefined);
+
+  // One tile per look, as on the catalogue page: the generation as launched, then each facelift,
+  // each with its own drawing. With a year, only the looks built in it (all of a generation's when
+  // its looks have no years for it). A tile picks the generation; which look stays on screen only.
+  const lookTiles = line
+    ? generationChoices.flatMap((g) => {
+        const id = generationId(g);
+        const card = cardGeneration(g, cardGenerations, draft.year || undefined);
+        const base = card?.name ?? g.code ?? line.name;
+        // without the card's looks (still loading, or an answer cached before they existed) a year
+        // inside the generation, so the previous generation's last facelift is not drawn instead
+        const inside = g.from !== null && (g.to === null || g.from < g.to) ? g.from + 1 : g.from ?? draft.year;
+        const looks = card?.looks?.length
+          ? card.looks
+          : [{ label: "", from: g.from, to: g.to, current: g.to === null, drawing: frontDrawingFor(draft.brand, line.slug, inside) }];
+        const inYear = (l: (typeof looks)[number]) => (l.from ?? 0) <= draft.year && (l.current || l.to === null || draft.year <= l.to);
+        const shownLooks = draft.year && looks.some(inYear) ? looks.filter(inYear) : looks;
+        const tiles = shownLooks.map((l) => ({
+          id,
+          key: `${id}|${l.label}`,
+          title: base,
+          stage: l.label ? l.label.replace(base, "").replace(/^[\s–-]+/, "") || l.label : "",
+          years: yearsOf({ from: l.from, to: l.to, current: l.current }),
+          drawing: l.drawing,
+          pressed: false,
+        }));
+        if (chosenId === id && tiles.length) (tiles.find((t) => t.key === pickedLook) ?? tiles[0]).pressed = true;
+        return tiles;
+      })
+    : [];
+  const chosenLook = lookTiles.find((t) => t.pressed);
   const bodies = (cardGen?.bodies.length ? cardGen.bodies : line?.bodyTypes.length ? line.bodyTypes : Object.keys(BODY_KEYS)).filter((b) => b in BODY_KEYS);
   const hintWords = engineHint.toLowerCase().split(/\s+/).filter(Boolean);
   const fits = (e: FormEngine) => hintWords.length > 0 && hintWords.every((w) => e.label.toLowerCase().includes(w));
@@ -219,7 +252,7 @@ export function AddListingForm() {
   });
   const photoList = photos.photos;
 
-  const drawing = line ? (frontDrawingFor(draft.brand, line.slug, draft.year) ?? newestFrontDrawing(draft.brand, line.slug)) : null;
+  const drawing = line ? (chosenLook?.drawing ?? frontDrawingFor(draft.brand, line.slug, draft.year) ?? newestFrontDrawing(draft.brand, line.slug)) : null;
   const preview: Listing | null =
     draft.brand && draft.model.trim()
       ? {
@@ -362,29 +395,28 @@ export function AddListingForm() {
         <fieldset className="sm:col-span-2" data-field="generation" aria-describedby={shown("generation", 0) ? "f-generation-chyba" : undefined}>
           <legend className="text-sm">Generace{draft.year ? ` pro rok ${draft.year}` : ""}</legend>
           <div className="mt-1 grid gap-2 grid-cols-2 sm:grid-cols-3">
-            {generationChoices.map((g) => {
-              const id = generationId(g);
-              const tileDrawing = frontDrawingFor(draft.brand, line.slug, g.from ?? draft.year);
-              return (
-                <button
-                  key={id}
-                  type="button"
-                  aria-pressed={chosenId === id}
-                  onClick={() => { write({ generation: id }); touch("generation"); }}
-                  className="card overflow-hidden text-left text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:ring-2 aria-pressed:ring-[var(--color-brand)]"
-                >
-                  {tileDrawing ? (
-                    <FrontDrawing id={tileDrawing} alt={`${line.name} ${g.code ?? ""}`} />
-                  ) : (
-                    <span className="block w-full aspect-[16/10] bg-[var(--color-field)]" />
-                  )}
-                  <span className="block p-2">
-                    <span className="block font-semibold">{g.code ?? line.name}</span>
-                    <span className="text-xs text-[var(--color-muted)]">{yearsOf({ from: g.from, to: g.to, current: g.to === null })}</span>
+            {lookTiles.map((t) => (
+              <button
+                key={t.key}
+                type="button"
+                aria-pressed={t.pressed}
+                onClick={() => { setPickedLook(t.key); write({ generation: t.id }); touch("generation"); }}
+                className="card overflow-hidden text-left text-sm aria-pressed:border-[var(--color-brand)] aria-pressed:ring-2 aria-pressed:ring-[var(--color-brand)]"
+              >
+                {t.drawing ? (
+                  <FrontDrawing id={t.drawing} alt={`${line.name} ${t.title}${t.stage ? ` ${t.stage}` : ""}`} />
+                ) : (
+                  <span className="block w-full aspect-[16/10] bg-[var(--color-field)]" />
+                )}
+                <span className="block p-2">
+                  <span className="block font-semibold truncate">
+                    {t.title}
+                    {t.stage && <span className="ml-1.5 text-xs font-medium text-[var(--color-brand)]">{t.stage}</span>}
                   </span>
-                </button>
-              );
-            })}
+                  <span className="text-xs text-[var(--color-muted)]">{t.years}</span>
+                </span>
+              </button>
+            ))}
           </div>
           {shown("generation", 0) ? (
             <p id="f-generation-chyba" className="mt-1 text-xs text-[var(--color-warn)]">Vyberte generaci, v roce {draft.year} se prodávalo víc generací.</p>
