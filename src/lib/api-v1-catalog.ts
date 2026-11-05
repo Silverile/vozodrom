@@ -49,7 +49,9 @@ export async function catalogOverview(request: Request): Promise<{ items: Catalo
     .orderBy(asc(catalogEdit.makeSlug), asc(catalogEdit.lineSlug));
   const lines = new Map<string, CatalogEditLineDto>(rows.map((row) => [`${row.makeSlug}--${row.lineSlug}`, { ...row, lastSavedAt: row.lastSavedAt ? new Date(row.lastSavedAt).toISOString() : null }]));
   // Include lines whose last stored operation was deleted: reverting a published edit also needs a build.
-  for (const key of Object.keys(BUILT.lines)) {
+  for (const [key, built] of Object.entries(BUILT.lines as Record<string, { admin?: boolean }>)) {
+    // lines changed only by the bulk review (src/data/catalog-review) have nothing to publish
+    if (built.admin === false) continue;
     if (!lines.has(key)) { const [makeSlug, lineSlug] = key.split("--"); lines.set(key, { makeSlug, lineSlug, operationCount: 0, lastSavedAt: null }); }
   }
   return { items: [...lines.values()] };

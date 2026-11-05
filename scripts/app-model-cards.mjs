@@ -11,7 +11,7 @@
 // for each generation the index it came from in the data files (front drawings and STK statistics
 // are keyed by it), the drawings with the edited years, and the generations' codes and years for
 // the listing form and its checks, and facelifts' own drawings by their years (lib/makes reads them instead of the model lines index).
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { applyOps, generationSummary, rowToOp } from "../src/lib/catalog-ops.ts";
 
 const DROP = new Set(["sources", "sourceScope", "fieldSources", "generationEvidence", "specificationScope", "engineCoverage"]);
@@ -21,6 +21,7 @@ const DRAWINGS = new URL("../src/data/front-drawings.json", import.meta.url);
 const REVIEW = new URL("../src/data/front-drawing-review.json", import.meta.url);
 const TARGET = new URL("../public/katalog-data/", import.meta.url);
 const BUILT = new URL("../src/data/catalog-built.json", import.meta.url);
+const REVIEWS = new URL("../src/data/catalog-review/", import.meta.url);
 
 const strip = (value) =>
   Array.isArray(value)
@@ -42,6 +43,17 @@ rows.forEach((row, n) => {
   const key = `${op.makeSlug}--${op.lineSlug}`;
   opsByLine.set(key, [...(opsByLine.get(key) ?? []), op]);
 });
+
+// Bulk review (scripts/catalog-review): operations made the same way as an admin's "Vložit JSON",
+// kept per make in src/data/catalog-review/<make>.json and replayed before admins' edits. The
+// reviewed card is the editor's base (<line>.base.json), so admins edit on top of it.
+const reviewByLine = new Map();
+for (const file of existsSync(REVIEWS) ? readdirSync(REVIEWS).filter((f) => f.endsWith(".json")) : []) {
+  const make = file.slice(0, -5);
+  for (const [line, { ops }] of Object.entries(JSON.parse(readFileSync(new URL(file, REVIEWS), "utf8")))) {
+    if (ops.length) reviewByLine.set(`${make}--${line}`, ops.map((op, n) => ({ id: `review-${n}`, makeSlug: make, lineSlug: line, op, createdAt: "" })));
+  }
+}
 
 /** Drawings of an edited line by its generations: [index, first year, last year or null, site path]. */
 function drawingsOf(key, card, applied) {
@@ -83,13 +95,27 @@ for (const [make, lines] of Object.entries(index)) {
     const card = strip(raw);
     const key = `${make}--${line}`;
     const ops = opsByLine.get(key);
+    const reviewOps = reviewByLine.get(key);
     let out = card;
-    if (ops) {
-      const applied = applyOps(card, ops);
+    if (ops || reviewOps) {
+      // review first, admins' edits on the reviewed card; origins and drawings composed back to
+      // the data files' generations
+      const reviewed = reviewOps ? applyOps(card, reviewOps) : null;
+      const base = reviewed ? reviewed.card : card;
+      const admin = applyOps(base, ops ?? []);
+      const applied = reviewed
+        ? {
+            ...admin,
+            origins: admin.origins.map((o) => (o === null ? null : reviewed.origins[o])),
+            drawings: admin.drawings.map((d, i) => (d !== undefined || admin.origins[i] === null ? d : reviewed.drawings[admin.origins[i]])),
+          }
+        : admin;
       out = applied.card;
-      writeFileSync(new URL(`${make}/${line}.base.json`, TARGET), JSON.stringify(card));
-      built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied), faceliftDrawings: faceliftDrawingsOf(out), generations: generationSummary(out) };
-      if (applied.conflicts.length) built.conflicts[key] = applied.conflicts;
+      writeFileSync(new URL(`${make}/${line}.base.json`, TARGET), JSON.stringify(base));
+      // admin: whether admins edited the line (the publication overview lists only those)
+      built.lines[key] = { origins: applied.origins, drawings: drawingsOf(key, out, applied), faceliftDrawings: faceliftDrawingsOf(out), generations: generationSummary(out), admin: !!ops };
+      const conflicts = [...(reviewed?.conflicts ?? []), ...admin.conflicts];
+      if (conflicts.length) built.conflicts[key] = conflicts;
       edited++;
     }
     writeFileSync(new URL(`${make}/${line}.json`, TARGET), JSON.stringify(out));
@@ -97,7 +123,7 @@ for (const [make, lines] of Object.entries(index)) {
   }
 }
 writeFileSync(BUILT, `${JSON.stringify(built)}\n`);
-console.log(`model cards: ${count} files in public/katalog-data/, ${edited} with admins' edits`);
+console.log(`model cards: ${count} files in public/katalog-data/, ${edited} with admins' edits or review (${reviewByLine.size} reviewed)`);
 for (const [key, list] of Object.entries(built.conflicts)) {
   for (const c of list) console.warn(`  edit ${c.id} of ${key} skipped: ${c.reason}`);
 }
