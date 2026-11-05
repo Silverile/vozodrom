@@ -109,7 +109,10 @@ if (cmd === "lines") {
       bad.push(`${line}: ${failed}`);
       continue;
     }
-    const lost = base.generations.map((_, i) => i).filter((i) => !result.origins.includes(i));
+    // only a generation that has something attached is worth a warning
+    const stats = existsSync(new URL(`src/data/stats/${make}.json`, ROOT)) ? (read(`src/data/stats/${make}.json`)[line]?.gens ?? {}) : {};
+    const drawn = new Set(((read("src/data/front-drawings.json") as Record<string, [number][]>)[`${make}--${line}`] ?? []).map(([i]) => i));
+    const lost = base.generations.map((_, i) => i).filter((i) => !result.origins.includes(i) && (String(i) in stats || drawn.has(i)));
     if (lost.length) console.log(`  ${line}: generations ${lost.map((i) => `${i + 1} (${base.generations[i].code ?? base.generations[i].name})`).join(", ")} of the data files removed (their drawings and STK statistics go with them)`);
     review[line] = { ops, changes };
     changed++;
