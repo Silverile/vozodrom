@@ -73,7 +73,7 @@ if (cmd === "lines") {
       continue;
     }
     const { _title, ...next } = parsed as ModelCard & { _title?: string };
-    const problems = check(next as ModelCard);
+    const problems = check(next as ModelCard, cardOf(make, line));
     if (problems.length) {
       bad.push(`${line}: ${problems.slice(0, 5).join("; ")}`);
       continue;
@@ -156,7 +156,9 @@ function renames(base: ModelCard, next: ModelCard): CatalogOp[] {
 }
 
 /** Values the site does not know, and the lists every generation must have. */
-function check(card: ModelCard): string[] {
+function check(card: ModelCard, base: ModelCard): string[] {
+  // values the data files already have are not the review's doing
+  const oldBasis = new Set(base.generations.map((g) => (g as { dateBasis?: string | null }).dateBasis));
   const out: string[] = [];
   const body = new Set(Object.keys(BODY_NAMES));
   const drive = new Set(Object.keys(DRIVE));
@@ -170,6 +172,8 @@ function check(card: ModelCard): string[] {
     year(g.from, `${at}.from`);
     year(g.to, `${at}.to`);
     if (g.from && g.to && g.to < g.from) out.push(`${at}: to < from`);
+    const basis = (g as { dateBasis?: string | null }).dateBasis;
+    if (basis != null && !["production", "sale", "announcement"].includes(basis) && !oldBasis.has(basis)) out.push(`${at}: dateBasis ${basis}`);
     for (const b of g.bodyTypes) if (!body.has(b)) out.push(`${at}: bodyType ${b}`);
     for (const d of g.drivetrains) if (!drive.has(d)) out.push(`${at}: drive ${d}`);
     for (const t of g.transmissions) if (t.type && !gear.has(t.type)) out.push(`${at}: gearbox ${t.type}`);
